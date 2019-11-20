@@ -1,0 +1,28 @@
+{
+    "status": 200,
+    "data": [
+        {
+            "shop_id": "5678",
+            "shop_name": "ThisShop",
+            "product": [
+                {
+                    "product_id": "8891",
+                    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSO9Llg_r3_YdskEDKSKhrLxXoCBkGM-Lt8Vd3R7PeOZ9Qgx5xH",
+                    "name": "iphone 7 plus/Gold/32GB",
+                    "color": "Gold",
+                    "storage": "32GB",
+                    "price": "14,900",
+                    "currency": "฿",
+                    "discount_price": "35,900",
+                    "discount": "59% off",
+                    "amount": "1",
+                    "installment": {
+                        "amount": "893.58",
+                        "period": "x18ต่องวด",
+                        "currency": "฿"
+                    }
+                }
+            ]
+        }
+    ]
+}
