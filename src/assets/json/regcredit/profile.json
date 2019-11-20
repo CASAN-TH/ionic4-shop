@@ -1,0 +1,23 @@
+{
+    "status": 200,
+    "data": {
+        "frontcardimaged": {
+            "url": "front.jpg"
+        },
+        "backcardimaged": {
+            "url": "front.jpg"
+        },
+        "personwithcardimaged": {
+            "url": "front.jpg"
+        },
+        "citizen_id": "1103000082933",
+        "citizenback_id": "meo-12345678",
+        "name": "Nutshapon",
+        "lastname": "lertlaosakunporn",
+        "gender": "male",
+        "birthdate": "2019-09-20",
+        "addressbycard": "13/301",
+        "email": "nutnut@gamil.com",
+        "address": "13/301 kukot lumlukka"
+    }
+}

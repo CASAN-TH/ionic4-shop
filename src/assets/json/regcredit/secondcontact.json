@@ -1,0 +1,9 @@
+{
+    "status": 200,
+    "data": {
+        "relation": "father",
+        "name": "pon",
+        "lastname": "lertlert",
+        "tel": "0992435689"
+    }
+}
