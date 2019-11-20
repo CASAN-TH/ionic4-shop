@@ -1,13 +1,11 @@
 .brand {
-  padding-top: 8px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 2px;
-  margin-top: 8px;
-  margin-bottom: 2px;
-  margin-left: 0px;
-  margin-right: 0px;
+  background-color: #ededed;
 }
+.mnu-selected{
+  border-left: 3px solid #f10808!important;
+  color: red !important;
+}
+
 .product {
   padding-top: 8px;
   padding-left: 8px;
@@ -23,6 +21,8 @@
 }
 .menutext {
   font-size: 10px;
+  // color: silver;
+  // word-wrap: break-word;
 }
 .iconmenu {
   display: block;
@@ -59,4 +59,8 @@
 }
 .toolbartop {
   padding-top: 5%;
+}
+
+.icon-menu{
+  font-size: 40px;
 }

@@ -10,7 +10,7 @@
                     "https://pub.thisshop.com/shop/block/2019111/76264354_1572583780793.png",
                     "https://pub.thisshop.com/shop/block/2019111/80264441_1572583813126.png"
                 ],
-                "icon": "https://pub.thisshop.com/shop/block/20190816/26794046_1565923231439.png",
+                "icon": "../../../assets/icon/Tilda_Icons_33_interior_couch.svg",
                 "brands": [
                     {
                         "_id": "2123",
@@ -79,7 +79,7 @@
                     "https://pub.thisshop.com/shop/block/20191030/4301303_1572408321147.png",
                     "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
                 ],
-                "icon": "https://pub.thisshop.com/shop/category/icon/1551439415750.png",
+                "icon": "../../../assets/icon/Tilda_Icons_33_interior_bathroom.svg",
                 "brands": [
                     {
                         "_id": "133",
@@ -173,7 +173,7 @@
             {
                 "_id": "1023",
                 "name": "สินค้าดิจิทัล",
-                "icon": "https://pub.thisshop.com/shop/category/icon/1551439426347.png",
+                "icon": "../../../assets/icon/Tilda_Icons_33_interior_bathroom.svg",
                 "products": [
                     {
                         "_id": "1223",
