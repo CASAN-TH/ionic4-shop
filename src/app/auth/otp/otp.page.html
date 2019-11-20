@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon slot="icon-only" color="primary" name="arrow-back" (click)="close()"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="requestOTP(form)">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div>
+            <h1>Enter SMS verification code</h1>
+            <p>
+              <ion-label>this 4 digit verification code has been sent to</ion-label>
+              <ion-label>+66</ion-label>
+            </p>
+          </div>
+          <div>
+            <ion-row>
+              <ion-col size="3">
+                <ion-item text-center>
+                  <ion-input name="username" type="tel" ngModel required>
+                  </ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="3">
+                <ion-item text-center>
+                  <ion-input name="username" type="tel" ngModel required>
+                  </ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="3">
+                <ion-item text-center>
+                  <ion-input name="username" type="tel" ngModel required>
+                  </ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="3">
+                <ion-item text-center>
+                  <ion-input name="username" type="tel" ngModel required>
+                  </ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12" text-center>
+                <ion-text>
+                  <h3>Request new code (49)</h3>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+          </div>
+          <div>
+            <ion-button size="medium" type="submit" [disabled]="form.invalid" expand="block">Next</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
