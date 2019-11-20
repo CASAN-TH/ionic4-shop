@@ -15,8 +15,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../home/home.module').then(m => m.HomePageModule),
-            resolve: [HomeService]
+              import('../home/home.module').then(m => m.HomePageModule)
           }
         ]
       },
@@ -29,14 +28,14 @@ const routes: Routes = [
               import('../notify/notify.module').then(m => m.NotifyPageModule)
           }
         ]
-      },
+      }, 
       {
-        path: 'account',
+        path: 'cart',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../account/account.module').then(m => m.AccountPageModule)
+              import('../cart/cart.module').then(m => m.CartPageModule)
           }
         ]
       },
