@@ -28,7 +28,7 @@ const routes: Routes = [
               import('../notify/notify.module').then(m => m.NotifyPageModule)
           }
         ]
-      }, 
+      },
       {
         path: 'cart',
         children: [
