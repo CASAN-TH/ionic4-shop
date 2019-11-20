@@ -12,6 +12,8 @@ import { MatStepperModule } from '@angular/material/stepper';
 
 import { MatButtonModule } from '@angular/material/button';
 
+import { MatDialogModule } from '@angular/material/dialog';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -19,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
     IonicModule,
     MatStepperModule,
     MatButtonModule,
+    MatDialogModule,
     RegcreditPageRoutingModule
   ],
   declarations: [RegcreditPage]
