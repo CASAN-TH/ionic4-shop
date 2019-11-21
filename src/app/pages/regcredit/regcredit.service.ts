@@ -41,57 +41,57 @@ export class RegcreditService {
 
   getRegcreditDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/regcredit/regcredit.json').subscribe((res: any) => {
           this.onRegcreditDataListChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onRegcreditDataListChanged.next(res.data);
-        },reject)
+        }, reject)
       }
     })
   }
   getRegcreditProfile(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/regcredit/profile.json').subscribe((res: any) => {
           this.onRegcreditProfileChanged.next(res.data);
-        },reject)
-      }else{
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        }, reject)
+      } else {
+        this.http.get('/api/profile', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onRegcreditProfileChanged.next(res.data);
-        },reject)
+        }, reject)
       }
     })
   }
 
   getRegcreditSecondContact(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/regcredit/secondcontact.json').subscribe((res: any) => {
           this.onRegcreditSecondContactChanged.next(res.data);
-        },reject)
-      }else{
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        }, reject)
+      } else {
+        this.http.get('/api/secondcontact', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onRegcreditSecondContactChanged.next(res.data);
-        },reject)
+        }, reject)
       }
     })
   }
 
   getRegcreditData(id: string): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/regcredit/regcredit-detail.json').subscribe((res: any) => {
           this.onRegcreditDataListChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onRegcreditDataChanged.next(res.data);
-        },reject)
+        }, reject)
       }
-      
+
     })
   }
 
@@ -99,7 +99,7 @@ export class RegcreditService {
     return new Promise((resolve, reject) => {
       this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getRegcreditDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -107,7 +107,7 @@ export class RegcreditService {
     return new Promise((resolve, reject) => {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getRegcreditDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -115,8 +115,30 @@ export class RegcreditService {
     return new Promise((resolve, reject) => {
       this.http.delete(api_url + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getRegcreditDataList();
-      },reject)
+      }, reject)
     })
+  }
+
+  updateProfile(body) {
+    if (mockup) {
+      return body
+    } else {
+      this.http.put('/api/profile' + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.getRegcreditProfile();
+      })
+    }
+
+  }
+
+  updateSecondContact(body) {
+    if (mockup) {
+      return body
+    } else {
+      this.http.put('/api/secondcontact' + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.getRegcreditSecondContact();
+      })
+    }
+
   }
 
 }

@@ -73,7 +73,7 @@
         <div class="ion-margin-top hint-style">
           กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
         </div>
-        <button style="width: 100%;" mat-raised-button color="primary" matStepperNext>ขั้นตอนต่อไป</button>
+        <button style="width: 100%;" mat-raised-button color="primary" matStepperNext (click)="onNext()">ขั้นตอนต่อไป</button>
       </mat-step>
 
       <mat-step label="ที่อยู่ติดต่อ" completed="false">
@@ -88,7 +88,7 @@
         <div class="ion-margin-top hint-style">
           กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
         </div>
-        <button style="width: 100%;" mat-raised-button color="primary" matStepperNext>ขั้นตอนต่อไป</button>
+        <button style="width: 100%;" mat-raised-button color="primary" matStepperNext (click)="onNext()">ขั้นตอนต่อไป</button>
       </mat-step>
 
       <mat-step label="บุคคลติดต่อฉุกเฉิน" completed="false">
@@ -119,7 +119,7 @@
         <div class="ion-margin-top hint-style">
           กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
         </div>
-        <button style="width: 100%;" mat-raised-button color="primary">ส่ง</button>
+        <button style="width: 100%;" mat-raised-button color="primary" (click)="onFinish()">ส่ง</button>
       </mat-step>
     </mat-horizontal-stepper>
   </ion-content>

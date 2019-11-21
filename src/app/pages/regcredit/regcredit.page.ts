@@ -39,6 +39,16 @@ export class RegcreditPage implements OnInit {
     })
   }
 
+  async onNext(){
+    const res = await this.regcreditService.updateProfile(this.regProfile);
+    console.log(res)
+  }
+
+  async onFinish() {
+    const res = await this.regcreditService.updateSecondContact(this.dataSecondContact)
+    console.log(res)
+  }
+
   openModalCard(type): void {
     if (type === 'front') {
       const dialogRef = this.dialog.open(ModalCardComponent, {
