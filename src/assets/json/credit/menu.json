@@ -1,0 +1,31 @@
+{
+    "status": 200,
+    "data": {
+        "_id": "001",
+        "menu": [{
+            "name": "ข้อมูลผู้ติดต่อ",
+            "detail" : "เพิ่มวงเงินได้สูงสุด B1000",
+            "image": "https://img.freepik.com/free-vector/contact-concept-landing-page_52683-21298.jpg?size=338&ext=jpg"
+        },
+        {
+            "name": "สถานภาพสมรส",
+            "detail" : "เพิ่มวงเงินได้สูงสุด B2200",
+            "image": "https://content.thriveglobal.com/wp-content/uploads/2019/07/E1740654-CB31-4433-8BE4-41BAF1E8844C.jpeg"
+        },
+        {
+            "name": "บุคคลติดต่อฉุกเฉิน",
+            "detail" : "เพิ่มวงเงินได้สูงสุด B3000",
+            "image": "https://d14rlwi7dpyw8g.cloudfront.net/assets/images/landing-pages/contact-us.png?version=v1.16.8"
+        },
+        {
+            "name": "เอกสารสินทรัพย์",
+            "detail" : "เพิ่มวงเงินได้สูงสุด B2000",
+            "image": "https://www.sodapdf.com/blog/wp-content/uploads/2017/04/HR-Document-Management.jpg"
+        },
+        {
+            "name": "ข้อมูลอาชีพ",
+            "detail" : "เพิ่มวงเงินได้สูงสุด B5000",
+            "image": "https://jobinformation.info/wp-content/uploads/2019/08/recruitment-3942378_1920.jpg"
+        }]
+    }
+}

@@ -9,13 +9,22 @@ import { CreditService } from './credit.service';
 })
 export class CreditPage implements OnInit {
   creditDataList: any;
-
+  creditMenuList: any;
+  creditPoint: any
   constructor(private router: Router, private creditService : CreditService) { }
 
   ngOnInit() {
     this.creditService.onCreditDataListChanged.subscribe((creditDataList:any)=>{
       console.log(creditDataList);
       this.creditDataList = creditDataList;
+    });
+    this.creditService.onCreditMenuListChanged.subscribe((menu:any)=>{
+      console.log(menu);
+      this.creditMenuList = menu;
+    });
+    this.creditService.onCreditPointChanged.subscribe((point:any)=>{
+      console.log(point);
+      this.creditPoint = point
     })
   }
 

@@ -1,11 +1,60 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>credit</ion-title>
+    <ion-title>วงเงิน</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="display-member" *ngIf="creditDataList.status === 'member'">
     <ion-button expand="block" size="large" (click)="onOpenRegCredit()">สมัครทันที</ion-button>
+  </div>
+
+  <div class="ion-padding-start ion-padding-end" *ngIf="creditDataList.status === 'approve'">
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <div>วงเงินที่ใช้ได้</div>
+        <div *ngIf="creditPoint && creditPoint.credit">{{creditPoint.credit.creditremain}}</div>
+        <ion-button fill="outline">ตรวจสอบรายละเอียด</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-text-center">
+      <ion-col size="6" class="menu-header left-menu">
+        <div class="font-title-header">
+          บิลของฉัน
+        </div>
+        <div class="font-title-subheader">
+          ยังไม่มีบิล
+        </div>
+      </ion-col>
+      <ion-col size="6" class="menu-header right-menu">
+        <div class="font-title-header">
+          วงเงินที่ใช้ได้
+        </div>
+        <div class="font-title-subheader">
+          โดยสิ้นเชิง {{creditPoint.credit.creditremain}}
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <div class="font-title-header">ข้อมูลสมบูรณ์</div>
+        <div class="font-title-subheader">ยิ่งคุณกรอกข้อมูลมาก ก็ยิ่งมีสิทธิ์รับวงเงินที่สูงขึ้น</div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="creditMenuList">
+      <ion-col size="6" *ngFor="let item of creditMenuList.menu">
+        <ion-card class="ion-no-margin" mode="md">
+          <img [src]="item.image" class="img-size-menu">
+          <div style="padding: 5px;">
+            <div class="font-card-header">
+              {{item.name}}
+            </div>
+            <div class="font-card-subheader">
+              {{item.detail}}
+            </div>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
   </div>
 </ion-content>
