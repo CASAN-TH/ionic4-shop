@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons class="backbutton" slot="start" (click)="goBackClick()">
+          <ion-button>
+            <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title>promotion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row>
+  <ion-col size="12" *ngFor="let item of promotionDataList">
+    {{item.name}}
+  </ion-col>
+</ion-row>
+</ion-content>

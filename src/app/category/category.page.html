@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-toolbar class="toolbartop">
-    <ion-searchbar slot="start" value="Ionic"></ion-searchbar>
+  <ion-toolbar>
+    <ion-searchbar slot="start" placeholder="Enter item keyword"></ion-searchbar>
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon slot="icon-only" name="ios-chatboxes"></ion-icon>
@@ -11,9 +11,9 @@
 
 <ion-content>
   <ion-row>
-    <ion-col size="3" class="ion-no-padding">
+    <ion-col size="2" class="ion-no-padding">
       <div scrollY="true" class="menu-content">
-        <ion-row *ngFor="let item of data.cate_data" [id]="item._id" [class.mnu-selected]="item._id == tabSelected">
+        <ion-row *ngFor="let item of data" [class.mnu-selected]="item._id == tabSelected" id="mnu_{{item._id}}">
           <ion-col size="12" text-center (click)="onMenuClick(item._id)">
             <ion-icon [src]="item.icon" class="icon-menu"></ion-icon>
             <p class="ion-text-nowrap menutext">{{item.name}}</p>
@@ -22,14 +22,14 @@
       </div>
     </ion-col>
 
-    <ion-col size="9" class="ion-no-padding">
+    <ion-col size="10" class="ion-no-padding">
       <ion-content #content>
-        <ion-row *ngFor="let cate of data.cate_data">
+        <ion-row *ngFor="let cate of data" [id]="cate._id">
           <ion-col size="12">
-            <ion-text [id]="cate._id">{{cate.name}}</ion-text>
+            <ion-text >{{cate.name}}</ion-text>
             <ion-slides pager>
               <ion-slide *ngFor="let cover of cate.cover_image">
-                <img class="coverimage" [src]="cover">
+                <img class="coverimage" [src]="cover.image" (click)="onCoverClick(cover._id)">
               </ion-slide>
             </ion-slides>
             <ion-row>
@@ -38,7 +38,7 @@
               </ion-col>
             </ion-row>
             <ion-row>
-              <ion-col text-center size="4" *ngFor="let product of cate.products">
+              <ion-col text-center size="4" *ngFor="let product of cate.products" (click)="onPromotionClick(product._id)">
                 <img class="productimage" [src]="product.image">
                 <ion-text class="producttext">{{product.name}}</ion-text>
               </ion-col>

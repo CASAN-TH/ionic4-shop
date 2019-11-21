@@ -1,3 +1,86 @@
-<p>
-  modal-card works!
-</p>
+<div class="modal-font" *ngIf="data.type ==='front'">
+  <ion-row>
+    <ion-col size="12">
+      <img src="../../../../../assets/images/frontThaiCard.jpg">
+      <div class="ion-text-center">ถ่ายภาพตามมาตรฐานด้านบน</div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4">
+      <img src="../../../../../assets/images/frontThaiCard.jpg">
+      <div>บัตรไม่เต็มใบ</div>
+    </ion-col>
+    <ion-col size="4">
+      <img src="../../../../../assets/images/frontThaiCard.jpg">
+      <div>เบลอ</div>
+    </ion-col>
+    <ion-col size="4">
+      <img src="../../../../../assets/images/frontThaiCard.jpg">
+      <div>แสงสะท้อน</div>
+    </ion-col>
+  </ion-row>
+  <ion-footer class="border-footer">
+    <!-- <div style="height: 40px; display: flex; align-items: center; justify-content: center;">
+      อับโหลดรูปภาพ
+    </div> -->
+    <ion-button expand="block" fill="clear" color="danger" (click)="openCamera()">อับโหลดรูปภาพ</ion-button>
+  </ion-footer>
+</div>
+
+<div class="modal-font" *ngIf="data.type ==='back'">
+  <ion-row>
+    <ion-col size="12">
+      <img src="../../../../../assets/images/backThaiCard.jpg">
+      <div class="ion-text-center">ถ่ายภาพตามมาตรฐานด้านบน</div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4">
+      <img src="../../../../../assets/images/backThaiCard.jpg">
+      <div>บัตรไม่เต็มใบ</div>
+    </ion-col>
+    <ion-col size="4">
+      <img src="../../../../../assets/images/backThaiCard.jpg">
+      <div>เบลอ</div>
+    </ion-col>
+    <ion-col size="4">
+      <img src="../../../../../assets/images/backThaiCard.jpg">
+      <div>แสงสะท้อน</div>
+    </ion-col>
+  </ion-row>
+  <ion-footer class="border-footer">
+    <!-- <div style="height: 40px; display: flex; align-items: center; justify-content: center;">
+      อับโหลดรูปภาพ
+    </div> -->
+    <ion-button expand="block" fill="clear" color="danger" (click)="openCamera()">อับโหลดรูปภาพ</ion-button>
+  </ion-footer>
+</div>
+
+<div class="modal-font" *ngIf="data.type ==='withme'">
+  <ion-row>
+    <ion-col size="12">
+      <img src="../../../../../assets/images/oweThaiCard.jpg">
+      <div class="ion-text-center">ถ่ายภาพตามมาตรฐานด้านบน</div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4">
+      <img src="../../../../../assets/images/oweThaiCard.jpg">
+      <div>บังใบหน้า</div>
+    </ion-col>
+    <ion-col size="4">
+      <img src="../../../../../assets/images/oweThaiCard.jpg">
+      <div>บังข้อมูลบัตร</div>
+    </ion-col>
+    <ion-col size="4">
+      <img src="../../../../../assets/images/oweThaiCard.jpg">
+      <div>สวมแว่นกันแดด</div>
+    </ion-col>
+  </ion-row>
+  <ion-footer class="border-footer">
+    <!-- <div style="height: 40px; display: flex; align-items: center; justify-content: center;">
+      อับโหลดรูปภาพ
+    </div> -->
+    <ion-button expand="block" fill="clear" color="danger" (click)="openCamera()">อับโหลดรูปภาพ</ion-button>
+  </ion-footer>
+</div>

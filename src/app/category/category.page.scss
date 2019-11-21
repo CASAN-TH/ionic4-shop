@@ -1,6 +1,10 @@
-.mnu-selected{
-  border-left: 3px solid #f10808!important;
-  color: red !important;
+ion-toolbar {
+  padding-top: 0.6rem !important;
+}
+
+.mnu-selected {
+  border-left: 3px solid #f10808 !important;
+  color: #f10808 !important;
 }
 
 .product {
@@ -38,15 +42,18 @@
   padding-top: 5%;
 }
 
-.icon-menu{
-  font-size: 40px;
+.icon-menu {
+  font-size: 2rem;
 }
 
-.menu-content{
+.menu-content {
   height: 90vh;
   overflow: auto;
-}
-
-.brand{
   background-color: #ededed;
 }
+
+.brand {
+  background-color: #ededed;
+}
+
+

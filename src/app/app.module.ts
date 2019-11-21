@@ -13,11 +13,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalCardComponent } from './pages/regcredit/modals/modal-card/modal-card.component';
 import { SpecModalComponent } from './cart/spec-modal/spec-modal.component';
 import { InsallmentModalComponent } from './cart/insallment-modal/insallment-modal.component';
+import { ModalCameraComponent } from './modals/modal-camera/modal-camera.component';
 
 
 @NgModule({
-  declarations: [AppComponent, ModalCardComponent,SpecModalComponent,InsallmentModalComponent],
-  entryComponents: [ModalCardComponent,SpecModalComponent,InsallmentModalComponent],
+  declarations: [AppComponent, ModalCardComponent, ModalCameraComponent,SpecModalComponent,InsallmentModalComponent],
+  entryComponents: [ModalCardComponent, ModalCameraComponent,SpecModalComponent,InsallmentModalComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule
