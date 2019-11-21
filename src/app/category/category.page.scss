@@ -1,6 +1,3 @@
-.brand {
-  background-color: #ededed;
-}
 .mnu-selected{
   border-left: 3px solid #f10808!important;
   color: red !important;
@@ -24,16 +21,6 @@
   // color: silver;
   // word-wrap: break-word;
 }
-.iconmenu {
-  display: block;
-  font-style: normal;
-  width: 2.48rem;
-  height: 2.48rem;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  margin: 0 auto;
-}
 .productimage {
   display: block;
   width: 100%;
@@ -46,21 +33,16 @@
   font-weight: bold;
   padding-top: 5%;
 }
-.textcenter {
-  text-align: center;
-}
-#myFixZone {
-  height: 570px;
-  overflow: auto;
-}
-#myFixmenuZone {
-  height: 570px;
-  overflow: auto;
-}
+
 .toolbartop {
   padding-top: 5%;
 }
 
 .icon-menu{
   font-size: 40px;
+}
+
+.menu-content{
+  height: 90vh;
+  overflow: auto;
 }

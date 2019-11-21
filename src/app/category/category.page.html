@@ -12,11 +12,9 @@
 <ion-content>
   <ion-row>
     <ion-col size="3" class="ion-no-padding">
-      <div scrollY="true" id="myFixmenuZone">
+      <div scrollY="true" class="menu-content">
         <ion-row *ngFor="let item of data.cate_data" [id]="item._id" [class.mnu-selected]="item._id == tabSelected">
           <ion-col size="12" text-center (click)="onMenuClick(item._id)">
-            <!-- <img class="iconmenu" [src]="item.icon">
-            <p class="menutext" class="ion-text-nowrap">{{item.name}}</p> -->
             <ion-icon [src]="item.icon" class="icon-menu"></ion-icon>
             <p class="ion-text-nowrap menutext">{{item.name}}</p>
           </ion-col>
@@ -40,7 +38,7 @@
               </ion-col>
             </ion-row>
             <ion-row>
-              <ion-col class="textcenter" size="4" *ngFor="let product of cate.products">
+              <ion-col text-center size="4" *ngFor="let product of cate.products">
                 <img class="productimage" [src]="product.image">
                 <ion-text class="producttext">{{product.name}}</ion-text>
               </ion-col>
