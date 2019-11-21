@@ -41,6 +41,10 @@ const routes: Routes = [
   {
     path: 'promotion',
     loadChildren: () => import('../app/pages/promotion/promotion.module').then(m => m.PromotionPageModule)
+  },
+  {
+    path: 'productdetail',
+    loadChildren: () => import('../app/productdetail/productdetail.module').then(m => m.ProductdetailPageModule)
   }
 
 

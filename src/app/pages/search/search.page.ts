@@ -24,8 +24,8 @@ export class SearchPage implements OnInit {
     this.router.navigateByUrl('search/' + cate2Id);
   }
 
-  onProductItemClick() {
-    console.log("onProductItemClick");
+  onProductdetailClick(productId: any) {
+    this.router.navigateByUrl('productdetail/' + productId);
   }
 
   goBackClick() {

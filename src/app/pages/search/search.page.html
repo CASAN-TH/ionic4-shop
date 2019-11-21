@@ -26,7 +26,7 @@
       <mat-tab *ngFor="let tabproduct of searchData.productItems" [label]="tabproduct.tabname">
         <ion-row>
           <ion-col size="6" *ngFor="let product of tabproduct.products">
-            <ion-card (click)="onProductItemClick()">
+            <ion-card (click)="onProductdetailClick(product._id)">
               <ion-chip color="danger">
                 <ion-label>{{product.discount}}</ion-label>
               </ion-chip>
