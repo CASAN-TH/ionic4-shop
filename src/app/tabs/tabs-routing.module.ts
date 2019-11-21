@@ -38,7 +38,7 @@ const routes: Routes = [
               import('../credit/credit.module').then(m => m.CreditPageModule)
           }
         ]
-      }, 
+      },
       {
         path: 'cart',
         children: [

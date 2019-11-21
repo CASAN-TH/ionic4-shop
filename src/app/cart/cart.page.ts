@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from './cart.service';
+import { SpecModalComponent } from './spec-modal/spec-modal.component';
+import { ModalController } from '@ionic/angular';
+import { InsallmentModalComponent } from './insallment-modal/insallment-modal.component';
 
 @Component({
   selector: 'app-cart',
@@ -11,7 +14,7 @@ export class CartPage implements OnInit {
   cartDataList: any;
   reccommentDataList: any;
 
-  constructor(private router: Router, private cartService: CartService) { }
+  constructor(private router: Router, private cartService: CartService,public modalController: ModalController) { }
 
   ngOnInit() {
     this.cartService.onCartDataListChanged.subscribe((cartDataList: any) => {
@@ -25,4 +28,58 @@ export class CartPage implements OnInit {
     })
   }
 
+onShoppingClick()
+{
+console.log("ShoppingClick")
 }
+onDeleteClick(){
+  console.log("Delete")
+}
+onOpenlistClick(){
+  console.log("nevigate Productlist")
+}
+onSelectProductClick(){
+  console.log("onSelectProductClick")
+}
+onRemoveClick(){
+  console.log("Remove")
+}
+onAddClick(){
+  console.log("Add")
+}
+onAcceptCodeClick(){
+  console.log("Add")
+}
+onOpenDetailClick(){
+  console.log("nevigate Productlist")
+}
+onAddToCartClick(){
+  console.log("addtocart")
+}
+
+onPayClick(){
+  console.log("ชำระเงิน")
+}
+onSelectAll(){
+  console.log("54")
+}
+onSelectShop(){
+  console.log("54")
+}
+onSelectProduct(){
+  console.log("54")
+}
+async specModal() {
+  const modal = await this.modalController.create({
+    component: SpecModalComponent
+  });
+  return await modal.present();
+}
+async InstallmentModal() {
+  const modal = await this.modalController.create({
+    component: InsallmentModalComponent
+  });
+  return await modal.present();
+}
+}
+
