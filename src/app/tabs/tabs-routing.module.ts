@@ -30,15 +30,15 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'notify',
+        path: 'credit',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../notify/notify.module').then(m => m.NotifyPageModule)
+              import('../credit/credit.module').then(m => m.CreditPageModule)
           }
         ]
-      }, 
+      },
       {
         path: 'cart',
         children: [

@@ -1,0 +1,43 @@
+.display-member{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-header{
+    background-color: #f9f9f9;
+}
+.img-size-menu{
+    height: 100px;
+}
+
+.font-title-header {
+    font-size: 16px;
+    color: #505050;
+}
+
+.font-title-subheader{
+    font-size: 12px;
+    color: lightslategrey;
+}
+
+.font-card-header {
+    font-size: 14px;
+    color: #505050;
+}
+
+.font-card-subheader{
+    font-size: 10px;
+    color: lightslategrey;
+}
+
+.left-menu {
+    border-radius: 10% 0% 0% 10%;
+    border-right: 1px solid;
+}
+
+.right-menu {
+    border-radius: 0% 10% 10% 0%;
+}

@@ -1,0 +1,34 @@
+{
+    "status": 200,
+    "data": {
+        "promotions": [
+            {
+            "image" : "https://pub.thisshop.com/shop/block/2019117/18430482_1573093581792.png?x-oss-process=image/quality,q_80",
+            "name" : "Tcoin Mall"
+            },
+            {
+            "image" : "https://pub.thisshop.com/shop/block/2019117/41955463_1573093590782.png?x-oss-process=image/quality,q_80",
+            "name" : "Cash Reward"
+            },
+            {
+            "image" : "https://pub.thisshop.com/shop/block/2019117/58847086_1573093621043.png?x-oss-process=image/quality,q_80",
+            "name" : "Super Discount"
+            },
+            {
+            "image" : "https://pub.thisshop.com/shop/block/2019117/83760368_1573093628061.png?x-oss-process=image/quality,q_80",
+            "name" : "Coupon Center"
+            }
+            ],
+        "ads": [
+            {
+            "image" : "https://pub.thisshop.com/shop/default/20190930/14222226_1569810416179.jpg?x-oss-process=image/resize,w_750/quality,q_80&quot"
+            },
+            {
+            "image" : "https://pub.thisshop.com/shop/block/20191018/57404819_1571397960401.png?x-oss-process=image/resize,w_750/quality,q_80&quot"
+            },
+            {
+            "image" : "https://pub.thisshop.com/shop/block/20190819/6270456_1566185153386.png?x-oss-process=image/resize,w_750/quality,q_80&quot"
+            }
+        ]
+    }
+}

@@ -1,13 +1,140 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
+  <ion-toolbar [class.show-background]="showToolbar">
+    <ion-searchbar></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-icon src="../../../assets/icon/speech-bubble.svg" size="large"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-<ion-row>
-  <ion-col size="12" *ngFor="let item of homeDataList">
-    {{item.name}}
-  </ion-col>
-</ion-row>
+<ion-content fullscreen="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
+  <ion-slides pager="ios" #slider [options]="slideOpts">
+    <ion-slide>
+      <div [style.background-color]="'#f84300'">
+        <img class="slide" src="https://pub.thisshop.com/shop/block/20191111/26579431_1573444687569.png">
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div [style.background-color]="'#000000'">
+        <img class="slide" src="https://pub.thisshop.com/shop/block/20191111/21438691_1573455200833.jpg">
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">xfgdfgdf</ion-col>
+    </ion-row>
+    <ion-row nowrap class="forecast_container">
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+
+      </ion-col>
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+      </ion-col>
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+      </ion-col>
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">xfgdfgdf</ion-col>
+    </ion-row>
+    <ion-row nowrap class="forecast_container">
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+
+      </ion-col>
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+      </ion-col>
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+      </ion-col>
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">xfgdfgdf</ion-col>
+    </ion-row>
+    <ion-row nowrap class="forecast_container">
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+
+      </ion-col>
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+      </ion-col>
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+      </ion-col>
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">xfgdfgdf</ion-col>
+    </ion-row>
+    <ion-row nowrap class="forecast_container">
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+
+      </ion-col>
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+      </ion-col>
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+      </ion-col>
+      <ion-col size="5">
+        <ion-card>
+          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

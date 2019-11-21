@@ -17,4 +17,8 @@ export class ModalCardComponent implements OnInit {
     console.log(this.data)
   }
 
+  openCamera(){
+    this.dialogRef.close("oncamera");
+  }
+
 }

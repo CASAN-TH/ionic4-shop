@@ -1,3 +1,59 @@
+ion-card {
+  box-shadow: none !important;
+  background-color: #ffffff;
+  border-radius: 0rem;
+}
+
+ion-toolbar {
+  padding-top: 0.6rem !important;
+}
+
+ion-content {
+  --background: rgb(241, 235, 235) !important;
+}
+
+.ion-col-border {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+}
+
+.brand {
+  background-color: #ededed;
+}
+
+.ion-item-selected {
+  font-size: 2rem;
+  color: red;
+  margin-top: -.65rem;
+  margin-left: 1rem;
+  position: absolute;
+}
+
+.ion-no-margin-custom {
+  --margin-start: 0;
+  --margin-end: 0;
+  --margin-top: 0;
+  --margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.ion-no-margin-collection {
+  --margin-start: 0;
+  --margin-end: 0;
+  --margin-top: 1rem;
+  --margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+}
+
 .textcenter {
   text-align: center;
 }

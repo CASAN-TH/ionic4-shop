@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>regcredit</ion-title>
+    <ion-title>สมัครวงเงิน</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,31 +11,58 @@
       <mat-step label="ข้อมูลส่วนตัว" completed="false">
         <ion-row>
           <ion-col size="3"></ion-col>
-          <ion-col size="6" class="ion-text-center img-container" (click)="openModalCard()">
+          <ion-col size="6" class="ion-text-center img-container" (click)="openModalCard('front')"
+            *ngIf="regProfile.frontcardimaged.url === ''">
             <div class="avatar-icon">
               <ion-icon name="camera"></ion-icon>
             </div>
-            <img class="img-size" src="../../assets/images/frontThaiCard.jpg" alt="">
+            <img class="img-size" src="../../assets/images/frontThaiCard.jpg">
+          </ion-col>
+          <ion-col size="6" class="ion-text-center img-container" *ngIf="regProfile.frontcardimaged.url !== ''">
+            <div class="icon-container">
+              <div class="icon-close-position" (click)="onDeleteImg('frontcardimaged')">
+                <ion-icon name="close"></ion-icon>
+              </div>
+            </div>
+            <img class="img-binding" [src]="regProfile.frontcardimaged.url">
           </ion-col>
           <ion-col size="3"></ion-col>
         </ion-row>
         <ion-row>
           <ion-col size="3"></ion-col>
-          <ion-col size="6" class="ion-text-center img-container">
+          <ion-col size="6" class="ion-text-center img-container" (click)="openModalCard('back')"
+            *ngIf="regProfile.backcardimaged.url === ''">
             <div class="avatar-icon">
               <ion-icon name="camera"></ion-icon>
             </div>
             <img class="img-size" src="../../assets/images/backThaiCard.jpg" alt="">
           </ion-col>
+          <ion-col size="6" class="ion-text-center img-container" *ngIf="regProfile.backcardimaged.url !== ''">
+            <div class="icon-container">
+              <div class="icon-close-position" (click)="onDeleteImg('backcardimaged')">
+                <ion-icon name="close"></ion-icon>
+              </div>
+            </div>
+            <img class="img-binding" [src]="regProfile.backcardimaged.url">
+          </ion-col>
           <ion-col size="3"></ion-col>
         </ion-row>
         <ion-row>
           <ion-col size="3"></ion-col>
-          <ion-col size="6" class="ion-text-center img-container">
+          <ion-col size="6" class="ion-text-center img-container" (click)="openModalCard('withme')"
+            *ngIf="regProfile.personwithcardimaged.url === ''">
             <div class="avatar-icon">
               <ion-icon name="camera"></ion-icon>
             </div>
             <img class="img-size img-radius" src="../../assets/images/oweThaiCard.jpg" alt="">
+          </ion-col>
+          <ion-col size="6" class="ion-text-center img-container" *ngIf="regProfile.personwithcardimaged.url !== ''">
+            <div class="icon-container">
+              <div class="icon-close-position" (click)="onDeleteImg('personwithcardimaged')">
+                <ion-icon name="close"></ion-icon>
+              </div>
+            </div>
+            <img class="img-binding" [src]="regProfile.personwithcardimaged.url">
           </ion-col>
           <ion-col size="3"></ion-col>
         </ion-row>
@@ -73,7 +100,8 @@
         <div class="ion-margin-top hint-style">
           กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
         </div>
-        <button style="width: 100%;" mat-raised-button color="primary" matStepperNext>ขั้นตอนต่อไป</button>
+        <button style="width: 100%;" mat-raised-button color="primary" matStepperNext
+          (click)="onNext()">ขั้นตอนต่อไป</button>
       </mat-step>
 
       <mat-step label="ที่อยู่ติดต่อ" completed="false">
@@ -88,21 +116,22 @@
         <div class="ion-margin-top hint-style">
           กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
         </div>
-        <button style="width: 100%;" mat-raised-button color="primary" matStepperNext>ขั้นตอนต่อไป</button>
+        <button style="width: 100%;" mat-raised-button color="primary" matStepperNext
+          (click)="onNext()">ขั้นตอนต่อไป</button>
       </mat-step>
 
       <mat-step label="บุคคลติดต่อฉุกเฉิน" completed="false">
-          <ion-item>
-              <ion-label>ความสัมพันธ์</ion-label>
-              <ion-select placeholder="เลิือก" [(ngModel)]="dataSecondContact.relation">
-                <ion-select-option value="father">พ่อ</ion-select-option>
-                <ion-select-option value="mother">แม่</ion-select-option>
-                <ion-select-option value="relative">ญาติ</ion-select-option>
-                <ion-select-option value="friend">เพื่อน</ion-select-option>
-                <ion-select-option value="couple">คู่สมรส</ion-select-option>
-                <ion-select-option value="parent">ผู้ปกครอง</ion-select-option>
-              </ion-select>
-            </ion-item>
+        <ion-item>
+          <ion-label>ความสัมพันธ์</ion-label>
+          <ion-select placeholder="เลิือก" [(ngModel)]="dataSecondContact.relation">
+            <ion-select-option value="father">พ่อ</ion-select-option>
+            <ion-select-option value="mother">แม่</ion-select-option>
+            <ion-select-option value="relative">ญาติ</ion-select-option>
+            <ion-select-option value="friend">เพื่อน</ion-select-option>
+            <ion-select-option value="couple">คู่สมรส</ion-select-option>
+            <ion-select-option value="parent">ผู้ปกครอง</ion-select-option>
+          </ion-select>
+        </ion-item>
         <ion-item>
           <ion-label>ชื่อ</ion-label>
           <ion-input [(ngModel)]="dataSecondContact.name"></ion-input>
@@ -115,6 +144,11 @@
           <ion-label>หมายเลขโทรศัพย์</ion-label>
           <ion-input [(ngModel)]="dataSecondContact.tel"></ion-input>
         </ion-item>
+
+        <div class="ion-margin-top hint-style">
+          กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
+        </div>
+        <button style="width: 100%;" mat-raised-button color="primary" (click)="onFinish()">ส่ง</button>
       </mat-step>
     </mat-horizontal-stepper>
   </ion-content>
