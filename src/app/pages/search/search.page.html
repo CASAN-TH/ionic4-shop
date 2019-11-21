@@ -38,41 +38,13 @@
   </ion-card>
 
 
-<<<<<<< HEAD
-  <ion-row>
-    <mat-tab-group mat-align-tabs="start">
-      <mat-tab *ngFor="let tabproduct of searchData.productItems" [label]="tabproduct.tabname">
-        <ion-row>
-          <ion-col size="6" *ngFor="let product of tabproduct.products">
-            <ion-card (click)="onProductdetailClick(product._id)">
-              <ion-chip color="danger">
-                <ion-label>{{product.discount}}</ion-label>
-              </ion-chip>
-              <img [src]="product.image">
-              <div>
-                <ion-text class="producttext">{{product.name}}</ion-text>
-              </div>
-              <div>
-                <ion-text>{{product.price.currency}} {{product.price.amount}}</ion-text>
-              </div>
-              <div>
-                <ion-text>{{product.installment.currency}} {{product.installment.amount}} {{product.installment.period}}
-                </ion-text>
-              </div>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-      </mat-tab>
-    </mat-tab-group>
-  </ion-row>
-=======
   <ion-card class="ion-no-margin-collection">
     <ion-row>
       <mat-tab-group mat-align-tabs="start">
         <mat-tab *ngFor="let tabproduct of searchData.productItems" [label]="tabproduct.tabname">
           <ion-row>
             <ion-col size="6" *ngFor="let product of tabproduct.products">
-              <ion-card (click)="onProductItemClick()">
+              <ion-card (click)="onProductdetailClick()">
                 <ion-chip color="danger">
                   <ion-label>{{product.discount}}</ion-label>
                 </ion-chip>
@@ -95,6 +67,5 @@
       </mat-tab-group>
     </ion-row>
   </ion-card>
->>>>>>> 46ddc761ba9a13d13dd739b0a359abe166178021
 
 </ion-content>

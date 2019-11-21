@@ -11,6 +11,8 @@ import { SpecificationModalComponent } from './specification-modal/specification
 import { ReviewModalComponent } from './review-modal/review-modal.component';
 import { ImformationspecModalComponent } from './imformationspec-modal/imformationspec-modal.component';
 
+import { Location } from '@angular/common'
+
 @Component({
   selector: 'app-productdetail',
   templateUrl: './productdetail.page.html',
@@ -31,7 +33,8 @@ export class ProductdetailPage implements OnInit {
   constructor(
     private router: Router,
     private productdetailService: ProductdetailService,
-    public modalController: ModalController) { }
+    public modalController: ModalController,
+    private _location: Location) { }
 
   ngOnInit() {
     this.productdetailService.onProductdetailDataListChanged.subscribe((productdetailDataList: any) => {
@@ -152,6 +155,10 @@ export class ProductdetailPage implements OnInit {
       }
     });
     return await modal.present();
+  }
+
+  goBackClick() {
+    this._location.back();
   }
 
 }
