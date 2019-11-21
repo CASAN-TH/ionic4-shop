@@ -11,7 +11,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalCardComponent } from './pages/regcredit/modals/modal-card/modal-card.component';
-<<<<<<< HEAD
 import { PaymentModalComponent } from './productdetail/payment-modal/payment-modal.component';
 import { VouchersModalComponent } from './productdetail/vouchers-modal/vouchers-modal.component';
 import { PromotionModalComponent } from './productdetail/promotion-modal/promotion-modal.component';
@@ -21,40 +20,28 @@ import { SpecificationModalComponent } from './productdetail/specification-modal
 import { ReviewModalComponent } from './productdetail/review-modal/review-modal.component';
 import { ImformationspecModalComponent } from './productdetail/imformationspec-modal/imformationspec-modal.component';
 
-
-@NgModule({
-  declarations: [AppComponent,
-    ModalCardComponent,
-    PaymentModalComponent,
-    VouchersModalComponent,
-    PromotionModalComponent,
-    TcoinModalComponent,
-    WarrantyModalComponent,
-    SpecificationModalComponent,
-    ReviewModalComponent,
-    ImformationspecModalComponent
-  ],
-  entryComponents: [
-    ModalCardComponent,
-    PaymentModalComponent,
-    VouchersModalComponent,
-    PromotionModalComponent,
-    TcoinModalComponent,
-    WarrantyModalComponent,
-    SpecificationModalComponent,
-    ReviewModalComponent,
-    ImformationspecModalComponent
-  ],
-=======
 import { SpecModalComponent } from './cart/spec-modal/spec-modal.component';
 import { InsallmentModalComponent } from './cart/insallment-modal/insallment-modal.component';
 import { ModalCameraComponent } from './modals/modal-camera/modal-camera.component';
 
 
 @NgModule({
-  declarations: [AppComponent, ModalCardComponent, ModalCameraComponent,SpecModalComponent,InsallmentModalComponent],
-  entryComponents: [ModalCardComponent, ModalCameraComponent,SpecModalComponent,InsallmentModalComponent],
->>>>>>> 46ddc761ba9a13d13dd739b0a359abe166178021
+  declarations: [AppComponent, ModalCardComponent, ModalCameraComponent,SpecModalComponent,InsallmentModalComponent,PaymentModalComponent,
+    VouchersModalComponent,
+    PromotionModalComponent,
+    TcoinModalComponent,
+    WarrantyModalComponent,
+    SpecificationModalComponent,
+    ReviewModalComponent,
+    ImformationspecModalComponent],
+  entryComponents: [ModalCardComponent, ModalCameraComponent,SpecModalComponent,InsallmentModalComponent,PaymentModalComponent,
+    VouchersModalComponent,
+    PromotionModalComponent,
+    TcoinModalComponent,
+    WarrantyModalComponent,
+    SpecificationModalComponent,
+    ReviewModalComponent,
+    ImformationspecModalComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule
