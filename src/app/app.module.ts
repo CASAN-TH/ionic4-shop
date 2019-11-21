@@ -11,11 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalCardComponent } from './pages/regcredit/modals/modal-card/modal-card.component';
+import { ModalCameraComponent } from './modals/modal-camera/modal-camera.component';
 
 
 @NgModule({
-  declarations: [AppComponent, ModalCardComponent],
-  entryComponents: [ModalCardComponent],
+  declarations: [AppComponent, ModalCardComponent, ModalCameraComponent],
+  entryComponents: [ModalCardComponent, ModalCameraComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule
