@@ -22,11 +22,11 @@
       </div>
     </ion-col>
 
-    <ion-col size="9">
+    <ion-col size="9" class="ion-no-padding">
       <ion-content #content>
         <ion-row *ngFor="let cate of data.cate_data">
           <ion-col size="12">
-            <ion-text class="textconten" [id]="cate._id">{{cate.name}}</ion-text>
+            <ion-text [id]="cate._id">{{cate.name}}</ion-text>
             <ion-slides pager>
               <ion-slide *ngFor="let cover of cate.cover_image">
                 <img class="coverimage" [src]="cover">
@@ -46,7 +46,6 @@
           </ion-col>
         </ion-row>
       </ion-content>
-
     </ion-col>
   </ion-row>
 </ion-content>
