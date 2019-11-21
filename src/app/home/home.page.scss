@@ -1,0 +1,45 @@
+ion-toolbar {
+  padding-top: 0.6rem !important;
+  --background: transparent;
+  --ion-color-base: transparent !important;
+  color: #ffffff;
+}
+
+ion-grid {
+  margin-top: 0.5rem;
+  background-color: white;
+}
+
+ion-content {
+  --padding-top: -100px !important;
+  --background: rgb(241, 235, 235) !important;
+}
+
+ion-card {
+  -webkit-margin-start: 1px;
+  margin-inline-start: 1px;
+  -webkit-margin-end: 1px;
+  margin-inline-end: 1px;
+}
+
+.sc-ion-searchbar-ios-h {
+  --icon-color: #ece8e8;
+  --background: rgba(241, 235, 235, 0.42) !important;
+  --color: #ece8e8 !important;
+}
+
+.show-background {
+  --background: #f25454;
+  --ion-color-base: #f25454 !important;
+}
+.slide {
+  padding-top: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.forecast_container {
+  overflow-x: scroll !important;
+  overflow-y: hidden;
+  word-wrap: break-word;
+}
