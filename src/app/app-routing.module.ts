@@ -8,38 +8,42 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./auth/login/login.module').then(m=> m.LoginPageModule)
+    loadChildren: () => import('./auth/login/login.module').then(m => m.LoginPageModule)
   },
   {
     path: 'register',
-    loadChildren: () => import('./auth/register/register.module').then(m=> m.RegisterPageModule)
+    loadChildren: () => import('./auth/register/register.module').then(m => m.RegisterPageModule)
   },
   {
     path: 'forgot',
-    loadChildren: () => import('./auth/forgot/forgot.module').then( m => m.ForgotPageModule)
+    loadChildren: () => import('./auth/forgot/forgot.module').then(m => m.ForgotPageModule)
   },
   {
     path: 'phoneno',
-    loadChildren: () => import('./auth/phoneno/phoneno.module').then( m => m.PhonenoPageModule)
+    loadChildren: () => import('./auth/phoneno/phoneno.module').then(m => m.PhonenoPageModule)
   },
   {
     path: 'otp',
-    loadChildren: () => import('./auth/otp/otp.module').then( m => m.OtpPageModule)
+    loadChildren: () => import('./auth/otp/otp.module').then(m => m.OtpPageModule)
   },
   {
     path: 'password',
-    loadChildren: () => import('./auth/password/password.module').then( m => m.PasswordPageModule)
+    loadChildren: () => import('./auth/password/password.module').then(m => m.PasswordPageModule)
   },
   {
     path: 'regcredit',
-    loadChildren: () => import('./pages/regcredit/regcredit.module').then( m => m.RegcreditPageModule)
+    loadChildren: () => import('./pages/regcredit/regcredit.module').then(m => m.RegcreditPageModule)
   },
   {
     path: 'search',
-    loadChildren: () => import('../app/pages/search/search.module').then( m => m.SearchPageModule)
+    loadChildren: () => import('../app/pages/search/search.module').then(m => m.SearchPageModule)
+  },
+  {
+    path: 'promotion',
+    loadChildren: () => import('../app/pages/promotion/promotion.module').then(m => m.PromotionPageModule)
   }
 
-  
+
 ];
 @NgModule({
   imports: [
@@ -47,4 +51,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

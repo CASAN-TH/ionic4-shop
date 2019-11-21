@@ -46,6 +46,14 @@ export class CategoryPage implements OnInit {
     this.router.navigateByUrl('search/' + categoryId + '/' + brandId);
   }
 
+  onPromotionClick(cate2Id: any) {
+    this.router.navigateByUrl('search/' + cate2Id);
+  }
+
+  onCoverClick(coverId: any) {
+    this.router.navigateByUrl('promotion/' + coverId);
+  }
+
   scrollTo(element: string) {
 
   }
