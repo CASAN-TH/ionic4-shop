@@ -26,5 +26,4 @@ export class HomePage implements OnInit {
       this.showToolbar = scrollTop >= 141;
     }
   }
-
 }
