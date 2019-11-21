@@ -11,7 +11,7 @@
       <mat-step label="ข้อมูลส่วนตัว" completed="false">
         <ion-row>
           <ion-col size="3"></ion-col>
-          <ion-col size="6" class="ion-text-center img-container" (click)="openModalCard()">
+          <ion-col size="6" class="ion-text-center img-container" (click)="openModalCard('front')">
             <div class="avatar-icon">
               <ion-icon name="camera"></ion-icon>
             </div>
@@ -21,7 +21,7 @@
         </ion-row>
         <ion-row>
           <ion-col size="3"></ion-col>
-          <ion-col size="6" class="ion-text-center img-container">
+          <ion-col size="6" class="ion-text-center img-container" (click)="openModalCard('back')">
             <div class="avatar-icon">
               <ion-icon name="camera"></ion-icon>
             </div>
@@ -31,7 +31,7 @@
         </ion-row>
         <ion-row>
           <ion-col size="3"></ion-col>
-          <ion-col size="6" class="ion-text-center img-container">
+          <ion-col size="6" class="ion-text-center img-container" (click)="openModalCard('withme')">
             <div class="avatar-icon">
               <ion-icon name="camera"></ion-icon>
             </div>
@@ -115,6 +115,11 @@
           <ion-label>หมายเลขโทรศัพย์</ion-label>
           <ion-input [(ngModel)]="dataSecondContact.tel"></ion-input>
         </ion-item>
+
+        <div class="ion-margin-top hint-style">
+          กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
+        </div>
+        <button style="width: 100%;" mat-raised-button color="primary">ส่ง</button>
       </mat-step>
     </mat-horizontal-stepper>
   </ion-content>

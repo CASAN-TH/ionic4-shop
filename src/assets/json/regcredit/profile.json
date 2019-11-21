@@ -2,13 +2,13 @@
     "status": 200,
     "data": {
         "frontcardimaged": {
-            "url": "front.jpg"
+            "url": ""
         },
         "backcardimaged": {
-            "url": "front.jpg"
+            "url": "backCardOrigin.jpg"
         },
         "personwithcardimaged": {
-            "url": "front.jpg"
+            "url": "withmeCardOrigin.jpg"
         },
         "citizen_id": "1103000082933",
         "citizenback_id": "meo-12345678",
