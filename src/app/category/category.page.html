@@ -13,7 +13,7 @@
   <ion-row>
     <ion-col size="3" class="ion-no-padding">
       <div scrollY="true" class="menu-content">
-        <ion-row *ngFor="let item of data.cate_data" [id]="item._id" [class.mnu-selected]="item._id == tabSelected">
+        <ion-row *ngFor="let item of data" [class.mnu-selected]="item._id == tabSelected" id="mnu_{{item._id}}">
           <ion-col size="12" text-center (click)="onMenuClick(item._id)">
             <ion-icon [src]="item.icon" class="icon-menu"></ion-icon>
             <p class="ion-text-nowrap menutext">{{item.name}}</p>
@@ -24,9 +24,9 @@
 
     <ion-col size="9" class="ion-no-padding">
       <ion-content #content>
-        <ion-row *ngFor="let cate of data.cate_data">
+        <ion-row *ngFor="let cate of data" [id]="cate._id">
           <ion-col size="12">
-            <ion-text [id]="cate._id">{{cate.name}}</ion-text>
+            <ion-text >{{cate.name}}</ion-text>
             <ion-slides pager>
               <ion-slide *ngFor="let cover of cate.cover_image">
                 <img class="coverimage" [src]="cover.image" (click)="onCoverClick(cover._id)">
