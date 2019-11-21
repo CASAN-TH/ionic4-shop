@@ -125,7 +125,11 @@ export class RegcreditService {
 
   updateProfile(body) {
     if (mockup) {
-      return body
+      const res = {
+        "status": 200,
+        "data": body
+      }
+      return res
     } else {
       this.http.put('/api/profile' + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getRegcreditProfile();
@@ -136,13 +140,28 @@ export class RegcreditService {
 
   updateSecondContact(body) {
     if (mockup) {
-      return body
+      const res = {
+        "status": 200,
+        "data": body
+      }
+      return res
     } else {
       this.http.put('/api/secondcontact' + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getRegcreditSecondContact();
       })
     }
+  }
 
+  updateUser(body){
+    if (mockup) {
+      const res = {
+        "status": 200,
+        "data": body
+      }
+      return res
+    } else {
+      this.http.put('/api/user' + body._id, body, { headers: this.authorizationHeader() }).toPromise();
+    }
   }
 
 }

@@ -59,6 +59,14 @@ export class RegcreditPage implements OnInit {
   async onFinish() {
     const res = await this.regcreditService.updateSecondContact(this.dataSecondContact)
     console.log(res)
+    if(res.data){
+      const body = {
+        "_id": "u001",
+        "status": "waitapprove"
+      }
+      const resStatus = this.regcreditService.updateUser(body)
+      console.log(resStatus)
+    }
   }
 
   openModalCard(type): void {
