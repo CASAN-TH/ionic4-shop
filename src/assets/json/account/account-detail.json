@@ -1,0 +1,19 @@
+{
+    "status": 200,
+    "data": {
+        "profileimg": "https://images.pexels.com/photos/1820567/pexels-photo-1820567.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "name": "กฤษตฤณ เทียนช้าง",
+        "wishlist": 1,
+        "followedshop": 1,
+        "browsehistory": 1,
+        "credit": 10000,
+        "coupon": 5,
+        "tcoin": 1,
+        "currentamount": 0,
+        "ads": [
+            "https://pub.thisshop.com/shop/default/20190930/14222226_1569810416179.jpg?x-oss-process=image/resize,w_750/quality,q_80&quot",
+            "https://pub.thisshop.com/shop/block/20190819/6270456_1566185153386.png?x-oss-process=image/resize,w_750/quality,q_80&quot"
+            
+        ]
+    }
+}

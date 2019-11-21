@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-modal-card',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public dialogRef: MatDialogRef<ModalCardComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.data)
+  }
 
 }
