@@ -16,11 +16,9 @@
                     "discount_price": "35,900",
                     "discount": "59% off",
                     "amount": "1",
-                    "installment": {
-                        "amount": "893.58",
-                        "period": "x18ต่องวด",
-                        "currency": "฿"
-                    }
+                    "installment_amount": "893.58",
+                    "installment_period": "x18ต่องวด",
+                    "installment_currency": "฿"
                 }
             ]
         }

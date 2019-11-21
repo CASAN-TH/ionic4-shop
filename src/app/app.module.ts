@@ -11,11 +11,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalCardComponent } from './pages/regcredit/modals/modal-card/modal-card.component';
+import { SpecModalComponent } from './cart/spec-modal/spec-modal.component';
+import { InsallmentModalComponent } from './cart/insallment-modal/insallment-modal.component';
 
 
 @NgModule({
-  declarations: [AppComponent, ModalCardComponent],
-  entryComponents: [ModalCardComponent],
+  declarations: [AppComponent, ModalCardComponent,SpecModalComponent,InsallmentModalComponent],
+  entryComponents: [ModalCardComponent,SpecModalComponent,InsallmentModalComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule

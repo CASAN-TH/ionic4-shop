@@ -38,6 +38,45 @@
                 "currency": "฿"
             },
             "discount": ""
+        },
+        {
+            "product_id": "0003",
+            "image": "https://pub.thisshop.com/shop/category/01010111/01010111/5808c8f8a32047ca89fc7ff6f6eddced.jpg",
+            "name": "iPhone 11 Pro Max 128 GB MidnightGreen",
+            "price": {
+                "amount": "49,900",
+                "currency": "฿"
+            },
+            "discountprice": {
+                "price": "",
+                "currency": ""
+            },
+            "installment": {
+                "amount": "3,571.33",
+                "period": "x18mo.",
+                "currency": "฿"
+            },
+            "discount": ""
+        }
+        ,
+        {
+            "product_id": "0003",
+            "image": "https://pub.thisshop.com/shop/category/01010111/01010111/5808c8f8a32047ca89fc7ff6f6eddced.jpg",
+            "name": "iPhone 11 Pro Max 256 GB MidnightGreen",
+            "price": {
+                "amount": "59,900",
+                "currency": "฿"
+            },
+            "discountprice": {
+                "price": "",
+                "currency": ""
+            },
+            "installment": {
+                "amount": "3,571.33",
+                "period": "x18mo.",
+                "currency": "฿"
+            },
+            "discount": ""
         }
     ]
 }
