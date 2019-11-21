@@ -21,8 +21,9 @@ export class CategoryPage implements OnInit {
     this.categoryService.onCategoryDataListChanged.subscribe((categoryDataList: any) => {
       console.log(categoryDataList);
       this.data = categoryDataList;
-      if (this.data.cate_data) {
-        this.tabSelected = this.data.cate_data[0]._id;
+      if (this.data.length > 0) {
+        console.log(this.data)
+        this.tabSelected = this.data[0]._id;
       }
 
     })
@@ -32,11 +33,12 @@ export class CategoryPage implements OnInit {
 
     this.tabSelected = cate_id;
     let yOffset = document.getElementById(cate_id).offsetTop;
-    // let yHOffset = document.getElementById(cate_id).offsetHeight
+    let yHOffset = document.getElementById(cate_id).offsetHeight;
+
     // if (yOffset > 0) {
     //   yOffset = yOffset + yHOffset;
     // }
-    console.log(yOffset);
+    console.log(yOffset + " : " + yHOffset);
     this.content.scrollToPoint(0, yOffset, 1000);
     // this.content.scrollToBottom();
     // this.content.scrollTo(yOffset)

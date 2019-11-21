@@ -1,7 +1,7 @@
 {
     "status": 200,
     "data": {
-        "condition": [
+        "categories": [
             {
                 "_id": "1234",
                 "name": "โทรศัพท์มือถือ",
@@ -11,6 +11,18 @@
                 "_id": "4567",
                 "name": "สมาร์ทโฟน",
                 "image": "https://pub.thisshop.com/shop/category/icon/1550042052240.jpg"
+            }
+        ],
+        "brands": [
+            {
+                "_id": "2123",
+                "name": "iPhone",
+                "image": "https://pub.thisshop.com/shop/default/20190924/46107227_1569307226757.png"
+            },
+            {
+                "_id": "345",
+                "name": "vivo",
+                "image": "https://pub.thisshop.com/shop/default/20190924/3892098_1569307254659.png"
             }
         ],
         "productItems": [
