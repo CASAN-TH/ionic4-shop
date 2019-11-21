@@ -33,6 +33,10 @@ const routes: Routes = [
   {
     path: 'regcredit',
     loadChildren: () => import('./pages/regcredit/regcredit.module').then( m => m.RegcreditPageModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('../app/pages/search/search.module').then( m => m.SearchPageModule)
   }
 
   
