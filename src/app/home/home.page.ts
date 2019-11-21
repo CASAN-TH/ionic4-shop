@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HomeService } from './home.service';
+import { ScrollDetail } from '@ionic/core';
 
 @Component({
   selector: 'app-home',
