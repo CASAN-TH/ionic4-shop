@@ -39,6 +39,18 @@ export class RegcreditPage implements OnInit {
     })
   }
 
+  onDeleteImg(i){
+    if(i === "frontcardimaged"){
+      this.regProfile.frontcardimaged.url = ""
+    }
+    if(i === "backcardimaged"){
+      this.regProfile.backcardimaged.url = ""
+    }
+    if(i === "personwithcardimaged"){
+      this.regProfile.personwithcardimaged.url = ""
+    }
+  }
+
   async onNext(){
     const res = await this.regcreditService.updateProfile(this.regProfile);
     console.log(res)

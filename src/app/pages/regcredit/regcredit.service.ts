@@ -15,7 +15,11 @@ export class RegcreditService {
 
   onRegcreditDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onRegcreditDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onRegcreditProfileChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onRegcreditProfileChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "frontcardimaged": { "url": "" },
+    "backcardimaged": { "url": "" },
+    "personwithcardimaged": { "url": "" }
+  });
   onRegcreditSecondContactChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }

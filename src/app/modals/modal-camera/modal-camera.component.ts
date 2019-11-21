@@ -14,7 +14,7 @@ export class ModalCameraComponent implements OnInit {
 
   dismiss() {
     this.modalCtrl.dismiss({
-      'url': 'imageFromData.jpg'
+      'url': 'https://www.admission.nu.ac.th/student/citizencard.jpg'
     });
   }
 }
