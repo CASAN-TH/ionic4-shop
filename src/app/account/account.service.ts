@@ -16,6 +16,7 @@ export class AccountService {
   onAccountDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onAccountDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onAccountData2Changed : BehaviorSubject<any> = new BehaviorSubject({});
+  onPromotionChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
 
   constructor(private http: HttpClient) { }
@@ -34,6 +35,7 @@ export class AccountService {
     } else {
       this.getAccountDataList();
       this.getAccountData2();
+      this.getPromotionAndAds();
     }
     return;
   }
@@ -61,6 +63,20 @@ export class AccountService {
       }else{
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onAccountData2Changed.next(res.data);
+        },reject)
+      }
+    })
+  }
+
+  getPromotionAndAds(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if(mockup){
+        this.http.get('../../assets/json/account/ads-promotion.json').subscribe((res: any) => {
+          this.onPromotionChanged.next(res.data);
+        },reject)
+      }else{
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onPromotionChanged.next(res.data);
         },reject)
       }
     })

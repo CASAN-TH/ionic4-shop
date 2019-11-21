@@ -218,21 +218,8 @@
 
   <ion-card>
     <ion-row>
-      <ion-col size="6">
-        <img
-          src="https://pub.thisshop.com/shop/block/2019117/18430482_1573093581792.png?x-oss-process=image/quality,q_80">
-      </ion-col>
-      <ion-col size="6">
-        <img
-          src="https://pub.thisshop.com/shop/block/2019117/41955463_1573093590782.png?x-oss-process=image/quality,q_80">
-      </ion-col>
-      <ion-col size="6">
-        <img
-          src="https://pub.thisshop.com/shop/block/2019117/58847086_1573093621043.png?x-oss-process=image/quality,q_80">
-      </ion-col>
-      <ion-col size="6">
-        <img
-          src="https://pub.thisshop.com/shop/block/2019117/83760368_1573093628061.png?x-oss-process=image/quality,q_80">
+      <ion-col size="6" *ngFor="let promo of promotionData.promotions" (click)="onToPromotion(promo.name)">
+        <img [src]="promo.image">
       </ion-col>
     </ion-row>
   </ion-card>
@@ -261,8 +248,8 @@
 
   <ion-card>
     <ion-slides pager="true" [options]="slideOpts">
-      <ion-slide>
-        <img [src]=accountData.ads>
+      <ion-slide *ngFor="let ads of promotionData.ads">
+        <img [src]="ads.image">
       </ion-slide>
     </ion-slides>
   </ion-card>

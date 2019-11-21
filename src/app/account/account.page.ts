@@ -10,6 +10,7 @@ import { AccountService } from './account.service';
 export class AccountPage implements OnInit {
   accountDataList: any;
   accountData: any;
+  promotionData: any;
 
   constructor(private router: Router, private accountService : AccountService) { }
 
@@ -27,6 +28,10 @@ export class AccountPage implements OnInit {
     this.accountService.onAccountData2Changed.subscribe((accountData)=>{
       console.log(accountData);
       this.accountData = accountData;
+    })
+    this.accountService.onPromotionChanged.subscribe((promotionData)=>{
+      console.log(promotionData);
+      this.promotionData = promotionData;
     })
   }
 
@@ -113,6 +118,25 @@ export class AccountPage implements OnInit {
 
   onToShippingAddressPage() {
     console.log("onToShippingAddressPage");
+  }
+
+  onToPromotion(item) {
+    console.log(item);
+    if(item==="Tcoin Mall"){
+      console.log('go to Tcoin Mall Page');
+    }
+    if(item==="Cash Reward"){
+      console.log('go to Cash Reward Page');
+    }
+    if(item==="Super Discount"){
+      console.log('go to Super Discount Page');
+    }
+    if(item==="Coupon Center"){
+      console.log('go to Coupon Center Page');
+    }
+    
+
+    
   }
 
 
