@@ -9,7 +9,7 @@ import { HomeService } from './home.service';
 })
 export class HomePage implements OnInit {
   homeDataList: any;
-
+  showToolbar = false;
   constructor(private router: Router, private homeService : HomeService) { }
 
   ngOnInit() {
@@ -17,6 +17,14 @@ export class HomePage implements OnInit {
       console.log(homeDataList);
       this.homeDataList = homeDataList;
     })
+  }
+
+  onScroll($event: CustomEvent<ScrollDetail>) {
+    
+    if ($event && $event.detail && $event.detail.scrollTop) {
+      const scrollTop = $event.detail.scrollTop;
+      this.showToolbar = scrollTop >= 141;
+    }
   }
 
 }
