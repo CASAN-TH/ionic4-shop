@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RegcreditService } from './regcredit.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalCardComponent } from './modals/modal-card/modal-card.component';
 
 @Component({
   selector: 'app-regcredit',
@@ -13,7 +15,11 @@ export class RegcreditPage implements OnInit {
   dataSecondContact: any;
 
   
-  constructor(private router: Router, private regcreditService : RegcreditService) { }
+  constructor(
+    private router: Router, 
+    private regcreditService : RegcreditService,
+    private dialog: MatDialog
+    ) { }
 
   ngOnInit() {
     this.regcreditService.onRegcreditDataListChanged.subscribe((regcreditDataList:any)=>{
@@ -28,6 +34,17 @@ export class RegcreditPage implements OnInit {
       console.log(dataSecondContact)
       this.dataSecondContact = dataSecondContact
     })
+  }
+
+  openModalCard(): void {
+    const dialogRef = this.dialog.open(ModalCardComponent, {
+      width: '250px',
+      data: {"type":"front"}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
 }

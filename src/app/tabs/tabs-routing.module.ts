@@ -50,6 +50,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'account',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../account/account.module').then(m => m.AccountPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'

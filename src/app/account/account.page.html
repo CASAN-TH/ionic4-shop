@@ -1,0 +1,258 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row>
+  <ion-col size="12" *ngFor="let item of accountDataList">
+    {{item.name}}
+    {{item.wishlist}}
+   <img [src]=item.profileimg>
+  </ion-col>
+</ion-row>
+</ion-content> -->
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-row size="12">
+      <ion-item (click)="onToOpenMePage()">
+        <ion-avatar slot="start">
+          <img [src]=accountData.profileimg>
+        </ion-avatar>
+        <ion-label> {{accountData.name}}</ion-label>
+      </ion-item>
+
+      <div>
+        <ion-buttons>
+
+          <ion-button>
+            <ion-icon slot="icon-only" src="https://image.flaticon.com/icons/svg/126/126501.svg"></ion-icon>
+          </ion-button>
+
+          <ion-button>
+            <ion-icon slot="icon-only" src="https://image.flaticon.com/icons/svg/126/126472.svg"></ion-icon>
+          </ion-button>
+
+        </ion-buttons>
+      </div>
+
+    </ion-row>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-card class="ion-text-center">
+    <ion-row>
+      <ion-col size="4">
+        <h1>{{accountData.wishlist}}</h1>
+      </ion-col>
+      <ion-col size="4">
+        <h1>{{accountData.followedshop}}</h1>
+      </ion-col>
+      <ion-col size="4">
+        <h1>{{accountData.browsehistory}}</h1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4">
+        <p>Wishlist</p>
+      </ion-col>
+      <ion-col size="4">
+        <p>Followed Shop</p>
+      </ion-col>
+      <ion-col size="4">
+        <p>Browse History</p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-grid>
+      <ion-item>
+        <ion-row>
+          <ion-col size="12">
+            <h5>
+              My Orders
+            </h5>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+      <ion-row>
+        <ion-col size="3">
+          <div>
+            <img src="https://image.flaticon.com/icons/svg/1086/1086741.svg">
+          </div>
+        </ion-col>
+        <ion-col size="3">
+          <div>
+            <img src="https://image.flaticon.com/icons/svg/164/164414.svg">
+          </div>
+        </ion-col>
+        <ion-col size="3">
+          <div>
+            <img src="https://image.flaticon.com/icons/svg/1493/1493693.svg">
+          </div>
+        </ion-col>
+        <ion-col size="3">
+          <div>
+            <img src="https://image.flaticon.com/icons/svg/1055/1055673.svg">
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-text-center">
+        <ion-col size="3">
+          <p>To Pay</p>
+        </ion-col>
+        <ion-col size="3">
+          <p>To Ship</p>
+        </ion-col>
+        <ion-col size="3">
+          <p>To recieve</p>
+        </ion-col>
+        <ion-col size="3">
+          <p>Waiting reviews</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <!-- <ion-card>
+    <ion-row>
+      <ion-col size="12">
+        <h2>
+          Get the highest credit limit
+        </h2>
+      </ion-col>
+      <ion-row>
+        <ion-col >
+          <img [src]=accountData.ads>
+        </ion-col>
+
+      </ion-row>
+    </ion-row>
+  </ion-card> -->
+
+  <ion-card>
+    <ion-item>
+      <ion-row>
+        <ion-col size="12">
+          <h5>
+            My Bills
+          </h5>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-row>
+      <h5>No Bills</h5>
+    </ion-row>
+  </ion-card>
+
+  <ion-card class="ion-text-center">
+    <ion-grid>
+      <ion-item>
+        <ion-row>
+          <ion-col size="12">
+            <h5>
+              My Assets
+            </h5>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+      <ion-row>
+        <ion-col size="3">
+          <h1>{{accountData.credit}}</h1>
+        </ion-col>
+        <ion-col size="3">
+          <h1> {{accountData.coupon}}</h1>
+        </ion-col>
+        <ion-col size="3">
+          <h1>{{accountData.tcoin}}</h1>
+        </ion-col>
+        <ion-col size="3">
+          <h1> {{accountData.currentamount}}</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3">
+          <p>Available Credit</p>
+        </ion-col>
+        <ion-col size="3">
+          <p>Coupon</p>
+        </ion-col>
+        <ion-col size="3">
+          <p>Tcoin</p>
+        </ion-col>
+        <ion-col size="3">
+          <p>Current amount</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card>
+    <ion-row>
+      <ion-col size="6">
+        <img
+          src="https://pub.thisshop.com/shop/block/2019117/18430482_1573093581792.png?x-oss-process=image/quality,q_80">
+      </ion-col>
+      <ion-col size="6">
+        <img
+          src="https://pub.thisshop.com/shop/block/2019117/41955463_1573093590782.png?x-oss-process=image/quality,q_80">
+      </ion-col>
+      <ion-col size="6">
+        <img
+          src="https://pub.thisshop.com/shop/block/2019117/58847086_1573093621043.png?x-oss-process=image/quality,q_80">
+      </ion-col>
+      <ion-col size="6">
+        <img
+          src="https://pub.thisshop.com/shop/block/2019117/83760368_1573093628061.png?x-oss-process=image/quality,q_80">
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card class="ion-text-center">
+    <ion-row>
+      <ion-col size="3">
+        <img class="icon" src="https://image.flaticon.com/icons/svg/149/149150.svg">
+      </ion-col>
+      <ion-col size="3">
+        <img class="icon" src="https://image.flaticon.com/icons/svg/223/223494.svg">
+      </ion-col>
+      <ion-col size="3">
+        <img class="icon" src="https://image.flaticon.com/icons/svg/984/984204.svg">
+      </ion-col>
+      <ion-col size="3">
+        <img class="icon" src="https://image.flaticon.com/icons/svg/149/149441.svg">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <p>Help Center</p>
+      </ion-col>
+      <ion-col size="3">
+        <p>Customer Service</p>
+      </ion-col>
+      <ion-col size="3">
+        <p>Lanquages</p>
+      </ion-col>
+      <ion-col size="3">
+        <p>Shipping Address</p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <img [src]=accountData.ads>
+      </ion-slide>
+    </ion-slides>
+  </ion-card>
+
+</ion-content>
