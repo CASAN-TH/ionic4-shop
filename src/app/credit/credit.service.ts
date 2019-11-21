@@ -13,7 +13,7 @@ const mockup = environment.mockup;
 export class CreditService {
   routeParams: any;
 
-  onCreditDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onCreditDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onCreditDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }

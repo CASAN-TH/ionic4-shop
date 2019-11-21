@@ -1,8 +1,8 @@
 {
     "status": 200,
-    "data": [
+    "data": 
         {
-            "name": "test1"
+            "_id": "u001",
+            "status": "member"
         }
-    ]
 }

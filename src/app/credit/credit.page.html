@@ -5,9 +5,7 @@
 </ion-header>
 
 <ion-content>
-<ion-row>
-  <ion-col size="12" *ngFor="let item of creditDataList">
-    {{item.name}}
-  </ion-col>
-</ion-row>
+  <div class="display-member" *ngIf="creditDataList.status === 'member'">
+    <ion-button expand="block" size="large" (click)="onOpenRegCredit()">สมัครทันที</ion-button>
+  </div>
 </ion-content>

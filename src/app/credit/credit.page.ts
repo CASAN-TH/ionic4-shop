@@ -19,4 +19,8 @@ export class CreditPage implements OnInit {
     })
   }
 
+  onOpenRegCredit(){
+    this.router.navigate(['/regcredit'])
+  }
+
 }
