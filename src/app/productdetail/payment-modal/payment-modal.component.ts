@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 @Component({
@@ -8,11 +8,13 @@ import { ModalController } from '@ionic/angular';
 })
 export class PaymentModalComponent implements OnInit {
 
-  PaymentData: any
+  @Input() PaymentData: any
 
   constructor(public modalController: ModalController) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.PaymentData);
+  }
 
   dismiss() {
     this.modalController.dismiss();
