@@ -31,6 +31,9 @@
     "@ionic/angular": "^4.7.1",
     "@ionic/storage": "^2.2.0",
     "cordova-ios": "^5.0.1",
+    "cordova-line-login-plugin": "^1.2.2",
+    "cordova-plugin-add-swift-support": "^2.0.2",
+    "cordova-plugin-carthage-support": "^1.0.0",
     "cordova-plugin-facebook4": "^6.2.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.1",
@@ -83,7 +86,8 @@
         "APP_NAME": "Furnover",
         "FACEBOOK_HYBRID_APP_EVENTS": "false",
         "FACEBOOK_ANDROID_SDK_VERSION": "5.5.2"
-      }
+      },
+      "cordova-line-login-plugin": {}
     },
     "platforms": [
       "ios"
