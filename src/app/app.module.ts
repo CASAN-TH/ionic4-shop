@@ -23,25 +23,44 @@ import { ImformationspecModalComponent } from './productdetail/imformationspec-m
 import { SpecModalComponent } from './cart/spec-modal/spec-modal.component';
 import { InsallmentModalComponent } from './cart/insallment-modal/insallment-modal.component';
 import { ModalCameraComponent } from './modals/modal-camera/modal-camera.component';
+import { PaymentgiftModalComponent } from './gifts/paymentgift-modal/paymentgift-modal.component';
+import { TcoingiftModalComponent } from './gifts/tcoingift-modal/tcoingift-modal.component';
+import { WarrantygiftModalComponent } from './gifts/warrantygift-modal/warrantygift-modal.component';
+import { SpecificationgiftModalComponent } from './gifts/specificationgift-modal/specificationgift-modal.component';
+import { ImformationspecgiftModalComponent } from './gifts/imformationspecgift-modal/imformationspecgift-modal.component';
 
 
 @NgModule({
-  declarations: [AppComponent, ModalCardComponent, ModalCameraComponent,SpecModalComponent,InsallmentModalComponent,PaymentModalComponent,
+  declarations: [AppComponent, ModalCardComponent, ModalCameraComponent, SpecModalComponent, InsallmentModalComponent, PaymentModalComponent,
     VouchersModalComponent,
     PromotionModalComponent,
     TcoinModalComponent,
     WarrantyModalComponent,
     SpecificationModalComponent,
     ReviewModalComponent,
-    ImformationspecModalComponent],
-  entryComponents: [ModalCardComponent, ModalCameraComponent,SpecModalComponent,InsallmentModalComponent,PaymentModalComponent,
+    ImformationspecModalComponent,
+
+    PaymentgiftModalComponent,
+    TcoingiftModalComponent,
+    WarrantygiftModalComponent,
+    SpecificationgiftModalComponent,
+    ImformationspecgiftModalComponent
+  ],
+  entryComponents: [ModalCardComponent, ModalCameraComponent, SpecModalComponent, InsallmentModalComponent, PaymentModalComponent,
     VouchersModalComponent,
     PromotionModalComponent,
     TcoinModalComponent,
     WarrantyModalComponent,
     SpecificationModalComponent,
     ReviewModalComponent,
-    ImformationspecModalComponent],
+    ImformationspecModalComponent,
+
+    PaymentgiftModalComponent,
+    TcoingiftModalComponent,
+    WarrantygiftModalComponent,
+    SpecificationgiftModalComponent,
+    ImformationspecgiftModalComponent
+  ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule

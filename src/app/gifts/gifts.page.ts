@@ -8,14 +8,14 @@ import { GiftsService } from './gifts.service';
   styleUrls: ['./gifts.page.scss'],
 })
 export class GiftsPage implements OnInit {
-  giftsDataList: any;
+  giftsData: any;
 
   constructor(private router: Router, private giftsService : GiftsService) { }
 
   ngOnInit() {
     this.giftsService.onGiftsDataListChanged.subscribe((giftsDataList:any)=>{
       console.log(giftsDataList);
-      this.giftsDataList = giftsDataList;
+      this.giftsData = giftsDataList;
     })
   }
 
