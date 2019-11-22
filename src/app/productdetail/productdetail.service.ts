@@ -18,7 +18,7 @@ export class ProductdetailService {
 
   onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onVouchersDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onPromotionDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onPromotionDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onTcoinDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onWarrantyDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onSpecificationDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
@@ -38,6 +38,8 @@ export class ProductdetailService {
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
     if (this.routeParams.id) {
       this.getProductdetailData(this.routeParams.id);
+    } else {
+      this.getProductdetailDataList();
       this.getPaymentModalData();
       this.getVouchersModalData();
       this.getPromotionModalData();
@@ -46,38 +48,36 @@ export class ProductdetailService {
       this.getSpecificationModalData();
       this.getReviewModalData();
       this.getImformationSpecModalData();
-    } else {
-      this.getProductdetailDataList();
     }
     return;
   }
 
   getProductdetailDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/productdetail/productdetail.json').subscribe((res: any) => {
           this.onProductdetailDataListChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onProductdetailDataListChanged.next(res.data);
-        },reject)
+        }, reject)
       }
     })
   }
 
   getProductdetailData(id: string): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
           this.onProductdetailDataListChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onProductdetailDataChanged.next(res.data);
-        },reject)
+        }, reject)
       }
-      
+
     })
   }
 
@@ -85,7 +85,7 @@ export class ProductdetailService {
     return new Promise((resolve, reject) => {
       this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getProductdetailDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -93,7 +93,7 @@ export class ProductdetailService {
     return new Promise((resolve, reject) => {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getProductdetailDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -101,7 +101,7 @@ export class ProductdetailService {
     return new Promise((resolve, reject) => {
       this.http.delete(api_url + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getProductdetailDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -110,114 +110,115 @@ export class ProductdetailService {
 
   getPaymentModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
           this.onPaymentDataChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onPaymentDataChanged.next(res.data);
-        },reject)
+        }, reject)
       }
-      
+
     })
   }
   getVouchersModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
           this.onVouchersDataChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onVouchersDataChanged.next(res.data);
-        },reject)
+        }, reject)
       }
-      
+
     })
   }
   getPromotionModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
-        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+      if (mockup) {
+        this.http.get('../../assets/json/productdetail/promotion-modal.json').subscribe((res: any) => {
+          console.log(res);
           this.onPromotionDataChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onPromotionDataChanged.next(res.data);
-        },reject)
+        }, reject)
       }
-      
+
     })
   }
   getTcoinModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
           this.onTcoinDataChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onTcoinDataChanged.next(res.data);
-        },reject)
+        }, reject)
       }
-      
+
     })
   }
   getWarrantyModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
           this.onWarrantyDataChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onWarrantyDataChanged.next(res.data);
-        },reject)
+        }, reject)
       }
-      
+
     })
   }
   getSpecificationModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
           this.onSpecificationDataChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onSpecificationDataChanged.next(res.data);
-        },reject)
+        }, reject)
       }
-      
+
     })
   }
   getReviewModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
           this.onReviewDataChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onReviewDataChanged.next(res.data);
-        },reject)
+        }, reject)
       }
-      
+
     })
   }
   getImformationSpecModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
           this.onImformationSpecDataChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onImformationSpecDataChanged.next(res.data);
-        },reject)
+        }, reject)
       }
-      
+
     })
   }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-promotion-modal',
@@ -10,7 +11,7 @@ export class PromotionModalComponent implements OnInit {
 
   @Input() PromotionData: any
 
-  constructor(public modalController: ModalController) { }
+  constructor(public modalController: ModalController, private router: Router) { }
 
   ngOnInit() {
     console.log(this.PromotionData);
@@ -18,6 +19,11 @@ export class PromotionModalComponent implements OnInit {
 
   dismiss() {
     this.modalController.dismiss();
+  }
+
+  onGiftsClick(giftId: any) {
+    console.log(giftId);
+    this.router.navigateByUrl('gifts/' + giftId);
   }
 
 }

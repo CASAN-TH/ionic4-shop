@@ -104,6 +104,7 @@ export class ProductdetailPage implements OnInit {
     return await modal.present();
   }
   async promotionModal() {
+    console.log(this.PromotionData);
     const modal = await this.modalController.create({
       component: PromotionModalComponent,
       componentProps: {

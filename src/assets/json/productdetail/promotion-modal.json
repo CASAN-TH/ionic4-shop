@@ -1,0 +1,35 @@
+{
+    "status": 200,
+    "data": [
+        {
+            "_id":"453",
+            "name":"3 in 1 data cable Random Color",
+            "image":"https://pub.thisshop.com/shop/category/01010313/01010313/0c5282c917364a16ad22fc849e0389e7.png",
+            "quantity":"x1"
+        },
+        {
+            "_id":"786",
+            "name":"Power bank 12000mA",
+            "image":"https://pub.thisshop.com/shop/category/01010314/01010314/9ef4c6a616ff4667bb67e2eda135c396.jpg",
+            "quantity":"x1"
+        },
+        {
+            "_id":"236",
+            "name":"Sport headset",
+            "image":"https://pub.thisshop.com/shop/category/01010314/01010314/9ef4c6a616ff4667bb67e2eda135c396.jpg",
+            "quantity":"x1"
+        },
+        {
+            "_id":"988",
+            "name":"Porttable wireless speaker",
+            "image":"https://pub.thisshop.com/shop/category/01010314/01010314/9ef4c6a616ff4667bb67e2eda135c396.jpg",
+            "quantity":"x1"
+        },
+        {
+            "_id":"766",
+            "name":"JBL T450 BT Powerful big-stage",
+            "image":"https://pub.thisshop.com/shop/category/01010314/01010314/9ef4c6a616ff4667bb67e2eda135c396.jpg",
+            "quantity":"x1"
+        }
+    ]
+}
