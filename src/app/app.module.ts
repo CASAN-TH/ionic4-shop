@@ -34,6 +34,7 @@ import { ModalCameraComponent } from './modals/modal-camera/modal-camera.compone
     SpecificationModalComponent,
     ReviewModalComponent,
     ImformationspecModalComponent],
+    
   entryComponents: [ModalCardComponent, ModalCameraComponent,SpecModalComponent,InsallmentModalComponent,PaymentModalComponent,
     VouchersModalComponent,
     PromotionModalComponent,
