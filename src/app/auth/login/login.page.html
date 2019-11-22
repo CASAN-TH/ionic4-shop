@@ -12,7 +12,10 @@
       <ion-row color="primary" justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
           <div>
-            <h1>Login</h1>
+            <h1>
+              <ion-label color="primary">Welcome to Furnover!</ion-label> 
+            </h1>
+            <p></p>
           </div>
           <div>
             <ion-item>
@@ -45,4 +48,22 @@
       </ion-row>
     </ion-grid>
   </form>
+
+  <ion-row>
+    <ion-col size="12" text-center>
+      <p>Sign in with</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="5" text-right>
+      <img src="../../../assets/images/facebook-icon.png" (click)="onFacbookLoginClick()">
+
+    </ion-col>
+    <ion-col size="2">
+      
+    </ion-col>
+    <ion-col size="5" text-left>
+      <img src="../../../assets/images/line_icon.png" (click)="onLineLoginClick()">
+    </ion-col>
+  </ion-row>
 </ion-content>
