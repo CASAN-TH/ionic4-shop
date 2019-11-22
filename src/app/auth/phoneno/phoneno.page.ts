@@ -20,7 +20,7 @@ export class PhonenoPage implements OnInit {
   }
 
   requestOTP(form){
-    console.log(form);
+    console.log(form.value);
     this.router.navigateByUrl('otp');
   }
 
