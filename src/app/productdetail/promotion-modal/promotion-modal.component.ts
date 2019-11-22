@@ -23,6 +23,7 @@ export class PromotionModalComponent implements OnInit {
 
   onGiftsClick(giftId: any) {
     console.log(giftId);
+    this.modalController.dismiss();
     this.router.navigateByUrl('gifts/' + giftId);
   }
 

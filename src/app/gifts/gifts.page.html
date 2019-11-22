@@ -1,13 +1,194 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start" (click)="goBackClick()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>gifts</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <!-- <ion-row>
-  <ion-col size="12" *ngFor="let item of giftsDataList">
-    {{item.name}}
-  </ion-col>
-</ion-row> -->
+  <ion-row>
+    <ion-col size="12" *ngFor="let itemproduct of giftsData.productdetail">
+      <ion-card>
+        <img [src]="itemproduct.images[0]">
+      </ion-card>
+      <ion-card>
+        <h1>{{itemproduct.currency}} {{itemproduct.price}}</h1>
+
+        <ion-card>
+          <ion-row>
+            <ion-col size="12">
+              <ion-item (click)="paymentgiftModal()">
+                <ion-label>
+                  ข้อมูลจำเพาะ
+                </ion-label>
+                <ion-buttons slot="end">
+                  <ion-button>
+                    <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+                  </ion-button>
+                </ion-buttons>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+        <h4>{{itemproduct.name}}</h4>
+        <ion-row>
+          <ion-col size="12">
+            <ion-segment class="segmentab">
+              <ion-segment-button>
+                <ion-icon name="star"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button checked>
+                <ion-icon name="heart"></ion-icon>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+      <ion-card>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item (click)="tcoingiftModal()">
+              <ion-label>
+                Tcoin
+              </ion-label>
+              <ion-label>
+                <span> รับมากถึง <code>2599</code> </span>
+              </ion-label>
+              <ion-buttons slot="end">
+                <ion-button>
+                  <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+      <ion-card>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item (click)="warrantygiftModal()">
+              <ion-label>
+                บริการ
+              </ion-label>
+              <ion-label>
+                gggggggggggggggggggggggggggggg
+              </ion-label>
+              <ion-buttons slot="end">
+                <ion-button>
+                  <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </ion-item>
+
+            <ion-item (click)="specificationgiftModal()">
+              <ion-label>
+                สเปค
+              </ion-label>
+              <ion-label>
+                gggggggggggggggggggggggggggggg
+              </ion-label>
+              <ion-buttons slot="end">
+                <ion-button>
+                  <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-card>
+            <h4>No review yet</h4>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-card>
+            <ion-row>
+              <ion-col size="6">
+                <h3> Share for free </h3>
+              </ion-col>
+              <ion-col size="6">
+                <ion-chip color="danger">
+                  <ion-label>เยี่ยมชมแบรนด์</ion-label>
+                </ion-chip>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-card>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item (click)="imformationSpecgiftModal()">
+              <ion-label>
+                ข้อมูลจำเพาะ
+              </ion-label>
+              <ion-label>
+                gggggggggggggggggggggggggggggg
+              </ion-label>
+              <ion-buttons slot="end">
+                <ion-button>
+                  <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12" *ngFor="let detail of giftsData.details">
+      <ion-card>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item>
+              <ion-text>{{detail.detailname}}</ion-text>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <img *ngFor="let item of detail.images" [src]="item">
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12" *ngFor="let warranty of giftsData.warranties">
+      <ion-card>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item>
+              <ion-text>{{warranty.warrantyname}}</ion-text>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" *ngFor="let warranty1 of warranty.warrantiestitle">
+            <h5>{{warranty1.title}}</h5>
+            <ion-row>
+              <ion-col size="12">
+                <ion-text>{{warranty1.subtitle}}</ion-text>
+                <p>หากมีคำถามอื่นๆ สามารถสอบถามเจ้าพนักงานได้โดยตรง</p>
+              </ion-col>
+            </ion-row>
+
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-col>
+  </ion-row>
 </ion-content>

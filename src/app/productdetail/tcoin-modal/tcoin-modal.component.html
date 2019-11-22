@@ -1,10 +1,18 @@
 <ion-header>
-    <ion-buttons class="backbutton" slot="start" (click)="dismiss()">
+  <ion-toolbar>
+    <ion-buttons class="backbutton" slot="end" (click)="dismiss()">
       <ion-button>
-        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        <ion-icon slot="icon-only" name="ios-close"></ion-icon>
       </ion-button>
     </ion-buttons>
-  </ion-header>
-  <p>
-  tcoin-modal works!
-</p>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12">
+      <p> Tcoin สามารถใช้ในการสั่งซื้อ, <code>100</code>Tcoin = 1THB. หลังจากที่คุณยืนยันการรับ Tcoin
+        จะถูกส่งไปยังบัญชีของคุณ </p>
+    </ion-col>
+  </ion-row>
+</ion-content>

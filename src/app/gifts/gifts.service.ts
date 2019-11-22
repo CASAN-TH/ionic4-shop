@@ -16,6 +16,12 @@ export class GiftsService {
   onGiftsDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onGiftsDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
+  onPaymentgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onTcoingiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onWarrantygiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onSpecificationgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onImformationSpecgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+
   constructor(private http: HttpClient) { }
 
   private authorizationHeader() {
@@ -31,36 +37,42 @@ export class GiftsService {
       this.getGiftsData(this.routeParams.id);
     } else {
       this.getGiftsDataList();
+
+      this.getPaymentgiftModalData();
+      this.getTcoingiftModalData();
+      this.getWarrantygiftModalData();
+      this.getSpecificationgiftModalData();
+      this.getImformationSpecgiftModalData();
     }
     return;
   }
 
   getGiftsDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/gifts/gifts.json').subscribe((res: any) => {
           this.onGiftsDataListChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onGiftsDataListChanged.next(res.data);
-        },reject)
+        }, reject)
       }
     })
   }
 
   getGiftsData(id: string): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/gifts/gifts-detail.json').subscribe((res: any) => {
           this.onGiftsDataListChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onGiftsDataChanged.next(res.data);
-        },reject)
+        }, reject)
       }
-      
+
     })
   }
 
@@ -68,7 +80,7 @@ export class GiftsService {
     return new Promise((resolve, reject) => {
       this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getGiftsDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -76,7 +88,7 @@ export class GiftsService {
     return new Promise((resolve, reject) => {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getGiftsDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -84,7 +96,80 @@ export class GiftsService {
     return new Promise((resolve, reject) => {
       this.http.delete(api_url + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getGiftsDataList();
-      },reject)
+      }, reject)
+    })
+  }
+
+
+
+  getPaymentgiftModalData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/gifts/gifts-detail.json').subscribe((res: any) => {
+          this.onGiftsDataListChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onGiftsDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+  getTcoingiftModalData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/gifts/gifts-detail.json').subscribe((res: any) => {
+          this.onGiftsDataListChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onGiftsDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+  getWarrantygiftModalData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/gifts/gifts-detail.json').subscribe((res: any) => {
+          this.onGiftsDataListChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onGiftsDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+  getSpecificationgiftModalData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/gifts/gifts-detail.json').subscribe((res: any) => {
+          this.onGiftsDataListChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onGiftsDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+  getImformationSpecgiftModalData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/gifts/gifts-detail.json').subscribe((res: any) => {
+          this.onGiftsDataListChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onGiftsDataChanged.next(res.data);
+        }, reject)
+      }
+
     })
   }
 

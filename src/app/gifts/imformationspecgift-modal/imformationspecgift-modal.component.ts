@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-imformationspecgift-modal',
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImformationspecgiftModalComponent implements OnInit {
 
-  constructor() { }
+  constructor(public modalController: ModalController) { }
 
   ngOnInit() {
-    
+
+  }
+
+  dismiss() {
+    this.modalController.dismiss();
   }
 
 }

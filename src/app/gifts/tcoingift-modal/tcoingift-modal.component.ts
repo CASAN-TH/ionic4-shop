@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tcoingift-modal',
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TcoingiftModalComponent implements OnInit {
 
-  constructor() { }
+  constructor(public modalController: ModalController) { }
 
   ngOnInit() {
-    
+
+  }
+
+  dismiss() {
+    this.modalController.dismiss();
   }
 
 }
