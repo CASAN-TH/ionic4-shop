@@ -109,5 +109,11 @@ export class GiftsPage implements OnInit {
     this._location.back();
   }
 
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400,
+    autoplay: true
+  };
+
 
 }

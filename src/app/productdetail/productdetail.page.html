@@ -13,7 +13,11 @@
   <ion-row>
     <ion-col size="12" *ngFor="let itemproduct of productdetailData.productdetail">
       <ion-card>
-        <img [src]="itemproduct.images[0]">
+        <ion-slides pager [options]="slideOpts">
+          <ion-slide *ngFor="let itemimg of itemproduct.images">
+            <img [src]="itemimg">
+          </ion-slide>
+        </ion-slides>
       </ion-card>
       <ion-card>
 
