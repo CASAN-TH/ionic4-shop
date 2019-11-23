@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule, RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-import { Facebook } from '@ionic-native/facebook/ngx';
-import { LineLogin } from '@ionic-native/line-login/ngx';
+// import { Facebook } from '@ionic-native/facebook/ngx';
+// import { LineLogin } from '@ionic-native/line-login/ngx';
 
 import { LoginPage } from './login.page';
 
@@ -25,8 +25,8 @@ const routes: Routes = [
   ],
   declarations: [LoginPage],
   providers:[
-    Facebook,
-    LineLogin,
+    // Facebook,
+    // LineLogin,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ]
 })

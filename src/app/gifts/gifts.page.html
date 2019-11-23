@@ -11,13 +11,16 @@
 
 <ion-content>
   <ion-row>
-    <ion-col size="12" *ngFor="let itemproduct of giftsData.productdetail">
+    <ion-col size="12" *ngFor="let itemproduct of giftsData.giftdetail">
       <ion-card>
         <img [src]="itemproduct.images[0]">
       </ion-card>
       <ion-card>
-        <h1>{{itemproduct.currency}} {{itemproduct.price}}</h1>
-
+        <ion-row>
+          <ion-col size="12">
+            <h1 class="titlewar">{{itemproduct.currency}} {{itemproduct.price}}</h1>
+          </ion-col>
+        </ion-row>
         <ion-card>
           <ion-row>
             <ion-col size="12">
@@ -34,7 +37,11 @@
             </ion-col>
           </ion-row>
         </ion-card>
-        <h4>{{itemproduct.name}}</h4>
+        <ion-row>
+          <ion-col size="12">
+            <h4 class="titlewar">{{itemproduct.name}}</h4>
+          </ion-col>
+        </ion-row>
         <ion-row>
           <ion-col size="12">
             <ion-segment class="segmentab">
@@ -157,7 +164,7 @@
         <ion-row>
           <ion-col size="12">
             <ion-item>
-              <ion-text>{{detail.detailname}}</ion-text>
+              <ion-text class="titlewar">{{detail.detailname}}</ion-text>
             </ion-item>
           </ion-col>
         </ion-row>
@@ -172,13 +179,13 @@
         <ion-row>
           <ion-col size="12">
             <ion-item>
-              <ion-text>{{warranty.warrantyname}}</ion-text>
+              <ion-text class="titlewar">{{warranty.warrantyname}}</ion-text>
             </ion-item>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col size="12" *ngFor="let warranty1 of warranty.warrantiestitle">
-            <h5>{{warranty1.title}}</h5>
+            <ion-text class="titlewar">{{warranty1.title}}</ion-text>
             <ion-row>
               <ion-col size="12">
                 <ion-text>{{warranty1.subtitle}}</ion-text>
