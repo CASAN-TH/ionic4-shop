@@ -111,7 +111,7 @@ export class ProductdetailService {
   getPaymentModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/payment-modal.json').subscribe((res: any) => {
           this.onPaymentDataChanged.next(res.data);
         }, reject)
       } else {
@@ -154,7 +154,7 @@ export class ProductdetailService {
   getTcoinModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/tcoin-modal.json').subscribe((res: any) => {
           this.onTcoinDataChanged.next(res.data);
         }, reject)
       } else {
@@ -168,7 +168,7 @@ export class ProductdetailService {
   getWarrantyModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/warranty-modal.json').subscribe((res: any) => {
           this.onWarrantyDataChanged.next(res.data);
         }, reject)
       } else {
@@ -182,7 +182,7 @@ export class ProductdetailService {
   getSpecificationModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/specification-modal.json').subscribe((res: any) => {
           this.onSpecificationDataChanged.next(res.data);
         }, reject)
       } else {
@@ -196,7 +196,7 @@ export class ProductdetailService {
   getReviewModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/review-modal.json').subscribe((res: any) => {
           this.onReviewDataChanged.next(res.data);
         }, reject)
       } else {
@@ -210,7 +210,7 @@ export class ProductdetailService {
   getImformationSpecModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/imformation-modal.json').subscribe((res: any) => {
           this.onImformationSpecDataChanged.next(res.data);
         }, reject)
       } else {
