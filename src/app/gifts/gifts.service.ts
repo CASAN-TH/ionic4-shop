@@ -50,7 +50,7 @@ export class GiftsService {
   getGiftsDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/gifts/gifts.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/gifts/gifts-detail.json').subscribe((res: any) => {
           this.onGiftsDataListChanged.next(res.data);
         }, reject)
       } else {

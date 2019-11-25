@@ -1,0 +1,45 @@
+{
+    "status": 200,
+    "data": {
+        "_id": "111",
+        "price": "10,990",
+        "currency": "฿",
+        "image": "",
+        "name": "",
+        "color": "",
+        "version": "",
+        "quantity": "",
+        "selectcolor": [
+            {
+                "_id": "222",
+                "color": ""
+            },
+            {
+                "_id": "333",
+                "color": ""
+            },
+            {
+                "_id": "444",
+                "color": ""
+            },
+            {
+                "_id": "555",
+                "color": ""
+            },
+            {
+                "_id": "666",
+                "color": ""
+            }
+        ],
+        "selectversion": [
+            {
+                "_id": "121",
+                "version": ""
+            },
+            {
+                "_id": "212",
+                "version": ""
+            }
+        ]
+    }
+}
