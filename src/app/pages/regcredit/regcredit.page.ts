@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ModalCardComponent } from './modals/modal-card/modal-card.component';
 import { ModalController } from '@ionic/angular';
 import { ModalCameraComponent } from 'src/app/modals/modal-camera/modal-camera.component';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-regcredit',
@@ -21,7 +22,8 @@ export class RegcreditPage implements OnInit {
     private router: Router,
     private regcreditService: RegcreditService,
     private dialog: MatDialog,
-    public modalController: ModalController
+    public modalController: ModalController,
+    private _location: Location
   ) { }
 
   ngOnInit() {
@@ -67,6 +69,10 @@ export class RegcreditPage implements OnInit {
       const resStatus = this.regcreditService.updateUser(body)
       console.log(resStatus)
     }
+  }
+
+  goBackClick() {
+    this._location.back();
   }
 
   openModalCard(type): void {
