@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -28,6 +29,10 @@ import { TcoingiftModalComponent } from './gifts/tcoingift-modal/tcoingift-modal
 import { WarrantygiftModalComponent } from './gifts/warrantygift-modal/warrantygift-modal.component';
 import { SpecificationgiftModalComponent } from './gifts/specificationgift-modal/specificationgift-modal.component';
 import { ImformationspecgiftModalComponent } from './gifts/imformationspecgift-modal/imformationspecgift-modal.component';
+import { ModalNicknameComponent } from './pages/me/modal-nickname/modal-nickname.component';
+import { ModalPhoneComponent } from './pages/me/modal-phone/modal-phone.component';
+import { ModalPasswordComponent } from './pages/me/modal-password/modal-password.component';
+import { ModalSocialComponent } from './pages/me/modal-social/modal-social.component';
 
 
 @NgModule({
@@ -39,6 +44,11 @@ import { ImformationspecgiftModalComponent } from './gifts/imformationspecgift-m
     SpecificationModalComponent,
     ReviewModalComponent,
     ImformationspecModalComponent,
+
+    ModalNicknameComponent,
+    ModalPhoneComponent,
+    ModalPasswordComponent,
+    ModalSocialComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
@@ -55,6 +65,11 @@ import { ImformationspecgiftModalComponent } from './gifts/imformationspecgift-m
     ReviewModalComponent,
     ImformationspecModalComponent,
 
+    ModalNicknameComponent,
+    ModalPhoneComponent,
+    ModalPasswordComponent,
+    ModalSocialComponent,
+
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
     WarrantygiftModalComponent,
@@ -63,7 +78,8 @@ import { ImformationspecgiftModalComponent } from './gifts/imformationspecgift-m
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start" (click)="ModalDismiss()">
+        <ion-button>
+          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Phone</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+      <ion-item>
+          <ion-input [(ngModel)]="PhoneData"></ion-input>
+        </ion-item>
+
+        <ion-button expand="block" (click)="onSavePhone()">สำเร็จ</ion-button>
+  </ion-content>

@@ -49,6 +49,10 @@ const routes: Routes = [
   {
     path: 'gifts',
     loadChildren: () => import('../app/gifts/gifts.module').then(m => m.GiftsPageModule)
+  },
+  {
+    path: 'me',
+    loadChildren: () => import('../app/pages/me/me.module').then(m => m.MePageModule)
   }
 
 
