@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal-contact',
@@ -7,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalContactComponent implements OnInit {
 
-  constructor() { }
+  @Input() contact: any;
+  constructor(
+    private modalCtrl: ModalController
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.contact);
+  }
+
+  onFinish() {
+    this.modalCtrl.dismiss();
+  }
 
 }
