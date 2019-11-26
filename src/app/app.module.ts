@@ -28,10 +28,22 @@ import { TcoingiftModalComponent } from './gifts/tcoingift-modal/tcoingift-modal
 import { WarrantygiftModalComponent } from './gifts/warrantygift-modal/warrantygift-modal.component';
 import { SpecificationgiftModalComponent } from './gifts/specificationgift-modal/specificationgift-modal.component';
 import { ImformationspecgiftModalComponent } from './gifts/imformationspecgift-modal/imformationspecgift-modal.component';
+import { ModalBillsComponent } from './credit/modal-bills/modal-bills.component';
+import { ModalCreditPointComponent } from './credit/modal-credit-point/modal-credit-point.component';
+import { ModalContactComponent } from './credit/modal-contact/modal-contact.component';
+import { ModalMarriageComponent } from './credit/modal-marriage/modal-marriage.component';
+import { ModalSecondcontactComponent } from './credit/modal-secondcontact/modal-secondcontact.component';
+import { ModalAssetdocsComponent } from './credit/modal-assetdocs/modal-assetdocs.component';
+import { ModalJobComponent } from './credit/modal-job/modal-job.component';
 
 
 @NgModule({
-  declarations: [AppComponent, ModalCardComponent, ModalCameraComponent, SpecModalComponent, InsallmentModalComponent, PaymentModalComponent,
+  declarations: [AppComponent, 
+    ModalCardComponent, 
+    ModalCameraComponent, 
+    SpecModalComponent, 
+    InsallmentModalComponent, 
+    PaymentModalComponent,
     VouchersModalComponent,
     PromotionModalComponent,
 
@@ -45,10 +57,21 @@ import { ImformationspecgiftModalComponent } from './gifts/imformationspecgift-m
     TcoingiftModalComponent,
     WarrantygiftModalComponent,
     SpecificationgiftModalComponent,
-    ImformationspecgiftModalComponent],
-
-
-  entryComponents: [ModalCardComponent, ModalCameraComponent, SpecModalComponent, InsallmentModalComponent, PaymentModalComponent,
+    ImformationspecgiftModalComponent,
+    
+    ModalBillsComponent,
+    ModalCreditPointComponent,
+    ModalContactComponent,
+    ModalMarriageComponent,
+    ModalSecondcontactComponent,
+    ModalAssetdocsComponent,
+    ModalJobComponent
+  ],
+  entryComponents: [ModalCardComponent, 
+    ModalCameraComponent, 
+    SpecModalComponent, 
+    InsallmentModalComponent, 
+    PaymentModalComponent,
     VouchersModalComponent,
     PromotionModalComponent,
     TcoinModalComponent,
@@ -61,7 +84,15 @@ import { ImformationspecgiftModalComponent } from './gifts/imformationspecgift-m
     TcoingiftModalComponent,
     WarrantygiftModalComponent,
     SpecificationgiftModalComponent,
-    ImformationspecgiftModalComponent
+    ImformationspecgiftModalComponent,
+
+    ModalBillsComponent,
+    ModalCreditPointComponent,
+    ModalContactComponent,
+    ModalMarriageComponent,
+    ModalSecondcontactComponent,
+    ModalAssetdocsComponent,
+    ModalJobComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,

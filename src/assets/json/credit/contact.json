@@ -1,0 +1,17 @@
+{
+    "status": 200,
+    "data": {
+        "_id": "001",
+        "u_id": "u001",
+        "contact": {
+            "newtel1": "0960236211",
+            "newtel2": "",
+            "telhome": "",
+            "lineaccount1": "rock.shit",
+            "lineaccount2": "",
+            "fbaccount": "krittin tch",
+            "igaccount": "krittin tch"
+        },
+        "updated": "2019-07-26"
+    }
+}

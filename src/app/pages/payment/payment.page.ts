@@ -9,7 +9,7 @@ import { Location } from '@angular/common'
   styleUrls: ['./payment.page.scss'],
 })
 export class PaymentPage implements OnInit {
-
+  select:any;
   downDataList: any;
   cartDataList: any;
 
