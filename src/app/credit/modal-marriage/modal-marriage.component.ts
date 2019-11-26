@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal-marriage',
@@ -7,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalMarriageComponent implements OnInit {
 
-  constructor() { }
+  @Input() marriage: any;
+  constructor(
+    private modalCtrl: ModalController
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.marriage);
+  }
+
+  onFinish() {
+    this.modalCtrl.dismiss();
+  }
 
 }
