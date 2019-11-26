@@ -30,7 +30,8 @@
   <ion-card class="ion-no-margin-custom" *ngIf="searchData.brands && searchData.brands.length">
     <h6>แบรนด์</h6>
     <ion-row>
-      <ion-col size="3" text-center [class.ion-col-border]="brand._id == brandSelected" *ngFor="let brand of searchData.brands">
+      <ion-col size="3" text-center [class.ion-col-border]="brand._id == brandSelected"
+        *ngFor="let brand of searchData.brands">
         <ion-icon class="ion-item-selected" name="checkbox" *ngIf="brand._id == brandSelected"></ion-icon>
         <img class="brand" [src]="brand.image" (click)="onBrandClick(brand._id)">
       </ion-col>
@@ -44,7 +45,7 @@
         <mat-tab *ngFor="let tabproduct of searchData.productItems" [label]="tabproduct.tabname">
           <ion-row>
             <ion-col size="6" *ngFor="let product of tabproduct.products">
-              <ion-card (click)="onProductdetailClick()">
+              <ion-card (click)="onProductdetailClick(product._id)">
                 <ion-chip color="danger">
                   <ion-label>{{product.discount}}</ion-label>
                 </ion-chip>

@@ -19,10 +19,10 @@
                     "installment_amount": "893.58",
                     "installment_period": "x18ต่องวด",
                     "installment_currency": "฿",
-                    "delivery_charge":" ",
-                    "coupon":"100",
-                    "currency_coupon":"-฿"
-                    
+                    "delivery_charge": " ",
+                    "coupon": "0",
+                    "currency_coupon": "-฿",
+                    "chipingfee":"0"
                 }
             ]
         }

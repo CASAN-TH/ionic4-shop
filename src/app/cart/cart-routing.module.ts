@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { CartPage } from './cart.page';
 import { CartService } from './cart.service';
+import { AuthGuard } from '../auth/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: CartPage,
-    resolve: [ CartService ]
+    resolve: [CartService],
+    // canActivate: [AuthGuard]
   }
 ];
 
@@ -16,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class CartPageRoutingModule {}
+export class CartPageRoutingModule { }

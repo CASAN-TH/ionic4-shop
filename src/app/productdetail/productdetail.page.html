@@ -21,11 +21,11 @@
         <ion-card>
           <ion-row>
             <ion-col size="12">
-              <ion-item>
+              <ion-item (click)="paymentModal()">
                 <ion-label>
                   ข้อมูลจำเพาะ
                 </ion-label>
-                <ion-buttons slot="end" (click)="paymentModal()">
+                <ion-buttons slot="end">
                   <ion-button>
                     <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
                   </ion-button>
@@ -52,14 +52,14 @@
       <ion-card>
         <ion-row>
           <ion-col size="12">
-            <ion-item>
+            <ion-item (click)="vouchersModal()">
               <ion-label>
                 บัตรกำนัล
               </ion-label>
               <ion-label>
                 gggggggggggggggggggggggggggggg
               </ion-label>
-              <ion-buttons slot="end" (click)="vouchersModal()">
+              <ion-buttons slot="end">
                 <ion-button>
                   <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
                 </ion-button>
@@ -72,14 +72,14 @@
       <ion-card>
         <ion-row>
           <ion-col size="12">
-            <ion-item>
+            <ion-item (click)="promotionModal()">
               <ion-label>
                 โปรโมชั่น
               </ion-label>
               <ion-label>
                 gggggggggggggggggggggggggggggg
               </ion-label>
-              <ion-buttons slot="end" (click)="promotionModal()">
+              <ion-buttons slot="end">
                 <ion-button>
                   <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
                 </ion-button>
@@ -92,14 +92,14 @@
       <ion-card>
         <ion-row>
           <ion-col size="12">
-            <ion-item>
+            <ion-item (click)="tcoinModal()">
               <ion-label>
                 Tcoin
               </ion-label>
               <ion-label>
-                gggggggggggggggggggggggggggggg
+                  <span> รับมากถึง <code>2599</code> </span>
               </ion-label>
-              <ion-buttons slot="end" (click)="tcoinModal()">
+              <ion-buttons slot="end">
                 <ion-button>
                   <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
                 </ion-button>
@@ -112,28 +112,28 @@
       <ion-card>
         <ion-row>
           <ion-col size="12">
-            <ion-item>
+            <ion-item (click)="warrantyModal()">
               <ion-label>
                 บริการ
               </ion-label>
               <ion-label>
                 gggggggggggggggggggggggggggggg
               </ion-label>
-              <ion-buttons slot="end" (click)="warrantyModal()">
+              <ion-buttons slot="end">
                 <ion-button>
                   <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
                 </ion-button>
               </ion-buttons>
             </ion-item>
 
-            <ion-item>
+            <ion-item (click)="specificationModal()">
               <ion-label>
                 สเปค
               </ion-label>
               <ion-label>
                 gggggggggggggggggggggggggggggg
               </ion-label>
-              <ion-buttons slot="end" (click)="specificationModal()">
+              <ion-buttons slot="end">
                 <ion-button>
                   <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
                 </ion-button>
@@ -146,14 +146,14 @@
       <ion-card>
         <ion-row>
           <ion-col size="12">
-            <ion-item>
+            <ion-item (click)="reviewModal()">
               <ion-label>
                 รีวิว
               </ion-label>
               <ion-label>
                 gggggggggggggggggggggggggggggg
               </ion-label>
-              <ion-buttons slot="end" (click)="reviewModal()">
+              <ion-buttons slot="end">
                 <ion-button>
                   <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
                 </ion-button>
@@ -174,14 +174,14 @@
       <ion-card>
         <ion-row>
           <ion-col size="12">
-            <ion-item>
+            <ion-item (click)="imformationSpecModal()">
               <ion-label>
                 ข้อมูลจำเพาะ
               </ion-label>
               <ion-label>
                 gggggggggggggggggggggggggggggg
               </ion-label>
-              <ion-buttons slot="end" (click)="imformationSpecModal()">
+              <ion-buttons slot="end">
                 <ion-button>
                   <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
                 </ion-button>

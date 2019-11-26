@@ -19,7 +19,7 @@ import { Location } from '@angular/common'
   styleUrls: ['./productdetail.page.scss'],
 })
 export class ProductdetailPage implements OnInit {
-  
+
   productdetailData: any;
   PaymentData: any
   VouchersData: any
@@ -84,11 +84,12 @@ export class ProductdetailPage implements OnInit {
   }
 
   async paymentModal() {
+    // console.log(this.PaymentData);
     const modal = await this.modalController.create({
       component: PaymentModalComponent,
       cssClass: 'my-custom-modal-css',
       componentProps: {
-        data: this.PaymentData
+        PaymentData: this.PaymentData
       }
     });
     return await modal.present();
@@ -97,16 +98,17 @@ export class ProductdetailPage implements OnInit {
     const modal = await this.modalController.create({
       component: VouchersModalComponent,
       componentProps: {
-        data: this.VouchersData
+        VouchersData: this.VouchersData
       }
     });
     return await modal.present();
   }
   async promotionModal() {
+    console.log(this.PromotionData);
     const modal = await this.modalController.create({
       component: PromotionModalComponent,
       componentProps: {
-        data: this.PromotionData
+        PromotionData: this.PromotionData
       }
     });
     return await modal.present();
@@ -115,7 +117,7 @@ export class ProductdetailPage implements OnInit {
     const modal = await this.modalController.create({
       component: TcoinModalComponent,
       componentProps: {
-        data: this.TcoinData
+        TcoinData: this.TcoinData
       }
     });
     return await modal.present();
@@ -124,7 +126,7 @@ export class ProductdetailPage implements OnInit {
     const modal = await this.modalController.create({
       component: WarrantyModalComponent,
       componentProps: {
-        data: this.WarrantyData
+        WarrantyData: this.WarrantyData
       }
     });
     return await modal.present();
@@ -133,7 +135,7 @@ export class ProductdetailPage implements OnInit {
     const modal = await this.modalController.create({
       component: SpecificationModalComponent,
       componentProps: {
-        data: this.SpecificationData
+        SpecificationData: this.SpecificationData
       }
     });
     return await modal.present();
@@ -142,7 +144,7 @@ export class ProductdetailPage implements OnInit {
     const modal = await this.modalController.create({
       component: ReviewModalComponent,
       componentProps: {
-        data: this.ReviewData
+        ReviewData: this.ReviewData
       }
     });
     return await modal.present();
@@ -151,7 +153,7 @@ export class ProductdetailPage implements OnInit {
     const modal = await this.modalController.create({
       component: ImformationspecModalComponent,
       componentProps: {
-        data: this.ImformationSpecData
+        ImformationSpecData: this.ImformationSpecData
       }
     });
     return await modal.present();

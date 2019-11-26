@@ -19,4 +19,9 @@ export class OtpPage implements OnInit {
     this._location.back();
   }
 
+  verifyOTP(form){
+    console.log(form.value);
+    this.router.navigateByUrl('password');
+  }
+
 }
