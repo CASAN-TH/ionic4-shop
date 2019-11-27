@@ -16,7 +16,14 @@ export class GiftsService {
   onGiftsDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onGiftsDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
-  onPaymentgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onPaymentgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "selected": {
+      "down_amount": {
+        "amount_period": ""
+      },
+      "period_amount": ""
+    }
+  });
   onTcoingiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onWarrantygiftDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onSpecificationgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});

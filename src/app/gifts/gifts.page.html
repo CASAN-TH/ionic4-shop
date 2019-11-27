@@ -19,25 +19,27 @@
           </ion-slide>
         </ion-slides>
       </ion-card>
+
       <ion-card>
         <ion-row>
           <ion-col size="12">
             <h1 class="titlewar">{{itemproduct.currency}} {{itemproduct.price}}</h1>
           </ion-col>
         </ion-row>
-        <ion-card>
+        
+        <ion-card class="payment">
           <ion-row>
             <ion-col size="12">
               <ion-item (click)="paymentgiftModal()">
                 <ion-label>
-                  <!-- <span>
+                  <span>
                     {{PaymentgiftData.selected.down_amount.currency}}
                     {{PaymentgiftData.selected.period_amount.amount_period}}
                   </span>
                   <span>
                     {{PaymentgiftData.selected.period_amount.period}}
                     {{PaymentgiftData.selected.period_amount.unit}}
-                  </span> -->
+                  </span>
                 </ion-label>
                 <ion-buttons slot="end">
                   <ion-button>
@@ -94,8 +96,8 @@
               <ion-label>
                 บริการ
               </ion-label>
-              <ion-label class="ion-text-wrap">
-                gggggggggggggggggggggggggggggg
+              <ion-label *ngFor="let items of WarrantygiftData">
+                <ion-text *ngFor="let item of items.warranties">{{item.title}}</ion-text>
               </ion-label>
               <ion-buttons slot="end">
                 <ion-button>
@@ -215,3 +217,32 @@
     </ion-col>
   </ion-row>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="4">
+        <ion-buttons>
+          <ion-button class="opinion">
+            <ion-icon name="chatbubbles"></ion-icon>
+            ฝ่ายบริการลูกค้า
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="4" class="add-cart">
+        <ion-buttons>
+          <ion-button class="butcolor">
+            เพิ่มใส่รถเข็น
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="4" class="buy">
+        <ion-buttons>
+          <ion-button class="butcolor">
+            ซื้อทันที
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

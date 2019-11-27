@@ -29,135 +29,21 @@
   padding-bottom: 10px !important;
 }
 
-:root {
-  --ion-background-color:       #fafafa;
+
+.my-modal-css {
+  position: absolute;
+  overflow: hidden;
+  max-width: 100%;
+  border-radius: 0px;
+  width: 55vh;
+  height: 80vh !important;
+  top: 0;
+  bottom: -20%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 0;
+  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
+  background-color: #efefef;
 }
 
-.payment-modal-css {
-  position: absolute;
-  overflow: hidden;
-  max-width: 375px;
-  border-radius: 0px;
-  width: 55vh;
-  height: 80vh !important;
-  top: 0;
-  bottom: -20%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border: 0;
-  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
-  background-color: #efefef;
-}
-.vouchers-modal-css {
-  position: absolute;
-  overflow: hidden;
-  max-width: 375px;
-  border-radius: 0px;
-  width: 55vh;
-  height: 80vh !important;
-  top: 0;
-  bottom: -20%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border: 0;
-  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
-  background-color: #efefef;
-}
-.promotion-modal-css {
-  position: absolute;
-  overflow: hidden;
-  max-width: 375px;
-  border-radius: 0px;
-  width: 55vh;
-  height: 80vh !important;
-  top: 0;
-  bottom: -20%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border: 0;
-  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
-  background-color: #efefef;
-}
-.tcoin-modal-css {
-  position: absolute;
-  overflow: hidden;
-  max-width: 375px;
-  border-radius: 0px;
-  width: 55vh;
-  height: 80vh !important;
-  top: 0;
-  bottom: -20%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border: 0;
-  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
-  background-color: #efefef;
-}
-.warranty-modal-css {
-  position: absolute;
-  overflow: hidden;
-  max-width: 375px;
-  border-radius: 0px;
-  width: 55vh;
-  height: 80vh !important;
-  top: 0;
-  bottom: -20%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border: 0;
-  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
-  background-color: #efefef;
-}
-.specification-modal-css {
-  position: absolute;
-  overflow: hidden;
-  max-width: 375px;
-  border-radius: 0px;
-  width: 55vh;
-  height: 80vh !important;
-  top: 0;
-  bottom: -20%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border: 0;
-  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
-  background-color: #efefef;
-}
-.review-modal-css {
-  position: absolute;
-  overflow: hidden;
-  max-width: 375px;
-  border-radius: 0px;
-  width: 55vh;
-  height: 80vh !important;
-  top: 0;
-  bottom: -20%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border: 0;
-  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
-  background-color: #efefef;
-}
-.imformationSpec-modal-css {
-  position: absolute;
-  overflow: hidden;
-  max-width: 375px;
-  border-radius: 0px;
-  width: 55vh;
-  height: 80vh !important;
-  top: 0;
-  bottom: -20%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border: 0;
-  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
-  background-color: #efefef;
-}

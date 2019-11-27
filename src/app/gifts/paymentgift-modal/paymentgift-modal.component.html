@@ -1,61 +1,67 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-buttons class="backbutton" slot="end" (click)="dismiss()">
-        <ion-button>
-          <ion-icon slot="icon-only" name="ios-close"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-      <ion-title>ผ่อนชำระ</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
+  <ion-toolbar>
+    <ion-buttons class="backbutton" slot="end" (click)="dismiss()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="ios-close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>ผ่อนชำระ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12" class="ion-text-center">
+      <span class="currency">
+        {{PaymentgiftData.selected.down_amount.currency}}
+        {{PaymentgiftData.selected.period_amount.amount_period}}
+      </span>
+      <span>
+        {{PaymentgiftData.selected.period_amount.period}}
+        {{PaymentgiftData.selected.period_amount.unit}}
+      </span>
+    </ion-col>
+  </ion-row>
+
+  <ion-card>
     <ion-row>
       <ion-col size="12">
-        <span>
+        <p>{{PaymentgiftData.selected.down_amount.down}}
           {{PaymentgiftData.selected.down_amount.currency}}
+          {{PaymentgiftData.selected.down_amount.amount_down}}
+        </p>
+        <p>{{PaymentgiftData.selected.period_amount.monpayment}}
           {{PaymentgiftData.selected.period_amount.amount_period}}
-        </span>
-        <span>
-          {{PaymentgiftData.selected.period_amount.period}}
-          {{PaymentgiftData.selected.period_amount.unit}}
-        </span>
+          {{PaymentgiftData.selected.period_amount.inc}}
+        </p>
       </ion-col>
     </ion-row>
-  
-    <ion-card>
-      <ion-row>
-        <ion-col size="12">
-          <p>{{PaymentgiftData.selected.down_amount.down}}
-            {{PaymentgiftData.selected.down_amount.currency}}
-            {{PaymentgiftData.selected.down_amount.amount_down}}
-          </p>
-          <p>{{PaymentgiftData.selected.period_amount.monpayment}}
-            {{PaymentgiftData.selected.period_amount.amount_period}}
-            {{PaymentgiftData.selected.period_amount.inc}}
-          </p>
+  </ion-card>
+
+  <ion-row>
+    <ion-col size="12">
+      <h6 class="p-title">{{PaymentgiftData.selected.down_options.down_payment}}</h6>
+      <ion-row class="top">
+        <ion-col class="pay" size="2" *ngFor="let itempay of PaymentgiftData.selected.down_options.payment_percent">
+          {{itempay.rate}} {{itempay.unit}}
         </ion-col>
       </ion-row>
-    </ion-card>
-  
-    <ion-row>
-      <ion-col size="12">
-        <ion-text>{{PaymentgiftData.selected.down_options.down_payment}}</ion-text>
-        <ion-row>
-          <ion-col class="pay" size="2" *ngFor="let itempay of PaymentgiftData.selected.down_options.payment_percent">
-            {{itempay.rate}} {{itempay.unit}}
-          </ion-col>
-        </ion-row>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="12">
-        <ion-text>{{PaymentgiftData.selected.period_option.installments}}</ion-text>
-        <ion-row>
-          <ion-col class="per" size="3" *ngFor="let itemper of PaymentgiftData.selected.period_option.installperiod">
-            {{itemper.period}} {{itemper.unit}}
-          </ion-col>
-        </ion-row>
-      </ion-col>
-    </ion-row>
-  </ion-content>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <h6 class="p-title">{{PaymentgiftData.selected.period_option.installments}}</h6>
+      <ion-row class="top">
+        <ion-col class="per" size="3" *ngFor="let itemper of PaymentgiftData.selected.period_option.installperiod">
+          {{itemper.period}} {{itemper.unit}}
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>จ่ายเป็นงวด</ion-title>
+  </ion-toolbar>
+</ion-footer>

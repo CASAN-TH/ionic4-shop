@@ -61,7 +61,7 @@ export class GiftsPage implements OnInit {
   async paymentgiftModal() {
     const modal = await this.modalController.create({
       component: PaymentgiftModalComponent,
-      cssClass: 'payment-modal-css',
+      cssClass: 'my-modal-css',
       componentProps: {
         PaymentgiftData: this.PaymentgiftData
       }
@@ -71,7 +71,7 @@ export class GiftsPage implements OnInit {
   async tcoingiftModal() {
     const modal = await this.modalController.create({
       component: TcoingiftModalComponent,
-      cssClass: 'tcoin-modal-css',
+      cssClass: 'my-modal-css',
       componentProps: {
         TcoingiftData: this.TcoingiftData
       }
@@ -81,7 +81,7 @@ export class GiftsPage implements OnInit {
   async warrantygiftModal() {
     const modal = await this.modalController.create({
       component: WarrantygiftModalComponent,
-      cssClass: 'warranty-modal-css',
+      cssClass: 'my-modal-css',
       componentProps: {
         WarrantygiftData: this.WarrantygiftData
       }
@@ -91,7 +91,7 @@ export class GiftsPage implements OnInit {
   async specificationgiftModal() {
     const modal = await this.modalController.create({
       component: SpecificationgiftModalComponent,
-      cssClass: 'specification-modal-css',
+      cssClass: 'my-modal-css',
       componentProps: {
         SpecificationgiftData: this.SpecificationgiftData
       }
@@ -101,7 +101,7 @@ export class GiftsPage implements OnInit {
   async imformationSpecgiftModal() {
     const modal = await this.modalController.create({
       component: ImformationspecgiftModalComponent,
-      cssClass: 'imformationSpec-modal-css',
+      cssClass: 'my-modal-css',
       componentProps: {
         ImformationSpecgiftData: this.ImformationSpecgiftData
       }
