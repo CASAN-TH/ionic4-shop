@@ -14,9 +14,16 @@ export class ProductdetailService {
   routeParams: any;
 
   onProductdetailDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onProductdetailDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onProductdetailDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
-  onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "selected": {
+      "down_amount": {
+        "amount_period": ""
+      },
+      "period_amount": ""
+    }
+  });
   onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onPromotionDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onTcoinDataChanged: BehaviorSubject<any> = new BehaviorSubject({});

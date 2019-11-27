@@ -11,8 +11,8 @@
 
 <ion-content>
   <ion-row>
-    <ion-col size="12">
-      <span>
+    <ion-col size="12" class="ion-text-center">
+      <span class="currency">
         {{PaymentData.selected.down_amount.currency}}
         {{PaymentData.selected.period_amount.amount_period}}
       </span>
@@ -41,7 +41,7 @@
   <ion-row>
     <ion-col size="12">
       <ion-text>{{PaymentData.selected.down_options.down_payment}}</ion-text>
-      <ion-row>
+      <ion-row class="top">
         <ion-col class="pay" size="2" *ngFor="let itempay of PaymentData.selected.down_options.payment_percent">
           {{itempay.rate}} {{itempay.unit}}
         </ion-col>
@@ -51,7 +51,7 @@
   <ion-row>
     <ion-col size="12">
       <ion-text>{{PaymentData.selected.period_option.installments}}</ion-text>
-      <ion-row>
+      <ion-row class="top">
         <ion-col class="per" size="3" *ngFor="let itemper of PaymentData.selected.period_option.installperiod">
           {{itemper.peviod}} {{itemper.unit}}
         </ion-col>
@@ -59,3 +59,9 @@
     </ion-col>
   </ion-row>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>จ่ายเป็นงวด</ion-title>
+  </ion-toolbar>
+</ion-footer>
