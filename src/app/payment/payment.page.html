@@ -32,15 +32,41 @@
         </ion-select>
       </ion-item>
     </ion-list>
+    <div *ngIf="select === 'down'">
+      <ion-list-header>เงินดาวน์</ion-list-header>
+      <ion-item *ngFor="let data of downDataList" (click)="selectDown()">
+        <ion-label *ngFor="let down of data.down_payment">{{down.cerrency}}{{down.amount}}</ion-label>
+        <ion-label *ngFor="let down of data.down_payment" class="percent_down"> {{down.percent_down}}{{down.unit}}
+        </ion-label>
+        <ion-buttons>
+          <ion-button slot="end">
+            <ion-icon mode="ios" name="arrow-forward"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+      <ion-list-header *ngFor="let data of downDataList">จ่ายรายเดือน
+        (ค่าบริการรายเดือน{{data.period_service}}{{data.cerrency}}รวม)</ion-list-header>
+      <ion-item *ngFor="let data of downDataList">
+        <ion-label>
+          <ion-text>{{data.cerrency}}{{data.installment_amount}}</ion-text>
+          <ion-text>x</ion-text>
+          <ion-text>{{data.installment_period}}{{data.unit}}</ion-text>
+        </ion-label>
+        <ion-row *ngFor="let data of downDataList">
+          <ion-col class="per" size="3" *ngFor="let item of data.period_option">
+            <ion-button color="light">{{item.peviod}}{{item.unit}}</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+      <div>
+        <ion-checkbox mode="ios" color="danger" checked slot="start"></ion-checkbox>
+       ฉันเห็นด้วย<a routerLink="/termsandcondition" routerLinkActive="active">ข้อตกลงการใช้บริการ</a>
+      </div>
+    </div>
   </ion-card>
 
-  <div *ngIf="select === 'down'">
-    <ion-row>
-      <ion-col size=" 12">
-    รอใส่ข้อมูลเงินดาวน์
-    </ion-col>
-    </ion-row>
-  </div>
+
 
   <ion-card>
     <ion-item>
@@ -112,7 +138,7 @@
   </ion-card>
 
   <ion-card>
-    <ion-item>
+    <ion-item (click)="onCuponClick()">
       <ion-row>
         <ion-col size="4">
           บัตรกำนัล
@@ -179,19 +205,37 @@
 
 </ion-content>
 
+
+<ion-footer *ngIf="select === 'down'">
+
+  <ion-row *ngFor="let data of downDataList">
+    <ion-col size="12">
+      <ion-row>
+        <ion-col size="12" *ngFor="let item of data.down_payment">
+          เงินดาวน์:{{item.cerrency}}{{item.amount}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          จ่ายรายเดือน:{{data.cerrency}}{{data.installment_amount}}x{{data.installment_period}}{{data.unit}}(รวมค่าธรรมเนียม)
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-footer>
+
+
 <ion-footer>
   <div>
     <ion-row *ngFor="let cate of cartDataList">
       <ion-col size="8" *ngFor="let cate of cate.product">
         จำนวนเงินที่ต้องชำระ:{{cate.currency}}{{cate.price}}
       </ion-col>
-
-      <ion-col size="4">
+      <ion-col size="4" (click)="onOrderClick()">
         <section>
-          <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
+          <ion-button expand="full" color="danger" >สั่งซื้อสินค้า</ion-button>
         </section>
       </ion-col>
     </ion-row>
   </div>
-
 </ion-footer>
