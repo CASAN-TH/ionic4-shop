@@ -14,7 +14,7 @@
       <ion-col size="12" class="ion-text-center">
         <div>วงเงินที่ใช้ได้</div>
         <div *ngIf="creditPoint && creditPoint.credit" class="point-size">{{creditPoint.credit.creditremain}}</div>
-        <ion-button class="ion-margin-top	ion-margin-bottom" fill="outline">ตรวจสอบรายละเอียด</ion-button>
+        <ion-button class="ion-margin-top	ion-margin-bottom" fill="outline" (click)="openModalCreditPoint()">ตรวจสอบรายละเอียด</ion-button>
       </ion-col>
     </ion-row>
     <ion-row class="ion-text-center">

@@ -4,17 +4,38 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-item>
-    <ion-label class="label-size">หมายเลขโทรศัพย์ใหม่ 1</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label class="label-size">หมายเลขโทรศัพย์ใหม่ 2</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label class="label-size">หมายเลขโทรศัพย์บ้าน</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-label class="label-size">หมายเลขโทรศัพท์ใหม่ 1</ion-label>
+      <ion-input [(ngModel)]="contact.contact.newtel1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="label-size">หมายเลขโทรศัพท์ใหม่ 2</ion-label>
+      <ion-input [(ngModel)]="contact.contact.newtel2"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="label-size">หมายเลขโทรศัพท์บ้าน</ion-label>
+      <ion-input [(ngModel)]="contact.contact.telhome"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label class="label-size">บัญชี line</ion-label>
+      <ion-input [(ngModel)]="contact.contact.lineaccount1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="label-size">บัญชี line(2)</ion-label>
+      <ion-input [(ngModel)]="contact.contact.lineaccount2"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="label-size">บัญชีFacebook</ion-label>
+      <ion-input [(ngModel)]="contact.contact.fbaccount"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="label-size">บัญชีInstagram</ion-label>
+      <ion-input [(ngModel)]="contact.contact.igaccount"></ion-input>
+    </ion-item>
+  </ion-list>
 </ion-content>
 <ion-button expand="full" color="secondary" (click)="onFinish()">เรียบร้อย</ion-button>
