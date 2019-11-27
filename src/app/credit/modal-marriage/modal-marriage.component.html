@@ -1,4 +1,17 @@
-<p>
-  modal-marriage works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>สถานภาพสมรส</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label>สถานภาพสมรส</ion-label>
+    <ion-select placeholder="เลิือก" [(ngModel)]="marriage.marriage">
+      <ion-select-option value="single">โสด</ion-select-option>
+      <ion-select-option value="marry">แต่งงานแล้ว</ion-select-option>
+      <ion-select-option value="separated">แยกกันอยู่</ion-select-option>
+      <ion-select-option value="break">อย่าร้าง</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-content>
 <ion-button expand="full" color="secondary" (click)="onFinish()">เรียบร้อย</ion-button>

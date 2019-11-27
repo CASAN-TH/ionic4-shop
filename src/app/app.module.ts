@@ -40,6 +40,7 @@ import { ModalMarriageComponent } from './credit/modal-marriage/modal-marriage.c
 import { ModalSecondcontactComponent } from './credit/modal-secondcontact/modal-secondcontact.component';
 import { ModalAssetdocsComponent } from './credit/modal-assetdocs/modal-assetdocs.component';
 import { ModalJobComponent } from './credit/modal-job/modal-job.component';
+import { SelectdownModalComponent } from './payment/selectdown-modal/selectdown-modal.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { ModalJobComponent } from './credit/modal-job/modal-job.component';
     PaymentModalComponent,
     VouchersModalComponent,
     PromotionModalComponent,
+    SelectdownModalComponent,
 
     PaymentgiftModalComponent,
     TcoinModalComponent,
@@ -90,6 +92,7 @@ import { ModalJobComponent } from './credit/modal-job/modal-job.component';
     SpecificationModalComponent,
     ReviewModalComponent,
     ImformationspecModalComponent,
+    SelectdownModalComponent,
 
     ModalNicknameComponent,
     ModalPhoneComponent,

@@ -11,16 +11,16 @@
                 "relation": "friend",
                 "tel": "08000894635",
                 "job": "employee",
-                "salary": "10500-15000"
+                "salary": "10001-15000"
             },
             {
                 "name": "อัครเดช",
                 "lastname": "สามช่อง",
                 "age": "25",
-                "relation": "friend",
+                "relation": "mother",
                 "tel": "080808555",
-                "job": "employee",
-                "salary": "1000-15000"
+                "job": "government",
+                "salary": "upper30000"
             }
         ],
         "updated": "2019-02-25"

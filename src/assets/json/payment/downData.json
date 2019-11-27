@@ -1,0 +1,39 @@
+{
+    "status": 200,
+    "data": [
+        {
+            "status_payment": "ผ่อนชำระ",
+            "down_payment": [
+                {
+                    "percent_down": "50",
+                    "unit": "%",
+                    "amount": "7,400",
+                    "cerrency": "฿"
+                }
+            ],
+            "period_service": "111.75",
+            "cerrency": "฿",
+            "installment_amount": "727.66",
+            "installment_period": "12",
+            "unit": "เดือน",
+            "period_option": [
+                {
+                    "peviod": "3",
+                    "unit": "ต่องวด"
+                },
+                {
+                    "peviod": "6",
+                    "unit": "ต่องวด"
+                },
+                {
+                    "peviod": "9",
+                    "unit": "ต่องวด"
+                },
+                {
+                    "peviod": "12",
+                    "unit": "ต่องวด"
+                }
+            ]
+        }
+    ]
+}

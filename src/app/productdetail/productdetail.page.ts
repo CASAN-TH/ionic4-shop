@@ -84,10 +84,9 @@ export class ProductdetailPage implements OnInit {
   }
 
   async paymentModal() {
-    // console.log(this.PaymentData);
     const modal = await this.modalController.create({
       component: PaymentModalComponent,
-      cssClass: 'payment-modal-css',
+      cssClass: 'my-modal-css',
       componentProps: {
         PaymentData: this.PaymentData
       }
@@ -97,7 +96,7 @@ export class ProductdetailPage implements OnInit {
   async vouchersModal() {
     const modal = await this.modalController.create({
       component: VouchersModalComponent,
-      cssClass: 'vouchers-modal-css',
+      cssClass: 'my-modal-css',
       componentProps: {
         VouchersData: this.VouchersData
       }
@@ -107,7 +106,7 @@ export class ProductdetailPage implements OnInit {
   async promotionModal() {
     const modal = await this.modalController.create({
       component: PromotionModalComponent,
-      cssClass: 'promotion-modal-css',
+      cssClass: 'my-modal-css',
       componentProps: {
         PromotionData: this.PromotionData
       }
@@ -117,7 +116,7 @@ export class ProductdetailPage implements OnInit {
   async tcoinModal() {
     const modal = await this.modalController.create({
       component: TcoinModalComponent,
-      cssClass: 'tcoin-modal-css',
+      cssClass: 'my-modal-css',
       componentProps: {
         TcoinData: this.TcoinData
       }
@@ -127,7 +126,7 @@ export class ProductdetailPage implements OnInit {
   async warrantyModal() {
     const modal = await this.modalController.create({
       component: WarrantyModalComponent,
-      cssClass: 'warranty-modal-css',
+      cssClass: 'my-modal-css',
       componentProps: {
         WarrantyData: this.WarrantyData
       }
@@ -137,7 +136,7 @@ export class ProductdetailPage implements OnInit {
   async specificationModal() {
     const modal = await this.modalController.create({
       component: SpecificationModalComponent,
-      cssClass: 'specification-modal-css',
+      cssClass: 'my-modal-css',
       componentProps: {
         SpecificationData: this.SpecificationData
       }
@@ -147,7 +146,7 @@ export class ProductdetailPage implements OnInit {
   async reviewModal() {
     const modal = await this.modalController.create({
       component: ReviewModalComponent,
-      cssClass: 'review-modal-css',
+      cssClass: 'my-modal-css',
       componentProps: {
         ReviewData: this.ReviewData
       }
@@ -157,7 +156,7 @@ export class ProductdetailPage implements OnInit {
   async imformationSpecModal() {
     const modal = await this.modalController.create({
       component: ImformationspecModalComponent,
-      cssClass: 'imformationSpec-modal-css',
+      cssClass: 'my-modal-css',
       componentProps: {
         ImformationSpecData: this.ImformationSpecData
       }
