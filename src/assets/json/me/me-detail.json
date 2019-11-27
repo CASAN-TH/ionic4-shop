@@ -1,0 +1,16 @@
+{
+    "status": 200,
+    "data": {
+        "profileimg": "https://images.pexels.com/photos/1820567/pexels-photo-1820567.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "name": "กฤษตฤณ เทียนช้าง",
+        "nickname": "Krittin Tch",
+        "phone": "0962036211",
+        "address": {
+                    "receiver": "กฤษตฤณ",
+                    "receiverphone": "0962036211",
+                    "province": "ชัยนาท",
+                    "receiveraddress": "26/1 ม.5 จ.ชัยนาท"
+        },
+        "password": "1234"
+    }
+}

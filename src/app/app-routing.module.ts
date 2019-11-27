@@ -49,6 +49,31 @@ const routes: Routes = [
   {
     path: 'gifts',
     loadChildren: () => import('../app/gifts/gifts.module').then(m => m.GiftsPageModule)
+  },
+  {
+    path: 'me',
+    loadChildren: () => import('../app/pages/me/me.module').then(m => m.MePageModule)
+  },
+  {
+    path: 'payment',
+    loadChildren: () => import('../app/payment/payment.module').then(m => m.PaymentPageModule)
+  },
+  {
+    path: 'termsandcondition',
+    loadChildren: () => import('../app/termsandcondition/termsandcondition.module').then(m => m.TermsandconditionPageModule)
+  },
+  {
+    path: 'message',
+    loadChildren: () => import('../app/message/message.module').then(m => m.MessagePageModule)
+  },
+  {
+    path: 'payfor',
+    loadChildren: () => import('../app/payfor/payfor.module').then(m => m.PayforPageModule)
+  }
+  ,
+  {
+    path: 'addaddress',
+    loadChildren: () => import('../app/addaddress/addaddress.module').then(m => m.AddaddressPageModule)
   }
 
 

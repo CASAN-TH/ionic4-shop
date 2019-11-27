@@ -10,15 +10,15 @@
   </div>
 
   <div class="ion-padding-start ion-padding-end" *ngIf="creditDataList.status === 'approve'">
-    <ion-row>
+    <ion-row class="ion-padding-top">
       <ion-col size="12" class="ion-text-center">
         <div>วงเงินที่ใช้ได้</div>
-        <div *ngIf="creditPoint && creditPoint.credit">{{creditPoint.credit.creditremain}}</div>
-        <ion-button fill="outline">ตรวจสอบรายละเอียด</ion-button>
+        <div *ngIf="creditPoint && creditPoint.credit" class="point-size">{{creditPoint.credit.creditremain}}</div>
+        <ion-button class="ion-margin-top	ion-margin-bottom" fill="outline" (click)="openModalCreditPoint()">ตรวจสอบรายละเอียด</ion-button>
       </ion-col>
     </ion-row>
     <ion-row class="ion-text-center">
-      <ion-col size="6" class="menu-header left-menu">
+      <ion-col size="6" class="menu-header left-menu" (click)="openModalBills()">
         <div class="font-title-header">
           บิลของฉัน
         </div>
@@ -26,7 +26,7 @@
           ยังไม่มีบิล
         </div>
       </ion-col>
-      <ion-col size="6" class="menu-header right-menu">
+      <ion-col size="6" class="menu-header right-menu" (click)="openModalCreditPoint()">
         <div class="font-title-header">
           วงเงินที่ใช้ได้
         </div>
@@ -43,7 +43,7 @@
     </ion-row>
     <ion-row *ngIf="creditMenuList">
       <ion-col size="6" *ngFor="let item of creditMenuList.menu">
-        <ion-card class="ion-no-margin" mode="md">
+        <ion-card class="ion-no-margin" mode="md" (click)="openModalMenu(item.name)">
           <img [src]="item.image" class="img-size-menu">
           <div style="padding: 5px;">
             <div class="font-card-header">
@@ -56,5 +56,9 @@
         </ion-card>
       </ion-col>
     </ion-row>
+  </div>
+
+  <div class="display-member" *ngIf="creditDataList.status === 'waitapprove'">
+    <div>การสมัครวงเงินของท่านกำลังรอการตรวจสอบ</div>
   </div>
 </ion-content>

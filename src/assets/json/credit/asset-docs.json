@@ -1,0 +1,69 @@
+{
+    "status": 200,
+    "data": {
+        "_id": "001",
+        "u_id": "u001",
+        "assetdocs": [
+            {
+                "name": "carregis",
+                "images": [
+                    {
+                        "url": "image001.jpg"
+                    },
+                    {
+                        "url": "image002.jpg"
+                    }
+                ]
+            },
+            {
+                "name": "motoregis",
+                "images": [
+                    {
+                        "url": "image003.jpg"
+                    }
+                ]
+            },
+            {
+                "name": "passport",
+                "images": [
+                    {
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "name": "insurance",
+                "images": [
+                    {
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "name": "ownershipdocs",
+                "images": [
+                    {
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "name": "familysalary",
+                "images": [
+                    {
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "name": "registorhome",
+                "images": [
+                    {
+                        "url": ""
+                    }
+                ]
+            }
+        ],
+        "updated": "2019-08-11"
+    }
+}

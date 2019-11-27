@@ -1,0 +1,28 @@
+{
+    "status": 200,
+    "data": {
+        "_id": "001",
+        "u_id": "u001",
+        "secondcontact": [
+            {
+                "name": "ปฐมพร",
+                "lastname": "สุปัญญา",
+                "age": "23",
+                "relation": "friend",
+                "tel": "08000894635",
+                "job": "employee",
+                "salary": "10001-15000"
+            },
+            {
+                "name": "อัครเดช",
+                "lastname": "สามช่อง",
+                "age": "25",
+                "relation": "mother",
+                "tel": "080808555",
+                "job": "government",
+                "salary": "upper30000"
+            }
+        ],
+        "updated": "2019-02-25"
+    }
+}

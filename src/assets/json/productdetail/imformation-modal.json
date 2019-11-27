@@ -1,0 +1,17 @@
+{
+    "status": 200,
+    "data":  {
+        "colors": [
+            {
+                "_id": "2121",
+                "color": "Crytalsky"
+            }
+        ],
+        "specs": [
+            {
+                "_id": "1211",
+                "version": "RAM 8 GB ROM 128 GB"
+            }
+        ]
+    }
+}

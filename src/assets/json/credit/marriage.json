@@ -1,0 +1,9 @@
+{
+    "status": 200,
+    "data": {
+        "_id": "001",
+        "u_id": "u001",
+        "marriage": "single",
+        "updated": "2019-08-22"
+    }
+}

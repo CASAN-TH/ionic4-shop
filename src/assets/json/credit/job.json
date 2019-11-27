@@ -1,0 +1,31 @@
+{
+    "status": 200,
+    "data": {
+        "_id": "001",
+        "u_id": "u001",
+        "jobdata": {
+            "type": "",
+            "student": {
+                "univarsal": "",
+                "faculty": "",
+                "majors": "",
+                "degree": "",
+                "level": "",
+                "imagecard": ""
+            },
+            "other": {
+                "job": "พนักงานไอที",
+                "companyname": "CASAN",
+                "companytel": "0233366897",
+                "companylocation": "ปทุมธานี",
+                "companylocationdetail": "หมู่บ้านคาซ่า",
+                "experience": "1",
+                "position": "developer",
+                "degree": "doctor",
+                "salary": "upper30000",
+                "payslip": ""
+            }
+        },
+        "updated": "2019-02-11"
+    }
+}

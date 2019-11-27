@@ -36,8 +36,7 @@ export class AccountPage implements OnInit {
   }
 
   onToMePage() {
-    console.log("onToMepage");
-    
+    this.router.navigate(['me']);
   }
 
   onToLoginPage() {
@@ -45,7 +44,7 @@ export class AccountPage implements OnInit {
   }
 
   onToMessagePage() {
-    console.log("onToMessagePage");
+    this.router.navigate(['message']);
   }
 
   onToSettingPage() {

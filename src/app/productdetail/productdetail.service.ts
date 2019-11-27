@@ -13,17 +13,24 @@ const mockup = environment.mockup;
 export class ProductdetailService {
   routeParams: any;
 
-  onProductdetailDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  onProductdetailDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onProductdetailDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onProductdetailDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
-  onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onVouchersDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "selected": {
+      "down_amount": {
+        "amount_period": ""
+      },
+      "period_amount": ""
+    }
+  });
+  onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onPromotionDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onTcoinDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onWarrantyDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onWarrantyDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onSpecificationDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onReviewDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onImformationSpecDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onImformationSpecDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
   constructor(private http: HttpClient) { }
 
@@ -111,7 +118,7 @@ export class ProductdetailService {
   getPaymentModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/payment-modal.json').subscribe((res: any) => {
           this.onPaymentDataChanged.next(res.data);
         }, reject)
       } else {
@@ -154,7 +161,7 @@ export class ProductdetailService {
   getTcoinModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/tcoin-modal.json').subscribe((res: any) => {
           this.onTcoinDataChanged.next(res.data);
         }, reject)
       } else {
@@ -168,7 +175,7 @@ export class ProductdetailService {
   getWarrantyModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/warranty-modal.json').subscribe((res: any) => {
           this.onWarrantyDataChanged.next(res.data);
         }, reject)
       } else {
@@ -182,7 +189,7 @@ export class ProductdetailService {
   getSpecificationModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/specification-modal.json').subscribe((res: any) => {
           this.onSpecificationDataChanged.next(res.data);
         }, reject)
       } else {
@@ -196,7 +203,7 @@ export class ProductdetailService {
   getReviewModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/review-modal.json').subscribe((res: any) => {
           this.onReviewDataChanged.next(res.data);
         }, reject)
       } else {
@@ -210,7 +217,7 @@ export class ProductdetailService {
   getImformationSpecModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/imformation-modal.json').subscribe((res: any) => {
           this.onImformationSpecDataChanged.next(res.data);
         }, reject)
       } else {

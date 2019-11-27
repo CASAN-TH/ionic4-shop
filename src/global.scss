@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -25,7 +25,25 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-
 .mat-dialog-container {
-    padding-bottom: 10px !important;
+  padding-bottom: 10px !important;
 }
+
+
+.my-modal-css {
+  position: absolute;
+  overflow: hidden;
+  max-width: 100%;
+  border-radius: 0px;
+  width: 55vh;
+  height: 80vh !important;
+  top: 0;
+  bottom: -20%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 0;
+  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
+  background-color: #efefef;
+}
+

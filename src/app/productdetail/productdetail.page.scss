@@ -3,9 +3,30 @@
   --color: #bdc8ca;
   --border-color: #d0d3d8;
 }
-.my-custom-modal-css .modal-wrapper {
-  height: 20%;
-  top: 80%;
-  position: absolute;
-  display: block;
+.titlewar {
+  font-weight: bold;
+  color: black;
+}
+.opinion {
+  color: black;
+  font-size: 13px;
+}
+.add-cart {
+  background-color: orange;
+}
+.buy {
+  background-color: orangered;
+}
+.butcolor {
+  color: antiquewhite;
+}
+.sc-ion-card-ios-h {
+  margin-left: unset;
+  margin-right: unset;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.payment {
+  width: 80%;
+  margin-inline-start: 10%;
 }

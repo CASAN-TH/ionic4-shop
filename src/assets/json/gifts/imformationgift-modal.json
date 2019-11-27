@@ -1,0 +1,15 @@
+{
+    "status": 200,
+    "data": {
+        "colors": [
+            {
+                "_id": "2212",
+                "color": "Black&amp,Red"
+            },
+            {
+                "_id": "3133",
+                "color": "Black"
+            }
+        ]
+    }
+}

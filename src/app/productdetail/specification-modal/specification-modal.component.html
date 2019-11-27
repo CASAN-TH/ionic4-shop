@@ -5,9 +5,80 @@
         <ion-icon slot="icon-only" name="ios-close"></ion-icon>
       </ion-button>
     </ion-buttons>
+    <ion-title>สเปค</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<p>
-  specification-modal works!
-</p>
+<ion-content>
+  <ion-row>
+    <ion-col size="4">
+      <img [src]="SpecificationData.image">
+    </ion-col>
+    <ion-col size="8">
+      <h3>
+        {{SpecificationData.currency}}
+        {{SpecificationData.price}}
+      </h3>
+      <p>
+        {{SpecificationData.currency}}
+        {{SpecificationData.period}}
+        {{SpecificationData.unit}}
+        {{SpecificationData.per}}
+      </p>
+      <p>{{SpecificationData.name}}</p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <h2>Color</h2>
+      <ion-row>
+        <ion-col size="6" *ngFor="let item of SpecificationData.selectcolor">
+          {{item.color}}
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <h2>Version</h2>
+      <ion-row>
+        <ion-col size="6" *ngFor="let itemver of SpecificationData.selectversion">
+          {{itemver.version}}
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <div>
+        <span>
+          <h2>{{SpecificationData.quantity}}</h2>
+        </span>
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="6" class="add-cart">
+        <ion-buttons>
+          <ion-button class="butcolor">
+            เพิ่มใส่รถเข็น
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="6" class="buy">
+        <ion-buttons>
+          <ion-button class="butcolor">
+            ซื้อทันที
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

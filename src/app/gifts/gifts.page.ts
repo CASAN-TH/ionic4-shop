@@ -36,23 +36,23 @@ export class GiftsPage implements OnInit {
       this.giftsData = giftsDataList;
     })
 
-    this.giftsService.onGiftsDataListChanged.subscribe((giftsDataList: any) => {
+    this.giftsService.onPaymentgiftDataChanged.subscribe((giftsDataList: any) => {
       console.log(giftsDataList);
       this.PaymentgiftData = giftsDataList;
     })
-    this.giftsService.onGiftsDataListChanged.subscribe((giftsDataList: any) => {
+    this.giftsService.onTcoingiftDataChanged.subscribe((giftsDataList: any) => {
       console.log(giftsDataList);
       this.TcoingiftData = giftsDataList;
     })
-    this.giftsService.onGiftsDataListChanged.subscribe((giftsDataList: any) => {
+    this.giftsService.onWarrantygiftDataChanged.subscribe((giftsDataList: any) => {
       console.log(giftsDataList);
       this.WarrantygiftData = giftsDataList;
     })
-    this.giftsService.onGiftsDataListChanged.subscribe((giftsDataList: any) => {
+    this.giftsService.onSpecificationgiftDataChanged.subscribe((giftsDataList: any) => {
       console.log(giftsDataList);
       this.SpecificationgiftData = giftsDataList;
     })
-    this.giftsService.onGiftsDataListChanged.subscribe((giftsDataList: any) => {
+    this.giftsService.onImformationSpecgiftDataChanged.subscribe((giftsDataList: any) => {
       console.log(giftsDataList);
       this.ImformationSpecgiftData = giftsDataList;
     })
@@ -61,6 +61,7 @@ export class GiftsPage implements OnInit {
   async paymentgiftModal() {
     const modal = await this.modalController.create({
       component: PaymentgiftModalComponent,
+      cssClass: 'my-modal-css',
       componentProps: {
         PaymentgiftData: this.PaymentgiftData
       }
@@ -70,6 +71,7 @@ export class GiftsPage implements OnInit {
   async tcoingiftModal() {
     const modal = await this.modalController.create({
       component: TcoingiftModalComponent,
+      cssClass: 'my-modal-css',
       componentProps: {
         TcoingiftData: this.TcoingiftData
       }
@@ -79,6 +81,7 @@ export class GiftsPage implements OnInit {
   async warrantygiftModal() {
     const modal = await this.modalController.create({
       component: WarrantygiftModalComponent,
+      cssClass: 'my-modal-css',
       componentProps: {
         WarrantygiftData: this.WarrantygiftData
       }
@@ -88,6 +91,7 @@ export class GiftsPage implements OnInit {
   async specificationgiftModal() {
     const modal = await this.modalController.create({
       component: SpecificationgiftModalComponent,
+      cssClass: 'my-modal-css',
       componentProps: {
         SpecificationgiftData: this.SpecificationgiftData
       }
@@ -97,6 +101,7 @@ export class GiftsPage implements OnInit {
   async imformationSpecgiftModal() {
     const modal = await this.modalController.create({
       component: ImformationspecgiftModalComponent,
+      cssClass: 'my-modal-css',
       componentProps: {
         ImformationSpecgiftData: this.ImformationSpecgiftData
       }
@@ -108,6 +113,12 @@ export class GiftsPage implements OnInit {
   goBackClick() {
     this._location.back();
   }
+
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400,
+    autoplay: true
+  };
 
 
 }

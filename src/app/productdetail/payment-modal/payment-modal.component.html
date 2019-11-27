@@ -5,9 +5,63 @@
         <ion-icon slot="icon-only" name="ios-close"></ion-icon>
       </ion-button>
     </ion-buttons>
+    <ion-title>ผ่อนชำระ</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<p>
-  payment-modal works!
-</p>
+<ion-content>
+  <ion-row>
+    <ion-col size="12" class="ion-text-center">
+      <span class="currency">
+        {{PaymentData.selected.down_amount.currency}}
+        {{PaymentData.selected.period_amount.amount_period}}
+      </span>
+      <span>
+        {{PaymentData.selected.period_amount.period}}
+        {{PaymentData.selected.period_amount.unit}}
+      </span>
+    </ion-col>
+  </ion-row>
+
+  <ion-card>
+    <ion-row>
+      <ion-col size="12">
+        <p>{{PaymentData.selected.down_amount.down}}
+          {{PaymentData.selected.down_amount.currency}}
+          {{PaymentData.selected.down_amount.amount_down}}
+        </p>
+        <p>{{PaymentData.selected.period_amount.monpayment}}
+          {{PaymentData.selected.period_amount.amount_period}}
+          {{PaymentData.selected.period_amount.inc}}
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-text>{{PaymentData.selected.down_options.down_payment}}</ion-text>
+      <ion-row class="top">
+        <ion-col class="pay" size="2" *ngFor="let itempay of PaymentData.selected.down_options.payment_percent">
+          {{itempay.rate}} {{itempay.unit}}
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <ion-text>{{PaymentData.selected.period_option.installments}}</ion-text>
+      <ion-row class="top">
+        <ion-col class="per" size="3" *ngFor="let itemper of PaymentData.selected.period_option.installperiod">
+          {{itemper.peviod}} {{itemper.unit}}
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>จ่ายเป็นงวด</ion-title>
+  </ion-toolbar>
+</ion-footer>

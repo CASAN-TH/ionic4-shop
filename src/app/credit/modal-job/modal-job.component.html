@@ -1,0 +1,170 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ข้อมูลอาชีพ</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div *ngIf="job.jobdata.type === 'student' || job.jobdata.type === ''">
+    <ion-list>
+      <ion-list-header>นักเรียน</ion-list-header>
+      <ion-item>
+        <ion-label>ประเภทอาชีพ</ion-label>
+        <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.type">
+          <ion-select-option value="student">นักเรียน</ion-select-option>
+          <ion-select-option value="other">อื่นๆ</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>มหาวิทยาลัย</ion-label>
+        <ion-input [(ngModel)]="job.jobdata.student.univarsal"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>คณะ</ion-label>
+        <ion-input [(ngModel)]="job.jobdata.student.faculty"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>สาขาวิชา</ion-label>
+        <ion-input [(ngModel)]="job.jobdata.student.majors"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>วุฒิการศึกษา</ion-label>
+        <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.student.degree">
+          <ion-select-option value="lowerdiploma">ต่ำกว่า ปวส.</ion-select-option>
+          <ion-select-option value="bachelor">ปริญญาตรี</ion-select-option>
+          <ion-select-option value="bachelor2">ปริญญาตรี(ใบที่2)</ion-select-option>
+          <ion-select-option value="doctor">ปริญญาเอก</ion-select-option>
+          <ion-select-option value="master">ปริญญาโท</ion-select-option>
+          <ion-select-option value="diploma">ปวส.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>ชั้นปี</ion-label>
+        <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.student.level">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+          <ion-select-option value="6">6</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <div class="ion-padding-start">
+      <p>เพื่ิมบัตรนักศึกษา</p>
+      <p>1.จำเป็นต้องอัปโหลดข้อมูลบัตรนักศึกษา</p>
+      <p>2.หากบัตรนักศึกษาหมดอายุหรือสูญหายสามารถอัปโหลดเป็นระเบียนประวัติหรือหนังสือรายงานตัวนักศึกษา</p>
+      <p>3.กรุณาตรวจสอบว่ารูปภาพที่อัปโหลดมานั้นชัดเจน</p>
+    </div>
+    <ion-row>
+      <ion-col size="3"></ion-col>
+
+      <ion-col size="6" class="ion-text-center img-container" (click)="openCamera('student')"
+        *ngIf="job.jobdata.student.imagecard === ''">
+        <div class="avatar-icon">
+          <ion-icon name="camera"></ion-icon>
+        </div>
+        <img class="img-size" src="../../assets/images/frontThaiCard.jpg">
+      </ion-col>
+      <ion-col size="6" class="ion-text-center img-container" *ngIf="job.jobdata.student.imagecard !== ''">
+        <div class="icon-container">
+          <div class="icon-close-position" (click)="onDeleteImg('student')">
+            <ion-icon name="close"></ion-icon>
+          </div>
+        </div>
+        <img class="img-binding" [src]="job.jobdata.student.imagecard">
+      </ion-col>
+      <ion-col size="3"></ion-col>
+    </ion-row>
+  </div>
+
+  <div *ngIf="job.jobdata.type === 'other'">
+    <ion-list>
+      <ion-list-header>อื่นๆ</ion-list-header>
+      <ion-item>
+        <ion-label>ประเภทอาชีพ</ion-label>
+        <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.type">
+          <ion-select-option value="student">นักเรียน</ion-select-option>
+          <ion-select-option value="other">อื่นๆ</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>อาชีพ</ion-label>
+        <ion-input [(ngModel)]="job.jobdata.other.job"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>ชื่อสถานที่ทำงาน</ion-label>
+        <ion-input [(ngModel)]="job.jobdata.other.companyname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>หมายเลขโทรศัพท์สถานที่ทำงาน</ion-label>
+        <ion-input [(ngModel)]="job.jobdata.other.companytel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">ที่อยู่สถานที่ทำงาน</ion-label>
+        <ion-textarea rows="6" cols="20" [(ngModel)]="job.jobdata.other.companylocationdetail"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>ระยะเวลาทำงาน</ion-label>
+        <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.other.experience">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+          <ion-select-option value="6">6</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>ตำแหน่ง</ion-label>
+        <ion-input [(ngModel)]="job.jobdata.other.position"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>วุฒิการศึกษา</ion-label>
+        <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.other.degree">
+          <ion-select-option value="lowerdiploma">ต่ำกว่า ปวส.</ion-select-option>
+          <ion-select-option value="bachelor">ปริญญาตรี</ion-select-option>
+          <ion-select-option value="bachelor2">ปริญญาตรี(ใบที่2)</ion-select-option>
+          <ion-select-option value="doctor">ปริญญาเอก</ion-select-option>
+          <ion-select-option value="master">ปริญญาโท</ion-select-option>
+          <ion-select-option value="diploma">ปวส.</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>รายได้เงินเดือน</ion-label>
+        <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.other.salary">
+          <ion-select-option value="lower10000">น้อยกว่า 10000</ion-select-option>
+          <ion-select-option value="10001-15000">10001 - 15000</ion-select-option>
+          <ion-select-option value="15001-30000">15001 - 30000</ion-select-option>
+          <ion-select-option value="upper30000">มากกว่า 30000</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <div class="ion-padding-start">
+      <p>กรุณาเลือกอัปโหลดเพียง1หัวข้อ</p>
+      <p>1.อัปโหลดสลิปเงินเดือนเดือนล่าสุด (ฉบับจริงกระดาษคาร์บอน)</p>
+      <p>2.อัปโหลดสลิปเงินเดือนเดือนล่าสุด (ฉบับสำเนาหรือพิมพ์จากคอมพิวเตอร์)
+        พร้อมแนบรายการเดินบัญชีหน้าที่มีข้อมูลเงินเดือนเข้าย้อนหลัง2เดือนล่าสุด</p>
+    </div>
+    <ion-row>
+      <ion-col size="3"></ion-col>
+      <ion-col size="6" class="ion-text-center img-container" (click)="openCamera('other')"
+        *ngIf="job.jobdata.other.payslip === ''">
+        <div class="avatar-icon">
+          <ion-icon name="camera"></ion-icon>
+        </div>
+        <img class="img-size" src="../../assets/images/frontThaiCard.jpg">
+      </ion-col>
+      <ion-col size="6" class="ion-text-center img-container" *ngIf="job.jobdata.other.payslip !== ''">
+        <div class="icon-container">
+          <div class="icon-close-position" (click)="onDeleteImg('other')">
+            <ion-icon name="close"></ion-icon>
+          </div>
+        </div>
+        <img class="img-binding" [src]="job.jobdata.other.payslip">
+      </ion-col>
+      <ion-col size="3"></ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+<ion-button expand="full" color="secondary" (click)="onFinish()">เรียบร้อย</ion-button>

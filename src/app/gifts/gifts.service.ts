@@ -13,12 +13,19 @@ const mockup = environment.mockup;
 export class GiftsService {
   routeParams: any;
 
-  onGiftsDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onGiftsDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onGiftsDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
-  onPaymentgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onPaymentgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "selected": {
+      "down_amount": {
+        "amount_period": ""
+      },
+      "period_amount": ""
+    }
+  });
   onTcoingiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onWarrantygiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onWarrantygiftDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onSpecificationgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onImformationSpecgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
@@ -64,7 +71,7 @@ export class GiftsService {
   getGiftsData(id: string): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/gifts/gifts-detail.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/gifts/gifts.json').subscribe((res: any) => {
           this.onGiftsDataListChanged.next(res.data);
         }, reject)
       } else {
@@ -105,8 +112,8 @@ export class GiftsService {
   getPaymentgiftModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/gifts/gifts-detail.json').subscribe((res: any) => {
-          this.onGiftsDataListChanged.next(res.data);
+        this.http.get('../../assets/json/gifts/paymentgift-modal.json').subscribe((res: any) => {
+          this.onPaymentgiftDataChanged.next(res.data);
         }, reject)
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
@@ -119,8 +126,8 @@ export class GiftsService {
   getTcoingiftModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/gifts/gifts-detail.json').subscribe((res: any) => {
-          this.onGiftsDataListChanged.next(res.data);
+        this.http.get('../../assets/json/gifts/tcoingift-modal.json').subscribe((res: any) => {
+          this.onTcoingiftDataChanged.next(res.data);
         }, reject)
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
@@ -133,8 +140,8 @@ export class GiftsService {
   getWarrantygiftModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/gifts/gifts-detail.json').subscribe((res: any) => {
-          this.onGiftsDataListChanged.next(res.data);
+        this.http.get('../../assets/json/gifts/warrantygift-modal.json').subscribe((res: any) => {
+          this.onWarrantygiftDataChanged.next(res.data);
         }, reject)
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
@@ -147,8 +154,8 @@ export class GiftsService {
   getSpecificationgiftModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/gifts/gifts-detail.json').subscribe((res: any) => {
-          this.onGiftsDataListChanged.next(res.data);
+        this.http.get('../../assets/json/gifts/specificationgift-modal.json').subscribe((res: any) => {
+          this.onSpecificationgiftDataChanged.next(res.data);
         }, reject)
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
@@ -161,8 +168,8 @@ export class GiftsService {
   getImformationSpecgiftModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/gifts/gifts-detail.json').subscribe((res: any) => {
-          this.onGiftsDataListChanged.next(res.data);
+        this.http.get('../../assets/json/gifts/imformationgift-modal.json').subscribe((res: any) => {
+          this.onImformationSpecgiftDataChanged.next(res.data);
         }, reject)
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
