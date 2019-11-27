@@ -1,5 +1,106 @@
-<p>
-  modal-secondcontact works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>บุคคลติดต่อฉุกเฉิน</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list *ngFor="let item of secondContact.secondcontact;let i = index">
+    <ion-list-header>
+      บุคคลติดต่อฉุกเฉิน {{i+1}}
+    </ion-list-header>
+    <ion-item>
+      <ion-label>ชื่อ</ion-label>
+      <ion-input [(ngModel)]="item.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>นามสกุล</ion-label>
+      <ion-input [(ngModel)]="item.lastname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>อายุ</ion-label>
+      <ion-input [(ngModel)]="item.age"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>ความสัมพันธ์</ion-label>
+      <ion-select placeholder="เลิือก" [(ngModel)]="item.relation">
+        <ion-select-option value="father">พ่อ</ion-select-option>
+        <ion-select-option value="mother">แม่</ion-select-option>
+        <ion-select-option value="relative">ญาติ</ion-select-option>
+        <ion-select-option value="friend">เพื่อน</ion-select-option>
+        <ion-select-option value="couple">คู่สมรส</ion-select-option>
+        <ion-select-option value="parent">ผู้ปกครอง</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>หมายเลขโทรศัพท์</ion-label>
+      <ion-input [(ngModel)]="item.tel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>อาชีพ</ion-label>
+      <ion-select placeholder="เลิือก" [(ngModel)]="item.job">
+        <ion-select-option value="employee">พนักงานบริษัทเอกชน(employee)</ion-select-option>
+        <ion-select-option value="government">ข้าราชการ(government officer)</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>รายได้</ion-label>
+      <ion-select placeholder="เลิือก" [(ngModel)]="item.salary">
+        <ion-select-option value="lower10000">น้อยกว่า 10000</ion-select-option>
+        <ion-select-option value="10001-15000">10001 - 15000</ion-select-option>
+        <ion-select-option value="15001-30000">15001 - 30000</ion-select-option>
+        <ion-select-option value="upper30000">มากกว่า 30000</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-list-header>
+        บุคคลติดต่อฉุกเฉิน {{datalength+1}}
+      </ion-list-header>
+      <ion-item>
+        <ion-label>ชื่อ</ion-label>
+        <ion-input [(ngModel)]="mockup.name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>นามสกุล</ion-label>
+        <ion-input [(ngModel)]="mockup.lastname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>อายุ</ion-label>
+        <ion-input [(ngModel)]="mockup.age"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>ความสัมพันธ์</ion-label>
+        <ion-select placeholder="เลิือก" [(ngModel)]="mockup.relation">
+          <ion-select-option value="father">พ่อ</ion-select-option>
+          <ion-select-option value="mother">แม่</ion-select-option>
+          <ion-select-option value="relative">ญาติ</ion-select-option>
+          <ion-select-option value="friend">เพื่อน</ion-select-option>
+          <ion-select-option value="couple">คู่สมรส</ion-select-option>
+          <ion-select-option value="parent">ผู้ปกครอง</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>หมายเลขโทรศัพท์</ion-label>
+        <ion-input [(ngModel)]="mockup.tel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>อาชีพ</ion-label>
+        <ion-select placeholder="เลิือก" [(ngModel)]="mockup.job">
+          <ion-select-option value="employee">พนักงานบริษัทเอกชน(employee)</ion-select-option>
+          <ion-select-option value="government">ข้าราชการ(government officer)</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>รายได้</ion-label>
+        <ion-select placeholder="เลิือก" [(ngModel)]="mockup.salary">
+          <ion-select-option value="lower10000">น้อยกว่า 10000</ion-select-option>
+          <ion-select-option value="10001-15000">10001 - 15000</ion-select-option>
+          <ion-select-option value="15001-30000">15001 - 30000</ion-select-option>
+          <ion-select-option value="upper30000">มากกว่า 30000</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+</ion-content>
 
 <ion-button expand="full" color="secondary" (click)="onFinish()">เรียบร้อย</ion-button>

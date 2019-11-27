@@ -1,4 +1,31 @@
-<p>
-  modal-credit-point works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>จัดการพอยท์</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-row class="ion-padding-top">
+      <ion-col size="12" class="ion-text-center">
+        <div>วงเงินที่เหลือ</div>
+        <div class="point-size">10000</div>
+        <ion-progress-bar class="ion-margin-top	ion-margin-bottom" value="0.5"></ion-progress-bar>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label>วงเงินทั้งหมด</ion-label>
+      <ion-note slot="end">111111</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>วงเงินคงที่</ion-label>
+      <ion-note slot="end">1111</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>วงเงินชั่วคราว</ion-label>
+      <ion-note slot="end">0</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>
 <ion-button expand="full" color="secondary" (click)="onFinish()">เรียบร้อย</ion-button>

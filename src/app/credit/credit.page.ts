@@ -38,32 +38,32 @@ export class CreditPage implements OnInit {
     });
     this.creditService.onCreditMenuListChanged.subscribe((menu: any) => {
       this.creditMenuList = menu;
-      console.log(this.creditMenuList);
+      // console.log(this.creditMenuList);
     });
     this.creditService.onCreditPointChanged.subscribe((point: any) => {
       this.creditPoint = point
-      console.log(this.creditPoint);
+      // console.log(this.creditPoint);
     });
 
     this.creditService.onContactDataChanged.subscribe((contact: any) => {
       this.contactData = contact
-      console.log(this.contactData);
+      // console.log(this.contactData);
     });
     this.creditService.onMarriageDataChanged.subscribe((marriage) => {
       this.marriageData = marriage
-      console.log(this.marriageData);
+      // console.log(this.marriageData);
     });
     this.creditService.onSecondContactDataChanged.subscribe((secondContact) => {
       this.secondContactData = secondContact
-      console.log(this.secondContactData);
+      // console.log(this.secondContactData);
     });
     this.creditService.onAssetDocsDataChanged.subscribe((assetDocs) => {
       this.assetDocsData = assetDocs
-      console.log(this.assetDocsData);
+      // console.log(this.assetDocsData);
     });
     this.creditService.onJobDataChanged.subscribe((job) => {
       this.jobData = job
-      console.log(this.jobData);
+      // console.log(this.jobData);
     });
   }
 
