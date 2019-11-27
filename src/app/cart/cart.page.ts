@@ -58,7 +58,7 @@ onAddToCartClick(){
 }
 
 onPayClick(){
-  console.log("ชำระเงิน")
+  this.router.navigate(['payment'])
 }
 onSelectAll(){
   console.log("54")

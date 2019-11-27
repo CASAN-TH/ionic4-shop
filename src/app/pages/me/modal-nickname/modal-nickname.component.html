@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start" (click)="ModalDismiss()">
+        <ion-button>
+          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Nickname</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+      <ion-item>
+          <ion-input [(ngModel)]="NicknameData"></ion-input>
+        </ion-item>
+
+        <ion-button expand="block" (click)="onSaveNickname()">เรียบร้อย</ion-button>
+  </ion-content>
