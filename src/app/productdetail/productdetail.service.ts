@@ -13,17 +13,17 @@ const mockup = environment.mockup;
 export class ProductdetailService {
   routeParams: any;
 
-  onProductdetailDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onProductdetailDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onProductdetailDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onVouchersDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onPromotionDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onTcoinDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onWarrantyDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onWarrantyDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onSpecificationDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onReviewDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onImformationSpecDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onImformationSpecDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
   constructor(private http: HttpClient) { }
 

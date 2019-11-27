@@ -2,43 +2,30 @@
     "status": 200,
     "data": {
         "_id": "111",
-        "price": "10,990",
+        "price": "12,999",
+        "period": "837.71",
         "currency": "฿",
-        "image": "",
-        "name": "",
-        "color": "",
-        "version": "",
-        "quantity": "",
+        "image": "https://pub.thisshop.com/shop/pop/87914573_1574071659356.jpg",
+        "name": "Crystal Sky, RAM 8 GB ROM 128 GB",
+        "color": "Crystal Sky",
+        "unit": "x18 เดือน",
+        "per": "ต่องวด",
+        "version": "RAM 8 GB ROM 128 GB",
+        "quantity": "จำนวน",
         "selectcolor": [
             {
                 "_id": "222",
-                "color": ""
+                "color": "Crystal Sky"
             },
             {
                 "_id": "333",
-                "color": ""
-            },
-            {
-                "_id": "444",
-                "color": ""
-            },
-            {
-                "_id": "555",
-                "color": ""
-            },
-            {
-                "_id": "666",
-                "color": ""
+                "color": "Glowing Night"
             }
         ],
         "selectversion": [
             {
                 "_id": "121",
-                "version": ""
-            },
-            {
-                "_id": "212",
-                "version": ""
+                "version": "RAM 8 GB ROM 128 GB"
             }
         ]
     }

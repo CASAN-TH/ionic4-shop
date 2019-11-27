@@ -11,7 +11,7 @@
 
 <ion-content>
   <ion-row>
-    <ion-col size="12" *ngFor="let itemproduct of giftsData.giftdetail">
+    <ion-col size="12" *ngFor="let itemproduct of giftsData.productdetail">
       <ion-card>
         <ion-slides pager [options]="slideOpts">
           <ion-slide *ngFor="let itemimg of itemproduct.images">
@@ -29,8 +29,15 @@
           <ion-row>
             <ion-col size="12">
               <ion-item (click)="paymentgiftModal()">
-                <ion-label class="ion-text-wrap">
-                  payment
+                <ion-label>
+                  <span>
+                    {{PaymentgiftData.selected.down_amount.currency}}
+                    {{PaymentgiftData.selected.period_amount.amount_period}}
+                  </span>
+                  <span>
+                    {{PaymentgiftData.selected.period_amount.period}}
+                    {{PaymentgiftData.selected.period_amount.unit}}
+                  </span>
                 </ion-label>
                 <ion-buttons slot="end">
                   <ion-button>
@@ -64,11 +71,11 @@
         <ion-row>
           <ion-col size="12">
             <ion-item (click)="tcoingiftModal()">
-              <ion-label class="ion-text-wrap">
+              <ion-label>
                 Tcoin
               </ion-label>
-              <ion-label class="ion-text-wrap">
-                <span> รับมากถึง <code>2599</code> </span>
+              <ion-label>
+                {{TcoingiftData.Tcoinname}}
               </ion-label>
               <ion-buttons slot="end">
                 <ion-button>
@@ -84,7 +91,7 @@
         <ion-row>
           <ion-col size="12">
             <ion-item (click)="warrantygiftModal()">
-              <ion-label class="ion-text-wrap">
+              <ion-label>
                 บริการ
               </ion-label>
               <ion-label class="ion-text-wrap">
@@ -98,11 +105,11 @@
             </ion-item>
 
             <ion-item (click)="specificationgiftModal()">
-              <ion-label class="ion-text-wrap">
+              <ion-label>
                 สเปค
               </ion-label>
-              <ion-label class="ion-text-wrap">
-                gggggggggggggggggggggggggggggg
+              <ion-label>
+                {{SpecificationgiftData.color}} {{SpecificationgiftData.version}}
               </ion-label>
               <ion-buttons slot="end">
                 <ion-button>
@@ -151,11 +158,8 @@
         <ion-row>
           <ion-col size="12">
             <ion-item (click)="imformationSpecgiftModal()">
-              <ion-label class="ion-text-wrap">
+              <ion-label>
                 ข้อมูลจำเพาะ
-              </ion-label>
-              <ion-label class="ion-text-wrap">
-                gggggggggggggggggggggggggggggg
               </ion-label>
               <ion-buttons slot="end">
                 <ion-button>

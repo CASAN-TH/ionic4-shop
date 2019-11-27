@@ -32,7 +32,14 @@
             <ion-col size="12">
               <ion-item (click)="paymentModal()">
                 <ion-label>
-                  payment
+                  <span>
+                    {{PaymentData.selected.down_amount.currency}}
+                    {{PaymentData.selected.period_amount.amount_period}}
+                  </span>
+                  <span>
+                    {{PaymentData.selected.period_amount.period}}
+                    {{PaymentData.selected.period_amount.unit}}
+                  </span>
                 </ion-label>
                 <ion-buttons slot="end">
                   <ion-button>
@@ -72,7 +79,9 @@
                 บัตรกำนัล
               </ion-label>
               <ion-label>
-                gggggggggggggggggggggggggggggg
+                <span *ngFor="let item of VouchersData">
+                  {{item.currency}} {{item.amount}}
+                </span>
               </ion-label>
               <ion-buttons slot="end">
                 <ion-button>
@@ -91,8 +100,10 @@
               <ion-label>
                 โปรโมชั่น
               </ion-label>
-              <ion-label>
-                gggggggggggggggggggggggggggggg
+              <ion-label *ngFor="let itemimage of PromotionData">
+                <span>
+                  <img [src]="itemimage.image">
+                </span>
               </ion-label>
               <ion-buttons slot="end">
                 <ion-button>
@@ -112,7 +123,7 @@
                 Tcoin
               </ion-label>
               <ion-label>
-                <span> รับมากถึง <code>2599</code> </span>
+                {{TcoinData.Tcoinname}}
               </ion-label>
               <ion-buttons slot="end">
                 <ion-button>
@@ -131,8 +142,8 @@
               <ion-label>
                 บริการ
               </ion-label>
-              <ion-label>
-                gggggggggggggggggggggggggggggg
+              <ion-label *ngFor="let item of WarrantyData.warranties">
+                <ion-text>{{item.title}}</ion-text>
               </ion-label>
               <ion-buttons slot="end">
                 <ion-button>
@@ -146,7 +157,7 @@
                 สเปค
               </ion-label>
               <ion-label>
-                gggggggggggggggggggggggggggggg
+                {{SpecificationData.color}} {{SpecificationData.version}}
               </ion-label>
               <ion-buttons slot="end">
                 <ion-button>
@@ -165,9 +176,6 @@
               <ion-label>
                 รีวิว
               </ion-label>
-              <ion-label>
-                gggggggggggggggggggggggggggggg
-              </ion-label>
               <ion-buttons slot="end">
                 <ion-button>
                   <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
@@ -177,8 +185,39 @@
             <ion-row>
               <ion-col size="12">
                 <ion-label>
-                  sdfghjkllkjhgfffffffffffffffffffffffffff
-                  gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+                  <ion-row *ngFor="let item of ReviewData.user">
+                    <ion-col size="12">
+                      <ion-item>
+                        <ion-avatar slot="start">
+                          <img [src]="item.profileimg">
+                        </ion-avatar>
+                        <ion-label>
+                          {{item.name}}
+                          <p>
+                            <ion-icon name="ios-star-outline"></ion-icon>
+                            <ion-icon name="ios-star-outline"></ion-icon>
+                            <ion-icon name="ios-star-outline"></ion-icon>
+                            <ion-icon name="ios-star-outline"></ion-icon>
+                            <ion-icon name="ios-star-outline"></ion-icon>
+                          </p>
+                          <ion-text>{{item.date}}</ion-text>
+                        </ion-label>
+                      </ion-item>
+                      <ion-row *ngFor="let view of ReviewData.user">
+                        <ion-col size="12">
+                          <ion-label *ngFor="let rev of view.reviews">
+                            <ion-text>{{rev.reviewtitle}}</ion-text>
+                            <ion-row>
+                              <ion-col size="3" *ngFor="let itemimg of rev.reviewimg">
+                                <img style="width:100%; height: 100%;" [src]="itemimg">
+                              </ion-col>
+                            </ion-row>
+                          </ion-label>
+                        </ion-col>
+                      </ion-row>
+
+                    </ion-col>
+                  </ion-row>
                 </ion-label>
               </ion-col>
             </ion-row>
@@ -192,9 +231,6 @@
             <ion-item (click)="imformationSpecModal()">
               <ion-label>
                 ข้อมูลจำเพาะ
-              </ion-label>
-              <ion-label>
-                gggggggggggggggggggggggggggggg
               </ion-label>
               <ion-buttons slot="end">
                 <ion-button>

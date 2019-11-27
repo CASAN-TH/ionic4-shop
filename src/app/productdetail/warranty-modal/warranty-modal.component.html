@@ -8,6 +8,11 @@
   </ion-toolbar>
 </ion-header>
 
-<p>
-  warranty-modal works!
-</p>
+<ion-content>
+  <ion-row *ngFor="let items of WarrantyData">
+    <ion-col size="12" *ngFor="let item of items.warranties">
+      <h4>{{item.title}}</h4>
+      <p>{{item.subtitle}}</p>
+    </ion-col>
+  </ion-row>
+</ion-content>

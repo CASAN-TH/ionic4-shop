@@ -5,9 +5,15 @@
         <ion-icon slot="icon-only" name="ios-close"></ion-icon>
       </ion-button>
     </ion-buttons>
+    <ion-title>บริการ</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<p>
-  warrantygift-modal works!
-</p>
+<ion-content>
+    <ion-row *ngFor="let items of WarrantygiftData">
+      <ion-col size="12" *ngFor="let item of items.warranties">
+        <h4>{{item.title}}</h4>
+        <p>{{item.subtitle}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-content>
