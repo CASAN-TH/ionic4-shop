@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MeService } from './me.service';
-import { Location } from '@angular/common'
+import { Location } from '@angular/common';
 import { ModalController } from '@ionic/angular';
 import { ModalNicknameComponent } from './modal-nickname/modal-nickname.component';
 import { ModalPhoneComponent } from './modal-phone/modal-phone.component';

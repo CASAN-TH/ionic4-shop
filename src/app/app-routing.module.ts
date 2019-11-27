@@ -58,6 +58,10 @@ const routes: Routes = [
   {
     path: 'payment',
     loadChildren: () => import('../app/pages/payment/payment.module').then(m => m.PaymentPageModule)
+  } ,
+  {
+    path: 'message',
+    loadChildren: () => import('../app/message/message.module').then(m => m.MessagePageModule)
   }
 
 

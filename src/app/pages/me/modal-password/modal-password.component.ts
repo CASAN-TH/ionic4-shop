@@ -20,4 +20,8 @@ export class ModalPasswordComponent implements OnInit {
     this.modalController.dismiss();
   }
 
+  onSavePassword(){
+    console.log("SavePassword");
+  }
+
 }
