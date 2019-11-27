@@ -14,7 +14,7 @@ export class ProductdetailService {
   routeParams: any;
 
   onProductdetailDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onProductdetailDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onProductdetailDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
   onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
