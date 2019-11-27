@@ -4,17 +4,17 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-const api_url = environment.apiUrl + '/api/payments/';
+const api_url = environment.apiUrl + '/api/addaddresss/';
 const mockup = environment.mockup;
 
 @Injectable({
   providedIn: 'root'
 })
-export class PaymentService {
+export class AddaddressService {
   routeParams: any;
 
-  onDownDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  onCartDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onAddaddressDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onAddaddressDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }
 
@@ -27,61 +27,63 @@ export class PaymentService {
   resolve(route: ActivatedRouteSnapshot): Observable<any> | Promise<any> | any {
     this.routeParams = route.params;
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
-    this.getDownDataList();
-    this.getCartDataList();
+    if (this.routeParams.id) {
+      this.getAddaddressData(this.routeParams.id);
+    } else {
+      this.getAddaddressDataList();
+    }
     return;
   }
 
-  
-  getDownDataList(): Observable<any> | Promise<any> | any {
+  getAddaddressDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if(mockup){
-        this.http.get('../../assets/json/payment/downData.json').subscribe((res: any) => {
-          this.onDownDataListChanged.next(res.data);
+        this.http.get('../../assets/json/addaddress/addaddress.json').subscribe((res: any) => {
+          this.onAddaddressDataListChanged.next(res.data);
         },reject)
       }else{
-        this.http.get(api_url,{ headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onDownDataListChanged.next(res.data);
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onAddaddressDataListChanged.next(res.data);
+        },reject)
+      }
+    })
+  }
+
+  getAddaddressData(id: string): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if(mockup){
+        this.http.get('../../assets/json/addaddress/addaddress-detail.json').subscribe((res: any) => {
+          this.onAddaddressDataListChanged.next(res.data);
+        },reject)
+      }else{
+        this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onAddaddressDataChanged.next(res.data);
         },reject)
       }
       
     })
   }
-  
-  getCartDataList(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if(mockup){
-        this.http.get('../../assets/json/cart/cart.json').subscribe((res: any) => {
-          this.onCartDataListChanged.next(res.data);
-        },reject)
-      }else{
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onCartDataListChanged.next(res.data);
-        },reject)
-      }
-    })
-  }
 
-  createPaymentData(body): Promise<any> {
+  createAddaddressData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        // this.getPaymentDataList();
+        this.getAddaddressDataList();
       },reject)
     })
   }
 
-  updatePaymentData(body): Promise<any> {
+  updateAddaddressData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        // this.getPaymentDataList();
+        this.getAddaddressDataList();
       },reject)
     })
   }
 
-  deletePaymentData(body): Promise<any> {
+  deleteAddaddressData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.delete(api_url + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        // this.getPaymentDataList();
+        this.getAddaddressDataList();
       },reject)
     })
   }
