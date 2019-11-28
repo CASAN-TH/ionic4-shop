@@ -74,7 +74,12 @@ const routes: Routes = [
   {
     path: 'addaddress',
     loadChildren: () => import('../app/addaddress/addaddress.module').then(m => m.AddaddressPageModule)
+  },
+  {
+    path: 'setting',
+    loadChildren: () => import('../app/setting/setting.module').then(m => m.SettingPageModule)
   }
+
 
 
 ];

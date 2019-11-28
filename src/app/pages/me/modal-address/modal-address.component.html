@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="ModalDismiss()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Address</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="AddressData" >
+  <ion-card *ngFor="let item of AddressData">
+    <ion-item>
+      <ion-label>
+        <h3>{{item.receiver}}</h3>
+        <h3>{{item.receiverphone}}</h3>
+        <p>{{item.receiveraddress}} {{item.subdistric}} {{item.distric}} {{item.province}}
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <p>ที่อยู่จัดส่ง</p>
+        <ion-buttons>
+          <ion-button (click)="onEditAddress()">
+              <ion-icon name="create"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onDeleteAddress()">
+              <ion-icon name="trash"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+</div>
+
+  <div *ngIf="!AddressData">
+    <ion-row>
+
+      <ion-col>
+          <img src="https://image.flaticon.com/icons/svg/2312/2312289.svg">
+        </ion-col>
+
+    </ion-row>
+    <ion-button expand="block">+ เพิ่มที่อยู่ใหม่</ion-button>
+  </div>
+
+
+
+</ion-content>
+
+<ion-button expand="full">+ เพิ่มที่อยู่ใหม่</ion-button>

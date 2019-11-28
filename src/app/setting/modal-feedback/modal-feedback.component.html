@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="ModalDismiss()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Feedback</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>
+      <h3>ประสบการณ์ที่ไม่ดี</h3>
+      <p>ประสบการณ์ช็อปปิ้ง ชำระ</p>
+    </ion-label>
+    <ion-checkbox>
+    </ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <h3>บิลชำระ</h3>
+      <p>อนุมัติเครดิต ผ่อนชำระ ลิล</p>
+    </ion-label>
+    <ion-checkbox>
+    </ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <h3>ระบบ</h3>
+      <p>ไม่สามารถใช้งานได้ตามปกติ</p>
+    </ion-label>
+    <ion-checkbox>
+    </ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <h3>อื่นๆ</h3>
+      <p>คำถาม ข้อเสนอแนะ อื่นๆ</p>
+    </ion-label>
+    <ion-checkbox>
+    </ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+      <ion-textarea class="input-borderless" rows="8" cols="20" placeholder="โปรดอธิบายปัญหาของคุณ"></ion-textarea>
+    </ion-item>
+
+
+
+    <ion-item>
+    <ion-input placeholder=" หมายเลขโทรศัพท์หรืออีเมล"> ข้อมูลการติดต่อ : </ion-input>
+  </ion-item>
+</ion-content>
+
+<ion-button expand="full">ส่ง</ion-button>

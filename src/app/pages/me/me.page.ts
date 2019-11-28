@@ -7,6 +7,7 @@ import { ModalNicknameComponent } from './modal-nickname/modal-nickname.componen
 import { ModalPhoneComponent } from './modal-phone/modal-phone.component';
 import { ModalPasswordComponent } from './modal-password/modal-password.component';
 import { ModalSocialComponent } from './modal-social/modal-social.component';
+import { ModalAddressComponent } from './modal-address/modal-address.component';
 
 @Component({
   selector: 'app-me',
@@ -19,6 +20,7 @@ export class MePage implements OnInit {
   NicknameData: any;
   PhoneData: any;
   PasswordData: any;
+  AddressData: any;
 
   constructor(private router: Router, 
     private meService : MeService,  
@@ -36,6 +38,7 @@ export class MePage implements OnInit {
       this.NicknameData = meData.nickname;
       this.PhoneData = meData.phone;
       this.PasswordData = meData.password;
+      this.AddressData = meData.address;
     })
   }
 
@@ -76,6 +79,16 @@ export class MePage implements OnInit {
   async socialModal() {
     const modal = await this.modalController.create({
       component: ModalSocialComponent
+    });
+    return await modal.present();
+  }
+
+  async addresslModal() {
+    const modal = await this.modalController.create({
+      component: ModalAddressComponent,
+      componentProps: {
+        AddressData: this.AddressData
+      }
     });
     return await modal.present();
   }
