@@ -5,63 +5,43 @@
         "u_id": "u001",
         "assetdocs": [
             {
-                "name": "carregis",
+                "name": "เล่มทะเบียนรถยนต์",
                 "images": [
                     {
-                        "url": "image001.jpg"
+                        "url": "http://www.fab.co.th/images/services/document/ex/cardocin.jpg"
                     },
                     {
-                        "url": "image002.jpg"
+                        "url": "https://f.ptcdn.info/327/059/000/pdunxxs48pfwpv7r3lM-o.jpg"
                     }
                 ]
             },
             {
-                "name": "motoregis",
+                "name": "เล่มทะเบียนรถจักรยานยนต์",
                 "images": [
                     {
-                        "url": "image003.jpg"
+                        "url": "https://f.ptcdn.info/327/059/000/pdunxxs48pfwpv7r3lM-o.jpg"
                     }
                 ]
             },
             {
-                "name": "passport",
-                "images": [
-                    {
-                        "url": ""
-                    }
-                ]
+                "name": "หนังสือเดินทาง",
+                "images": []
             },
             {
-                "name": "insurance",
-                "images": [
-                    {
-                        "url": ""
-                    }
-                ]
+                "name": "ประกันชีวิต",
+                "images": []
             },
             {
-                "name": "ownershipdocs",
-                "images": [
-                    {
-                        "url": ""
-                    }
-                ]
+                "name": "เอกสารกรรมสิทธิ์ห้องชุด",
+                "images": []
             },
             {
-                "name": "familysalary",
-                "images": [
-                    {
-                        "url": ""
-                    }
-                ]
+                "name": "รายได้ต่อเดือนของครอบครัว",
+                "images": []
             },
             {
-                "name": "registorhome",
-                "images": [
-                    {
-                        "url": ""
-                    }
-                ]
+                "name": "ทะเบียนบ้าน",
+                "images": []
             }
         ],
         "updated": "2019-08-11"

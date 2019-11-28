@@ -9,14 +9,14 @@ import { TermsandconditionService } from './termsandcondition.service';
   styleUrls: ['./termsandcondition.page.scss'],
 })
 export class TermsandconditionPage implements OnInit {
-  termsandconditionDataList: any;
+  termsandconditionData: any;
 
   constructor(private router: Router, private termsandconditionService : TermsandconditionService, private _location: Location) { }
 
   ngOnInit() {
-    this.termsandconditionService.onTermsandconditionDataListChanged.subscribe((termsandconditionDataList:any)=>{
-      console.log(termsandconditionDataList);
-      this.termsandconditionDataList = termsandconditionDataList;
+    this.termsandconditionService.onTermsandconditionDataChanged.subscribe((termsandconditionData:any)=>{
+      console.log(termsandconditionData);
+      this.termsandconditionData = termsandconditionData;
     })
   }
   goBackClick() {

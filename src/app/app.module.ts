@@ -119,6 +119,7 @@ import { ModalFeedbackComponent } from './setting/modal-feedback/modal-feedback.
     ModalMarriageComponent,
     ModalSecondcontactComponent,
     ModalAssetdocsComponent,
+    ModalAssetdocsDetailComponent,
     ModalJobComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
