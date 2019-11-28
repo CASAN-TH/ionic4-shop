@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { ModalAssetdocsDetailComponent } from '../modal-assetdocs-detail/modal-assetdocs-detail.component';
 
 @Component({
   selector: 'app-modal-assetdocs',
@@ -19,6 +20,16 @@ export class ModalAssetdocsComponent implements OnInit {
 
   onFinish() {
     this.modalCtrl.dismiss();
+  }
+
+  async onModalAddAssetDocs(item){
+    const modal = await this.modalCtrl.create({
+      component: ModalAssetdocsDetailComponent,
+      componentProps: {
+        'data': item
+      }
+    });
+    return await modal.present();
   }
 
 }

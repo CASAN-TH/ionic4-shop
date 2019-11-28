@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal-assetdocs-detail',
@@ -7,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalAssetdocsDetailComponent implements OnInit {
 
-  constructor() { }
+  @Input() data: any;
+  constructor(
+    private modalCtrl: ModalController
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.data);
+  }
+
+  onFinish() {
+    this.modalCtrl.dismiss();
+  }
 
 }

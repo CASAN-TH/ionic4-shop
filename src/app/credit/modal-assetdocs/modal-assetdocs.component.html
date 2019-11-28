@@ -1,4 +1,16 @@
-<p>
-  modal-assetdocs works!
-</p>
-<ion-button expand="full" color="secondary" (click)="onFinish()">เรียบร้อย</ion-button>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>เอกสารสินทรัพย์</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let item of assetDocs.assetdocs" (click)="onModalAddAssetDocs(item.name)">
+      <ion-label>{{item.name}}</ion-label>
+      <ion-note slot="end" *ngIf="item.images.length > 0">กรอกแล้ว</ion-note>
+      <ion-note slot="end" *ngIf="item.images.length === 0">ไม่ได้กรอก</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-button expand="full" color="primary" (click)="onFinish()">ส่ง</ion-button>

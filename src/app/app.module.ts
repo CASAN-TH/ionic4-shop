@@ -113,6 +113,7 @@ import { ModalAssetdocsDetailComponent } from './credit/modal-assetdocs-detail/m
     ModalMarriageComponent,
     ModalSecondcontactComponent,
     ModalAssetdocsComponent,
+    ModalAssetdocsDetailComponent,
     ModalJobComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
