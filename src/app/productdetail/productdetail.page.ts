@@ -178,9 +178,9 @@ export class ProductdetailPage implements OnInit {
     console.log("onCartClick");
     this.router.navigateByUrl('tabs/cart');
   }
-  onPaymentClick() {
+  onPaymentClick(paymentId: any) {
     console.log("onPaymentClick");
-    this.router.navigateByUrl('payment');
+    this.router.navigateByUrl('payment/' + paymentId);
   }
   onChatClick() {
     console.log("Chat Bot");
