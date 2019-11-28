@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
@@ -10,7 +10,15 @@ import { Location } from '@angular/common';
 })
 export class OtpPage implements OnInit {
 
-  constructor(private _location: Location, private auth: AuthService, private router: Router) { }
+  user: any;
+  constructor(private _location: Location, private auth: AuthService, private router: Router, private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      if (this.router.getCurrentNavigation().extras.state) {
+        this.user = this.router.getCurrentNavigation().extras.state.user;
+        console.log(this.user);
+      }
+    });
+  }
 
   ngOnInit() {
   }
@@ -19,9 +27,20 @@ export class OtpPage implements OnInit {
     this._location.back();
   }
 
-  verifyOTP(form){
-    console.log(form.value);
-    this.router.navigateByUrl('password');
+  verifyOTP(form) {
+    console.log(this.user);
+    // this.router.navigateByUrl('password');
+    this.nextStep(this.user);
+  }
+
+  nextStep(user) {
+    let navigationExtras: NavigationExtras = {
+      state: {
+        user: user
+      }
+    };
+    console.log(navigationExtras);
+    this.router.navigate(['password'], navigationExtras);
   }
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
@@ -49,14 +49,15 @@ export class LoginPage implements OnInit {
     this.fb.login(['public_profile', 'email'])
       .then((res: FacebookLoginResponse) => {
         this.fb.api('/me?fields=id,first_name,last_name,picture.width(300).height(300)', []).then((user) => {
-          this.auth.facebookLogin(user).then(()=>{
+          this.auth.facebookLogin(user).then(() => {
             if (this.auth.redirectUrl) {
               this.router.navigateByUrl(this.auth.redirectUrl);
             } else {
               this.router.navigateByUrl('');
             }
-          }).catch(()=>{
-            this.router.navigateByUrl('phoneno');
+          }).catch(() => {
+            //this.router.navigateByUrl('phoneno');
+            this.nextStep("facebook", user);
           })
         });
       })
@@ -68,17 +69,28 @@ export class LoginPage implements OnInit {
     this.lineLogin.initialize({ channel_id: "1653562528" })
     this.lineLogin.login()
       .then(user => {
-        this.auth.lineLogin(user).then(()=>{
+        this.auth.lineLogin(user).then(() => {
           if (this.auth.redirectUrl) {
             this.router.navigateByUrl(this.auth.redirectUrl);
           } else {
             this.router.navigateByUrl('');
           }
-        }).catch(()=>{
-          this.router.navigateByUrl('phoneno');
+        }).catch(() => {
+          // this.router.navigateByUrl('phoneno');
+          this.nextStep("line", user);
         })
       })
       .catch(error => console.log(error))
+  }
+
+  nextStep(provider, user) {
+    let navigationExtras: NavigationExtras = {
+      state: {
+        provider: provider,
+        providerData: user
+      }
+    };
+    this.router.navigate(['phoneno'], navigationExtras);
   }
 
 }

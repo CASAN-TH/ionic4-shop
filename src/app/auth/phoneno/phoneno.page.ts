@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
@@ -10,7 +10,18 @@ import { Location } from '@angular/common';
 })
 export class PhonenoPage implements OnInit {
 
-  constructor(private _location: Location, private auth: AuthService, private router: Router) { }
+  params: any;
+  constructor(private _location: Location,
+    private auth: AuthService,
+    private router: Router,
+    private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      if (this.router.getCurrentNavigation().extras.state) {
+        this.params = this.router.getCurrentNavigation().extras.state;
+        console.log(this.params);
+      }
+    });
+  }
 
   ngOnInit() {
   }
@@ -19,9 +30,24 @@ export class PhonenoPage implements OnInit {
     this._location.back();
   }
 
-  requestOTP(form){
+  requestOTP(form) {
     console.log(form.value);
-    this.router.navigateByUrl('otp');
+    //this.router.navigateByUrl('otp');
+    let user = {
+      username : form.value.username,
+      provider : this.params.provider,
+      providerData : this.params.providerData
+    }
+    this.nextStep(user);
+  }
+
+  nextStep(user) {
+    let navigationExtras: NavigationExtras = {
+      state: {
+        user: user
+      }
+    };
+    this.router.navigate(['otp'], navigationExtras);
   }
 
 }
