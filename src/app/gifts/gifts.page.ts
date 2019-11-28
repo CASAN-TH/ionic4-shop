@@ -24,6 +24,12 @@ export class GiftsPage implements OnInit {
   SpecificationgiftData: any
   ImformationSpecgiftData: any
 
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400,
+    autoplay: true
+  };
+
   constructor(
     private router: Router,
     private giftsService: GiftsService,
@@ -113,12 +119,16 @@ export class GiftsPage implements OnInit {
   goBackClick() {
     this._location.back();
   }
-
-  slideOpts = {
-    initialSlide: 1,
-    speed: 400,
-    autoplay: true
-  };
-
+  onCartClick() {
+    console.log("onCartClick");
+    this.router.navigateByUrl('tabs/cart');
+  }
+  onPaymentClick(paymentId: any) {
+    console.log("onPaymentClick");
+    this.router.navigateByUrl('payment/' + paymentId);
+  }
+  onChatClick() {
+    console.log("Chat Bot");
+  }
 
 }

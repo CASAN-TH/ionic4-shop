@@ -23,7 +23,7 @@
 
         <ion-row>
           <ion-col size="12">
-            <h1 class="titlewar">{{itemproduct.currency}} {{itemproduct.price}}</h1>
+            <h1 class="pri">{{itemproduct.currency}} {{itemproduct.price}}</h1>
           </ion-col>
         </ion-row>
 
@@ -38,7 +38,7 @@
                   </span>
                   <span>
                     {{PaymentData.selected.period_amount.period}}
-                    {{PaymentData.selected.period_amount.unit}}
+                    {{PaymentData.selected.period_amount.per}}
                   </span>
                 </ion-label>
                 <ion-buttons slot="end">
@@ -59,14 +59,14 @@
 
         <ion-row>
           <ion-col size="12">
-            <ion-segment class="segmentab">
-              <ion-segment-button>
+            <ion-buttons class="btn-two">
+              <ion-button class="btn-icon">
                 <ion-icon name="star"></ion-icon>
-              </ion-segment-button>
-              <ion-segment-button checked>
+              </ion-button>
+              <ion-button class="btn-icon">
                 <ion-icon name="heart"></ion-icon>
-              </ion-segment-button>
-            </ion-segment>
+              </ion-button>
+            </ion-buttons>
           </ion-col>
         </ion-row>
       </ion-card>
@@ -97,20 +97,17 @@
         <ion-row>
           <ion-col size="12">
             <ion-item (click)="promotionModal()">
-              <ion-row>
-                <ion-col size="12">
-                  <ion-row>
-                    <ion-col size="4">โปรโมชั่น</ion-col>
-                    <ion-col size="8">
-                      <ion-row>
-                        <ion-col size="2" *ngFor="let itemimage of PromotionData">
-                          <img [src]="itemimage.image">
-                        </ion-col>
-                      </ion-row>
-                    </ion-col>
-                  </ion-row>
-                </ion-col>
-              </ion-row>
+              <ion-label>
+                โปรโมชั่น
+              </ion-label>
+              <ion-label>
+                <ion-row>
+                  <ion-col size="3"
+                    *ngFor="let itemimage of [PromotionData[0],PromotionData[1],PromotionData[2],PromotionData[3]]">
+                    <img [src]="itemimage.image">
+                  </ion-col>
+                </ion-row>
+              </ion-label>
               <ion-buttons slot="end">
                 <ion-button>
                   <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
@@ -297,9 +294,9 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-row>
+    <ion-row *ngFor="let itemproduct of productdetailData.productdetail">
       <ion-col size="4">
-        <ion-buttons>
+        <ion-buttons class="btn-center" (click)="onChatClick()">
           <ion-button class="opinion">
             <ion-icon name="chatbubbles"></ion-icon>
             ฝ่ายบริการลูกค้า
@@ -307,14 +304,14 @@
         </ion-buttons>
       </ion-col>
       <ion-col size="4" class="add-cart">
-        <ion-buttons>
+        <ion-buttons class="btn-center" (click)="onCartClick(itemproduct._id)">
           <ion-button class="butcolor">
             เพิ่มใส่รถเข็น
           </ion-button>
         </ion-buttons>
       </ion-col>
       <ion-col size="4" class="buy">
-        <ion-buttons>
+        <ion-buttons class="btn-center" (click)="onPaymentClick(itemproduct._id)">
           <ion-button class="butcolor">
             ซื้อทันที
           </ion-button>
