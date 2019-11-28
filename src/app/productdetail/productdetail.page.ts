@@ -30,6 +30,12 @@ export class ProductdetailPage implements OnInit {
   ReviewData: any
   ImformationSpecData: any
 
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400,
+    autoplay: true
+  };
+
   constructor(
     private router: Router,
     private productdetailService: ProductdetailService,
@@ -168,10 +174,14 @@ export class ProductdetailPage implements OnInit {
     this._location.back();
   }
 
-  slideOpts = {
-    initialSlide: 1,
-    speed: 400,
-    autoplay: true
-  };
+  onCartClick() {
+    console.log("onCartClick");
+  }
+  onPaymentClick() {
+    console.log("onPaymentClick");
+  }
+  onChatClick() {
+    console.log("Chat Bot");
+  }
 
 }

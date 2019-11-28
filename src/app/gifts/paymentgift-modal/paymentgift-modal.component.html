@@ -9,14 +9,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-col>
   <ion-row>
     <ion-col size="12" class="ion-text-center">
-      <span class="currency">
+      <span class="pri">
         {{PaymentgiftData.selected.down_amount.currency}}
         {{PaymentgiftData.selected.period_amount.amount_period}}
       </span>
-      <span>
+      <span class="unit">
         {{PaymentgiftData.selected.period_amount.period}}
         {{PaymentgiftData.selected.period_amount.unit}}
       </span>
@@ -26,42 +26,70 @@
   <ion-card>
     <ion-row>
       <ion-col size="12">
-        <p>{{PaymentgiftData.selected.down_amount.down}}
-          {{PaymentgiftData.selected.down_amount.currency}}
-          {{PaymentgiftData.selected.down_amount.amount_down}}
-        </p>
-        <p>{{PaymentgiftData.selected.period_amount.monpayment}}
-          {{PaymentgiftData.selected.period_amount.amount_period}}
-          {{PaymentgiftData.selected.period_amount.inc}}
-        </p>
+        <ion-row>
+          <ion-col size="12">
+            <span>
+              {{PaymentgiftData.selected.down_amount.down}}
+            </span>
+            <span class="subdow">
+              {{PaymentgiftData.selected.down_amount.currency}}
+              {{PaymentgiftData.selected.down_amount.amount_down}}
+            </span>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="12">
+            <span>
+              {{PaymentgiftData.selected.period_amount.monpayment}}
+            </span>
+            <span class="subdow">
+              {{PaymentgiftData.selected.period_amount.amount_period}}
+            </span>
+            <span>
+              {{PaymentgiftData.selected.period_amount.inc}}
+            </span>
+          </ion-col>
+        </ion-row>
       </ion-col>
     </ion-row>
   </ion-card>
 
   <ion-row>
     <ion-col size="12">
-      <h6 class="p-title">{{PaymentgiftData.selected.down_options.down_payment}}</h6>
-      <ion-row class="top">
-        <ion-col class="pay" size="2" *ngFor="let itempay of PaymentgiftData.selected.down_options.payment_percent">
+      <ion-text class="p-title">{{PaymentgiftData.selected.down_options.down_payment}}</ion-text>
+      <ion-row class="top"
+        *ngIf="PaymentgiftData.selected.down_options.payment_percent && PaymentgiftData.selected.down_options.payment_percent.length">
+        <ion-col class="pay" size="2" text-center
+          *ngFor="let itempay of PaymentgiftData.selected.down_options.payment_percent"
+          [class.ion-col-border]="itempay._id == percenSelected" (click)="onPercenClick(itempay._id)">
+          <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="itempay._id == percenSelected"></ion-icon>
           {{itempay.rate}} {{itempay.unit}}
         </ion-col>
       </ion-row>
     </ion-col>
   </ion-row>
+
   <ion-row>
     <ion-col size="12">
-      <h6 class="p-title">{{PaymentgiftData.selected.period_option.installments}}</h6>
-      <ion-row class="top">
-        <ion-col class="per" size="3" *ngFor="let itemper of PaymentgiftData.selected.period_option.installperiod">
+      <ion-text class="p-title">{{PaymentgiftData.selected.period_option.installments}}</ion-text>
+      <ion-row class="top"
+        *ngIf="PaymentgiftData.selected.period_option.installperiod && PaymentgiftData.selected.period_option.installperiod.length">
+        <ion-col class="per" size="3" text-center
+          *ngFor="let itemper of PaymentgiftData.selected.period_option.installperiod"
+          [class.ion-col-border]="itemper._id == unitSelected" (click)="onUnitClick(itemper._id)">
+          <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="itemper._id == unitSelected"></ion-icon>
           {{itemper.period}} {{itemper.unit}}
         </ion-col>
       </ion-row>
     </ion-col>
   </ion-row>
-</ion-content>
+</ion-col>
 
 <ion-footer>
   <ion-toolbar>
-    <ion-title>จ่ายเป็นงวด</ion-title>
+    <ion-buttons class="btn-center" (click)="onPayClick()">
+      <ion-button class="btn-footer">จ่ายเป็นงวด</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-footer>

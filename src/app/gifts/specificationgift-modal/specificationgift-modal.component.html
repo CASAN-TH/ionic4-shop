@@ -14,36 +14,28 @@
       <img [src]="SpecificationgiftData.image">
     </ion-col>
     <ion-col size="8">
-      <h3>
+      <h3 class="pri">
         {{SpecificationgiftData.currency}}
         {{SpecificationgiftData.price}}
       </h3>
-      <p>
+      <span class="ti">
         {{SpecificationgiftData.currency}}
         {{SpecificationgiftData.period}}
+      </span>
+      <span class="unit">
         {{SpecificationgiftData.unit}}
         {{SpecificationgiftData.per}}
-      </p>
-      <p>{{SpecificationgiftData.name}}</p>
+      </span>
+      <p class="name">{{SpecificationgiftData.name}}</p>
     </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col size="12">
-      <h2>Color</h2>
+      <h3>Color</h3>
       <ion-row>
-        <ion-col size="6" *ngFor="let item of SpecificationgiftData.selectcolor">
+        <ion-col class="selectcolor" size="4" *ngFor="let item of SpecificationgiftData.selectcolor">
           {{item.color}}
-        </ion-col>
-      </ion-row>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col size="12">
-      <h2>Version</h2>
-      <ion-row>
-        <ion-col size="6" *ngFor="let itemver of SpecificationgiftData.selectversion">
-          {{itemver.version}}
         </ion-col>
       </ion-row>
     </ion-col>
@@ -53,7 +45,7 @@
     <ion-col size="12">
       <div>
         <span>
-          <h2>{{SpecificationgiftData.quantity}}</h2>
+          <h3>{{SpecificationgiftData.quantity}}</h3>
         </span>
       </div>
     </ion-col>
@@ -62,22 +54,22 @@
 </ion-content>
 
 <ion-footer>
-    <ion-toolbar>
-      <ion-row>
-        <ion-col size="6" class="add-cart">
-          <ion-buttons>
-            <ion-button class="butcolor">
-              เพิ่มใส่รถเข็น
-            </ion-button>
-          </ion-buttons>
-        </ion-col>
-        <ion-col size="6" class="buy">
-          <ion-buttons>
-            <ion-button class="butcolor">
-              ซื้อทันที
-            </ion-button>
-          </ion-buttons>
-        </ion-col>
-      </ion-row>
-    </ion-toolbar>
-  </ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="6" class="add-cart">
+        <ion-buttons>
+          <ion-button class="butcolor">
+            เพิ่มใส่รถเข็น
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="6" class="buy">
+        <ion-buttons>
+          <ion-button class="butcolor">
+            ซื้อทันที
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
