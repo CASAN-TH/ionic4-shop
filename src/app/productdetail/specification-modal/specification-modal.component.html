@@ -15,25 +15,28 @@
       <img [src]="SpecificationData.image">
     </ion-col>
     <ion-col size="8">
-      <h3>
+      <h3 class="pri">
         {{SpecificationData.currency}}
         {{SpecificationData.price}}
       </h3>
-      <p>
+      <span class="ti">
         {{SpecificationData.currency}}
         {{SpecificationData.period}}
+      </span>
+      <span class="unit">
         {{SpecificationData.unit}}
         {{SpecificationData.per}}
-      </p>
-      <p>{{SpecificationData.name}}</p>
+      </span>
+      <p class="name">{{SpecificationData.name}}</p>
     </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col size="12">
-      <h2>Color</h2>
+      <!-- <h2>Color</h2> -->
+      <h3>Color</h3>
       <ion-row>
-        <ion-col size="6" *ngFor="let item of SpecificationData.selectcolor">
+        <ion-col class="selectcolor" size="4" *ngFor="let item of SpecificationData.selectcolor">
           {{item.color}}
         </ion-col>
       </ion-row>
@@ -41,9 +44,9 @@
   </ion-row>
   <ion-row>
     <ion-col size="12">
-      <h2>Version</h2>
+      <h3>Version</h3>
       <ion-row>
-        <ion-col size="6" *ngFor="let itemver of SpecificationData.selectversion">
+        <ion-col class="selectcolor" size="6" *ngFor="let itemver of SpecificationData.selectversion">
           {{itemver.version}}
         </ion-col>
       </ion-row>
@@ -54,7 +57,7 @@
     <ion-col size="12">
       <div>
         <span>
-          <h2>{{SpecificationData.quantity}}</h2>
+          <h3>{{SpecificationData.quantity}}</h3>
         </span>
       </div>
     </ion-col>

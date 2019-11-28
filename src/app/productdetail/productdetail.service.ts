@@ -25,7 +25,20 @@ export class ProductdetailService {
     }
   });
   onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  onPromotionDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onPromotionDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([
+    {
+      "image": ""
+    },
+    {
+      "image": ""
+    },
+    {
+      "image": ""
+    },
+    {
+      "image": ""
+    }
+  ]);
   onTcoinDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onWarrantyDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onSpecificationDataChanged: BehaviorSubject<any> = new BehaviorSubject({});

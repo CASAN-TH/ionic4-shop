@@ -41,6 +41,7 @@ import { ModalSecondcontactComponent } from './credit/modal-secondcontact/modal-
 import { ModalAssetdocsComponent } from './credit/modal-assetdocs/modal-assetdocs.component';
 import { ModalJobComponent } from './credit/modal-job/modal-job.component';
 import { SelectdownModalComponent } from './payment/selectdown-modal/selectdown-modal.component';
+import { ModalAssetdocsDetailComponent } from './credit/modal-assetdocs-detail/modal-assetdocs-detail.component';
 
 
 @NgModule({
@@ -78,6 +79,7 @@ import { SelectdownModalComponent } from './payment/selectdown-modal/selectdown-
     ModalMarriageComponent,
     ModalSecondcontactComponent,
     ModalAssetdocsComponent,
+    ModalAssetdocsDetailComponent,
     ModalJobComponent
   ],
   entryComponents: [ModalCardComponent, 
@@ -111,6 +113,7 @@ import { SelectdownModalComponent } from './payment/selectdown-modal/selectdown-
     ModalMarriageComponent,
     ModalSecondcontactComponent,
     ModalAssetdocsComponent,
+    ModalAssetdocsDetailComponent,
     ModalJobComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,

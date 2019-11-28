@@ -1,11 +1,35 @@
-.segmentab {
-  height: 35px;
-  --color: #bdc8ca;
-  --border-color: #d0d3d8;
+.btn-icon {
+  border: 1px solid #e6e6e6;
+  width: 10rem;
+  height: 2.70rem;
+  margin-bottom: 0.7rem;
+  margin-top: 0.42rem;
+}
+.btn-center {
+  display: flex;
+  justify-content: center;
+}
+.btn-two {
+  padding-left: 4%;
+}
+.payment {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  padding: 0 1.2rem 0 1.2rem;
+}
+
+.pri {
+  font-weight: bold;
+  font-size: 34px;
+  color: orangered;
+  padding-left: 2%;
 }
 .titlewar {
   font-weight: bold;
   color: black;
+  padding-left: 2%;
 }
 .opinion {
   color: black;
@@ -25,8 +49,4 @@
   margin-right: unset;
   margin-top: 0px;
   margin-bottom: 10px;
-}
-.payment {
-  width: 80%;
-  margin-inline-start: 10%;
 }

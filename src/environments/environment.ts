@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   mockup:true,
   appName: "ionic4-shop",
-  apiUrl: ""
+  apiUrl: "https://casan-sevice.lamunphan.com"
 };
 
 /*
