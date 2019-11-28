@@ -1,9 +1,49 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>{{data}}</ion-title>
+    <ion-title>{{data.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
+  <div class="ion-padding-start">
+    <p class="font-title">กรุณาอัปโหลดรูปภาพที่ถ่ายจากสำเนาหรือเอกสารตัวจริง ({{data.name}})</p>
+    <ion-note class="font-subtitle">กรุณาตรวจสอบให้แน่ใจว่ารูปภาพชัดเจน</ion-note>
+  </div>
+
+  <ion-row class="ion-padding-top">
+    <ion-col size="3"></ion-col>
+    <ion-col size="6" class="ion-text-center col-container">
+      <div *ngFor="let item of data.images; let i = index" class="ion-padding-bottom">
+        <div *ngIf="item.url !== ''">
+          <div class="icon-container">
+            <div class="icon-close-position" (click)="deleteImage(i)">
+              <ion-icon name="close"></ion-icon>
+            </div>
+          </div>
+          <img class="img-binding" [src]="item.url">
+        </div>
+        <div *ngIf="item.url === ''" (click)="openCamera(i)">
+          <div class="flex-content">
+            <div class="avatar-icon">
+              <ion-icon name="camera"></ion-icon>
+            </div>
+            <div class="font-name-image">{{data.name}}</div>
+          </div>
+          <img class="img-size" src="../../assets/images/frontThaiCard.jpg">
+        </div>
+      </div>
+    </ion-col>
+    <ion-col size="3"></ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12" class="ion-text-center">
+      <ion-chip (click)="addImage()">
+        <ion-icon name="add" class="ion-no-margin"></ion-icon>
+      </ion-chip>
+    </ion-col>
+  </ion-row>
+
 
 </ion-content>
+<ion-button expand="full" color="primary" (click)="onDismiss()">cancel</ion-button>
 <ion-button expand="full" color="primary" (click)="onFinish()">เรียบร้อย</ion-button>
