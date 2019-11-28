@@ -121,9 +121,11 @@ export class GiftsPage implements OnInit {
   }
   onCartClick() {
     console.log("onCartClick");
+    this.router.navigateByUrl('tabs/cart');
   }
   onPaymentClick() {
     console.log("onPaymentClick");
+    this.router.navigateByUrl('payment');
   }
   onChatClick() {
     console.log("Chat Bot");

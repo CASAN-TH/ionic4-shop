@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-paymentgift-modal',
@@ -13,7 +14,7 @@ export class PaymentgiftModalComponent implements OnInit {
 
   @Input() PaymentgiftData: any
 
-  constructor(public modalController: ModalController) { }
+  constructor(public modalController: ModalController, private router: Router) { }
 
   ngOnInit() {
 
@@ -37,6 +38,8 @@ export class PaymentgiftModalComponent implements OnInit {
 
   onPayClick() {
     console.log("onPayClick");
+    this.modalController.dismiss();
+    this.router.navigateByUrl('payment');
   }
 
 }
