@@ -6,26 +6,48 @@
       </ion-button>
     </ion-buttons>
     <ion-title>ยืนยันการสั่งซ้ื้อ</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
 
-
 <ion-content>
-  <ion-buttons>
+  <ion-row *ngIf="addressData && addressData.address">
+    <ion-col size="10">
+      <ion-row>
+        <ion-col size="12" class="address">
+          {{addressData.address.receiveraddress}} {{addressData.address.subdistric}}
+          {{addressData.address.distric}} {{addressData.address.province}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          {{addressData.address.receiver}} {{addressData.address.receiverphone}}
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col size="2">
+      <ion-buttons>
+        <ion-button class="arow-forward">
+          <ion-icon mode="ios" name="arrow-forward"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-col>
+  </ion-row>
+  <ion-buttons *ngIf="!addressData">
     <ion-button slot="start">
       <ion-icon mode="ios" name="add"></ion-icon>
     </ion-button>
     <ion-title>โปรดเพิ่มที่อยู่</ion-title>
-    <ion-button slot="end">
-      <ion-icon mode="ios" name="arrow-forward"></ion-icon>
-    </ion-button>
   </ion-buttons>
 
   <ion-card>
     <ion-list>
       <ion-item>
         <ion-label>วิธีการชำระเงิน</ion-label>
+        <ion-label class="arow-forwardicon">
+          <!-- <ion-icon mode="ios" name="arrow-forward"></ion-icon> -->
+        </ion-label>
         <ion-select [(ngModel)]="select">
           <ion-select-option value="down">ผ่อนชำระ</ion-select-option>
           <ion-select-option value="nodown">ชำระเต็มจำนวนเงิน</ion-select-option>
@@ -52,23 +74,23 @@
           <ion-text>x</ion-text>
           <ion-text>{{data.installment_period}}{{data.unit}}</ion-text>
         </ion-label>
-        <ion-row *ngFor="let data of downDataList">
+        <ion-label *ngFor="let data of downDataList">
           <ion-col class="per" size="3" *ngFor="let item of data.period_option">
-            <ion-button color="light">{{item.peviod}}{{item.unit}}</ion-button>
+            {{item.peviod}}{{item.unit}}
           </ion-col>
-        </ion-row>
+        </ion-label>
       </ion-item>
 
       <div>
         <ion-checkbox mode="ios" color="danger" checked slot="start"></ion-checkbox>
-       ฉันเห็นด้วย<a routerLink="/termsandcondition" routerLinkActive="active">ข้อตกลงการใช้บริการ</a>
+        ฉันเห็นด้วย<a routerLink="/termsandcondition" routerLinkActive="active">ข้อตกลงการใช้บริการ</a>
       </div>
     </div>
   </ion-card>
 
 
 
-  <ion-card>
+  <ion-card class="sizecard">
     <ion-item>
       <ion-label *ngFor="let cart of cartDataList">{{cart.shop_name}}</ion-label>
     </ion-item>
@@ -118,7 +140,7 @@
     <ion-list *ngFor="let cart of cartDataList">
       <ion-item *ngFor="let pro of cart.product">
         <ion-label>ค่าจัดส่ง</ion-label>
-        <ion-label slot="end">{{pro.currency}}{{pro.chipingfee}}</ion-label>
+        <ion-label class="label-right">{{pro.currency}}{{pro.chipingfee}}</ion-label>
       </ion-item>
     </ion-list>
     <ion-list>
@@ -131,51 +153,35 @@
     <ion-list *ngFor="let cart of cartDataList">
       <ion-item>
         <ion-label>ยอดรวม</ion-label>
-        <ion-label slot="end" *ngFor="let pro of cart.product">{{pro.currency}}{{pro.price}}</ion-label>
+        <ion-label class="label-right2" *ngFor="let pro of cart.product">{{pro.currency}}{{pro.price}}</ion-label>
       </ion-item>
     </ion-list>
 
   </ion-card>
 
-  <ion-card>
-    <ion-item (click)="onCuponClick()">
-      <ion-row>
-        <ion-col size="4">
-          บัตรกำนัล
-        </ion-col>
-        <ion-col size="6">
-          <ion-input class="cupon" placeholder="ใส่รหัสคูปอง"></ion-input>
-        </ion-col>
-        <ion-col size="2">
-          <ion-buttons>
-            <ion-button>
-              <ion-icon mode="ios" name="arrow-forward"></ion-icon>
-            </ion-button>
-          </ion-buttons>
-        </ion-col>
-      </ion-row>
-
-
-
+  <ion-card class="sizecard2">
+    <ion-item (click)="vouchersModal()">
+      <ion-label>บัตรกำนัล</ion-label>
+      <ion-label>
+        <ion-input class="cupon" placeholder="ใส่รหัสคูปอง"></ion-input>
+      </ion-label>
+      <ion-label class="arow-forwardicon">
+        <ion-icon mode="ios" name="arrow-forward"></ion-icon>
+      </ion-label>
     </ion-item>
+
     <ion-item>
-      <ion-row>
-        <ion-col size="6">
-          <ion-text>
-            100 หักTcoin฿1
-          </ion-text>
-        </ion-col>
-        <ion-col size="6">
-          <ion-item>
-            <ion-toggle slot="start" name="cherry" color="danger" checked></ion-toggle>
-          </ion-item>
-        </ion-col>
-      </ion-row>
+      <ion-label>
+        100 หักTcoin฿1
+      </ion-label>
+      <ion-label class="label-right2">
+        <ion-toggle slot="start" name="cherry" color="danger" checked></ion-toggle>
+      </ion-label>
     </ion-item>
   </ion-card>
 
   <ion-card>
-    <div>
+   
       <ion-row *ngFor="let cart of cartDataList">
         <ion-col size="6" *ngFor="let pro of cart.product">
           ยอดรวม ({{pro.amount}}สินค้า)
@@ -200,7 +206,7 @@
           {{pro.currency}}{{pro.chipingfee}}
         </ion-col>
       </ion-row>
-    </div>
+  
   </ion-card>
 
 </ion-content>
@@ -233,7 +239,7 @@
       </ion-col>
       <ion-col size="4" (click)="onOrderClick()">
         <section>
-          <ion-button expand="full" color="danger" >สั่งซื้อสินค้า</ion-button>
+          <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
         </section>
       </ion-col>
     </ion-row>

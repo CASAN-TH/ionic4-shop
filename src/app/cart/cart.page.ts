@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from './cart.service';
 import { SpecModalComponent } from './spec-modal/spec-modal.component';
-import { ModalController, AlertController } from '@ionic/angular';
+import { ModalController, AlertController, ActionSheetController } from '@ionic/angular';
 import { InsallmentModalComponent } from './insallment-modal/insallment-modal.component';
 
 @Component({
@@ -17,7 +17,8 @@ export class CartPage implements OnInit {
   constructor(private router: Router,
     private cartService: CartService,
     public modalController: ModalController,
-    private alertCtrl: AlertController) { }
+    private alertCtrl: AlertController,
+    public actionSheetController: ActionSheetController) { }
 
   ngOnInit() {
     this.cartService.onCartDataListChanged.subscribe((cartDataList: any) => {
@@ -58,7 +59,9 @@ export class CartPage implements OnInit {
   onAddToCartClick() {
     console.log("addtocart")
   }
-
+  onPayClick() {
+    this.router.navigate(['payment'])
+  }
   onSelectAll() {
     console.log("54")
   }
@@ -80,25 +83,26 @@ export class CartPage implements OnInit {
     });
     return await modal.present();
   }
-  async presentAlert() {
-    const alert = await this.alertCtrl.create({
-      message: 'กรุณาเพิ่มที่อยู่จัดส่งใหม่',
-      buttons: [
-        {
-          text: 'ยกเลิก',
-          handler: (blah) => {
-          }
-        }, {
-          text: 'เพิ่ม',
-          handler: () => {
-            this.router.navigate(['addaddress'])
-          }
-        }
-      ]
-    });
-    await alert.present();
-    this.router.navigate(['payment'])
-  }
+  // async presentAlert() {
+  //   const alert = await this.alertCtrl.create({
+  //     message: 'กรุณาเพิ่มที่อยู่จัดส่งใหม่',
+  //     buttons: [
+  //       {
+  //         text: 'ยกเลิก',
+  //         handler: (blah) => {
+  //         }
+  //       }, {
+  //         text: 'เพิ่ม',
+  //         handler: () => {
+  //           this.router.navigate(['addaddress'])
+  //         }
+  //       }
+  //     ]
+  //   });
+  //   await alert.present();
+  //   this.router.navigate(['payment'])
+  // }
+
 
 }
 

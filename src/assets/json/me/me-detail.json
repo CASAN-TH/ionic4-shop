@@ -6,10 +6,12 @@
         "nickname": "Krittin Tch",
         "phone": "0962036211",
         "address": {
-                    "receiver": "กฤษตฤณ",
-                    "receiverphone": "0962036211",
-                    "province": "ชัยนาท",
-                    "receiveraddress": "26/1 ม.5 จ.ชัยนาท"
+            "receiver": "กฤษตฤณ",
+            "receiverphone": "0962036211",
+            "subdistric": "คูคต",
+            "distric": "ลำลูกกา",
+            "province": "ปทุมธานี",
+            "receiveraddress": "ห้อง 8/533 The Excel Khukhot"
         },
         "password": "1234"
     }

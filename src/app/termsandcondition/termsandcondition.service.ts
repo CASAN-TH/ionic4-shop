@@ -28,7 +28,7 @@ export class TermsandconditionService {
     this.routeParams = route.params;
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
     if (this.routeParams.id) {
-      this.getTermsandconditionData(this.routeParams.id);
+      this.getTermsandconditionData();
     } else {
       this.getTermsandconditionDataList();
     }
@@ -49,14 +49,14 @@ export class TermsandconditionService {
     })
   }
 
-  getTermsandconditionData(id: string): Observable<any> | Promise<any> | any {
+  getTermsandconditionData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if(mockup){
         this.http.get('../../assets/json/termsandcondition/termsandcondition-detail.json').subscribe((res: any) => {
           this.onTermsandconditionDataListChanged.next(res.data);
         },reject)
       }else{
-        this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onTermsandconditionDataChanged.next(res.data);
         },reject)
       }
