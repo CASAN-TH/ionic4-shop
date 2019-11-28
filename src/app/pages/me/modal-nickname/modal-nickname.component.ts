@@ -1,3 +1,4 @@
+import { MeService } from './../me.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common'
 import { ModalController } from '@ionic/angular';
@@ -11,8 +12,11 @@ export class ModalNicknameComponent implements OnInit {
 
   @Input() NicknameData: any
 
+  mockup: any = {}
+
   constructor(
-    public modalController: ModalController
+    public modalController: ModalController,
+    public meservice: MeService
   ) { }
 
   ngOnInit() {
@@ -23,7 +27,15 @@ export class ModalNicknameComponent implements OnInit {
     this.modalController.dismiss();
   }
 
-  onSaveNickname() {
-    console.log("SaveNickname");
+  async onSaveNickname() {
+    this.mockup.nickname = this.NicknameData;
+    const res: any = await this.meservice.updateMeData(this.mockup);
+    console.log(res);
+    if (res) {
+      console.log("complete");
+      this.ModalDismiss();
+    }
+
+
   }
 }

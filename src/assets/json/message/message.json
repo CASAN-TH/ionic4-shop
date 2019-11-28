@@ -1,0 +1,23 @@
+{
+    "status": 200,
+    "data": [
+        {
+            "topic": "การเเจ้งเตือนรหัสผ่าน",
+            "description": "รหัสผ่านของคุณได้รับการเเก้ไขเเล้ว",
+            "type": "ระบบ",
+            "typeicon": "https://image.flaticon.com/icons/svg/463/463777.svg"
+        },
+        {
+            "topic": "วันนี้เเล้ว 11.11",
+            "description": "ของลดราคาพิเศษมากมาย",
+            "type": "ระบบ",
+            "typeicon": "https://image.flaticon.com/icons/svg/463/463777.svg"
+        },
+        {
+            "topic": "candy Crush",
+            "description": "เล่นสนุกเเจก Tcoin ไม่อั้น",
+            "type": "กิจกรรม",
+            "typeicon": "https://image.flaticon.com/icons/svg/427/427096.svg"
+        }
+    ]
+}

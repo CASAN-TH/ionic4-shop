@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { MeService } from '../me.service';
 
 @Component({
   selector: 'app-modal-phone',
@@ -9,8 +10,10 @@ import { ModalController } from '@ionic/angular';
 export class ModalPhoneComponent implements OnInit {
 
   @Input() PhoneData: any
+  mockup: any = {}
 
-  constructor(public modalController: ModalController) { }
+  constructor(public modalController: ModalController,
+    public meservice: MeService) { }
 
   ngOnInit() {
     console.log(this.PhoneData);
@@ -20,7 +23,13 @@ export class ModalPhoneComponent implements OnInit {
     this.modalController.dismiss();
   }
 
-  onSavePhone() {
-    console.log("SavePhone");
-  }
+  async onSavePhone() {
+    this.mockup.phone = this.PhoneData;
+    const res: any = await this.meservice.updateMeData(this.mockup);
+    console.log(res);
+    if (res) {
+      console.log("save phone complete");
+      this.ModalDismiss();
+    }
+}
 }
