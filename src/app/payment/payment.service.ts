@@ -15,6 +15,8 @@ export class PaymentService {
 
   onDownDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onCartDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onAddressDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
   constructor(private http: HttpClient) { }
 
@@ -29,44 +31,75 @@ export class PaymentService {
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
     this.getDownDataList();
     this.getCartDataList();
+    this.getAddressData();
+    this.getVouchersModalData();
+
     return;
   }
 
-  
-  getDownDataList(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if(mockup){
-        this.http.get('../../assets/json/payment/downData.json').subscribe((res: any) => {
-          this.onDownDataListChanged.next(res.data);
-        },reject)
-      }else{
-        this.http.get(api_url,{ headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onDownDataListChanged.next(res.data);
-        },reject)
-      }
-      
-    })
-  }
-  
+
+
+
   getCartDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/cart/cart.json').subscribe((res: any) => {
           this.onCartDataListChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onCartDataListChanged.next(res.data);
-        },reject)
+        }, reject)
       }
     })
   }
+  getDownDataList(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/payment/downData.json').subscribe((res: any) => {
+          this.onDownDataListChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onDownDataListChanged.next(res.data);
+        }, reject)
+      }
 
+    })
+  }
+  getAddressData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/me/me-detail.json').subscribe((res: any) => {
+          this.onAddressDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onAddressDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+  getVouchersModalData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/productdetail/vouchers-modal.json').subscribe((res: any) => {
+          this.onVouchersDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onVouchersDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
   createPaymentData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         // this.getPaymentDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -74,7 +107,7 @@ export class PaymentService {
     return new Promise((resolve, reject) => {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         // this.getPaymentDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -82,7 +115,7 @@ export class PaymentService {
     return new Promise((resolve, reject) => {
       this.http.delete(api_url + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         // this.getPaymentDataList();
-      },reject)
+      }, reject)
     })
   }
 

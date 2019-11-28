@@ -1,18 +1,43 @@
 <ion-header>
-    <ion-buttons slot="start">
-        <ion-button (click)="goBackClick()">
-          <ion-icon mode="ios" name="arrow-back"></ion-icon>
-        </ion-button>
-      </ion-buttons>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBackClick()">
+        <ion-icon mode="ios" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>addaddress</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-row>
-  <ion-col size="12" *ngFor="let item of addaddressDataList">
-    {{item.name}}
-  </ion-col>
-</ion-row>
+  <ion-item class="item1">
+    <ion-label position="stacked">ผู้รับ</ion-label>
+    <ion-input placeholder="โปรดกรอกชื่อผู้รับ"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">หมายเลขโทรศัพท์มือถือ</ion-label>
+    <ion-input placeholder="โปรดกรอกหมายเลขโทรศัพท์มือถือของคุณ"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">ตำบล/แขวง</ion-label>
+    <ion-input placeholder="โปรดกรอกตำบล/แขวง ในการจัดส่ง"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">อำเภอ/เขต</ion-label>
+    <ion-input placeholder="โปรดกรอกอำเภอ/เขตในการจัดส่ง"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">จังหวัด</ion-label>
+    <ion-input placeholder="โปรดกรอกจังหวัดในการจัดส่ง"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">ที่อยู่จัดส่ง</ion-label>
+    <ion-input placeholder="โปรดกรอกรายละเอียดที่อยู่ เช่นบ้านเลขที่ หมู่บ้าน ซอย ถนน "></ion-input>
+  </ion-item>
+  <ion-item class="item7">
+    <ion-label position="stacked">ตั้งเป็นยอมรับโดยปริยาย</ion-label>
+    <ion-input placeholder="ที่อยู่นี้ใช้เป็นที่อยู่รับของทุกครั้งที่คุณซื้อ"></ion-input>
+    <ion-toggle slot="end" name="cherry" color="danger" checked></ion-toggle>
+  </ion-item>
 </ion-content>
+<ion-button expand="full" color="danger" (click)="onSaveAddress()">บันทึกและใช้</ion-button>
