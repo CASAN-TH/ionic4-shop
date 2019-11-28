@@ -8,7 +8,12 @@ const routes: Routes = [
   {
     path: '',
     component: PaymentPage,
-    resolve: [ PaymentService ]
+    resolve: [PaymentService]
+  },
+  {
+    path: ':paymentId',
+    component: PaymentPage,
+    resolve: [PaymentService]
   }
 ];
 
@@ -16,4 +21,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PaymentPageRoutingModule {}
+export class PaymentPageRoutingModule { }

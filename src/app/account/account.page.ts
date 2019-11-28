@@ -48,7 +48,7 @@ export class AccountPage implements OnInit {
   }
 
   onToSettingPage() {
-    console.log("onToSettingPage");
+    this.router.navigate(['setting']);
   }
 
   onToWishlistPage() {

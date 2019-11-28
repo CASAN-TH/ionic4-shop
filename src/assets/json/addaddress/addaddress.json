@@ -1,8 +1,16 @@
 {
     "status": 200,
-    "data": [
-        {
-            "name": "test1"
-        }
-    ]
+    "data": {
+        "_id": "001",
+        "u_id": "u001",
+        "address": {
+            "receiver": "",
+            "receiverphone": "",
+            "subdistric": "",
+            "distric": "",
+            "provinc": "",
+            "receiverasddress": ""
+        },
+        "updated": "2019-07-26"
+    }
 }

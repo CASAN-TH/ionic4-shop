@@ -6,7 +6,7 @@
 <ion-content>
 
   <ion-list>
-    <ion-item *ngFor="let item of assetDocs.assetdocs" (click)="onModalAddAssetDocs(item.name)">
+    <ion-item *ngFor="let item of assetDocs.assetdocs;let i = index" (click)="onModalAddAssetDocs(item, i)">
       <ion-label>{{item.name}}</ion-label>
       <ion-note slot="end" *ngIf="item.images.length > 0">กรอกแล้ว</ion-note>
       <ion-note slot="end" *ngIf="item.images.length === 0">ไม่ได้กรอก</ion-note>
