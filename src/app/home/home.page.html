@@ -1,8 +1,10 @@
 <ion-header>
   <ion-toolbar [class.show-background]="showToolbar">
-    <ion-searchbar></ion-searchbar>
+    <ion-searchbar slot="start" placeholder="Enter item keyword"></ion-searchbar>
     <ion-buttons slot="end">
-      <ion-icon src="../../../assets/icon/speech-bubble.svg" size="large"></ion-icon>
+      <ion-button>
+        <ion-icon color="light" slot="icon-only" name="ios-chatboxes"></ion-icon>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
