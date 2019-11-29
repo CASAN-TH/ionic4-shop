@@ -20,9 +20,9 @@ export class ModalAssetdocsDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.data);
+    // console.log(this.data);
     this.sendBackUp = JSON.stringify(this.data)
-    console.log(this.sendBackUp);
+    // console.log(this.sendBackUp);
   }
 
   onFinish() {

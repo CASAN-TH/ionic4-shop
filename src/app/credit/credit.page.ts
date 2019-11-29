@@ -26,10 +26,10 @@ export class CreditPage implements OnInit {
   assetDocsData: any;
   jobData: any;
   constructor(
-    private router: Router, 
+    private router: Router,
     private creditService: CreditService,
     private modalController: ModalController
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.creditService.onCreditDataListChanged.subscribe((creditDataList: any) => {
@@ -71,14 +71,14 @@ export class CreditPage implements OnInit {
     this.router.navigate(['/regcredit'])
   }
 
-  async openModalBills(){
+  async openModalBills() {
     const modal = await this.modalController.create({
       component: ModalBillsComponent
     });
     return await modal.present();
   }
 
-  async openModalCreditPoint(){
+  async openModalCreditPoint() {
     const modal = await this.modalController.create({
       component: ModalCreditPointComponent,
       componentProps: {
@@ -88,51 +88,76 @@ export class CreditPage implements OnInit {
     return await modal.present();
   }
 
-  async openModalMenu(item){
+  async openModalMenu(item) {
     console.log(item);
-    if(item === "ข้อมูลผู้ติดต่อ"){
+    if (item === "ข้อมูลผู้ติดต่อ") {
       const modal = await this.modalController.create({
         component: ModalContactComponent,
         componentProps: {
           'contact': this.contactData
         }
       });
+      modal.onDidDismiss().then(async data=>{
+        this.contactData = data.data
+        const res = await this.creditService.updateContact(this.contactData)
+        console.log(res);
+      })
       return await modal.present();
     }
-    if(item === "สถานภาพสมรส"){
+    if (item === "สถานภาพสมรส") {
       const modal = await this.modalController.create({
         component: ModalMarriageComponent,
         componentProps: {
           'marriage': this.marriageData
         }
       });
+      modal.onDidDismiss().then(async data=>{
+        this.marriageData = data.data
+        const res = await this.creditService.updateMarriage(this.marriageData)
+        console.log(res);
+      })
       return await modal.present();
     }
-    if(item === "บุคคลติดต่อฉุกเฉิน"){
+    if (item === "บุคคลติดต่อฉุกเฉิน") {
       const modal = await this.modalController.create({
         component: ModalSecondcontactComponent,
         componentProps: {
           'secondContact': this.secondContactData
         }
       });
+      modal.onDidDismiss().then(async data =>{
+        this.secondContactData = data.data
+        const res = await this.creditService.updateSecondContact(this.secondContactData)
+        console.log(res);
+      })
       return await modal.present();
     }
-    if(item === "เอกสารสินทรัพย์"){
+    if (item === "เอกสารสินทรัพย์") {
       const modal = await this.modalController.create({
         component: ModalAssetdocsComponent,
         componentProps: {
           'assetDocs': this.assetDocsData
         }
       });
+      modal.onDidDismiss().then(async data => {
+        this.assetDocsData = data.data
+        const res = await this.creditService.updateAssetDocs(this.assetDocsData)
+        console.log(res);
+      });
       return await modal.present();
     }
-    if(item === "ข้อมูลอาชีพ"){
+    if (item === "ข้อมูลอาชีพ") {
       const modal = await this.modalController.create({
         component: ModalJobComponent,
         componentProps: {
           'job': this.jobData
         }
       });
+      modal.onDidDismiss().then(async data => {
+        this.jobData = data.data
+        const res = await this.creditService.updateJob(this.jobData)
+        console.log(res);
+      })
       return await modal.present();
     }
   }

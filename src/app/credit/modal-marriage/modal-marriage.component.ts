@@ -9,6 +9,7 @@ import { ModalController, ActionSheetController } from '@ionic/angular';
 export class ModalMarriageComponent implements OnInit {
 
   @Input() marriage: any;
+  sendBU: any;
   constructor(
     private modalCtrl: ModalController,
     public actionSheetCtrl: ActionSheetController
@@ -16,15 +17,18 @@ export class ModalMarriageComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.marriage);
+    this.sendBU = JSON.stringify(this.marriage)
   }
 
-  onDismiss(){
-    this.modalCtrl.dismiss();
+  onDismiss() {
+    const getBU = JSON.parse(this.sendBU)
+    console.log(getBU);
+    this.modalCtrl.dismiss(getBU);
   }
 
   onFinish() {
     console.log(this.marriage);
-    this.modalCtrl.dismiss();
+    this.modalCtrl.dismiss(this.marriage);
   }
 
   async openActionSheet() {

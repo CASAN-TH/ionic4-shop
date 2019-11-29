@@ -12,8 +12,9 @@ export class ModalSecondcontactComponent implements OnInit {
 
   datalength: any;
   mockup: any = {
-    
+
   };
+  sendBU: any;
 
   constructor(
     private modalCtrl: ModalController,
@@ -22,18 +23,20 @@ export class ModalSecondcontactComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.secondContact);
+    this.sendBU = JSON.stringify(this.secondContact)
     this.datalength = this.secondContact.secondcontact.length;
-    console.log(this.datalength);
   }
 
-  onDismiss(){
-    this.modalCtrl.dismiss();
+  onDismiss() {
+    const getBU = JSON.parse(this.sendBU)
+    console.log(getBU);
+    this.modalCtrl.dismiss(getBU);
   }
 
   onFinish() {
     this.secondContact.secondcontact.push(this.mockup)
     console.log(this.secondContact);
-    this.modalCtrl.dismiss();
+    this.modalCtrl.dismiss(this.secondContact);
   }
 
   async openActionRelation(index) {

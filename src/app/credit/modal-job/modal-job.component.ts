@@ -10,26 +10,30 @@ import { ModalCameraComponent } from 'src/app/modals/modal-camera/modal-camera.c
 export class ModalJobComponent implements OnInit {
 
   @Input() job: any;
+
+  sendBU: any;
   constructor(
     private modalCtrl: ModalController,
     public actionSheetCtrl: ActionSheetController
   ) { }
 
   ngOnInit() {
-    //this for string backup
     console.log(this.job);
+    this.sendBU = JSON.stringify(this.job)
     if (this.job.jobdata.type === '') {
       this.job.jobdata.type = "นักเรียน"
     }
   }
 
   onDismiss(){
-    this.modalCtrl.dismiss();
+    const getBU = JSON.parse(this.sendBU)
+    console.log(getBU);
+    this.modalCtrl.dismiss(getBU);
   }
 
   onFinish() {
     console.log(this.job);
-    this.modalCtrl.dismiss();
+    this.modalCtrl.dismiss(this.job);
   }
 
   async openCamera(status) {

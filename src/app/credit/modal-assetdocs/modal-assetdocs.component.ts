@@ -10,20 +10,26 @@ import { ModalAssetdocsDetailComponent } from '../modal-assetdocs-detail/modal-a
 export class ModalAssetdocsComponent implements OnInit {
 
   @Input() assetDocs: any;
+  sendBU: any;
   constructor(
     private modalCtrl: ModalController
   ) { }
 
   ngOnInit() {
     console.log(this.assetDocs);
+    this.sendBU = JSON.stringify(this.assetDocs)
+    // console.log(this.sendBU);
   }
 
   onDismiss(){
-    this.modalCtrl.dismiss();
+    const getBU = JSON.parse(this.sendBU)
+    console.log(getBU);
+    this.modalCtrl.dismiss(getBU);
   }
 
   onFinish() {
-    this.modalCtrl.dismiss();
+    console.log(this.assetDocs);
+    this.modalCtrl.dismiss(this.assetDocs);
   }
 
   async onModalAddAssetDocs(item, index) {
@@ -60,8 +66,8 @@ export class ModalAssetdocsComponent implements OnInit {
       });
       modal.onDidDismiss().then(data => {
         this.assetDocs.assetdocs[index].images = data.data
-        console.log(data.data);
-        console.log(this.assetDocs.assetdocs[index].images);
+        // console.log(data.data);
+        // console.log(this.assetDocs.assetdocs[index].images);
       });
       return await modal.present();
     }
