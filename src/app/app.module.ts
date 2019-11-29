@@ -44,6 +44,7 @@ import { SelectdownModalComponent } from './payment/selectdown-modal/selectdown-
 import { ModalAssetdocsDetailComponent } from './credit/modal-assetdocs-detail/modal-assetdocs-detail.component';
 import { ModalAddressComponent } from './pages/me/modal-address/modal-address.component';
 import { ModalFeedbackComponent } from './setting/modal-feedback/modal-feedback.component';
+import { ModalAboutComponent } from './setting/modal-about/modal-about.component';
 
 
 @NgModule({
@@ -70,6 +71,7 @@ import { ModalFeedbackComponent } from './setting/modal-feedback/modal-feedback.
     ModalSocialComponent,
     ModalAddressComponent,
     ModalFeedbackComponent,
+    ModalAboutComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
@@ -106,6 +108,7 @@ import { ModalFeedbackComponent } from './setting/modal-feedback/modal-feedback.
     ModalSocialComponent,
     ModalAddressComponent,
     ModalFeedbackComponent,
+    ModalAboutComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,

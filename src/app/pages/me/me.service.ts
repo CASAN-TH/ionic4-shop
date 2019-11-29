@@ -16,6 +16,7 @@ export class MeService {
   onMeDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onMeDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onMeData2Changed: BehaviorSubject<any> = new BehaviorSubject({});
+  onCreditDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }
 
@@ -33,9 +34,26 @@ export class MeService {
     } else {
       this.getMeDataList();
       this.getMeData2();
+      this.getCreditPointData();
     }
     return;
   }
+
+  getCreditPointData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/credit/credit-point.json').subscribe((res: any) => {
+          this.onCreditDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onCreditDataChanged.next(res.data);
+        }, reject)
+      }
+    })
+  }
+
+  
 
   getMeData2(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {

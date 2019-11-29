@@ -31,4 +31,12 @@ export class MessagePage implements OnInit {
     this._location.back();
   }
 
+  onAddToCartClick(){
+    console.log("onAddToCartClick");
+  }
+
+  onOpenDetailClick(){
+    console.log("onOpenDetailClick");
+  }
+
 }

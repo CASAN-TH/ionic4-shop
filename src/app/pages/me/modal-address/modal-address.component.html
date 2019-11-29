@@ -11,38 +11,39 @@
 
 <ion-content>
 
-  <div *ngIf="AddressData" >
-  <ion-card *ngFor="let item of AddressData">
-    <ion-item>
-      <ion-label>
-        <h3>{{item.receiver}}</h3>
-        <h3>{{item.receiverphone}}</h3>
-        <p>{{item.receiveraddress}} {{item.subdistric}} {{item.distric}} {{item.province}}
-        </p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>
-        <p>ที่อยู่จัดส่ง</p>
-        <ion-buttons>
-          <ion-button (click)="onEditAddress()">
+  <div *ngIf="AddressData">
+    <ion-card *ngFor="let item of AddressData">
+      <ion-item>
+        <ion-label>
+          <h3>{{item.receiver}}</h3>
+          <h3>{{item.receiverphone}}</h3>
+          <p>{{item.receiveraddress}} {{item.subdistric}} {{item.distric}} {{item.province}}
+          </p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <p>ที่อยู่จัดส่ง</p>
+          <ion-buttons>
+            <ion-button (click)="onEditAddress()">
               <ion-icon name="create"></ion-icon>
-          </ion-button>
-          <ion-button (click)="onDeleteAddress()">
+            </ion-button>
+            <ion-button (click)="onDeleteAddress()">
               <ion-icon name="trash"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-label>
-    </ion-item>
-  </ion-card>
-</div>
+            </ion-button>
+          </ion-buttons>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+  </div>
 
   <div *ngIf="!AddressData">
     <ion-row>
 
       <ion-col>
-          <img src="https://image.flaticon.com/icons/svg/2312/2312289.svg">
-        </ion-col>
+        <img src="https://image.flaticon.com/icons/svg/2312/2312289.svg">
+      </ion-col>
 
     </ion-row>
     <ion-button expand="block">+ เพิ่มที่อยู่ใหม่</ion-button>
@@ -52,4 +53,4 @@
 
 </ion-content>
 
-<ion-button expand="full">+ เพิ่มที่อยู่ใหม่</ion-button>
+<ion-button expand="full" (click)="onAddNewAddress()">+ เพิ่มที่อยู่ใหม่</ion-button>

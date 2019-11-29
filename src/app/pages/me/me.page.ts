@@ -8,6 +8,7 @@ import { ModalPhoneComponent } from './modal-phone/modal-phone.component';
 import { ModalPasswordComponent } from './modal-password/modal-password.component';
 import { ModalSocialComponent } from './modal-social/modal-social.component';
 import { ModalAddressComponent } from './modal-address/modal-address.component';
+import { ModalCreditPointComponent } from 'src/app/credit/modal-credit-point/modal-credit-point.component';
 
 @Component({
   selector: 'app-me',
@@ -21,6 +22,8 @@ export class MePage implements OnInit {
   PhoneData: any;
   PasswordData: any;
   AddressData: any;
+  creditPointData: any;
+  creditPoint: any;
 
   constructor(private router: Router, 
     private meService : MeService,  
@@ -39,6 +42,10 @@ export class MePage implements OnInit {
       this.PhoneData = meData.phone;
       this.PasswordData = meData.password;
       this.AddressData = meData.address;
+    })
+    this.meService.onCreditDataChanged.subscribe((creditPointData:any)=>{
+      console.log(creditPointData);
+      this.creditPointData = creditPointData;
     })
   }
 
@@ -93,6 +100,16 @@ export class MePage implements OnInit {
     return await modal.present();
   }
 
+  async creditPointModal() {
+    const modal = await this.modalController.create({
+      component: ModalCreditPointComponent,
+      componentProps: {
+        creditPoint: this.creditPointData
+      }
+    });
+    return await modal.present();
+  }
+
   onOpenCamera() {
     console.log("onOpenCamera");
   }
@@ -111,7 +128,7 @@ export class MePage implements OnInit {
   }
 
   onOpenCreditInfoPage() {
-    console.log("onOpenCreditInfoPage");
+    this.router.navigate(['credit']);
   }
 
 }

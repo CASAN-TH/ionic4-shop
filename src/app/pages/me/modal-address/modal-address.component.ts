@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-modal-address',
@@ -12,6 +13,7 @@ export class ModalAddressComponent implements OnInit {
 
   constructor(
     public modalController: ModalController,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -24,6 +26,10 @@ export class ModalAddressComponent implements OnInit {
 
   onEditAddress(){
     console.log("onEditAddress");
+  }
+
+  onAddNewAddress(){
+    console.log("onAddNewAddress");
   }
 
   onDeleteAddress(){

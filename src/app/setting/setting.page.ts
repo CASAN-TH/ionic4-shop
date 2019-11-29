@@ -4,6 +4,7 @@ import { SettingService } from './setting.service';
 import { Location } from '@angular/common'
 import { ModalFeedbackComponent } from './modal-feedback/modal-feedback.component';
 import { ModalController } from '@ionic/angular';
+import { ModalAboutComponent } from './modal-about/modal-about.component';
 
 @Component({
   selector: 'app-setting',
@@ -32,6 +33,13 @@ export class SettingPage implements OnInit {
     return await modal.present();
   }
 
+  async aboutModal() {
+    const modal = await this.modalController.create({
+      component: ModalAboutComponent,
+    });
+    return await modal.present();
+  }
+
 
   onBackClick() {
     this._location.back();
@@ -39,10 +47,6 @@ export class SettingPage implements OnInit {
 
   onToMePage(){
     this.router.navigate(['me']);
-  }
-
-  onToAboutApp(){
-    console.log("onToAboutApp");
   }
 
   onToLogout(){
