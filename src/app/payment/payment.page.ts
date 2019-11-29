@@ -16,7 +16,7 @@ export class PaymentPage implements OnInit {
   downDataList: any;
   cartDataList: any;
   addressData: any;
-  VouchersData:any;
+  VouchersData: any;
 
 
 
@@ -44,7 +44,7 @@ export class PaymentPage implements OnInit {
       this.VouchersData = productdetailDataList;
     })
     if (!this.addressData) {
-      
+
     }
 
   }
@@ -91,6 +91,10 @@ export class PaymentPage implements OnInit {
       }]
     });
     await actionSheet.present();
+  }
+
+  onOpenlistClick() {
+    console.log("onOpenlistClick");
   }
 
 }
