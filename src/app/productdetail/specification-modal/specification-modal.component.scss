@@ -34,3 +34,24 @@
   text-align: center;
   font-size: 0.90rem;
 }
+
+
+.ion-col-border {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+}
+.ion-item-percenselected {
+  font-size: 2rem;
+  color: red;
+  margin-top: -1.10rem;
+  margin-left: 57%;
+  position: absolute;
+}
+.ion-item-unitselected {
+  font-size: 2rem;
+  color: red;
+  margin-top: -1.10rem;
+  margin-left: 75%;
+  position: absolute;
+}

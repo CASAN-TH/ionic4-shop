@@ -33,10 +33,12 @@
 
   <ion-row>
     <ion-col size="12">
-      <!-- <h2>Color</h2> -->
       <h3>Color</h3>
-      <ion-row>
-        <ion-col class="selectcolor" size="4" *ngFor="let item of SpecificationData.selectcolor">
+      <ion-row *ngIf="SpecificationData.selectcolor && SpecificationData.selectcolor.length">
+        <ion-col class="selectcolor" size="4" text-center 
+        *ngFor="let item of SpecificationData.selectcolor"
+        [class.ion-col-border]="item._id == specColorSelected" (click)="onspecColorClick(item._id)">
+        <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="item._id == specColorSelected"></ion-icon>
           {{item.color}}
         </ion-col>
       </ion-row>
@@ -45,8 +47,11 @@
   <ion-row>
     <ion-col size="12">
       <h3>Version</h3>
-      <ion-row>
-        <ion-col class="selectcolor" size="6" *ngFor="let itemver of SpecificationData.selectversion">
+      <ion-row *ngIf="SpecificationData.selectversion && SpecificationData.selectversion.length">
+        <ion-col class="selectcolor" size="6" text-center 
+        *ngFor="let itemver of SpecificationData.selectversion"
+        [class.ion-col-border]="itemver._id == specVertionSelected" (click)="onspecVertionClick(itemver._id)">
+        <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="itemver._id == specVertionSelected"></ion-icon>
           {{itemver.version}}
         </ion-col>
       </ion-row>

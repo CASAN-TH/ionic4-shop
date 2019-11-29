@@ -8,6 +8,9 @@ import { ModalController } from '@ionic/angular';
 })
 export class SpecificationModalComponent implements OnInit {
 
+  specColorSelected: any;
+  specVertionSelected: any;
+
   @Input() SpecificationData: any
 
   constructor(public modalController: ModalController) { }
@@ -18,6 +21,18 @@ export class SpecificationModalComponent implements OnInit {
 
   dismiss() {
     this.modalController.dismiss();
+  }
+
+  onspecColorClick(specColorId: any) {
+    // this.router.navigateByUrl('search/' + cate2Id);
+    console.log(specColorId);
+    this.specColorSelected = specColorId;
+  }
+
+  onspecVertionClick(specVertionId: any) {
+    // this.router.navigateByUrl('search/' + cate2Id);
+    console.log(specVertionId);
+    this.specVertionSelected = specVertionId;
   }
 
 }
