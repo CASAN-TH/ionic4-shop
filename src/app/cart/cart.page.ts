@@ -4,6 +4,8 @@ import { CartService } from './cart.service';
 import { ModalController, AlertController, ActionSheetController } from '@ionic/angular';
 import { InsallmentModalComponent } from './insallment-modal/insallment-modal.component';
 import { SpecModalComponent } from './spec-modal/spec-modal.component';
+import { SpecificationModalComponent } from '../productdetail/specification-modal/specification-modal.component';
+import { PaymentModalComponent } from '../productdetail/payment-modal/payment-modal.component';
 
 
 @Component({
@@ -83,7 +85,7 @@ export class CartPage implements OnInit {
   }
   async specModal() {
     const modal = await this.modalController.create({
-      component: SpecModalComponent,
+      component: SpecificationModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
         SpecificationData: this.SpecificationData
@@ -93,7 +95,7 @@ export class CartPage implements OnInit {
   }
   async InstallmentModal() {
     const modal = await this.modalController.create({
-      component: InsallmentModalComponent,
+      component: PaymentModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
         PaymentData: this.PaymentData
