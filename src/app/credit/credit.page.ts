@@ -9,6 +9,7 @@ import { ModalMarriageComponent } from './modal-marriage/modal-marriage.componen
 import { ModalSecondcontactComponent } from './modal-secondcontact/modal-secondcontact.component';
 import { ModalAssetdocsComponent } from './modal-assetdocs/modal-assetdocs.component';
 import { ModalJobComponent } from './modal-job/modal-job.component';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-credit',
@@ -20,6 +21,8 @@ export class CreditPage implements OnInit {
   creditMenuList: any;
   creditPoint: any;
 
+  url: any;
+
   contactData: any;
   marriageData: any;
   secondContactData: any;
@@ -28,10 +31,13 @@ export class CreditPage implements OnInit {
   constructor(
     private router: Router,
     private creditService: CreditService,
-    private modalController: ModalController
+    private modalController: ModalController,
+    private _location: Location,
   ) { }
 
   ngOnInit() {
+    this.url = this.router.url
+    console.log(this.url);
     this.creditService.onCreditDataListChanged.subscribe((creditDataList: any) => {
       // console.log(creditDataList);
       this.creditDataList = creditDataList;
@@ -160,6 +166,10 @@ export class CreditPage implements OnInit {
       })
       return await modal.present();
     }
+  }
+
+  goBackClick(){
+    this._location.back();
   }
 
 }
