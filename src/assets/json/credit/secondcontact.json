@@ -8,19 +8,19 @@
                 "name": "ปฐมพร",
                 "lastname": "สุปัญญา",
                 "age": "23",
-                "relation": "friend",
+                "relation": "พ่อ",
                 "tel": "08000894635",
-                "job": "employee",
-                "salary": "10001-15000"
+                "job": "พนักงานบริษัทเอกชน(employee)",
+                "salary": "10,001-15,000"
             },
             {
                 "name": "อัครเดช",
                 "lastname": "สามช่อง",
                 "age": "25",
-                "relation": "mother",
+                "relation": "",
                 "tel": "080808555",
-                "job": "government",
-                "salary": "upper30000"
+                "job": "",
+                "salary": ""
             }
         ],
         "updated": "2019-02-25"

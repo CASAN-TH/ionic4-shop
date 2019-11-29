@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-item>
+  <!-- <ion-item>
     <ion-label>สถานภาพสมรส</ion-label>
     <ion-select placeholder="เลิือก" [(ngModel)]="marriage.marriage">
       <ion-select-option value="single">โสด</ion-select-option>
@@ -12,6 +12,15 @@
       <ion-select-option value="separated">แยกกันอยู่</ion-select-option>
       <ion-select-option value="break">อย่าร้าง</ion-select-option>
     </ion-select>
+  </ion-item> -->
+  <ion-item>
+    <ion-label>สถานภาพสมรส</ion-label>
+    <div class="ion-align-items-center" (click)="openActionSheet()">
+      <ion-text *ngIf="marriage.marriage !==''">{{marriage.marriage}}</ion-text>
+      <ion-text *ngIf="marriage.marriage ===''">เลือก</ion-text>
+      <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+    </div>
   </ion-item>
+
 </ion-content>
 <ion-button expand="full" color="primary" (click)="onFinish()">ส่ง</ion-button>

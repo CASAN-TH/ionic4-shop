@@ -4,15 +4,22 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div *ngIf="job.jobdata.type === 'student' || job.jobdata.type === ''">
+  <div *ngIf="job.jobdata.type === 'นักเรียน' || job.jobdata.type === ''">
     <ion-list>
       <ion-list-header>นักเรียน</ion-list-header>
-      <ion-item>
+      <!-- <ion-item>
         <ion-label>ประเภทอาชีพ</ion-label>
         <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.type">
           <ion-select-option value="student">นักเรียน</ion-select-option>
           <ion-select-option value="other">อื่นๆ</ion-select-option>
         </ion-select>
+      </ion-item> -->
+      <ion-item>
+        <ion-label>ประเภทอาชีพ</ion-label>
+        <div class="ion-align-items-center" (click)="openActionJob()">
+          <ion-text>{{job.jobdata.type}}</ion-text>
+          <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+        </div>
       </ion-item>
       <ion-item>
         <ion-label>มหาวิทยาลัย</ion-label>
@@ -26,7 +33,7 @@
         <ion-label>สาขาวิชา</ion-label>
         <ion-input [(ngModel)]="job.jobdata.student.majors"></ion-input>
       </ion-item>
-      <ion-item>
+      <!-- <ion-item>
         <ion-label>วุฒิการศึกษา</ion-label>
         <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.student.degree">
           <ion-select-option value="lowerdiploma">ต่ำกว่า ปวส.</ion-select-option>
@@ -36,8 +43,16 @@
           <ion-select-option value="master">ปริญญาโท</ion-select-option>
           <ion-select-option value="diploma">ปวส.</ion-select-option>
         </ion-select>
-      </ion-item>
+      </ion-item> -->
       <ion-item>
+        <ion-label>วุฒิการศึกษา</ion-label>
+        <div class="ion-align-items-center" (click)="openActionDegree()">
+          <ion-text *ngIf="job.jobdata.student.degree !==''">{{job.jobdata.student.degree}}</ion-text>
+          <ion-text *ngIf="job.jobdata.student.degree ===''">เลือก</ion-text>
+          <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+        </div>
+      </ion-item>
+      <!-- <ion-item>
         <ion-label>ชั้นปี</ion-label>
         <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.student.level">
           <ion-select-option value="1">1</ion-select-option>
@@ -47,6 +62,14 @@
           <ion-select-option value="5">5</ion-select-option>
           <ion-select-option value="6">6</ion-select-option>
         </ion-select>
+      </ion-item> -->
+      <ion-item>
+        <ion-label>ชั้นปี</ion-label>
+        <div class="ion-align-items-center" (click)="openActionLevel()">
+          <ion-text *ngIf="job.jobdata.student.level !==''">{{job.jobdata.student.level}}</ion-text>
+          <ion-text *ngIf="job.jobdata.student.level ===''">เลือก</ion-text>
+          <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+        </div>
       </ion-item>
     </ion-list>
     <div class="ion-padding-start">
@@ -77,15 +100,15 @@
     </ion-row>
   </div>
 
-  <div *ngIf="job.jobdata.type === 'other'">
+  <div *ngIf="job.jobdata.type === 'อื่นๆ'">
     <ion-list>
       <ion-list-header>อื่นๆ</ion-list-header>
       <ion-item>
         <ion-label>ประเภทอาชีพ</ion-label>
-        <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.type">
-          <ion-select-option value="student">นักเรียน</ion-select-option>
-          <ion-select-option value="other">อื่นๆ</ion-select-option>
-        </ion-select>
+        <div class="ion-align-items-center" (click)="openActionJob()">
+          <ion-text>{{job.jobdata.type}}</ion-text>
+          <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+        </div>
       </ion-item>
       <ion-item>
         <ion-label>อาชีพ</ion-label>
@@ -103,7 +126,7 @@
         <ion-label position="floating">ที่อยู่สถานที่ทำงาน</ion-label>
         <ion-textarea rows="6" cols="20" [(ngModel)]="job.jobdata.other.companylocationdetail"></ion-textarea>
       </ion-item>
-      <ion-item>
+      <!-- <ion-item>
         <ion-label>ระยะเวลาทำงาน</ion-label>
         <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.other.experience">
           <ion-select-option value="1">1</ion-select-option>
@@ -113,12 +136,20 @@
           <ion-select-option value="5">5</ion-select-option>
           <ion-select-option value="6">6</ion-select-option>
         </ion-select>
+      </ion-item> -->
+      <ion-item>
+        <ion-label>ระยะเวลาทำงาน</ion-label>
+        <div class="ion-align-items-center" (click)="openActionExperience()">
+          <ion-text *ngIf="job.jobdata.other.experience !==''">{{job.jobdata.other.experience}}</ion-text>
+          <ion-text *ngIf="job.jobdata.other.experience ===''">เลือก</ion-text>
+          <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+        </div>
       </ion-item>
       <ion-item>
         <ion-label>ตำแหน่ง</ion-label>
         <ion-input [(ngModel)]="job.jobdata.other.position"></ion-input>
       </ion-item>
-      <ion-item>
+      <!-- <ion-item>
         <ion-label>วุฒิการศึกษา</ion-label>
         <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.other.degree">
           <ion-select-option value="lowerdiploma">ต่ำกว่า ปวส.</ion-select-option>
@@ -128,8 +159,16 @@
           <ion-select-option value="master">ปริญญาโท</ion-select-option>
           <ion-select-option value="diploma">ปวส.</ion-select-option>
         </ion-select>
-      </ion-item>
+      </ion-item> -->
       <ion-item>
+        <ion-label>วุฒิการศึกษา</ion-label>
+        <div class="ion-align-items-center" (click)="openActionDegreeOther()">
+          <ion-text *ngIf="job.jobdata.other.degree !==''">{{job.jobdata.other.degree}}</ion-text>
+          <ion-text *ngIf="job.jobdata.other.degree ===''">เลือก</ion-text>
+          <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+        </div>
+      </ion-item>
+      <!-- <ion-item>
         <ion-label>รายได้เงินเดือน</ion-label>
         <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.other.salary">
           <ion-select-option value="lower10000">น้อยกว่า 10000</ion-select-option>
@@ -137,6 +176,14 @@
           <ion-select-option value="15001-30000">15001 - 30000</ion-select-option>
           <ion-select-option value="upper30000">มากกว่า 30000</ion-select-option>
         </ion-select>
+      </ion-item> -->
+      <ion-item>
+        <ion-label>รายได้เงินเดือน</ion-label>
+        <div class="ion-align-items-center" (click)="openActionSalary()">
+          <ion-text *ngIf="job.jobdata.other.salary !==''">{{job.jobdata.other.salary}}</ion-text>
+          <ion-text *ngIf="job.jobdata.other.salary ===''">เลือก</ion-text>
+          <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+        </div>
       </ion-item>
     </ion-list>
 
