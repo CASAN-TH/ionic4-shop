@@ -72,7 +72,7 @@ const routes: Routes = [
   }
   ,
   {
-    path: 'addaddress',
+    path: 'newaddress',
     loadChildren: () => import('../app/addaddress/addaddress.module').then(m => m.AddaddressPageModule)
   },
   {
