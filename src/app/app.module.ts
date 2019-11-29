@@ -21,8 +21,7 @@ import { SpecificationModalComponent } from './productdetail/specification-modal
 import { ReviewModalComponent } from './productdetail/review-modal/review-modal.component';
 import { ImformationspecModalComponent } from './productdetail/imformationspec-modal/imformationspec-modal.component';
 
-import { SpecModalComponent } from './cart/spec-modal/spec-modal.component';
-import { InsallmentModalComponent } from './cart/insallment-modal/insallment-modal.component';
+
 import { ModalCameraComponent } from './modals/modal-camera/modal-camera.component';
 import { PaymentgiftModalComponent } from './gifts/paymentgift-modal/paymentgift-modal.component';
 import { TcoingiftModalComponent } from './gifts/tcoingift-modal/tcoingift-modal.component';
@@ -51,8 +50,6 @@ import { ModalAboutComponent } from './setting/modal-about/modal-about.component
   declarations: [AppComponent, 
     ModalCardComponent, 
     ModalCameraComponent, 
-    SpecModalComponent, 
-    InsallmentModalComponent, 
     PaymentModalComponent,
     VouchersModalComponent,
     PromotionModalComponent,
@@ -90,8 +87,6 @@ import { ModalAboutComponent } from './setting/modal-about/modal-about.component
   ],
   entryComponents: [ModalCardComponent, 
     ModalCameraComponent, 
-    SpecModalComponent, 
-    InsallmentModalComponent, 
     PaymentModalComponent,
     VouchersModalComponent,
     PromotionModalComponent,
