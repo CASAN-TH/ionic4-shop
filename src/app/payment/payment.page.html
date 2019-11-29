@@ -45,18 +45,16 @@
 
     <ion-list>
       <ion-item>
-        <ion-label class="select">วิธีการชำระเงิน</ion-label>
-        <ion-label class="arow-forwardicon">
-          <!-- <ion-icon mode="ios" name="arrow-forward"></ion-icon> -->
+        <ion-label >วิธีการชำระเงิน</ion-label>
+        <ion-label>{{select}}</ion-label>
+        <ion-label >
+        <ion-icon mode="ios" name="arrow-forward" (click)="presentActionSheet()"></ion-icon>
         </ion-label>
-        <ion-select [(ngModel)]="select">
-          <ion-select-option value="down">ผ่อนชำระ</ion-select-option>
-          <ion-select-option value="nodown">ชำระเต็มจำนวนเงิน</ion-select-option>
-        </ion-select>
+     
       </ion-item>
     </ion-list>
 
-    <div *ngIf="select === 'down'">
+    <div *ngIf="select === 'ผ่อนชำระ'">
       <ion-list-header>เงินดาวน์</ion-list-header>
       <ion-item *ngFor="let data of downDataList" (click)="selectDownModal()">
         <ion-label *ngFor="let down of data.down_payment">{{down.cerrency}}{{down.amount}}</ion-label>

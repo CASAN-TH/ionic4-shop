@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from './cart.service';
 import { ModalController, AlertController, ActionSheetController } from '@ionic/angular';
-import { InsallmentModalComponent } from './insallment-modal/insallment-modal.component';
-import { SpecModalComponent } from './spec-modal/spec-modal.component';
 import { SpecificationModalComponent } from '../productdetail/specification-modal/specification-modal.component';
 import { PaymentModalComponent } from '../productdetail/payment-modal/payment-modal.component';
 

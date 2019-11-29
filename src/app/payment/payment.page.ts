@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PaymentService } from './payment.service';
 import { Location } from '@angular/common';
-import { SelectdownModalComponent } from './selectdown-modal/selectdown-modal.component';
 import { ModalController, ActionSheetController } from '@ionic/angular';
 import { VouchersModalComponent } from '../productdetail/vouchers-modal/vouchers-modal.component';
+import { SelectdownModalComponent } from './selectdown-modal/selectdown-modal.component';
 
 @Component({
   selector: 'app-payment',
@@ -43,10 +43,7 @@ export class PaymentPage implements OnInit {
       console.log(productdetailDataList);
       this.VouchersData = productdetailDataList;
     })
-    if (!this.addressData) {
-
-    }
-
+   
   }
 
   goBackClick() {
@@ -75,23 +72,23 @@ export class PaymentPage implements OnInit {
   }
 
 
-  // async presentActionSheet() {
-  //   const actionSheet = await this.actionSheetController.create({
-  //     header: 'วิธีการชำระเงิน',
-  //     buttons: [{
-  //       text: 'ผ่อนชำระ',
-  //       handler: () => {
-  //         console.log('Share clicked');
-  //       }
-  //     }, {
-  //       text: 'ชำระเต็มจำนวนเงิน',
-  //       handler: () => {
-  //         console.log('Play clicked');
-  //       }
-  //     }]
-  //   });
-  //   await actionSheet.present();
-  // }
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'วิธีการชำระเงิน',
+      buttons: [{
+        text: 'ผ่อนชำระ',
+        handler: () => {
+          this.select = "ผ่อนชำระ"
+        }
+      }, {
+        text: 'ชำระเต็มจำนวนเงิน',
+        handler: () => {
+          this.select = "ชำระเต็มจำนวนเงิน"
+        }
+      }]
+    });
+    await actionSheet.present();
+  }
 
   onOpenlistClick() {
     console.log("onOpenlistClick");
