@@ -37,7 +37,7 @@ export class PaymentPage implements OnInit {
     })
     this.paymentService.onAddressDataChanged.subscribe((addressData: any) => {
       console.log(addressData);
-      this.addressData = addressData;
+      // this.addressData = addressData;
     })
     this.paymentService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
@@ -55,7 +55,7 @@ export class PaymentPage implements OnInit {
   onOrderClick() {
     this.router.navigate(['payfor'])
   }
-  async selectDown() {
+  async selectDownModal() {
     const modal = await this.modalController.create({
       component: SelectdownModalComponent
     });
