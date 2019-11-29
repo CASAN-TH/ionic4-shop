@@ -23,6 +23,6 @@ export class AddaddressPage implements OnInit {
     this._location.back();
   }
   onSaveAddress(){
-    this.router.navigate(['payment'])
+    this._location.back();
   }
 }

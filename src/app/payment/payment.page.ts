@@ -16,7 +16,7 @@ export class PaymentPage implements OnInit {
   downDataList: any;
   cartDataList: any;
   addressData: any;
-  VouchersData:any;
+  VouchersData: any;
 
 
 
@@ -37,14 +37,14 @@ export class PaymentPage implements OnInit {
     })
     this.paymentService.onAddressDataChanged.subscribe((addressData: any) => {
       console.log(addressData);
-      this.addressData = addressData;
+      // this.addressData = addressData;
     })
     this.paymentService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.VouchersData = productdetailDataList;
     })
     if (!this.addressData) {
-      
+
     }
 
   }
@@ -55,7 +55,7 @@ export class PaymentPage implements OnInit {
   onOrderClick() {
     this.router.navigate(['payfor'])
   }
-  async selectDown() {
+  async selectDownModal() {
     const modal = await this.modalController.create({
       component: SelectdownModalComponent
     });
@@ -75,22 +75,26 @@ export class PaymentPage implements OnInit {
   }
 
 
-  async presentActionSheet() {
-    const actionSheet = await this.actionSheetController.create({
-      header: 'วิธีการชำระเงิน',
-      buttons: [{
-        text: 'ผ่อนชำระ',
-        handler: () => {
-          console.log('Share clicked');
-        }
-      }, {
-        text: 'ชำระเต็มจำนวนเงิน',
-        handler: () => {
-          console.log('Play clicked');
-        }
-      }]
-    });
-    await actionSheet.present();
+  // async presentActionSheet() {
+  //   const actionSheet = await this.actionSheetController.create({
+  //     header: 'วิธีการชำระเงิน',
+  //     buttons: [{
+  //       text: 'ผ่อนชำระ',
+  //       handler: () => {
+  //         console.log('Share clicked');
+  //       }
+  //     }, {
+  //       text: 'ชำระเต็มจำนวนเงิน',
+  //       handler: () => {
+  //         console.log('Play clicked');
+  //       }
+  //     }]
+  //   });
+  //   await actionSheet.present();
+  // }
+
+  onOpenlistClick() {
+    console.log("onOpenlistClick");
   }
 
 }

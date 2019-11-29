@@ -15,14 +15,46 @@
                     "currency": "฿",
                     "discount_price": "35,900",
                     "discount": "59% off",
-                    "amount": "1",
+                    "quantity": "x1",
                     "installment_amount": "893.58",
                     "installment_period": "x18ต่องวด",
                     "installment_currency": "฿",
                     "delivery_charge": " ",
                     "coupon": "0",
                     "currency_coupon": "-฿",
-                    "chipingfee":"0"
+                    "chipingfee": "0"
+                }
+            ],
+            "promotions": [
+                {
+                    "_id": "453",
+                    "gift":"[ของแถม]",
+                    "name": "3 in 1 data cable Random Color",
+                    "quantity": "x1"
+                },
+                {
+                    "_id": "786",
+                    "gift":"[ของแถม]",
+                    "name": "Power bank 12000mA",
+                    "quantity": "x1"
+                },
+                {
+                    "_id": "236",
+                    "gift":"[ของแถม]",
+                    "name": "Sport headset",
+                    "quantity": "x1"
+                },
+                {
+                    "_id": "988",
+                    "gift":"[ของแถม]",
+                    "name": "Porttable wireless speaker",
+                    "quantity": "x1"
+                },
+                {
+                    "_id": "766",
+                    "gift":"[ของแถม]",
+                    "name": "JBL T450 BT Powerful big-stage",
+                    "quantity": "x1"
                 }
             ]
         }

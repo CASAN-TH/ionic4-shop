@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CartService } from '../cart.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-spec-modal',
@@ -8,17 +9,18 @@ import { CartService } from '../cart.service';
   styleUrls: ['./spec-modal.component.scss'],
 })
 export class SpecModalComponent implements OnInit {
-  reccommentDataList: any;
-  constructor(public modalController:ModalController,private cartService: CartService) { }
+  
+  SpecificationData: any;
+  constructor(public modalController:ModalController,private cartService: CartService,private _location: Location) { }
 
   ngOnInit() {
-    this.cartService.onReccommentDataListChanged.subscribe((reccommentDataList: any) => {
-      console.log(reccommentDataList);
-      this.reccommentDataList = reccommentDataList;
 
-    })
+   
   }
   dismiss(){
     this.modalController.dismiss();
+  }
+  onSave(){
+    this._location.back();
   }
 }
