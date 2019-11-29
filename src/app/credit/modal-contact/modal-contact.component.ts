@@ -9,17 +9,25 @@ import { ModalController } from '@ionic/angular';
 export class ModalContactComponent implements OnInit {
 
   @Input() contact: any;
+  sendBU: any;
   constructor(
     private modalCtrl: ModalController
   ) { }
 
   ngOnInit() {
     console.log(this.contact);
+    this.sendBU = JSON.stringify(this.contact)
+  }
+
+  onDismiss() {
+    const getBU = JSON.parse(this.sendBU)
+    console.log(getBU);
+    this.modalCtrl.dismiss(getBU);
   }
 
   onFinish() {
     console.log(this.contact);
-    this.modalCtrl.dismiss();
+    this.modalCtrl.dismiss(this.contact);
   }
 
 }
