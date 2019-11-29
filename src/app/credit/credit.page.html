@@ -1,5 +1,10 @@
 <ion-header>
   <ion-toolbar>
+      <ion-buttons slot="start" (click)="goBackClick()" *ngIf="url === '/credit'">
+          <ion-button>
+            <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+          </ion-button>
+        </ion-buttons>
     <ion-title>วงเงิน</ion-title>
   </ion-toolbar>
 </ion-header>
