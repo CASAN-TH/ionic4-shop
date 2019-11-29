@@ -35,8 +35,8 @@ export class PhonenoPage implements OnInit {
     //this.router.navigateByUrl('otp');
     let user = {
       username : form.value.username,
-      provider : this.params.provider,
-      providerData : this.params.providerData
+      provider : this.params ? this.params.provider : "local",
+      providerData : this.params ? this.params.providerData : null
     }
     this.nextStep(user);
   }
