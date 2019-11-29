@@ -83,25 +83,25 @@ export class CartPage implements OnInit {
     });
     return await modal.present();
   }
-  // async presentAlert() {
-  //   const alert = await this.alertCtrl.create({
-  //     message: 'กรุณาเพิ่มที่อยู่จัดส่งใหม่',
-  //     buttons: [
-  //       {
-  //         text: 'ยกเลิก',
-  //         handler: (blah) => {
-  //         }
-  //       }, {
-  //         text: 'เพิ่ม',
-  //         handler: () => {
-  //           this.router.navigate(['addaddress'])
-  //         }
-  //       }
-  //     ]
-  //   });
-  //   await alert.present();
-  //   this.router.navigate(['payment'])
-  // }
+  async presentAlert() {
+    const alert = await this.alertCtrl.create({
+      message: 'กรุณาเพิ่มที่อยู่จัดส่งใหม่',
+      buttons: [
+        {
+          text: 'ยกเลิก',
+          handler: (blah) => {
+          }
+        }, {
+          text: 'เพิ่ม',
+          handler: () => {
+            this.router.navigate(['addaddress'])
+          }
+        }
+      ]
+    });
+    await alert.present();
+    this.router.navigate(['payment'])
+  }
 
 
 }
