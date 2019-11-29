@@ -1,5 +1,10 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start" (click)="onDismiss()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>{{data.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -45,5 +50,4 @@
 
 
 </ion-content>
-<ion-button expand="full" color="primary" (click)="onDismiss()">cancel</ion-button>
 <ion-button expand="full" color="primary" (click)="onFinish()">เรียบร้อย</ion-button>

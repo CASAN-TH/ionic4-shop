@@ -208,4 +208,74 @@ export class CreditService {
     })
   }
 
+  updateContact(body) {
+    if (mockup) {
+      const res = {
+        "status": 200,
+        "data": body
+      }
+      return res
+    } else {
+      this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.getCreditDataList();
+      });
+    }
+  }
+
+  updateMarriage(body) {
+    if (mockup) {
+      const res = {
+        "status": 200,
+        "data": body
+      }
+      return res
+    } else {
+      this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.getCreditDataList();
+      });
+    }
+  }
+
+  updateSecondContact(body) {
+    if (mockup) {
+      const res = {
+        "status": 200,
+        "data": body
+      }
+      return res
+    } else {
+      this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.getCreditDataList();
+      });
+    }
+  }
+
+  updateAssetDocs(body) {
+    if (mockup) {
+      const res = {
+        "status": 200,
+        "data": body
+      }
+      return res
+    } else {
+      this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.getCreditDataList();
+      });
+    }
+  }
+
+  updateJob(body) {
+    if (mockup) {
+      const res = {
+        "status": 200,
+        "data": body
+      }
+      return res
+    } else {
+      this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.getCreditDataList();
+      });
+    }
+  }
+
 }
