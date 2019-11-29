@@ -4,12 +4,12 @@
         "_id": "001",
         "u_id": "u001",
         "address": {
-            "receiver": "",
-            "receiverphone": "",
-            "subdistric": "",
-            "distric": "",
-            "provinc": "",
-            "receiverasddress": ""
+            "receiver": "กฤษตฤณ",
+            "receiverphone": "0962036211",
+            "subdistric": "คูคต",
+            "distric": "ลำลูกกา",
+            "province": "ปทุมธานี",
+            "receiveraddress": "ห้อง 8/533 The Excel Khukhot"
         },
         "updated": "2019-07-26"
     }

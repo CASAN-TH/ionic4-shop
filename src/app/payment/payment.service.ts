@@ -70,7 +70,7 @@ export class PaymentService {
   getAddressData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/me/me-detail.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/addaddress/addaddress.json').subscribe((res: any) => {
           this.onAddressDataChanged.next(res.data);
         }, reject)
       } else {
