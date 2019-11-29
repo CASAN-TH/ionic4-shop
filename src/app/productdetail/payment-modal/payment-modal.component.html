@@ -64,7 +64,7 @@
           *ngFor="let itempay of PaymentData.selected.down_options.payment_percent"
           [class.ion-col-border]="itempay._id == percenSelected" (click)="onPercenClick(itempay._id)">
           <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="itempay._id == percenSelected"></ion-icon>
-          {{itempay.rate}} {{itempay.unit}}
+          <p>{{itempay.rate}} {{itempay.unit}}</p>
         </ion-col>
       </ion-row>
     </ion-col>
@@ -79,7 +79,7 @@
           *ngFor="let itemper of PaymentData.selected.period_option.installperiod"
           [class.ion-col-border]="itemper._id == unitSelected" (click)="onUnitClick(itemper._id)">
           <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="itemper._id == unitSelected"></ion-icon>
-          {{itemper.period}} {{itemper.unit}}
+          <p>{{itemper.period}} {{itemper.unit}}</p>
         </ion-col>
       </ion-row>
     </ion-col>
