@@ -28,6 +28,11 @@ export class PasswordPage implements OnInit {
 
   signUp(form) {
     this.user.password = form.value.password;
+    if(this.user.provider === "local"){
+      this.user.firstname = "unknow";
+      this.user.lastname = "unknow";
+      this.user.email = this.user.username + "@mail.com";
+    }
     if(this.user.provider === "line"){
       this.user.firstname = this.user.providerData.displayName;
       this.user.lastname = ".";
