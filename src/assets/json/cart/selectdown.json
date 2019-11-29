@@ -1,0 +1,42 @@
+{
+    "status": 200,
+    "data": {
+        "down_payment": [
+            {
+                "cerrency": "฿",
+                "percent_down": "15",
+                "unit": "%",
+                "status_down": "วงเงินไม่พอใช้",
+                "amount": "2,220"
+            },
+            {
+                "cerrency": "฿",
+                "percent_down": "20",
+                "unit": "%",
+                "status_down": "วงเงินไม่พอใช้",
+                "amount": "2,960"
+            },
+            {
+                "cerrency": "฿",
+                "percent_down": "30",
+                "unit": "%",
+                "status_down": "วงเงินไม่พอใช้",
+                "amount": "4,440"
+            },
+            {
+                "cerrency": "฿",
+                "percent_down": "40",
+                "unit": "%",
+                "status_down": "",
+                "amount": "5,920"
+            },
+            {
+                "cerrency": "฿",
+                "percent_down": "50",
+                "unit": "%",
+                "status_down": "วงเงินไม่พอใช้",
+                "amount": "7,400"
+            }
+        ]
+    }
+}

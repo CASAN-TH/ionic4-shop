@@ -1,0 +1,91 @@
+{
+    "status": 200,
+    "data": {
+        "_id": "233",
+        "price": "14,900",
+        "selected": {
+            "down_amount": {
+                "_id": "1212",
+                "amount_down": "2,235",
+                "down": "เงินดาวน์",
+                "currency": "฿",
+                "percent": "20%"
+            },
+            "period_amount": {
+                "_id": "1232",
+                "amount_period": "893.58",
+                "monpayment": "จ่ายรายเดือน",
+                "inc": "(inc.service free)",
+                "currency": "฿",
+                "period": "x18",
+                "per": "ต่องวด",
+                "unit": "เดือน"
+            },
+            "down_options": {
+                "down_payment": "อัตราส่วนการชำระเงินดาวน์",
+                "payment_percent": [
+                    {
+                        "_id": "222",
+                        "rate": "20",
+                        "unit": "%"
+                    },
+                    {
+                        "_id": "333",
+                        "rate": "30",
+                        "unit": "%"
+                    },
+                    {
+                        "_id": "111",
+                        "rate": "40",
+                        "unit": "%"
+                    },
+                    {
+                        "_id": "444",
+                        "rate": "50",
+                        "unit": "%"
+                    },
+                    {
+                        "_id": "555",
+                        "rate": "60",
+                        "unit": "%"
+                    },
+                    {
+                        "_id": "666",
+                        "rate": "70",
+                        "unit": "%"
+                    }
+                ]
+            },
+            "period_option": {
+                "installments": "จำนวนงวด",
+                "installperiod": [
+                    {
+                        "_id": "777",
+                        "period": "3",
+                        "unit": "เดือน"
+                    },
+                    {
+                        "_id": "888",
+                        "period": "6",
+                        "unit": "เดือน"
+                    },
+                    {
+                        "_id": "999",
+                        "period": "9",
+                        "unit": "เดือน"
+                    },
+                    {
+                        "_id": "000",
+                        "period": "12",
+                        "unit": "เดือน"
+                    },
+                    {
+                        "_id": "090",
+                        "period": "18",
+                        "unit": "เดือน"
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -20,7 +20,7 @@
       <ion-label>อายุ</ion-label>
       <ion-input [(ngModel)]="item.age"></ion-input>
     </ion-item>
-    <ion-item>
+    <!-- <ion-item>
       <ion-label>ความสัมพันธ์</ion-label>
       <ion-select placeholder="เลิือก" [(ngModel)]="item.relation">
         <ion-select-option value="father">พ่อ</ion-select-option>
@@ -30,19 +30,35 @@
         <ion-select-option value="couple">คู่สมรส</ion-select-option>
         <ion-select-option value="parent">ผู้ปกครอง</ion-select-option>
       </ion-select>
+    </ion-item> -->
+    <ion-item>
+      <ion-label>ความสัมพันธ์</ion-label>
+      <div class="ion-align-items-center" (click)="openActionRelation(i)">
+        <ion-text *ngIf="item.relation !==''">{{item.relation}}</ion-text>
+        <ion-text *ngIf="item.relation ===''">เลือก</ion-text>
+        <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+      </div>
     </ion-item>
     <ion-item>
       <ion-label>หมายเลขโทรศัพท์</ion-label>
       <ion-input [(ngModel)]="item.tel"></ion-input>
     </ion-item>
-    <ion-item>
+    <!-- <ion-item>
       <ion-label>อาชีพ</ion-label>
       <ion-select placeholder="เลิือก" [(ngModel)]="item.job">
         <ion-select-option value="employee">พนักงานบริษัทเอกชน(employee)</ion-select-option>
         <ion-select-option value="government">ข้าราชการ(government officer)</ion-select-option>
       </ion-select>
-    </ion-item>
+    </ion-item> -->
     <ion-item>
+      <ion-label>อาชีพ</ion-label>
+      <div class="ion-align-items-center" (click)="openActionJob(i)">
+        <ion-text *ngIf="item.job !==''">{{item.job}}</ion-text>
+        <ion-text *ngIf="item.job ===''">เลือก</ion-text>
+        <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+      </div>
+    </ion-item>
+    <!-- <ion-item>
       <ion-label>รายได้</ion-label>
       <ion-select placeholder="เลิือก" [(ngModel)]="item.salary">
         <ion-select-option value="lower10000">น้อยกว่า 10000</ion-select-option>
@@ -50,6 +66,14 @@
         <ion-select-option value="15001-30000">15001 - 30000</ion-select-option>
         <ion-select-option value="upper30000">มากกว่า 30000</ion-select-option>
       </ion-select>
+    </ion-item> -->
+    <ion-item>
+      <ion-label>รายได้</ion-label>
+      <div class="ion-align-items-center" (click)="openActionSalary(i)">
+        <ion-text *ngIf="item.salary !==''">{{item.salary}}</ion-text>
+        <ion-text *ngIf="item.salary ===''">เลือก</ion-text>
+        <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+      </div>
     </ion-item>
   </ion-list>
 
@@ -71,14 +95,11 @@
       </ion-item>
       <ion-item>
         <ion-label>ความสัมพันธ์</ion-label>
-        <ion-select placeholder="เลิือก" [(ngModel)]="mockup.relation">
-          <ion-select-option value="father">พ่อ</ion-select-option>
-          <ion-select-option value="mother">แม่</ion-select-option>
-          <ion-select-option value="relative">ญาติ</ion-select-option>
-          <ion-select-option value="friend">เพื่อน</ion-select-option>
-          <ion-select-option value="couple">คู่สมรส</ion-select-option>
-          <ion-select-option value="parent">ผู้ปกครอง</ion-select-option>
-        </ion-select>
+        <div class="ion-align-items-center" (click)="onMockActionRelation()">
+          <ion-text *ngIf="mockup.relation">{{mockup.relation}}</ion-text>
+          <ion-text *ngIf="!mockup.relation">เลือก</ion-text>
+          <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+        </div>
       </ion-item>
       <ion-item>
         <ion-label>หมายเลขโทรศัพท์</ion-label>
@@ -86,19 +107,19 @@
       </ion-item>
       <ion-item>
         <ion-label>อาชีพ</ion-label>
-        <ion-select placeholder="เลิือก" [(ngModel)]="mockup.job">
-          <ion-select-option value="employee">พนักงานบริษัทเอกชน(employee)</ion-select-option>
-          <ion-select-option value="government">ข้าราชการ(government officer)</ion-select-option>
-        </ion-select>
+        <div class="ion-align-items-center" (click)="onMockActionJob()">
+          <ion-text *ngIf="mockup.job">{{mockup.job}}</ion-text>
+          <ion-text *ngIf="!mockup.job">เลือก</ion-text>
+          <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+        </div>
       </ion-item>
       <ion-item>
         <ion-label>รายได้</ion-label>
-        <ion-select placeholder="เลิือก" [(ngModel)]="mockup.salary">
-          <ion-select-option value="lower10000">น้อยกว่า 10000</ion-select-option>
-          <ion-select-option value="10001-15000">10001 - 15000</ion-select-option>
-          <ion-select-option value="15001-30000">15001 - 30000</ion-select-option>
-          <ion-select-option value="upper30000">มากกว่า 30000</ion-select-option>
-        </ion-select>
+        <div class="ion-align-items-center" (click)="onMockActionSalary()">
+          <ion-text *ngIf="mockup.salary">{{mockup.salary}}</ion-text>
+          <ion-text *ngIf="!mockup.salary">เลือก</ion-text>
+          <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+        </div>
       </ion-item>
     </ion-list>
 </ion-content>

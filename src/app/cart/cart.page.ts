@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from './cart.service';
-import { SpecModalComponent } from './spec-modal/spec-modal.component';
 import { ModalController, AlertController, ActionSheetController } from '@ionic/angular';
 import { InsallmentModalComponent } from './insallment-modal/insallment-modal.component';
+import { SpecModalComponent } from './spec-modal/spec-modal.component';
+
 
 @Component({
   selector: 'app-cart',
@@ -13,6 +14,8 @@ import { InsallmentModalComponent } from './insallment-modal/insallment-modal.co
 export class CartPage implements OnInit {
   cartDataList: any;
   reccommentDataList: any;
+  SpecificationData:any;
+  PaymentData: any;
 
   constructor(private router: Router,
     private cartService: CartService,
@@ -28,7 +31,14 @@ export class CartPage implements OnInit {
     this.cartService.onReccommentDataListChanged.subscribe((reccommentDataList: any) => {
       console.log(reccommentDataList);
       this.reccommentDataList = reccommentDataList;
-
+    })
+    this.cartService.onSpecificationDataChanged.subscribe((productdetailDataList: any) => {
+      console.log(productdetailDataList);
+      this.SpecificationData = productdetailDataList;
+    })
+    this.cartService.onPaymentDataChanged.subscribe((productdetailDataList: any) => {
+      console.log(productdetailDataList);
+      this.PaymentData = productdetailDataList;
     })
   }
 
@@ -73,16 +83,25 @@ export class CartPage implements OnInit {
   }
   async specModal() {
     const modal = await this.modalController.create({
-      component: SpecModalComponent
+      component: SpecModalComponent,
+      cssClass: 'my-modal-css',
+      componentProps: {
+        SpecificationData: this.SpecificationData
+      }
     });
     return await modal.present();
   }
   async InstallmentModal() {
     const modal = await this.modalController.create({
-      component: InsallmentModalComponent
+      component: InsallmentModalComponent,
+      cssClass: 'my-modal-css',
+      componentProps: {
+        PaymentData: this.PaymentData
+      }
     });
     return await modal.present();
   }
+  
   async presentAlert() {
     const alert = await this.alertCtrl.create({
       message: 'กรุณาเพิ่มที่อยู่จัดส่งใหม่',

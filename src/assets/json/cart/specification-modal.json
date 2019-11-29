@@ -1,0 +1,56 @@
+{
+    "status": 200,
+    "data": {
+        "_id": "111",
+        "price": "14,900",
+        "period": "893.58",
+        "currency": "฿",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSO9Llg_r3_YdskEDKSKhrLxXoCBkGM-Lt8Vd3R7PeOZ9Qgx5xH",
+        "name": "iphone 7 plus/Gold/32GB",
+        "color": "Gold",
+        "unit": "x18",
+        "per": "ต่องวด",
+        "version": "32GB",
+        "quantity": "จำนวน",
+        "selectcolor": [
+            {
+                "_id": "221",
+                "color": "Silver"
+            },
+            {
+                "_id": "222",
+                "color": "Rose Gold"
+            },
+            {
+                "_id": "223",
+                "color": "Red"
+            },
+            {
+                "_id": "224",
+                "color": "Jet Black"
+            },
+            {
+                "_id": "225",
+                "color": "Gold"
+            },
+            {
+                "_id": "226",
+                "color": "Black"
+            }
+        ],
+        "selectversion": [
+            {
+                "_id": "121",
+                "version": "32 GB"
+            },
+            {
+                "_id": "122",
+                "version": "128 GB"
+            },
+            {
+                "_id": "123",
+                "version": "256 GB"
+            }
+        ]
+    }
+}
