@@ -26,6 +26,10 @@ export class ModalSecondcontactComponent implements OnInit {
     console.log(this.datalength);
   }
 
+  onDismiss(){
+    this.modalCtrl.dismiss();
+  }
+
   onFinish() {
     this.secondContact.secondcontact.push(this.mockup)
     console.log(this.secondContact);

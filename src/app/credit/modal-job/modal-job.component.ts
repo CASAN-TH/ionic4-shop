@@ -23,6 +23,10 @@ export class ModalJobComponent implements OnInit {
     }
   }
 
+  onDismiss(){
+    this.modalCtrl.dismiss();
+  }
+
   onFinish() {
     console.log(this.job);
     this.modalCtrl.dismiss();

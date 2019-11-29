@@ -18,6 +18,10 @@ export class ModalMarriageComponent implements OnInit {
     console.log(this.marriage);
   }
 
+  onDismiss(){
+    this.modalCtrl.dismiss();
+  }
+
   onFinish() {
     console.log(this.marriage);
     this.modalCtrl.dismiss();

@@ -17,6 +17,10 @@ export class ModalContactComponent implements OnInit {
     console.log(this.contact);
   }
 
+  onDismiss(){
+    this.modalCtrl.dismiss();
+  }
+
   onFinish() {
     console.log(this.contact);
     this.modalCtrl.dismiss();

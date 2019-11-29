@@ -18,6 +18,10 @@ export class ModalAssetdocsComponent implements OnInit {
     console.log(this.assetDocs);
   }
 
+  onDismiss(){
+    this.modalCtrl.dismiss();
+  }
+
   onFinish() {
     this.modalCtrl.dismiss();
   }
