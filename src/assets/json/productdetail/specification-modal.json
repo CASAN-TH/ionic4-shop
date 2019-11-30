@@ -12,21 +12,27 @@
         "per": "ต่องวด",
         "version": "RAM 8 GB ROM 128 GB",
         "quantity": "จำนวน",
-        "selectcolor": [
-            {
-                "_id": "222",
-                "color": "Crystal Sky"
-            },
-            {
-                "_id": "333",
-                "color": "Glowing Night"
-            }
-        ],
-        "selectversion": [
-            {
-                "_id": "121",
-                "version": "RAM 8 GB ROM 128 GB"
-            }
-        ]
+        "selectcolor": {
+            "titlename": "Color",
+            "speccolor": [
+                {
+                    "_id": "222",
+                    "color": "Crystal Sky"
+                },
+                {
+                    "_id": "333",
+                    "color": "Glowing Night"
+                }
+            ]
+        },
+        "selectversion": {
+            "titlename": "Vertion",
+            "specversion": [
+                {
+                    "_id": "121",
+                    "version": "RAM 8 GB ROM 128 GB"
+                }
+            ]
+        }
     }
 }

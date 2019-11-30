@@ -45,12 +45,18 @@
 
     <ion-list>
       <ion-item>
-        <ion-label >วิธีการชำระเงิน</ion-label>
+        <!-- <ion-label>วิธีการชำระเงิน</ion-label>
         <ion-label>{{select}}</ion-label>
-        <ion-label >
-        <ion-icon mode="ios" name="arrow-forward" (click)="presentActionSheet()"></ion-icon>
-        </ion-label>
-     
+        <ion-label>
+          <ion-icon mode="ios" name="arrow-forward" (click)="presentActionSheet()"></ion-icon>
+        </ion-label> -->
+        <ion-label>วิธีการชำระเงิน  {{select}} </ion-label>
+        <ion-buttons slot="end">
+            <ion-button>
+              <ion-icon slot="icon-only" name="ios-arrow-forward" (click)="presentActionSheet()"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+
       </ion-item>
     </ion-list>
 
@@ -222,26 +228,28 @@
 
     <ion-row *ngFor="let cart of cartDataList">
       <ion-col size="6" *ngFor="let pro of cart.product">
-        ยอดรวม ({{pro.amount}}สินค้า)
+        <ion-text class="ordertitle">ยอดรวม ({{pro.quantity}} สินค้า)</ion-text>
+      </ion-col>
+
+      <ion-col size="6" *ngFor="let pro of cart.product">
+        <ion-text class="orders">{{pro.currency}}{{pro.price}}</ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let cart of cartDataList">
+      <ion-col size="6" *ngFor="let pro of cart.product">
+        <ion-text class="ordertitle">โปรโมชั่น</ion-text>
       </ion-col>
       <ion-col size="6" *ngFor="let pro of cart.product">
-        {{pro.currency}}{{pro.price}}
+        <ion-text class="order"> {{pro.currency_coupon}} {{pro.coupon}}</ion-text>
       </ion-col>
     </ion-row>
     <ion-row *ngFor="let cart of cartDataList">
       <ion-col size="6" *ngFor="let pro of cart.product">
-        โปรโมชั่น
+        <ion-text class="ordertitle">ค่าจัดส่ง</ion-text>
       </ion-col>
       <ion-col size="6" *ngFor="let pro of cart.product">
-        {{pro.currency_coupon}}{{pro.coupon}}
-      </ion-col>
-    </ion-row>
-    <ion-row *ngFor="let cart of cartDataList">
-      <ion-col size="6" *ngFor="let pro of cart.product">
-        ค่าจัดส่ง
-      </ion-col>
-      <ion-col size="6" *ngFor="let pro of cart.product">
-        {{pro.currency}}{{pro.chipingfee}}
+        <ion-text class="orders">{{pro.currency}} {{pro.chipingfee}}</ion-text>
       </ion-col>
     </ion-row>
 
@@ -270,16 +278,20 @@
 
 
 <ion-footer>
-  <div>
-    <ion-row *ngFor="let cate of cartDataList">
-      <ion-col size="8" *ngFor="let cate of cate.product">
-        จำนวนเงินที่ต้องชำระ:{{cate.currency}}{{cate.price}}
-      </ion-col>
-      <ion-col size="4" (click)="onOrderClick()">
-        <section>
-          <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
-        </section>
-      </ion-col>
-    </ion-row>
-  </div>
+  <ion-row>
+    <ion-col size="12">
+      <ion-row *ngFor="let cate of cartDataList">
+        <ion-col size="8" *ngFor="let cate of cate.product">
+          <!-- <ion-text>จำนวนเงินที่ต้องชำระ: {{cate.currency}} {{cate.price}}</ion-text> -->
+          <span class="ordertitle">จำนวนเงินที่ต้องชำระ:</span>
+          <span class="price">{{cate.currency}}{{cate.price}}</span>
+        </ion-col>
+        <ion-col size="4" (click)="onOrderClick()">
+          <section>
+            <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
+          </section>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
 </ion-footer>
