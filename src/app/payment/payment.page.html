@@ -106,14 +106,14 @@
             </span>
           </ion-col>
         </ion-row>
-        <!-- *ngIf="downDataList.period_option && downDataList.period_option.length" -->
+
         <ion-row>
-          <ion-col size="12">
-            <ion-row >
-              <ion-col class="per" size="3" text-center *ngFor="let period of downDataList.period_option"
-                >
-                <!-- <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="item._id == percenSelected"></ion-icon> -->
-                <!-- [class.ion-col-border]="item._id == percenSelected" (click)="onPercenClick(item._id)" -->
+          <ion-col size="12" *ngFor="let data of downDataList">
+            <ion-row *ngIf="data.period_option && data.period_option.length">
+              <ion-col class="per" size="3" text-center *ngFor="let period of data.period_option"
+                [class.ion-col-border]="period._id == percenSelected" (click)="onPercenClick(period._id)">
+                <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="period._id == percenSelected">
+                </ion-icon>
                 <span>
                   {{period.period}}{{period.unit}}
                 </span>
