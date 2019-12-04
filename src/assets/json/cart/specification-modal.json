@@ -12,45 +12,51 @@
         "per": "ต่องวด",
         "version": "32GB",
         "quantity": "จำนวน",
-        "selectcolor": [
-            {
-                "_id": "221",
-                "color": "Silver"
-            },
-            {
-                "_id": "222",
-                "color": "Rose Gold"
-            },
-            {
-                "_id": "223",
-                "color": "Red"
-            },
-            {
-                "_id": "224",
-                "color": "Jet Black"
-            },
-            {
-                "_id": "225",
-                "color": "Gold"
-            },
-            {
-                "_id": "226",
-                "color": "Black"
-            }
-        ],
-        "selectversion": [
-            {
-                "_id": "121",
-                "version": "32 GB"
-            },
-            {
-                "_id": "122",
-                "version": "128 GB"
-            },
-            {
-                "_id": "123",
-                "version": "256 GB"
-            }
-        ]
+        "selectcolor": {
+            "titlename": "Color",
+            "speccolor": [
+                {
+                    "_id": "221",
+                    "color": "Silver"
+                },
+                {
+                    "_id": "222",
+                    "color": "Rose Gold"
+                },
+                {
+                    "_id": "223",
+                    "color": "Red"
+                },
+                {
+                    "_id": "224",
+                    "color": "Jet Black"
+                },
+                {
+                    "_id": "225",
+                    "color": "Gold"
+                },
+                {
+                    "_id": "226",
+                    "color": "Black"
+                }
+            ]
+        },
+        "selectversion": {
+            "titlename": "Rom",
+            "specversion": [
+                {
+                    "_id": "121",
+                    "version": "32 GB"
+                },
+                {
+                    "_id": "122",
+                    "version": "128 GB"
+                },
+                {
+                    "_id": "123",
+                    "version": "256 GB"
+                }
+            ]
+        }
     }
 }

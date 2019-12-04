@@ -18,6 +18,8 @@ export class PaymentPage implements OnInit {
   addressData: any;
   VouchersData: any;
 
+  percenSelected: any
+
 
 
   constructor(private router: Router,
@@ -37,13 +39,13 @@ export class PaymentPage implements OnInit {
     })
     this.paymentService.onAddressDataChanged.subscribe((addressData: any) => {
       console.log(addressData);
-      // this.addressData = addressData;
+      this.addressData = addressData;
     })
     this.paymentService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.VouchersData = productdetailDataList;
     })
-   
+
   }
 
   goBackClick() {
@@ -92,6 +94,12 @@ export class PaymentPage implements OnInit {
 
   onOpenlistClick() {
     console.log("onOpenlistClick");
+  }
+
+  onPercenClick(percenId: any) {
+    // this.router.navigateByUrl('search/' + cate2Id);
+    console.log(percenId);
+    this.percenSelected = percenId;
   }
 
 }
