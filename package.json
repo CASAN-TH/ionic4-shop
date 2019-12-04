@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~8.1.2",
     "@angular/router": "~8.1.2",
     "@auth0/angular-jwt": "^3.0.1",
+    "@ionic-native/camera-preview": "^5.17.1",
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/facebook": "^5.17.0",
     "@ionic-native/line-login": "^5.17.0",
@@ -34,6 +35,7 @@
     "cordova-ios": "^5.0.1",
     "cordova-line-login-plugin": "^1.2.2",
     "cordova-plugin-add-swift-support": "^2.0.2",
+    "cordova-plugin-camera-preview": "^0.11.1",
     "cordova-plugin-carthage-support": "^1.0.0",
     "cordova-plugin-facebook4": "^6.2.0",
     "core-js": "^2.5.4",
@@ -88,7 +90,10 @@
         "FACEBOOK_HYBRID_APP_EVENTS": "false",
         "FACEBOOK_ANDROID_SDK_VERSION": "5.5.2"
       },
-      "cordova-line-login-plugin": {}
+      "cordova-line-login-plugin": {},
+      "cordova-plugin-camera-preview": {
+        "ANDROID_SUPPORT_LIBRARY_VERSION": "26+"
+      }
     },
     "platforms": [
       "ios",

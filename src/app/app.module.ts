@@ -44,6 +44,7 @@ import { ModalAssetdocsDetailComponent } from './credit/modal-assetdocs-detail/m
 import { ModalAddressComponent } from './pages/me/modal-address/modal-address.component';
 import { ModalFeedbackComponent } from './setting/modal-feedback/modal-feedback.component';
 import { ModalAboutComponent } from './setting/modal-about/modal-about.component';
+import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 
 
 @NgModule({
@@ -128,6 +129,7 @@ import { ModalAboutComponent } from './setting/modal-about/modal-about.component
   providers: [
     StatusBar,
     SplashScreen,
+    CameraPreview,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
