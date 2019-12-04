@@ -1,5 +1,7 @@
 <ion-content>
-  <img src="../../../assets/images/ID-Card.png" >
+  <img *ngIf="modalData.actionType === 'front'" src="../../../assets/images/ID-Card.png" />
+  <img *ngIf="modalData.actionType === 'back'" src="../../../assets/images/ID-Card-1.png" />
+  <img *ngIf="modalData.actionType === 'withme'" src="../../../assets/images/ID-Card-2.png" />
 </ion-content>
 
 <ion-button (click)="dismiss()">dismiss</ion-button>
