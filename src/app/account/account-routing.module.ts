@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AccountPage } from './account.page';
 import { AccountService } from './account.service';
+import { AuthGuard } from '../auth/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: AccountPage,
-    resolve: [ AccountService ]
+    resolve: [ AccountService ],
+    canActivate: [AuthGuard]
   }
 ];
 
