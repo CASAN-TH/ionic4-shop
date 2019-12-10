@@ -1,11 +1,12 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-row size="12">
-      <ion-item *ngIf="accountData">
+
+  <ion-row>
+    <ion-col size="9">
+      <ion-item *ngIf="accountData" lines="none">
         <ion-avatar slot="start">
-          <img (click)="onToMePage()" [src]=accountData.profileimg>
+          <img (click)="onToMePage()" [src]=accountData.profileImageURL>
         </ion-avatar>
-        <ion-label> {{accountData.name}}</ion-label>
+        <ion-label> {{accountData.username}}</ion-label>
       </ion-item>
 
       <ion-item *ngIf="!accountData">
@@ -14,9 +15,11 @@
         </ion-avatar>
         <ion-label (click)="onToLoginPage()">Login/Register</ion-label>
       </ion-item>
+    </ion-col>
 
 
-      <div class="ion-align-items-center">
+    <ion-col size="3" class="ion-align-items-center">
+      <div>
         <ion-buttons>
 
           <ion-button (click)="onToMessagePage()">
@@ -29,44 +32,45 @@
 
         </ion-buttons>
       </div>
+    </ion-col>
 
-    </ion-row>
-  </ion-toolbar>
+  </ion-row>
+
 
 </ion-header>
 
 <ion-content>
-  <ion-card class="ion-text-center">
-    <ion-row *ngIf="accountData">
-      <ion-col size="4" (click)="onToWishlistPage()">
-        <h1>{{accountData.wishlist}}</h1>
-        <p>Wishlist</p>
-      </ion-col>
-      <ion-col size="4" (click)="onToFollowedShopPage()">
-        <h1>{{accountData.followedshop}}</h1>
-        <p>Followed Shop</p>
-      </ion-col>
-      <ion-col size="4" (click)="onToBrowseHistoryPage()">
-        <h1>{{accountData.browsehistory}}</h1>
-        <p>Browse History</p>
-      </ion-col>
-    </ion-row>
 
-    <ion-row *ngIf="!accountData">
-      <ion-col size="4" (click)="onToWishlistPage()">
-        <h1>--</h1>
-        <p>Wishlist</p>
-      </ion-col>
-      <ion-col size="4" (click)="onToFollowedShopPage()">
-        <h1>--</h1>
-        <p>Followed Shop</p>
-      </ion-col>
-      <ion-col size="4" (click)="onToBrowseHistoryPage()">
-        <h1>--</h1>
-        <p>Browse History</p>
-      </ion-col>
-    </ion-row>
-  </ion-card>
+  <ion-row *ngIf="accountData" class="ion-text-center">
+    <ion-col size="4" (click)="onToWishlistPage()">
+      <h1>{{scoreData.wishlist}}</h1>
+      <p>Wishlist</p>
+    </ion-col>
+    <ion-col size="4" (click)="onToFollowedShopPage()">
+      <h1>{{scoreData.followedshop}}</h1>
+      <p>Followed Shop</p>
+    </ion-col>
+    <ion-col size="4" (click)="onToBrowseHistoryPage()">
+      <h1>{{scoreData.browsehistory}}</h1>
+      <p>Browse History</p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row *ngIf="!accountData" class="ion-text-center">
+    <ion-col size="4" (click)="onToWishlistPage()">
+      <h1>--</h1>
+      <p>Wishlist</p>
+    </ion-col>
+    <ion-col size="4" (click)="onToFollowedShopPage()">
+      <h1>--</h1>
+      <p>Followed Shop</p>
+    </ion-col>
+    <ion-col size="4" (click)="onToBrowseHistoryPage()">
+      <h1>--</h1>
+      <p>Browse History</p>
+    </ion-col>
+  </ion-row>
+
 
 
   <ion-card>
@@ -177,19 +181,19 @@
       </ion-item>
       <ion-row *ngIf="accountData">
         <ion-col size="3" (click)="onToCreditPage()">
-          <h1>{{accountData.credit}}</h1>
+          <h1>{{creditData.credit.creditremain}}</h1>
           <p>Available Credit</p>
         </ion-col>
         <ion-col size="3" (click)="onToMyCouponPage()">
-          <h1> {{accountData.coupon}}</h1>
+          <h1> {{scoreData.coupon}}</h1>
           <p>Coupon</p>
         </ion-col>
         <ion-col size="3" (click)="onToTcoinPage()">
-          <h1>{{accountData.tcoin}}</h1>
+          <h1>{{scoreData.tcoin}}</h1>
           <p>Tcoin</p>
         </ion-col>
         <ion-col size="3" (click)="onToCurrentAmountPage()">
-          <h1> {{accountData.currentamount}}</h1>
+          <h1> {{scoreData.currentamount}}</h1>
           <p>Current amount</p>
         </ion-col>
       </ion-row>

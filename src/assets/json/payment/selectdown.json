@@ -1,0 +1,54 @@
+{
+    "status": 200,
+    "data": [
+        {
+            "percent_down": "15",
+            "percent": "%",
+            "amount": "2,220",
+            "status_down": "วงเงินไม่เพียงพอ",
+            "cerrency": "฿"
+        },
+        {
+            "percent_down": "20",
+            "percent": "%",
+            "amount": "2,960",
+            "status_down": "วงเงินไม่เพียงพอ",
+            "cerrency": "฿"
+        },
+        {
+            "percent_down": "30",
+            "percent": "%",
+            "amount": "4,440",
+            "status_down": "วงเงินไม่เพียงพอ",
+            "cerrency": "฿"
+        },
+        {
+            "percent_down": "40",
+            "percent": "%",
+            "amount": "5,920",
+            "status_down": "วงเงินไม่เพียงพอ",
+            "cerrency": "฿"
+        },
+        {
+            "percent_down": "50",
+            "percent": "%",
+            "amount": "7,400",
+            "status_down": "วงเงินไม่เพียงพอ",
+            "cerrency": "฿"
+        },
+        {
+            "percent_down": "60",
+            "percent": "%",
+            "amount": "8,880",
+            "status_down": "วงเงินไม่เพียงพอ",
+            "cerrency": "฿"
+        },
+        {
+            "percent_down": "70",
+            "percent": "%",
+            "amount": "10,360",
+            "status_down": "วงเงินไม่เพียงพอ",
+            "cerrency": "฿"
+        }
+    ]
+}

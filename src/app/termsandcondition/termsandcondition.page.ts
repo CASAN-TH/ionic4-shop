@@ -9,12 +9,13 @@ import { TermsandconditionService } from './termsandcondition.service';
   styleUrls: ['./termsandcondition.page.scss'],
 })
 export class TermsandconditionPage implements OnInit {
+
   termsandconditionData: any;
 
-  constructor(private router: Router, private termsandconditionService : TermsandconditionService, private _location: Location) { }
+  constructor(private router: Router, private termsandconditionService: TermsandconditionService, private _location: Location) { }
 
   ngOnInit() {
-    this.termsandconditionService.onTermsandconditionDataChanged.subscribe((termsandconditionData:any)=>{
+    this.termsandconditionService.onTermsandconditionDataChanged.subscribe((termsandconditionData: any) => {
       console.log(termsandconditionData);
       this.termsandconditionData = termsandconditionData;
     })

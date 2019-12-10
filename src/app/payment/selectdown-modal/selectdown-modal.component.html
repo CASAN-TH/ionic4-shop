@@ -1,9 +1,42 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-button (click)="dismiss()">
-          <ion-icon name="arrow-back"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar>
+    <ion-buttons class="backbutton" slot="end" (click)="dismiss()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="ios-close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>เงินดาวน์</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row class="dowselect">
+    <ion-col size=12>
+      <ion-item *ngFor="let selectdown of selectdownData">
+        <ion-label class="ion-text-wrap">
+          <ion-row>
+            <ion-col size=2>
+              <span>
+                {{selectdown.percent_down}} {{selectdown.percent}}
+              </span>
+            </ion-col>
+            <ion-col size=7>
+              <span>
+                <span>
+                  <!-- {{selectdown.status_down}} --> 
+                </span>
+              </span>
+            </ion-col>
+            <ion-col size=3>
+              <span>
+                <span>
+                  {{selectdown.cerrency}} {{selectdown.amount}}
+                </span>
+              </span>
+            </ion-col>
+          </ion-row>
+
+        </ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-content>

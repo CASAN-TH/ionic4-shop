@@ -14,7 +14,28 @@ export class TermsandconditionService {
   routeParams: any;
 
   onTermsandconditionDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  onTermsandconditionDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onTermsandconditionDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "title": {
+      "head": "",
+      "text1": "",
+      "text2": ""
+    },
+    "agreement": {
+      "agreement_1": "",
+      "agreement_2": "",
+      "agreement_3": {
+        "part1": "",
+        "part2": ""
+      }
+    },
+    // "terminology1": [
+    //   {
+    //     "head1": "",
+    //     "text": ""
+    //   }
+    // ]
+
+  });
 
   constructor(private http: HttpClient) { }
 
@@ -27,40 +48,41 @@ export class TermsandconditionService {
   resolve(route: ActivatedRouteSnapshot): Observable<any> | Promise<any> | any {
     this.routeParams = route.params;
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
-    if (this.routeParams.id) {
-      this.getTermsandconditionData();
-    } else {
-      this.getTermsandconditionDataList();
-    }
+    this.getTermsandconditionData();
+    // if (this.routeParams.id) {
+    //   this.getTermsandconditionData();
+    // } else {
+    //   this.getTermsandconditionDataList();
+    // }
     return;
   }
 
   getTermsandconditionDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/termsandcondition/termsandcondition.json').subscribe((res: any) => {
           this.onTermsandconditionDataListChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onTermsandconditionDataListChanged.next(res.data);
-        },reject)
+        }, reject)
       }
     })
   }
 
   getTermsandconditionData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/termsandcondition/termsandcondition-detail.json').subscribe((res: any) => {
-          this.onTermsandconditionDataListChanged.next(res.data);
-        },reject)
-      }else{
+          this.onTermsandconditionDataChanged.next(res.data);
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onTermsandconditionDataChanged.next(res.data);
-        },reject)
+        }, reject)
       }
-      
+
     })
   }
 
@@ -68,7 +90,7 @@ export class TermsandconditionService {
     return new Promise((resolve, reject) => {
       this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getTermsandconditionDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -76,7 +98,7 @@ export class TermsandconditionService {
     return new Promise((resolve, reject) => {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getTermsandconditionDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -84,7 +106,7 @@ export class TermsandconditionService {
     return new Promise((resolve, reject) => {
       this.http.delete(api_url + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getTermsandconditionDataList();
-      },reject)
+      }, reject)
     })
   }
 

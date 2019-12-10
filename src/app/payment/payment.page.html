@@ -51,11 +51,20 @@
   <ion-card>
 
     <ion-list>
-      <ion-item>
-        <ion-label>วิธีการชำระเงิน {{select}} </ion-label>
+      <ion-item (click)="presentActionSheet()">
+        <ion-label>
+          <span class="select">
+            วิธีการชำระเงิน
+          </span>
+        </ion-label>
+        <ion-label>
+          <span class="phonename">
+            {{select}}
+          </span>
+        </ion-label>
         <ion-buttons slot="end">
           <ion-button>
-            <ion-icon slot="icon-only" name="ios-arrow-forward" (click)="presentActionSheet()"></ion-icon>
+            <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
           </ion-button>
         </ion-buttons>
       </ion-item>

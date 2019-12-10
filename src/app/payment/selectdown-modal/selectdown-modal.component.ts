@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 @Component({
@@ -7,11 +7,15 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./selectdown-modal.component.scss'],
 })
 export class SelectdownModalComponent implements OnInit {
+  @Input() selectdownData: any
 
-  constructor(public modalController:ModalController) { }
+  constructor(public modalController: ModalController) { }
 
-  ngOnInit() {}
-  dismiss(){
+  ngOnInit() {
+
+  }
+
+  dismiss() {
     this.modalController.dismiss();
   }
 }
