@@ -33,28 +33,54 @@
 
   <ion-row>
     <ion-col size="12">
-      <h3>Color</h3>
-      <ion-row *ngIf="SpecificationData.selectcolor && SpecificationData.selectcolor.length">
-        <ion-col class="selectcolor" size="3" text-center *ngFor="let item of SpecificationData.selectcolor"
+      <h3>{{SpecificationData.selectcolor.titlename}}</h3>
+    </ion-col>
+  </ion-row>
+
+  <!-- <ion-row>
+    <ion-col size="12">
+      <ion-row *ngIf="SpecificationData.selectcolor.speccolor && SpecificationData.selectcolor.speccolor.length">
+        <ion-col class="selectcolor" size="4" text-center *ngFor="let item of SpecificationData.selectcolor.speccolor"
           [class.ion-col-border]="item._id == specColorSelected" (click)="onspecColorClick(item._id)">
           <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="item._id == specColorSelected"></ion-icon>
-          <!-- <p>{{item.color}}</p> -->
           <span>{{item.color}}</span>
         </ion-col>
       </ion-row>
     </ion-col>
+  </ion-row> -->
+  <ion-row *ngIf="SpecificationData.selectcolor.speccolor && SpecificationData.selectcolor.speccolor.length">
+    <ion-col class="selectcolor" size="3" text-center *ngFor="let item of SpecificationData.selectcolor.speccolor"
+      [class.ion-col-border]="item._id == specColorSelected" (click)="onspecColorClick(item._id)">
+      <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="item._id == specColorSelected"></ion-icon>
+      <span>{{item.color}}</span>
+    </ion-col>
   </ion-row>
+
   <ion-row>
     <ion-col size="12">
-      <h3>Version</h3>
-      <ion-row *ngIf="SpecificationData.selectversion && SpecificationData.selectversion.length">
-        <ion-col class="selectcolor" size="4" text-center *ngFor="let itemver of SpecificationData.selectversion"
+      <h3>{{SpecificationData.selectversion.titlename}}</h3>
+    </ion-col>
+  </ion-row>
+
+  <!-- <ion-row>
+    <ion-col size="12">
+      <ion-row
+        *ngIf="SpecificationData.selectversion.specversion && SpecificationData.selectversion.specversion.length">
+        <ion-col class="selectcolor" size="6" text-center
+          *ngFor="let itemver of SpecificationData.selectversion.specversion"
           [class.ion-col-border]="itemver._id == specVertionSelected" (click)="onspecVertionClick(itemver._id)">
           <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="itemver._id == specVertionSelected"></ion-icon>
-          <!-- <p>{{itemver.version}}</p> -->
           <span>{{itemver.version}}</span>
         </ion-col>
       </ion-row>
+    </ion-col>
+  </ion-row> -->
+  <ion-row *ngIf="SpecificationData.selectversion.specversion && SpecificationData.selectversion.specversion.length">
+    <ion-col class="selectcolor" size="6" text-center
+      *ngFor="let itemver of SpecificationData.selectversion.specversion"
+      [class.ion-col-border]="itemver._id == specVertionSelected" (click)="onspecVertionClick(itemver._id)">
+      <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="itemver._id == specVertionSelected"></ion-icon>
+      <span>{{itemver.version}}</span>
     </ion-col>
   </ion-row>
 
@@ -74,14 +100,14 @@
   <ion-toolbar>
     <ion-row>
       <ion-col size="6" class="add-cart">
-        <ion-buttons>
+        <ion-buttons class="btn-center">
           <ion-button class="butcolor">
             เพิ่มใส่รถเข็น
           </ion-button>
         </ion-buttons>
       </ion-col>
       <ion-col size="6" class="buy">
-        <ion-buttons>
+        <ion-buttons class="btn-center">
           <ion-button class="butcolor">
             ซื้อทันที
           </ion-button>

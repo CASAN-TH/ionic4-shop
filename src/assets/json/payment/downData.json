@@ -14,23 +14,27 @@
             "period_service": "111.75",
             "cerrency": "฿",
             "installment_amount": "727.66",
-            "installment_period": "12",
+            "installment_period": "x12",
             "unit": "เดือน",
             "period_option": [
                 {
-                    "peviod": "3",
+                    "_id":"212",
+                    "period": "3",
                     "unit": "ต่องวด"
                 },
                 {
-                    "peviod": "6",
+                    "_id":"323",
+                    "period": "6",
                     "unit": "ต่องวด"
                 },
                 {
-                    "peviod": "9",
+                    "_id":"676",
+                    "period": "9",
                     "unit": "ต่องวด"
                 },
                 {
-                    "peviod": "12",
+                    "_id":"898",
+                    "period": "12",
                     "unit": "ต่องวด"
                 }
             ]

@@ -15,14 +15,21 @@
   <ion-row *ngIf="addressData && addressData.address">
     <ion-col size="10">
       <ion-row>
-        <ion-col size="12" class="address">
-          {{addressData.address.receiveraddress}} {{addressData.address.subdistric}}
-          {{addressData.address.distric}} {{addressData.address.province}}
+        <ion-col size="12">
+          <p class="address">
+            {{addressData.address.receiveraddress}} {{addressData.address.subdistric}}
+            {{addressData.address.distric}} {{addressData.address.province}}
+          </p>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col size="12">
-          {{addressData.address.receiver}} {{addressData.address.receiverphone}}
+          <span class="user">
+            {{addressData.address.receiver}}
+          </span>
+          <span class="phoneprice">
+            {{addressData.address.receiverphone}}
+          </span>
         </ion-col>
       </ion-row>
     </ion-col>
@@ -45,47 +52,93 @@
 
     <ion-list>
       <ion-item>
-        <ion-label >วิธีการชำระเงิน</ion-label>
-        <ion-label>{{select}}</ion-label>
-        <ion-label >
-        <ion-icon mode="ios" name="arrow-forward" (click)="presentActionSheet()"></ion-icon>
-        </ion-label>
-     
-      </ion-item>
-    </ion-list>
-
-    <div *ngIf="select === 'ผ่อนชำระ'">
-      <ion-list-header>เงินดาวน์</ion-list-header>
-      <ion-item *ngFor="let data of downDataList" (click)="selectDownModal()">
-        <ion-label *ngFor="let down of data.down_payment">{{down.cerrency}}{{down.amount}}</ion-label>
-        <ion-label *ngFor="let down of data.down_payment" class="percent_down"> {{down.percent_down}}{{down.unit}}
-        </ion-label>
-        <ion-buttons>
-          <ion-button slot="end">
-            <ion-icon mode="ios" name="arrow-forward"></ion-icon>
+        <ion-label>วิธีการชำระเงิน {{select}} </ion-label>
+        <ion-buttons slot="end">
+          <ion-button>
+            <ion-icon slot="icon-only" name="ios-arrow-forward" (click)="presentActionSheet()"></ion-icon>
           </ion-button>
         </ion-buttons>
       </ion-item>
-      <ion-list-header *ngFor="let data of downDataList">จ่ายรายเดือน
-        (ค่าบริการรายเดือน{{data.period_service}}{{data.cerrency}}รวม)</ion-list-header>
-      <ion-item *ngFor="let data of downDataList">
-        <ion-label>
-          <ion-text>{{data.cerrency}}{{data.installment_amount}}</ion-text>
-          <ion-text>x</ion-text>
-          <ion-text>{{data.installment_period}}{{data.unit}}</ion-text>
-        </ion-label>
-        <ion-label *ngFor="let data of downDataList">
-          <ion-col class="per" size="3" *ngFor="let item of data.period_option">
-            {{item.peviod}}{{item.unit}}
-          </ion-col>
-        </ion-label>
-      </ion-item>
+    </ion-list>
 
-      <div>
-        <ion-checkbox mode="ios" color="danger" checked slot="start"></ion-checkbox>
-        <p>ฉันเห็นด้วย<a routerLink="/termsandcondition" routerLinkActive="active">ข้อตกลงการใช้บริการ</a></p>
-      </div>
-    </div>
+    <ion-row *ngIf="select === 'ผ่อนชำระ'">
+      <ion-col size="12">
+        <ion-list-header>
+          <ion-text class="select">
+            เงินดาวน์
+          </ion-text>
+        </ion-list-header>
+
+        <ion-item *ngFor="let data of downDataList" (click)="selectDownModal()">
+          <ion-label *ngFor="let down of data.down_payment">
+            <span class="phonename">
+              {{down.cerrency}}{{down.amount}}
+            </span>
+
+            <span *ngFor="let down of data.down_payment" class="percent_down">
+              {{down.percent_down}}{{down.unit}}
+            </span>
+          </ion-label>
+
+          <ion-buttons>
+            <ion-button slot="end">
+              <ion-icon mode="ios" name="arrow-forward"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+        <ion-row>
+          <ion-col size="12" *ngFor="let data of downDataList">
+            <span class="ordertitle">
+              จ่ายรายเดือน (ค่าบริการรายเดือน{{data.period_service}} {{data.cerrency}} รวม)
+            </span>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="12" text-center *ngFor="let data of downDataList">
+            <ion-text class="installment">
+              {{data.cerrency}}{{data.installment_amount}}
+            </ion-text>
+            <span class="quantity">
+              {{data.installment_period}}{{data.unit}}
+            </span>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="12" *ngFor="let data of downDataList">
+            <ion-row *ngIf="data.period_option && data.period_option.length">
+              <ion-col class="per" size="3" text-center *ngFor="let period of data.period_option"
+                [class.ion-col-border]="period._id == percenSelected" (click)="onPercenClick(period._id)">
+                <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="period._id == percenSelected">
+                </ion-icon>
+                <span>
+                  {{period.period}}{{period.unit}}
+                </span>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+
+        <ion-row>
+          <ion-col size="12">
+            <span>
+              <ion-checkbox class="iconcheck" mode="ios" color="danger" checked></ion-checkbox>
+            </span>
+            <span class="user">
+              ฉันเห็นด้วย
+            </span>
+            <span class="ordertitle">
+              <a routerLink="/termsandcondition" routerLinkActive="active">ข้อตกลงการใช้บริการ</a>
+            </span>
+          </ion-col>
+        </ion-row>
+
+      </ion-col>
+    </ion-row>
+
   </ion-card>
 
 
@@ -115,7 +168,7 @@
 
             <ion-row>
               <ion-col size="8">
-                <ion-label color="medium" class="option">
+                <ion-label color="medium" class="quantity">
                   Options:{{cate.color}},{{cate.storage}}
                 </ion-label>
               </ion-col>
@@ -222,26 +275,28 @@
 
     <ion-row *ngFor="let cart of cartDataList">
       <ion-col size="6" *ngFor="let pro of cart.product">
-        ยอดรวม ({{pro.amount}}สินค้า)
+        <ion-text class="ordertitle">ยอดรวม ({{pro.quantity}} สินค้า)</ion-text>
+      </ion-col>
+
+      <ion-col size="6" *ngFor="let pro of cart.product">
+        <ion-text class="orders">{{pro.currency}}{{pro.price}}</ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let cart of cartDataList">
+      <ion-col size="6" *ngFor="let pro of cart.product">
+        <ion-text class="ordertitle">โปรโมชั่น</ion-text>
       </ion-col>
       <ion-col size="6" *ngFor="let pro of cart.product">
-        {{pro.currency}}{{pro.price}}
+        <ion-text class="order"> {{pro.currency_coupon}} {{pro.coupon}}</ion-text>
       </ion-col>
     </ion-row>
     <ion-row *ngFor="let cart of cartDataList">
       <ion-col size="6" *ngFor="let pro of cart.product">
-        โปรโมชั่น
+        <ion-text class="ordertitle">ค่าจัดส่ง</ion-text>
       </ion-col>
       <ion-col size="6" *ngFor="let pro of cart.product">
-        {{pro.currency_coupon}}{{pro.coupon}}
-      </ion-col>
-    </ion-row>
-    <ion-row *ngFor="let cart of cartDataList">
-      <ion-col size="6" *ngFor="let pro of cart.product">
-        ค่าจัดส่ง
-      </ion-col>
-      <ion-col size="6" *ngFor="let pro of cart.product">
-        {{pro.currency}}{{pro.chipingfee}}
+        <ion-text class="orders">{{pro.currency}} {{pro.chipingfee}}</ion-text>
       </ion-col>
     </ion-row>
 
@@ -270,16 +325,19 @@
 
 
 <ion-footer>
-  <div>
-    <ion-row *ngFor="let cate of cartDataList">
-      <ion-col size="8" *ngFor="let cate of cate.product">
-        จำนวนเงินที่ต้องชำระ:{{cate.currency}}{{cate.price}}
-      </ion-col>
-      <ion-col size="4" (click)="onOrderClick()">
-        <section>
-          <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
-        </section>
-      </ion-col>
-    </ion-row>
-  </div>
+  <ion-row>
+    <ion-col size="12">
+      <ion-row *ngFor="let cate of cartDataList">
+        <ion-col size="8" *ngFor="let cate of cate.product">
+          <span class="ordertitle">จำนวนเงินที่ต้องชำระ:</span>
+          <span class="price">{{cate.currency}}{{cate.price}}</span>
+        </ion-col>
+        <ion-col size="4" (click)="onOrderClick()">
+          <section>
+            <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
+          </section>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
 </ion-footer>
