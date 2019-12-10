@@ -17,6 +17,7 @@ export class PaymentService {
   onCartDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onAddressDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onSelectdownDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
   constructor(private http: HttpClient) { }
 
@@ -33,6 +34,7 @@ export class PaymentService {
     this.getCartDataList();
     this.getAddressData();
     this.getVouchersModalData();
+    this.getSelectdownModalData();
 
     return;
   }
@@ -90,6 +92,20 @@ export class PaymentService {
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onVouchersDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+  getSelectdownModalData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/payment/selectdown.json').subscribe((res: any) => {
+          this.onVouchersDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onSelectdownDataChanged.next(res.data);
         }, reject)
       }
 
