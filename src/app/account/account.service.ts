@@ -18,7 +18,12 @@ export class AccountService {
   onAccountDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onAccountData2Changed: BehaviorSubject<any> = new BehaviorSubject({});
   onPromotionChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onCreditDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onCreditDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    credit: {
+      creditremain: null
+    }
+  });
+  onAccountScoreDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }
 
@@ -38,6 +43,7 @@ export class AccountService {
       this.getAccountData2();
       this.getPromotionAndAds();
       this.getCreditData();
+      this.getAccountScoreData();
     }
     return;
   }
@@ -132,6 +138,20 @@ export class AccountService {
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onCreditDataChanged.next(res.data);
+        }, reject)
+      }
+    })
+  }
+
+  getAccountScoreData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/account/account-datascore.json').subscribe((res: any) => {
+          this.onAccountScoreDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onAccountScoreDataChanged.next(res.data);
         }, reject)
       }
     })

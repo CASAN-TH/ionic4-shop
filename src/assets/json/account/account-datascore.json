@@ -1,0 +1,11 @@
+{
+    "status": 200,
+    "data": {
+        "wishlist": 1,
+        "followedshop": 1,
+        "browsehistory": 1,
+        "coupon": 5,
+        "tcoin": 1,
+        "currentamount": 0
+    }
+}
