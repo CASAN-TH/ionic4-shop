@@ -17,8 +17,8 @@ export class PaymentPage implements OnInit {
   cartDataList: any;
   addressData: any;
   VouchersData: any;
-
-  percenSelected: any
+  selectdownData: any;
+  percenSelected: any;
 
 
 
@@ -45,6 +45,10 @@ export class PaymentPage implements OnInit {
       console.log(productdetailDataList);
       this.VouchersData = productdetailDataList;
     })
+    this.paymentService.onDownDataListChanged.subscribe((selectdownData: any) => {
+      console.log(selectdownData);
+      this.selectdownData = selectdownData;
+    })
 
   }
 
@@ -54,9 +58,14 @@ export class PaymentPage implements OnInit {
   onOrderClick() {
     this.router.navigate(['payfor'])
   }
+
   async selectDownModal() {
     const modal = await this.modalController.create({
-      component: SelectdownModalComponent
+      component: SelectdownModalComponent,
+      cssClass: 'my-modal-css',
+      componentProps: {
+        selectdownData: this.selectdownData
+      }
     });
     return await modal.present();
   }
