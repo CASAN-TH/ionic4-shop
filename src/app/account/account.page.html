@@ -1,76 +1,76 @@
 <ion-header>
 
-    <ion-row >
-      <ion-col size="9">
-          <ion-item *ngIf="accountData" lines="none">
-              <ion-avatar slot="start">
-                <img (click)="onToMePage()" [src]=accountData.profileImageURL>
-              </ion-avatar>
-              <ion-label> {{accountData.username}}</ion-label>
-            </ion-item>
-      
-            <ion-item *ngIf="!accountData">
-              <ion-avatar slot="start">
-                <img src="https://image.flaticon.com/icons/svg/145/145845.svg">
-              </ion-avatar>
-              <ion-label (click)="onToLoginPage()">Login/Register</ion-label>
-            </ion-item>
-      </ion-col>
+  <ion-row>
+    <ion-col size="9">
+      <ion-item *ngIf="accountData" lines="none">
+        <ion-avatar slot="start">
+          <img (click)="onToMePage()" [src]=accountData.profileImageURL>
+        </ion-avatar>
+        <ion-label> {{accountData.username}}</ion-label>
+      </ion-item>
+
+      <ion-item *ngIf="!accountData">
+        <ion-avatar slot="start">
+          <img src="https://image.flaticon.com/icons/svg/145/145845.svg">
+        </ion-avatar>
+        <ion-label (click)="onToLoginPage()">Login/Register</ion-label>
+      </ion-item>
+    </ion-col>
 
 
-      <ion-col size="3">
-          <div class="ion-align-items-center">
-              <ion-buttons>
-      
-                <ion-button (click)="onToMessagePage()">
-                  <ion-icon slot="icon-only" src="https://image.flaticon.com/icons/svg/126/126501.svg"></ion-icon>
-                </ion-button>
-      
-                <ion-button (click)="onToSettingPage()">
-                  <ion-icon slot="icon-only" src="https://image.flaticon.com/icons/svg/126/126472.svg"></ion-icon>
-                </ion-button>
-      
-              </ion-buttons>
-            </div>
-      </ion-col>
+    <ion-col size="3" class="ion-align-items-center">
+      <div>
+        <ion-buttons>
 
-    </ion-row>
+          <ion-button (click)="onToMessagePage()">
+            <ion-icon slot="icon-only" src="https://image.flaticon.com/icons/svg/126/126501.svg"></ion-icon>
+          </ion-button>
+
+          <ion-button (click)="onToSettingPage()">
+            <ion-icon slot="icon-only" src="https://image.flaticon.com/icons/svg/126/126472.svg"></ion-icon>
+          </ion-button>
+
+        </ion-buttons>
+      </div>
+    </ion-col>
+
+  </ion-row>
 
 
 </ion-header>
 
 <ion-content>
-  
-    <ion-row *ngIf="accountData" class="ion-text-center">
-      <ion-col size="4" (click)="onToWishlistPage()">
-        <h1>{{scoreData.wishlist}}</h1>
-        <p>Wishlist</p>
-      </ion-col>
-      <ion-col size="4" (click)="onToFollowedShopPage()">
-        <h1>{{scoreData.followedshop}}</h1>
-        <p>Followed Shop</p>
-      </ion-col>
-      <ion-col size="4" (click)="onToBrowseHistoryPage()">
-        <h1>{{scoreData.browsehistory}}</h1>
-        <p>Browse History</p>
-      </ion-col>
-    </ion-row>
 
-    <ion-row *ngIf="!accountData"  class="ion-text-center">
-      <ion-col size="4" (click)="onToWishlistPage()">
-        <h1>--</h1>
-        <p>Wishlist</p>
-      </ion-col>
-      <ion-col size="4" (click)="onToFollowedShopPage()">
-        <h1>--</h1>
-        <p>Followed Shop</p>
-      </ion-col>
-      <ion-col size="4" (click)="onToBrowseHistoryPage()">
-        <h1>--</h1>
-        <p>Browse History</p>
-      </ion-col>
-    </ion-row>
-  
+  <ion-row *ngIf="accountData" class="ion-text-center">
+    <ion-col size="4" (click)="onToWishlistPage()">
+      <h1>{{scoreData.wishlist}}</h1>
+      <p>Wishlist</p>
+    </ion-col>
+    <ion-col size="4" (click)="onToFollowedShopPage()">
+      <h1>{{scoreData.followedshop}}</h1>
+      <p>Followed Shop</p>
+    </ion-col>
+    <ion-col size="4" (click)="onToBrowseHistoryPage()">
+      <h1>{{scoreData.browsehistory}}</h1>
+      <p>Browse History</p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row *ngIf="!accountData" class="ion-text-center">
+    <ion-col size="4" (click)="onToWishlistPage()">
+      <h1>--</h1>
+      <p>Wishlist</p>
+    </ion-col>
+    <ion-col size="4" (click)="onToFollowedShopPage()">
+      <h1>--</h1>
+      <p>Followed Shop</p>
+    </ion-col>
+    <ion-col size="4" (click)="onToBrowseHistoryPage()">
+      <h1>--</h1>
+      <p>Browse History</p>
+    </ion-col>
+  </ion-row>
+
 
 
   <ion-card>
