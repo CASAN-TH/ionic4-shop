@@ -45,7 +45,7 @@ export class PaymentPage implements OnInit {
       console.log(productdetailDataList);
       this.VouchersData = productdetailDataList;
     })
-    this.paymentService.onDownDataListChanged.subscribe((selectdownData: any) => {
+    this.paymentService.onSelectdownDataChanged.subscribe((selectdownData: any) => {
       console.log(selectdownData);
       this.selectdownData = selectdownData;
     })

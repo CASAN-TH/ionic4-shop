@@ -12,6 +12,7 @@ export class AccountPage implements OnInit {
   accountData: any;
   promotionData: any;
   creditData: any;
+  scoreData: any;
 
   constructor(private router: Router, private accountService: AccountService) { }
 
@@ -37,6 +38,10 @@ export class AccountPage implements OnInit {
     this.accountService.onCreditDataChanged.subscribe((creditData) => {
       console.log(creditData);
       this.creditData = creditData;
+    })
+    this.accountService.onAccountScoreDataChanged.subscribe((scoreData) => {
+      console.log(scoreData);
+      this.scoreData = scoreData;
     })
   }
 

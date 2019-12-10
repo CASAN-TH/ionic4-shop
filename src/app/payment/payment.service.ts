@@ -101,7 +101,7 @@ export class PaymentService {
     return new Promise((resolve, reject) => {
       if (mockup) {
         this.http.get('../../assets/json/payment/selectdown.json').subscribe((res: any) => {
-          this.onVouchersDataChanged.next(res.data);
+          this.onSelectdownDataChanged.next(res.data);
         }, reject)
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {

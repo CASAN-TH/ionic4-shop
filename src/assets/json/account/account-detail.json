@@ -2,13 +2,6 @@
     "status": 200,
     "data": {
         "profileImageURL": "https://images.pexels.com/photos/1820567/pexels-photo-1820567.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "username": "กฤษตฤณ เทียนช้าง",
-        "wishlist": 1,
-        "followedshop": 1,
-        "browsehistory": 1,
-        "credit": 10000,
-        "coupon": 5,
-        "tcoin": 1,
-        "currentamount": 0
+        "username": "กฤษตฤณ เทียนช้าง"
     }
 }
