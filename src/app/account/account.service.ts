@@ -6,6 +6,7 @@ import { environment } from 'src/environments/environment';
 
 const api_url = environment.apiUrl + '/api/accounts/';
 const mockup = environment.mockup;
+const urlApi = environment.apiUrl
 
 @Injectable({
   providedIn: 'root'
@@ -61,7 +62,7 @@ export class AccountService {
           this.onAccountData2Changed.next(res.data);
         },reject)
       }else{
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(urlApi + "/api/me", { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onAccountData2Changed.next(res.data);
         },reject)
       }
