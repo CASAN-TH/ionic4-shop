@@ -1,10 +1,10 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons slot="start" (click)="goBackClick()" *ngIf="url === '/credit'">
-          <ion-button>
-            <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
-          </ion-button>
-        </ion-buttons>
+    <ion-buttons mode="ios" slot="start" (click)="goBackClick()" *ngIf="url === '/credit'">
+      <ion-button>
+        <ion-icon mode="ios" slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>วงเงิน</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -19,7 +19,11 @@
       <ion-col size="12" class="ion-text-center">
         <div>วงเงินที่ใช้ได้</div>
         <div *ngIf="creditPoint && creditPoint.credit" class="point-size">{{creditPoint.credit.creditremain}}</div>
-        <ion-button class="ion-margin-top	ion-margin-bottom" fill="outline" (click)="openModalCreditPoint()">ตรวจสอบรายละเอียด</ion-button>
+        <ion-chip color="primary" (click)="openModalCreditPoint()">
+          <ion-label>
+            ตรวจสอบรายละเอียด
+          </ion-label>
+        </ion-chip>
       </ion-col>
     </ion-row>
     <ion-row class="ion-text-center">
