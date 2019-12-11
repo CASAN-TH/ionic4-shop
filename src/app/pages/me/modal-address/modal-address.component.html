@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start" (click)="ModalDismiss()">
+    <ion-buttons slot="start" (click)="ModalDismiss()" mode="ios">
       <ion-button>
-        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        <ion-icon mode="ios" slot="icon-only" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title>Address</ion-title>
@@ -25,12 +25,12 @@
       <ion-item>
         <ion-label>
           <p>ที่อยู่จัดส่ง</p>
-          <ion-buttons>
+          <ion-buttons mode="ios">
             <ion-button (click)="onEditAddress()">
-              <ion-icon name="create"></ion-icon>
+              <ion-icon mode="ios" name="create"></ion-icon>
             </ion-button>
             <ion-button (click)="onDeleteAddress()">
-              <ion-icon name="trash"></ion-icon>
+              <ion-icon mode="ios" name="trash"></ion-icon>
             </ion-button>
           </ion-buttons>
         </ion-label>
@@ -53,4 +53,6 @@
 
 </ion-content>
 
+<div *ngIf="AddressData">
 <ion-button expand="full" (click)="onAddNewAddress()">+ เพิ่มที่อยู่ใหม่</ion-button>
+</div>

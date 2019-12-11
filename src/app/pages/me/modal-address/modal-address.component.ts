@@ -29,7 +29,8 @@ export class ModalAddressComponent implements OnInit {
   }
 
   onAddNewAddress(){
-    console.log("onAddNewAddress");
+    this.router.navigate(['addaddress']);
+    this.modalController.dismiss();
   }
 
   onDeleteAddress(){
