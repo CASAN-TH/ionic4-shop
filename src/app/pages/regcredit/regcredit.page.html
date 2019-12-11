@@ -1,8 +1,10 @@
 <ion-header *ngIf="!isTakeCamera">
   <ion-toolbar>
-    <ion-button fill="clear" slot="start" (click)="goBackClick()">
-      <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
-    </ion-button>
+    <ion-buttons slot="start" mode="ios" (click)="goBackClick()">
+      <ion-button>
+        <ion-icon mode="ios" slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>สมัครวงเงิน</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,27 +14,16 @@
     <mat-step label="ข้อมูลส่วนตัว" completed="false">
       <ion-row>
         <ion-col size="3"></ion-col>
-        <ion-col
-          size="6"
-          class="ion-text-center img-container"
-          (click)="openModalCard('front')"
-          *ngIf="regProfile.frontcardimaged.url === ''"
-        >
+        <ion-col size="6" class="ion-text-center img-container" (click)="openModalCard('front')"
+          *ngIf="regProfile.frontcardimaged.url === ''">
           <div class="avatar-icon">
             <ion-icon name="camera"></ion-icon>
           </div>
           <img class="img-size" src="../../assets/images/frontThaiCard.jpg" />
         </ion-col>
-        <ion-col
-          size="6"
-          class="ion-text-center img-container"
-          *ngIf="regProfile.frontcardimaged.url !== ''"
-        >
+        <ion-col size="6" class="ion-text-center img-container" *ngIf="regProfile.frontcardimaged.url !== ''">
           <div class="icon-container">
-            <div
-              class="icon-close-position"
-              (click)="onDeleteImg('frontcardimaged')"
-            >
+            <div class="icon-close-position" (click)="onDeleteImg('frontcardimaged')">
               <ion-icon name="close"></ion-icon>
             </div>
           </div>
@@ -42,31 +33,16 @@
       </ion-row>
       <ion-row>
         <ion-col size="3"></ion-col>
-        <ion-col
-          size="6"
-          class="ion-text-center img-container"
-          (click)="openModalCard('back')"
-          *ngIf="regProfile.backcardimaged.url === ''"
-        >
+        <ion-col size="6" class="ion-text-center img-container" (click)="openModalCard('back')"
+          *ngIf="regProfile.backcardimaged.url === ''">
           <div class="avatar-icon">
             <ion-icon name="camera"></ion-icon>
           </div>
-          <img
-            class="img-size"
-            src="../../assets/images/backThaiCard.jpg"
-            alt=""
-          />
+          <img class="img-size" src="../../assets/images/backThaiCard.jpg" alt="" />
         </ion-col>
-        <ion-col
-          size="6"
-          class="ion-text-center img-container"
-          *ngIf="regProfile.backcardimaged.url !== ''"
-        >
+        <ion-col size="6" class="ion-text-center img-container" *ngIf="regProfile.backcardimaged.url !== ''">
           <div class="icon-container">
-            <div
-              class="icon-close-position"
-              (click)="onDeleteImg('backcardimaged')"
-            >
+            <div class="icon-close-position" (click)="onDeleteImg('backcardimaged')">
               <ion-icon name="close"></ion-icon>
             </div>
           </div>
@@ -76,38 +52,20 @@
       </ion-row>
       <ion-row>
         <ion-col size="3"></ion-col>
-        <ion-col
-          size="6"
-          class="ion-text-center img-container"
-          (click)="openModalCard('withme')"
-          *ngIf="regProfile.personwithcardimaged.url === ''"
-        >
+        <ion-col size="6" class="ion-text-center img-container" (click)="openModalCard('withme')"
+          *ngIf="regProfile.personwithcardimaged.url === ''">
           <div class="avatar-icon">
             <ion-icon name="camera"></ion-icon>
           </div>
-          <img
-            class="img-size img-radius"
-            src="../../assets/images/oweThaiCard.jpg"
-            alt=""
-          />
+          <img class="img-size img-radius" src="../../assets/images/oweThaiCard.jpg" alt="" />
         </ion-col>
-        <ion-col
-          size="6"
-          class="ion-text-center img-container"
-          *ngIf="regProfile.personwithcardimaged.url !== ''"
-        >
+        <ion-col size="6" class="ion-text-center img-container" *ngIf="regProfile.personwithcardimaged.url !== ''">
           <div class="icon-container">
-            <div
-              class="icon-close-position"
-              (click)="onDeleteImg('personwithcardimaged')"
-            >
+            <div class="icon-close-position" (click)="onDeleteImg('personwithcardimaged')">
               <ion-icon name="close"></ion-icon>
             </div>
           </div>
-          <img
-            class="img-binding"
-            [src]="regProfile.personwithcardimaged.url"
-          />
+          <img class="img-binding" [src]="regProfile.personwithcardimaged.url" />
         </ion-col>
         <ion-col size="3"></ion-col>
       </ion-row>
@@ -136,29 +94,16 @@
       </ion-item>
       <ion-item>
         <ion-label>วันเดือนปีเกิด</ion-label>
-        <ion-datetime
-          placeholder="เลิือก"
-          [(ngModel)]="regProfile.birthdate"
-        ></ion-datetime>
+        <ion-datetime placeholder="เลิือก" [(ngModel)]="regProfile.birthdate"></ion-datetime>
       </ion-item>
       <ion-item>
         <ion-label position="floating">ที่อยู่ตามบัตรประชาชน</ion-label>
-        <ion-textarea
-          rows="6"
-          cols="20"
-          [(ngModel)]="regProfile.addressbycard"
-        ></ion-textarea>
+        <ion-textarea rows="6" cols="20" [(ngModel)]="regProfile.addressbycard"></ion-textarea>
       </ion-item>
       <div class="ion-margin-top hint-style">
         กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
       </div>
-      <button
-        style="width: 100%;"
-        mat-raised-button
-        color="primary"
-        matStepperNext
-        (click)="onNext()"
-      >
+      <button style="width: 100%;" mat-raised-button color="primary" matStepperNext (click)="onNext()">
         ขั้นตอนต่อไป
       </button>
     </mat-step>
@@ -170,22 +115,12 @@
       </ion-item>
       <ion-item>
         <ion-label position="floating">ที่อยู่ปัจจุบัน</ion-label>
-        <ion-textarea
-          rows="6"
-          cols="20"
-          [(ngModel)]="regProfile.address"
-        ></ion-textarea>
+        <ion-textarea rows="6" cols="20" [(ngModel)]="regProfile.address"></ion-textarea>
       </ion-item>
       <div class="ion-margin-top hint-style">
         กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
       </div>
-      <button
-        style="width: 100%;"
-        mat-raised-button
-        color="primary"
-        matStepperNext
-        (click)="onNext()"
-      >
+      <button style="width: 100%;" mat-raised-button color="primary" matStepperNext (click)="onNext()">
         ขั้นตอนต่อไป
       </button>
     </mat-step>
@@ -193,10 +128,7 @@
     <mat-step label="บุคคลติดต่อฉุกเฉิน" completed="false">
       <ion-item>
         <ion-label>ความสัมพันธ์</ion-label>
-        <ion-select
-          placeholder="เลิือก"
-          [(ngModel)]="dataSecondContact.relation"
-        >
+        <ion-select placeholder="เลิือก" [(ngModel)]="dataSecondContact.relation">
           <ion-select-option value="father">พ่อ</ion-select-option>
           <ion-select-option value="mother">แม่</ion-select-option>
           <ion-select-option value="relative">ญาติ</ion-select-option>
@@ -221,12 +153,7 @@
       <div class="ion-margin-top hint-style">
         กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
       </div>
-      <button
-        style="width: 100%;"
-        mat-raised-button
-        color="primary"
-        (click)="onFinish()"
-      >
+      <button style="width: 100%;" mat-raised-button color="primary" (click)="onFinish()">
         ส่ง
       </button>
     </mat-step>
@@ -235,4 +162,3 @@
 
 <ion-content *ngIf="isTakeCamera" class="content-transparent">
 </ion-content>
-
