@@ -1,6 +1,31 @@
 {
     "status": 200,
     "data": {
-        "name": "test1"
+        "cerrency": "(฿)",
+        "limit": "วงเงิน",
+        "amount": "7,400",
+        "order_amount": [
+            {
+                "name": "ยอดการสั่งซื้อ",
+                "cerrency": "฿",
+                "amount_price": "14,900"
+            }
+        ],
+        "down_payment": [
+            {
+                "name": "เงินดาวน์",
+                "cerrency": "฿",
+                "amount": "7,400"
+            }
+        ],
+        "monthly_payment": [
+            {
+                "name": "จ่ายรายเดือน",
+                "cerrency": "฿",
+                "installment_amount": "727.66",
+                "installment_period": "x12",
+                "unit": "mo."
+            }
+        ]
     }
 }
