@@ -18,6 +18,8 @@ export class PaymentService {
   onAddressDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onSelectdownDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onAddressModalDataChanged:BehaviorSubject<any> = new BehaviorSubject({});
+ 
 
   constructor(private http: HttpClient) { }
 
@@ -35,6 +37,9 @@ export class PaymentService {
     this.getAddressData();
     this.getVouchersModalData();
     this.getSelectdownModalData();
+    this.getAddressModalData();
+  
+ 
 
     return;
   }
@@ -83,6 +88,7 @@ export class PaymentService {
 
     })
   }
+  
   getVouchersModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
@@ -111,6 +117,21 @@ export class PaymentService {
 
     })
   }
+  getAddressModalData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/me/me-detail.json').subscribe((res: any) => {
+          this.onAddressModalDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onAddressModalDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+ 
   createPaymentData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {

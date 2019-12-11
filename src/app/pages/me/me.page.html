@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start" (click)="onBackClick()">
+    <ion-buttons mode="ios" slot="start" (click)="onBackClick()">
       <ion-button>
-        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        <ion-icon mode="ios" slot="icon-only" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title>ข้อมูลของฉัน</ion-title>
@@ -20,7 +20,7 @@
       <span class="ion-padding-start">
         <ion-label>รูปโปรไฟล์</ion-label>
       </span>
-      <ion-buttons slot="end">
+      <ion-buttons mode="ios" slot="end">
         <ion-button>
           <ion-icon slot="icon-only" name="arrow-forward" mode="ios"></ion-icon>
         </ion-button>
@@ -29,7 +29,7 @@
     <ion-item (click)="nicknameModal()">
       <ion-label>ชื่อเล่น</ion-label>
       <p>{{meData.nickname}}</p>
-      <ion-buttons slot="end">
+      <ion-buttons mode="ios" slot="end">
         <ion-button>
           <ion-icon slot="icon-only" name="arrow-forward" mode="ios"></ion-icon>
         </ion-button>
@@ -38,7 +38,7 @@
     <ion-item (click)="phoneModal()">
       <ion-label>หมายเลขโทรศัพท์</ion-label>
       <p>{{meData.phone}}</p>
-      <ion-buttons slot="end">
+      <ion-buttons mode="ios" slot="end">
         <ion-button>
           <ion-icon slot="icon-only" name="arrow-forward" mode="ios"></ion-icon>
         </ion-button>
@@ -46,7 +46,7 @@
     </ion-item>
     <ion-item (click)="addresslModal()">
       <ion-label>ที่อยู่จัดส่ง</ion-label>
-      <ion-buttons slot="end">
+      <ion-buttons mode="ios" slot="end">
         <ion-button>
           <ion-icon slot="icon-only" name="arrow-forward" mode="ios"></ion-icon>
         </ion-button>
@@ -54,7 +54,7 @@
     </ion-item>
     <ion-item (click)="socialModal()">
       <ion-label>บัญชีโซเชียลมีเดีย</ion-label>
-      <ion-buttons slot="end">
+      <ion-buttons mode="ios" slot="end">
         <ion-button>
           <ion-icon slot="icon-only" name="arrow-forward" mode="ios"></ion-icon>
         </ion-button>
@@ -63,7 +63,7 @@
     <ion-item (click)="passwordModal()">
       <ion-label>รหัสผ่านเข้าสู่ระบบ</ion-label>
       <p>เเก้ไข</p>
-      <ion-buttons slot="end">
+      <ion-buttons mode="ios" slot="end">
         <ion-button>
           <ion-icon slot="icon-only" name="arrow-forward" mode="ios"></ion-icon>
         </ion-button>
@@ -72,7 +72,7 @@
     <ion-item (click)="creditPointModal()">
       <ion-label>สมัครวงเงิน</ion-label>
       <p>ผ่าน</p>
-      <ion-buttons slot="end">
+      <ion-buttons mode="ios" slot="end">
         <ion-button>
           <ion-icon slot="icon-only" name="arrow-forward" mode="ios"></ion-icon>
         </ion-button>
@@ -80,7 +80,7 @@
     </ion-item>
     <ion-item (click)="onOpenCreditInfoPage()">
       <ion-text>ข้อมูลเพิ่มเติม</ion-text>
-      <ion-buttons slot="end">
+      <ion-buttons mode="ios" slot="end">
         <ion-button>
           <ion-icon slot="icon-only" name="arrow-forward" mode="ios"></ion-icon>
         </ion-button>

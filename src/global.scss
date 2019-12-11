@@ -29,10 +29,13 @@
   padding-bottom: 10px !important;
 }
 
-.ion-align-items-center{
+.ion-align-items-center {
   display: flex;
 }
 
+.ion-justify-content-center {
+  display: flex;
+}
 
 .my-modal-css {
   position: absolute;
@@ -51,6 +54,6 @@
   background-color: #efefef;
 }
 
-.modal-wrapper{
-  background: transparent !important;
-}
+// .modal-wrapper{
+//   background: transparent !important;
+// }

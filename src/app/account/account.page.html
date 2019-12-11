@@ -1,261 +1,245 @@
-<ion-header>
-
-  <ion-row>
-    <ion-col size="9">
-      <ion-item *ngIf="accountData" lines="none">
-        <ion-avatar slot="start">
-          <img (click)="onToMePage()" [src]=accountData.profileImageURL>
-        </ion-avatar>
-        <ion-label> {{accountData.username}}</ion-label>
-      </ion-item>
-
-      <ion-item *ngIf="!accountData">
-        <ion-avatar slot="start">
-          <img src="https://image.flaticon.com/icons/svg/145/145845.svg">
-        </ion-avatar>
-        <ion-label (click)="onToLoginPage()">Login/Register</ion-label>
-      </ion-item>
-    </ion-col>
-
-
-    <ion-col size="3" class="ion-align-items-center">
-      <div>
-        <ion-buttons>
-
-          <ion-button (click)="onToMessagePage()">
-            <ion-icon slot="icon-only" src="https://image.flaticon.com/icons/svg/126/126501.svg"></ion-icon>
-          </ion-button>
-
-          <ion-button (click)="onToSettingPage()">
-            <ion-icon slot="icon-only" src="https://image.flaticon.com/icons/svg/126/126472.svg"></ion-icon>
-          </ion-button>
-
-        </ion-buttons>
-      </div>
-    </ion-col>
-
-  </ion-row>
-
-
-</ion-header>
-
 <ion-content>
-
-  <ion-row *ngIf="accountData" class="ion-text-center">
-    <ion-col size="4" (click)="onToWishlistPage()">
-      <h1>{{scoreData.wishlist}}</h1>
-      <p>Wishlist</p>
-    </ion-col>
-    <ion-col size="4" (click)="onToFollowedShopPage()">
-      <h1>{{scoreData.followedshop}}</h1>
-      <p>Followed Shop</p>
-    </ion-col>
-    <ion-col size="4" (click)="onToBrowseHistoryPage()">
-      <h1>{{scoreData.browsehistory}}</h1>
-      <p>Browse History</p>
-    </ion-col>
-  </ion-row>
-
-  <ion-row *ngIf="!accountData" class="ion-text-center">
-    <ion-col size="4" (click)="onToWishlistPage()">
-      <h1>--</h1>
-      <p>Wishlist</p>
-    </ion-col>
-    <ion-col size="4" (click)="onToFollowedShopPage()">
-      <h1>--</h1>
-      <p>Followed Shop</p>
-    </ion-col>
-    <ion-col size="4" (click)="onToBrowseHistoryPage()">
-      <h1>--</h1>
-      <p>Browse History</p>
-    </ion-col>
-  </ion-row>
-
-
-
-  <ion-card>
-    <ion-grid>
-      <ion-item (click)="onToViellAllMyOrdersPage()">
-        <ion-row>
-          <div>
-            <ion-col size="12">
-              <h5>
-                My Orders
-              </h5>
-            </ion-col>
-          </div>
-        </ion-row>
-
-        <ion-buttons>
-          <ion-button>
-            <p>
-              view all >
-            </p>
-          </ion-button>
-        </ion-buttons>
-      </ion-item>
-
-      <ion-row class="ion-text-center">
-        <ion-col size="3" (click)="onToPayViellAllMyOrdersPage()">
-          <div>
-            <img src="https://image.flaticon.com/icons/svg/1086/1086741.svg">
-            <p>To Pay</p>
-          </div>
-        </ion-col>
-        <ion-col size="3" (click)="onToShipViellAllMyOrdersPage()">
-          <div>
-            <img src="https://image.flaticon.com/icons/svg/164/164414.svg">
-            <p>To Ship</p>
-          </div>
-        </ion-col>
-        <ion-col size="3" (click)="onToRecieveViellAllMyOrdersPage()">
-          <div>
-            <img src="https://image.flaticon.com/icons/svg/1493/1493693.svg">
-            <p>To recieve</p>
-          </div>
-        </ion-col>
-        <ion-col size="3" (click)="onToReviewsViellAllMyOrdersPage()">
-          <div>
-            <img src="https://image.flaticon.com/icons/svg/1055/1055673.svg">
-            <p>Waiting reviews</p>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
-
-  <ion-card>
-    <ion-grid *ngIf="accountData">
-      <ion-item (click)="onToViewAllMyBills()">
-        <ion-row>
-          <div>
-            <ion-col size="6">
-              <h5>
-                My Bills
-              </h5>
-            </ion-col>
-          </div>
-
-          <ion-buttons>
+    <ion-row>
+      <ion-col size="9">
+        <ion-item *ngIf="accountData" lines="none">
+          <ion-avatar slot="start">
+            <img (click)="onToMePage()" [src]=accountData.profileImageURL>
+          </ion-avatar>
+          <ion-label> {{accountData.username}}</ion-label>
+        </ion-item>
+  
+        <ion-item *ngIf="!accountData">
+          <ion-avatar slot="start">
+            <img src="https://image.flaticon.com/icons/svg/145/145845.svg">
+          </ion-avatar>
+          <ion-label (click)="onToLoginPage()">เข้าสู่ระบบ/ลงทะเบียน</ion-label>
+        </ion-item>
+      </ion-col>
+  
+      <ion-col size="3" class="ion-align-items-center ion-justify-content-center">
+        <div>
+          <ion-buttons mode="ios">
+  
+            <ion-button (click)="onToMessagePage()">
+              <ion-icon slot="icon-only" src="https://image.flaticon.com/icons/svg/126/126501.svg"></ion-icon>
+            </ion-button>
+  
+            <ion-button (click)="onToSettingPage()">
+              <ion-icon slot="icon-only" src="https://image.flaticon.com/icons/svg/126/126472.svg"></ion-icon>
+            </ion-button>
+  
+          </ion-buttons>
+        </div>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row *ngIf="accountData" class="ion-text-center">
+      <ion-col size="4" (click)="onToWishlistPage()">
+        <h2>{{scoreData.wishlist}}</h2>
+        <p>รายการโปรด</p>
+      </ion-col>
+      <ion-col size="4" (click)="onToFollowedShopPage()">
+        <h2>{{scoreData.followedshop}}</h2>
+        <p>ร้านค้าที่ติดตาม</p>
+      </ion-col>
+      <ion-col size="4" (click)="onToBrowseHistoryPage()">
+        <h2>{{scoreData.browsehistory}}</h2>
+        <p>ประวัติการเข้าชม</p>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row *ngIf="!accountData" class="ion-text-center">
+      <ion-col size="4" (click)="onToWishlistPage()">
+        <h1>--</h1>
+        <p>รายการโปรด</p>
+      </ion-col>
+      <ion-col size="4" (click)="onToFollowedShopPage()">
+        <h1>--</h1>
+        <p>ร้านค้าที่ติดตาม</p>
+      </ion-col>
+      <ion-col size="4" (click)="onToBrowseHistoryPage()">
+        <h1>--</h1>
+        <p>ประวัติการเข้าชม</p>
+      </ion-col>
+    </ion-row>
+  
+  
+  
+    <ion-card>
+      <ion-grid>
+        <ion-item>
+          <h5 class="ion-margin-top ion-margin-bottom">
+            รายการสั่งซื้อของฉัน
+          </h5>
+          <ion-buttons mode="ios" (click)="onToViellAllMyOrdersPage()">
             <ion-button>
-              <p>
-                view all >
+              <p class="ion-margin-top ion-margin-bottom font-more">
+                ดูทั้งหมด >
               </p>
             </ion-button>
           </ion-buttons>
-
-        </ion-row>
-      </ion-item>
-      <ion-row>
-        <h5>No Bills</h5>
-      </ion-row>
-    </ion-grid>
-
-    <ion-row *ngIf="!accountData">
-      <ion-col size="12">
-        <h2>Get the highest credit limit</h2>
-      </ion-col>
-      <ion-col size="6">
-        <h1>
-          ฿100,000
-        </h1>
-      </ion-col>
-      <ion-col size="6">
-        <p>Apply</p>
-      </ion-col>
-    </ion-row>
-
-
-  </ion-card>
-
-  <ion-card class="ion-text-center">
-    <ion-grid>
-      <ion-item>
-        <ion-row>
-          <ion-col size="12">
-            <h5>
-              My Assets
-            </h5>
+        </ion-item>
+  
+        <ion-row class="ion-text-center">
+          <ion-col size="3" (click)="onToPayViellAllMyOrdersPage()">
+            <div>
+              <img src="https://image.flaticon.com/icons/svg/1086/1086741.svg">
+              <p>รอการชำระเงิน</p>
+            </div>
+          </ion-col>
+          <ion-col size="3" (click)="onToShipViellAllMyOrdersPage()">
+            <div>
+              <img src="https://image.flaticon.com/icons/svg/164/164414.svg">
+              <p>รอการจัดส่ง</p>
+            </div>
+          </ion-col>
+          <ion-col size="3" (click)="onToRecieveViellAllMyOrdersPage()">
+            <div>
+              <img src="https://image.flaticon.com/icons/svg/1493/1493693.svg">
+              <p>รอรับสินค้า</p>
+            </div>
+          </ion-col>
+          <ion-col size="3" (click)="onToReviewsViellAllMyOrdersPage()">
+            <div>
+              <img src="https://image.flaticon.com/icons/svg/1055/1055673.svg">
+              <p>รอการรีวิว</p>
+            </div>
           </ion-col>
         </ion-row>
-      </ion-item>
-      <ion-row *ngIf="accountData">
-        <ion-col size="3" (click)="onToCreditPage()">
-          <h1>{{creditData.credit.creditremain}}</h1>
-          <p>Available Credit</p>
-        </ion-col>
-        <ion-col size="3" (click)="onToMyCouponPage()">
-          <h1> {{scoreData.coupon}}</h1>
-          <p>Coupon</p>
-        </ion-col>
-        <ion-col size="3" (click)="onToTcoinPage()">
-          <h1>{{scoreData.tcoin}}</h1>
-          <p>Tcoin</p>
-        </ion-col>
-        <ion-col size="3" (click)="onToCurrentAmountPage()">
-          <h1> {{scoreData.currentamount}}</h1>
-          <p>Current amount</p>
-        </ion-col>
-      </ion-row>
-
+      </ion-grid>
+    </ion-card>
+  
+    <ion-card>
+      <ion-grid *ngIf="accountData">
+        <ion-item>
+          <h5 class="ion-margin-top ion-margin-bottom">
+            บิลของฉัน
+          </h5>
+          <ion-buttons mode="ios" (click)="onToViewAllMyBills()">
+            <ion-button>
+              <p class="ion-margin-top ion-margin-bottom font-more">
+                ดูทั้งหมด >
+              </p>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+        <ion-row>
+          <div class="ion-padding-start">
+            <h5>ยังไม่มีบิล</h5>
+          </div>
+        </ion-row>
+      </ion-grid>
+  
       <ion-row *ngIf="!accountData">
-        <ion-col size="3" (click)="onToCreditPage()">
-          <h1>--</h1>
-          <p>Available Credit</p>
+        <ion-col size="12">
+          <h2>รับวงเงินสูงสุด</h2>
         </ion-col>
-        <ion-col size="3" (click)="onToMyCouponPage()">
-          <h1>--</h1>
-          <p>Coupon</p>
+        <ion-col size="6">
+          <h1>
+            ฿100,000
+          </h1>
         </ion-col>
-        <ion-col size="3" (click)="onToTcoinPage()">
-          <h1>--</h1>
-          <p>Tcoin</p>
-        </ion-col>
-        <ion-col size="3" (click)="onToCurrentAmountPage()">
-          <h1>--</h1>
-          <p>Current amount</p>
+        <ion-col size="6">
+          <p>ไปสมัคร</p>
         </ion-col>
       </ion-row>
-
-    </ion-grid>
-  </ion-card>
-
-  <ion-card>
-    <ion-row>
-      <ion-col size="6" *ngFor="let promo of promotionData.promotions" (click)="onToPromotion(promo.name)">
-        <img [src]="promo.image">
-      </ion-col>
-    </ion-row>
-  </ion-card>
-
-  <ion-card class="ion-text-center">
-    <ion-row>
-      <ion-col size="3" (click)="onToHelpCenterPage()">
-        <img class="icon" src="https://image.flaticon.com/icons/svg/149/149150.svg">
-        <p>Help Center</p>
-      </ion-col>
-      <ion-col size="3" (click)="onToCuustomerServicePage()">
-        <img class="icon" src="https://image.flaticon.com/icons/svg/223/223494.svg">
-        <p>Customer Service</p>
-      </ion-col>
-      <ion-col size="3" (click)="onToLanguagesPage()">
-        <img class="icon" src="https://image.flaticon.com/icons/svg/984/984204.svg">
-        <p>Languages</p>
-      </ion-col>
-      <ion-col size="3" (click)="onToShippingAddressPage()">
-        <img class="icon" src="https://image.flaticon.com/icons/svg/149/149441.svg">
-        <p>Shipping Address</p>
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
-
-  <ion-card>
-    <ion-slides pager="true" [options]="slideOpts">
-      <ion-slide *ngFor="let ads of promotionData.ads">
-        <img [src]="ads.image">
-      </ion-slide>
-    </ion-slides>
-  </ion-card>
-
-</ion-content>
+    </ion-card>
+  
+    <ion-card class="ion-text-center">
+      <ion-grid>
+        <ion-item>
+          <ion-row>
+            <ion-col size="12">
+              <h5 class="ion-margin-top ion-margin-bottom">
+                สิทธิประโยชน์ของฉัน
+              </h5>
+            </ion-col>
+          </ion-row>
+        </ion-item>
+        <ion-row *ngIf="accountData">
+          <ion-col size="3" (click)="onToCreditPage()">
+            <h2>{{creditData.credit.creditremain}}</h2>
+            <p>วงเงินที่ใช้ได้</p>
+          </ion-col>
+          <ion-col size="3" (click)="onToMyCouponPage()">
+            <h2> {{scoreData.coupon}}</h2>
+            <p>คูปอง</p>
+          </ion-col>
+          <ion-col size="3" (click)="onToTcoinPage()">
+            <h2>{{scoreData.tcoin}}</h2>
+            <p>Tcoin</p>
+          </ion-col>
+          <ion-col size="3" (click)="onToCurrentAmountPage()">
+            <h2> {{scoreData.currentamount}}</h2>
+            <p>ยอดเงินปัจจุบัน</p>
+          </ion-col>
+        </ion-row>
+  
+        <ion-row *ngIf="!accountData">
+          <ion-col size="3" (click)="onToCreditPage()">
+            <h1>--</h1>
+            <p>วงเงินที่ใช้ได้</p>
+          </ion-col>
+          <ion-col size="3" (click)="onToMyCouponPage()">
+            <h1>--</h1>
+            <p>คูปอง</p>
+          </ion-col>
+          <ion-col size="3" (click)="onToTcoinPage()">
+            <h1>--</h1>
+            <p>Tcoin</p>
+          </ion-col>
+          <ion-col size="3" (click)="onToCurrentAmountPage()">
+            <h1>--</h1>
+            <p>ยอดเงินปัจจุบัน</p>
+          </ion-col>
+        </ion-row>
+  
+      </ion-grid>
+    </ion-card>
+  
+    <ion-card>
+      <ion-row>
+        <ion-col size="6" *ngFor="let promo of promotionData.promotions" (click)="onToPromotion(promo.name)">
+          <img [src]="promo.image">
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  
+    <ion-card class="ion-text-center">
+      <ion-row class="ion-padding-top">
+        <ion-col size="3" (click)="onToHelpCenterPage()">
+          <div class="ion-justify-content-center">
+            <img class="icon" src="https://image.flaticon.com/icons/svg/149/149150.svg">
+          </div>
+          <p>ศูนย์ช่วยเหลือ</p>
+        </ion-col>
+        <ion-col size="3" (click)="onToCuustomerServicePage()">
+          <div class="ion-justify-content-center">
+            <img class="icon" src="https://image.flaticon.com/icons/svg/223/223494.svg">
+          </div>
+          <p>ติดต่อฝ่ายบริการลูกค้า</p>
+        </ion-col>
+        <ion-col size="3" (click)="onToLanguagesPage()">
+          <div class="ion-justify-content-center">
+            <img class="icon" src="https://image.flaticon.com/icons/svg/984/984204.svg">
+          </div>
+          <p>ภาษา</p>
+        </ion-col>
+        <ion-col size="3" (click)="onToShippingAddressPage()">
+          <div class="ion-justify-content-center">
+            <img class="icon" src="https://image.flaticon.com/icons/svg/149/149441.svg">
+          </div>
+          <p>ที่อยู่รับสินค้า</p>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  
+    <ion-card>
+      <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide *ngFor="let ads of promotionData.ads">
+          <img [src]="ads.image">
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+  
+  </ion-content>
