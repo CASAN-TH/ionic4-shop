@@ -5,6 +5,7 @@ import { Location } from '@angular/common';
 import { ModalController, ActionSheetController } from '@ionic/angular';
 import { VouchersModalComponent } from '../productdetail/vouchers-modal/vouchers-modal.component';
 import { SelectdownModalComponent } from './selectdown-modal/selectdown-modal.component';
+import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
 
 @Component({
   selector: 'app-payment',
@@ -15,11 +16,12 @@ export class PaymentPage implements OnInit {
   select: any;
   downDataList: any;
   cartDataList: any;
-  addressData: any;
   VouchersData: any;
   selectdownData: any;
   percenSelected: any;
-
+  AddaddressData: any;
+  AddressModalData:any;
+  
 
 
   constructor(private router: Router,
@@ -37,9 +39,9 @@ export class PaymentPage implements OnInit {
       console.log(cartDataList);
       this.cartDataList = cartDataList;
     })
-    this.paymentService.onAddressDataChanged.subscribe((addressData: any) => {
-      console.log(addressData);
-      this.addressData = addressData;
+    this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
+      console.log(AddaddressData);
+      this.AddaddressData = AddaddressData;
     })
     this.paymentService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
@@ -49,6 +51,11 @@ export class PaymentPage implements OnInit {
       console.log(selectdownData);
       this.selectdownData = selectdownData;
     })
+    this.paymentService.onAddressModalDataChanged.subscribe((AddressModalData: any) => {
+      console.log(AddressModalData);
+      this.AddressModalData = AddressModalData;
+    })
+    
 
   }
 
@@ -57,6 +64,9 @@ export class PaymentPage implements OnInit {
   }
   onOrderClick() {
     this.router.navigate(['payfor'])
+  }
+  onAddaddressClick(){
+    this.router.navigate(['addaddress'])
   }
 
   async selectDownModal() {
@@ -82,7 +92,16 @@ export class PaymentPage implements OnInit {
     return await modal.present();
   }
 
-
+  async addresslModal() {
+    const modal = await this.modalController.create({
+      component: ModalAddressComponent,
+      componentProps: {
+        AddressData: this.AddressModalData.address
+      }
+    });
+    return await modal.present();
+  }
+  
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
       header: 'วิธีการชำระเงิน',
@@ -101,6 +120,9 @@ export class PaymentPage implements OnInit {
     await actionSheet.present();
   }
 
+
+
+  
   onOpenlistClick() {
     console.log("onOpenlistClick");
   }
