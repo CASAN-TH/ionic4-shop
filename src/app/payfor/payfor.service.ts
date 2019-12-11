@@ -27,48 +27,64 @@ export class PayforService {
   resolve(route: ActivatedRouteSnapshot): Observable<any> | Promise<any> | any {
     this.routeParams = route.params;
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
-    if (this.routeParams.id) {
-      this.getPayforData(this.routeParams.id);
-    } else {
-      this.getPayforDataList();
-    }
+
+    this.getPayforData();
+    // if (this.routeParams.id) {
+    //   this.getPayforData(this.routeParams.id);
+    // } else {
+    //   this.getPayforDataList();
+    // }
     return;
   }
 
   getPayforDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/payfor/payfor.json').subscribe((res: any) => {
           this.onPayforDataListChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onPayforDataListChanged.next(res.data);
-        },reject)
+        }, reject)
       }
     })
   }
 
-  getPayforData(id: string): Observable<any> | Promise<any> | any {
+  getPayforData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/payfor/payfor-detail.json').subscribe((res: any) => {
-          this.onPayforDataListChanged.next(res.data);
-        },reject)
-      }else{
-        this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onPayforDataChanged.next(res.data);
-        },reject)
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onPayforDataChanged.next(res.data);
+        }, reject)
       }
-      
+
     })
   }
+  // getPayforData(id: string): Observable<any> | Promise<any> | any {
+  //   return new Promise((resolve, reject) => {
+  //     if (mockup) {
+  //       this.http.get('../../assets/json/payfor/payfor-detail.json').subscribe((res: any) => {
+  //         this.onPayforDataChanged.next(res.data);
+  //       }, reject)
+  //     } else {
+  //       this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+  //         this.onPayforDataChanged.next(res.data);
+  //       }, reject)
+  //     }
+
+  //   })
+  // }
 
   createPayforData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getPayforDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -76,7 +92,7 @@ export class PayforService {
     return new Promise((resolve, reject) => {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getPayforDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -84,7 +100,7 @@ export class PayforService {
     return new Promise((resolve, reject) => {
       this.http.delete(api_url + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getPayforDataList();
-      },reject)
+      }, reject)
     })
   }
 

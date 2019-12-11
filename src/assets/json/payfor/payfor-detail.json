@@ -1,44 +1,31 @@
 {
     "status": 200,
-    "data": [
-        {
-            "amount_price": "14,900",
-            "cerrency": "฿",
-            "status_payment": "ผ่อนชำระ",
-            "down_payment": [
-                {
-                    "percent_down": "50",
-                    "unit": "%",
-                    "amount": "7,400",
-                    "cerrency": "฿"
-                }
-            ],
-            "period_service": "111.75",
-            "installment_amount": "727.66",
-            "installment_period": "x12",
-            "unit": "เดือน",
-            "period_option": [
-                {
-                    "_id": "212",
-                    "period": "3",
-                    "unit": "ต่องวด"
-                },
-                {
-                    "_id": "323",
-                    "period": "6",
-                    "unit": "ต่องวด"
-                },
-                {
-                    "_id": "676",
-                    "period": "9",
-                    "unit": "ต่องวด"
-                },
-                {
-                    "_id": "898",
-                    "period": "12",
-                    "unit": "ต่องวด"
-                }
-            ]
-        }
-    ]
+    "data": {
+        "cerrency": "(฿)",
+        "limit": "วงเงิน",
+        "amount": "7,400",
+        "order_amount": [
+            {
+                "name": "ยอดการสั่งซื้อ",
+                "cerrency": "฿",
+                "amount_price": "14,900"
+            }
+        ],
+        "down_payment": [
+            {
+                "name": "เงินดาวน์",
+                "cerrency": "฿",
+                "amount": "7,400"
+            }
+        ],
+        "monthly_payment": [
+            {
+                "name": "จ่ายรายเดือน",
+                "cerrency": "฿",
+                "installment_amount": "727.66",
+                "installment_period": "x12",
+                "unit": "mo."
+            }
+        ]
+    }
 }
