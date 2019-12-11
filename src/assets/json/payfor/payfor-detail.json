@@ -27,11 +27,15 @@
                 "unit": "mo."
             }
         ],
-        "recommended_method": {
-            "bank_name": "K PLUS",
-            "bank_img": ""
-        },
+        "recommended_method": "Recommended Method",
+        "online": "วิธีการชำระเงินออนไลน์",
+        "online_card": "บัตรธนาคารต้องเปิดใช้ธนาคารออนไลน์ ?",
+        "offline": "วิธีการชำระเงินออฟไลน์",
         "type_online": [
+            {
+                "bank_name": "K PLUS",
+                "bank_img": ""
+            },
             {
                 "type_name": "Debit/CreditCard",
                 "type_img": {

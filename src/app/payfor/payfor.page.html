@@ -77,12 +77,64 @@
     </ion-row>
   </ion-card>
 
+  <ion-row>
+    <ion-col size="12">
+      <p>{{payforData.recommended_method}}</p>
+    </ion-col>
+  </ion-row>
+
   <ion-card class="card-conten">
     <ion-row>
-      <ion-col size="12">
-        ddddddddd
+      <ion-col size="12" *ngFor="let item of payforData.type_online">
+        {{item.bank_name}}
       </ion-col>
     </ion-row>
   </ion-card>
+
+  <ion-row>
+    <ion-col size="12">
+      <p class="online_title">{{payforData.online}}</p>
+      <p class="online_subtitle">{{payforData.online_card}}</p>
+      <!-- <ion-text>{{payforData.online_card}}</ion-text> -->
+    </ion-col>
+  </ion-row>
+
+  <ion-card class="card-conten">
+    <ion-row>
+      <ion-col size="12" *ngFor="let item of payforData.type_online">
+        {{item.type_name}}
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <!-- <ion-card class="card-conten">
+    <ion-row>
+      <ion-col size="12" *ngFor="let item of payforData.type_online">
+        {{item.type_name}}
+      </ion-col>
+    </ion-row>
+  </ion-card> -->
+
+  <ion-row>
+    <ion-col size="12">
+      <p>{{payforData.offline}}</p>
+    </ion-col>
+  </ion-row>
+
+  <ion-card class="card-conten">
+    <ion-row>
+      <ion-col size="12" *ngFor="let item of payforData.type_offline">
+        {{item.type_name}}
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <!-- <ion-card class="card-conten">
+    <ion-row>
+      <ion-col size="12" *ngFor="let item of payforData.type_offline">
+        {{item.type_name}}
+      </ion-col>
+    </ion-row>
+  </ion-card> -->
 
 </ion-content>
