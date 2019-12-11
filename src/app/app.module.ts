@@ -45,6 +45,7 @@ import { ModalAddressComponent } from './pages/me/modal-address/modal-address.co
 import { ModalFeedbackComponent } from './setting/modal-feedback/modal-feedback.component';
 import { ModalAboutComponent } from './setting/modal-about/modal-about.component';
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -124,7 +125,8 @@ import { CameraPreview } from '@ionic-native/camera-preview/ngx';
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    TranslateModule.forRoot(),
   ],
   providers: [
     StatusBar,
