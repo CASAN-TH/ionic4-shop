@@ -26,6 +26,46 @@
                 "installment_period": "x12",
                 "unit": "mo."
             }
+        ],
+        "recommended_method": {
+            "bank_name": "K PLUS",
+            "bank_img": ""
+        },
+        "type_online": [
+            {
+                "type_name": "Debit/CreditCard",
+                "type_img": {
+                    "visa": "",
+                    "mastercard": "",
+                    "JCB": ""
+                }
+            },
+            {
+                "type_name": "Oline Banking",
+                "type_img": {
+                    "KBANK": "",
+                    "SCB": "",
+                    "BUALUNG": ""
+                }
+            }
+        ],
+        "type_offline": [
+            {
+                "type_name": "ATM Payment",
+                "type_img": {
+                    "KBANK": "",
+                    "SCB": "",
+                    "BUALUNG": ""
+                }
+            },
+            {
+                "type_name": "Counter Payment",
+                "type_img": {
+                    "bigc": "",
+                    "familymart": "",
+                    "teccolotus": ""
+                }
+            }
         ]
     }
 }
