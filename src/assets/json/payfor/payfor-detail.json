@@ -1,22 +1,71 @@
 {
     "status": 200,
-    "data": [
-        {
-            "amount_price": "14,900",
-            "cerrency": "฿",
-            "status_payment": "ผ่อนชำระ",
-            "down_payment": [
-                {
-                    "percent_down": "50",
-                    "unit": "%",
-                    "amount": "7,400",
-                    "cerrency": "฿"
+    "data": {
+        "cerrency": "(฿)",
+        "limit": "วงเงิน",
+        "amount": "7,400",
+        "order_amount": [
+            {
+                "name": "ยอดการสั่งซื้อ",
+                "cerrency": "฿",
+                "amount_price": "14,900"
+            }
+        ],
+        "down_payment": [
+            {
+                "name": "เงินดาวน์",
+                "cerrency": "฿",
+                "amount": "7,400"
+            }
+        ],
+        "monthly_payment": [
+            {
+                "name": "จ่ายรายเดือน",
+                "cerrency": "฿",
+                "installment_amount": "727.66",
+                "installment_period": "x12",
+                "unit": "mo."
+            }
+        ],
+        "recommended_method": {
+            "bank_name": "K PLUS",
+            "bank_img": ""
+        },
+        "type_online": [
+            {
+                "type_name": "Debit/CreditCard",
+                "type_img": {
+                    "visa": "",
+                    "mastercard": "",
+                    "JCB": ""
                 }
-            ],
-            "period_service": "111.75",
-            "installment_amount": "727.66",
-            "installment_period": "x12",
-            "unit": "เดือน"
-        }
-    ]
+            },
+            {
+                "type_name": "Oline Banking",
+                "type_img": {
+                    "KBANK": "",
+                    "SCB": "",
+                    "BUALUNG": ""
+                }
+            }
+        ],
+        "type_offline": [
+            {
+                "type_name": "ATM Payment",
+                "type_img": {
+                    "KBANK": "",
+                    "SCB": "",
+                    "BUALUNG": ""
+                }
+            },
+            {
+                "type_name": "Counter Payment",
+                "type_img": {
+                    "bigc": "",
+                    "familymart": "",
+                    "teccolotus": ""
+                }
+            }
+        ]
+    }
 }

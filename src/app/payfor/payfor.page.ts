@@ -9,14 +9,14 @@ import { PayforService } from './payfor.service';
   styleUrls: ['./payfor.page.scss'],
 })
 export class PayforPage implements OnInit {
-  payforDataList: any;
+  payforData: any;
 
   constructor(private router: Router, private payforService : PayforService, private _location: Location) { }
 
   ngOnInit() {
-    this.payforService.onPayforDataListChanged.subscribe((payforDataList:any)=>{
+    this.payforService.onPayforDataChanged.subscribe((payforDataList:any)=>{
       console.log(payforDataList);
-      this.payforDataList = payforDataList;
+      this.payforData = payforDataList;
     })
   }
   goBackClick() {
