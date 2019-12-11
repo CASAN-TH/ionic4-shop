@@ -33,21 +33,20 @@
   <ion-row>
     <ion-col size="12">
       <h3>Color</h3>
-      <ion-row>
-        <ion-col class="selectcolor" size="4" *ngFor="let item of SpecificationgiftData.selectcolor">
-          {{item.color}}
-        </ion-col>
-      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row *ngIf="SpecificationgiftData.selectcolor && SpecificationgiftData.selectcolor.length">
+    <ion-col class="selectcolor" size="4" text-center *ngFor="let item of SpecificationgiftData.selectcolor"
+      [class.ion-col-border]="item._id == specColorSelected" (click)="onspecColorClick(item._id)">
+      <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="item._id == specColorSelected"></ion-icon>
+      {{item.color}}
     </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col size="12">
-      <div>
-        <span>
-          <h3>{{SpecificationgiftData.quantity}}</h3>
-        </span>
-      </div>
+      <h3>{{SpecificationgiftData.quantity}}</h3>
     </ion-col>
   </ion-row>
 
@@ -57,14 +56,14 @@
   <ion-toolbar>
     <ion-row>
       <ion-col size="6" class="add-cart">
-        <ion-buttons>
+        <ion-buttons class="btn-center">
           <ion-button class="butcolor">
             เพิ่มใส่รถเข็น
           </ion-button>
         </ion-buttons>
       </ion-col>
       <ion-col size="6" class="buy">
-        <ion-buttons>
+        <ion-buttons class="btn-center">
           <ion-button class="butcolor">
             ซื้อทันที
           </ion-button>
