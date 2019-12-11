@@ -9,6 +9,7 @@ import { ModalController } from '@ionic/angular';
 export class SpecificationgiftModalComponent implements OnInit {
 
   @Input() SpecificationgiftData: any
+  specColorSelected: any
 
   constructor(public modalController: ModalController) { }
 
@@ -18,6 +19,12 @@ export class SpecificationgiftModalComponent implements OnInit {
 
   dismiss() {
     this.modalController.dismiss();
+  }
+
+  onspecColorClick(specColorId: any) {
+    // this.router.navigateByUrl('search/' + cate2Id);
+    console.log(specColorId);
+    this.specColorSelected = specColorId;
   }
 
 }
