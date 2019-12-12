@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { SearchPageRoutingModule } from './search-routing.module';
+import { SearchPageRoutingModule } from "./search-routing.module";
 
-import { SearchPage } from './search.page';
-import { MatTabsModule } from '@angular/material/tabs';
-import { ProductlistPage } from 'src/app/productlist/productlist.page';
+import { SearchPage } from "./search.page";
+import { MatTabsModule } from "@angular/material/tabs";
+import { ProductlistPageModule } from 'src/app/productlist/productlist.module';
 
 @NgModule({
   imports: [
@@ -16,9 +16,9 @@ import { ProductlistPage } from 'src/app/productlist/productlist.page';
     FormsModule,
     IonicModule,
     SearchPageRoutingModule,
-
+    ProductlistPageModule,
     MatTabsModule
   ],
-  declarations: [SearchPage, ProductlistPage]
+  declarations: [SearchPage]
 })
-export class SearchPageModule { }
+export class SearchPageModule {}

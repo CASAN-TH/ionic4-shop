@@ -6,8 +6,7 @@ import { Location } from '@angular/common'
 @Component({
   selector: 'app-search',
   templateUrl: './search.page.html',
-  styleUrls: ['./search.page.scss'],
-  inputs: ["recivedata"]
+  styleUrls: ['./search.page.scss']
 })
 export class SearchPage implements OnInit {
   searchData: any;
