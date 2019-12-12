@@ -5,6 +5,10 @@ ion-toolbar {
   color: #ffffff;
 }
 
+ion-slides{
+  // height: 200px;;
+}
+
 ion-grid {
   margin-top: 0.5rem;
   background-color: white;
@@ -33,7 +37,7 @@ ion-card {
   --ion-color-base: #f25454 !important;
 }
 .slide {
-  padding-top: 100px;
+  padding-top: 55px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -60,8 +64,20 @@ ion-card {
   margin-top: -20%;
 }
 .title-font {
+  margin-left: .5rem;
   margin-top: 0px;
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 5px;
   font-weight: bold;
+}
+.more {
+  --padding-start: 1.5rem !important;
+}
+
+.wrap-text {
+  white-space: nowrap; 
+  width: 99%; 
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
