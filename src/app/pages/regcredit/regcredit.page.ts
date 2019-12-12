@@ -93,6 +93,7 @@ export class RegcreditPage implements OnInit {
           this.isTakeCamera = true;
           const modal = await this.modalController.create({
             component: ModalCameraComponent,
+            cssClass: 'modal-camera-style',
             componentProps: {
               modalData: {
                 actionType : "front"
@@ -118,6 +119,7 @@ export class RegcreditPage implements OnInit {
           this.isTakeCamera = true;
           const modal = await this.modalController.create({
             component: ModalCameraComponent,
+            cssClass: 'modal-camera-style',
             componentProps: {
               modalData: {
                 actionType : "back"
@@ -143,6 +145,7 @@ export class RegcreditPage implements OnInit {
           this.isTakeCamera = true;
           const modal = await this.modalController.create({
             component: ModalCameraComponent,
+            cssClass: 'modal-camera-style',
             componentProps: {
               modalData: {
                 actionType : "withme"
