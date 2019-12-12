@@ -12,6 +12,7 @@ import { locale as thai } from "./i18n/th";
 })
 export class HomePage implements OnInit {
   homeDataList: any;
+  CateProductListData:any;
   showToolbar = false;
   constructor(
     private router: Router,
@@ -27,6 +28,10 @@ export class HomePage implements OnInit {
     this.homeService.onHomeDataListChanged.subscribe((homeDataList: any) => {
       console.log(homeDataList);
       this.homeDataList = homeDataList;
+    });
+    this.homeService.onCateProductListChanged.subscribe((CateProductListData: any) => {
+      console.log(CateProductListData);
+      this.CateProductListData = CateProductListData;
     });
   }
 

@@ -87,10 +87,11 @@
       </ion-item>
       <ion-item>
         <ion-label>เพศ</ion-label>
-        <ion-select placeholder="เลิือก" [(ngModel)]="regProfile.gender">
-          <ion-select-option value="male">ชาย</ion-select-option>
-          <ion-select-option value="female">หญิง</ion-select-option>
-        </ion-select>
+        <div class="ion-align-items-center" (click)="openActionGender()">
+          <ion-text *ngIf="regProfile.gender !==''">{{regProfile.gender}}</ion-text>
+          <ion-text *ngIf="regProfile.gender ===''">เลือก</ion-text>
+          <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+        </div>
       </ion-item>
       <ion-item>
         <ion-label>วันเดือนปีเกิด</ion-label>
@@ -127,16 +128,13 @@
 
     <mat-step label="บุคคลติดต่อฉุกเฉิน" completed="false">
       <ion-item>
-        <ion-label>ความสัมพันธ์</ion-label>
-        <ion-select placeholder="เลิือก" [(ngModel)]="dataSecondContact.relation">
-          <ion-select-option value="father">พ่อ</ion-select-option>
-          <ion-select-option value="mother">แม่</ion-select-option>
-          <ion-select-option value="relative">ญาติ</ion-select-option>
-          <ion-select-option value="friend">เพื่อน</ion-select-option>
-          <ion-select-option value="couple">คู่สมรส</ion-select-option>
-          <ion-select-option value="parent">ผู้ปกครอง</ion-select-option>
-        </ion-select>
-      </ion-item>
+          <ion-label>ความสัมพันธ์</ion-label>
+          <div class="ion-align-items-center" (click)="onActionRelation()">
+            <ion-text *ngIf="dataSecondContact.relation !==''">{{dataSecondContact.relation}}</ion-text>
+            <ion-text *ngIf="dataSecondContact.relation ===''">เลือก</ion-text>
+            <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+          </div>
+        </ion-item>
       <ion-item>
         <ion-label>ชื่อ</ion-label>
         <ion-input [(ngModel)]="dataSecondContact.name"></ion-input>

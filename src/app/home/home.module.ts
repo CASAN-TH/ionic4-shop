@@ -10,6 +10,8 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
 import { MatTabsModule } from '@angular/material/tabs';
 
+import { CateProductListPageModule } from '../cate-product-list/cate-product-list.module';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     IonicModule,
     TranslateModule,
     HomePageRoutingModule,
-    MatTabsModule
+    MatTabsModule,
+    CateProductListPageModule
   ],
   declarations: [HomePage]
 })

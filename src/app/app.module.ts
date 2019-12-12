@@ -48,6 +48,7 @@ import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 import { TranslateModule } from '@ngx-translate/core';
 
 
+
 @NgModule({
   declarations: [AppComponent, 
     ModalCardComponent, 
@@ -86,6 +87,8 @@ import { TranslateModule } from '@ngx-translate/core';
     ModalAssetdocsComponent,
     ModalAssetdocsDetailComponent,
     ModalJobComponent
+
+   
   ],
   entryComponents: [ModalCardComponent, 
     ModalCameraComponent, 

@@ -10,12 +10,14 @@ import { PaymentModalComponent } from '../productdetail/payment-modal/payment-mo
   selector: 'app-cart',
   templateUrl: './cart.page.html',
   styleUrls: ['./cart.page.scss'],
+  inputs:["recivedata"]
 })
 export class CartPage implements OnInit {
   cartDataList: any;
   reccommentDataList: any;
   SpecificationData:any;
   PaymentData: any;
+
 
   constructor(private router: Router,
     private cartService: CartService,
