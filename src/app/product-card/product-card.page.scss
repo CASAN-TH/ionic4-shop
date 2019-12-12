@@ -1,0 +1,25 @@
+ion-card {
+  -webkit-margin-start: 1px;
+  margin-inline-start: 1px;
+  -webkit-margin-end: 1px;
+  margin-inline-end: 1px;
+  background-color: #ffff;
+}
+
+ion-card-title {
+  white-space: nowrap;
+  width: 99%;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 6rem;
+}
+
+ion-chip {
+  background-color: #ff5a02;
+  color: white;
+}
+
+img {
+  margin-top: -20%;
+}

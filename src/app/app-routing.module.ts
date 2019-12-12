@@ -89,6 +89,14 @@ const routes: Routes = [
   {
     path: 'cate-product-list',
     loadChildren: () => import('./cate-product-list/cate-product-list.module').then( m => m.CateProductListPageModule)
+  },
+  {
+    path: 'product-card',
+    loadChildren: () => import('./product-card/product-card.module').then( m => m.ProductCardPageModule)
+  },
+  {
+    path: 'product-list-block',
+    loadChildren: () => import('./product-list-block/product-list-block.module').then( m => m.ProductListBlockPageModule)
   }
 
 

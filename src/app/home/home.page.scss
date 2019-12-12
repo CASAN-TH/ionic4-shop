@@ -19,12 +19,7 @@ ion-content {
   --background: rgb(241, 235, 235) !important;
 }
 
-ion-card {
-  -webkit-margin-start: 1px;
-  margin-inline-start: 1px;
-  -webkit-margin-end: 1px;
-  margin-inline-end: 1px;
-}
+
 
 .sc-ion-searchbar-ios-h {
   --icon-color: #ece8e8;
@@ -37,47 +32,14 @@ ion-card {
   --ion-color-base: #f25454 !important;
 }
 .slide {
-  padding-top: 55px;
+  padding-top: 70px;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.forecast_container {
-  overflow-x: scroll !important;
-  overflow-y: hidden;
-  word-wrap: break-word;
-}
-.block-product {
-  margin-top: -22%;
-}
 .shotcut {
   width: 70%;
 }
-.card-color {
-  background-color: #ffff;
-}
-.chip-color {
-  background-color: #ff5a02;
-  color: white;
-}
-.img-top {
-  margin-top: -20%;
-}
-.title-font {
-  margin-left: .5rem;
-  margin-top: 0px;
-  font-size: 20px;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-.more {
-  --padding-start: 1.5rem !important;
-}
 
-.wrap-text {
-  white-space: nowrap; 
-  width: 99%; 
-  font-size: 1rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+
+

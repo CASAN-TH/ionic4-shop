@@ -1,0 +1,17 @@
+<ion-card (click)="onProductdetailClick(recivedata._id)">
+  <ion-chip>
+    <ion-label>{{recivedata.discount}}</ion-label>
+  </ion-chip>
+  <img [src]="recivedata.image" />
+  <ion-card-content>
+    <ion-card-title>
+      {{recivedata.name}}
+    </ion-card-title>
+    <ion-card-subtitle>
+      {{recivedata.price.currency}} {{recivedata.price.amount}}
+    </ion-card-subtitle>
+    <ion-card-subtitle>
+      {{recivedata.installment.currency}}{{recivedata.installment.amount}}{{recivedata.installment.period}}
+    </ion-card-subtitle>
+  </ion-card-content>
+</ion-card>

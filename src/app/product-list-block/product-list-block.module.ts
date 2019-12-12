@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ProductlistPageRoutingModule } from './productlist-routing.module';
+import { ProductListBlockPageRoutingModule } from './product-list-block-routing.module';
 
-import { ProductlistPage } from './productlist.page';
+import { ProductListBlockPage } from './product-list-block.page';
 import { ProductCardPageModule } from '../product-card/product-card.module';
 
 @NgModule({
@@ -14,10 +14,10 @@ import { ProductCardPageModule } from '../product-card/product-card.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    ProductlistPageRoutingModule,
+    ProductListBlockPageRoutingModule,
     ProductCardPageModule
   ],
-  declarations: [ProductlistPage],
-  exports: [ProductlistPage]
+  declarations: [ProductListBlockPage],
+  exports: [ProductListBlockPage]
 })
-export class ProductlistPageModule {}
+export class ProductListBlockPageModule {}

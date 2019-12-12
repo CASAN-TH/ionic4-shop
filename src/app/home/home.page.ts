@@ -42,7 +42,5 @@ export class HomePage implements OnInit {
     }
   }
 
-  onProductdetailClick(productId: any) {
-    this.router.navigateByUrl('productdetail/' + productId);
-  }
+  
 }

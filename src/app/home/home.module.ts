@@ -11,6 +11,7 @@ import { HomePage } from './home.page';
 import { MatTabsModule } from '@angular/material/tabs';
 
 import { CateProductListPageModule } from '../cate-product-list/cate-product-list.module';
+import { ProductListBlockPageModule } from '../product-list-block/product-list-block.module';
 
 @NgModule({
   imports: [
@@ -20,7 +21,9 @@ import { CateProductListPageModule } from '../cate-product-list/cate-product-lis
     TranslateModule,
     HomePageRoutingModule,
     MatTabsModule,
-    CateProductListPageModule
+    ProductListBlockPageModule,
+    CateProductListPageModule,
+    
   ],
   declarations: [HomePage]
 })
