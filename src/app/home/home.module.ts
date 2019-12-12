@@ -9,13 +9,16 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
 
+import { CateProductListPageModule } from '../cate-product-list/cate-product-list.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     TranslateModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    CateProductListPageModule
   ],
   declarations: [HomePage]
 })

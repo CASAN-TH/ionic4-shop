@@ -13,8 +13,10 @@ import { CateProductListPage } from './cate-product-list.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    CateProductListPageRoutingModule
+    CateProductListPageRoutingModule,
+    
   ],
-  declarations: [CateProductListPage]
+  declarations: [CateProductListPage],
+  exports: [CateProductListPage]
 })
 export class CateProductListPageModule {}

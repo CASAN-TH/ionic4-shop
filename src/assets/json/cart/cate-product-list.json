@@ -1,0 +1,144 @@
+{
+    "status": 200,
+    "data": [
+        {
+            "titel": "TrendX",
+            "image": "https://pub.thisshop.com/shop/block/2019126/69050171_1575617961791.jpg",
+            "products": [
+                {
+                    "product_id": "0001",
+                    "image": "https://pub.thisshop.com/shop/category/11006/2019129/49711817_1575858120891.jpg",
+                    "name": "NIKE AIR JORDAN 1 RETRO HIGH FEARLESS UNC CHICAGO (CK5666-100) [TrendX] BLACKRED 8.5US",
+                    "price": {
+                        "amount": "10,999",
+                        "currency": "฿"
+                    },
+                    "discountprice": {
+                        "price": "17,999",
+                        "currency": "฿"
+                    },
+                    "installment": {
+                        "amount": "953.24",
+                        "period": "x12mo.",
+                        "currency": "฿"
+                    },
+                    "discount": "39%off"
+                },
+                {
+                    "product_id": "0001",
+                    "image": "https://pub.thisshop.com/shop/category/11006/2019129/49711817_1575858120891.jpg",
+                    "name": "NIKE AIR JORDAN 1 RETRO HIGH FEARLESS UNC CHICAGO (CK5666-100) [TrendX] BLACKRED 8.5US",
+                    "price": {
+                        "amount": "10,999",
+                        "currency": "฿"
+                    },
+                    "discountprice": {
+                        "price": "17,999",
+                        "currency": "฿"
+                    },
+                    "installment": {
+                        "amount": "953.24",
+                        "period": "x12mo.",
+                        "currency": "฿"
+                    },
+                    "discount": "39%off"
+                },
+                {
+                    "product_id": "0002",
+                    "image": "https://pub.thisshop.com/shop/category/11006/2019129/49711817_1575858120891.jpg",
+                    "name": "NIKE AIR JORDAN 1 RETRO HIGH FEARLESS UNC CHICAGO (CK5666-100) [TrendX] BLACKRED 8.5US",
+                    "price": {
+                        "amount": "10,999",
+                        "currency": "฿"
+                    },
+                    "discountprice": {
+                        "price": "17,999",
+                        "currency": "฿"
+                    },
+                    "installment": {
+                        "amount": "953.24",
+                        "period": "x12mo.",
+                        "currency": "฿"
+                    },
+                    "discount": "39%off"
+                },
+                {
+                    "product_id": "0003",
+                    "image": "https://pub.thisshop.com/shop/category/11006/2019129/49711817_1575858120891.jpg",
+                    "name": "NIKE AIR JORDAN 1 RETRO HIGH FEARLESS UNC CHICAGO (CK5666-100) [TrendX] BLACKRED 8.5US",
+                    "price": {
+                        "amount": "10,999",
+                        "currency": "฿"
+                    },
+                    "discountprice": {
+                        "price": "17,999",
+                        "currency": "฿"
+                    },
+                    "installment": {
+                        "amount": "953.24",
+                        "period": "x12mo.",
+                        "currency": "฿"
+                    },
+                    "discount": "39%off"
+                },
+                {
+                    "product_id": "0004",
+                    "image": "https://pub.thisshop.com/shop/category/11006/2019129/49711817_1575858120891.jpg",
+                    "name": "NIKE AIR JORDAN 1 RETRO HIGH FEARLESS UNC CHICAGO (CK5666-100) [TrendX] BLACKRED 8.5US",
+                    "price": {
+                        "amount": "10,999",
+                        "currency": "฿"
+                    },
+                    "discountprice": {
+                        "price": "17,999",
+                        "currency": "฿"
+                    },
+                    "installment": {
+                        "amount": "953.24",
+                        "period": "x12mo.",
+                        "currency": "฿"
+                    },
+                    "discount": "39%off"
+                },
+                {
+                    "product_id": "0005",
+                    "image": "https://pub.thisshop.com/shop/category/11006/2019129/49711817_1575858120891.jpg",
+                    "name": "NIKE AIR JORDAN 1 RETRO HIGH FEARLESS UNC CHICAGO (CK5666-100) [TrendX] BLACKRED 8.5US",
+                    "price": {
+                        "amount": "10,999",
+                        "currency": "฿"
+                    },
+                    "discountprice": {
+                        "price": "17,999",
+                        "currency": "฿"
+                    },
+                    "installment": {
+                        "amount": "953.24",
+                        "period": "x12mo.",
+                        "currency": "฿"
+                    },
+                    "discount": "39%off"
+                },
+                {
+                    "product_id": "0006",
+                    "image": "https://pub.thisshop.com/shop/category/11006/2019129/49711817_1575858120891.jpg",
+                    "name": "NIKE AIR JORDAN 1 RETRO HIGH FEARLESS UNC CHICAGO (CK5666-100) [TrendX] BLACKRED 8.5US",
+                    "price": {
+                        "amount": "10,999",
+                        "currency": "฿"
+                    },
+                    "discountprice": {
+                        "price": "17,999",
+                        "currency": "฿"
+                    },
+                    "installment": {
+                        "amount": "953.24",
+                        "period": "x12mo.",
+                        "currency": "฿"
+                    },
+                    "discount": "39%off"
+                }
+            ]
+        }
+    ]
+}
