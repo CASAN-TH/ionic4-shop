@@ -54,6 +54,12 @@
   background-color: #efefef;
 }
 
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, 
+.mat-step-header .mat-step-icon-state-edit {
+    background-color: #f04141 !important;
+    color: white !important;
+}
+
 // .modal-wrapper{
 //   background: transparent !important;
 // }

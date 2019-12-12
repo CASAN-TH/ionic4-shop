@@ -1,12 +1,12 @@
-.content-transparent{
+.content-transparent {
     --background: transparent !important;
 }
 
-ion-item{
+ion-item {
     font-size: 13px;
 }
 
-ion-input{
+ion-input {
     font-size: 11px !important;
     text-align: right;
 }
@@ -17,7 +17,8 @@ ion-input{
     width: 153px;
     opacity: 0.5;
 }
-.img-binding{
+
+.img-binding {
     height: 100px;
     width: 153px;
 }
@@ -52,7 +53,7 @@ ion-input{
     justify-content: center;
     align-items: center;
 }
-  
+
 .avatar-icon {
     position: absolute;
     background-color: lightgray;
@@ -69,4 +70,10 @@ ion-input{
     font-size: 10px;
     color: gray;
     margin-bottom: 6px;
-  }
+}
+
+.btn-style {
+    width: 100%;
+    background-color: #f04141 !important;
+    color: white !important;
+}
