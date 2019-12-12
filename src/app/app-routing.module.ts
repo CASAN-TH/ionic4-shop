@@ -82,7 +82,11 @@ const routes: Routes = [
   {
     path: 'credit',
     loadChildren: () => import('../app/credit/credit.module').then(m => m.CreditPageModule)
+  },  {
+    path: 'productlist',
+    loadChildren: () => import('./productlist/productlist.module').then( m => m.ProductlistPageModule)
   }
+
 
 
 

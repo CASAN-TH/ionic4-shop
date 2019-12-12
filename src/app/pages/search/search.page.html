@@ -43,7 +43,10 @@
     <ion-row>
       <mat-tab-group mat-align-tabs="start">
         <mat-tab *ngFor="let tabproduct of searchData.productItems" [label]="tabproduct.tabname">
-          <ion-row>
+
+            <productlist [recivedata]="tabproduct.products"></productlist>
+
+          <!-- <ion-row>
             <ion-col size="6" *ngFor="let product of tabproduct.products">
               <ion-card (click)="onProductdetailClick(product._id)">
                 <ion-chip color="danger">
@@ -63,7 +66,8 @@
                 </div>
               </ion-card>
             </ion-col>
-          </ion-row>
+          </ion-row> -->
+
         </mat-tab>
       </mat-tab-group>
     </ion-row>
