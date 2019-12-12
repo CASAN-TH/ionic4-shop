@@ -8,6 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   imports: [
@@ -15,8 +16,9 @@ import { HomePage } from './home.page';
     FormsModule,
     IonicModule,
     TranslateModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    MatTabsModule
   ],
   declarations: [HomePage]
 })
-export class HomePageModule {}
+export class HomePageModule { }

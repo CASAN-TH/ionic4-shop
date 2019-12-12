@@ -36,4 +36,8 @@ export class HomePage implements OnInit {
       this.showToolbar = scrollTop >= 141;
     }
   }
+
+  onProductdetailClick(productId: any) {
+    this.router.navigateByUrl('productdetail/' + productId);
+  }
 }

@@ -11,132 +11,73 @@
 
 <ion-content fullscreen="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
   <ion-slides pager="ios" #slider>
-    <ion-slide>
-      <div [style.background-color]="'#f84300'">
-        <img class="slide" src="https://pub.thisshop.com/shop/block/20191111/26579431_1573444687569.png">
-      </div>
-    </ion-slide>
-    <ion-slide>
-      <div [style.background-color]="'#000000'">
-        <img class="slide" src="https://pub.thisshop.com/shop/block/20191111/21438691_1573455200833.jpg">
+    <ion-slide *ngFor="let item of homeDataList.slides">
+      <div [style.background-color]="item.background_color">
+        <img class="slide" [src]="item.image">
       </div>
     </ion-slide>
   </ion-slides>
 
-  <ion-grid fixed>
+  <ion-grid>
     <ion-row>
-      <ion-col size="12">xfgdfgdf</ion-col>
-    </ion-row>
-    <ion-row nowrap class="forecast_container">
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-
-      </ion-col>
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-      </ion-col>
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-      </ion-col>
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
+      <ion-col size="12">
+        <ion-row>
+          <ion-col size="2.4" style="font-size: 14px;" text-center *ngFor="let item of homeDataList.menus">
+            <div>
+              <img class="shotcut" [src]="item.icon_menu">
+            </div>
+            <ion-text>{{item.name_menu}}</ion-text>
+          </ion-col>
+        </ion-row>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <ion-grid fixed>
-    <ion-row>
-      <ion-col size="12">{{ 'HOME.HELLO' | translate}}</ion-col>
-    </ion-row>
-    <ion-row nowrap class="forecast_container">
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-
-      </ion-col>
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-      </ion-col>
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-      </ion-col>
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-  <ion-grid fixed>
-    <ion-row>
-      <ion-col size="12">xfgdfgdf</ion-col>
-    </ion-row>
-    <ion-row nowrap class="forecast_container">
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-
-      </ion-col>
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-      </ion-col>
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-      </ion-col>
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-  <ion-grid fixed>
-    <ion-row>
-      <ion-col size="12">xfgdfgdf</ion-col>
-    </ion-row>
-    <ion-row nowrap class="forecast_container">
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-
-      </ion-col>
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-      </ion-col>
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-      </ion-col>
-      <ion-col size="5">
-        <ion-card>
-          <img src="https://pub.thisshop.com/shop/category/01131001/01131001/35febb99e392462a9e3358465d1c8053.jpg">
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <ion-row>
+    <ion-col size="12" *ngFor="let blockitem of homeDataList.blocks">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="8">
+            <!-- <h5>{{blockitem.name}}</!-->
+            <p class="title-font">{{blockitem.name}}</p>
+          </ion-col>
+          <ion-col size="4" text-end>
+            <!-- <h6>ดูเพิ่มเติม ></h6> -->
+            <ion-buttons>
+              <ion-button class="butcolor">
+                ดูเพิ่มเติม >
+              </ion-button>
+            </ion-buttons>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <img [src]="blockitem.background_img">
+          </ion-col>
+        </ion-row>
+        <ion-row nowrap class="forecast_container block-product">
+          <ion-col size="5" *ngFor="let product of blockitem.products">
+            <ion-card class="card-color" (click)="onProductdetailClick(product._id)">
+              <ion-chip class="chip-color">
+                <ion-label>{{product.discount}}</ion-label>
+              </ion-chip>
+              <img class="img-top" [src]="product.image">
+              <div>
+                <ion-text class="producttext">{{product.name}}</ion-text>
+              </div>
+              <div>
+                <ion-text>{{product.price.currency}} {{product.price.amount}}</ion-text>
+              </div>
+              <div>
+                <ion-text>{{product.installment.currency}} {{product.installment.amount}}
+                  {{product.installment.period}}
+                </ion-text>
+              </div>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
 
 </ion-content>

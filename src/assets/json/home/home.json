@@ -1,6 +1,203 @@
 {
-    "status":200,
-    "data":[
-        {"name":"test1"}
-    ]
+    "status": 200,
+    "data": {
+        "slides": [
+            {
+                "id": "1",
+                "background_color":"#f84300",
+                "image": "https://pub.thisshop.com/shop/block/20191111/26579431_1573444687569.png"
+            },
+            {
+                "id": "2",
+                "background_color":"#000000",
+                "image": "https://pub.thisshop.com/shop/block/20191111/21438691_1573455200833.jpg"
+            }
+        ],
+        "menus": [
+            {
+                "id": "11",
+                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/15757151_1575254343134.png",
+                "name_menu": "Global Mall"
+            },
+            {
+                "id": "12",
+                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/28362678_1575254354634.png",
+                "name_menu": "Cash Reward"
+            },
+            {
+                "id": "13",
+                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/52948858_1575254365384.png",
+                "name_menu": "คูปองเซ็นเตอร์"
+            },
+            {
+                "id": "14",
+                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/68170014_1575254398656.png",
+                "name_menu": "Tcoin Mall"
+            },
+            {
+                "id": "15",
+                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/36087295_1575254409640.png",
+                "name_menu": "Super Discount"
+            },
+            {
+                "id": "16",
+                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/37417659_1575254419243.png",
+                "name_menu": "สมาร์ทโฟน"
+            },
+            {
+                "id": "17",
+                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/43585606_1575254434593.png",
+                "name_menu": "คอมพิวเตอร์"
+            },
+            {
+                "id": "18",
+                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/5932061_1575255064034.gif",
+                "name_menu": "12.2"
+            },
+            {
+                "id": "19",
+                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/32809533_1575254496030.png",
+                "name_menu": "Konvy Official"
+            },
+            {
+                "id": "20",
+                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/35003507_1575254514238.png",
+                "name_menu": "TrendX"
+            }
+        ],
+        "blocks": [
+            {
+                "name": "โทรศัพท์มือถือ",
+                "background_img": "https://pub.thisshop.com/shop/block/20191125/89471665_1574651280797.jpg",
+                "products": [
+                    {
+                        "_id": "7890",
+                        "name": "Vivo v13 Pro Crystal Sky RAM 8 GB ROM 128 GB",
+                        "image": "https://pub.thisshop.com/shop/category/01010111/01010111/ebccf9612b634a06a0bc88089e606a2d.jpg",
+                        "discount": "22% off",
+                        "price": {
+                            "amount": "12,999.00",
+                            "currency": "฿"
+                        },
+                        "installment": {
+                            "amount": "785.77",
+                            "period": "x 18mo",
+                            "currency": "฿"
+                        }
+                    },
+                    {
+                        "_id": "7890",
+                        "name": "Vivo v10 Pro Crystal Sky RAM 8 GB ROM 128 GB",
+                        "image": "https://pub.thisshop.com/shop/category/01010111/01010111/ebccf9612b634a06a0bc88089e606a2d.jpg",
+                        "discount": "22% off",
+                        "price": {
+                            "amount": "12,999.00",
+                            "currency": "฿"
+                        },
+                        "installment": {
+                            "amount": "785.77",
+                            "period": "x 18mo",
+                            "currency": "฿"
+                        }
+                    },
+                    {
+                        "_id": "7890",
+                        "name": "Vivo v10 Pro Crystal Sky RAM 8 GB ROM 128 GB",
+                        "image": "https://pub.thisshop.com/shop/category/01010111/01010111/ebccf9612b634a06a0bc88089e606a2d.jpg",
+                        "discount": "22% off",
+                        "price": {
+                            "amount": "12,999.00",
+                            "currency": "฿"
+                        },
+                        "installment": {
+                            "amount": "785.77",
+                            "period": "x 18mo",
+                            "currency": "฿"
+                        }
+                    },
+                    {
+                        "_id": "7890",
+                        "name": "Vivo v10 Pro Crystal Sky RAM 8 GB ROM 128 GB",
+                        "image": "https://pub.thisshop.com/shop/category/01010111/01010111/ebccf9612b634a06a0bc88089e606a2d.jpg",
+                        "discount": "22% off",
+                        "price": {
+                            "amount": "12,999.00",
+                            "currency": "฿"
+                        },
+                        "installment": {
+                            "amount": "785.77",
+                            "period": "x 18mo",
+                            "currency": "฿"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "โทรศัพท์มือถือ",
+                "background_img": "https://pub.thisshop.com/shop/block/20191125/89471665_1574651280797.jpg",
+                "products": [
+                    {
+                        "_id": "7890",
+                        "name": "Vivo v13 Pro Crystal Sky RAM 8 GB ROM 128 GB",
+                        "image": "https://pub.thisshop.com/shop/category/01010111/01010111/ebccf9612b634a06a0bc88089e606a2d.jpg",
+                        "discount": "22% off",
+                        "price": {
+                            "amount": "12,999.00",
+                            "currency": "฿"
+                        },
+                        "installment": {
+                            "amount": "785.77",
+                            "period": "x 18mo",
+                            "currency": "฿"
+                        }
+                    },
+                    {
+                        "_id": "7890",
+                        "name": "Vivo v10 Pro Crystal Sky RAM 8 GB ROM 128 GB",
+                        "image": "https://pub.thisshop.com/shop/category/01010111/01010111/ebccf9612b634a06a0bc88089e606a2d.jpg",
+                        "discount": "22% off",
+                        "price": {
+                            "amount": "12,999.00",
+                            "currency": "฿"
+                        },
+                        "installment": {
+                            "amount": "785.77",
+                            "period": "x 18mo",
+                            "currency": "฿"
+                        }
+                    },
+                    {
+                        "_id": "7890",
+                        "name": "Vivo v10 Pro Crystal Sky RAM 8 GB ROM 128 GB",
+                        "image": "https://pub.thisshop.com/shop/category/01010111/01010111/ebccf9612b634a06a0bc88089e606a2d.jpg",
+                        "discount": "22% off",
+                        "price": {
+                            "amount": "12,999.00",
+                            "currency": "฿"
+                        },
+                        "installment": {
+                            "amount": "785.77",
+                            "period": "x 18mo",
+                            "currency": "฿"
+                        }
+                    },
+                    {
+                        "_id": "7890",
+                        "name": "Vivo v10 Pro Crystal Sky RAM 8 GB ROM 128 GB",
+                        "image": "https://pub.thisshop.com/shop/category/01010111/01010111/ebccf9612b634a06a0bc88089e606a2d.jpg",
+                        "discount": "22% off",
+                        "price": {
+                            "amount": "12,999.00",
+                            "currency": "฿"
+                        },
+                        "installment": {
+                            "amount": "785.77",
+                            "period": "x 18mo",
+                            "currency": "฿"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
 }
