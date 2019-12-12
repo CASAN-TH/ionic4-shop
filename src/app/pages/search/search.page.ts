@@ -7,11 +7,13 @@ import { Location } from '@angular/common'
   selector: 'app-search',
   templateUrl: './search.page.html',
   styleUrls: ['./search.page.scss'],
+  inputs: ["recivedata"]
 })
 export class SearchPage implements OnInit {
   searchData: any;
   cate2Selected: any;
   brandSelected: any;
+
 
   constructor(private router: Router, private searchService: SearchService, private _location: Location) { }
 

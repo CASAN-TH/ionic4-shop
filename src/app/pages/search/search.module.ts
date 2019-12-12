@@ -8,6 +8,7 @@ import { SearchPageRoutingModule } from './search-routing.module';
 
 import { SearchPage } from './search.page';
 import { MatTabsModule } from '@angular/material/tabs';
+import { ProductlistPage } from 'src/app/productlist/productlist.page';
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 
     MatTabsModule
   ],
-  declarations: [SearchPage]
+  declarations: [SearchPage, ProductlistPage]
 })
-export class SearchPageModule {}
+export class SearchPageModule { }
