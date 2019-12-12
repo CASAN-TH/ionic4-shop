@@ -15,7 +15,7 @@ export class HomeService {
 
   onHomeDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onHomeDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-
+  onCateProductListChanged:BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   constructor(private http: HttpClient) { }
 
   private authorizationHeader() {
@@ -31,6 +31,7 @@ export class HomeService {
       this.getHomeData(this.routeParams.id);
     } else {
       this.getHomeDataList();
+      this.getCateProductListData();
     }
     return;
   }
@@ -58,6 +59,21 @@ export class HomeService {
       }else{
         this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onHomeDataChanged.next(res.data);
+        },reject)
+      }
+      
+    })
+  }
+
+  getCateProductListData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if(mockup){
+        this.http.get('../../assets/json/cart/cate-product-list.json').subscribe((res: any) => {
+          this.onCateProductListChanged.next(res.data);
+        },reject)
+      }else{
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onCateProductListChanged.next(res.data);
         },reject)
       }
       

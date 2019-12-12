@@ -3,7 +3,7 @@ import { Router } from "@angular/router";
 import { RegcreditService } from "./regcredit.service";
 import { MatDialog } from "@angular/material/dialog";
 import { ModalCardComponent } from "./modals/modal-card/modal-card.component";
-import { ModalController } from "@ionic/angular";
+import { ModalController, ActionSheetController } from "@ionic/angular";
 import { ModalCameraComponent } from "src/app/modals/modal-camera/modal-camera.component";
 import { Location } from "@angular/common";
 
@@ -23,7 +23,8 @@ export class RegcreditPage implements OnInit {
     private regcreditService: RegcreditService,
     private dialog: MatDialog,
     public modalController: ModalController,
-    private _location: Location
+    private _location: Location,
+    private actionSheetCtrl: ActionSheetController
   ) {}
 
   ngOnInit() {
@@ -57,6 +58,62 @@ export class RegcreditPage implements OnInit {
     if (i === "personwithcardimaged") {
       this.regProfile.personwithcardimaged.url = "";
     }
+  }
+
+  async openActionGender(){
+    const action = await this.actionSheetCtrl.create({
+      header: 'เพศ',
+      buttons:[{
+        text: 'ชาย',
+        handler: ()=>{
+          this.regProfile.gender = 'ชาย'
+        }
+      },{
+        text: 'หญิง',
+        handler: ()=>{
+          this.regProfile.gender = 'หญิง'
+        }
+      }]
+    });
+    await action.present()
+  }
+
+  async onActionRelation() {
+    const actionSheet = await this.actionSheetCtrl.create({
+      header: "ความสัมพันธ์",
+      buttons: [{
+        text: "พ่อ",
+        handler: () => {
+          this.dataSecondContact.relation = "พ่อ";
+        }
+      }, {
+        text: "แม่",
+        handler: () => {
+          this.dataSecondContact.relation = "แม่";
+        }
+      }, {
+        text: "ญาติ",
+        handler: () => {
+          this.dataSecondContact.relation = "ญาติ";
+        }
+      }, {
+        text: "เพื่อน",
+        handler: () => {
+          this.dataSecondContact.relation = "เพื่อน";
+        }
+      }, {
+        text: "คู่สมรส",
+        handler: () => {
+          this.dataSecondContact.relation = "คู่สมรส";
+        }
+      }, {
+        text: "ผู้ปกครอง",
+        handler: () => {
+          this.dataSecondContact.relation = "ผู้ปกครอง";
+        }
+      }]
+    });
+    await actionSheet.present();
   }
 
   async onNext() {
@@ -93,6 +150,7 @@ export class RegcreditPage implements OnInit {
           this.isTakeCamera = true;
           const modal = await this.modalController.create({
             component: ModalCameraComponent,
+            cssClass: 'modal-camera-style',
             componentProps: {
               modalData: {
                 actionType : "front"
@@ -118,6 +176,7 @@ export class RegcreditPage implements OnInit {
           this.isTakeCamera = true;
           const modal = await this.modalController.create({
             component: ModalCameraComponent,
+            cssClass: 'modal-camera-style',
             componentProps: {
               modalData: {
                 actionType : "back"
@@ -143,6 +202,7 @@ export class RegcreditPage implements OnInit {
           this.isTakeCamera = true;
           const modal = await this.modalController.create({
             component: ModalCameraComponent,
+            cssClass: 'modal-camera-style',
             componentProps: {
               modalData: {
                 actionType : "withme"
