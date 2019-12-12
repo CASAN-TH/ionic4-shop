@@ -1,3 +1,4 @@
+import { ProductlistPageModule } from './../productlist/productlist.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -8,12 +9,15 @@ import { MessagePageRoutingModule } from './message-routing.module';
 
 import { MessagePage } from './message.page';
 
+
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MessagePageRoutingModule
+    MessagePageRoutingModule,
+    ProductlistPageModule
   ],
   declarations: [MessagePage]
 })

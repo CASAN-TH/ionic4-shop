@@ -85,8 +85,19 @@
 
   <ion-card class="card-conten">
     <ion-row>
-      <ion-col size="12" *ngFor="let item of payforData.type_online">
-        {{item.bank_name}}
+      <ion-col size="12">
+        <!-- <ion-row>
+          <ion-col size="4" *ngFor="let item of payforData.type_online">
+            <img [src]="item.bank_img">
+            <span>
+              {{item.bank_name}}
+            </span>
+          </ion-col>
+        </ion-row> -->
+        <img [src]="item.bank_img" *ngFor="let item of payforData.type_online">
+        <span *ngFor="let item of payforData.type_online">
+          {{item.bank_name}}
+        </span>
       </ion-col>
     </ion-row>
   </ion-card>
