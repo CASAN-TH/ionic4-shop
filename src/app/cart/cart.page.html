@@ -135,8 +135,8 @@
 
 
   <h1 class="producttext" text-center>แนะนำ</h1>
-
-  <ion-row>
+  <productlist [recivedata]="reccommentDataList"></productlist>
+  <!-- <ion-row>
     <ion-col size="6" *ngFor="let reccomment of reccommentDataList">
       <ion-card (click)="onOpenDetailClick()">
         <img [src]="reccomment.image">
@@ -158,7 +158,7 @@
         </div>
       </ion-card>
     </ion-col>
-  </ion-row>
+  </ion-row> -->
 
 
 </ion-content>
