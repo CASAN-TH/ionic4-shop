@@ -13,7 +13,7 @@ const mockup = environment.mockup;
 export class CartService {
   routeParams: any;
 
-  onCartDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onCartDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onReccommentDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onSpecificationDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({
