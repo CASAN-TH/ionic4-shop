@@ -136,15 +136,44 @@
 
   <h1 class="producttext" text-center>แนะนำ</h1>
   <productlist [recivedata]="reccommentDataList"></productlist>
-  
+
 </ion-content>
 
+<ion-footer *ngIf="cartDataList">
+  <ion-row *ngFor="let cate of cartDataList">
+    <ion-col size="9">
+      <ion-row>
+        <ion-col size="2">
+          <span>
+            <ion-checkbox class="icon-check" color="danger" mode="ios" (click)="onSelectAll()"></ion-checkbox>
+          </span>
+        </ion-col>
+        <ion-col size="3">
+            <ion-text>ทั้งหมด</ion-text>
+        </ion-col>
+        <ion-col size="7">
+          <span>
+            ยอดรวม:
+          </span>
+          <span  *ngFor="let cate of cate.product">
+            {{cate.currency}}{{cate.price}}
+          </span>
+          <span  *ngFor="let cate of cate.product" class="installment">
+            {{cate.installment_currency}}{{cate.installment_amount}} {{cate.installment_period}}
+          </span>
 
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Footer</ion-title>
-  </ion-toolbar>
+          <ion-icon mode="ios" name="arrow-forward" (click)="InstallmentModal()"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col size="3">
+      <ion-button (click)="onPayClick()" class="footer-button" color="warning">
+        <span class="quantity">
+          ชำระ ({{cate.amount_product}})
+        </span>
+      </ion-button>
+    </ion-col>
+  </ion-row>
 </ion-footer>
 
 <!-- <ion-footer *ngIf="cartDataList">
