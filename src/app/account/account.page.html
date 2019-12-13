@@ -1,5 +1,6 @@
 <ion-header >
   <ion-toolbar [class.show-background]="showToolbar" >
+    <ion-title>บัญชี</ion-title>
     <ion-row >
       <ion-col size="9">
       </ion-col>
@@ -8,12 +9,12 @@
           <ion-buttons mode="ios" slot="end">
 
             <ion-button (click)="onToMessagePage()">
-              <ion-icon slot="icon-only" color="light" src="https://image.flaticon.com/icons/svg/126/126501.svg">
+              <ion-icon slot="icon-only" class="icon-header" color="light" src="https://image.flaticon.com/icons/svg/126/126501.svg">
               </ion-icon>
             </ion-button>
 
             <ion-button (click)="onToSettingPage()">
-              <ion-icon slot="icon-only" color="light" src="https://image.flaticon.com/icons/svg/126/126472.svg">
+              <ion-icon slot="icon-only" class="icon-header" color="light" src="https://image.flaticon.com/icons/svg/126/126472.svg">
               </ion-icon>
             </ion-button>
 
@@ -34,17 +35,17 @@
 
   <ion-row class="avatar">
 
-    <div style="z-index: 100;">
+    <div class="profile-toolbar">
       <ion-col size="9">
         <ion-item *ngIf="accountData" lines="none" class="bg-name">
-          <ion-avatar slot="start">
+          <ion-avatar slot="start" class="img-profile">
             <img (click)="onToMePage()" [src]=accountData.profileImageURL>
           </ion-avatar>
           <ion-label color="light"> {{accountData.username}}</ion-label>
         </ion-item>
 
         <ion-item *ngIf="!accountData" lines="none" class="bg-name">
-          <ion-avatar slot="start">
+          <ion-avatar slot="start" class="img-profile">
             <img src="https://image.flaticon.com/icons/svg/145/145845.svg">
           </ion-avatar>
           <ion-label (click)="onToLoginPage()">เข้าสู่ระบบ/ลงทะเบียน</ion-label>
@@ -57,15 +58,15 @@
   <ion-row *ngIf="accountData" class="font">
     <ion-col size="4" (click)="onToWishlistPage()">
       <h2>{{scoreData.wishlist}}</h2>
-      <p class="font-detail">รายการโปรด</p>
+      <p class="font-detail font-13">รายการโปรด</p>
     </ion-col>
     <ion-col size="4" (click)="onToFollowedShopPage()">
       <h2>{{scoreData.followedshop}}</h2>
-      <p class="font-detail">ร้านค้าที่ติดตาม</p>
+      <p class="font-detail font-13">ร้านค้าที่ติดตาม</p>
     </ion-col>
     <ion-col size="4" (click)="onToBrowseHistoryPage()">
       <h2>{{scoreData.browsehistory}}</h2>
-      <p class="font-detail">ประวัติการเข้าชม</p>
+      <p class="font-detail font-13">ประวัติการเข้าชม</p>
     </ion-col>
   </ion-row>
 
@@ -106,25 +107,25 @@
           <div class="ion-justify-content-center">
             <img class="icon" src="https://image.flaticon.com/icons/svg/1086/1086741.svg">
           </div>
-          <p>รอการชำระเงิน</p>
+          <p class="font-13">รอชำระเงิน</p>
         </ion-col>
         <ion-col size="3" (click)="onToShipViellAllMyOrdersPage()">
           <div class="ion-justify-content-center">
             <img class="icon" src="https://image.flaticon.com/icons/svg/164/164414.svg">
           </div>
-          <p>รอการจัดส่ง</p>
+          <p class="font-13">รอการจัดส่ง</p>
         </ion-col>
         <ion-col size="3" (click)="onToRecieveViellAllMyOrdersPage()">
           <div class="ion-justify-content-center">
             <img class="icon" src="https://image.flaticon.com/icons/svg/1493/1493693.svg">
           </div>
-          <p>รอรับสินค้า</p>
+          <p class="font-13">รอรับสินค้า</p>
         </ion-col>
         <ion-col size="3" (click)="onToReviewsViellAllMyOrdersPage()">
           <div class="ion-justify-content-center">
             <img class="icon" src="https://image.flaticon.com/icons/svg/1055/1055673.svg">
           </div>
-          <p>รอการรีวิว</p>
+          <p class="font-13">รอการรีวิว</p>
         </ion-col>
       </ion-row>
     </ion-grid>
