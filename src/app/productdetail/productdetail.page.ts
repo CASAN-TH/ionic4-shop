@@ -29,6 +29,7 @@ export class ProductdetailPage implements OnInit {
   SpecificationData: any
   ReviewData: any
   ImformationSpecData: any
+  ReccommentData: any
 
   slideOpts = {
     initialSlide: 1,
@@ -46,6 +47,11 @@ export class ProductdetailPage implements OnInit {
     this.productdetailService.onProductdetailDataListChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.productdetailData = productdetailDataList;
+    })
+
+    this.productdetailService.onReccommentDataChanged.subscribe((productdetailDataList: any) => {
+      console.log(productdetailDataList);
+      this.ReccommentData = productdetailDataList;
     })
 
     this.productdetailService.onPaymentDataChanged.subscribe((productdetailDataList: any) => {

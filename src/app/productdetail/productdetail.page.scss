@@ -1,7 +1,7 @@
 .btn-icon {
   border: 1px solid #e6e6e6;
   width: 10rem;
-  height: 2.70rem;
+  height: 2.7rem;
   margin-bottom: 0.7rem;
   margin-top: 0.42rem;
 }
@@ -9,9 +9,9 @@
   display: flex;
   justify-content: center;
 }
-.btn-two {
-  padding-left: 4%;
-}
+// .btn-two {
+//   padding-left: 4%;
+// }
 .payment {
   position: relative;
   box-sizing: border-box;
@@ -25,11 +25,16 @@
   font-size: 34px;
   color: orangered;
   padding-left: 2%;
+  margin-bottom: 0px;
 }
 .titlewar {
+  color: #000000;
+  line-height: 1.5;
   font-weight: bold;
-  color: black;
-  padding-left: 2%;
+  margin-bottom: 5px;
+}
+.subtitlewar {
+  margin-top: 0%;
 }
 .opinion {
   color: black;
@@ -49,4 +54,32 @@
   margin-right: unset;
   margin-top: 0px;
   margin-bottom: 10px;
+}
+ion-grid {
+  margin-top: 0.5rem;
+  background-color: white;
+}
+.grid-top {
+  margin-top: 0rem;
+}
+ion-content {
+  --padding-top: -100px !important;
+  --background: rgb(241, 235, 235) !important;
+}
+.btn {
+  padding-left: 45%;
+}
+.grid-footter {
+  background-color: #fbfbfb;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+.iconimg {
+  padding-top: 15%;
+  width: 30%;
+}
+.producttext {
+  font-weight: bold;
 }

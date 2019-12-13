@@ -64,12 +64,29 @@
     </app-cate-product-list>
   </ion-grid>
 
-  <ion-grid>
+  <!-- <ion-grid>
     <ion-row>
       <ion-col size="12">
         <h1 class="producttext" text-center>แนะนำ</h1>
         <productlist [recivedata]="homeReccommentData"></productlist>
       </ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid> -->
+  <ion-row>
+      <ion-col size="12">
+        <ion-row>
+          <ion-col size="4" text-end>
+            <img class="iconimg" src="https://image.flaticon.com/icons/png/512/2152/2152407.png">
+          </ion-col>
+          <ion-col size="4">
+            <h1 class="producttext" text-center>แนะนำ</h1>
+          </ion-col>
+          <ion-col size="4" text-start>
+            <img class="iconimg" src="https://image.flaticon.com/icons/png/512/2152/2152407.png">
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  
+    <productlist [recivedata]="homeReccommentData"></productlist>
 </ion-content>

@@ -44,6 +44,7 @@ export class ProductdetailService {
   onSpecificationDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onReviewDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onImformationSpecDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onReccommentDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
   constructor(private http: HttpClient) { }
 
@@ -60,6 +61,7 @@ export class ProductdetailService {
       this.getProductdetailData(this.routeParams.id);
     } else {
       this.getProductdetailDataList();
+      this.getReccommentData();
       this.getPaymentModalData();
       this.getVouchersModalData();
       this.getPromotionModalData();
@@ -122,6 +124,22 @@ export class ProductdetailService {
       this.http.delete(api_url + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getProductdetailDataList();
       }, reject)
+    })
+  }
+
+
+  getReccommentData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/productdetail/reccomment.json').subscribe((res: any) => {
+          this.onReccommentDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onReccommentDataChanged.next(res.data);
+        }, reject)
+      }
+
     })
   }
 
