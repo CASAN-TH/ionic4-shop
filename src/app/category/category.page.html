@@ -9,11 +9,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-row>
+<ion-content >
+  <ion-row class="mnu-default">
     <ion-col size="2" class="ion-no-padding">
       <div scrollY="true" class="menu-content">
-        <ion-row *ngFor="let item of data" [class.mnu-selected]="item._id == tabSelected" id="mnu_{{item._id}}">
+        <ion-row *ngFor="let item of data"  [class.mnu-selected]="item._id == tabSelected" id="mnu_{{item._id}}">
           <ion-col size="12" text-center (click)="onMenuClick(item._id)">
             <ion-icon [src]="item.icon" class="icon-menu"></ion-icon>
             <p class="ion-text-nowrap menutext">{{item.name}}</p>

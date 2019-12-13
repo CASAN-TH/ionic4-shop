@@ -4,15 +4,41 @@ ion-card {
   -webkit-margin-end: 1px;
   margin-inline-end: 1px;
   background-color: #ffff;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ion-card-content{
+  padding: .4rem;;
 }
 
 ion-card-title {
   white-space: nowrap;
-  width: 99%;
-  font-size: 1rem;
+  font-size: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 6rem;
+  
+}
+
+ion-card-subtitle{
+  font-size: 12px;
+}
+
+strong{
+  color: #000000;
+}
+
+del{
+  padding-left: .3rem;
+}
+
+span{
+  font-size: 15px;
+  color: red;
+}
+
+small{
+  font-size: 12px;
 }
 
 ion-chip {

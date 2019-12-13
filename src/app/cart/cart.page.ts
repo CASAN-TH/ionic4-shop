@@ -10,12 +10,12 @@ import { PaymentModalComponent } from '../productdetail/payment-modal/payment-mo
   selector: 'app-cart',
   templateUrl: './cart.page.html',
   styleUrls: ['./cart.page.scss'],
-  inputs:["recivedata"]
+  inputs: ["recivedata"]
 })
 export class CartPage implements OnInit {
   cartDataList: any;
   reccommentDataList: any;
-  SpecificationData:any;
+  SpecificationData: any;
   PaymentData: any;
 
 
@@ -56,11 +56,13 @@ export class CartPage implements OnInit {
   onSelectProductClick() {
     console.log("onSelectProductClick")
   }
-  onRemoveClick() {
-    console.log("Remove")
+  onRemoveClick(i, j) {
+    this.cartDataList[i].product[j].amount_product -= 1
+    console.log(this.cartDataList[i].product[j].amount_product)
   }
-  onAddClick() {
-    console.log("Add")
+  onAddClick(i, j) {
+    this.cartDataList[i].product[j].amount_product += 1
+    console.log(this.cartDataList[i].product[j].amount_product)
   }
   onAcceptCodeClick() {
     console.log("Add")
@@ -103,7 +105,7 @@ export class CartPage implements OnInit {
     });
     return await modal.present();
   }
-  
+
   async presentAlert() {
     const alert = await this.alertCtrl.create({
       message: 'กรุณาเพิ่มที่อยู่จัดส่งใหม่',

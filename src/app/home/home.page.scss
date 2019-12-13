@@ -18,7 +18,10 @@ ion-content {
   --padding-top: -100px !important;
   --background: rgb(241, 235, 235) !important;
 }
-
+.producttext {
+  font-weight: bold;
+  font-size: 18px;
+}
 
 
 .sc-ion-searchbar-ios-h {
@@ -32,13 +35,13 @@ ion-content {
   --ion-color-base: #f25454 !important;
 }
 .slide {
-  padding-top: 70px;
+  padding-top: 90px;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .shotcut {
-  width: 70%;
+  width: 47px;
 }
 
 
