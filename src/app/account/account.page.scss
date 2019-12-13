@@ -5,7 +5,7 @@
 
 .icon {
     height: 50%;
-    width: 60%;
+    width: 75%;
 }
 
 ion-avatar {
@@ -15,4 +15,28 @@ ion-avatar {
 
 .font-more {
     font-size: 0.7rem;
+}
+
+.bg-class{
+    --background: linear-gradient(0deg, rgba(255,255,255,1) 24%, rgba(255,81,0,1) 89%);
+  }
+
+.bg-card{
+    background-color: white;
+}
+
+ion-toolbar {
+    // padding-top: 0.6rem !important;
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    color: #ffffff;
+  }
+
+.show-background {
+    --background:rgba(255,81,0,1);
+    --ion-color-base: rgba(255,81,0,1) !important;
+  }
+
+.bg-name{
+    background-color: rgba(255,81,0,1);
 }
