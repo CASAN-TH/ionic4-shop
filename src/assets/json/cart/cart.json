@@ -24,7 +24,7 @@
                     "coupon": "0",
                     "currency_coupon": "-฿",
                     "chipingfee": "0",
-                    "amount_product": 1
+                    "amount_price":1
                 }
             ],
             "promotions": [
@@ -62,13 +62,13 @@
         },
         {
             "shop_id": "5678",
-            "shop_name": "Studio",
+            "shop_name": "ThisShop",
             "image":"https://pub.thisshop.com/shop/block/2019126/69050171_1575617961791.jpg?x-oss-process=image/resize,w_1000/quality,q_80",
             "product": [
                 {
                     "product_id": "8891",
                     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSO9Llg_r3_YdskEDKSKhrLxXoCBkGM-Lt8Vd3R7PeOZ9Qgx5xH",
-                    "name": "iphone 8 plus/Gold/32GB",
+                    "name": "iphone 7 plus/Gold/32GB",
                     "color": "Gold",
                     "storage": "32GB",
                     "price": "14,900",
@@ -83,7 +83,7 @@
                     "coupon": "0",
                     "currency_coupon": "-฿",
                     "chipingfee": "0",
-                    "amount_product": 1
+                    "amount_product":1
                 }
             ],
             "promotions": [

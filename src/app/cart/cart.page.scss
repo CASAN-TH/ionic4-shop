@@ -5,7 +5,9 @@
   font-size: 13px;
 }
 .footer-button {
-  margin-top: 15%;
+  margin-top: 5%;
+  width: 101%;
+  border-radius: 5%;
 }
 .select {
   font-size: 18px;
@@ -31,7 +33,26 @@
   font-size: 18px;
 }
 .icon-check {
-  margin-top: 35%;
+  margin-top:20%;
+}
+.installment{
+  font-size: 13px;
+}
+.footer-pading{
+  padding-top: 17px;
+}
+.icon-inner{
+  margin-left: -1%;
+  padding-top: 1%;
+  color: rgba(0, 0, 0, 0.29);
+}
+.spanprice{
+  font-weight: bold;
+  font-size: 15px;
+  color: red;
+}
+ion-text{
+  font-size: 16px;
 }
 ion-grid {
   margin-top: 0.5rem;
