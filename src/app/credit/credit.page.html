@@ -1,56 +1,62 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar [class.show-toolbar]="showToolbar">
     <ion-buttons mode="ios" slot="start" (click)="goBackClick()" *ngIf="url === '/credit'">
       <ion-button>
         <ion-icon mode="ios" slot="icon-only" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>วงเงิน</ion-title>
+    <ion-title class="ion-text-center">วงเงิน</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
   <div class="display-member" *ngIf="creditDataList.status === 'member'">
     <ion-button expand="block" size="large" (click)="onOpenRegCredit()">สมัครทันที</ion-button>
   </div>
 
-  <div class="ion-padding-start ion-padding-end" *ngIf="creditDataList.status === 'approve'">
-    <ion-row class="ion-padding-top">
-      <ion-col size="12" class="ion-text-center">
+  <div *ngIf="creditDataList.status === 'approve'">
+    <ion-row class="content-header-style">
+      <ion-col size="12" class="ion-text-center ion-no-padding">
         <div>วงเงินที่ใช้ได้</div>
         <div *ngIf="creditPoint && creditPoint.credit" class="point-size">{{creditPoint.credit.creditremain}}</div>
-        <ion-chip color="primary" (click)="openModalCreditPoint()">
+        <ion-chip color="primary" mode="ios" (click)="openModalCreditPoint()">
           <ion-label>
             ตรวจสอบรายละเอียด
           </ion-label>
         </ion-chip>
       </ion-col>
     </ion-row>
-    <ion-row class="ion-text-center">
-      <ion-col size="6" class="menu-header left-menu" (click)="openModalBills()">
-        <div class="font-title-header">
-          บิลของฉัน
-        </div>
-        <div class="font-title-subheader">
-          ยังไม่มีบิล
-        </div>
-      </ion-col>
-      <ion-col size="6" class="menu-header right-menu" (click)="openModalCreditPoint()">
-        <div class="font-title-header">
-          วงเงินที่ใช้ได้
-        </div>
-        <div class="font-title-subheader">
-          โดยสิ้นเชิง {{creditPoint.credit.creditremain}}
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
+    
+    <div class="menu-header">
+      <ion-card mode="ios">
+        <ion-row class="ion-text-center">
+          <ion-col size="6" class="menu-header-style menu-header-line" (click)="openModalBills()">
+            <div class="font-title-header">
+              บิลของฉัน
+            </div>
+            <div class="font-title-subheader">
+              ยังไม่มีบิล
+            </div>
+          </ion-col>
+          <ion-col size="6" class="menu-header-style" (click)="openModalCreditPoint()">
+            <div class="font-title-header">
+              วงเงินที่ใช้ได้
+            </div>
+            <div class="font-title-subheader">
+              โดยสิ้นเชิง {{creditPoint.credit.creditremain}}
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </div>
+
+    <ion-row class="ion-padding-start ion-padding-end">
       <ion-col size="12">
         <div class="font-title-header">ข้อมูลสมบูรณ์</div>
         <div class="font-title-subheader">ยิ่งคุณกรอกข้อมูลมาก ก็ยิ่งมีสิทธิ์รับวงเงินที่สูงขึ้น</div>
       </ion-col>
     </ion-row>
-    <ion-row *ngIf="creditMenuList">
+    <ion-row class="ion-padding-start ion-padding-end" *ngIf="creditMenuList">
       <ion-col size="6" *ngFor="let item of creditMenuList.menu">
         <ion-card class="ion-no-margin" mode="md" (click)="openModalMenu(item.name)">
           <img [src]="item.image" class="img-size-menu">

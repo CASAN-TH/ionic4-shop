@@ -1,3 +1,4 @@
+import { ScrollDetail } from '@ionic/core';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CreditService } from './credit.service';
@@ -20,6 +21,7 @@ export class CreditPage implements OnInit {
   creditDataList: any;
   creditMenuList: any;
   creditPoint: any;
+  showToolbar = false;
 
   url: any;
 
@@ -71,6 +73,14 @@ export class CreditPage implements OnInit {
       this.jobData = job
       // console.log(this.jobData);
     });
+  }
+
+  onScroll($event: CustomEvent<ScrollDetail>) {
+    if ($event && $event.detail && $event.detail.scrollTop) {
+      console.log($event)
+      const scrollTop = $event.detail.scrollTop;
+      this.showToolbar = scrollTop >= 27;
+    }
   }
 
   onOpenRegCredit() {
