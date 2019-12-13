@@ -6,6 +6,7 @@ import { ModalController, ActionSheetController } from '@ionic/angular';
 import { VouchersModalComponent } from '../productdetail/vouchers-modal/vouchers-modal.component';
 import { SelectdownModalComponent } from './selectdown-modal/selectdown-modal.component';
 import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
+import { ScrollDetail } from '@ionic/core';
 
 @Component({
   selector: 'app-payment',
@@ -21,6 +22,7 @@ export class PaymentPage implements OnInit {
   percenSelected: any;
   AddaddressData: any;
   AddressModalData:any;
+  showToolbar: boolean;
   
 
 
@@ -57,6 +59,12 @@ export class PaymentPage implements OnInit {
     })
     
 
+  }
+  onScroll($event: CustomEvent<ScrollDetail>) {
+    if ($event && $event.detail && $event.detail.scrollTop) {
+      const scrollTop = $event.detail.scrollTop;
+      this.showToolbar = scrollTop >= 141;
+    }
   }
 
   goBackClick() {

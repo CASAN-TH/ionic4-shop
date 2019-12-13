@@ -1,125 +1,132 @@
 {
     "status": 200,
-    "data": [
-        {
-            "shop_id": "5678",
-            "shop_name": "ThisShop",
-            "image":"https://pub.thisshop.com/shop/block/2019126/69050171_1575617961791.jpg?x-oss-process=image/resize,w_1000/quality,q_80",
-            "product": [
-                {
-                    "product_id": "8891",
-                    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSO9Llg_r3_YdskEDKSKhrLxXoCBkGM-Lt8Vd3R7PeOZ9Qgx5xH",
-                    "name": "iphone 7 plus/Gold/32GB",
-                    "color": "Gold",
-                    "storage": "32GB",
-                    "price": "14,900",
-                    "currency": "฿",
-                    "discount_price": "35,900",
-                    "discount": "59% off",
-                    "quantity": "x1",
-                    "installment_amount": "893.58",
-                    "installment_period": "x18ต่องวด",
-                    "installment_currency": "฿",
-                    "delivery_charge": " ",
-                    "coupon": "0",
-                    "currency_coupon": "-฿",
-                    "chipingfee": "0",
-                    "amount_product": 1
-                }
-            ],
-            "promotions": [
-                {
-                    "_id": "453",
-                    "gift":"[ของแถม]",
-                    "name": "3 in 1 data cable Random Color",
-                    "quantity": "x1"
-                },
-                {
-                    "_id": "786",
-                    "gift":"[ของแถม]",
-                    "name": "Power bank 12000mA",
-                    "quantity": "x1"
-                },
-                {
-                    "_id": "236",
-                    "gift":"[ของแถม]",
-                    "name": "Sport headset",
-                    "quantity": "x1"
-                },
-                {
-                    "_id": "988",
-                    "gift":"[ของแถม]",
-                    "name": "Porttable wireless speaker",
-                    "quantity": "x1"
-                },
-                {
-                    "_id": "766",
-                    "gift":"[ของแถม]",
-                    "name": "JBL T450 BT Powerful big-stage",
-                    "quantity": "x1"
-                }
-            ]
-        },
-        {
-            "shop_id": "5678",
-            "shop_name": "Studio",
-            "image":"https://pub.thisshop.com/shop/block/2019126/69050171_1575617961791.jpg?x-oss-process=image/resize,w_1000/quality,q_80",
-            "product": [
-                {
-                    "product_id": "8891",
-                    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSO9Llg_r3_YdskEDKSKhrLxXoCBkGM-Lt8Vd3R7PeOZ9Qgx5xH",
-                    "name": "iphone 8 plus/Gold/32GB",
-                    "color": "Gold",
-                    "storage": "32GB",
-                    "price": "14,900",
-                    "currency": "฿",
-                    "discount_price": "35,900",
-                    "discount": "59% off",
-                    "quantity": "x1",
-                    "installment_amount": "893.58",
-                    "installment_period": "x18ต่องวด",
-                    "installment_currency": "฿",
-                    "delivery_charge": " ",
-                    "coupon": "0",
-                    "currency_coupon": "-฿",
-                    "chipingfee": "0",
-                    "amount_product": 1
-                }
-            ],
-            "promotions": [
-                {
-                    "_id": "453",
-                    "gift":"[ของแถม]",
-                    "name": "3 in 1 data cable Random Color",
-                    "quantity": "x1"
-                },
-                {
-                    "_id": "786",
-                    "gift":"[ของแถม]",
-                    "name": "Power bank 12000mA",
-                    "quantity": "x1"
-                },
-                {
-                    "_id": "236",
-                    "gift":"[ของแถม]",
-                    "name": "Sport headset",
-                    "quantity": "x1"
-                },
-                {
-                    "_id": "988",
-                    "gift":"[ของแถม]",
-                    "name": "Porttable wireless speaker",
-                    "quantity": "x1"
-                },
-                {
-                    "_id": "766",
-                    "gift":"[ของแถม]",
-                    "name": "JBL T450 BT Powerful big-stage",
-                    "quantity": "x1"
-                }
-            ]
+    "data": {
+        "carts": [
+            {
+                "shop_id": "5678",
+                "shop_name": "ThisShop",
+                "image": "https://pub.thisshop.com/shop/block/2019126/69050171_1575617961791.jpg?x-oss-process=image/resize,w_1000/quality,q_80",
+                "product": [
+                    {
+                        "product_id": "8891",
+                        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSO9Llg_r3_YdskEDKSKhrLxXoCBkGM-Lt8Vd3R7PeOZ9Qgx5xH",
+                        "name": "iphone 7 plus/Gold/32GB",
+                        "color": "Gold",
+                        "storage": "32GB",
+                        "price": "14,900",
+                        "currency": "฿",
+                        "discount_price": "35,900",
+                        "discount": "59% off",
+                        "quantity": "x1",
+                        "installment_amount": "893.58",
+                        "installment_period": "x18ต่องวด",
+                        "installment_currency": "฿",
+                        "delivery_charge": " ",
+                        "coupon": "0",
+                        "currency_coupon": "-฿",
+                        "chipingfee": "0",
+                        "amount_product": 1
+                    }
+                ],
+                "promotions": [
+                    {
+                        "_id": "453",
+                        "gift": "[ของแถม]",
+                        "name": "3 in 1 data cable Random Color",
+                        "quantity": "x1"
+                    },
+                    {
+                        "_id": "786",
+                        "gift": "[ของแถม]",
+                        "name": "Power bank 12000mA",
+                        "quantity": "x1"
+                    },
+                    {
+                        "_id": "236",
+                        "gift": "[ของแถม]",
+                        "name": "Sport headset",
+                        "quantity": "x1"
+                    },
+                    {
+                        "_id": "988",
+                        "gift": "[ของแถม]",
+                        "name": "Porttable wireless speaker",
+                        "quantity": "x1"
+                    },
+                    {
+                        "_id": "766",
+                        "gift": "[ของแถม]",
+                        "name": "JBL T450 BT Powerful big-stage",
+                        "quantity": "x1"
+                    }
+                ]
+            },
+            {
+                "shop_id": "5678",
+                "shop_name": "Studio",
+                "image": "https://pub.thisshop.com/shop/block/2019126/69050171_1575617961791.jpg?x-oss-process=image/resize,w_1000/quality,q_80",
+                "product": [
+                    {
+                        "product_id": "8891",
+                        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSO9Llg_r3_YdskEDKSKhrLxXoCBkGM-Lt8Vd3R7PeOZ9Qgx5xH",
+                        "name": "iphone 8 plus/Gold/32GB",
+                        "color": "Gold",
+                        "storage": "32GB",
+                        "price": "14,900",
+                        "currency": "฿",
+                        "discount_price": "35,900",
+                        "discount": "59% off",
+                        "quantity": "x1",
+                        "installment_amount": "893.58",
+                        "installment_period": "x18ต่องวด",
+                        "installment_currency": "฿",
+                        "delivery_charge": " ",
+                        "coupon": "0",
+                        "currency_coupon": "-฿",
+                        "chipingfee": "0",
+                        "amount_product": 1
+                    }
+                ],
+                "promotions": [
+                    {
+                        "_id": "453",
+                        "gift": "[ของแถม]",
+                        "name": "3 in 1 data cable Random Color",
+                        "quantity": "x1"
+                    },
+                    {
+                        "_id": "786",
+                        "gift": "[ของแถม]",
+                        "name": "Power bank 12000mA",
+                        "quantity": "x1"
+                    },
+                    {
+                        "_id": "236",
+                        "gift": "[ของแถม]",
+                        "name": "Sport headset",
+                        "quantity": "x1"
+                    },
+                    {
+                        "_id": "988",
+                        "gift": "[ของแถม]",
+                        "name": "Porttable wireless speaker",
+                        "quantity": "x1"
+                    },
+                    {
+                        "_id": "766",
+                        "gift": "[ของแถม]",
+                        "name": "JBL T450 BT Powerful big-stage",
+                        "quantity": "x1"
+                    }
+                ]
+            }
+        ],
+        "totalcart": {
+            "price": "14,900",
+            "currency": "฿",
+            "installment_amount": "893.58",
+            "installment_period": "x18ต่องวด",
+            "amount_product": 1
         }
-        
-    ]
-    
+    }
 }

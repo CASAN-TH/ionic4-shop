@@ -5,16 +5,17 @@
         <ion-icon mode="ios" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>ยืนยันการสั่งซ้ื้อ</ion-title>
+    <ion-title>ยืนยันการสั่งซื้อ</ion-title>
 
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content>
-  <ion-row *ngIf="AddaddressData && AddaddressData.address">
+<ion-content class="bg-class">
+  
+  <ion-row *ngIf="AddaddressData && AddaddressData.address" >
     <ion-col size="10">
-      <ion-row>
+      <ion-row class="address">
         <ion-col size="12">
           <p class="address">
             {{AddaddressData.address.receiveraddress}} {{AddaddressData.address.subdistric}}
@@ -22,8 +23,8 @@
           </p>
         </ion-col>
       </ion-row>
-      <ion-row>
-        <ion-col size="12">
+      <ion-row class="nameaddress">
+        <ion-col size="12" >
           <span class="user">
             {{AddaddressData.address.receiver}}
           </span>
@@ -49,7 +50,7 @@
     <ion-text class="add">โปรดเพิ่มที่อยู่</ion-text>
   </ion-buttons>
 
-  <ion-card>
+  <ion-card class="selectpading">
 
     <ion-list>
       <ion-item (click)="presentActionSheet()">
@@ -157,12 +158,12 @@
 
     <ion-item>
       <ion-icon class="icon" name="md-appstore"></ion-icon>
-      <ion-label *ngFor="let cart of cartDataList" class="select">{{cart.shop_name}}</ion-label>
+      <ion-label *ngFor="let cart of cartDataList.carts" class="select">{{cart.shop_name}}</ion-label>
     </ion-item>
 
     <ion-row>
       <ion-col size="12">
-        <ion-row *ngFor="let cate of cartDataList">
+        <ion-row *ngFor="let cate of cartDataList.carts">
           <ion-col size="4" *ngFor="let cate of cate.product">
             <div (click)="onOpenlistClick()">
               <img [src]="cate.img">
@@ -213,7 +214,7 @@
 
     <ion-row>
       <ion-col size="12">
-        <ion-list *ngFor="let itemdata of cartDataList">
+        <ion-list *ngFor="let itemdata of cartDataList.carts">
           <ion-item>
             <ion-label>
               <p *ngFor="let item of itemdata.promotions">
@@ -232,7 +233,7 @@
 
     <ion-row>
       <ion-col size="12">
-        <ion-list *ngFor="let cart of cartDataList">
+        <ion-list *ngFor="let cart of cartDataList.cart">
           <ion-item *ngFor="let pro of cart.product">
             <ion-label>ค่าจัดส่ง</ion-label>
             <ion-label class="label-right">{{pro.currency}}{{pro.chipingfee}}</ion-label>
@@ -245,10 +246,10 @@
           </ion-item>
         </ion-list>
 
-        <ion-list *ngFor="let cart of cartDataList">
+        <ion-list *ngIf="cartDataList.totalcart">
           <ion-item>
             <ion-label>ยอดรวม</ion-label>
-            <ion-label class="label-right2" *ngFor="let pro of cart.product">{{pro.currency}}{{pro.price}}</ion-label>
+            <ion-label class="label-right2">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.price}}</ion-label>
           </ion-item>
         </ion-list>
       </ion-col>
@@ -283,7 +284,7 @@
 
   <ion-card>
 
-    <ion-row *ngFor="let cart of cartDataList">
+    <ion-row *ngFor="let cart of cartDataList.carts">
       <ion-col size="6" *ngFor="let pro of cart.product">
         <ion-text class="ordertitle">ยอดรวม ({{pro.quantity}} สินค้า)</ion-text>
       </ion-col>
@@ -293,7 +294,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row *ngFor="let cart of cartDataList">
+    <ion-row *ngFor="let cart of cartDataList.carts">
       <ion-col size="6" *ngFor="let pro of cart.product">
         <ion-text class="ordertitle">โปรโมชั่น</ion-text>
       </ion-col>
@@ -301,7 +302,7 @@
         <ion-text class="order"> {{pro.currency_coupon}} {{pro.coupon}}</ion-text>
       </ion-col>
     </ion-row>
-    <ion-row *ngFor="let cart of cartDataList">
+    <ion-row *ngFor="let cart of cartDataList.carts">
       <ion-col size="6" *ngFor="let pro of cart.product">
         <ion-text class="ordertitle">ค่าจัดส่ง</ion-text>
       </ion-col>
@@ -337,10 +338,10 @@
 <ion-footer>
   <ion-row>
     <ion-col size="12">
-      <ion-row *ngFor="let cate of cartDataList">
-        <ion-col size="8" *ngFor="let cate of cate.product">
+      <ion-row *ngIf="cartDataList.totalcart">
+        <ion-col size="8">
           <span class="ordertitle">จำนวนเงินที่ต้องชำระ:</span>
-          <span class="price">{{cate.currency}}{{cate.price}}</span>
+          <span class="price">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.price}}</span>
         </ion-col>
         <ion-col size="4" (click)="onOrderClick()">
           <section>
