@@ -12,6 +12,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 import { CateProductListPageModule } from '../cate-product-list/cate-product-list.module';
 import { ProductListBlockPageModule } from '../product-list-block/product-list-block.module';
+import { ProductlistPageModule } from '../productlist/productlist.module';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { ProductListBlockPageModule } from '../product-list-block/product-list-b
     MatTabsModule,
     ProductListBlockPageModule,
     CateProductListPageModule,
-    
+    ProductlistPageModule
+
   ],
   declarations: [HomePage]
 })
