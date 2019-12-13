@@ -15,7 +15,8 @@ export class HomeService {
 
   onHomeDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onHomeDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onCateProductListChanged:BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onCateProductListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onHomeReccommentDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   constructor(private http: HttpClient) { }
 
   private authorizationHeader() {
@@ -31,6 +32,7 @@ export class HomeService {
       this.getHomeData(this.routeParams.id);
     } else {
       this.getHomeDataList();
+      this.getHomeReccommentData();
       this.getCateProductListData();
     }
     return;
@@ -38,45 +40,59 @@ export class HomeService {
 
   getHomeDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/home/home.json').subscribe((res: any) => {
           this.onHomeDataListChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onHomeDataListChanged.next(res.data);
-        },reject)
+        }, reject)
       }
     })
   }
 
   getHomeData(id: string): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/home/home-detail.json').subscribe((res: any) => {
           this.onHomeDataListChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onHomeDataChanged.next(res.data);
-        },reject)
+        }, reject)
       }
-      
+
+    })
+  }
+  getHomeReccommentData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/home/reccomment.json').subscribe((res: any) => {
+          this.onHomeReccommentDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onHomeReccommentDataChanged.next(res.data);
+        }, reject)
+      }
+
     })
   }
 
   getCateProductListData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/cart/cate-product-list.json').subscribe((res: any) => {
           this.onCateProductListChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onCateProductListChanged.next(res.data);
-        },reject)
+        }, reject)
       }
-      
+
     })
   }
 
@@ -84,7 +100,7 @@ export class HomeService {
     return new Promise((resolve, reject) => {
       this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getHomeDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -92,7 +108,7 @@ export class HomeService {
     return new Promise((resolve, reject) => {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getHomeDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -100,7 +116,7 @@ export class HomeService {
     return new Promise((resolve, reject) => {
       this.http.delete(api_url + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getHomeDataList();
-      },reject)
+      }, reject)
     })
   }
 

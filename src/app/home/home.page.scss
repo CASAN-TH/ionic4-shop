@@ -5,9 +5,9 @@ ion-toolbar {
   color: #ffffff;
 }
 
-ion-slides{
-  // height: 200px;;
-}
+// ion-slides{
+//   height: 200px;
+// }
 
 ion-grid {
   margin-top: 0.5rem;
@@ -18,7 +18,9 @@ ion-content {
   --padding-top: -100px !important;
   --background: rgb(241, 235, 235) !important;
 }
-
+.producttext {
+  font-weight: bold;
+}
 
 
 .sc-ion-searchbar-ios-h {
