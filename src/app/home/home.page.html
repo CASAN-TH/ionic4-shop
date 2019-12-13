@@ -22,7 +22,7 @@
     <ion-row>
       <ion-col size="12">
         <ion-row>
-          <ion-col size="2.4" style="font-size: 14px;" text-center *ngFor="let item of homeDataList.menus">
+          <ion-col size="2.4" style="font-size: 12px;" text-center *ngFor="let item of homeDataList.menus">
             <div>
               <img class="shotcut" [src]="item.icon_menu" />
             </div>
@@ -39,11 +39,7 @@
     </ion-col>
   </ion-row>
 
-  <ion-grid fixed>
-    <app-cate-product-list [recive_data]="CateProductListData">
-    </app-cate-product-list>
-  </ion-grid>
-
+  
   <ion-grid>
     <ion-row>
       <ion-col size="12">
