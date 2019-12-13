@@ -54,3 +54,15 @@
 ion-text{
   font-size: 16px;
 }
+ion-grid {
+  margin-top: 0.5rem;
+  background-color: white;
+}
+ion-content {
+  --padding-top: -100px !important;
+  --background: rgb(241, 235, 235) !important;
+}
+.iconimg {
+  padding-top: 15%;
+  width: 30%;
+}
