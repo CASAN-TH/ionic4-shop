@@ -3,7 +3,7 @@
     "data": [
         {
             "_id": "123",
-            "name": "มือถือและอุปกรณ์เสริม",
+            "name": "ห้องนอน",
             "cover_image": [
                 {
                     "_id": "111",
@@ -18,7 +18,7 @@
                     "image": "https://pub.thisshop.com/shop/block/2019111/80264441_1572583813126.png"
                 }
             ],
-            "icon": "../../../assets/icon/Tilda_Icons_33_interior_couch.svg",
+            "icon": "../../../assets/icon/bedroom.svg",
             "brands": [
                 {
                     "_id": "2123",
@@ -54,34 +54,51 @@
             "products": [
                 {
                     "_id": "456",
-                    "name": "สมาร์ทโฟน",
+                    "name": "ชุดห้องนอน",
                     "image": "https://pub.thisshop.com/shop/block/20190816/63456397_1565925293076.jpg"
                 },
                 {
                     "_id": "678",
-                    "name": "เคสมือถือ",
+                    "name": "เตียง",
                     "image": "https://pub.thisshop.com/shop/block/20190816/29158169_1565925310022.jpg"
                 },
                 {
                     "_id": "899",
-                    "name": "สายชาร์จ",
+                    "name": "ตู้เสื่อผ้า",
                     "image": "https://pub.thisshop.com/shop/block/20190816/52969088_1565925353891.jpg"
                 },
                 {
                     "_id": "122",
-                    "name": "แบตเตอรี่",
+                    "name": "โต๊ะเครื่องแป้ง",
                     "image": "https://pub.thisshop.com/shop/block/20190816/49348910_1565925397960.jpg"
                 },
                 {
                     "_id": "221",
-                    "name": "แท่นชาร์จ",
+                    "name": "ชั้นวางทีวี",
+                    "image": "https://pub.thisshop.com/shop/block/20190816/56897728_1565925415911.jpg"
+                }
+                ,
+                {
+                    "_id": "222",
+                    "name": "กระจก",
+                    "image": "https://pub.thisshop.com/shop/block/20190816/56897728_1565925415911.jpg"
+                }
+                ,
+                {
+                    "_id": "223",
+                    "name": "ตู้ข้างเตียง",
+                    "image": "https://pub.thisshop.com/shop/block/20190816/56897728_1565925415911.jpg"
+                },
+                {
+                    "_id": "224",
+                    "name": "ที่นอน",
                     "image": "https://pub.thisshop.com/shop/block/20190816/56897728_1565925415911.jpg"
                 }
             ]
         },
         {
             "_id": "1423",
-            "name": "คอมพิวเตอร์",
+            "name": "ห้องนอนเด็ก",
             "cover_image": [
                 {
                     "_id": "313",
@@ -96,7 +113,7 @@
                     "image": "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
                 }
             ],
-            "icon": "../../../assets/icon/Tilda_Icons_33_interior_bathroom.svg",
+            "icon": "../../../assets/icon/childroom.svg",
             "brands": [
                 {
                     "_id": "133",
@@ -189,8 +206,8 @@
         },
         {
             "_id": "1023",
-            "name": "สินค้าดิจิทัล",
-            "icon": "../../../assets/icon/Tilda_Icons_33_interior_bathroom.svg",
+            "name": "ห้องนั่งเล่น",
+            "icon": "../../../assets/icon/livingroom.svg",
             "products": [
                 {
                     "_id": "1223",
@@ -271,7 +288,7 @@
         },
         {
             "_id": "1523",
-            "name": "คอมพิวเตอร์",
+            "name": "โซฟา",
             "cover_image": [
                 {
                     "_id": "313",
@@ -286,7 +303,7 @@
                     "image": "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
                 }
             ],
-            "icon": "../../../assets/icon/Tilda_Icons_33_interior_couch.svg",
+            "icon": "../../../assets/icon/sofa.svg",
             "brands": [
                 {
                     "_id": "123",
@@ -379,7 +396,7 @@
         },
         {
             "_id": "14423",
-            "name": "มือถือและอุปกรณ์เสริม",
+            "name": "ห้องครัว",
             "cover_image": [
                 {
                     "_id": "111",
@@ -394,7 +411,7 @@
                     "image": "https://pub.thisshop.com/shop/block/2019111/80264441_1572583813126.png"
                 }
             ],
-            "icon": "../../../assets/icon/Tilda_Icons_33_interior_couch.svg",
+            "icon": "../../../assets/icon/kitchenroom.svg",
             "brands": [
                 {
                     "_id": "2123",
@@ -457,7 +474,7 @@
         },
         {
             "_id": "1223",
-            "name": "คอมพิวเตอร์",
+            "name": "ห้องอาหาร",
             "cover_image": [
                 {
                     "_id": "313",
@@ -472,7 +489,7 @@
                     "image": "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
                 }
             ],
-            "icon": "../../../assets/icon/Tilda_Icons_33_interior_couch.svg",
+            "icon": "../../../assets/icon/dinnerroom.svg",
             "brands": [
                 {
                     "_id": "123",
@@ -564,8 +581,8 @@
             ]
         },
         {
-            "_id": "1223",
-            "name": "คอมพิวเตอร์",
+            "_id": "1224",
+            "name": "ห้องทำงาน",
             "cover_image": [
                 {
                     "_id": "313",
@@ -580,7 +597,7 @@
                     "image": "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
                 }
             ],
-            "icon": "../../../assets/icon/Tilda_Icons_33_interior_couch.svg",
+            "icon": "../../../assets/icon/workingroom.svg",
             "brands": [
                 {
                     "_id": "123",
@@ -672,8 +689,8 @@
             ]
         },
         {
-            "_id": "1223",
-            "name": "คอมพิวเตอร์",
+            "_id": "1225",
+            "name": "สินค้าตกแต่งบ้าน",
             "cover_image": [
                 {
                     "_id": "313",
@@ -688,331 +705,7 @@
                     "image": "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
                 }
             ],
-            "icon": "../../../assets/icon/Tilda_Icons_33_interior_couch.svg",
-            "brands": [
-                {
-                    "_id": "123",
-                    "name": "acer",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/59927070_1569306996110.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "Lenovo",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/45012744_1569307003968.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "Asus",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/15466763_1569307033203.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "AOC",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/96586706_1569307046183.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "RAZER",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/18175971_1569307058672.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "hp",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/89023748_1569307089799.png"
-                }
-            ],
-            "products": [
-                {
-                    "_id": "123",
-                    "name": "แลปท็อป",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/3230485_1568964607806.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "แท็บเล็ต",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/40149826_1568964592007.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "เกมมิ่งแลบ",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/6145988_1568964627384.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "เครื่องเกม",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/87736760_1568964663351.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "จอคอมพิวเตอร์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/80023178_1568964709719.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "อุปกรณ์เสริม",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/22885997_1568964755639.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "เครื่องปริ้นท์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/48734785_1568964783023.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "เมาส์และแผ่นลองเมาส์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/77116440_1568964816220.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "ชุดประกอบคอมพิวเตอร์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/94789525_1568964803525.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "คีย์บอร์ดเกมเมอร์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/47831382_1568964830560.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "หูฟังและลำโพง",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/66361540_1568964840767.jpg"
-                }
-            ]
-        },
-        {
-            "_id": "1223",
-            "name": "คอมพิวเตอร์",
-            "cover_image": [
-                {
-                    "_id": "313",
-                    "image": "https://pub.thisshop.com/shop/default/2019101/65677458_1569902283086.jpg"
-                },
-                {
-                    "_id": "343",
-                    "image": "https://pub.thisshop.com/shop/block/20191030/4301303_1572408321147.png"
-                },
-                {
-                    "_id": "342",
-                    "image": "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
-                }
-            ],
-            "icon": "../../../assets/icon/Tilda_Icons_33_interior_couch.svg",
-            "brands": [
-                {
-                    "_id": "123",
-                    "name": "acer",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/59927070_1569306996110.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "Lenovo",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/45012744_1569307003968.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "Asus",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/15466763_1569307033203.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "AOC",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/96586706_1569307046183.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "RAZER",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/18175971_1569307058672.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "hp",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/89023748_1569307089799.png"
-                }
-            ],
-            "products": [
-                {
-                    "_id": "123",
-                    "name": "แลปท็อป",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/3230485_1568964607806.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "แท็บเล็ต",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/40149826_1568964592007.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "เกมมิ่งแลบ",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/6145988_1568964627384.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "เครื่องเกม",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/87736760_1568964663351.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "จอคอมพิวเตอร์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/80023178_1568964709719.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "อุปกรณ์เสริม",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/22885997_1568964755639.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "เครื่องปริ้นท์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/48734785_1568964783023.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "เมาส์และแผ่นลองเมาส์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/77116440_1568964816220.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "ชุดประกอบคอมพิวเตอร์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/94789525_1568964803525.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "คีย์บอร์ดเกมเมอร์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/47831382_1568964830560.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "หูฟังและลำโพง",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/66361540_1568964840767.jpg"
-                }
-            ]
-        },
-        {
-            "_id": "1223",
-            "name": "คอมพิวเตอร์",
-            "cover_image": [
-                {
-                    "_id": "313",
-                    "image": "https://pub.thisshop.com/shop/default/2019101/65677458_1569902283086.jpg"
-                },
-                {
-                    "_id": "343",
-                    "image": "https://pub.thisshop.com/shop/block/20191030/4301303_1572408321147.png"
-                },
-                {
-                    "_id": "342",
-                    "image": "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
-                }
-            ],
-            "icon": "../../../assets/icon/Tilda_Icons_33_interior_couch.svg",
-            "brands": [
-                {
-                    "_id": "123",
-                    "name": "acer",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/59927070_1569306996110.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "Lenovo",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/45012744_1569307003968.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "Asus",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/15466763_1569307033203.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "AOC",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/96586706_1569307046183.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "RAZER",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/18175971_1569307058672.png"
-                },
-                {
-                    "_id": "123",
-                    "name": "hp",
-                    "image": "https://pub.thisshop.com/shop/default/20190924/89023748_1569307089799.png"
-                }
-            ],
-            "products": [
-                {
-                    "_id": "123",
-                    "name": "แลปท็อป",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/3230485_1568964607806.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "แท็บเล็ต",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/40149826_1568964592007.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "เกมมิ่งแลบ",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/6145988_1568964627384.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "เครื่องเกม",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/87736760_1568964663351.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "จอคอมพิวเตอร์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/80023178_1568964709719.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "อุปกรณ์เสริม",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/22885997_1568964755639.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "เครื่องปริ้นท์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/48734785_1568964783023.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "เมาส์และแผ่นลองเมาส์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/77116440_1568964816220.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "ชุดประกอบคอมพิวเตอร์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/94789525_1568964803525.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "คีย์บอร์ดเกมเมอร์",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/47831382_1568964830560.jpg"
-                },
-                {
-                    "_id": "123",
-                    "name": "หูฟังและลำโพง",
-                    "image": "https://pub.thisshop.com/shop/default/20190920/66361540_1568964840767.jpg"
-                }
-            ]
-        },
-        {
-            "_id": "1223",
-            "name": "คอมพิวเตอร์",
-            "cover_image": [
-                {
-                    "_id": "313",
-                    "image": "https://pub.thisshop.com/shop/default/2019101/65677458_1569902283086.jpg"
-                },
-                {
-                    "_id": "343",
-                    "image": "https://pub.thisshop.com/shop/block/20191030/4301303_1572408321147.png"
-                },
-                {
-                    "_id": "342",
-                    "image": "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
-                }
-            ],
-            "icon": "../../../assets/icon/Tilda_Icons_33_interior_couch.svg",
+            "icon": "../../../assets/icon/other.svg",
             "brands": [
                 {
                     "_id": "123",
