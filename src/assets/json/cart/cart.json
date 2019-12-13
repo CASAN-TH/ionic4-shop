@@ -23,7 +23,8 @@
                     "delivery_charge": " ",
                     "coupon": "0",
                     "currency_coupon": "-฿",
-                    "chipingfee": "0"
+                    "chipingfee": "0",
+                    "amount_product":"1"
                 }
             ],
             "promotions": [
