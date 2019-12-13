@@ -100,7 +100,7 @@
                     <ion-button (click)="onRemoveClick()">
                       <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
                     </ion-button>
-                    {{cate.amount}}
+                    {{cate.amount_product}}
                     <ion-button (click)="onAddClick()">
                       <ion-icon slot="icon-only" name="add-circle"></ion-icon>
                     </ion-button>
@@ -136,35 +136,18 @@
 
   <h1 class="producttext" text-center>แนะนำ</h1>
   <productlist [recivedata]="reccommentDataList"></productlist>
-  <!-- <ion-row>
-    <ion-col size="6" *ngFor="let reccomment of reccommentDataList">
-      <ion-card (click)="onOpenDetailClick()">
-        <img [src]="reccomment.image">
-        <div>
-          <ion-text class="producttext">{{reccomment.name}}</ion-text>
-        </div>
-        <div>
-          <ion-text>{{reccomment.price.currency}} {{reccomment.price.amount}}</ion-text>
-        </div>
-        <div>
-          <ion-text>
-            {{reccomment.price.currency}}
-            {{reccomment.installment.amount}}
-            {{reccomment.installment.period}}
-          </ion-text>
-          <span>
-            <ion-icon class="iconcart" name="cart" (click)="onAddToCartClick()"></ion-icon>
-          </span>
-        </div>
-      </ion-card>
-    </ion-col>
-  </ion-row> -->
-
-
+  
 </ion-content>
 
 
-<ion-footer *ngIf="cartDataList">
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+<!-- <ion-footer *ngIf="cartDataList">
   <ion-row *ngFor="let cate of cartDataList">
     <ion-col size="9">
       <ion-row>
@@ -190,13 +173,12 @@
         </ion-col>
       </ion-row>
     </ion-col>
-
     <ion-col size="3">
       <ion-button (click)="onPayClick()" class="footer-button" color="warning">
         <span class="quantity">
-          ชำระ ({{cate.amount}})
+          ชำระ ({{cate.amount_product}})
         </span>
       </ion-button>
     </ion-col>
   </ion-row>
-</ion-footer>
+</ion-footer> -->
