@@ -33,7 +33,7 @@
 
   <ion-row>
     <ion-col size="12">
-      <ion-grid *ngFor="let cate of cartDataList">
+      <ion-grid *ngFor="let cate of cartDataList; let i = index;">
         <ion-row>
           <ion-col size="12">
             <ion-item>
@@ -49,7 +49,7 @@
                 <ion-checkbox color="danger" mode="ios" (click)="onSelectProduct()"></ion-checkbox>
               </ion-thumbnail>
 
-              <ion-row *ngFor="let cate of cate.product; let i = index; let j = index">
+              <ion-row *ngFor="let cate of cate.product; let j = index">
                 <ion-col size="4">
                   <ion-chip class="chip" color="danger">
                     <ion-label>{{cate.discount}}</ion-label>
@@ -154,41 +154,4 @@
   <productlist [recivedata]="reccommentDataList"></productlist>
 </ion-content>
 
-  <ion-footer *ngIf="cartDataList">
-      <ion-row *ngFor="let cate of cartDataList">
-        <ion-col size="9">
-          <ion-row>
-            <ion-col size="2">
-              <span>
-                <ion-checkbox class="icon-check" color="danger" mode="ios" (click)="onSelectAll()"></ion-checkbox>
-              </span>
-            </ion-col>
-            <ion-col size="3" class="footer-pading">
-                <ion-text>ทั้งหมด</ion-text>
-            </ion-col>
-            <ion-col size="7">
-              <span>
-                ยอดรวม:
-              </span>
-              <span *ngFor="let cate of cate.product" class="spanprice">
-                {{cate.currency}}{{cate.price}}
-              </span>
-              <span  *ngFor="let cate of cate.product" class="installment">
-                {{cate.installment_currency}}{{cate.installment_amount}} {{cate.installment_period}}
-                <ion-icon class="icon-inner" mode="ios" name="arrow-forward" (click)="InstallmentModal()"></ion-icon>
-              </span>
-              
-            </ion-col>
-          </ion-row>
-        </ion-col>
-        <ion-col size="3" *ngFor="let cate of cate.product">
-         <ion-item (click)="onPayClick()" class="footer-button" color="warning">
-        <ion-label text-center>
-            <span class="quantity">
-                ชำระ({{cate.amount_product}})
-              </span>
-        </ion-label>
-      </ion-item>
-        </ion-col>
-      </ion-row>
-    </ion-footer>
+  

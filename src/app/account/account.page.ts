@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountService } from './account.service';
+import { ScrollDetail } from '@ionic/core';
 
 @Component({
   selector: 'app-account',
@@ -13,6 +14,7 @@ export class AccountPage implements OnInit {
   promotionData: any;
   creditData: any;
   scoreData: any;
+  showToolbar: boolean;
 
   constructor(private router: Router, private accountService: AccountService) { }
 
@@ -43,6 +45,13 @@ export class AccountPage implements OnInit {
       console.log(scoreData);
       this.scoreData = scoreData;
     })
+  }
+
+  onScroll($event: CustomEvent<ScrollDetail>) {
+    if ($event && $event.detail && $event.detail.scrollTop) {
+      const scrollTop = $event.detail.scrollTop;
+      this.showToolbar = scrollTop >= 141;
+    }
   }
 
   doRefresh(event) {
