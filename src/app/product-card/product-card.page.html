@@ -5,13 +5,14 @@
   <img [src]="recivedata.image" />
   <ion-card-content>
     <ion-card-title>
-      {{recivedata.name}}
+      <em>{{recivedata.name}}</em> 
     </ion-card-title>
     <ion-card-subtitle>
-      {{recivedata.price.currency}} {{recivedata.price.amount}}
+      <strong>{{recivedata.price.currency}}{{recivedata.price.amount}}</strong> 
+      <del>{{recivedata.price.currency}}{{recivedata.price.amount}}</del>
     </ion-card-subtitle>
     <ion-card-subtitle>
-      {{recivedata.installment.currency}}{{recivedata.installment.amount}}{{recivedata.installment.period}}
+      <span>{{recivedata.installment.currency}}{{recivedata.installment.amount}}</span><small>{{recivedata.installment.period}}</small> 
     </ion-card-subtitle>
   </ion-card-content>
 </ion-card>
