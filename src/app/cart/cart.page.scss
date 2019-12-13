@@ -33,3 +33,15 @@
 .icon-check {
   margin-top: 35%;
 }
+ion-grid {
+  margin-top: 0.5rem;
+  background-color: white;
+}
+ion-content {
+  --padding-top: -100px !important;
+  --background: rgb(241, 235, 235) !important;
+}
+.iconimg {
+  padding-top: 15%;
+  width: 30%;
+}
