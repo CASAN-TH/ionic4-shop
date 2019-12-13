@@ -51,11 +51,12 @@
 
               <ion-row *ngFor="let cate of cate.product; let j = index">
                 <ion-col size="4">
-                  <ion-chip class="chip" color="danger">
-                    <ion-label>{{cate.discount}}</ion-label>
-                  </ion-chip>
+
                   <div (click)="onOpenlistClick()">
-                    <img [src]="cate.img">
+                    <ion-chip>
+                      <ion-label class="discount">{{cate.discount}}</ion-label>
+                    </ion-chip>
+                    <img class="imgchip" [src]="cate.img">
                   </div>
                 </ion-col>
 
