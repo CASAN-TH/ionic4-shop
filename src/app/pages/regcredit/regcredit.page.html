@@ -70,20 +70,20 @@
         <ion-col size="3"></ion-col>
       </ion-row>
       <ion-item>
-        <ion-label class="label-size">รหัสบัตรประชาชน</ion-label>
-        <ion-input [(ngModel)]="regProfile.citizen_id"></ion-input>
+        <ion-label>รหัสบัตรประชาชน</ion-label>
+        <ion-input class="ion-text-end" [(ngModel)]="regProfile.citizen_id"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>หมายเลขด้านหลังบัตรประชาชน</ion-label>
-        <ion-input [(ngModel)]="regProfile.citizenback_id"></ion-input>
+        <ion-input class="ion-text-end" [(ngModel)]="regProfile.citizenback_id"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>ชื่อ</ion-label>
-        <ion-input [(ngModel)]="regProfile.name"></ion-input>
+        <ion-input class="ion-text-end" [(ngModel)]="regProfile.name"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>นามสกุล</ion-label>
-        <ion-input [(ngModel)]="regProfile.lastname"></ion-input>
+        <ion-input class="ion-text-end" [(ngModel)]="regProfile.lastname"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>เพศ</ion-label>
@@ -112,7 +112,7 @@
     <mat-step label="ที่อยู่ติดต่อ" completed="false">
       <ion-item>
         <ion-label>อีเมล</ion-label>
-        <ion-input [(ngModel)]="regProfile.email"></ion-input>
+        <ion-input class="ion-text-end" [(ngModel)]="regProfile.email"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">ที่อยู่ปัจจุบัน</ion-label>
@@ -137,15 +137,15 @@
         </ion-item>
       <ion-item>
         <ion-label>ชื่อ</ion-label>
-        <ion-input [(ngModel)]="dataSecondContact.name"></ion-input>
+        <ion-input class="ion-text-end" [(ngModel)]="dataSecondContact.name"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>นามสกุล</ion-label>
-        <ion-input [(ngModel)]="dataSecondContact.lastname"></ion-input>
+        <ion-input class="ion-text-end" [(ngModel)]="dataSecondContact.lastname"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>หมายเลขโทรศัพท์</ion-label>
-        <ion-input [(ngModel)]="dataSecondContact.tel"></ion-input>
+        <ion-input class="ion-text-end" [(ngModel)]="dataSecondContact.tel"></ion-input>
       </ion-item>
 
       <div class="ion-margin-top hint-style">
