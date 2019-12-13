@@ -2,6 +2,22 @@ ion-checkbox {
   width: 5%;
   height: 6%;
 }
+.address{
+  margin-top: -1%;
+}
+.nameaddress{
+  margin-top: -5%;
+}
+
+.selectpading{
+  margin-top:1%
+}
+.bg-class{
+  --background: linear-gradient(0deg, rgba(255,255,255,1) 24%, rgba(255,81,0,1) 89%);
+}
+.bg-card{
+  background-color: white;
+}
 
 .percent_down {
   padding-inline-start: 60%;
