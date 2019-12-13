@@ -5,16 +5,17 @@
         <ion-icon mode="ios" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>ยืนยันการสั่งซ้ื้อ</ion-title>
+    <ion-title>ยืนยันการสั่งซื้อ</ion-title>
 
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content>
-  <ion-row *ngIf="AddaddressData && AddaddressData.address">
+<ion-content class="bg-class">
+  
+  <ion-row *ngIf="AddaddressData && AddaddressData.address" >
     <ion-col size="10">
-      <ion-row>
+      <ion-row class="address">
         <ion-col size="12">
           <p class="address">
             {{AddaddressData.address.receiveraddress}} {{AddaddressData.address.subdistric}}
@@ -22,8 +23,8 @@
           </p>
         </ion-col>
       </ion-row>
-      <ion-row>
-        <ion-col size="12">
+      <ion-row class="nameaddress">
+        <ion-col size="12" >
           <span class="user">
             {{AddaddressData.address.receiver}}
           </span>
@@ -49,7 +50,7 @@
     <ion-text class="add">โปรดเพิ่มที่อยู่</ion-text>
   </ion-buttons>
 
-  <ion-card>
+  <ion-card class="selectpading">
 
     <ion-list>
       <ion-item (click)="presentActionSheet()">
