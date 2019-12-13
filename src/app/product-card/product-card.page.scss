@@ -4,6 +4,8 @@ ion-card {
   -webkit-margin-end: 1px;
   margin-inline-end: 1px;
   background-color: #ffff;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 ion-card-content{
@@ -12,14 +14,14 @@ ion-card-content{
 
 ion-card-title {
   white-space: nowrap;
-  font-size: 1rem;
+  font-size: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   
 }
 
 ion-card-subtitle{
-  font-size: .7rem;
+  font-size: 12px;
 }
 
 strong{
@@ -31,8 +33,12 @@ del{
 }
 
 span{
-  font-size: 1rem;
+  font-size: 15px;
   color: red;
+}
+
+small{
+  font-size: 12px;
 }
 
 ion-chip {

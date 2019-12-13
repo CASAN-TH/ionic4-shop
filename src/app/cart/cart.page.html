@@ -50,7 +50,7 @@
                 <ion-checkbox color="danger" mode="ios" (click)="onSelectProduct()"></ion-checkbox>
               </ion-thumbnail>
 
-              <ion-row *ngFor="let cate of cartDataList">
+              <ion-row *ngFor="let cate of cartDataList;let i = index">
                 <ion-col size="4" *ngFor="let cate of cate.product">
                   <ion-chip class="chip" color="danger">
                     <ion-label>{{cate.discount}}</ion-label>
@@ -60,7 +60,7 @@
                   </div>
                 </ion-col>
 
-                <ion-col size="8" *ngFor="let cate of cate.product">
+                <ion-col size="8" *ngFor="let cate of cate.product;let j = index">
                   <ion-row>
                     <ion-col size="12">
                       <ion-text class="phonename">
@@ -99,15 +99,17 @@
 
                     <ion-col size="6">
                       <ion-buttons>
-                        <ion-button (click)="onRemoveClick()">
+                        <ion-button (click)="onRemoveClick(i,j)"
+                          [disabled]="cartDataList[i].product[j].amount_product === 0">
                           <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
                         </ion-button>
-                        {{cate.amount}}
-                        <ion-button (click)="onAddClick()">
+                        {{cate.amount_product}}
+                        <ion-button (click)="onAddClick(i,j)">
                           <ion-icon slot="icon-only" name="add-circle"></ion-icon>
                         </ion-button>
                       </ion-buttons>
                     </ion-col>
+
                   </ion-row>
                 </ion-col>
               </ion-row>
@@ -157,42 +159,9 @@
 
   <productlist [recivedata]="reccommentDataList"></productlist>
 
-</ion-content>
 
-
-<ion-footer *ngIf="cartDataList">
-  <ion-row *ngFor="let cate of cartDataList">
-    <ion-col size="9">
-      <ion-row>
-        <ion-col size="2">
-          <span>
-            <ion-checkbox class="icon-check" color="danger" mode="ios" (click)="onSelectAll()"></ion-checkbox>
-          </span>
-        </ion-col>
-        <ion-col size="10">
-          <span class="select">
-            ยอดรวมทั้งหมด:
-          </span>
-          <span class="phoneprice" *ngFor="let cate of cate.product">
-            {{cate.currency}}{{cate.price}}
-          </span>
-          <span class="select" *ngFor="let cate of cate.product">
-            {{cate.installment_currency}}{{cate.installment_amount}}
-          </span>
-          <span class="quantity" *ngFor="let cate of cate.product">
-            {{cate.installment_period}}
-          </span>
-          <ion-icon mode="ios" name="arrow-forward" (click)="InstallmentModal()"></ion-icon>
-        </ion-col>
-      </ion-row>
-    </ion-col>
-
-    <ion-col size="3">
-      <ion-button (click)="onPayClick()" class="footer-button" color="warning">
-        <span class="quantity">
-          ชำระ ({{cate.amount}})
-        </span>
-      </ion-button>
-    </ion-col>
-  </ion-row>
-</ion-footer>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title>Footer</ion-title>
+    </ion-toolbar>
+  </ion-footer>
