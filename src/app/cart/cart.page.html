@@ -34,7 +34,7 @@
 
   <ion-row>
     <ion-col size="12">
-      <ion-grid *ngFor="let cate of cartDataList">
+      <ion-grid *ngFor="let cate of cartDataList; let i = index;">
         <ion-row>
           <ion-col size="12">
             <ion-item>
@@ -50,7 +50,7 @@
                 <ion-checkbox color="danger" mode="ios" (click)="onSelectProduct()"></ion-checkbox>
               </ion-thumbnail>
 
-              <ion-row *ngFor="let cate of cate.product; let i = index; let j = index">
+              <ion-row *ngFor="let cate of cate.product; let j = index">
                 <ion-col size="4">
                   <ion-chip class="chip" color="danger">
                     <ion-label>{{cate.discount}}</ion-label>
