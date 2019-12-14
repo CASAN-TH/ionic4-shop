@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { ScrollDetail } from '@ionic/core';
 
 @Component({
   selector: 'app-review-modal',
@@ -9,6 +10,7 @@ import { ModalController } from '@ionic/angular';
 export class ReviewModalComponent implements OnInit {
 
   @Input() ReviewData: any
+  showToolbar = false;
 
   constructor(public modalController: ModalController) { }
 
@@ -18,6 +20,12 @@ export class ReviewModalComponent implements OnInit {
 
   dismiss() {
     this.modalController.dismiss();
+  }
+  onScroll($event: CustomEvent<ScrollDetail>) {
+    if ($event && $event.detail && $event.detail.scrollTop) {
+      const scrollTop = $event.detail.scrollTop;
+      this.showToolbar = scrollTop >= 200;
+    }
   }
 
 }

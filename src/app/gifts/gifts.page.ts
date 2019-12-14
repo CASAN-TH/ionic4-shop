@@ -23,6 +23,7 @@ export class GiftsPage implements OnInit {
   WarrantygiftData: any
   SpecificationgiftData: any
   ImformationSpecgiftData: any
+  ReccommentData: any
 
   slideOpts = {
     initialSlide: 1,
@@ -40,6 +41,10 @@ export class GiftsPage implements OnInit {
     this.giftsService.onGiftsDataListChanged.subscribe((giftsDataList: any) => {
       console.log(giftsDataList);
       this.giftsData = giftsDataList;
+    })
+    this.giftsService.onReccommentDataChanged.subscribe((giftsDataList: any) => {
+      console.log(giftsDataList);
+      this.ReccommentData = giftsDataList;
     })
 
     this.giftsService.onPaymentgiftDataChanged.subscribe((giftsDataList: any) => {

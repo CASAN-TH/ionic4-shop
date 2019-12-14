@@ -28,6 +28,7 @@ export class GiftsService {
   onWarrantygiftDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onSpecificationgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onImformationSpecgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onReccommentDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
   constructor(private http: HttpClient) { }
 
@@ -44,7 +45,7 @@ export class GiftsService {
       this.getGiftsData(this.routeParams.id);
     } else {
       this.getGiftsDataList();
-
+      this.getReccommentData();
       this.getPaymentgiftModalData();
       this.getTcoingiftModalData();
       this.getWarrantygiftModalData();
@@ -104,6 +105,22 @@ export class GiftsService {
       this.http.delete(api_url + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getGiftsDataList();
       }, reject)
+    })
+  }
+
+
+  getReccommentData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/gifts/reccomment.json').subscribe((res: any) => {
+          this.onReccommentDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onReccommentDataChanged.next(res.data);
+        }, reject)
+      }
+
     })
   }
 

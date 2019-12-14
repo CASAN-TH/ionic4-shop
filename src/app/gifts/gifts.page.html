@@ -10,220 +10,212 @@
 </ion-header>
 
 <ion-content>
+  <ion-grid class="grid-top" *ngFor="let itemproduct of giftsData.productdetail">
+    <ion-slides pager [options]="slideOpts">
+      <ion-slide *ngFor="let itemimg of itemproduct.images">
+        <img [src]="itemimg">
+      </ion-slide>
+    </ion-slides>
+  </ion-grid>
+
   <ion-row>
     <ion-col size="12" *ngFor="let itemproduct of giftsData.productdetail">
-      <ion-card>
-        <ion-slides pager [options]="slideOpts">
-          <ion-slide *ngFor="let itemimg of itemproduct.images">
-            <img [src]="itemimg">
-          </ion-slide>
-        </ion-slides>
-      </ion-card>
-
-      <ion-card>
+      <ion-grid>
         <ion-row>
           <ion-col size="12">
             <h1 class="pri">{{itemproduct.currency}} {{itemproduct.price}}</h1>
           </ion-col>
         </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item-divider lines="none" (click)="paymentgiftModal()">
+              <ion-label>
+                <span>
+                  {{PaymentgiftData.selected.down_amount.currency}}
+                  {{PaymentgiftData.selected.period_amount.amount_period}}
+                </span>
+                <span>
+                  {{PaymentgiftData.selected.period_amount.period}}
+                  {{PaymentgiftData.selected.period_amount.per}}
+                </span>
+              </ion-label>
+              <ion-buttons slot="end">
+                <ion-button>
+                  <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </ion-item-divider>
+          </ion-col>
+        </ion-row>
 
-        <ion-card class="payment">
-          <ion-row>
-            <ion-col size="12">
-              <ion-item (click)="paymentgiftModal()">
-                <ion-label>
-                  <span>
-                    {{PaymentgiftData.selected.down_amount.currency}}
-                    {{PaymentgiftData.selected.period_amount.amount_period}}
-                  </span>
-                  <span>
-                    {{PaymentgiftData.selected.period_amount.period}}
-                    {{PaymentgiftData.selected.period_amount.per}}
-                  </span>
-                </ion-label>
-                <ion-buttons slot="end">
-                  <ion-button>
-                    <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
-                  </ion-button>
-                </ion-buttons>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-        </ion-card>
         <ion-row>
           <ion-col size="12">
             <h4 class="titlewar">{{itemproduct.name}}</h4>
           </ion-col>
         </ion-row>
-        <ion-row>
-          <ion-col size="12">
-            <ion-buttons class="btn-two">
-              <ion-button class="btn-icon">
-                <ion-icon name="star"></ion-icon>
-              </ion-button>
-              <ion-button class="btn-icon">
-                <ion-icon name="heart"></ion-icon>
+
+        <ion-item lines="none">
+          <ion-buttons>
+            <ion-button class="btn-icon">
+              <ion-icon name="star"></ion-icon>
+            </ion-button>
+            <ion-button class="btn-icon">
+              <ion-icon name="heart"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid class="grid-top">
+        <ion-item (click)="tcoingiftModal()">
+          <ion-text>Tcoin</ion-text>
+          <ion-label>
+            <!-- <span style="padding-left: 5%;">
+              {{TcoingiftData.Tcoinname}}
+            </span> -->
+            <ion-text style="padding-left: 5%;">{{TcoingiftData.Tcoinname}}</ion-text>
+          </ion-label>
+          <ion-note slot="end">
+            <ion-buttons class="btn">
+              <ion-button>
+                <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
               </ion-button>
             </ion-buttons>
-          </ion-col>
-        </ion-row>
-      </ion-card>
+          </ion-note>
+        </ion-item>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
 
-      <ion-card>
-        <ion-row>
-          <ion-col size="12">
-            <ion-item (click)="tcoingiftModal()">
-              <ion-label>
-                Tcoin
-              </ion-label>
-              <ion-label>
-                {{TcoingiftData.Tcoinname}}
-              </ion-label>
-              <ion-buttons slot="end">
-                <ion-button>
-                  <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
-                </ion-button>
-              </ion-buttons>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-card>
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid>
+        <ion-item (click)="warrantygiftModal()">
+          <!-- <ion-label>บริการ</ion-label> -->
+          <ion-text>บริการ</ion-text>
+          <ion-label *ngFor="let items of WarrantygiftData">
+            <ion-text style="padding-left: 5%;" *ngFor="let item of items.warranties">{{item.title}}</ion-text>
+          </ion-label>
+          <ion-note slot="end">
+            <ion-buttons class="btn">
+              <ion-button>
+                <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-note>
+        </ion-item>
+        <ion-item lines="none" (click)="specificationgiftModal()">
+          <!-- <ion-label>สเปค</ion-label> -->
+          <ion-text>สเปค.</ion-text>
+          <ion-label>
+            <ion-text style="padding-left: 5%;">{{SpecificationgiftData.color}} {{SpecificationgiftData.version}}</ion-text>
+            <!-- <span>
+              {{SpecificationgiftData.color}} {{SpecificationgiftData.version}}
+            </span> -->
+          </ion-label>
+          <ion-note slot="end">
+            <ion-buttons class="btn">
+              <ion-button>
+                <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-note>
+        </ion-item>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
 
-      <ion-card>
-        <ion-row>
-          <ion-col size="12">
-            <ion-item (click)="warrantygiftModal()">
-              <ion-label>
-                บริการ
-              </ion-label>
-              <ion-label *ngFor="let items of WarrantygiftData">
-                <ion-text *ngFor="let item of items.warranties">{{item.title}}</ion-text>
-              </ion-label>
-              <ion-buttons slot="end">
-                <ion-button>
-                  <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
-                </ion-button>
-              </ion-buttons>
-            </ion-item>
-
-            <ion-item (click)="specificationgiftModal()">
-              <ion-label>
-                สเปค
-              </ion-label>
-              <ion-label>
-                {{SpecificationgiftData.color}} {{SpecificationgiftData.version}}
-              </ion-label>
-              <ion-buttons slot="end">
-                <ion-button>
-                  <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
-                </ion-button>
-              </ion-buttons>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-card>
-
-      <ion-row>
-        <ion-col size="12">
-          <ion-card>
-            <ion-row>
-              <ion-col size="12">
-                <h4>No review yet</h4>
-              </ion-col>
-            </ion-row>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-
-      <ion-row>
-        <ion-col size="12">
-          <ion-card>
-            <ion-row>
-              <ion-col size="6">
-                <ion-row>
-                  <ion-col size="12">
-                    <h3> Share for free </h3>
-                  </ion-col>
-                </ion-row>
-              </ion-col>
-              <ion-col size="6">
-                <ion-chip color="danger">
-                  <ion-label class="ion-text-wrap">เยี่ยมชมแบรนด์</ion-label>
-                </ion-chip>
-              </ion-col>
-            </ion-row>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-
-      <ion-card>
-        <ion-row>
-          <ion-col size="12">
-            <ion-item (click)="imformationSpecgiftModal()">
-              <ion-label>
-                ข้อมูลจำเพาะ
-              </ion-label>
-              <ion-buttons slot="end">
-                <ion-button>
-                  <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
-                </ion-button>
-              </ion-buttons>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-card>
-
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid>
+        <ion-item lines="none" (click)="imformationSpecgiftModal()">
+          <!-- <ion-label>ข้อมูลจำเพาะ</ion-label> -->
+          <ion-text>ข้อมูลจำเพาะ</ion-text>
+          <ion-note slot="end">
+            <ion-buttons class="btn">
+              <ion-button>
+                <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-note>
+        </ion-item>
+      </ion-grid>
     </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col size="12" *ngFor="let detail of giftsData.details">
-      <ion-card>
-        <ion-row>
-          <ion-col size="12">
-            <ion-item>
-              <ion-label>
-                <ion-text class="titlewar">{{detail.detailname}}</ion-text>
-              </ion-label>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-        <img *ngFor="let item of detail.images" [src]="item">
-      </ion-card>
+      <ion-grid>
+        <ion-item>
+          <ion-label>
+            <ion-text class="titlewar">{{detail.detailname}}</ion-text>
+          </ion-label>
+        </ion-item>
+        <div>
+          <img *ngFor="let item of detail.images" [src]="item">
+        </div>
+      </ion-grid>
     </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col size="12" *ngFor="let warranty of giftsData.warranties">
-      <ion-card>
+      <ion-grid>
+        <ion-item>
+          <ion-label>
+            <ion-text class="titlewar">{{warranty.warrantyname}}</ion-text>
+          </ion-label>
+        </ion-item>
+
+        <ion-row>
+          <ion-col size="12" *ngFor="let warranty2 of warranty.warrantiestitle">
+            <p class="titlewar">{{warranty2.title}}</p>
+            <p class="subtitlewar">{{warranty2.subtitle}}</p>
+          </ion-col>
+        </ion-row>
+
         <ion-row>
           <ion-col size="12">
-            <ion-item>
-              <ion-label>
-                <ion-text class="titlewar">{{warranty.warrantyname}}</ion-text>
-              </ion-label>
-            </ion-item>
+            <p class="subtitlewar">{{warranty.sub1}}</p>
+            <p class="subtitlewar">{{warranty.sub2}}</p>
+            <p class="subtitlewar">{{warranty.sub3}}</p>
+            <p class="subtitlewar">{{warranty.sub4}}</p>
+            <p class="subtitlewar">{{warranty.sub5}}</p>
+            <p class="subtitlewar">{{warranty.sub6}}</p>
+            <p>หากมีคำถามอื่นๆ สามารถสอบถามเจ้าพนักงานได้โดยตรง</p>
           </ion-col>
         </ion-row>
-        <ion-row>
-          <ion-col size="12" *ngFor="let warranty1 of warranty.warrantiestitle">
-            <ion-text class="titlewar">{{warranty1.title}}</ion-text>
-            <ion-row>
-              <ion-col size="12">
-                <ion-text>{{warranty1.subtitle}}</ion-text>
-                <p>หากมีคำถามอื่นๆ สามารถสอบถามเจ้าพนักงานได้โดยตรง</p>
-              </ion-col>
-            </ion-row>
 
-          </ion-col>
-        </ion-row>
-      </ion-card>
+      </ion-grid>
     </ion-col>
   </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-row>
+        <ion-col size="4" text-end>
+          <img class="iconimg" src="https://image.flaticon.com/icons/png/512/2152/2152407.png">
+        </ion-col>
+        <ion-col size="4">
+          <h1 class="producttext" text-center>แนะนำ</h1>
+        </ion-col>
+        <ion-col size="4" text-start>
+          <img class="iconimg" src="https://image.flaticon.com/icons/png/512/2152/2152407.png">
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <productlist [recivedata]="ReccommentData"></productlist>
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar>
+  <ion-grid class="grid-footter">
     <ion-row *ngFor="let itemproduct of giftsData.productdetail">
       <ion-col size="4">
         <ion-buttons class="btn-center" (click)="onChatClick()">
@@ -248,5 +240,5 @@
         </ion-buttons>
       </ion-col>
     </ion-row>
-  </ion-toolbar>
+  </ion-grid>
 </ion-footer>

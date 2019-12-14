@@ -158,7 +158,6 @@ export class ProductdetailPage implements OnInit {
   async reviewModal() {
     const modal = await this.modalController.create({
       component: ReviewModalComponent,
-      cssClass: 'my-modal-css',
       componentProps: {
         ReviewData: this.ReviewData
       }
