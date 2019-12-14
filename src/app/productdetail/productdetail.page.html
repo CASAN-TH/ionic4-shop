@@ -74,11 +74,15 @@
     <ion-col size="12">
       <ion-grid class="grid-top">
         <ion-item (click)="vouchersModal()">
-          <ion-label>บัตรกำนัล</ion-label>
+          <!-- <ion-label>บัตรกำนัล</ion-label> -->
+          <ion-text>บัตรกำนัล</ion-text>
           <ion-label>
-            <span *ngFor="let item of VouchersData">
+            <ion-text style="padding-left: 5%;" *ngFor="let item of VouchersData">
               {{item.currency}} {{item.amount}}
-            </span>
+            </ion-text>
+            <!-- <span *ngFor="let item of VouchersData">
+              {{item.currency}} {{item.amount}}
+            </span> -->
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -88,15 +92,25 @@
             </ion-buttons>
           </ion-note>
         </ion-item>
+
         <ion-item (click)="promotionModal()">
-          <ion-label>โปรโมชั่น</ion-label>
+          <!-- <ion-label>โปรโมชั่น</ion-label> -->
+          <ion-text>โปรโมชั่น</ion-text>
           <ion-label>
-            <ion-row>
+            <!-- <ion-row>
               <ion-col size="3"
                 *ngFor="let itemimage of [PromotionData[0],PromotionData[1],PromotionData[2],PromotionData[3]]">
                 <img [src]="itemimage.image">
               </ion-col>
-            </ion-row>
+            </ion-row> -->
+            <ion-text style="padding-left: 5%;">
+              <ion-row>
+                <ion-col size="3"
+                  *ngFor="let itemimage of [PromotionData[0],PromotionData[1],PromotionData[2],PromotionData[3]]">
+                  <img style="width: 70%;" [src]="itemimage.image">
+                </ion-col>
+              </ion-row>
+            </ion-text>
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -106,12 +120,15 @@
             </ion-buttons>
           </ion-note>
         </ion-item>
+
         <ion-item lines="none" (click)="tcoinModal()">
-          <ion-label>Tcoin</ion-label>
+          <!-- <ion-label>Tcoin</ion-label> -->
+          <ion-text>Tcoin</ion-text>
           <ion-label>
-            <span>
+            <ion-text style="padding-left: 5%;">{{TcoinData.Tcoinname}}</ion-text>
+            <!-- <span>
               {{TcoinData.Tcoinname}}
-            </span>
+            </span> -->
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -130,9 +147,10 @@
     <ion-col size="12">
       <ion-grid>
         <ion-item (click)="warrantyModal()">
-          <ion-label>บริการ</ion-label>
+          <!-- <ion-label>บริการ</ion-label> -->
+          <ion-text>บริการ</ion-text>
           <ion-label *ngFor="let items of WarrantyData">
-            <ion-text *ngFor="let item of items.warranties">{{item.title}}</ion-text>
+            <ion-text style="padding-left: 5%;" *ngFor="let item of items.warranties">{{item.title}}</ion-text>
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -143,11 +161,15 @@
           </ion-note>
         </ion-item>
         <ion-item lines="none" (click)="specificationModal()">
-          <ion-label>สเปค</ion-label>
+          <!-- <ion-label>สเปค</ion-label> -->
+          <ion-text>สเปค.</ion-text>
           <ion-label>
-            <span>
+            <ion-text style="padding-left: 5%;">
               {{SpecificationData.color}} {{SpecificationData.version}}
-            </span>
+            </ion-text>
+            <!-- <span>
+              {{SpecificationData.color}} {{SpecificationData.version}}
+            </span> -->
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -165,7 +187,8 @@
     <ion-col size="12">
       <ion-grid>
         <ion-item (click)="reviewModal()">
-          <ion-label>รีวิว</ion-label>
+          <!-- <ion-label>รีวิว</ion-label> -->
+          <ion-text>รีวิว</ion-text>
           <ion-note slot="end">
             <ion-buttons class="btn">
               <ion-button>
@@ -220,7 +243,8 @@
     <ion-col size="12">
       <ion-grid>
         <ion-item lines="none" (click)="imformationSpecModal()">
-          <ion-label>ข้อมูลจำเพาะ</ion-label>
+          <!-- <ion-label>ข้อมูลจำเพาะ</ion-label> -->
+          <ion-text>ข้อมูลจำเพาะ</ion-text>
           <ion-note slot="end">
             <ion-buttons class="btn">
               <ion-button>

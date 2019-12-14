@@ -75,9 +75,10 @@
         <ion-item (click)="tcoingiftModal()">
           <ion-text>Tcoin</ion-text>
           <ion-label>
-            <span style="padding-left: 5%;">
+            <!-- <span style="padding-left: 5%;">
               {{TcoingiftData.Tcoinname}}
-            </span>
+            </span> -->
+            <ion-text style="padding-left: 5%;">{{TcoingiftData.Tcoinname}}</ion-text>
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -95,9 +96,10 @@
     <ion-col size="12">
       <ion-grid>
         <ion-item (click)="warrantygiftModal()">
-          <ion-label>บริการ</ion-label>
+          <!-- <ion-label>บริการ</ion-label> -->
+          <ion-text>บริการ</ion-text>
           <ion-label *ngFor="let items of WarrantygiftData">
-            <ion-text *ngFor="let item of items.warranties">{{item.title}}</ion-text>
+            <ion-text style="padding-left: 5%;" *ngFor="let item of items.warranties">{{item.title}}</ion-text>
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -108,11 +110,13 @@
           </ion-note>
         </ion-item>
         <ion-item lines="none" (click)="specificationgiftModal()">
-          <ion-label>สเปค</ion-label>
+          <!-- <ion-label>สเปค</ion-label> -->
+          <ion-text>สเปค.</ion-text>
           <ion-label>
-            <span>
+            <ion-text style="padding-left: 5%;">{{SpecificationgiftData.color}} {{SpecificationgiftData.version}}</ion-text>
+            <!-- <span>
               {{SpecificationgiftData.color}} {{SpecificationgiftData.version}}
-            </span>
+            </span> -->
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -130,7 +134,8 @@
     <ion-col size="12">
       <ion-grid>
         <ion-item lines="none" (click)="imformationSpecgiftModal()">
-          <ion-label>ข้อมูลจำเพาะ</ion-label>
+          <!-- <ion-label>ข้อมูลจำเพาะ</ion-label> -->
+          <ion-text>ข้อมูลจำเพาะ</ion-text>
           <ion-note slot="end">
             <ion-buttons class="btn">
               <ion-button>
