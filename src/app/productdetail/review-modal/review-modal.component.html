@@ -9,8 +9,48 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-row>
+<ion-content fullscreen="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
+
+  <ion-grid *ngFor="let item of ReviewData.user">
+    <ion-row>
+      <ion-col size="12">
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+            <img [src]="item.profileimg">
+          </ion-avatar>
+          <ion-label>
+            <h3>{{item.name}}</h3>
+            <p>
+              <ion-row>
+                <ion-col size="2" *ngFor="let icon of item.stars">
+                  <img style="width: 50%;" [src]="icon.icon_star">
+                </ion-col>
+              </ion-row>
+            </p>
+          </ion-label>
+          <ion-note slot="end">
+            <ion-text class="date">{{item.date}}</ion-text>
+          </ion-note>
+        </ion-item>
+
+        <ion-item>
+          <ion-row>
+            <ion-col size="12">
+              <ion-label *ngFor="let rev of item.reviews">
+                <ion-text class="ion-text-wrap">{{rev.reviewtitle}}</ion-text>
+                <ion-row>
+                  <ion-col size="3" *ngFor="let itemimg of rev.reviewimg">
+                    <img style="width:100%; height: 100%;" [src]="itemimg">
+                  </ion-col>
+                </ion-row>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- <ion-row>
     <ion-col size="12">
       <ion-label>
         <ion-row *ngFor="let item of ReviewData.user">
@@ -46,5 +86,5 @@
         </ion-row>
       </ion-label>
     </ion-col>
-  </ion-row>
+  </ion-row> -->
 </ion-content>

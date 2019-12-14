@@ -55,12 +55,12 @@
   margin-top: 0px;
   margin-bottom: 10px;
 }
+.grid-top {
+  margin-top: 0rem;
+}
 ion-grid {
   margin-top: 0.5rem;
   background-color: white;
-}
-.grid-top {
-  margin-top: 0rem;
 }
 ion-content {
   --padding-top: -100px !important;
@@ -82,4 +82,7 @@ ion-content {
 }
 .producttext {
   font-weight: bold;
+}
+.date {
+  font-size: 16px;
 }
