@@ -51,3 +51,29 @@
   padding-right: 0.3rem;
   padding: 0 1.2rem 0 1.2rem;
 }
+.grid-top {
+  margin-top: 0rem;
+}
+ion-grid {
+  margin-top: 0.5rem;
+  background-color: white;
+}
+ion-content {
+  --padding-top: -100px !important;
+  --background: rgb(241, 235, 235) !important;
+}
+.iconimg {
+  padding-top: 15%;
+  width: 30%;
+}
+.producttext {
+  font-weight: bold;
+}
+.grid-footter {
+  background-color: #fbfbfb;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+}
