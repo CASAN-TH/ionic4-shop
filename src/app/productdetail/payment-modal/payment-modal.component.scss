@@ -1,19 +1,6 @@
 .pay {
-  // background: #fff5f1;
-  // height: 2.64rem;
-  // line-height: 1.9rem;
-  // border-radius: 0.1rem;
-  // background-color: #f5f5f5;
-  // margin-right: 1.5rem;
-  // text-align: center;
-  // margin-bottom: 0.7rem;
-  // float: left;
-  // font-size: 1rem;
-  // color: #333;
-  // border: 1px solid #f5f5f5;
   background-color: #fff5f1;
   color: #f34602;
-  // border: 1px solid #f34602;
   line-height: 2.5rem;
   padding: 0 0.16rem;
   color: #333;
@@ -23,21 +10,8 @@
   white-space: nowrap;
 }
 .per {
-  // background: #fff5f1;
-  // height: 2.64rem;
-  // line-height: 1.9rem;
-  // border-radius: 0.1rem;
-  // background-color: #f5f5f5;
-  // margin-right: 1.5rem;
-  // text-align: center;
-  // margin-bottom: 0.7rem;
-  // float: left;
-  // font-size: 1rem;
-  // color: #333;
-  // border: 1px solid #f5f5f5;
   background-color: #fff5f1;
   color: #f34602;
-  // border: 1px solid #f34602;
   line-height: 2.5rem;
   padding: 0 0.16rem;
   color: #333;
@@ -54,10 +28,11 @@
   display: flex;
   justify-content: center;
   background-color: orangered;
+  height: 40px;
 }
 
 .top {
-  margin-top: 1%;
+  margin-top: 5%;
 }
 
 .pri {
@@ -82,15 +57,29 @@
 .ion-item-percenselected {
   font-size: 2rem;
   color: red;
-  margin-top: -.65rem;
+  margin-top: -0.65rem;
   margin-left: 36%;
   position: absolute;
 }
 .ion-item-unitselected {
   font-size: 2rem;
   color: red;
-  margin-top: -.65rem;
+  margin-top: -0.65rem;
   margin-left: 50%;
   position: absolute;
 }
-
+.col-item {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-dow {
+  padding-top: 30px;
+}
+.grid-footter {
+  background-color: #fbfbfb;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+}

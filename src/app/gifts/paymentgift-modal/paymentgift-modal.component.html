@@ -23,40 +23,44 @@
     </ion-col>
   </ion-row>
 
-  <ion-card>
-    <ion-row>
-      <ion-col size="12">
+  <ion-row>
+    <ion-col class="col-item" size="12">
+      <ion-item-divider lines="none">
         <ion-row>
           <ion-col size="12">
-            <span>
-              {{PaymentgiftData.selected.down_amount.down}}
-            </span>
-            <span class="subdow">
-              {{PaymentgiftData.selected.down_amount.currency}}
-              {{PaymentgiftData.selected.down_amount.amount_down}}
-            </span>
-          </ion-col>
-        </ion-row>
+            <ion-row>
+              <ion-col size="12">
+                <span>
+                  {{PaymentgiftData.selected.down_amount.down}}
+                </span>
+                <span class="subdow">
+                  {{PaymentgiftData.selected.down_amount.currency}}
+                  {{PaymentgiftData.selected.down_amount.amount_down}}
+                </span>
+              </ion-col>
+            </ion-row>
 
-        <ion-row>
-          <ion-col size="12">
-            <span>
-              {{PaymentgiftData.selected.period_amount.monpayment}}
-            </span>
-            <span class="subdow">
-              {{PaymentgiftData.selected.period_amount.amount_period}}
-            </span>
-            <span>
-              {{PaymentgiftData.selected.period_amount.inc}}
-            </span>
+            <ion-row>
+              <ion-col size="12">
+                <span>
+                  {{PaymentgiftData.selected.period_amount.monpayment}}
+                </span>
+                <span class="subdow">
+                  {{PaymentgiftData.selected.period_amount.amount_period}}
+                </span>
+                <span>
+                  {{PaymentgiftData.selected.period_amount.inc}}
+                </span>
+              </ion-col>
+            </ion-row>
           </ion-col>
         </ion-row>
-      </ion-col>
-    </ion-row>
-  </ion-card>
+      </ion-item-divider>
+    </ion-col>
+  </ion-row>
 
   <ion-row>
-    <ion-col size="12">
+    <ion-col class="col-dow" size="12">
       <ion-text class="p-title">{{PaymentgiftData.selected.down_options.down_payment}}</ion-text>
       <ion-row class="top"
         *ngIf="PaymentgiftData.selected.down_options.payment_percent && PaymentgiftData.selected.down_options.payment_percent.length">
@@ -87,9 +91,9 @@
 </ion-col>
 
 <ion-footer>
-  <ion-toolbar>
+  <ion-grid class="grid-footter">
     <ion-buttons class="btn-center" (click)="onPayClick()">
       <ion-button class="btn-footer">จ่ายเป็นงวด</ion-button>
     </ion-buttons>
-  </ion-toolbar>
+  </ion-grid>
 </ion-footer>
