@@ -98,8 +98,8 @@
         <ion-item (click)="warrantygiftModal()">
           <!-- <ion-label>บริการ</ion-label> -->
           <ion-text>บริการ</ion-text>
-          <ion-label *ngFor="let items of WarrantygiftData">
-            <ion-text style="padding-left: 5%;" *ngFor="let item of items.warranties">{{item.title}}</ion-text>
+          <ion-label>
+            <ion-text style="padding-left: 5%;" *ngFor="let item of WarrantygiftData.warranties">{{item.title}}</ion-text>
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
