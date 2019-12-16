@@ -120,3 +120,11 @@ ion-checkbox {
   padding-top: 2%;
   position: absolute;
 }
+
+ion-card{
+  background-color: white;
+}
+
+ion-content {
+  --background: linear-gradient(0deg, rgba(244, 219, 208, 1) 10%, rgba(240, 65, 65, 1) 89%);
+}
