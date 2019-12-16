@@ -4,9 +4,10 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-const api_url = environment.apiUrl + '/api/accounts/';
 const mockup = environment.mockup;
 const urlApi = environment.apiUrl
+const api_url = environment.apiUrl + '/api/accounts/';
+
 
 @Injectable({
   providedIn: 'root'
