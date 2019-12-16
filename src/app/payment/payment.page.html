@@ -6,318 +6,364 @@
       </ion-button>
     </ion-buttons>
     <ion-title>ยืนยันการสั่งซื้อ</ion-title>
-
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content>
-  
-  <ion-row *ngIf="AddaddressData && AddaddressData.address" >
-    <ion-col size="10">
-      <ion-row class="address">
-        <ion-col size="12">
-          <p class="address">
-            {{AddaddressData.address.receiveraddress}} {{AddaddressData.address.subdistric}}
-            {{AddaddressData.address.distric}} {{AddaddressData.address.province}}
-          </p>
-        </ion-col>
-      </ion-row>
-      <ion-row class="nameaddress">
-        <ion-col size="12" >
-          <span class="user">
-            {{AddaddressData.address.receiver}}
-          </span>
-          <span class="phoneprice">
-            {{AddaddressData.address.receiverphone}}
-          </span>
-        </ion-col>
-      </ion-row>
-    </ion-col>
-    <ion-col size="2">
-      <ion-buttons (click)="addresslModal()">
-        <ion-button class="arow-forward">
-          <ion-icon mode="ios" name="arrow-forward"></ion-icon>
-        </ion-button>
-      </ion-buttons>
+
+  <ion-row *ngIf="AddaddressData && AddaddressData.address">
+    <ion-col size="12">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="10">
+            <ion-row class="address">
+              <ion-col size="12">
+                <p class="address">
+                  {{AddaddressData.address.receiveraddress}} {{AddaddressData.address.subdistric}}
+                  {{AddaddressData.address.distric}} {{AddaddressData.address.province}}
+                </p>
+              </ion-col>
+            </ion-row>
+            <ion-row class="nameaddress">
+              <ion-col size="12">
+                <span class="user">
+                  {{AddaddressData.address.receiver}}
+                </span>
+                <span class="phoneprice">
+                  {{AddaddressData.address.receiverphone}}
+                </span>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="2">
+            <ion-buttons (click)="addresslModal()">
+              <ion-button class="arow-forward">
+                <ion-icon mode="ios" name="arrow-forward"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-col>
   </ion-row>
 
-  <ion-buttons *ngIf="!AddaddressData" >
-    <ion-button slot="start" class="add" (click)="onAddaddressClick()">
-      <ion-icon mode="ios" name="add"></ion-icon>
-    </ion-button>
-    <ion-text class="add">โปรดเพิ่มที่อยู่</ion-text>
-  </ion-buttons>
-
-  <ion-card class="selectpading">
-
-    <ion-list>
-      <ion-item (click)="presentActionSheet()">
-        <ion-label>
-          <span class="select">
-            วิธีการชำระเงิน
-          </span>
-        </ion-label>
-        <ion-label>
-          <span class="phonename">
-            {{select}}
-          </span>
-        </ion-label>
-        <ion-buttons slot="end">
-          <ion-button>
-            <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+  <ion-row *ngIf="!AddaddressData">
+    <ion-col size="12">
+      <ion-grid>
+        <ion-buttons>
+          <ion-button slot="start" class="add" (click)="onAddaddressClick()">
+            <ion-icon mode="ios" name="add"></ion-icon>
           </ion-button>
+          <ion-text class="add">โปรดเพิ่มที่อยู่</ion-text>
         </ion-buttons>
-      </ion-item>
-    </ion-list>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
 
-    <ion-row *ngIf="select === 'ผ่อนชำระ'">
-      <ion-col size="12">
-        <ion-list-header>
-          <ion-text class="select">
-            เงินดาวน์
-          </ion-text>
-        </ion-list-header>
-
-        <ion-item *ngFor="let data of downDataList" (click)="selectDownModal()">
-          <ion-label *ngFor="let down of data.down_payment">
-            <span class="phonename">
-              {{down.cerrency}}{{down.amount}}
-            </span>
-
-            <span *ngFor="let down of data.down_payment" class="percent_down">
-              {{down.percent_down}}{{down.unit}}
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid>
+        <ion-item lines="none" (click)="presentActionSheet()">
+          <ion-label>
+            <span class="select">
+              วิธีการชำระเงิน
             </span>
           </ion-label>
-
-          <ion-buttons>
-            <ion-button slot="end">
-              <ion-icon mode="ios" name="arrow-forward"></ion-icon>
+          <ion-label>
+            <span class="phonename">
+              {{select}}
+            </span>
+          </ion-label>
+          <ion-buttons slot="end">
+            <ion-button>
+              <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
             </ion-button>
           </ion-buttons>
         </ion-item>
 
-        <ion-row>
-          <ion-col size="12" *ngFor="let data of downDataList">
-            <span class="ordertitle">
-              จ่ายรายเดือน (ค่าบริการรายเดือน{{data.period_service}} {{data.cerrency}} รวม)
-            </span>
-          </ion-col>
-        </ion-row>
+        <ion-row *ngIf="select === 'ผ่อนชำระ'">
+          <ion-col size="12">
+            <ion-list-header>
+              <ion-text class="select">
+                เงินดาวน์
+              </ion-text>
+            </ion-list-header>
 
-        <ion-row>
-          <ion-col size="12" text-center *ngFor="let data of downDataList">
-            <ion-text class="installment">
-              {{data.cerrency}}{{data.installment_amount}}
-            </ion-text>
-            <span class="quantity">
-              {{data.installment_period}}{{data.unit}}
-            </span>
-          </ion-col>
-        </ion-row>
+            <ion-item lines="none" *ngFor="let data of downDataList" (click)="selectDownModal()">
+              <ion-label *ngFor="let down of data.down_payment">
+                <span class="phonename">
+                  {{down.cerrency}}{{down.amount}}
+                </span>
 
-        <ion-row>
-          <ion-col size="12" *ngFor="let data of downDataList">
-            <ion-row *ngIf="data.period_option && data.period_option.length">
-              <ion-col class="per" size="3" text-center *ngFor="let period of data.period_option"
-                [class.ion-col-border]="period._id == percenSelected" (click)="onPercenClick(period._id)">
-                <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="period._id == percenSelected">
-                </ion-icon>
-                <span>
-                  {{period.period}}{{period.unit}}
+                <span *ngFor="let down of data.down_payment" class="percent_down">
+                  {{down.percent_down}}{{down.unit}}
+                </span>
+              </ion-label>
+
+              <ion-buttons>
+                <ion-button slot="end">
+                  <ion-icon mode="ios" name="arrow-forward"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </ion-item>
+
+            <ion-row>
+              <ion-col size="12" *ngFor="let data of downDataList">
+                <span class="ordertitle">
+                  จ่ายรายเดือน (ค่าบริการรายเดือน{{data.period_service}} {{data.cerrency}} รวม)
                 </span>
               </ion-col>
             </ion-row>
-          </ion-col>
-        </ion-row>
+
+            <ion-row>
+              <ion-col size="12" text-center *ngFor="let data of downDataList">
+                <ion-text class="installment">
+                  {{data.cerrency}}{{data.installment_amount}}
+                </ion-text>
+                <span class="quantity">
+                  {{data.installment_period}}{{data.unit}}
+                </span>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="12" *ngFor="let data of downDataList">
+                <ion-row *ngIf="data.period_option && data.period_option.length">
+                  <ion-col class="per" size="3" text-center *ngFor="let period of data.period_option"
+                    [class.ion-col-border]="period._id == percenSelected" (click)="onPercenClick(period._id)">
+                    <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="period._id == percenSelected">
+                    </ion-icon>
+                    <span>
+                      {{period.period}}{{period.unit}}
+                    </span>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
 
 
-        <ion-row>
-          <ion-col size="12">
-            <span>
-              <ion-checkbox class="iconcheck" mode="ios" color="danger" checked></ion-checkbox>
-            </span>
-            <span class="user">
-              ฉันเห็นด้วย
-            </span>
-            <span class="ordertitle">
-              <a routerLink="/termsandcondition" routerLinkActive="active">ข้อตกลงการใช้บริการ</a>
-            </span>
-          </ion-col>
-        </ion-row>
-
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
-
-
-
-  <ion-card>
-
-    <ion-item>
-      <ion-icon class="icon" name="md-appstore"></ion-icon>
-      <ion-label *ngFor="let cart of cartDataList.carts" class="select">{{cart.shop_name}}</ion-label>
-    </ion-item>
-
-    <ion-row>
-      <ion-col size="12">
-        <ion-row *ngFor="let cate of cartDataList.carts">
-          <ion-col size="4" *ngFor="let cate of cate.product">
-            <div (click)="onOpenlistClick()">
-              <img [src]="cate.img">
-            </div>
-          </ion-col>
-
-          <ion-col size="8" *ngFor="let cate of cate.product">
             <ion-row>
               <ion-col size="12">
-                <ion-text class="phonename">{{cate.name}}</ion-text>
+                <span>
+                  <ion-checkbox class="iconcheck" mode="ios" color="danger" checked></ion-checkbox>
+                </span>
+                <span class="user">
+                  ฉันเห็นด้วย
+                </span>
+                <span class="ordertitle">
+                  <a routerLink="/termsandcondition" routerLinkActive="active">ข้อตกลงการใช้บริการ</a>
+                </span>
               </ion-col>
             </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
 
-            <ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid *ngFor="let cate of cartDataList.carts">
+        <ion-row>
+          <ion-col size="12">
+            <ion-item>
+              <ion-icon class="icon" name="md-appstore"></ion-icon>
+              <ion-label class="select">{{cate.shop_name}}</ion-label>
+            </ion-item>
+
+            <ion-row *ngFor="let cate of cate.product">
+              <ion-col size="4">
+                <div (click)="onOpenlistClick()">
+                  <img [src]="cate.img">
+                </div>
+              </ion-col>
+
               <ion-col size="8">
-                <ion-label color="medium" class="quantity">
-                  Options:{{cate.color}},{{cate.storage}}
-                </ion-label>
+                <ion-row>
+                  <ion-col size="12">
+                    <ion-text class="phonename">{{cate.name}}</ion-text>
+                  </ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col size="8">
+                    <ion-label color="medium" class="quantity">
+                      Options:{{cate.color}},{{cate.storage}}
+                    </ion-label>
+                  </ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col size="10">
+                    <ion-text class="phoneprice">{{cate.currency}}{{cate.price}}</ion-text>
+                  </ion-col>
+                  <ion-col size="2">
+                    <span class="quantity">
+                      {{cate.quantity}}
+                    </span>
+                  </ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col size="6">
+                    <del class="quantity">{{cate.currency}}{{cate.discount_price}}</del>
+                  </ion-col>
+                  <ion-col size="6">
+                    <span class="discount">
+                      {{cate.discount}}
+                    </span>
+                  </ion-col>
+                </ion-row>
+
               </ion-col>
             </ion-row>
 
             <ion-row>
-              <ion-col size="10">
-                <ion-text class="phoneprice">{{cate.currency}}{{cate.price}}</ion-text>
-              </ion-col>
-              <ion-col size="2">
-                <span class="quantity">
-                  {{cate.quantity}}
-                </span>
+              <ion-col size="12">
+                <ion-item lines="none">
+                  <ion-label>
+                    <p *ngFor="let item of cate.promotions">
+                      {{item.gift}} {{item.name}}
+                    </p>
+                  </ion-label>
+                  <ion-label class="label-right">
+                    <p class="quantity" *ngFor="let item of cate.promotions">
+                      {{item.quantity}}
+                    </p>
+                  </ion-label>
+                </ion-item>
               </ion-col>
             </ion-row>
 
-            <ion-row>
-              <ion-col size="6">
-                <del class="quantity">{{cate.currency}}{{cate.discount_price}}</del>
+            <!-- <ion-row>
+              <ion-col size="12">
+                <ion-list *ngFor="let cart of cartDataList.cart">
+                  <ion-item *ngFor="let pro of cart.product">
+                    <ion-label>ค่าจัดส่ง</ion-label>
+                    <ion-label class="label-right">{{pro.currency}}{{pro.chipingfee}}</ion-label>
+                  </ion-item>
+                </ion-list>
+                <ion-list>
+                  <ion-item>
+                    <ion-label>หมายเหตุ</ion-label>
+                    <ion-input placeholder="ฝากข้อความ"></ion-input>
+                  </ion-item>
+                </ion-list>
+
+                <ion-list *ngIf="cartDataList.totalcart">
+                  <ion-item>
+                    <ion-label>ยอดรวม</ion-label>
+                    <ion-label class="label-right2">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.price}}
+                    </ion-label>
+                  </ion-item>
+                </ion-list>
               </ion-col>
-              <ion-col size="6">
-                <span class="discount">
-                  {{cate.discount}}
-                </span>
-              </ion-col>
-            </ion-row>
+            </ion-row> -->
 
           </ion-col>
         </ion-row>
-      </ion-col>
-    </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
 
-    <ion-row>
-      <ion-col size="12">
-        <ion-list *ngFor="let itemdata of cartDataList.carts">
-          <ion-item>
-            <ion-label>
-              <p *ngFor="let item of itemdata.promotions">
-                {{item.gift}} {{item.name}}
-              </p>
-            </ion-label>
-            <ion-label class="label-right">
-              <p class="quantity" *ngFor="let item of itemdata.promotions">
-                {{item.quantity}}
-              </p>
-            </ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-col>
-    </ion-row>
 
-    <ion-row>
-      <ion-col size="12">
-        <ion-list *ngFor="let cart of cartDataList.cart">
-          <ion-item *ngFor="let pro of cart.product">
-            <ion-label>ค่าจัดส่ง</ion-label>
-            <ion-label class="label-right">{{pro.currency}}{{pro.chipingfee}}</ion-label>
-          </ion-item>
-        </ion-list>
-        <ion-list>
-          <ion-item>
-            <ion-label>หมายเหตุ</ion-label>
-            <ion-input placeholder="ฝากข้อความ"></ion-input>
-          </ion-item>
-        </ion-list>
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item *ngFor="let cart of cartDataList.cart">
+              <ion-label>ค่าจัดส่ง</ion-label>
+              <ion-label class="label-right" *ngFor="let pro of cartDataList.cart.product">
+                {{pro.currency}}{{pro.chipingfee}}</ion-label>
+            </ion-item>
 
-        <ion-list *ngIf="cartDataList.totalcart">
-          <ion-item>
-            <ion-label>ยอดรวม</ion-label>
-            <ion-label class="label-right2">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.price}}</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-col>
-    </ion-row>
+            <ion-item>
+              <ion-label>หมายเหตุ</ion-label>
+              <ion-input placeholder="ฝากข้อความ"></ion-input>
+            </ion-item>
 
-  </ion-card>
+            <ion-item lines="none" *ngIf="cartDataList.totalcart">
+              <ion-label>ยอดรวม</ion-label>
+              <ion-label class="label-right2">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.price}}
+              </ion-label>
+            </ion-item>
 
-  <ion-card>
-    <ion-row>
-      <ion-col size="12">
-        <ion-item (click)="vouchersModal()">
-          <ion-label>บัตรกำนัล</ion-label>
-          <ion-label>
-            <ion-input class="cupon" placeholder="ใส่รหัสคูปอง"></ion-input>
-          </ion-label>
-          <ion-label class="arow-forwardicon">
-            <ion-icon mode="ios" name="arrow-forward"></ion-icon>
-          </ion-label>
-        </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
 
-        <ion-item>
-          <ion-label>
-            100 หักTcoin฿1
-          </ion-label>
-          <ion-label class="label-right3">
-            <ion-toggle slot="start" name="cherry" color="danger" checked></ion-toggle>
-          </ion-label>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-card>
 
-  <ion-card>
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item (click)="vouchersModal()">
+              <ion-label>บัตรกำนัล</ion-label>
+              <ion-label>
+                <ion-input class="cupon" placeholder="ใส่รหัสคูปอง"></ion-input>
+              </ion-label>
+              <ion-label class="arow-forwardicon">
+                <ion-icon mode="ios" name="arrow-forward"></ion-icon>
+              </ion-label>
+            </ion-item>
 
-    <ion-row *ngFor="let cart of cartDataList.carts">
-      <ion-col size="6" *ngFor="let pro of cart.product">
-        <ion-text class="ordertitle">ยอดรวม ({{pro.quantity}} สินค้า)</ion-text>
-      </ion-col>
+            <ion-item lines="none">
+              <ion-label>
+                100 หักTcoin฿1
+              </ion-label>
+              <ion-label class="label-right3">
+                <ion-toggle slot="start" name="cherry" color="danger" checked></ion-toggle>
+              </ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
 
-      <ion-col size="6" *ngFor="let pro of cart.product">
-        <ion-text class="orders">{{pro.currency}}{{pro.price}}</ion-text>
-      </ion-col>
-    </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid>
+        <ion-row *ngFor="let cart of cartDataList.carts">
+          <ion-col size="6" *ngFor="let pro of cart.product">
+            <ion-text class="ordertitle">ยอดรวม ({{pro.quantity}} สินค้า)</ion-text>
+          </ion-col>
 
-    <ion-row *ngFor="let cart of cartDataList.carts">
-      <ion-col size="6" *ngFor="let pro of cart.product">
-        <ion-text class="ordertitle">โปรโมชั่น</ion-text>
-      </ion-col>
-      <ion-col size="6" *ngFor="let pro of cart.product">
-        <ion-text class="order"> {{pro.currency_coupon}} {{pro.coupon}}</ion-text>
-      </ion-col>
-    </ion-row>
-    <ion-row *ngFor="let cart of cartDataList.carts">
-      <ion-col size="6" *ngFor="let pro of cart.product">
-        <ion-text class="ordertitle">ค่าจัดส่ง</ion-text>
-      </ion-col>
-      <ion-col size="6" *ngFor="let pro of cart.product">
-        <ion-text class="orders">{{pro.currency}} {{pro.chipingfee}}</ion-text>
-      </ion-col>
-    </ion-row>
+          <ion-col size="6" *ngFor="let pro of cart.product">
+            <ion-text class="orders">{{pro.currency}}{{pro.price}}</ion-text>
+          </ion-col>
+        </ion-row>
 
-  </ion-card>
+        <ion-row *ngFor="let cart of cartDataList.carts">
+          <ion-col size="6" *ngFor="let pro of cart.product">
+            <ion-text class="ordertitle">โปรโมชั่น</ion-text>
+          </ion-col>
+          <ion-col size="6" *ngFor="let pro of cart.product">
+            <ion-text class="order"> {{pro.currency_coupon}} {{pro.coupon}}</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngFor="let cart of cartDataList.carts">
+          <ion-col size="6" *ngFor="let pro of cart.product">
+            <ion-text class="ordertitle">ค่าจัดส่ง</ion-text>
+          </ion-col>
+          <ion-col size="6" *ngFor="let pro of cart.product">
+            <ion-text class="orders">{{pro.currency}} {{pro.chipingfee}}</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
 
 </ion-content>
 
 
 <ion-footer *ngIf="select === 'down'">
-
   <ion-row *ngFor="let data of downDataList">
     <ion-col size="12">
       <ion-row>
@@ -333,7 +379,6 @@
     </ion-col>
   </ion-row>
 </ion-footer>
-
 
 <ion-footer>
   <ion-row>
