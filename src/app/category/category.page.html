@@ -38,10 +38,9 @@
               </ion-col>
             </ion-row>
             <ion-row>
-              <ion-col text-center size="4" *ngFor="let product of cate.products"
-                (click)="onPromotionClick(product._id)">
-                <img class="productimage" [src]="product.image">
-                <ion-text class="producttext">{{product.name}}</ion-text>
+              <ion-col text-center size="4" *ngFor="let item of cate.items" (click)="onPromotionClick(item._id)">
+                <img class="productimage" [src]="item.image">
+                <ion-text class="producttext">{{item.name}}</ion-text>
               </ion-col>
             </ion-row>
           </ion-col>
