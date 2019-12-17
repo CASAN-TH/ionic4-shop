@@ -44,7 +44,7 @@
         <ion-avatar slot="start">
           <img src="https://image.flaticon.com/icons/svg/145/145845.svg" />
         </ion-avatar>
-        <ion-label (click)="onToLoginPage()">เข้าสู่ระบบ/ลงทะเบียน</ion-label>
+        <ion-label color="light" (click)="onToLoginPage()">เข้าสู่ระบบ/ลงทะเบียน</ion-label>
       </ion-item>
     </ion-col>
   </ion-row>
@@ -68,16 +68,16 @@
 
   <ion-row *ngIf="!accountData" class="font">
     <ion-col size="4" (click)="onToWishlistPage()">
-      <h1>--</h1>
-      <p>รายการโปรด</p>
+      <h2>--</h2>
+      <p class="font-detail font-13">รายการโปรด</p>
     </ion-col>
     <ion-col size="4" (click)="onToFollowedShopPage()">
-      <h1>--</h1>
-      <p>ร้านค้าที่ติดตาม</p>
+      <h2>--</h2>
+      <p class="font-detail font-13">ร้านค้าที่ติดตาม</p>
     </ion-col>
     <ion-col size="4" (click)="onToBrowseHistoryPage()">
-      <h1>--</h1>
-      <p>ประวัติการเข้าชม</p>
+      <h2>--</h2>
+      <p class="font-detail font-13">ประวัติการเข้าชม</p>
     </ion-col>
   </ion-row>
   <!-- End รายการโปรด ร้านค้าที่ติดตาม ประวัติการเข้าชม -->
@@ -212,20 +212,20 @@
 
       <ion-row *ngIf="!accountData">
         <ion-col size="3" (click)="onToCreditPage()">
-          <h1>--</h1>
-          <p>วงเงินที่ใช้ได้</p>
+          <h5>--</h5>
+          <p class="font-13">วงเงินที่ใช้ได้</p>
         </ion-col>
         <ion-col size="3" (click)="onToMyCouponPage()">
-          <h1>--</h1>
-          <p>คูปอง</p>
+          <h5>--</h5>
+          <p class="font-13">คูปอง</p>
         </ion-col>
         <ion-col size="3" (click)="onToTcoinPage()">
-          <h1>--</h1>
-          <p>Tcoin</p>
+          <h5>--</h5>
+          <p class="font-13">Tcoin</p>
         </ion-col>
         <ion-col size="3" (click)="onToCurrentAmountPage()">
-          <h1>--</h1>
-          <p>ยอดเงินปัจจุบัน</p>
+          <h5>--</h5>
+          <p class="font-13">รางวัลเงินสด</p>
         </ion-col>
       </ion-row>
     </ion-grid>
