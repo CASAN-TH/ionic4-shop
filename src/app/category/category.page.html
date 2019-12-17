@@ -3,17 +3,17 @@
     <ion-searchbar slot="start" placeholder="Enter item keyword"></ion-searchbar>
     <ion-buttons slot="end">
       <ion-button>
-        <ion-icon slot="icon-only" name="ios-chatboxes"></ion-icon>
+        <ion-icon slot="icon-only" src="https://image.flaticon.com/icons/svg/126/126501.svg"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content>
   <ion-row class="mnu-default">
     <ion-col size="2" class="ion-no-padding">
       <div scrollY="true" class="menu-content">
-        <ion-row *ngFor="let item of data"  [class.mnu-selected]="item._id == tabSelected" id="mnu_{{item._id}}">
+        <ion-row *ngFor="let item of data" [class.mnu-selected]="item._id == tabSelected" id="mnu_{{item._id}}">
           <ion-col size="12" text-center (click)="onMenuClick(item._id)">
             <ion-icon [src]="item.icon" class="icon-menu"></ion-icon>
             <p class="ion-text-nowrap menutext">{{item.name}}</p>
@@ -26,7 +26,7 @@
       <ion-content #content>
         <ion-row *ngFor="let cate of data" [id]="cate._id">
           <ion-col size="12">
-            <ion-text >{{cate.name}}</ion-text>
+            <ion-text>{{cate.name}}</ion-text>
             <ion-slides pager>
               <ion-slide *ngFor="let cover of cate.cover_image">
                 <img class="coverimage" [src]="cover.image" (click)="onCoverClick(cover._id)">
@@ -38,9 +38,9 @@
               </ion-col>
             </ion-row>
             <ion-row>
-              <ion-col text-center size="4" *ngFor="let product of cate.products" (click)="onPromotionClick(product._id)">
-                <img class="productimage" [src]="product.image">
-                <ion-text class="producttext">{{product.name}}</ion-text>
+              <ion-col text-center size="4" *ngFor="let item of cate.items" (click)="onPromotionClick(item._id)">
+                <img class="productimage" [src]="item.image">
+                <ion-text class="producttext">{{item.name}}</ion-text>
               </ion-col>
             </ion-row>
           </ion-col>

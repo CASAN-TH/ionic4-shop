@@ -77,7 +77,6 @@ export class CreditPage implements OnInit {
 
   onScroll($event: CustomEvent<ScrollDetail>) {
     if ($event && $event.detail && $event.detail.scrollTop) {
-      console.log($event)
       const scrollTop = $event.detail.scrollTop;
       this.showToolbar = scrollTop >= 27;
     }

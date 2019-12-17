@@ -51,7 +51,7 @@
                     "image": "https://pub.thisshop.com/shop/default/20190924/29817073_1569307366613.png"
                 }
             ],
-            "products": [
+            "items": [
                 {
                     "_id": "456",
                     "name": "ชุดห้องนอน",
@@ -114,7 +114,7 @@
                 }
             ],
             "icon": "../../../assets/icon/childroom.svg",
-            "brands": [
+            "items": [
                 {
                     "_id": "133",
                     "name": "acer",
@@ -208,7 +208,7 @@
             "_id": "1023",
             "name": "ห้องนั่งเล่น",
             "icon": "../../../assets/icon/livingroom.svg",
-            "products": [
+            "items": [
                 {
                     "_id": "1223",
                     "name": "กล้องมิเรอร์เลส",
@@ -336,7 +336,7 @@
                     "image": "https://pub.thisshop.com/shop/default/20190924/89023748_1569307089799.png"
                 }
             ],
-            "products": [
+            "items": [
                 {
                     "_id": "123",
                     "name": "แลปท็อป",
@@ -444,7 +444,7 @@
                     "image": "https://pub.thisshop.com/shop/default/20190924/29817073_1569307366613.png"
                 }
             ],
-            "products": [
+            "items": [
                 {
                     "_id": "456",
                     "name": "สมาร์ทโฟน",
@@ -522,7 +522,7 @@
                     "image": "https://pub.thisshop.com/shop/default/20190924/89023748_1569307089799.png"
                 }
             ],
-            "products": [
+            "items": [
                 {
                     "_id": "123",
                     "name": "แลปท็อป",
@@ -630,7 +630,7 @@
                     "image": "https://pub.thisshop.com/shop/default/20190924/89023748_1569307089799.png"
                 }
             ],
-            "products": [
+            "items": [
                 {
                     "_id": "123",
                     "name": "แลปท็อป",
@@ -738,7 +738,7 @@
                     "image": "https://pub.thisshop.com/shop/default/20190924/89023748_1569307089799.png"
                 }
             ],
-            "products": [
+            "items": [
                 {
                     "_id": "123",
                     "name": "แลปท็อป",
