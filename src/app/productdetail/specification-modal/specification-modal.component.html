@@ -12,7 +12,9 @@
 <ion-content>
   <ion-row>
     <ion-col size="4">
-      <img [src]="SpecificationData.image">
+      <div *ngFor="let item of SpecificationData.selectcolor.speccolor">
+        <img style="width: 100%;" *ngIf="item._id == specColorSelected" [src]="item.image">
+      </div>
     </ion-col>
     <ion-col size="8">
       <h3 class="pri">
@@ -27,7 +29,16 @@
         {{SpecificationData.unit}}
         {{SpecificationData.per}}
       </span>
-      <p class="name">{{SpecificationData.name}}</p>
+      <ion-row>
+        <ion-col size="12">
+          <span *ngFor="let item of SpecificationData.selectcolor.speccolor">
+            <ion-text class="name" *ngIf="item._id == specColorSelected">{{item.color}}</ion-text>
+          </span>,
+          <span *ngFor="let itemver of SpecificationData.selectversion.specversion">
+            <ion-text class="name" *ngIf="itemver._id == specVertionSelected">{{itemver.version}}</ion-text>
+          </span>
+        </ion-col>
+      </ion-row>
     </ion-col>
   </ion-row>
 
@@ -62,11 +73,9 @@
 
   <ion-row>
     <ion-col size="12">
-      <div>
-        <span>
-          <h3>{{SpecificationData.quantity}}</h3>
-        </span>
-      </div>
+      <span>
+        <h3>{{SpecificationData.quantity}}</h3>
+      </span>
     </ion-col>
   </ion-row>
 

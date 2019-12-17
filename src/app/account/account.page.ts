@@ -26,23 +26,23 @@ export class AccountPage implements OnInit {
 
   ngOnInit() {
     this.accountService.onAccountDataListChanged.subscribe((accountDataList: any) => {
-      console.log(accountDataList);
+      // console.log(accountDataList);
       this.accountDataList = accountDataList;
     })
     this.accountService.onAccountData2Changed.subscribe((accountData) => {
-      console.log(accountData);
-      this.accountData = accountData;
+      // console.log(accountData);
+      // this.accountData = accountData;
     })
     this.accountService.onPromotionChanged.subscribe((promotionData) => {
-      console.log(promotionData);
+      // console.log(promotionData);
       this.promotionData = promotionData;
     })
     this.accountService.onCreditDataChanged.subscribe((creditData) => {
-      console.log(creditData);
+      // console.log(creditData);
       this.creditData = creditData;
     })
     this.accountService.onAccountScoreDataChanged.subscribe((scoreData) => {
-      console.log(scoreData);
+      // console.log(scoreData);
       this.scoreData = scoreData;
     })
   }

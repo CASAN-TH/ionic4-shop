@@ -11,48 +11,50 @@
 
 <ion-content>
 
-  <div *ngIf="AddressData">
-    <ion-card *ngFor="let item of AddressData">
-      <ion-item>
-        <ion-label>
-          <h3>{{item.receiver}}</h3>
-          <h3>{{item.receiverphone}}</h3>
-          <p>{{item.receiveraddress}} {{item.subdistric}} {{item.distric}} {{item.province}}
-          </p>
-        </ion-label>
-      </ion-item>
+  <ion-row *ngIf="AddressData">
+    <ion-col size="12">
+      <ion-grid *ngFor="let item of AddressData">
+        <ion-item lines="none">
+          <ion-label>
+            <h3>{{item.receiver}}</h3>
+            <h3>{{item.receiverphone}}</h3>
+            <p>{{item.receiveraddress}} {{item.subdistric}} {{item.distric}} {{item.province}}
+            </p>
+          </ion-label>
+        </ion-item>
 
-      <ion-item>
-        <ion-label>
-          <p>ที่อยู่จัดส่ง</p>
-          <ion-buttons mode="ios">
-            <ion-button (click)="onEditAddress()">
-              <ion-icon mode="ios" name="create"></ion-icon>
-            </ion-button>
-            <ion-button (click)="onDeleteAddress()">
-              <ion-icon mode="ios" name="trash"></ion-icon>
-            </ion-button>
-          </ion-buttons>
-        </ion-label>
-      </ion-item>
-    </ion-card>
-  </div>
+        <ion-item lines="none">
+          <ion-label>ที่อยู่จัดส่ง</ion-label>
+          <ion-note slot="end">
+            <ion-buttons mode="ios">
+              <ion-button (click)="onEditAddress()">
+                <ion-icon mode="ios" name="create"></ion-icon>
+              </ion-button>
+              <ion-button (click)="onDeleteAddress()">
+                <ion-icon mode="ios" name="trash"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-note>
+        </ion-item>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
 
   <div *ngIf="!AddressData">
     <ion-row>
-
       <ion-col>
         <img src="https://image.flaticon.com/icons/svg/2312/2312289.svg">
       </ion-col>
-
     </ion-row>
     <ion-button expand="block">+ เพิ่มที่อยู่ใหม่</ion-button>
   </div>
 
-
-
 </ion-content>
 
-<div *ngIf="AddressData">
-<ion-button expand="full" (click)="onAddNewAddress()">+ เพิ่มที่อยู่ใหม่</ion-button>
-</div>
+<ion-footer *ngIf="AddressData">
+  <ion-grid class="grid-footter">
+    <ion-buttons class="btn-center" (click)="onAddNewAddress()">
+      <ion-button class="btn-footer">+ เพิ่มที่อยู่ใหม่</ion-button>
+    </ion-buttons>
+  </ion-grid>
+</ion-footer>

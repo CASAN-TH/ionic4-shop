@@ -14,11 +14,13 @@
         "selectcolor": [
             {
                 "_id": "222",
-                "color": "Black&amp,Red"
+                "color": "Black&amp,Red",
+                "image": "https://pub.thisshop.com/shop/category/01010313/01010313/0c5282c917364a16ad22fc849e0389e7.png"
             },
             {
                 "_id": "333",
-                "color": "Black"
+                "color": "Black",
+                "image": "https://pub.thisshop.com/shop/category/01010313/01010313/b4f115e8c0214a3fbd311d05fd5a7d9a.png"
             }
         ]
     }
