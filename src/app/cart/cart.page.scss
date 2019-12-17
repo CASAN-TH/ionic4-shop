@@ -10,12 +10,13 @@
   border-radius: 5%;
 }
 .select {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
+  margin-top: 6px;
+  margin-left: 4px;
 }
 .icon {
-  padding-right: 0.5rem;
-  padding-bottom: 0.3rem;
+  margin-left: -18px;
 }
 .producttext {
   font-weight: bold;
@@ -24,13 +25,30 @@
   padding-inline-start: 5%;
 }
 .phonename {
-  font-size: 18px;
+  font-size: 13px;
+  font-weight: bold;
 }
 .quantity {
-  font-size: 14px;
+  font-size: 12px;
 }
+.quantity2{
+  margin-top: -2px;
+  margin-left: 3px;
+  height: 25px;
+}
+.quantity3{
+  background-color: rgba(228, 228, 228, 0.4);
+}
+.arrow-down{
+color: rgb(173, 173, 173);
+}
+.arrow-down2{
+  margin-left: -4px;
+  }
 .phoneprice {
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 15px;
+  color: red;
 }
 .icon-check {
   margin-top:20%;
@@ -66,13 +84,75 @@ ion-content {
   width: 30%;
 }
 ion-chip {
-  background-color: #ff5a02;
+  background-color: #ff5b02;
   color: white;
   width: 70%;
+}
+icon-checkbox{
+  width: 21px;
+  height: 22px;
 }
 .imgchip {
   margin-top: -22%;
 }
 .discount {
   font-size: 10px;
+}
+.shopname{
+  padding-top: 11px;
+  font-weight: bold;
+}
+.shopcupon{
+  padding-top: 11px;
+  margin-left: 38px;
+  font-size: 13px;
+  color: rgb(173, 173, 173);
+}
+.cupon{
+  padding-top: 13px;
+}
+.border{
+  border-bottom: 1px solid;
+  border-color:  rgb(194, 193, 193);;
+  height: 44px;
+}
+.imgcart{
+  margin-left: -25px;
+}
+.addamount{
+  margin-left: 91px;
+margin-top: -37px;
+}
+.addamount2{
+  margin-left: 47px;
+margin-top: -2px;
+}
+.add-remove{
+  background-color: #b0b0b03b;
+  height: 21px;
+}
+.addremoveicon{
+  width: 28px;
+  font-weight: bold;
+  color: #8a8686;
+  margin-top: -10px;
+  margin-left: -5px;
+}
+.amountproduct{
+  color: rgba(0,0,0,.87);
+  background-color: #f7f5f5;
+  height: 21px;
+}
+.amountproduct2{
+  margin-left: 3px;
+  margin-top: -3px;
+}
+.text{
+  font-size: 12px;
+}
+.disprice{
+  margin-top: -8px;
+}
+.detail-card-cart{
+  margin-left: -17px;
 }
