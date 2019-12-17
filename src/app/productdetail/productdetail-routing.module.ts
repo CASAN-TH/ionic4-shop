@@ -11,7 +11,7 @@ const routes: Routes = [
     resolve: [ ProductdetailService ]
   },
   {
-    path: ':productId',
+    path: ':id',
     component: ProductdetailPage,
     resolve: [ ProductdetailService ]
   }
