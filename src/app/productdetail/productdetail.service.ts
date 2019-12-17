@@ -13,7 +13,10 @@ const mockup = environment.mockup;
 export class ProductdetailService {
   routeParams: any;
 
-  onProductdetailDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onProductdetailDataListChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "details":{},
+    "warranties":{}
+  });
   onProductdetailDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
   onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({
