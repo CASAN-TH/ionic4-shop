@@ -50,7 +50,7 @@
         </ion-row>
 
         <ion-row *ngFor="let cate of cate.product; let j = index">
-          <ion-col size="2">
+          <ion-col size="2" class="chekbox">
             <ion-thumbnail>
               <ion-checkbox color="danger" mode="ios" (click)="onSelectProduct()"></ion-checkbox>
             </ion-thumbnail>
@@ -133,13 +133,11 @@
         <ion-row>
           <ion-col size="12">
             <ion-row>
-              <ion-col size="9">
-                <ion-item>
-                  <ion-input type="text" placeholder="ใส่รหัสคูปอง"></ion-input>
-                </ion-item>
+              <ion-col size="8" class="getcupon">
+                <ion-input type="text" placeholder="ใส่รหัสคูปอง" class="inputcupon"></ion-input>
               </ion-col>
-              <ion-col size="3">
-                <ion-item color="danger" disabled (click)="onAcceptCodeClick()">
+              <ion-col size="4" class="buttonget">
+                <ion-item color="danger" disabled (click)="onAcceptCodeClick()" class="buttonget2">
                   <ion-label text-center>
                     รับ
                   </ion-label>
@@ -149,11 +147,14 @@
           </ion-col>
         </ion-row>
       </ion-grid>
+
+
+
     </ion-col>
   </ion-row>
 
 
-  <ion-row>
+  <ion-row class="reccomment">
     <ion-col size="12">
       <ion-row>
         <ion-col size="4" text-end>
