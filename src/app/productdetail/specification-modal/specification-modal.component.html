@@ -12,8 +12,8 @@
 <ion-content>
   <ion-row>
     <ion-col size="4">
-      <div *ngFor="let item of SpecificationData.selectcolor.speccolor">
-        <img style="width: 100%;" *ngIf="item._id == specColorSelected" [src]="item.image">
+      <div>
+        <img style="width: 100%;" [src]="SpecificationData.image">
       </div>
     </ion-col>
     <ion-col size="8">
@@ -31,11 +31,11 @@
       </span>
       <ion-row>
         <ion-col size="12">
-          <span *ngFor="let item of SpecificationData.selectcolor.speccolor">
-            <ion-text class="name" *ngIf="item._id == specColorSelected">{{item.color}}</ion-text>
+          <span>
+            <ion-text class="name">{{SpecificationData.color}}</ion-text>
           </span>,
-          <span *ngFor="let itemver of SpecificationData.selectversion.specversion">
-            <ion-text class="name" *ngIf="itemver._id == specVertionSelected">{{itemver.version}}</ion-text>
+          <span>
+            <ion-text class="name">{{SpecificationData.version}}</ion-text>
           </span>
         </ion-col>
       </ion-row>
@@ -50,8 +50,8 @@
 
   <ion-row *ngIf="SpecificationData.selectcolor.speccolor && SpecificationData.selectcolor.speccolor.length">
     <ion-col class="selectcolor" size="4" text-center *ngFor="let item of SpecificationData.selectcolor.speccolor"
-      [class.ion-col-border]="item._id == specColorSelected" (click)="onspecColorClick(item._id)">
-      <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="item._id == specColorSelected"></ion-icon>
+      [class.ion-col-border]="item._id == specColorSelected" (click)="onspecColorClick(item.color,item.image)">
+      <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="item.color == specColorSelected"></ion-icon>
       {{item.color}}
     </ion-col>
   </ion-row>
@@ -65,8 +65,8 @@
   <ion-row *ngIf="SpecificationData.selectversion.specversion && SpecificationData.selectversion.specversion.length">
     <ion-col class="selectcolor" size="6" text-center
       *ngFor="let itemver of SpecificationData.selectversion.specversion"
-      [class.ion-col-border]="itemver._id == specVertionSelected" (click)="onspecVertionClick(itemver._id)">
-      <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="itemver._id == specVertionSelected"></ion-icon>
+      [class.ion-col-border]="itemver._id == specVertionSelected" (click)="onspecVertionClick(itemver.version)">
+      <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="itemver.version == specVertionSelected"></ion-icon>
       {{itemver.version}}
     </ion-col>
   </ion-row>
