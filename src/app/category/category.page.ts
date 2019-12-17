@@ -19,10 +19,10 @@ export class CategoryPage implements OnInit {
 
   ngOnInit() {
     this.categoryService.onCategoryDataListChanged.subscribe((categoryDataList: any) => {
-      console.log(categoryDataList);
+      // console.log(categoryDataList);
       this.data = categoryDataList;
       if (this.data.length > 0) {
-        console.log(this.data)
+        // console.log(this.data)
         this.tabSelected = this.data[0]._id;
       }
 
@@ -34,14 +34,9 @@ export class CategoryPage implements OnInit {
     this.tabSelected = cate_id;
     let yOffset = document.getElementById(cate_id).offsetTop;
     let yHOffset = document.getElementById(cate_id).offsetHeight;
-
-    // if (yOffset > 0) {
-    //   yOffset = yOffset + yHOffset;
-    // }
-    console.log(yOffset + " : " + yHOffset);
+    // console.log(yOffset + " : " + yHOffset);
     this.content.scrollToPoint(0, yOffset, 1000);
-    // this.content.scrollToBottom();
-    // this.content.scrollTo(yOffset)
+    
   }
 
   onBrandClick(categoryId: any, brandId: any) {

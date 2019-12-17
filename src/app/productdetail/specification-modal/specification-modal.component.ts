@@ -9,6 +9,7 @@ import { ModalController } from '@ionic/angular';
 export class SpecificationModalComponent implements OnInit {
 
   specColorSelected: any;
+  specImageSelected: any;
   specVertionSelected: any;
 
   @Input() SpecificationData: any
@@ -16,23 +17,30 @@ export class SpecificationModalComponent implements OnInit {
   constructor(public modalController: ModalController) { }
 
   ngOnInit() {
-    console.log(this.SpecificationData);
+    this.specColorSelected = this.SpecificationData.color
+    this.specVertionSelected = this.SpecificationData.version
+    this.specImageSelected = this.SpecificationData.image
+    console.log(this.SpecificationData.image);
   }
 
   dismiss() {
     this.modalController.dismiss();
   }
 
-  onspecColorClick(specColorId: any) {
+  onspecColorClick(specColorId: any, specImage: any) {
     // this.router.navigateByUrl('search/' + cate2Id);
     console.log(specColorId);
     this.specColorSelected = specColorId;
+    this.SpecificationData.color = specColorId;
+    this.SpecificationData.image = specImage;
+
   }
 
   onspecVertionClick(specVertionId: any) {
     // this.router.navigateByUrl('search/' + cate2Id);
     console.log(specVertionId);
     this.specVertionSelected = specVertionId;
+    this.SpecificationData.version = specVertionId;
   }
 
 }

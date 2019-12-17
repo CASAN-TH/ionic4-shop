@@ -11,20 +11,20 @@
 
 <ion-content>
 
-  <ion-grid class="grid-top" *ngFor="let itemproduct of productdetailData.productdetail">
+  <ion-grid class="grid-top">
     <ion-slides pager [options]="slideOpts">
-      <ion-slide *ngFor="let itemimg of itemproduct.images">
+      <ion-slide *ngFor="let itemimg of productdetailData.images">
         <img [src]="itemimg">
       </ion-slide>
     </ion-slides>
   </ion-grid>
 
   <ion-row>
-    <ion-col size="12" *ngFor="let itemproduct of productdetailData.productdetail">
+    <ion-col size="12">
       <ion-grid>
         <ion-row>
           <ion-col size="12">
-            <h1 class="pri">{{itemproduct.currency}} {{itemproduct.price}}</h1>
+            <h1 class="pri">{{productdetailData.currency}} {{productdetailData.price}}</h1>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -51,7 +51,7 @@
 
         <ion-row>
           <ion-col size="12">
-            <h4 class="titlewar">{{itemproduct.name}}</h4>
+            <h4 class="titlewar">{{productdetailData.name}}</h4>
           </ion-col>
         </ion-row>
 
@@ -243,7 +243,7 @@
     <ion-col size="12">
       <ion-grid>
         <ion-item lines="none" (click)="imformationSpecModal()">
-          <!-- <ion-label>ข้อมูลจำเพาะ</ion-label> -->
+          
           <ion-text>ข้อมูลจำเพาะ</ion-text>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -258,31 +258,31 @@
   </ion-row>
 
   <ion-row>
-    <ion-col size="12" *ngFor="let detail of productdetailData.details">
+    <ion-col size="12" >
       <ion-grid>
         <ion-item>
           <ion-label>
-            <ion-text class="titlewar">{{detail.detailname}}</ion-text>
+            <ion-text class="titlewar">{{productdetailData.details.detailname}}</ion-text>
           </ion-label>
         </ion-item>
         <div>
-          <img *ngFor="let item of detail.images" [src]="item">
+          <img *ngFor="let item of productdetailData.details.images" [src]="item">
         </div>
       </ion-grid>
     </ion-col>
   </ion-row>
 
   <ion-row>
-    <ion-col size="12" *ngFor="let warranty of productdetailData.warranties">
+    <ion-col size="12">
       <ion-grid>
         <ion-item>
           <ion-label>
-            <ion-text class="titlewar">{{warranty.warrantyname}}</ion-text>
+            <ion-text class="titlewar">{{productdetailData.warranties.warrantyname}}</ion-text>
           </ion-label>
         </ion-item>
 
         <ion-row>
-          <ion-col size="12" *ngFor="let warranty2 of warranty.warrantiestitle">
+          <ion-col size="12" *ngFor="let warranty2 of productdetailData.warranties.warrantiestitle">
             <p class="titlewar">{{warranty2.title}}</p>
             <p class="subtitlewar">{{warranty2.subtitle}}</p>
           </ion-col>
@@ -290,12 +290,12 @@
 
         <ion-row>
           <ion-col size="12">
-            <p class="subtitlewar">{{warranty.sub1}}</p>
-            <p class="subtitlewar">{{warranty.sub2}}</p>
-            <p class="subtitlewar">{{warranty.sub3}}</p>
-            <p class="subtitlewar">{{warranty.sub4}}</p>
-            <p class="subtitlewar">{{warranty.sub5}}</p>
-            <p class="subtitlewar">{{warranty.sub6}}</p>
+            <p class="subtitlewar">{{productdetailData.warranties.sub1}}</p>
+            <p class="subtitlewar">{{productdetailData.warranties.sub2}}</p>
+            <p class="subtitlewar">{{productdetailData.warranties.sub3}}</p>
+            <p class="subtitlewar">{{productdetailData.warranties.sub4}}</p>
+            <p class="subtitlewar">{{productdetailData.warranties.sub5}}</p>
+            <p class="subtitlewar">{{productdetailData.warranties.sub6}}</p>
             <p>หากมีคำถามอื่นๆ สามารถสอบถามเจ้าพนักงานได้โดยตรง</p>
           </ion-col>
         </ion-row>
