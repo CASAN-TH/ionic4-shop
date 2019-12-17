@@ -1,0 +1,272 @@
+{
+  "transactionStatus": {
+    "errorCode": "0",
+    "replyCode": null,
+    "replyText": null,
+    "memo": null,
+    "appName": "tft-shop-server",
+    "success": true
+  },
+  "blockManageData": [
+    {
+      "blockId": "1044",
+      "blockType": "launchAlert",
+      "blockName": {
+        "en-US": "Campaign Launch Page",
+        "th-TH": "Campaign Launch Page"
+      },
+      "blockIcon": null,
+      "blockBGColor": null,
+      "blockBGImgUrl": null,
+      "jump": null,
+      "blockBGImage": null,
+      "dataList": [
+        {
+          "dataType": "2",
+          "dataValue": "https://pub.thisshop.com/shop/block/20191216/67219742_1576477949891.jpg",
+          "blockBGColor": "#ffffff",
+          "jump": {
+            "para": "{\"codPageXrefId\":\"7E24C0FC30CA48B59907C831BF8F9F1E\"}",
+            "type": "23",
+            "url": "https://m1.thisshop.com/m/activity/index?data=7E24C0FC30CA48B59907C831BF8F9F1E"
+          },
+          "contentName": { "en-US": "christmas", "th-TH": "christmas" },
+          "datFieldBegin": null,
+          "datFieldEnd": null,
+          "availableStatus": null,
+          "typPlay": null,
+          "preheatTime": null,
+          "sysNowTime": null
+        },
+        {
+          "dataType": "2",
+          "dataValue": "https://pub.thisshop.com/shop/block/20191211/93451501_1576035488227.png",
+          "blockBGColor": "#ffffff",
+          "jump": {
+            "para": "{}",
+            "type": "10",
+            "url": "https://m1.thisshop.com/mall/10001"
+          },
+          "contentName": { "en-US": "2hand", "th-TH": "2hand" },
+          "datFieldBegin": null,
+          "datFieldEnd": null,
+          "availableStatus": null,
+          "typPlay": null,
+          "preheatTime": null,
+          "sysNowTime": null
+        },
+        {
+          "dataType": "2",
+          "dataValue": "https://pub.thisshop.com/shop/block/2019124/67382835_1575455195552.jpg",
+          "blockBGColor": "#ffffff",
+          "jump": {
+            "para": "{}",
+            "type": "10",
+            "url": "https://m1.thisshop.com/m/activity/index?data=07A38921317F45988915F009656C8FA9"
+          },
+          "contentName": { "en-US": "trendx", "th-TH": "trendx" },
+          "datFieldBegin": null,
+          "datFieldEnd": null,
+          "availableStatus": null,
+          "typPlay": null,
+          "preheatTime": null,
+          "sysNowTime": null
+        },
+        {
+          "dataType": "2",
+          "dataValue": "https://pub.thisshop.com/shop/block/2019124/17949137_1575431661783.jpg",
+          "blockBGColor": "#ffffff",
+          "jump": {
+            "para": "{}",
+            "type": "10",
+            "url": "https://m1.thisshop.com/mall/10001"
+          },
+          "contentName": { "en-US": "Global day", "th-TH": "Global day" },
+          "datFieldBegin": null,
+          "datFieldEnd": null,
+          "availableStatus": null,
+          "typPlay": null,
+          "preheatTime": null,
+          "sysNowTime": null
+        },
+        {
+          "dataType": "2",
+          "dataValue": "https://pub.thisshop.com/shop/block/20191015/37618711_1571129541740.png",
+          "blockBGColor": "#ffffff",
+          "jump": {
+            "para": "{}",
+            "type": "10",
+            "url": "https://m1.thisshop.com/m/beautycontest/vote"
+          },
+          "contentName": { "en-US": "Ambass", "th-TH": "Ambass" },
+          "datFieldBegin": null,
+          "datFieldEnd": null,
+          "availableStatus": null,
+          "typPlay": null,
+          "preheatTime": null,
+          "sysNowTime": null
+        },
+        {
+          "dataType": "2",
+          "dataValue": "https://pub.thisshop.com/shop/block/2019096/81229370_1567788947366.png",
+          "blockBGColor": "#ffffff",
+          "jump": {
+            "para": "{\"codPageXrefId\":\"CF11D945CF8641FD91A1FBFA5F5FF07B\"}",
+            "type": "23",
+            "url": "https://m1.thisshop.com/m/activity/index?data=CF11D945CF8641FD91A1FBFA5F5FF07B"
+          },
+          "contentName": { "en-US": "superbrand", "th-TH": "superbrand" },
+          "datFieldBegin": null,
+          "datFieldEnd": null,
+          "availableStatus": null,
+          "typPlay": null,
+          "preheatTime": null,
+          "sysNowTime": null
+        },
+        {
+          "dataType": "2",
+          "dataValue": "https://pub.thisshop.com/shop/default/20190915/70899892_1568540386046.png",
+          "blockBGColor": "#ffffff",
+          "jump": {
+            "para": "{\"codPageXrefId\":\"87CAEF40CCF24DA8BF28B6B7E9C85AF3\"}",
+            "type": "23",
+            "url": "https://m1.thisshop.com/m/activity/index?data=87CAEF40CCF24DA8BF28B6B7E9C85AF3"
+          },
+          "contentName": { "en-US": "919", "th-TH": "919" },
+          "datFieldBegin": null,
+          "datFieldEnd": null,
+          "availableStatus": null,
+          "typPlay": null,
+          "preheatTime": null,
+          "sysNowTime": null
+        },
+        {
+          "dataType": "2",
+          "dataValue": "https://pub.thisshop.com/shop/block/20191115/42510110_1573785581531.jpg",
+          "blockBGColor": "#ffffff",
+          "jump": { "para": "{}", "type": "10", "url": "" },
+          "contentName": {
+            "en-US": "super discount",
+            "th-TH": "super discount"
+          },
+          "datFieldBegin": null,
+          "datFieldEnd": null,
+          "availableStatus": null,
+          "typPlay": null,
+          "preheatTime": null,
+          "sysNowTime": null
+        }
+      ],
+      "layout": null
+    },
+    {
+      "blockId": "1043",
+      "blockType": "homeAlert",
+      "blockName": { "en-US": "Campaign Popup", "th-TH": "Campaign Popup" },
+      "blockIcon": null,
+      "blockBGColor": null,
+      "blockBGImgUrl": null,
+      "jump": null,
+      "blockBGImage": null,
+      "dataList": [
+        {
+          "dataType": "2",
+          "dataValue": "https://pub.thisshop.com/shop/block/20191217/87717823_1576548342203.png",
+          "blockBGColor": "#ffffff",
+          "jump": {
+            "para": "{}",
+            "type": "10",
+            "url": "https://m1.thisshop.com/m/activity/index?data=2AC363B675B3461FBFFEED8619685F2D"
+          },
+          "contentName": { "en-US": "Trendx", "th-TH": "Trendx" },
+          "datFieldBegin": null,
+          "datFieldEnd": null,
+          "availableStatus": null,
+          "typPlay": null,
+          "preheatTime": null,
+          "sysNowTime": null
+        },
+        {
+          "dataType": "2",
+          "dataValue": "https://pub.thisshop.com/shop/block/20191217/86380538_1576546481507.png",
+          "blockBGColor": "#ffffff",
+          "jump": {
+            "para": "{}",
+            "type": "10",
+            "url": "http://m1.thisshop.com/m/discounts/index?link_source=popup12_16"
+          },
+          "contentName": { "en-US": "discount", "th-TH": "discount" },
+          "datFieldBegin": null,
+          "datFieldEnd": null,
+          "availableStatus": null,
+          "typPlay": null,
+          "preheatTime": null,
+          "sysNowTime": null
+        },
+        {
+          "dataType": "2",
+          "dataValue": "https://pub.thisshop.com/shop/block/20191216/58633749_1576461116201.png",
+          "blockBGColor": "#ffffff",
+          "jump": {
+            "para": "{\"codPageXrefId\":\"7E24C0FC30CA48B59907C831BF8F9F1E\"}",
+            "type": "23",
+            "url": "https://m1.thisshop.com/m/activity/index?data=7E24C0FC30CA48B59907C831BF8F9F1E"
+          },
+          "contentName": { "en-US": "christmas", "th-TH": "christmas" },
+          "datFieldBegin": null,
+          "datFieldEnd": null,
+          "availableStatus": null,
+          "typPlay": null,
+          "preheatTime": null,
+          "sysNowTime": null
+        },
+        {
+          "dataType": "2",
+          "dataValue": "https://pub.thisshop.com/shop/block/2019124/51186189_1575423522596.png",
+          "blockBGColor": "#ffffff",
+          "jump": {
+            "para": "{}",
+            "type": "10",
+            "url": "https://m1.thisshop.com/mall/10001"
+          },
+          "contentName": { "en-US": "Global", "th-TH": "Global" },
+          "datFieldBegin": null,
+          "datFieldEnd": null,
+          "availableStatus": null,
+          "typPlay": null,
+          "preheatTime": null,
+          "sysNowTime": null
+        },
+        {
+          "dataType": "2",
+          "dataValue": "https://pub.thisshop.com/shop/default/20190916/678340_1568610253087.png",
+          "blockBGColor": "#ffffff",
+          "jump": {
+            "para": "{\"codPageXrefId\":\"87CAEF40CCF24DA8BF28B6B7E9C85AF3\"}",
+            "type": "23",
+            "url": "https://m1.thisshop.com/m/activity/index?data=87CAEF40CCF24DA8BF28B6B7E9C85AF3"
+          },
+          "contentName": { "en-US": "919", "th-TH": "919" },
+          "datFieldBegin": null,
+          "datFieldEnd": null,
+          "availableStatus": null,
+          "typPlay": null,
+          "preheatTime": null,
+          "sysNowTime": null
+        }
+      ],
+      "layout": null
+    }
+  ],
+  "page": {
+    "count": 2,
+    "pageSize": 999,
+    "pageNum": 1,
+    "orderBy": "",
+    "returnCount": false,
+    "limit": 999,
+    "offset": 0
+  },
+  "pageStatus": null,
+  "shopMerchantInfo": null
+}

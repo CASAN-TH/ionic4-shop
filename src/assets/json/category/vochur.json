@@ -1,0 +1,61 @@
+{
+  "transactionStatus": {
+    "errorCode": "0",
+    "replyCode": null,
+    "replyText": null,
+    "memo": null,
+    "appName": "tft-shop-server",
+    "success": true
+  },
+  "favoriteStatus": "n",
+  "vouchersList": [
+    {
+      "userId": null,
+      "cardId": "4C04DBD88F6C4990A5D91093381223E8",
+      "couponId": null,
+      "receiveTime": null,
+      "cardTitleTh": "Mobile Big Surprise",
+      "cardTitleEn": "Mobile Big Surprise",
+      "expireBegin": "2019-12-16 00:00:00",
+      "expireEnd": "2019-12-22 23:59:59",
+      "cardType": "CASH",
+      "leastCost": 7999.0,
+      "amtBenefit": 150.0,
+      "logoUrl": "https://pub.thisshop.com/shop/couponLogo/20191214/24600897_1576295781744.png",
+      "openBegin": "2019-12-16 00:00:00",
+      "totalQuantity": 20000,
+      "remnantQuantity": 16298,
+      "isReceive": null,
+      "couponStatus": 2,
+      "useLimit": 1,
+      "typScope": 2,
+      "nowDate": "2019-12-17 14:38:00",
+      "shopId": "10000",
+      "shopName": "Thisshop"
+    },
+    {
+      "userId": null,
+      "cardId": "99507DFCBDCE4B238B00A9D9BBD65D52",
+      "couponId": null,
+      "receiveTime": null,
+      "cardTitleTh": "Mobile Surprise",
+      "cardTitleEn": "Mobile Surprise",
+      "expireBegin": "2019-12-16 00:00:00",
+      "expireEnd": "2019-12-22 23:59:59",
+      "cardType": "CASH",
+      "leastCost": 0.0,
+      "amtBenefit": 100.0,
+      "logoUrl": "https://pub.thisshop.com/shop/couponLogo/20191214/24600897_1576295781744.png",
+      "openBegin": "2019-12-16 00:00:00",
+      "totalQuantity": 20000,
+      "remnantQuantity": 16244,
+      "isReceive": null,
+      "couponStatus": 2,
+      "useLimit": 1,
+      "typScope": 2,
+      "nowDate": "2019-12-17 14:38:00",
+      "shopId": "10000",
+      "shopName": "Thisshop"
+    }
+  ]
+}

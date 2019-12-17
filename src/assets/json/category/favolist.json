@@ -1,0 +1,12 @@
+{
+  "transactionStatus": {
+    "errorCode": "0",
+    "replyCode": null,
+    "replyText": null,
+    "memo": null,
+    "appName": "tft-shop-server",
+    "success": true
+  },
+  "favoriteStatus": "n",
+  "vouchersList": null
+}

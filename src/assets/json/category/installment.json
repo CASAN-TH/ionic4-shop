@@ -1,0 +1,270 @@
+{
+  "transactionStatus": {
+    "errorCode": "0",
+    "replyCode": null,
+    "replyText": null,
+    "memo": null,
+    "appName": "tft-shop-server",
+    "success": true
+  },
+  "dataList": [
+    {
+      "downPayment": 0.2,
+      "downPaymentAmt": 419.8,
+      "insAmt": 1679.2,
+      "stageList": [
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710029",
+          "installmentTerm": 3,
+          "installmentAmt": 601.71,
+          "installmentPrinc": 559.73,
+          "installmentFee": 41.98,
+          "totalFee": 125.94,
+          "totalInstallmentAmt": 1805.14
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710030",
+          "installmentTerm": 6,
+          "installmentAmt": 321.84,
+          "installmentPrinc": 279.86,
+          "installmentFee": 41.98,
+          "totalFee": 251.88,
+          "totalInstallmentAmt": 1931.08
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710031",
+          "installmentTerm": 9,
+          "installmentAmt": 228.55,
+          "installmentPrinc": 186.57,
+          "installmentFee": 41.98,
+          "totalFee": 377.82,
+          "totalInstallmentAmt": 2057.02
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710032",
+          "installmentTerm": 12,
+          "installmentAmt": 181.91,
+          "installmentPrinc": 139.93,
+          "installmentFee": 41.98,
+          "totalFee": 503.76,
+          "totalInstallmentAmt": 2182.96
+        }
+      ]
+    },
+    {
+      "downPayment": 0.3,
+      "downPaymentAmt": 629.7,
+      "insAmt": 1469.3,
+      "stageList": [
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710033",
+          "installmentTerm": 3,
+          "installmentAmt": 526.49,
+          "installmentPrinc": 489.76,
+          "installmentFee": 36.73,
+          "totalFee": 110.19,
+          "totalInstallmentAmt": 1579.49
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710034",
+          "installmentTerm": 6,
+          "installmentAmt": 281.61,
+          "installmentPrinc": 244.88,
+          "installmentFee": 36.73,
+          "totalFee": 220.38,
+          "totalInstallmentAmt": 1689.68
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710035",
+          "installmentTerm": 9,
+          "installmentAmt": 199.98,
+          "installmentPrinc": 163.25,
+          "installmentFee": 36.73,
+          "totalFee": 330.57,
+          "totalInstallmentAmt": 1799.87
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710036",
+          "installmentTerm": 12,
+          "installmentAmt": 159.17,
+          "installmentPrinc": 122.44,
+          "installmentFee": 36.73,
+          "totalFee": 440.76,
+          "totalInstallmentAmt": 1910.06
+        }
+      ]
+    },
+    {
+      "downPayment": 0.4,
+      "downPaymentAmt": 839.6,
+      "insAmt": 1259.4,
+      "stageList": [
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710037",
+          "installmentTerm": 3,
+          "installmentAmt": 451.28,
+          "installmentPrinc": 419.8,
+          "installmentFee": 31.48,
+          "totalFee": 94.44,
+          "totalInstallmentAmt": 1353.84
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710038",
+          "installmentTerm": 6,
+          "installmentAmt": 241.38,
+          "installmentPrinc": 209.9,
+          "installmentFee": 31.48,
+          "totalFee": 188.88,
+          "totalInstallmentAmt": 1448.28
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710039",
+          "installmentTerm": 9,
+          "installmentAmt": 171.41,
+          "installmentPrinc": 139.93,
+          "installmentFee": 31.48,
+          "totalFee": 283.32,
+          "totalInstallmentAmt": 1542.72
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710040",
+          "installmentTerm": 12,
+          "installmentAmt": 136.43,
+          "installmentPrinc": 104.95,
+          "installmentFee": 31.48,
+          "totalFee": 377.76,
+          "totalInstallmentAmt": 1637.16
+        }
+      ]
+    },
+    {
+      "downPayment": 0.5,
+      "downPaymentAmt": 1049.5,
+      "insAmt": 1049.5,
+      "stageList": [
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710041",
+          "installmentTerm": 3,
+          "installmentAmt": 376.06,
+          "installmentPrinc": 349.83,
+          "installmentFee": 26.23,
+          "totalFee": 78.69,
+          "totalInstallmentAmt": 1128.19
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710042",
+          "installmentTerm": 6,
+          "installmentAmt": 201.14,
+          "installmentPrinc": 174.91,
+          "installmentFee": 26.23,
+          "totalFee": 157.38,
+          "totalInstallmentAmt": 1206.88
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710043",
+          "installmentTerm": 9,
+          "installmentAmt": 142.84,
+          "installmentPrinc": 116.61,
+          "installmentFee": 26.23,
+          "totalFee": 236.07,
+          "totalInstallmentAmt": 1285.57
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710044",
+          "installmentTerm": 12,
+          "installmentAmt": 113.68,
+          "installmentPrinc": 87.45,
+          "installmentFee": 26.23,
+          "totalFee": 314.76,
+          "totalInstallmentAmt": 1364.26
+        }
+      ]
+    },
+    {
+      "downPayment": 0.6,
+      "downPaymentAmt": 1259.4,
+      "insAmt": 839.6,
+      "stageList": [
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710045",
+          "installmentTerm": 3,
+          "installmentAmt": 300.85,
+          "installmentPrinc": 279.86,
+          "installmentFee": 20.99,
+          "totalFee": 62.97,
+          "totalInstallmentAmt": 902.57
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710046",
+          "installmentTerm": 6,
+          "installmentAmt": 160.92,
+          "installmentPrinc": 139.93,
+          "installmentFee": 20.99,
+          "totalFee": 125.94,
+          "totalInstallmentAmt": 965.54
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710047",
+          "installmentTerm": 9,
+          "installmentAmt": 114.27,
+          "installmentPrinc": 93.28,
+          "installmentFee": 20.99,
+          "totalFee": 188.91,
+          "totalInstallmentAmt": 1028.51
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710048",
+          "installmentTerm": 12,
+          "installmentAmt": 90.95,
+          "installmentPrinc": 69.96,
+          "installmentFee": 20.99,
+          "totalFee": 251.88,
+          "totalInstallmentAmt": 1091.48
+        }
+      ]
+    },
+    {
+      "downPayment": 0.7,
+      "downPaymentAmt": 1469.3,
+      "insAmt": 629.7,
+      "stageList": [
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710049",
+          "installmentTerm": 3,
+          "installmentAmt": 225.64,
+          "installmentPrinc": 209.9,
+          "installmentFee": 15.74,
+          "totalFee": 47.22,
+          "totalInstallmentAmt": 676.92
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710050",
+          "installmentTerm": 6,
+          "installmentAmt": 120.69,
+          "installmentPrinc": 104.95,
+          "installmentFee": 15.74,
+          "totalFee": 94.44,
+          "totalInstallmentAmt": 724.14
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710051",
+          "installmentTerm": 9,
+          "installmentAmt": 85.7,
+          "installmentPrinc": 69.96,
+          "installmentFee": 15.74,
+          "totalFee": 141.66,
+          "totalInstallmentAmt": 771.36
+        },
+        {
+          "installmentId": "D8EF165591484C518631E04C8B710052",
+          "installmentTerm": 12,
+          "installmentAmt": 68.21,
+          "installmentPrinc": 52.47,
+          "installmentFee": 15.74,
+          "totalFee": 188.88,
+          "totalInstallmentAmt": 818.58
+        }
+      ]
+    }
+  ]
+}

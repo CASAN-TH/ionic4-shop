@@ -1,0 +1,428 @@
+{
+  "transactionStatus": {
+    "errorCode": "0",
+    "replyCode": null,
+    "replyText": null,
+    "memo": null,
+    "appName": "tft-shop-server",
+    "success": true
+  },
+  "page": {
+    "count": 28,
+    "pageSize": 10,
+    "pageNum": 1,
+    "orderBy": "",
+    "returnCount": true,
+    "limit": 10,
+    "offset": 0
+  },
+  "positiveRatio": "100%",
+  "positiveTotal": 28,
+  "averageTotal": 0,
+  "negativeToal": 0,
+  "commentTotal": 28,
+  "additionTotal": 0,
+  "pictureTotal": 15,
+  "dataList": [
+    {
+      "itemId": "5252501",
+      "spuId": "52525",
+      "userImg": "https://pub.thisshop.com/shop/customer/head/1575344495489512.jpg",
+      "bolHidden": "n",
+      "userId": "2111",
+      "userName": "092***3208",
+      "itemScore": 5,
+      "commentId": "0547ECB3302B456FBABCCA50E103716E",
+      "content": "ส่งเร็วมากค่ะ มีของแถมให้ด้วย❤️",
+      "image1": "https://pub.thisshop.com/shop/comment/5252501/1576506928194992.jpg",
+      "image2": null,
+      "image3": null,
+      "image4": null,
+      "image5": null,
+      "image6": null,
+      "commentDate": "16-12-2019 21:36:25",
+      "createDate": "2019-12-16 21:36:25",
+      "attrList": [
+        {
+          "itemId": "5252501",
+          "nameLocal": "Color",
+          "nameEn": "Color",
+          "attrId": "205b88c59462436882286a7d37a43c14",
+          "attrValue": "Blue",
+          "imgUrl": "/shop/pop/46813013_1574066745026.jpg"
+        },
+        {
+          "itemId": "5252501",
+          "nameLocal": "Version",
+          "nameEn": "Version",
+          "attrId": "958330e695494f7baedaee490277f593",
+          "attrValue": "Ram 4 GB Rom 64 GB",
+          "imgUrl": "/shop/pop/46813013_1574066745026.jpg"
+        }
+      ],
+      "dataList": null,
+      "bolReport": "n",
+      "replyContent": null
+    },
+    {
+      "itemId": "5252502",
+      "spuId": "52525",
+      "userImg": "https://pub.thisshop.com/shop/customer/head/75DA9E0E5F5A42EBB496175F9278BD41/03F00B400CB0436D92DE12E805833495.jpg",
+      "bolHidden": "n",
+      "userId": "75DA9E0E5F5A42EBB496175F9278BD41",
+      "userName": "065***6669",
+      "itemScore": 5,
+      "commentId": "1EB24C726D6A4ACFAB15BA07FBF63259",
+      "content": "สภาพดี เครื่องใช้งานได้ปกติ ได้ลำโพงแถมด้วย",
+      "image1": "https://pub.thisshop.com/shop/comment/5252502/745bfdc0-8a31-4a02-bf13-6e0cceefb00b.jpg",
+      "image2": "https://pub.thisshop.com/shop/comment/5252502/9dd5cca0-95ae-4f2f-8aef-6834896524ab.jpg",
+      "image3": null,
+      "image4": null,
+      "image5": null,
+      "image6": null,
+      "commentDate": "16-12-2019 18:39:24",
+      "createDate": "2019-12-16 18:39:24",
+      "attrList": [
+        {
+          "itemId": "5252502",
+          "nameLocal": "Color",
+          "nameEn": "Color",
+          "attrId": "205b88c59462436882286a7d37a43c14",
+          "attrValue": "Red",
+          "imgUrl": "/shop/pop/25606569_1574066730747.jpg"
+        },
+        {
+          "itemId": "5252502",
+          "nameLocal": "Version",
+          "nameEn": "Version",
+          "attrId": "958330e695494f7baedaee490277f593",
+          "attrValue": "Ram 4 GB Rom 64 GB",
+          "imgUrl": "/shop/pop/25606569_1574066730747.jpg"
+        }
+      ],
+      "dataList": null,
+      "bolReport": "n",
+      "replyContent": null
+    },
+    {
+      "itemId": "5252501",
+      "spuId": "52525",
+      "userImg": "https://pub.thisshop.com/shop/customer/head/BED08A5BF2704473A4B6F27CECEA2C46/ff6e3f03-96d6-4c9d-aed8-cd82dc413a17.jpg",
+      "bolHidden": "n",
+      "userId": "BED08A5BF2704473A4B6F27CECEA2C46",
+      "userName": "061***2359",
+      "itemScore": 5,
+      "commentId": "34A292865AA14B16AF88D53DD1500880",
+      "content": "ส่งไว แต่ต้องมารอดูอีกทีว่าจะใช้ดีไหม",
+      "image1": "https://pub.thisshop.com/shop/comment/5252501/f642f785-e31c-4e9b-9575-478aee624025.jpg",
+      "image2": null,
+      "image3": null,
+      "image4": null,
+      "image5": null,
+      "image6": null,
+      "commentDate": "16-12-2019 17:15:24",
+      "createDate": "2019-12-16 17:15:24",
+      "attrList": [
+        {
+          "itemId": "5252501",
+          "nameLocal": "Color",
+          "nameEn": "Color",
+          "attrId": "205b88c59462436882286a7d37a43c14",
+          "attrValue": "Blue",
+          "imgUrl": "/shop/pop/46813013_1574066745026.jpg"
+        },
+        {
+          "itemId": "5252501",
+          "nameLocal": "Version",
+          "nameEn": "Version",
+          "attrId": "958330e695494f7baedaee490277f593",
+          "attrValue": "Ram 4 GB Rom 64 GB",
+          "imgUrl": "/shop/pop/46813013_1574066745026.jpg"
+        }
+      ],
+      "dataList": null,
+      "bolReport": "n",
+      "replyContent": null
+    },
+    {
+      "itemId": "5252502",
+      "spuId": "52525",
+      "userImg": "https://pub.thisshop.com/shop/customer/head/1572354085340453.jpg",
+      "bolHidden": "n",
+      "userId": "EC56AD5C995B4D49906FE2C2B25DEC39",
+      "userName": "096***6275",
+      "itemScore": 5,
+      "commentId": "7C0AC96A398A4561A79B25269A88C463",
+      "content": "ดีครับ สภาพสวยค",
+      "image1": "https://pub.thisshop.com/shop/comment/5252502/1576343566016700.jpg",
+      "image2": null,
+      "image3": null,
+      "image4": null,
+      "image5": null,
+      "image6": null,
+      "commentDate": "15-12-2019 01:01:04",
+      "createDate": "2019-12-15 01:01:04",
+      "attrList": [
+        {
+          "itemId": "5252502",
+          "nameLocal": "Color",
+          "nameEn": "Color",
+          "attrId": "205b88c59462436882286a7d37a43c14",
+          "attrValue": "Red",
+          "imgUrl": "/shop/pop/25606569_1574066730747.jpg"
+        },
+        {
+          "itemId": "5252502",
+          "nameLocal": "Version",
+          "nameEn": "Version",
+          "attrId": "958330e695494f7baedaee490277f593",
+          "attrValue": "Ram 4 GB Rom 64 GB",
+          "imgUrl": "/shop/pop/25606569_1574066730747.jpg"
+        }
+      ],
+      "dataList": null,
+      "bolReport": "n",
+      "replyContent": null
+    },
+    {
+      "itemId": "5252505",
+      "spuId": "52525",
+      "userImg": "https://pub.thisshop.com/shop/customer/head/1575001618706671.jpg",
+      "bolHidden": "n",
+      "userId": "208A0DDE6E34461DB06B9E57C357C1E6",
+      "userName": "098***5794",
+      "itemScore": 5,
+      "commentId": "7FA9E7F0744B4FC493E70A7FEE258494",
+      "content": "สินค้าดี สวยคุ้มค่า ส่งไว",
+      "image1": "https://pub.thisshop.com/shop/comment/5252505/1576204200080916.jpg",
+      "image2": null,
+      "image3": null,
+      "image4": null,
+      "image5": null,
+      "image6": null,
+      "commentDate": "13-12-2019 09:30:20",
+      "createDate": "2019-12-13 09:30:20",
+      "attrList": [
+        {
+          "itemId": "5252505",
+          "nameLocal": "Color",
+          "nameEn": "Color",
+          "attrId": "205b88c59462436882286a7d37a43c14",
+          "attrValue": "Orange",
+          "imgUrl": "/shop/pop/51093691_1574066728774.jpg"
+        },
+        {
+          "itemId": "5252505",
+          "nameLocal": "Version",
+          "nameEn": "Version",
+          "attrId": "958330e695494f7baedaee490277f593",
+          "attrValue": "Ram 4 GB Rom 64 GB",
+          "imgUrl": "/shop/pop/51093691_1574066728774.jpg"
+        }
+      ],
+      "dataList": null,
+      "bolReport": "y",
+      "replyContent": null
+    },
+    {
+      "itemId": "5252503",
+      "spuId": "52525",
+      "userImg": "https://pub.thisshop.com/shop/customer/head/DC9632C1D9CF4860B24341A2D918F8F0/aa1818fc-cb5a-4e69-a59a-2c61ba422f60.jpg",
+      "bolHidden": "n",
+      "userId": "DC9632C1D9CF4860B24341A2D918F8F0",
+      "userName": "064***0364",
+      "itemScore": 5,
+      "commentId": "822C49EC4BC044B78C8387876FBF1592",
+      "content": "ส่งเร็วดีค่าบ ของสวยมาก \uD83D\uDE0D\uD83D\uDE0D",
+      "image1": "https://pub.thisshop.com/shop/comment/5252503/ca6706bc-8315-46fd-a6b7-5e5bdd4287bf.jpg",
+      "image2": null,
+      "image3": null,
+      "image4": null,
+      "image5": null,
+      "image6": null,
+      "commentDate": "11-12-2019 12:29:59",
+      "createDate": "2019-12-11 12:29:59",
+      "attrList": [
+        {
+          "itemId": "5252503",
+          "nameLocal": "Color",
+          "nameEn": "Color",
+          "attrId": "205b88c59462436882286a7d37a43c14",
+          "attrValue": "Gold",
+          "imgUrl": "/shop/pop/41276954_1574066725391.jpg"
+        },
+        {
+          "itemId": "5252503",
+          "nameLocal": "Version",
+          "nameEn": "Version",
+          "attrId": "958330e695494f7baedaee490277f593",
+          "attrValue": "Ram 4 GB Rom 64 GB",
+          "imgUrl": "/shop/pop/41276954_1574066725391.jpg"
+        }
+      ],
+      "dataList": null,
+      "bolReport": "n",
+      "replyContent": null
+    },
+    {
+      "itemId": "5252504",
+      "spuId": "52525",
+      "userImg": null,
+      "bolHidden": "y",
+      "userId": "239335FD3C9F48478901079C4FFF64D6",
+      "userName": "anonymous",
+      "itemScore": 5,
+      "commentId": "EE5454BF3E6D4FD0A04C7DAAAAADF84B",
+      "content": "ได้รับสินค้าเรียบร้อยเเล้วครับการจัดส่งเร็วดีมากครับ",
+      "image1": "https://pub.thisshop.com/shop/comment/5252504/88ec83da-7bd6-463b-86bf-72edf7bf88ef.jpg",
+      "image2": "https://pub.thisshop.com/shop/comment/5252504/3430ac0d-7995-49fd-851d-734bd32c79f0.jpg",
+      "image3": null,
+      "image4": null,
+      "image5": null,
+      "image6": null,
+      "commentDate": "10-12-2019 19:01:10",
+      "createDate": "2019-12-10 19:01:10",
+      "attrList": [
+        {
+          "itemId": "5252504",
+          "nameLocal": "Color",
+          "nameEn": "Color",
+          "attrId": "205b88c59462436882286a7d37a43c14",
+          "attrValue": "Black",
+          "imgUrl": "/shop/pop/11127251_1574066742246.jpg"
+        },
+        {
+          "itemId": "5252504",
+          "nameLocal": "Version",
+          "nameEn": "Version",
+          "attrId": "958330e695494f7baedaee490277f593",
+          "attrValue": "Ram 4 GB Rom 64 GB",
+          "imgUrl": "/shop/pop/11127251_1574066742246.jpg"
+        }
+      ],
+      "dataList": null,
+      "bolReport": "n",
+      "replyContent": null
+    },
+    {
+      "itemId": "5252504",
+      "spuId": "52525",
+      "userImg": null,
+      "bolHidden": "y",
+      "userId": "CEB058B05D33408A861548A426A37388",
+      "userName": "anonymous",
+      "itemScore": 5,
+      "commentId": "FB6A359547494CB68DF01791B4B83981",
+      "content": "ได้รับแล้วคะส่งของไวมาก พนักงานสุภาพ ชอบคะ",
+      "image1": "https://pub.thisshop.com/shop/comment/5252504/1575974597186397.jpg",
+      "image2": "https://pub.thisshop.com/shop/comment/5252504/1575974624848471.jpg",
+      "image3": null,
+      "image4": null,
+      "image5": null,
+      "image6": null,
+      "commentDate": "10-12-2019 17:44:41",
+      "createDate": "2019-12-10 17:44:41",
+      "attrList": [
+        {
+          "itemId": "5252504",
+          "nameLocal": "Color",
+          "nameEn": "Color",
+          "attrId": "205b88c59462436882286a7d37a43c14",
+          "attrValue": "Black",
+          "imgUrl": "/shop/pop/11127251_1574066742246.jpg"
+        },
+        {
+          "itemId": "5252504",
+          "nameLocal": "Version",
+          "nameEn": "Version",
+          "attrId": "958330e695494f7baedaee490277f593",
+          "attrValue": "Ram 4 GB Rom 64 GB",
+          "imgUrl": "/shop/pop/11127251_1574066742246.jpg"
+        }
+      ],
+      "dataList": null,
+      "bolReport": "n",
+      "replyContent": null
+    },
+    {
+      "itemId": "5252501",
+      "spuId": "52525",
+      "userImg": "https://pub.thisshop.com/shop/customer/head/02A3AFE216A3482580D73EEF4F0749A0/35ad033b-1677-4717-b9ca-fdf887768683.jpg",
+      "bolHidden": "n",
+      "userId": "02A3AFE216A3482580D73EEF4F0749A0",
+      "userName": "080***7394",
+      "itemScore": 5,
+      "commentId": "3CB374FD5F36405A9287CCC54BA33B6F",
+      "content": "สวยมากกก ส่งไวมาก ทันเป็นของขวัญวันเกิดให้พ่อพอดี อิอิ",
+      "image1": "https://pub.thisshop.com/shop/comment/5252501/e7943768-7000-4619-97a9-de6118d5152f.jpg",
+      "image2": null,
+      "image3": null,
+      "image4": null,
+      "image5": null,
+      "image6": null,
+      "commentDate": "09-12-2019 19:09:07",
+      "createDate": "2019-12-09 19:09:07",
+      "attrList": [
+        {
+          "itemId": "5252501",
+          "nameLocal": "Color",
+          "nameEn": "Color",
+          "attrId": "205b88c59462436882286a7d37a43c14",
+          "attrValue": "Blue",
+          "imgUrl": "/shop/pop/46813013_1574066745026.jpg"
+        },
+        {
+          "itemId": "5252501",
+          "nameLocal": "Version",
+          "nameEn": "Version",
+          "attrId": "958330e695494f7baedaee490277f593",
+          "attrValue": "Ram 4 GB Rom 64 GB",
+          "imgUrl": "/shop/pop/46813013_1574066745026.jpg"
+        }
+      ],
+      "dataList": null,
+      "bolReport": "n",
+      "replyContent": null
+    },
+    {
+      "itemId": "5252502",
+      "spuId": "52525",
+      "userImg": null,
+      "bolHidden": "y",
+      "userId": "3069BF11F65C4BF6B2C218D2725A263A",
+      "userName": "anonymous",
+      "itemScore": 5,
+      "commentId": "29B300A09CE046C99DC752D641BDD661",
+      "content": "ได้ของเเล้ววจ้าา",
+      "image1": "https://pub.thisshop.com/shop/comment/5252502/28f35d23-7dbb-4485-b3de-dee666c62a38.jpg",
+      "image2": "https://pub.thisshop.com/shop/comment/5252502/923dcf1f-1506-4347-8001-a95d6f6c77dd.jpg",
+      "image3": null,
+      "image4": null,
+      "image5": null,
+      "image6": null,
+      "commentDate": "07-12-2019 17:40:20",
+      "createDate": "2019-12-07 17:40:20",
+      "attrList": [
+        {
+          "itemId": "5252502",
+          "nameLocal": "Color",
+          "nameEn": "Color",
+          "attrId": "205b88c59462436882286a7d37a43c14",
+          "attrValue": "Red",
+          "imgUrl": "/shop/pop/25606569_1574066730747.jpg"
+        },
+        {
+          "itemId": "5252502",
+          "nameLocal": "Version",
+          "nameEn": "Version",
+          "attrId": "958330e695494f7baedaee490277f593",
+          "attrValue": "Ram 4 GB Rom 64 GB",
+          "imgUrl": "/shop/pop/25606569_1574066730747.jpg"
+        }
+      ],
+      "dataList": null,
+      "bolReport": "n",
+      "replyContent": null
+    }
+  ]
+}

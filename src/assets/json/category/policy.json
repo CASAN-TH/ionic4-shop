@@ -1,0 +1,57 @@
+{
+  "transactionStatus": {
+    "errorCode": "0",
+    "replyCode": null,
+    "replyText": null,
+    "memo": null,
+    "appName": "tft-shop-server",
+    "success": true
+  },
+  "shopId": "10000",
+  "policyTitleEn": "After-Sales Support",
+  "policyTitleTh": "After-Sales Support",
+  "policyContentEn": "<h1>Warranty after purchase</h1>\n<p>Customers order with Thisshop be confident to order get good after-sales service and product warranty from the service center.</p>\n<p>Note: Products with premium each item is limited. Customers may have been incomplete, no advance notice. Thisshop guarantee the products is genuine and new products from the center. Sorry if it not update the information quickly.</p>\n<p>&nbsp;</p>\n<h1>The genuine copyright products 100%</h1>\n<p>Thisshop guarantee the products is genuine from the center 100% and receive a permit from the service center.</p>\n<p>&nbsp;</p>\n<h1>After-sales service (Guaranteed 7 Day)</h1>\n<p>If the product has a problem, has been damaged and don&rsquo;t match the order can return and change the product or refunded. Within the 7 day opening after receive the product. Click here to read more details (<a href=\"https://m.thisshop.com/app/help/en-US/order/after_sales_service.html\">https://m.thisshop.com/app/help/en-US/order/after_sales_service.html</a>)</p>\n<p>&nbsp;</p>\n<h1>After-sales of Clothing category</h1>\n<p>1. The customer can decide if an item is right for you within 7 days after receipt of the goods, if not, you can certainly contact us within 7 days of receipt.<br />2. The following items cannot be returned or exchanged: Tight Clothes, Lingerie, Pajamas and Swimwear.<br />3. The customer can return or exchange, when receive the wrong item or item received did not match the one displayed on website.<br />4. Items returned or exchanged must be in their unused condition with the original packing. We do not accept a returned item that&rsquo;s worn, damaged, washed or altered in any way.<br />5. The customer is responsible for any postage fees for returns.<br />6. Discount coupon is non-refundable.</p>\n<p>&nbsp;</p>",
+  "policyContentTh": "<h1>การรับประกันหลังการสั่งซื้อสินค้า</h1>\n<p>คุณลูกค้าที่สั่งซื้อสินค้ากับเว็บไซต์ Thisshop สามารถมั่นใจได้ว่าจะได้รับบริการหลังการขายที่ดี และการรับประกันสินค้าจากศูนย์บริการ</p>\n<p>Thisshop ขอรับประกันว่าสินค้าที่ลูกค้าได้รับเป็นสินค้าแท้จากศูนย์ และเป็นสินค้าชิ้นใหม่แน่นอน ขออภัยหากไม่สามารถอัพเดทข้อมูลได้ทันเวลา</p>\n<p>หมายเหตุ: สินค้าที่มีของแถม ของแถมแต่ละรายการมีจำนวนจำกัด คุณลูกค้าอาจจะได้รับของแถมไม่ครบถ้วน ทางบริษัทจึงขอสงวนสิทธิ์ในการเปลี่ยนแปลงแก้ไข ยกเลิกได้ โดยไม่ต้องแจ้งให้ทราบล่วงหน้า</p>\n<p>&nbsp;</p>\n<h1>สินค้าลิขสิทธิ์แท้ 100%</h1>\n<p>Thisshop รับประกันสินค้าของแท้จากศูนย์บริการ 100% และได้รับใบอนุญาต จากทางศูนย์บริการสินค้า</p>\n<p>&nbsp;</p>\n<h1>บริการหลังการขาย ( 7วันการันตี )</h1>\n<p>หากสินค้าเกิดปัญหา เกิดความเสียหาย และได้รับสินค้าไม่ตรงตามที่สั่งซื้อ สามารถทำการ คืน/เปลี่ยนสินค้า/คืนเงิน ได้ภายใน 7 วันทำการเท่านั้น นับจากวันที่ได้รับสินค้า คลิกที่นี่เพื่ออ่านรายละเอียดเพิ่มเติม (<a href=\"https://m.thisshop.com/app/help/th-TH/order/after_sales_service.html\">https://m.thisshop.com/app/help/th-TH/order/after_sales_service.html</a>)</p>\n<p>&nbsp;</p>\n<h1>บริการหลังการขาย สินค้าประเภทเสื้อผ้าและเครื่องแต่งกาย</h1>\n<p>1. รบกวนเช็คสินค้าทันทีเมื่อได้รับสินค้า หากสินค้ามีตำหนิ หรือผิดแบบ กรุณาแจ้งเปลี่ยน/คืนสินค้าภายใน 7 วัน โดยนับจากวันที่เซ็นรับของ หากแจ้งหลังกำหนดเกิน 7 วัน ทางร้านจะไม่ทำการเปลี่ยน/คืน สินค้าให้<br />2. สินค้าที่ไม่สามารถเปลี่ยน/คืนได้มีดังนี้ เสื้อผ้ารัดรูป ชุดชั้นใน ชุดนอนและชุดว่ายน้ำ<br />3. ลูกค้าสามารถเปลี่ยน/คืนสินค้าได้ หากสินค้าที่ได้รับไม่ตรงตามที่สั่ง หรือไม่ตรงตามที่แสดงในหน้าเว็บ<br />4. สินค้าที่เปลี่ยน/คืนต้องอยู่ในสภาพ 100% พร้อมแพ็คเกจ ถุง กล่อง ป้าย ไม่ผ่านการซักและใช้งาน หากสินค้าฉีกขาด ได้รับความเสียหายหรือซักแล้ว จะไม่สามารถส่งเปลี่ยน/คืนได้<br />5. ค่าใช้จ่ายในการส่งคืนสินค้าและค่าประกันภัยสินค้าทั้งหมดที่เกิดขึ้น ลูกค้าจะต้องเป็นผู้ออกค่าใช้จ่ายเองทั้งหมด<br />6. เมื่อลูกค้าทำการเปลี่ยน/คืนสินค้า คูปองที่ใช้ในการสั่งซื้อสินค้าดังกล่าวไม่สามารถทำการคืนได้</p>\n<p>หากมีคำถามอื่นๆ สามารถสอบถามเจ้าพนักงานได้โดยตรง</p>",
+  "arrayStartParent": [
+    {
+      "policyTitleEn": "100% Authentic",
+      "policyTitleTh": "รับประกันสินค้าแท้ 100%",
+      "policyContentEn": "Thisshop Official products all come from legal suppliers and are 100% authentic guarantee.",
+      "policyContentTh": "รับประกันสินค้าแท้ 100% ทุกชิ้น บน Thisshop",
+      "tagValue": "1",
+      "tagName": null,
+      "iconUrl": "https://pub.thisshop.com/shop/tagsicon/2019044/76003288_1554374895289.png",
+      "seqNo": 0
+    },
+    {
+      "policyTitleEn": "Installment Payment",
+      "policyTitleTh": "ผ่อนได้ไม่ใช้บัตร",
+      "policyContentEn": "Non-credit card installment service for VIP membership.",
+      "policyContentTh": "ผ่อนสินค้าได้ โดยไม่ต้องใช้บัตรเครดิต",
+      "tagValue": "1",
+      "tagName": null,
+      "iconUrl": "https://pub.thisshop.com/shop/tagsicon/2019044/10365495_1554374886382.png",
+      "seqNo": 1
+    },
+    {
+      "policyTitleEn": "Free Delivery",
+      "policyTitleTh": "ส่งฟรีทั่วไทย",
+      "policyContentEn": "All purchases in Thisshop are free delivery in Thailand.",
+      "policyContentTh": "สินค้าบน Thisshop ทุกชิ้น ส่งฟรี",
+      "tagValue": "1",
+      "tagName": null,
+      "iconUrl": "https://pub.thisshop.com/shop/tagsicon/2019044/44904934_1554374708149.png",
+      "seqNo": 2
+    },
+    {
+      "policyTitleEn": "Secure Payment",
+      "policyTitleTh": "จ่ายปลอดภัย",
+      "policyContentEn": "All payments are proceed safely and reliable.",
+      "policyContentTh": "จ่ายปลอดภัย เชื่อถือได้ ทุกช่องทางการชำระเงิน",
+      "tagValue": "1",
+      "tagName": null,
+      "iconUrl": "https://pub.thisshop.com/shop/tagsicon/2019044/26967354_1554374869781.png",
+      "seqNo": 3
+    }
+  ]
+}
