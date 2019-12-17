@@ -5,20 +5,11 @@
             "_id": "123",
             "name": "ห้องนอน",
             "cover_image": [
-                {
-                    "_id": "111",
-                    "image": "https://pub.thisshop.com/shop/block/2019111/66329368_1572583692544.jpg"
-                },
-                {
-                    "_id": "222",
-                    "image": "https://pub.thisshop.com/shop/block/2019111/76264354_1572583780793.png"
-                },
-                {
-                    "_id": "333",
-                    "image": "https://pub.thisshop.com/shop/block/2019111/80264441_1572583813126.png"
-                }
+                "https://pub.thisshop.com/shop/block/2019111/66329368_1572583692544.jpg",
+                "https://pub.thisshop.com/shop/block/2019111/76264354_1572583780793.png",
+                "https://pub.thisshop.com/shop/block/2019111/80264441_1572583813126.png"
             ],
-            "icon": "../../../assets/icon/bedroom.svg",
+            "image": "../../../assets/icon/bedroom.svg",
             "brands": [
                 {
                     "_id": "2123",
@@ -76,14 +67,12 @@
                     "_id": "221",
                     "name": "ชั้นวางทีวี",
                     "image": "https://pub.thisshop.com/shop/block/20190816/56897728_1565925415911.jpg"
-                }
-                ,
+                },
                 {
                     "_id": "222",
                     "name": "กระจก",
                     "image": "https://pub.thisshop.com/shop/block/20190816/56897728_1565925415911.jpg"
-                }
-                ,
+                },
                 {
                     "_id": "223",
                     "name": "ตู้ข้างเตียง",
@@ -100,20 +89,11 @@
             "_id": "1423",
             "name": "ห้องนอนเด็ก",
             "cover_image": [
-                {
-                    "_id": "313",
-                    "image": "https://pub.thisshop.com/shop/default/2019101/65677458_1569902283086.jpg"
-                },
-                {
-                    "_id": "343",
-                    "image": "https://pub.thisshop.com/shop/block/20191030/4301303_1572408321147.png"
-                },
-                {
-                    "_id": "342",
-                    "image": "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
-                }
+                "https://pub.thisshop.com/shop/default/2019101/65677458_1569902283086.jpg",
+                "https://pub.thisshop.com/shop/block/20191030/4301303_1572408321147.png",
+                "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
             ],
-            "icon": "../../../assets/icon/childroom.svg",
+            "image": "../../../assets/icon/childroom.svg",
             "items": [
                 {
                     "_id": "133",
@@ -207,7 +187,7 @@
         {
             "_id": "1023",
             "name": "ห้องนั่งเล่น",
-            "icon": "../../../assets/icon/livingroom.svg",
+            "image": "../../../assets/icon/livingroom.svg",
             "items": [
                 {
                     "_id": "1223",
@@ -290,20 +270,11 @@
             "_id": "1523",
             "name": "โซฟา",
             "cover_image": [
-                {
-                    "_id": "313",
-                    "image": "https://pub.thisshop.com/shop/default/2019101/65677458_1569902283086.jpg"
-                },
-                {
-                    "_id": "343",
-                    "image": "https://pub.thisshop.com/shop/block/20191030/4301303_1572408321147.png"
-                },
-                {
-                    "_id": "342",
-                    "image": "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
-                }
+                "https://pub.thisshop.com/shop/default/2019101/65677458_1569902283086.jpg",
+                "https://pub.thisshop.com/shop/block/20191030/4301303_1572408321147.png",
+                "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
             ],
-            "icon": "../../../assets/icon/sofa.svg",
+            "image": "../../../assets/icon/sofa.svg",
             "brands": [
                 {
                     "_id": "123",
@@ -398,20 +369,11 @@
             "_id": "14423",
             "name": "ห้องครัว",
             "cover_image": [
-                {
-                    "_id": "111",
-                    "image": "https://pub.thisshop.com/shop/block/2019111/66329368_1572583692544.jpg"
-                },
-                {
-                    "_id": "222",
-                    "image": "https://pub.thisshop.com/shop/block/2019111/76264354_1572583780793.png"
-                },
-                {
-                    "_id": "333",
-                    "image": "https://pub.thisshop.com/shop/block/2019111/80264441_1572583813126.png"
-                }
+                "https://pub.thisshop.com/shop/block/2019111/66329368_1572583692544.jpg",
+                "https://pub.thisshop.com/shop/block/2019111/76264354_1572583780793.png",
+                "https://pub.thisshop.com/shop/block/2019111/80264441_1572583813126.png"
             ],
-            "icon": "../../../assets/icon/kitchenroom.svg",
+            "image": "../../../assets/icon/kitchenroom.svg",
             "brands": [
                 {
                     "_id": "2123",
@@ -476,20 +438,11 @@
             "_id": "1223",
             "name": "ห้องอาหาร",
             "cover_image": [
-                {
-                    "_id": "313",
-                    "image": "https://pub.thisshop.com/shop/default/2019101/65677458_1569902283086.jpg"
-                },
-                {
-                    "_id": "343",
-                    "image": "https://pub.thisshop.com/shop/block/20191030/4301303_1572408321147.png"
-                },
-                {
-                    "_id": "342",
-                    "image": "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
-                }
+                "https://pub.thisshop.com/shop/default/2019101/65677458_1569902283086.jpg",
+                "https://pub.thisshop.com/shop/block/20191030/4301303_1572408321147.png",
+                "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
             ],
-            "icon": "../../../assets/icon/dinnerroom.svg",
+            "image": "../../../assets/icon/dinnerroom.svg",
             "brands": [
                 {
                     "_id": "123",
@@ -584,20 +537,11 @@
             "_id": "1224",
             "name": "ห้องทำงาน",
             "cover_image": [
-                {
-                    "_id": "313",
-                    "image": "https://pub.thisshop.com/shop/default/2019101/65677458_1569902283086.jpg"
-                },
-                {
-                    "_id": "343",
-                    "image": "https://pub.thisshop.com/shop/block/20191030/4301303_1572408321147.png"
-                },
-                {
-                    "_id": "342",
-                    "image": "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
-                }
+                "https://pub.thisshop.com/shop/default/2019101/65677458_1569902283086.jpg",
+                "https://pub.thisshop.com/shop/block/20191030/4301303_1572408321147.png",
+                "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
             ],
-            "icon": "../../../assets/icon/workingroom.svg",
+            "image": "../../../assets/icon/workingroom.svg",
             "brands": [
                 {
                     "_id": "123",
@@ -692,20 +636,11 @@
             "_id": "1225",
             "name": "สินค้าตกแต่งบ้าน",
             "cover_image": [
-                {
-                    "_id": "313",
-                    "image": "https://pub.thisshop.com/shop/default/2019101/65677458_1569902283086.jpg"
-                },
-                {
-                    "_id": "343",
-                    "image": "https://pub.thisshop.com/shop/block/20191030/4301303_1572408321147.png"
-                },
-                {
-                    "_id": "342",
-                    "image": "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
-                }
+                "https://pub.thisshop.com/shop/default/2019101/65677458_1569902283086.jpg",
+                "https://pub.thisshop.com/shop/block/20191030/4301303_1572408321147.png",
+                "https://pub.thisshop.com/shop/block/20191025/22223547_1571970314476.png"
             ],
-            "icon": "../../../assets/icon/other.svg",
+            "image": "../../../assets/icon/other.svg",
             "brands": [
                 {
                     "_id": "123",
