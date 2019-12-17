@@ -4,6 +4,7 @@ import { CartService } from './cart.service';
 import { ModalController, AlertController, ActionSheetController } from '@ionic/angular';
 import { SpecificationModalComponent } from '../productdetail/specification-modal/specification-modal.component';
 import { PaymentModalComponent } from '../productdetail/payment-modal/payment-modal.component';
+import { VouchersModalComponent } from '../productdetail/vouchers-modal/vouchers-modal.component';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class CartPage implements OnInit {
   reccommentDataList: any;
   SpecificationData: any;
   PaymentData: any;
+  VouchersData: any;
 
 
   constructor(private router: Router,
@@ -41,6 +43,10 @@ export class CartPage implements OnInit {
     this.cartService.onPaymentDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.PaymentData = productdetailDataList;
+    })
+    this.cartService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
+      console.log(productdetailDataList);
+      this.VouchersData = productdetailDataList;
     })
   }
 
@@ -125,7 +131,16 @@ export class CartPage implements OnInit {
     await alert.present();
     this.router.navigate(['payment'])
   }
-
+  async vouchersModal() {
+    const modal = await this.modalController.create({
+      component: VouchersModalComponent,
+      cssClass: 'my-modal-css',
+      componentProps: {
+        VouchersData: this.VouchersData
+      }
+    });
+    return await modal.present();
+  }
 
 }
 

@@ -24,6 +24,8 @@ export class CartService {
       "period_amount": ""
     }
   });
+  onVouchersDataChanged:BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+
 
   constructor(private http: HttpClient) { }
 
@@ -40,6 +42,7 @@ export class CartService {
     this.getReccommentDataList();
     this.getSpecificationModalData();
     this.getPaymentModalData();
+    this.getVouchersModalData();
     return;
   }
 
@@ -79,6 +82,20 @@ export class CartService {
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onSpecificationDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+  getVouchersModalData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/productdetail/vouchers-modal.json').subscribe((res: any) => {
+          this.onVouchersDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onVouchersDataChanged.next(res.data);
         }, reject)
       }
 
