@@ -9,11 +9,19 @@ import { ModalController } from '@ionic/angular';
 export class SpecificationgiftModalComponent implements OnInit {
 
   @Input() SpecificationgiftData: any
-  specColorSelected: any
+
+  specColorSelected: any;
+  specImageSelected: any;
+  specVertionSelected: any;
 
   constructor(public modalController: ModalController) { }
 
   ngOnInit() {
+
+    this.specColorSelected = this.SpecificationgiftData.color
+    this.specVertionSelected = this.SpecificationgiftData.version
+    this.specImageSelected = this.SpecificationgiftData.image
+    console.log(this.SpecificationgiftData.image);
 
   }
 
@@ -21,10 +29,13 @@ export class SpecificationgiftModalComponent implements OnInit {
     this.modalController.dismiss();
   }
 
-  onspecColorClick(specColorId: any) {
+  onspecColorClick(specColorId: any, specImage: any) {
     // this.router.navigateByUrl('search/' + cate2Id);
     console.log(specColorId);
     this.specColorSelected = specColorId;
+    this.SpecificationgiftData.color = specColorId;
+    this.SpecificationgiftData.image = specImage;
+
   }
 
 }
