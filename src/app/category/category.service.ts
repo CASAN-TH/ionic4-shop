@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 const api_url = environment.apiUrl + '/api/categories/';
 // const mockup = environment.mockup;
 // const api_url = 'http://localhost:3000/api/categories';
-const mockup = false;
+const mockup = true;
 
 @Injectable({
   providedIn: 'root'
@@ -44,7 +44,7 @@ export class CategoryService {
           this.onCategoryDataListChanged.next(res.data);
         },reject)
       }else{
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url).subscribe((res: any) => {
           this.onCategoryDataListChanged.next(res.data);
         },reject)
       }
