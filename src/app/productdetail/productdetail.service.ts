@@ -61,8 +61,6 @@ export class ProductdetailService {
     this.routeParams = route.params;
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
     if (this.routeParams.id) {
-      this.getProductdetailData(this.routeParams.id);
-    } else {
       this.getProductdetailDataList();
       this.getReccommentData();
       this.getPaymentModalData();
@@ -73,8 +71,11 @@ export class ProductdetailService {
       this.getSpecificationModalData();
       this.getReviewModalData();
       this.getImformationSpecModalData();
+    } else {
+      // return new Promise((resolve, reject) => {
+      //   return reject('rejected')
+      // });
     }
-    return;
   }
 
   getProductdetailDataList(): Observable<any> | Promise<any> | any {

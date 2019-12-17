@@ -13,7 +13,7 @@ ion-checkbox {
   margin-top:1%
 }
 .bg-class{
-  --background: linear-gradient(0deg, rgba(255,255,255,1) 24%, rgba(255,81,0,1) 89%);
+  --background: linear-gradient(0deg, rgba(255,255,255,1) 24%, rgba(255, 81, 0, 0.829) 89%);
 }
 .bg-card{
   background-color: white;
@@ -39,10 +39,12 @@ ion-checkbox {
   position: absolute;
   right: 0px;
   top: 0%;
+  color: #fdf9f9;
 }
 .address {
   font-size: 18px;
-  font-weight: normal;
+  font-weight: bold;
+  color: white;
 }
 .arow-forwardicon {
   margin-right: -87%;
@@ -67,8 +69,9 @@ ion-checkbox {
   font-weight: bold;
 }
 .user {
-  font-size: 16px;
+  font-size:16px;
   font-weight: bold;
+  color: white;
 }
 .price {
   padding-inline-start: 2%;
@@ -81,7 +84,9 @@ ion-checkbox {
   font-size: 18px;
 }
 .phoneprice {
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
 }
 .quantity {
   font-size: 14px;
@@ -126,9 +131,9 @@ ion-card{
 }
 
 ion-content {
-  --background: linear-gradient(0deg, rgba(244, 219, 208, 1) 10%, rgba(240, 65, 65, 1) 89%);
+  --background: linear-gradient(0deg, rgba(244, 219, 208, 1) 10%, rgba(240, 91, 65, 0.952) 89%);
 }
 ion-grid {
-  margin-top: 0.5rem;
+  margin-top: 0rem;
   background-color: white;
 }
