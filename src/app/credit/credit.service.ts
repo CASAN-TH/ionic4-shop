@@ -4,7 +4,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-const api_url = environment.apiUrl + '/api/credits/';
+const api_url = environment.apiUrl;
 const mockup = environment.mockup;
 
 @Injectable({
@@ -64,7 +64,7 @@ export class CreditService {
           this.onCreditDataListChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/me', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onCreditDataListChanged.next(res.data);
         }, reject)
       }

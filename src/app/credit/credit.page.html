@@ -10,11 +10,11 @@
 </ion-header>
 
 <ion-content fullscreen="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
-  <div class="display-member" *ngIf="creditDataList.status === 'member'">
+  <div class="display-member" *ngIf="!creditDataList.ref1 || creditDataList.ref1 === ''">
     <ion-button expand="block" size="large" (click)="onOpenRegCredit()">สมัครทันที</ion-button>
   </div>
 
-  <div *ngIf="creditDataList.status === 'approve'">
+  <div *ngIf="creditDataList.ref1 === 'approve'">
     <ion-row class="content-header-style">
       <ion-col size="12" class="ion-text-center ion-no-padding">
         <div>วงเงินที่ใช้ได้</div>
@@ -73,7 +73,7 @@
     </ion-row>
   </div>
 
-  <div class="display-member" *ngIf="creditDataList.status === 'waitapprove'">
+  <div class="display-member" *ngIf="creditDataList.ref1 === 'waitapprove'">
     <div>การสมัครวงเงินของท่านกำลังรอการตรวจสอบ</div>
   </div>
 </ion-content>
