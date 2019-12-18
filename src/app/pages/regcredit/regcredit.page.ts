@@ -16,7 +16,7 @@ export class RegcreditPage implements OnInit {
   regcreditDataList: any;
   regProfile: any;
   dataSecondContact: any;
-  isTakeCamera:boolean = false;
+  isTakeCamera: boolean = false;
 
   constructor(
     private router: Router,
@@ -25,7 +25,7 @@ export class RegcreditPage implements OnInit {
     public modalController: ModalController,
     private _location: Location,
     private actionSheetCtrl: ActionSheetController
-  ) {}
+  ) { }
 
   ngOnInit() {
     // this.regcreditService.onRegcreditDataListChanged.subscribe(
@@ -60,17 +60,17 @@ export class RegcreditPage implements OnInit {
     }
   }
 
-  async openActionGender(){
+  async openActionGender() {
     const action = await this.actionSheetCtrl.create({
       header: 'เพศ',
-      buttons:[{
+      buttons: [{
         text: 'ชาย',
-        handler: ()=>{
+        handler: () => {
           this.regProfile.gender = 'ชาย'
         }
-      },{
+      }, {
         text: 'หญิง',
-        handler: ()=>{
+        handler: () => {
           this.regProfile.gender = 'หญิง'
         }
       }]
@@ -116,22 +116,43 @@ export class RegcreditPage implements OnInit {
     await actionSheet.present();
   }
 
-  async onNext() {
-    const res = await this.regcreditService.updateProfile(this.regProfile);
-    console.log(res);
+  onNext() {
+    if (!this.regProfile._id) {
+      console.log('create')
+      this.regcreditService.createRegcreditProfileData(this.regProfile);
+    } else {
+      console.log('update')
+      this.regcreditService.updateRegcreditProfileData(this.regProfile);
+    }
   }
 
   async onFinish() {
-    const res = await this.regcreditService.updateSecondContact(
-      this.dataSecondContact
-    );
-    if (res.data) {
-      const body = {
-        _id: "u001",
-        status: "waitapprove"
-      };
-      const resStatus = this.regcreditService.updateUser(body);
-      this._location.back();
+    if (!this.dataSecondContact._id) {
+      console.log('create')
+      const res = await this.regcreditService.createSecondContactData(this.dataSecondContact);
+      if (res) {
+        const body = {
+          ref1: "waitapprove"
+        };
+        const resStatus = await this.regcreditService.updateUser(body);
+        console.log(resStatus)
+        if (resStatus) {
+          this._location.back();
+        }
+      }
+    } else {
+      console.log('update')
+      const res = await this.regcreditService.updateSecondContactData(this.dataSecondContact);
+      if (res) {
+        const body = {
+          ref1: "waitapprove"
+        };
+        const resStatus = await this.regcreditService.updateUser(body);
+        console.log(resStatus)
+        if (resStatus) {
+          this._location.back();
+        }
+      }
     }
   }
 
@@ -153,7 +174,7 @@ export class RegcreditPage implements OnInit {
             cssClass: 'modal-camera-style',
             componentProps: {
               modalData: {
-                actionType : "front"
+                actionType: "front"
               }
             }
           });
@@ -179,7 +200,7 @@ export class RegcreditPage implements OnInit {
             cssClass: 'modal-camera-style',
             componentProps: {
               modalData: {
-                actionType : "back"
+                actionType: "back"
               }
             }
           });
@@ -205,7 +226,7 @@ export class RegcreditPage implements OnInit {
             cssClass: 'modal-camera-style',
             componentProps: {
               modalData: {
-                actionType : "withme"
+                actionType: "withme"
               }
             }
           });

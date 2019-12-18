@@ -88,14 +88,14 @@
       <ion-item>
         <ion-label>เพศ</ion-label>
         <div class="ion-align-items-center" (click)="openActionGender()">
-          <ion-text *ngIf="regProfile.gender !==''">{{regProfile.gender}}</ion-text>
-          <ion-text *ngIf="regProfile.gender ===''">เลือก</ion-text>
-          <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+          <ion-text class="padding-select" *ngIf="regProfile.gender !==''">{{regProfile.gender}}</ion-text>
+          <ion-text class="font-select-color padding-select" *ngIf="regProfile.gender ===''">เลือก</ion-text>
+          <!-- <ion-icon name="arrow-forward" mode="ios"></ion-icon> -->
         </div>
       </ion-item>
       <ion-item>
         <ion-label>วันเดือนปีเกิด</ion-label>
-        <ion-datetime placeholder="เลิือก" [(ngModel)]="regProfile.birthdate"></ion-datetime>
+        <ion-datetime placeholder="เลือก" [(ngModel)]="regProfile.birthdate"></ion-datetime>
       </ion-item>
       <ion-item>
         <ion-label position="floating">ที่อยู่ตามบัตรประชาชน</ion-label>
