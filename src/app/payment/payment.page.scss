@@ -1,3 +1,47 @@
+.show-background {
+  --padding-top: 0rem !important;
+  --background: #f04141;
+  --ion-color-base: #f04141 !important;
+  --border-width: 0px !important;
+  border: 1px !important;
+  color: #ffffff !important;
+}
+ion-toolbar {
+  --padding-top: 0rem !important;
+  --background: transparent;
+  --ion-color-base: transparent !important;
+  --border-width: 0px !important;
+  border: 0 !important;
+  color: transparent !important;
+}
+.ion-toolbar {
+  --background: transparent;
+  --ion-color-base: transparent !important;
+  --border-width: 0px !important;
+  border: 0 !important;
+  color: transparent !important;
+}
+.show-footer {
+  --padding-top: 0rem !important;
+  --background: #ffeae4;
+  --border-width: 0px !important;
+  border: 1px !important;
+  color: #070101 !important;
+
+}
+.backicon{
+  color: #ffffff !important;
+  margin-top: -62px;
+}
+
+.percent_down{
+  margin-left: 52px;
+}
+.paydown{
+  font-size: 20px;
+  font-weight: bold;
+}
+
 ion-checkbox {
   width: 5%;
   height: 6%;
@@ -20,9 +64,13 @@ ion-checkbox {
 }
 
 .percent_down {
-  padding-inline-start: 60%;
-  font-size: 18px;
-  font-weight: bold;
+  padding-inline-start: 63%;
+  font-size: 13px;
+}
+.select-down{
+  width: 28px;
+  color: #c5bfbf;
+  margin-left: 10px;
 }
 .per {
   background-color: #fff5f1;
@@ -58,15 +106,31 @@ ion-checkbox {
 .label-right3 {
   margin-right: -12rem;
 }
-
+.address-magin{
+  margin-top: -25px;
+}
 .add {
   font-size: 22px;
   font-weight: bold;
   padding-top: 0.7rem;
 }
 .select {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
+  margin-top: 7px;
+}
+.select2{
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(255, 72, 0);
+  margin-top: 7px;
+  margin-left: 34px;
+}
+.button-select{
+  width: 28px;
+  margin-left: 280px;
+  color: #c5bfbf;
+  margin-top: -37px;
 }
 .user {
   font-size:16px;
@@ -100,10 +164,7 @@ ion-checkbox {
 .order {
   padding-inline-start: 43%;
 }
-.ordertitle {
-  font-size: 14px;
-  font-weight: bold;
-}
+
 .installment {
   font-size: 22px;
   font-weight: bold;
@@ -131,9 +192,18 @@ ion-card{
 }
 
 ion-content {
-  --background: linear-gradient(0deg, rgba(244, 219, 208, 1) 10%, rgba(240, 91, 65, 0.952) 89%);
+  --background: linear-gradient(0deg, rgb(240, 236, 236) 10%, rgba(240, 91, 65, 0.952) 89%);
 }
-ion-grid {
+ion-grid{
   margin-top: 0rem;
   background-color: white;
+}
+.footer{
+  background-color: white;
+  height: 66px;
+}
+.texthead{
+font-size: 14px;
+font-weight: 300;
+color: rgb(173, 173, 173);
 }

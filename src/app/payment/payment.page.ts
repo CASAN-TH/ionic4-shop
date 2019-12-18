@@ -60,12 +60,7 @@ export class PaymentPage implements OnInit {
     
 
   }
-  onScroll($event: CustomEvent<ScrollDetail>) {
-    if ($event && $event.detail && $event.detail.scrollTop) {
-      const scrollTop = $event.detail.scrollTop;
-      this.showToolbar = scrollTop >= 141;
-    }
-  }
+ 
 
   goBackClick() {
     this._location.back();
@@ -139,6 +134,13 @@ export class PaymentPage implements OnInit {
     // this.router.navigateByUrl('search/' + cate2Id);
     console.log(percenId);
     this.percenSelected = percenId;
+  }
+  
+  onScroll($event: CustomEvent<ScrollDetail>) {
+    if ($event && $event.detail && $event.detail.scrollTop) {
+      const scrollTop = $event.detail.scrollTop;
+      this.showToolbar = scrollTop >= 50;
+    }
   }
 
 }

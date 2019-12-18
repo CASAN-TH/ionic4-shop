@@ -1,48 +1,48 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar [class.show-background]="showToolbar">
+    <ion-title>ยืนยันการสั่งซื้อ</ion-title>
     <ion-buttons slot="start">
       <ion-button (click)="goBackClick()">
-        <ion-icon mode="ios" name="arrow-back"></ion-icon>
+        <ion-icon slot="icon-only" color="light" mode="ios" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>ยืนยันการสั่งซื้อ</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content>
+<ion-content padding fullscreen="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
 
-  <ion-row *ngIf="AddaddressData && AddaddressData.address">
+  <ion-row *ngIf="AddaddressData && AddaddressData.address" class="address-magin">
     <ion-col size="12">
-        <ion-row>
-          <ion-col size="10">
-            <ion-row class="address">
-              <ion-col size="12">
-                <p class="address">
-                  {{AddaddressData.address.receiveraddress}} {{AddaddressData.address.subdistric}}
-                  {{AddaddressData.address.distric}} {{AddaddressData.address.province}}
-                </p>
-              </ion-col>
-            </ion-row>
-            <ion-row class="nameaddress">
-              <ion-col size="12">
-                <span class="user">
-                  {{AddaddressData.address.receiver}}
-                </span>
-                <span class="phoneprice">
-                  {{AddaddressData.address.receiverphone}}
-                </span>
-              </ion-col>
-            </ion-row>
-          </ion-col>
-          <ion-col size="2">
-            <ion-buttons (click)="addresslModal()">
-              <ion-button class="arow-forward">
-                <ion-icon mode="ios" name="arrow-forward"></ion-icon>
-              </ion-button>
-            </ion-buttons>
-          </ion-col>
-        </ion-row>
+      <ion-row>
+        <ion-col size="10">
+          <ion-row class="address">
+            <ion-col size="12">
+              <p class="address">
+                {{AddaddressData.address.receiveraddress}} {{AddaddressData.address.subdistric}}
+                {{AddaddressData.address.distric}} {{AddaddressData.address.province}}
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="nameaddress">
+            <ion-col size="12">
+              <span class="user">
+                {{AddaddressData.address.receiver}}
+              </span>
+              <span class="phoneprice">
+                {{AddaddressData.address.receiverphone}}
+              </span>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="2">
+          <ion-buttons (click)="addresslModal()">
+            <ion-button class="arow-forward">
+              <ion-icon mode="ios" name="arrow-forward"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
     </ion-col>
   </ion-row>
 
@@ -59,35 +59,34 @@
     </ion-col>
   </ion-row>
 
-  <ion-row>
+  <!-- <ion-row>
     <ion-col size="12">
-      <ion-grid>
-        <ion-item lines="none" (click)="presentActionSheet()">
-          <ion-label>
-            <span class="select">
-              วิธีการชำระเงิน
-            </span>
-          </ion-label>
-          <ion-label>
-            <span class="phonename">
-              {{select}}
-            </span>
-          </ion-label>
-          <ion-buttons slot="end">
-            <ion-button>
-              <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
-            </ion-button>
-          </ion-buttons>
-        </ion-item>
+      <ion-item lines="none" (click)="presentActionSheet()">
+        <ion-label>
+          <span class="select">
+            วิธีการชำระเงิน
+          </span>
+        </ion-label>
+        <ion-label>
+          <span class="phonename">
+            {{select}}
+          </span>
+        </ion-label>
+        <ion-buttons slot="end">
+          <ion-button>
+            <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
 
+      <ion-grid>
         <ion-row *ngIf="select === 'ผ่อนชำระ'">
           <ion-col size="12">
             <ion-list-header>
-              <ion-text class="select">
+              <ion-text class="texthead">
                 เงินดาวน์
               </ion-text>
             </ion-list-header>
-
             <ion-item lines="none" *ngFor="let data of downDataList" (click)="selectDownModal()">
               <ion-label *ngFor="let down of data.down_payment">
                 <span class="phonename">
@@ -98,7 +97,6 @@
                   {{down.percent_down}}{{down.unit}}
                 </span>
               </ion-label>
-
               <ion-buttons>
                 <ion-button slot="end">
                   <ion-icon mode="ios" name="arrow-forward"></ion-icon>
@@ -108,12 +106,11 @@
 
             <ion-row>
               <ion-col size="12" *ngFor="let data of downDataList">
-                <span class="ordertitle">
+                <span class="texthead">
                   จ่ายรายเดือน (ค่าบริการรายเดือน{{data.period_service}} {{data.cerrency}} รวม)
                 </span>
               </ion-col>
             </ion-row>
-
             <ion-row>
               <ion-col size="12" text-center *ngFor="let data of downDataList">
                 <ion-text class="installment">
@@ -124,7 +121,6 @@
                 </span>
               </ion-col>
             </ion-row>
-
             <ion-row>
               <ion-col size="12" *ngFor="let data of downDataList">
                 <ion-row *ngIf="data.period_option && data.period_option.length">
@@ -139,8 +135,6 @@
                 </ion-row>
               </ion-col>
             </ion-row>
-
-
             <ion-row>
               <ion-col size="12">
                 <span>
@@ -158,8 +152,107 @@
         </ion-row>
       </ion-grid>
     </ion-col>
-  </ion-row>
+  </ion-row> -->
 
+  <ion-row>
+      <ion-col size="12">
+          <ion-grid>
+        <ion-row (click)="presentActionSheet()">
+          <ion-col size="5" class="select">
+            <ion-text>
+              วิธีการชำระเงิน
+            </ion-text>
+          </ion-col>
+          <ion-col size="5" class="select2">
+            <ion-text>
+              {{select}}
+            </ion-text>
+          </ion-col>
+          <ion-col size="2">
+            <ion-buttons>
+              <ion-button class="button-select">
+                <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="select === 'ผ่อนชำระ'">
+          <ion-col size="12" *ngFor="let data of downDataList">
+            <ion-row>
+              <ion-col size="12">
+                <ion-text class="texthead">
+                  เงินดาวน์
+                </ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngFor="let down of data.down_payment">
+              <ion-col size="7">
+                <ion-text class="paydown">
+                  {{down.cerrency}}{{down.amount}}
+                </ion-text>
+              </ion-col>
+              <ion-col size="3" >
+                <span>
+                  {{down.percent_down}}{{down.unit}}
+                </span>
+              </ion-col>
+              <ion-col size="2">
+                <ion-buttons (click)="selectDownModal()">
+                  <ion-button class="select-down">
+                    <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+                  </ion-button>
+                </ion-buttons>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12">
+                <span class="texthead">
+                  จ่ายรายเดือน (ค่าบริการรายเดือน{{data.period_service}} {{data.cerrency}} รวม)
+                </span>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12">
+                <span class="installment">
+                  {{data.cerrency}}{{data.installment_amount}}
+                </span>
+                <span class="quantity">
+                  {{data.installment_period}}{{data.unit}}
+                </span>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12" *ngFor="let data of downDataList">
+                <ion-row *ngIf="data.period_option && data.period_option.length">
+                  <ion-col class="per" size="3" text-center *ngFor="let period of data.period_option"
+                    [class.ion-col-border]="period._id == percenSelected" (click)="onPercenClick(period._id)">
+                    <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="period._id == percenSelected">
+                    </ion-icon>
+                    <span>
+                      {{period.period}}{{period.unit}}
+                    </span>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12">
+                <span>
+                  <ion-checkbox class="iconcheck" mode="ios" color="danger" checked></ion-checkbox>
+                </span>
+                <span>
+                  ฉันเห็นด้วย
+                </span>
+                <span class="ordertitle">
+                  <a routerLink="/termsandcondition" routerLinkActive="active">ข้อตกลงการใช้บริการ</a>
+                </span>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      </ion-col>
+    </ion-row>
 
   <ion-row>
     <ion-col size="12">
@@ -361,24 +454,26 @@
 </ion-content>
 
 
-<ion-footer *ngIf="select === 'down'">
-  <ion-row *ngFor="let data of downDataList">
-    <ion-col size="12">
-      <ion-row>
-        <ion-col size="12" *ngFor="let item of data.down_payment">
-          เงินดาวน์:{{item.cerrency}}{{item.amount}}
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="12">
-          จ่ายรายเดือน:{{data.cerrency}}{{data.installment_amount}}x{{data.installment_period}}{{data.unit}}(รวมค่าธรรมเนียม)
-        </ion-col>
-      </ion-row>
-    </ion-col>
-  </ion-row>
+<ion-footer *ngIf="select === 'ผ่อนชำระ'">
+  <ion-toolbar [class.show-footer]="showToolbar">
+    <ion-row *ngFor="let data of downDataList">
+      <ion-col size="12">
+        <ion-row>
+          <ion-col size="12" *ngFor="let item of data.down_payment">
+            เงินดาวน์:{{item.cerrency}}{{item.amount}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            จ่ายรายเดือน:{{data.cerrency}}{{data.installment_amount}}{{data.installment_period}}{{data.unit}}(รวมค่าธรรมเนียม)
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
 </ion-footer>
 
-<ion-footer>
+<ion-footer class="footer">
   <ion-row>
     <ion-col size="12">
       <ion-row *ngIf="cartDataList.totalcart">
