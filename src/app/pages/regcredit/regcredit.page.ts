@@ -28,12 +28,12 @@ export class RegcreditPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.regcreditService.onRegcreditDataListChanged.subscribe(
-      (regcreditDataList: any) => {
-        console.log(regcreditDataList);
-        this.regcreditDataList = regcreditDataList;
-      }
-    );
+    // this.regcreditService.onRegcreditDataListChanged.subscribe(
+    //   (regcreditDataList: any) => {
+    //     console.log(regcreditDataList);
+    //     this.regcreditDataList = regcreditDataList;
+    //   }
+    // );
     this.regcreditService.onRegcreditProfileChanged.subscribe(
       (dataProfile: any) => {
         console.log(dataProfile);

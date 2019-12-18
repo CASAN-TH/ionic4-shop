@@ -4,8 +4,14 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-const api_url = environment.apiUrl + '/api/regcredits/';
-const mockup = environment.mockup;
+// const api_url = environment.apiUrl;
+// const mockup = environment.mockup;
+// const api_url2 = environment.apiUrl;
+
+
+const api_url = 'http://localhost:3000';
+const mockup = false;
+const api_url2 = 'http://localhost:3001';
 
 @Injectable({
   providedIn: 'root'
@@ -40,13 +46,13 @@ export class RegcreditService {
   resolve(route: ActivatedRouteSnapshot): Observable<any> | Promise<any> | any {
     this.routeParams = route.params;
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
-    if (this.routeParams.id) {
-      this.getRegcreditData(this.routeParams.id);
-    } else {
-      this.getRegcreditDataList();
+    // if (this.routeParams.id) {
+    //   this.getRegcreditData(this.routeParams.id);
+    // } else {
+      // this.getRegcreditDataList();
       this.getRegcreditProfile();
       this.getRegcreditSecondContact();
-    }
+    // }
     return;
   }
 
@@ -70,7 +76,7 @@ export class RegcreditService {
           this.onRegcreditProfileChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get('/api/profile', { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/cusprofilesbyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onRegcreditProfileChanged.next(res.data);
         }, reject)
       }
@@ -84,7 +90,7 @@ export class RegcreditService {
           this.onRegcreditSecondContactChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get('/api/secondcontact', { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url2 + '/api/secondcontactsbyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onRegcreditSecondContactChanged.next(res.data);
         }, reject)
       }
