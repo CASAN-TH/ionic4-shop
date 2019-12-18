@@ -130,22 +130,22 @@
       <ion-item>
           <ion-label>ความสัมพันธ์</ion-label>
           <div class="ion-align-items-center" (click)="onActionRelation()">
-            <ion-text *ngIf="dataSecondContact.relation !==''">{{dataSecondContact.relation}}</ion-text>
-            <ion-text *ngIf="dataSecondContact.relation ===''">เลือก</ion-text>
+            <ion-text *ngIf="dataSecondContact.secondcontact[0].relation !==''">{{dataSecondContact.secondcontact[0].relation}}</ion-text>
+            <ion-text *ngIf="dataSecondContact.secondcontact[0].relation ===''">เลือก</ion-text>
             <ion-icon name="arrow-forward" mode="ios"></ion-icon>
           </div>
         </ion-item>
       <ion-item>
         <ion-label>ชื่อ</ion-label>
-        <ion-input class="ion-text-end" [(ngModel)]="dataSecondContact.name"></ion-input>
+        <ion-input class="ion-text-end" [(ngModel)]="dataSecondContact.secondcontact[0].name"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>นามสกุล</ion-label>
-        <ion-input class="ion-text-end" [(ngModel)]="dataSecondContact.lastname"></ion-input>
+        <ion-input class="ion-text-end" [(ngModel)]="dataSecondContact.secondcontact[0].lastname"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>หมายเลขโทรศัพท์</ion-label>
-        <ion-input class="ion-text-end" [(ngModel)]="dataSecondContact.tel"></ion-input>
+        <ion-input class="ion-text-end" [(ngModel)]="dataSecondContact.secondcontact[0].tel"></ion-input>
       </ion-item>
 
       <div class="ion-margin-top hint-style">
