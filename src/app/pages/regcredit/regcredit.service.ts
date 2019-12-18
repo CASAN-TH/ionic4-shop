@@ -20,7 +20,14 @@ export class RegcreditService {
     "backcardimaged": { "url": "" },
     "personwithcardimaged": { "url": "" }
   });
-  onRegcreditSecondContactChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onRegcreditSecondContactChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "secondcontact": [{
+      "relation": "",
+      "name": "",
+      "lastname": "",
+      "tel": ""
+    }]
+  });
 
   constructor(private http: HttpClient) { }
 
@@ -152,7 +159,7 @@ export class RegcreditService {
     }
   }
 
-  updateUser(body){
+  updateUser(body) {
     if (mockup) {
       const res = {
         "status": 200,

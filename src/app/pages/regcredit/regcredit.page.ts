@@ -84,32 +84,32 @@ export class RegcreditPage implements OnInit {
       buttons: [{
         text: "พ่อ",
         handler: () => {
-          this.dataSecondContact.relation = "พ่อ";
+          this.dataSecondContact.secondcontact[0].relation = "พ่อ";
         }
       }, {
         text: "แม่",
         handler: () => {
-          this.dataSecondContact.relation = "แม่";
+          this.dataSecondContact.secondcontact[0].relation = "แม่";
         }
       }, {
         text: "ญาติ",
         handler: () => {
-          this.dataSecondContact.relation = "ญาติ";
+          this.dataSecondContact.secondcontact[0].relation = "ญาติ";
         }
       }, {
         text: "เพื่อน",
         handler: () => {
-          this.dataSecondContact.relation = "เพื่อน";
+          this.dataSecondContact.secondcontact[0].relation = "เพื่อน";
         }
       }, {
         text: "คู่สมรส",
         handler: () => {
-          this.dataSecondContact.relation = "คู่สมรส";
+          this.dataSecondContact.secondcontact[0].relation = "คู่สมรส";
         }
       }, {
         text: "ผู้ปกครอง",
         handler: () => {
-          this.dataSecondContact.relation = "ผู้ปกครอง";
+          this.dataSecondContact.secondcontact[0].relation = "ผู้ปกครอง";
         }
       }]
     });
