@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div *ngIf="job.jobdata.type === 'นักเรียน' || job.jobdata.type === ''">
+  <div *ngIf="job.jobdata.jobtype === 'นักเรียน' || job.jobdata.jobtype === ''">
     <ion-list>
       <ion-list-header>นักเรียน</ion-list-header>
       <!-- <ion-item>
@@ -22,7 +22,7 @@
       <ion-item>
         <ion-label>ประเภทอาชีพ</ion-label>
         <div class="ion-align-items-center" (click)="openActionJob()">
-          <ion-text>{{job.jobdata.type}}</ion-text>
+          <ion-text>{{job.jobdata.jobtype}}</ion-text>
           <ion-icon name="arrow-forward" mode="ios"></ion-icon>
         </div>
       </ion-item>
@@ -105,13 +105,13 @@
     </ion-row>
   </div>
 
-  <div *ngIf="job.jobdata.type === 'อื่นๆ'">
+  <div *ngIf="job.jobdata.jobtype === 'อื่นๆ'">
     <ion-list>
       <ion-list-header>อื่นๆ</ion-list-header>
       <ion-item>
         <ion-label>ประเภทอาชีพ</ion-label>
         <div class="ion-align-items-center" (click)="openActionJob()">
-          <ion-text>{{job.jobdata.type}}</ion-text>
+          <ion-text>{{job.jobdata.jobtype}}</ion-text>
           <ion-icon name="arrow-forward" mode="ios"></ion-icon>
         </div>
       </ion-item>

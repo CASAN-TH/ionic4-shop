@@ -20,8 +20,8 @@ export class ModalJobComponent implements OnInit {
   ngOnInit() {
     console.log(this.job);
     this.sendBU = JSON.stringify(this.job)
-    if (this.job.jobdata.type === '') {
-      this.job.jobdata.type = "นักเรียน"
+    if (this.job.jobdata.jobtype === '') {
+      this.job.jobdata.jobtype = "นักเรียน"
     }
   }
 
@@ -76,12 +76,12 @@ export class ModalJobComponent implements OnInit {
       buttons: [{
         text: "นักเรียน",
         handler: () => {
-          this.job.jobdata.type = "นักเรียน"
+          this.job.jobdata.jobtype = "นักเรียน"
         }
       }, {
         text: "อื่นๆ",
         handler: () => {
-          this.job.jobdata.type = "อื่นๆ"
+          this.job.jobdata.jobtype = "อื่นๆ"
         }
       }]
     });

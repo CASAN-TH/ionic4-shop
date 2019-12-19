@@ -4,14 +4,18 @@
         "_id": "001",
         "u_id": "u001",
         "jobdata": {
-            "type": "",
+            "jobtype": "",
             "student": {
                 "univarsal": "",
                 "faculty": "",
                 "majors": "",
                 "degree": "",
                 "level": "",
-                "imagecard": ""
+                "studentimage": [
+                    {
+                        "url": ""
+                    }
+                ]
             },
             "other": {
                 "job": "พนักงานไอที",
@@ -23,7 +27,11 @@
                 "position": "developer",
                 "degree": "",
                 "salary": "",
-                "payslip": ""
+                "otherimage": [
+                    {
+                        "url": ""
+                    }
+                ]
             }
         },
         "updated": "2019-02-11"
