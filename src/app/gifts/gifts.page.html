@@ -72,10 +72,10 @@
   <ion-row>
     <ion-col size="12">
       <ion-grid class="grid-top">
-        <ion-item lines="none" (click)="tcoingiftModal()">
+        <ion-item no-padding class="item-border-right" lines="none" (click)="tcoingiftModal()">
           <ion-text>Tcoin</ion-text>
           <ion-label>
-            <ion-text style="padding-left: 5%;">{{TcoingiftData.Tcoinname}}</ion-text>
+            <ion-text class="text-padding">{{TcoingiftData.Tcoinname}}</ion-text>
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -92,10 +92,10 @@
   <ion-row>
     <ion-col size="12">
       <ion-grid>
-        <ion-item (click)="warrantygiftModal()">
+        <ion-item no-padding class="item-border-right" (click)="warrantygiftModal()">
           <ion-text>บริการ</ion-text>
           <ion-label>
-            <ion-text style="padding-left: 5%;" *ngFor="let item of WarrantygiftData.warranties">{{item.title}}</ion-text>
+            <ion-text class="text-padding" *ngFor="let item of WarrantygiftData.warranties">{{item.title}}</ion-text>
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -105,10 +105,10 @@
             </ion-buttons>
           </ion-note>
         </ion-item>
-        <ion-item lines="none" (click)="specificationgiftModal()">
+        <ion-item no-padding class="item-border-right" lines="none" (click)="specificationgiftModal()">
           <ion-text>สเปค.</ion-text>
           <ion-label>
-            <ion-text style="padding-left: 5%;">{{SpecificationgiftData.color}} {{SpecificationgiftData.version}}</ion-text>
+            <ion-text class="text-padding">{{SpecificationgiftData.color}} {{SpecificationgiftData.version}}</ion-text>
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -125,7 +125,7 @@
   <ion-row>
     <ion-col size="12">
       <ion-grid>
-        <ion-item lines="none" (click)="imformationSpecgiftModal()">
+        <ion-item no-padding class="item-border-right" lines="none" (click)="imformationSpecgiftModal()">
           <ion-text>ข้อมูลจำเพาะ</ion-text>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -142,7 +142,7 @@
   <ion-row>
     <ion-col size="12">
       <ion-grid>
-        <ion-item>
+        <ion-item no-padding class="item-border-right">
           <ion-label>
             <ion-text class="titlewar">{{giftsData.details.detailname}}</ion-text>
           </ion-label>
@@ -157,7 +157,7 @@
   <ion-row>
     <ion-col size="12">
       <ion-grid>
-        <ion-item>
+        <ion-item no-padding class="item-border-right">
           <ion-label>
             <ion-text class="titlewar">{{giftsData.warranties.warrantyname}}</ion-text>
           </ion-label>
