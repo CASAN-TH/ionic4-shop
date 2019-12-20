@@ -41,14 +41,14 @@ export class CreditPage implements OnInit {
   ngOnInit() {
     this.url = this.router.url
     this.creditService.onCreditMenuListChanged.subscribe((menu: any) => {
-      this.creditMenuList = menu;
+      this.creditMenuList = menu[0];
       // console.log(this.creditMenuList);
     });
     this.creditService.onCreditPointChanged.subscribe((point: any) => {
       this.creditPoint = point
       // console.log(this.creditPoint);
     });
-    this.creditService.onCreditStatusChanged.subscribe((status: any) =>{
+    this.creditService.onCreditStatusChanged.subscribe((status: any) => {
       this.status = status;
       // console.log(this.status)
     })
@@ -112,10 +112,20 @@ export class CreditPage implements OnInit {
           'contact': this.contactData
         }
       });
-      modal.onDidDismiss().then(async data=>{
+      modal.onDidDismiss().then(async data => {
         this.contactData = data.data
-        const res = await this.creditService.updateContact(this.contactData)
-        console.log(res);
+        if (this.contactData.msgstatus === true) {
+          this.contactData.msgstatus = false
+          console.log('Do not save')
+        } else {
+          if (this.contactData._id) {
+            console.log('update')
+            this.creditService.updateContact(this.contactData)
+          } else {
+            console.log('create')
+            this.creditService.createContact(this.contactData)
+          }
+        }
       })
       return await modal.present();
     }
@@ -126,10 +136,20 @@ export class CreditPage implements OnInit {
           'marriage': this.marriageData
         }
       });
-      modal.onDidDismiss().then(async data=>{
+      modal.onDidDismiss().then(async data => {
         this.marriageData = data.data
-        const res = await this.creditService.updateMarriage(this.marriageData)
-        console.log(res);
+        if (this.marriageData.msgstatus === true) {
+          this.marriageData.msgstatus = false
+          console.log('Do not save')
+        } else {
+          if (this.marriageData._id) {
+            console.log('update')
+            this.creditService.updateMarriage(this.marriageData)
+          } else {
+            console.log('create')
+            this.creditService.createMarriage(this.marriageData)
+          }
+        }
       })
       return await modal.present();
     }
@@ -140,10 +160,20 @@ export class CreditPage implements OnInit {
           'secondContact': this.secondContactData
         }
       });
-      modal.onDidDismiss().then(async data =>{
+      modal.onDidDismiss().then(async data => {
         this.secondContactData = data.data
-        const res = await this.creditService.updateSecondContact(this.secondContactData)
-        console.log(res);
+        if (this.secondContactData.msgstatus === true) {
+          this.secondContactData.msgstatus = false
+          console.log('Do not save')
+        } else {
+          if (this.secondContactData._id) {
+            console.log('update')
+            this.creditService.updateSecondContact(this.secondContactData)
+          } else {
+            console.log('create')
+            this.creditService.createSecondContact(this.secondContactData)
+          }
+        }
       })
       return await modal.present();
     }
@@ -156,8 +186,18 @@ export class CreditPage implements OnInit {
       });
       modal.onDidDismiss().then(async data => {
         this.assetDocsData = data.data
-        const res = await this.creditService.updateAssetDocs(this.assetDocsData)
-        console.log(res);
+        if (this.assetDocsData.msgstatus === true) {
+          this.assetDocsData.msgstatus = false
+          console.log('Do not save')
+        } else {
+          if (this.assetDocsData._id) {
+            console.log('update')
+            this.creditService.updateAssetDocs(this.assetDocsData)
+          } else {
+            console.log('create')
+            this.creditService.createAssetDocs(this.assetDocsData)
+          }
+        }
       });
       return await modal.present();
     }
@@ -170,14 +210,24 @@ export class CreditPage implements OnInit {
       });
       modal.onDidDismiss().then(async data => {
         this.jobData = data.data
-        const res = await this.creditService.updateJob(this.jobData)
-        console.log(res);
+        if (this.jobData.msgstatus === true) {
+          this.jobData.msgstatus = false
+          console.log('Do not save')
+        } else {
+          if (this.jobData._id) {
+            console.log('update')
+            this.creditService.updateJob(this.jobData)
+          } else {
+            console.log('create')
+            this.creditService.createJob(this.jobData)
+          }
+        }
       })
       return await modal.present();
     }
   }
 
-  goBackClick(){
+  goBackClick() {
     this._location.back();
   }
 

@@ -23,6 +23,7 @@ export class ModalMarriageComponent implements OnInit {
   onDismiss() {
     const getBU = JSON.parse(this.sendBU)
     console.log(getBU);
+    getBU.msgstatus = true;
     this.modalCtrl.dismiss(getBU);
   }
 
