@@ -18,7 +18,12 @@
     <ion-row class="content-header-style">
       <ion-col size="12" class="ion-text-center ion-no-padding">
         <div>วงเงินที่ใช้ได้</div>
-        <div *ngIf="creditPoint && creditPoint.credit" class="point-size">{{creditPoint.credit.creditremain}}</div>
+        <div *ngIf="creditPoint && creditPoint.credit" class="point-size">
+          {{creditPoint.credit.creditremain}}
+        </div>
+        <div *ngIf="!creditPoint" class="point-size">
+          --
+        </div>
         <ion-chip color="primary" mode="ios" (click)="openModalCreditPoint()">
           <ion-label>
             ตรวจสอบรายละเอียด
@@ -26,7 +31,7 @@
         </ion-chip>
       </ion-col>
     </ion-row>
-    
+
     <div class="menu-header">
       <ion-card mode="ios">
         <ion-row class="ion-text-center">
@@ -42,8 +47,11 @@
             <div class="font-title-header">
               วงเงินที่ใช้ได้
             </div>
-            <div class="font-title-subheader">
+            <div *ngIf="creditPoint && creditPoint.credit" class="font-title-subheader">
               โดยสิ้นเชิง {{creditPoint.credit.creditremain}}
+            </div>
+            <div *ngIf="!creditPoint" class="font-title-subheader">
+              โดยสิ้นเชิง --
             </div>
           </ion-col>
         </ion-row>

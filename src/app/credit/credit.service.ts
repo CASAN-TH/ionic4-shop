@@ -4,8 +4,11 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-const api_url = environment.apiUrl;
-const mockup = environment.mockup;
+// const api_url = environment.apiUrl;
+// const mockup = environment.mockup;
+
+const api_url = 'http://localhost:3000';
+const mockup = false;
 
 @Injectable({
   providedIn: 'root'
@@ -63,7 +66,7 @@ export class CreditService {
           this.onCreditMenuListChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/menus', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onCreditMenuListChanged.next(res.data);
         }, reject)
       }
@@ -91,7 +94,7 @@ export class CreditService {
           this.onCreditStatusChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/cusprofilesbyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onCreditStatusChanged.next(res.data);
         }, reject)
       }
@@ -105,7 +108,7 @@ export class CreditService {
           this.onContactDataChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/contactbyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onContactDataChanged.next(res.data);
         }, reject)
       }
@@ -119,7 +122,7 @@ export class CreditService {
           this.onMarriageDataChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/marriagebyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onMarriageDataChanged.next(res.data);
         }, reject)
       }
@@ -133,7 +136,7 @@ export class CreditService {
           this.onSecondContactDataChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/secondcontactsbyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onSecondContactDataChanged.next(res.data);
         }, reject)
       }
@@ -147,7 +150,7 @@ export class CreditService {
           this.onAssetDocsDataChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/assetdocsbyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onAssetDocsDataChanged.next(res.data);
         }, reject)
       }
@@ -161,7 +164,7 @@ export class CreditService {
           this.onJobDataChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/jobbyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onJobDataChanged.next(res.data);
         }, reject)
       }
@@ -179,7 +182,6 @@ export class CreditService {
           this.onCreditDataChanged.next(res.data);
         }, reject)
       }
-
     })
   }
 

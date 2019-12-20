@@ -41,7 +41,7 @@ export class CreditPage implements OnInit {
   ngOnInit() {
     this.url = this.router.url
     this.creditService.onCreditMenuListChanged.subscribe((menu: any) => {
-      this.creditMenuList = menu;
+      this.creditMenuList = menu[0];
       // console.log(this.creditMenuList);
     });
     this.creditService.onCreditPointChanged.subscribe((point: any) => {
