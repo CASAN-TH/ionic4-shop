@@ -47,28 +47,6 @@
 
             <productlist [recivedata]="tabproduct.products"></productlist>
 
-          <!-- <ion-row>
-            <ion-col size="6" *ngFor="let product of tabproduct.products">
-              <ion-card (click)="onProductdetailClick(product._id)">
-                <ion-chip color="danger">
-                  <ion-label>{{product.discount}}</ion-label>
-                </ion-chip>
-                <img [src]="product.image">
-                <div>
-                  <ion-text class="producttext">{{product.name}}</ion-text>
-                </div>
-                <div>
-                  <ion-text>{{product.price.currency}} {{product.price.amount}}</ion-text>
-                </div>
-                <div>
-                  <ion-text>{{product.installment.currency}} {{product.installment.amount}}
-                    {{product.installment.period}}
-                  </ion-text>
-                </div>
-              </ion-card>
-            </ion-col>
-          </ion-row> -->
-
         </mat-tab>
       </mat-tab-group>
     </ion-row>
