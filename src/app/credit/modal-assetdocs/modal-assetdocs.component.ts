@@ -23,6 +23,7 @@ export class ModalAssetdocsComponent implements OnInit {
 
   onDismiss(){
     const getBU = JSON.parse(this.sendBU)
+    getBU.msgstatus = true;
     console.log(getBU);
     this.modalCtrl.dismiss(getBU);
   }
