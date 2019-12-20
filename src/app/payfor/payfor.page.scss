@@ -1,3 +1,7 @@
+ion-content {
+  --background: linear-gradient(0deg, rgb(255, 251, 251) 10%, rgba(247, 242, 241, 0.952) 89%);
+}
+
 .card-title {
   height: 20%;
   margin-top: 0px;
@@ -5,23 +9,47 @@
   border-radius: 0px;
   margin-left: 0px;
   margin-right: 0px;
-  background-color: #ff9504;
+  background-color: #ff4b04;
   
+}
+ion-grid{
+  margin-top: 0rem;
+  background-color: white;
+}
+.icon{
+  width: 63%;
+  margin-left: -12px;
+}
+.button-select{
+  margin-left: 54px;
+  color: #c5bfbf;
+  margin-top: 6px;
+  width: 32px;
+  }
+  .namebank{
+    margin-left: -37px;
+  }
+
+.hightrow{
+  height: 20px;
+}
+.hightrow2{
+  height: 20px;
 }
 .card-title-conten {
   margin-top: -10%;
   background-color: white;
-  height: 15%;
+  height: 13%;
 }
 .title-limit {
   font-size: 18px;
-  color: #000;
+  color:#ffffff;
 }
 .title-amount {
   font-size: 28px;
   font-weight: bold;
-  color: #000;
-  margin-top: 0px;
+  color:#ffffff;
+  margin-top: -16px;
   margin-bottom: 0px;
 }
 .font-conten {
