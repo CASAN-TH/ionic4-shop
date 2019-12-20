@@ -4,11 +4,11 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-// const api_url = environment.apiUrl;
-// const mockup = environment.mockup;
+const api_url = environment.apiUrl;
+const mockup = environment.mockup;
 
-const api_url = 'http://localhost:3000';
-const mockup = false;
+// const api_url = 'http://localhost:3000';
+// const mockup = false;
 
 @Injectable({
   providedIn: 'root'
