@@ -74,15 +74,11 @@
     <ion-col size="12">
       <ion-grid class="grid-top">
         <ion-item (click)="vouchersModal()">
-          <!-- <ion-label>บัตรกำนัล</ion-label> -->
           <ion-text>บัตรกำนัล</ion-text>
           <ion-label>
             <ion-text style="padding-left: 5%;" *ngFor="let item of VouchersData">
               {{item.currency}} {{item.amount}}
             </ion-text>
-            <!-- <span *ngFor="let item of VouchersData">
-              {{item.currency}} {{item.amount}}
-            </span> -->
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -94,15 +90,8 @@
         </ion-item>
 
         <ion-item (click)="promotionModal()">
-          <!-- <ion-label>โปรโมชั่น</ion-label> -->
           <ion-text>โปรโมชั่น</ion-text>
           <ion-label>
-            <!-- <ion-row>
-              <ion-col size="3"
-                *ngFor="let itemimage of [PromotionData[0],PromotionData[1],PromotionData[2],PromotionData[3]]">
-                <img [src]="itemimage.image">
-              </ion-col>
-            </ion-row> -->
             <ion-text style="padding-left: 5%;">
               <ion-row>
                 <ion-col size="3"
@@ -122,13 +111,9 @@
         </ion-item>
 
         <ion-item lines="none" (click)="tcoinModal()">
-          <!-- <ion-label>Tcoin</ion-label> -->
           <ion-text>Tcoin</ion-text>
           <ion-label>
             <ion-text style="padding-left: 5%;">{{TcoinData.Tcoinname}}</ion-text>
-            <!-- <span>
-              {{TcoinData.Tcoinname}}
-            </span> -->
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -147,7 +132,6 @@
     <ion-col size="12">
       <ion-grid>
         <ion-item (click)="warrantyModal()">
-          <!-- <ion-label>บริการ</ion-label> -->
           <ion-text>บริการ</ion-text>
           <ion-label>
             <ion-text style="padding-left: 5%;" *ngFor="let item of WarrantyData.warranties">{{item.title}}</ion-text>
@@ -161,15 +145,11 @@
           </ion-note>
         </ion-item>
         <ion-item lines="none" (click)="specificationModal()">
-          <!-- <ion-label>สเปค</ion-label> -->
           <ion-text>สเปค.</ion-text>
           <ion-label>
             <ion-text style="padding-left: 5%;">
               {{SpecificationData.color}} {{SpecificationData.version}}
-            </ion-text>
-            <!-- <span>
-              {{SpecificationData.color}} {{SpecificationData.version}}
-            </span> -->
+            </ion-text>>
           </ion-label>
           <ion-note slot="end">
             <ion-buttons class="btn">
@@ -187,7 +167,6 @@
     <ion-col size="12">
       <ion-grid>
         <ion-item (click)="reviewModal()">
-          <!-- <ion-label>รีวิว</ion-label> -->
           <ion-text>รีวิว</ion-text>
           <ion-note slot="end">
             <ion-buttons class="btn">
