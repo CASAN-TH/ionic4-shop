@@ -24,6 +24,7 @@ export class CreditPage implements OnInit {
   showToolbar = false;
 
   url: any;
+  status: any;
 
   contactData: any;
   marriageData: any;
@@ -39,11 +40,6 @@ export class CreditPage implements OnInit {
 
   ngOnInit() {
     this.url = this.router.url
-    console.log(this.url);
-    this.creditService.onCreditDataListChanged.subscribe((creditDataList: any) => {
-      // console.log(creditDataList);
-      this.creditDataList = creditDataList;
-    });
     this.creditService.onCreditMenuListChanged.subscribe((menu: any) => {
       this.creditMenuList = menu;
       // console.log(this.creditMenuList);
@@ -52,6 +48,10 @@ export class CreditPage implements OnInit {
       this.creditPoint = point
       // console.log(this.creditPoint);
     });
+    this.creditService.onCreditStatusChanged.subscribe((status: any) =>{
+      this.status = status;
+      // console.log(this.status)
+    })
 
     this.creditService.onContactDataChanged.subscribe((contact: any) => {
       this.contactData = contact

@@ -18,9 +18,8 @@ export class CreditService {
     }
   };
 
-  onCreditDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onCreditDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-
+  onCreditStatusChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onCreditMenuListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onCreditPointChanged: BehaviorSubject<any> = new BehaviorSubject(this.creditpoint);
 
@@ -44,9 +43,9 @@ export class CreditService {
     if (this.routeParams.id) {
       this.getCreditData(this.routeParams.id);
     } else {
-      this.getCreditDataList();
       this.getMenuDataList();
       this.getCreditPointData();
+      this.getCreditStatus();
 
       this.getContactData();
       this.getMarriageData();
@@ -55,20 +54,6 @@ export class CreditService {
       this.getJobData();
     }
     return;
-  }
-
-  getCreditDataList(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if (mockup) {
-        this.http.get('../../assets/json/credit/credit.json').subscribe((res: any) => {
-          this.onCreditDataListChanged.next(res.data);
-        }, reject)
-      } else {
-        this.http.get(api_url + '/api/me', { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onCreditDataListChanged.next(res.data);
-        }, reject)
-      }
-    })
   }
 
   getMenuDataList(): Observable<any> | Promise<any> | any {
@@ -97,7 +82,21 @@ export class CreditService {
         }, reject)
       }
     })
-  }
+  };
+
+  getCreditStatus(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/regcredit/profile.json').subscribe((res: any) => {
+          this.onCreditStatusChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onCreditStatusChanged.next(res.data);
+        }, reject)
+      }
+    })
+  };
 
   getContactData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
@@ -173,7 +172,7 @@ export class CreditService {
     return new Promise((resolve, reject) => {
       if (mockup) {
         this.http.get('../../assets/json/credit/credit-detail.json').subscribe((res: any) => {
-          this.onCreditDataListChanged.next(res.data);
+          this.onCreditDataChanged.next(res.data);
         }, reject)
       } else {
         this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
@@ -187,7 +186,7 @@ export class CreditService {
   createCreditData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getCreditDataList();
+        this.getCreditStatus();
       }, reject)
     })
   }
@@ -195,7 +194,7 @@ export class CreditService {
   updateCreditData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getCreditDataList();
+        this.getCreditStatus();
       }, reject)
     })
   }
@@ -203,7 +202,7 @@ export class CreditService {
   deleteCreditData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.delete(api_url + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getCreditDataList();
+        this.getCreditStatus();
       }, reject)
     })
   }
@@ -217,7 +216,7 @@ export class CreditService {
       return res
     } else {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getCreditDataList();
+        this.getCreditStatus();
       });
     }
   }
@@ -231,7 +230,7 @@ export class CreditService {
       return res
     } else {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getCreditDataList();
+        this.getCreditStatus();
       });
     }
   }
@@ -245,7 +244,7 @@ export class CreditService {
       return res
     } else {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getCreditDataList();
+        this.getCreditStatus();
       });
     }
   }
@@ -259,7 +258,7 @@ export class CreditService {
       return res
     } else {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getCreditDataList();
+        this.getCreditStatus();
       });
     }
   }
@@ -273,7 +272,7 @@ export class CreditService {
       return res
     } else {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getCreditDataList();
+        this.getCreditStatus();
       });
     }
   }
