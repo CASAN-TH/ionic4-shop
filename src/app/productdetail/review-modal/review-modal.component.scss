@@ -4,6 +4,17 @@ ion-grid {
   background-color: white;
 }
 ion-content {
-//   --padding-top: -100px !important;
+  //   --padding-top: -100px !important;
   --background: rgb(241, 235, 235) !important;
+}
+.item-border-right {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.img-icon-star {
+  width: 50%;
+}
+.img-review {
+  width: 100%;
+  height: 100%;
 }

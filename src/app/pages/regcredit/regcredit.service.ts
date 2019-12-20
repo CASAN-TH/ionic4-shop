@@ -5,14 +5,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 const api_url = environment.apiUrl;
-const api_url2 = environment.apiUrl;
-const api_url3 = environment.apiUrl;
 const mockup = environment.mockup;
 
 // const api_url = 'http://localhost:3000';
 // const mockup = false;
-// const api_url2 = 'http://localhost:3001';
-// const api_url3 = environment.apiUrl;
 
 
 @Injectable({
@@ -92,7 +88,7 @@ export class RegcreditService {
           this.onRegcreditSecondContactChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url2 + '/api/secondcontactsbyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/secondcontactsbyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onRegcreditSecondContactChanged.next(res.data);
         }, reject)
       }
@@ -139,18 +135,18 @@ export class RegcreditService {
   }
 
   async createSecondContactData(body) {
-    const res = await this.http.post(api_url2 + '/api/secondcontacts', body, { headers: this.authorizationHeader() }).toPromise();
+    const res = await this.http.post(api_url + '/api/secondcontacts', body, { headers: this.authorizationHeader() }).toPromise();
     return res
   }
 
   async updateSecondContactData(body) {
-    const res = await this.http.put(api_url2 + '/api/secondcontacts/' + body._id, body, { headers: this.authorizationHeader() }).toPromise();
+    const res = await this.http.put(api_url + '/api/secondcontacts/' + body._id, body, { headers: this.authorizationHeader() }).toPromise();
     return res
   }
 
   deleteSecondContactData(body): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.http.delete(api_url2 + '/api/secondcontacts/' + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+      this.http.delete(api_url + '/api/secondcontacts/' + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getRegcreditSecondContact();
       }, reject)
     })
@@ -164,7 +160,7 @@ export class RegcreditService {
       }
       return res
     } else {
-      const res = await this.http.put(api_url3 + '/api/me', body, { headers: this.authorizationHeader() }).toPromise();
+      const res = await this.http.put(api_url + '/api/changestatus', body, { headers: this.authorizationHeader() }).toPromise();
       return res
     }
   }

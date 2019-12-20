@@ -132,7 +132,7 @@ export class RegcreditPage implements OnInit {
       const res = await this.regcreditService.createSecondContactData(this.dataSecondContact);
       if (res) {
         const body = {
-          ref1: "waitapprove"
+          accountstatus: "waitapprove"
         };
         const resStatus = await this.regcreditService.updateUser(body);
         console.log(resStatus)
@@ -145,7 +145,7 @@ export class RegcreditPage implements OnInit {
       const res = await this.regcreditService.updateSecondContactData(this.dataSecondContact);
       if (res) {
         const body = {
-          ref1: "waitapprove"
+          accountstatus: "waitapprove"
         };
         const resStatus = await this.regcreditService.updateUser(body);
         console.log(resStatus)

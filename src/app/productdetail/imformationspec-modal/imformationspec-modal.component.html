@@ -12,16 +12,16 @@
 <ion-content>
   <ion-row>
     <ion-col size="12">
-      <ion-item *ngFor="let item1 of ImformationSpecData.colors">
+      <ion-item no-padding class="item-border-right" *ngFor="let item1 of ImformationSpecData.colors">
         <ion-text>Color</ion-text>
         <ion-label>
-          <ion-text style="padding-left: 10%;">{{item1.color}}</ion-text>
+          <ion-text class="text-color">{{item1.color}}</ion-text>
         </ion-label>
       </ion-item>
-      <ion-item *ngFor="let item2 of ImformationSpecData.specs">
+      <ion-item no-padding class="item-border-right" *ngFor="let item2 of ImformationSpecData.specs">
         <ion-text>Version</ion-text>
         <ion-label>
-          <ion-text style="padding-left: 5%;">{{item2.version}}</ion-text>
+          <ion-text class="text-vertion">{{item2.version}}</ion-text>
         </ion-label>
       </ion-item>
     </ion-col>
