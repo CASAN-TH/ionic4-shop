@@ -33,6 +33,12 @@ ion-toolbar {
   color: #ffffff !important;
   margin-top: -62px;
 }
+.backicon2{
+  width: 28px;
+  margin-left: 3px;
+  color: #c5bfbf;
+  margin-top: -5px;
+}
 .border{
   border-bottom: 1px solid;
   border-color:  rgb(194, 193, 193);;
@@ -48,6 +54,9 @@ ion-toolbar {
   font-weight: bold;
   margin-top: 6px;
   margin-left: 4px;
+}
+ion-text-nowarp{
+  overflow: hidden;
 }
 
 .percent_down{
@@ -82,15 +91,22 @@ ion-checkbox {
 .percent_down {
   padding-inline-start: 63%;
   font-size: 13px;
+  margin-left: 15px;
 }
+.percent_down2 {
+  margin-left: 15px;
+}
+.stylefont{
+  font-weight: bold;
+}
+
 .select-down{
   width: 28px;
-  color: #c5bfbf;
-  margin-left: 10px;
+    color: #c5bfbf;
+    margin-left: 272px;
+    margin-top: -47px;
 }
 .per {
-  background-color: #fff5f1;
-  color: #f34602;
   line-height: 2.5rem;
   padding: 0 0.16rem;
   color: #333;
@@ -98,6 +114,16 @@ ion-checkbox {
   margin-right: 0.9rem;
   margin-bottom: 0.24rem;
   white-space: nowrap;
+}
+.selectpay{
+  width: 85px;
+  font-size: 13px;
+  height: 45px;
+  color: #333;
+}
+.selectpaybg{
+  background-color: #fff5f1;
+ 
 }
 .arow-forward {
   position: absolute;
@@ -177,6 +203,13 @@ ion-checkbox {
   font-size: 13px;
   margin-top: -10px;
 }
+.quantity2 {
+  font-size: 13px;
+  margin-top: -10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:block;
+}
 .discount {
   font-size: 13px;
   margin-left: -42px;
@@ -186,11 +219,24 @@ ion-checkbox {
   color: rgba(var(--ion-text-color-rgb,0,0,0),.4);
 }
 .orders {
-  padding-inline-start: 45%;
+  margin-left: 102px;
+  font-weight: bold;
 }
-.order {
-  padding-inline-start: 43%;
+.orders2 {
+  margin-left: 69px;
+  font-weight: bold;
 }
+.orders3 {
+  margin-left: 109px;
+  font-weight: bold;
+}
+.select-type-pay{
+  margin-left: 59px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:block;
+}
+
 .price2{
   font-size: 15px;
 }
@@ -240,6 +286,12 @@ ion-checkbox {
   margin-left: -3px;
   font-size: 15px;
 }
+.text2{
+  margin-left: 6px;
+  font-size: 15px;
+}
+
+
 .chipping{
   margin-left: 36px;
   font-size: 16px;
@@ -249,7 +301,11 @@ ion-checkbox {
     margin-left: -37px;
     font-size: 15px;
 }
-
+.input2{
+  margin-top: -8px;
+    margin-left: -92px;
+    font-size: 15px;
+}
 ion-card{
   background-color: white;
 }
@@ -260,6 +316,9 @@ ion-content {
 ion-grid{
   margin-top: 0rem;
   background-color: white;
+}
+ion-toggle{
+  margin-left: 54px;
 }
 .footer{
   background-color: white;
@@ -281,6 +340,19 @@ color: rgb(173, 173, 173);
   border-color:  rgb(194, 193, 193);;
   height: 44px;
 }
+.borderselectdown{
+  border-top: 1px solid;
+  border-color:  rgb(194, 193, 193);;
+  height: 30px;
+}
 .rowshipping{
   margin-bottom: -14px;
+}
+.percentdown{
+  margin-left: 52px;
+  font-size: 15px;
+}
+.total{
+  font-size:15px;
+  color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
 }
