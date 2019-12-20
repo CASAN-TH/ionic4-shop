@@ -21,7 +21,7 @@ ion-content {
 .ion-item-selected {
   font-size: 2rem;
   color: red;
-  margin-top: -.65rem;
+  margin-top: -0.65rem;
   margin-left: 1rem;
   position: absolute;
 }
@@ -49,10 +49,13 @@ ion-content {
   margin-top: 0.3rem;
   margin-bottom: 0;
 }
-
-// .textcenter {
-//   text-align: center;
-// }
+.searchbar-padding {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.iconchat-padding {
+  padding-top: 5px;
+}
 .textcate {
   font-size: 10px;
 }
