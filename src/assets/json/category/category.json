@@ -5,11 +5,9 @@
             "_id": "123",
             "name": "ห้องนอน",
             "cover_image": [
-                "https://pub.thisshop.com/shop/block/2019111/66329368_1572583692544.jpg",
-                "https://pub.thisshop.com/shop/block/2019111/76264354_1572583780793.png",
-                "https://pub.thisshop.com/shop/block/2019111/80264441_1572583813126.png"
+                "https://res.cloudinary.com/hml20oe33/image/upload/v1576748337/catalog/S__20217883_rf1cco.jpg"
             ],
-            "image": "../../../assets/icon/bedroom.svg",
+            "image": "https://res.cloudinary.com/hml20oe33/image/upload/v1576748453/catalog/bedroom_t9cxda.svg",
             "brands": [
                 {
                     "_id": "2123",
@@ -46,42 +44,42 @@
                 {
                     "_id": "456",
                     "name": "ชุดห้องนอน",
-                    "image": "https://pub.thisshop.com/shop/block/20190816/63456397_1565925293076.jpg"
+                    "image": "https://res.cloudinary.com/hml20oe33/image/upload/v1576748979/catalog/1_yptwnp.jpg"
                 },
                 {
                     "_id": "678",
                     "name": "เตียง",
-                    "image": "https://pub.thisshop.com/shop/block/20190816/29158169_1565925310022.jpg"
+                    "image": "https://res.cloudinary.com/hml20oe33/image/upload/v1576749264/catalog/3_ytdh8s.jpg"
                 },
                 {
                     "_id": "899",
                     "name": "ตู้เสื่อผ้า",
-                    "image": "https://pub.thisshop.com/shop/block/20190816/52969088_1565925353891.jpg"
+                    "image": "https://res.cloudinary.com/hml20oe33/image/upload/v1576749504/catalog/120018926_f_H_Venise160_cm_WT_NT_y7ygru.jpg"
                 },
                 {
                     "_id": "122",
                     "name": "โต๊ะเครื่องแป้ง",
-                    "image": "https://pub.thisshop.com/shop/block/20190816/49348910_1565925397960.jpg"
+                    "image": "https://res.cloudinary.com/hml20oe33/image/upload/v1576749586/catalog/120018476_1525746579653XXqL_c71zkc.jpg"
                 },
                 {
                     "_id": "221",
                     "name": "ชั้นวางทีวี",
-                    "image": "https://pub.thisshop.com/shop/block/20190816/56897728_1565925415911.jpg"
+                    "image": "https://res.cloudinary.com/hml20oe33/image/upload/v1576749705/catalog/120018172_1516873313672fhnq_kg6vh7.jpg"
                 },
                 {
                     "_id": "222",
                     "name": "กระจก",
-                    "image": "https://pub.thisshop.com/shop/block/20190816/56897728_1565925415911.jpg"
+                    "image": "https://res.cloudinary.com/hml20oe33/image/upload/v1576748979/catalog/1_yptwnp.jpg"
                 },
                 {
                     "_id": "223",
                     "name": "ตู้ข้างเตียง",
-                    "image": "https://pub.thisshop.com/shop/block/20190816/56897728_1565925415911.jpg"
+                    "image": "https://res.cloudinary.com/hml20oe33/image/upload/v1576748979/catalog/1_yptwnp.jpg"
                 },
                 {
                     "_id": "224",
                     "name": "ที่นอน",
-                    "image": "https://pub.thisshop.com/shop/block/20190816/56897728_1565925415911.jpg"
+                    "image": "https://res.cloudinary.com/hml20oe33/image/upload/v1576748979/catalog/1_yptwnp.jpg"
                 }
             ]
         },

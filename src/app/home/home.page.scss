@@ -2,7 +2,7 @@ ion-toolbar {
   // padding-top: 0.6rem !important;
   --background: transparent;
   --ion-color-base: transparent !important;
-  color: #ffffff;
+  // color: #ffffff;
 }
 
 // ion-slides{
@@ -24,14 +24,14 @@ ion-content {
 }
 
 .sc-ion-searchbar-ios-h {
-  --icon-color: #ece8e8;
-  --background: rgba(241, 235, 235, 0.42) !important;
-  --color: #ece8e8 !important;
+  // --icon-color: #ece8e8;
+  // --background: rgba(241, 235, 235, 0.42) !important;
+  // --color: #ece8e8 !important;
 }
 
 .show-background {
-  --background: #f25454;
-  --ion-color-base: #f25454 !important;
+  --background: rgb(217, 212, 211);
+  --ion-color-base:rgb(217, 212, 211) !important;
 }
 .slide {
   padding-top: 90px;
