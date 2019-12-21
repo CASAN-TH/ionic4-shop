@@ -4,11 +4,13 @@ ion-toolbar {
   --ion-color-base: transparent !important;
   // color: #ffffff;
 }
-
-// ion-slides{
-//   height: 200px;
-// }
-
+.searchbar-padding {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.iconchat-padding {
+  padding-top: 5px;
+}
 ion-grid {
   margin-top: 0.5rem;
   background-color: white;

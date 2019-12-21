@@ -27,15 +27,17 @@
                 "unit": "mo."
             }
         ],
-        "recommended_method": "Recommended Method",
+        "recommended_method": [
+            {
+                "name": "Recommended Method",
+                "bank_name": "K PLUS",
+                "bank_img": "https://f.ptcdn.info/153/058/000/pai0rk6qicHOT9p119l-o.png"
+            }
+        ],
         "online": "วิธีการชำระเงินออนไลน์",
         "online_card": "บัตรธนาคารต้องเปิดใช้ธนาคารออนไลน์ ?",
         "offline": "วิธีการชำระเงินออฟไลน์",
         "type_online": [
-            {
-                "bank_name": "K PLUS",
-                "bank_img": "https://f.ptcdn.info/153/058/000/pai0rk6qicHOT9p119l-o.png"
-            },
             {
                 "type_name": "Debit/CreditCard",
                 "type_img": {

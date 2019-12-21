@@ -85,23 +85,34 @@
     </div>
     <ion-row>
       <ion-col size="3"></ion-col>
+      <ion-col size="6" class="ion-text-center">
+        <div *ngFor="let item of job.jobdata.student.studentimage;let i = index" class="ion-padding-bottom">
+          <div class="img-container" *ngIf="item.url === ''" (click)="openCamera('student')">
+            <div class="avatar-icon">
+              <ion-icon name="camera"></ion-icon>
+            </div>
+            <img class="img-size" src="../../assets/images/frontThaiCard.jpg">
+          </div>
 
-      <ion-col size="6" class="ion-text-center img-container" (click)="openCamera('student')"
-        *ngIf="job.jobdata.student.imagecard === ''">
-        <div class="avatar-icon">
-          <ion-icon name="camera"></ion-icon>
-        </div>
-        <img class="img-size" src="../../assets/images/frontThaiCard.jpg">
-      </ion-col>
-      <ion-col size="6" class="ion-text-center img-container" *ngIf="job.jobdata.student.imagecard !== ''">
-        <div class="icon-container">
-          <div class="icon-close-position" (click)="onDeleteImg('student')">
-            <ion-icon name="close"></ion-icon>
+          <div class="img-container" *ngIf="item.url !== ''">
+            <div class="icon-container">
+              <div class="icon-close-position" (click)="onDeleteImg(i, 'student')">
+                <ion-icon name="close"></ion-icon>
+              </div>
+            </div>
+            <img class="img-binding" [src]="item.url">
           </div>
         </div>
-        <img class="img-binding" [src]="job.jobdata.student.imagecard">
       </ion-col>
       <ion-col size="3"></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <ion-chip (click)="addImage('student')">
+          <ion-icon name="add" class="ion-no-margin"></ion-icon>
+        </ion-chip>
+      </ion-col>
     </ion-row>
   </div>
 
@@ -131,17 +142,6 @@
         <ion-label position="floating">ที่อยู่สถานที่ทำงาน</ion-label>
         <ion-textarea rows="6" cols="20" [(ngModel)]="job.jobdata.other.companylocationdetail"></ion-textarea>
       </ion-item>
-      <!-- <ion-item>
-        <ion-label>ระยะเวลาทำงาน</ion-label>
-        <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.other.experience">
-          <ion-select-option value="1">1</ion-select-option>
-          <ion-select-option value="2">2</ion-select-option>
-          <ion-select-option value="3">3</ion-select-option>
-          <ion-select-option value="4">4</ion-select-option>
-          <ion-select-option value="5">5</ion-select-option>
-          <ion-select-option value="6">6</ion-select-option>
-        </ion-select>
-      </ion-item> -->
       <ion-item>
         <ion-label>ระยะเวลาทำงาน</ion-label>
         <div class="ion-align-items-center" (click)="openActionExperience()">
@@ -154,17 +154,6 @@
         <ion-label>ตำแหน่ง</ion-label>
         <ion-input [(ngModel)]="job.jobdata.other.position"></ion-input>
       </ion-item>
-      <!-- <ion-item>
-        <ion-label>วุฒิการศึกษา</ion-label>
-        <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.other.degree">
-          <ion-select-option value="lowerdiploma">ต่ำกว่า ปวส.</ion-select-option>
-          <ion-select-option value="bachelor">ปริญญาตรี</ion-select-option>
-          <ion-select-option value="bachelor2">ปริญญาตรี(ใบที่2)</ion-select-option>
-          <ion-select-option value="doctor">ปริญญาเอก</ion-select-option>
-          <ion-select-option value="master">ปริญญาโท</ion-select-option>
-          <ion-select-option value="diploma">ปวส.</ion-select-option>
-        </ion-select>
-      </ion-item> -->
       <ion-item>
         <ion-label>วุฒิการศึกษา</ion-label>
         <div class="ion-align-items-center" (click)="openActionDegreeOther()">
@@ -173,15 +162,6 @@
           <ion-icon name="arrow-forward" mode="ios"></ion-icon>
         </div>
       </ion-item>
-      <!-- <ion-item>
-        <ion-label>รายได้เงินเดือน</ion-label>
-        <ion-select placeholder="เลิือก" [(ngModel)]="job.jobdata.other.salary">
-          <ion-select-option value="lower10000">น้อยกว่า 10000</ion-select-option>
-          <ion-select-option value="10001-15000">10001 - 15000</ion-select-option>
-          <ion-select-option value="15001-30000">15001 - 30000</ion-select-option>
-          <ion-select-option value="upper30000">มากกว่า 30000</ion-select-option>
-        </ion-select>
-      </ion-item> -->
       <ion-item>
         <ion-label>รายได้เงินเดือน</ion-label>
         <div class="ion-align-items-center" (click)="openActionSalary()">
@@ -200,22 +180,33 @@
     </div>
     <ion-row>
       <ion-col size="3"></ion-col>
-      <ion-col size="6" class="ion-text-center img-container" (click)="openCamera('other')"
-        *ngIf="job.jobdata.other.payslip === ''">
-        <div class="avatar-icon">
-          <ion-icon name="camera"></ion-icon>
-        </div>
-        <img class="img-size" src="../../assets/images/frontThaiCard.jpg">
-      </ion-col>
-      <ion-col size="6" class="ion-text-center img-container" *ngIf="job.jobdata.other.payslip !== ''">
-        <div class="icon-container">
-          <div class="icon-close-position" (click)="onDeleteImg('other')">
-            <ion-icon name="close"></ion-icon>
+      <ion-col size="6" class="ion-text-center">
+        <div *ngFor="let item of job.jobdata.other.otherimage;let i = index" class="ion-padding-bottom">
+          <div class="img-container" *ngIf="item.url === ''" (click)="openCamera('other')">
+            <div class="avatar-icon">
+              <ion-icon name="camera"></ion-icon>
+            </div>
+            <img class="img-size" src="../../assets/images/frontThaiCard.jpg">
+          </div>
+
+          <div class="img-container" *ngIf="item.url !== ''">
+            <div class="icon-container">
+              <div class="icon-close-position" (click)="onDeleteImg(i, 'other')">
+                <ion-icon name="close"></ion-icon>
+              </div>
+            </div>
+            <img class="img-binding" [src]="item.url">
           </div>
         </div>
-        <img class="img-binding" [src]="job.jobdata.other.payslip">
       </ion-col>
       <ion-col size="3"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <ion-chip (click)="addImage('other')">
+          <ion-icon name="add" class="ion-no-margin"></ion-icon>
+        </ion-chip>
+      </ion-col>
     </ion-row>
   </div>
 </ion-content>

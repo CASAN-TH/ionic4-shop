@@ -2,8 +2,8 @@
   border-left: 3px solid #f10808 !important;
   color: #f10808 !important;
 }
-.mnu-default{
-  color:#8c8c8c !important;
+.mnu-default {
+  color: #8c8c8c !important;
 }
 .product {
   padding-top: 8px;
@@ -34,10 +34,13 @@
   padding-top: 5%;
 }
 
-.toolbartop {
-  padding-top: 5%;
+.searchbar-padding {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
-
+.iconchat-padding {
+  padding-top: 5px;
+}
 .icon-menu {
   font-size: 2rem;
 }
@@ -51,5 +54,3 @@
 .brand {
   background-color: #ededed;
 }
-
-

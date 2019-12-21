@@ -10,10 +10,12 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
+
+  <ion-grid>
     <ion-row>
       <ion-col size="12">
-        <ion-item *ngFor="let itemimage of PromotionData" (click)="onGiftsClick(itemimage._id)">
+        <ion-item no-padding class="item-border-right" *ngFor="let itemimage of PromotionData"
+          (click)="onGiftsClick(itemimage._id)">
           <ion-thumbnail slot="start">
             <img [src]="itemimage.image">
           </ion-thumbnail>
@@ -29,5 +31,6 @@
         </ion-item>
       </ion-col>
     </ion-row>
-  </ion-card>
+  </ion-grid>
+
 </ion-content>

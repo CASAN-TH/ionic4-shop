@@ -33,6 +33,31 @@ ion-toolbar {
   color: #ffffff !important;
   margin-top: -62px;
 }
+.backicon2{
+  width: 28px;
+  margin-left: 3px;
+  color: #c5bfbf;
+  margin-top: -5px;
+}
+.border{
+  border-bottom: 1px solid;
+  border-color:  rgb(194, 193, 193);;
+  height: 36px;
+}
+.shopname{
+  padding-top: 6px;
+  font-weight: bold;
+  margin-left: -58px;
+}
+.select {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 6px;
+  margin-left: 4px;
+}
+ion-text-nowarp{
+  overflow: hidden;
+}
 
 .percent_down{
   margin-left: 52px;
@@ -66,15 +91,22 @@ ion-checkbox {
 .percent_down {
   padding-inline-start: 63%;
   font-size: 13px;
+  margin-left: 15px;
 }
+.percent_down2 {
+  margin-left: 15px;
+}
+.stylefont{
+  font-weight: bold;
+}
+
 .select-down{
   width: 28px;
-  color: #c5bfbf;
-  margin-left: 10px;
+    color: #c5bfbf;
+    margin-left: 272px;
+    margin-top: -47px;
 }
 .per {
-  background-color: #fff5f1;
-  color: #f34602;
   line-height: 2.5rem;
   padding: 0 0.16rem;
   color: #333;
@@ -82,6 +114,16 @@ ion-checkbox {
   margin-right: 0.9rem;
   margin-bottom: 0.24rem;
   white-space: nowrap;
+}
+.selectpay{
+  width: 85px;
+  font-size: 13px;
+  height: 45px;
+  color: #333;
+}
+.selectpaybg{
+  background-color: #fff5f1;
+ 
 }
 .arow-forward {
   position: absolute;
@@ -101,7 +143,8 @@ ion-checkbox {
   margin-right: -15rem;
 }
 .label-right2 {
-  margin-right: -10rem;
+  margin-left: -5px;
+  font-size: 16px;
 }
 .label-right3 {
   margin-right: -12rem;
@@ -145,7 +188,11 @@ ion-checkbox {
   padding-bottom: 0.5rem;
 }
 .phonename {
-  font-size: 18px;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .phoneprice {
   font-size: 16px;
@@ -153,18 +200,53 @@ ion-checkbox {
   color: white;
 }
 .quantity {
-  font-size: 14px;
+  font-size: 13px;
+  margin-top: -10px;
+}
+.quantity2 {
+  font-size: 13px;
+  margin-top: -10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:block;
 }
 .discount {
-  font-size: 16px;
+  font-size: 13px;
+  margin-left: -42px;
+}
+.discountprice{
+  font-size: 13px;
+  color: rgba(var(--ion-text-color-rgb,0,0,0),.4);
 }
 .orders {
-  padding-inline-start: 45%;
+  margin-left: 102px;
+  font-weight: bold;
 }
-.order {
-  padding-inline-start: 43%;
+.orders2 {
+  margin-left: 69px;
+  font-weight: bold;
+}
+.orders3 {
+  margin-left: 109px;
+  font-weight: bold;
+}
+.select-type-pay{
+  margin-left: 59px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:block;
 }
 
+.price2{
+  font-size: 15px;
+}
+.price3{
+  font-size: 13px;
+  font-weight: bold;
+}
+.colgif{
+  margin-top: -23px;
+}
 .installment {
   font-size: 22px;
   font-weight: bold;
@@ -178,6 +260,11 @@ ion-checkbox {
   border-width: 2px;
   border-color: red;
 }
+.discount_price{    
+  font-size: 13px;
+  margin-top: -2px;
+  color: rgba(var(--ion-text-color-rgb,0,0,0),.4);
+}
 .ion-item-percenselected {
   font-size: 2rem;
   color: red;
@@ -186,7 +273,39 @@ ion-checkbox {
   padding-top: 2%;
   position: absolute;
 }
+.giftdetail{
+  font-size: 12px;
+  color: rgba(var(--ion-text-color-rgb,0,0,0),.4);
+}
+.giftdetail2{
+  margin-left: 39px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.text{
+  margin-left: -3px;
+  font-size: 15px;
+}
+.text2{
+  margin-left: 6px;
+  font-size: 15px;
+}
 
+
+.chipping{
+  margin-left: 36px;
+  font-size: 16px;
+}
+.input{
+  margin-top: -8px;
+    margin-left: -37px;
+    font-size: 15px;
+}
+.input2{
+  margin-top: -8px;
+    margin-left: -92px;
+    font-size: 15px;
+}
 ion-card{
   background-color: white;
 }
@@ -198,6 +317,12 @@ ion-grid{
   margin-top: 0rem;
   background-color: white;
 }
+ion-toggle{
+  margin-left: 54px;
+}
+.image{
+  width: 15px;
+}
 .footer{
   background-color: white;
   height: 66px;
@@ -206,4 +331,31 @@ ion-grid{
 font-size: 14px;
 font-weight: 300;
 color: rgb(173, 173, 173);
+}
+.img{
+  max-width: 107%;
+    border: 0;
+    margin-left: -13px;
+    height: 107px;
+}
+.bordertop{
+  border-top: 1px solid;
+  border-color:  rgb(194, 193, 193);;
+  height: 44px;
+}
+.borderselectdown{
+  border-top: 1px solid;
+  border-color:  rgb(194, 193, 193);;
+  height: 30px;
+}
+.rowshipping{
+  margin-bottom: -14px;
+}
+.percentdown{
+  margin-left: 52px;
+  font-size: 15px;
+}
+.total{
+  font-size:15px;
+  color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
 }

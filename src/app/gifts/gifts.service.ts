@@ -13,7 +13,10 @@ const mockup = environment.mockup;
 export class GiftsService {
   routeParams: any;
 
-  onGiftsDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onGiftsDataListChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "details": {},
+    "warranties": {}
+  });
   onGiftsDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   onPaymentgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({

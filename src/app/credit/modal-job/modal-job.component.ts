@@ -12,6 +12,9 @@ export class ModalJobComponent implements OnInit {
   @Input() job: any;
 
   sendBU: any;
+  mockup = {
+    "url": ""
+  }
   constructor(
     private modalCtrl: ModalController,
     public actionSheetCtrl: ActionSheetController
@@ -25,8 +28,9 @@ export class ModalJobComponent implements OnInit {
     }
   }
 
-  onDismiss(){
+  onDismiss() {
     const getBU = JSON.parse(this.sendBU)
+    getBU.msgstatus = true;
     console.log(getBU);
     this.modalCtrl.dismiss(getBU);
   }
@@ -34,6 +38,17 @@ export class ModalJobComponent implements OnInit {
   onFinish() {
     console.log(this.job);
     this.modalCtrl.dismiss(this.job);
+  }
+
+  addImage(status) {
+    if (status === 'student') {
+      this.job.jobdata.student.studentimage.push(this.mockup);
+      console.log(this.job);
+    }
+    if (status === 'other') {
+      this.job.jobdata.other.otherimage.push(this.mockup);
+      console.log(this.job);
+    }
   }
 
   async openCamera(status) {
@@ -61,12 +76,12 @@ export class ModalJobComponent implements OnInit {
     }
   }
 
-  onDeleteImg(status) {
+  onDeleteImg(i, status) {
     if (status === 'student') {
-      this.job.jobdata.student.imagecard = "";
+      this.job.jobdata.student.studentimage[i].url = "";
     }
     if (status === 'other') {
-      this.job.jobdata.other.payslip = "";
+      this.job.jobdata.other.otherimage[i].url = "";
     }
   }
 
