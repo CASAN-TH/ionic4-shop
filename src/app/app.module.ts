@@ -46,6 +46,11 @@ import { ModalFeedbackComponent } from './setting/modal-feedback/modal-feedback.
 import { ModalAboutComponent } from './setting/modal-about/modal-about.component';
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 import { TranslateModule } from '@ngx-translate/core';
+import { RecommendedMethodModalComponent } from './payfor/recommended-method-modal/recommended-method-modal.component';
+import { DebitCreditCardModalComponent } from './payfor/debit-credit-card-modal/debit-credit-card-modal.component';
+import { OnlineBankingModalComponent } from './payfor/online-banking-modal/online-banking-modal.component';
+import { ATMPaymentModalComponent } from './payfor/atmpayment-modal/atmpayment-modal.component';
+import { CounterPaymentModalComponent } from './payfor/counter-payment-modal/counter-payment-modal.component';
 import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
 
 
@@ -88,7 +93,13 @@ import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.com
     ModalSecondcontactComponent,
     ModalAssetdocsComponent,
     ModalAssetdocsDetailComponent,
-    ModalJobComponent
+    ModalJobComponent,
+
+    RecommendedMethodModalComponent,
+    DebitCreditCardModalComponent,
+    OnlineBankingModalComponent,
+    ATMPaymentModalComponent,
+    CounterPaymentModalComponent
 
    
   ],
@@ -126,7 +137,13 @@ import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.com
     ModalSecondcontactComponent,
     ModalAssetdocsComponent,
     ModalAssetdocsDetailComponent,
-    ModalJobComponent
+    ModalJobComponent,
+
+    RecommendedMethodModalComponent,
+    DebitCreditCardModalComponent,
+    OnlineBankingModalComponent,
+    ATMPaymentModalComponent,
+    CounterPaymentModalComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,
