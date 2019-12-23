@@ -1,7 +1,7 @@
 .show-background {
   --padding-top: 0rem !important;
-  --background: #f04141;
-  --ion-color-base: #f04141 !important;
+  --background: rgba(240, 65, 65, 1); 
+  --ion-color-base:rgb(240, 65, 65, 1)!important;
   --border-width: 0px !important;
   border: 1px !important;
   color: #ffffff !important;
@@ -14,6 +14,18 @@ ion-toolbar {
   border: 0 !important;
   color: transparent !important;
 }
+.bg{
+    background-color: white;
+    height: 41px;
+}
+.selecttext {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 4px;
+}
+.bgwhite{
+  background-color: white;
+}
 .ion-toolbar {
   --background: transparent;
   --ion-color-base: transparent !important;
@@ -23,7 +35,7 @@ ion-toolbar {
 }
 .show-footer {
   --padding-top: 0rem !important;
-  --background: #ffeae4;
+  --background:#fbf3f1;
   --border-width: 0px !important;
   border: 1px !important;
   color: #070101 !important;
@@ -41,7 +53,7 @@ ion-toolbar {
 }
 .border{
   border-bottom: 1px solid;
-  border-color:  rgb(194, 193, 193);;
+  border-color:  #e4e1e14d;
   height: 36px;
 }
 .shopname{
@@ -63,49 +75,57 @@ ion-text-nowarp{
   margin-left: 52px;
 }
 .paydown{
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bold;
 }
 
-ion-checkbox {
-  width: 5%;
-  height: 6%;
-}
+// ion-checkbox {
+//   height: 5%;
+//   width: 6%;
+// }
 .address{
   margin-top: -1%;
 }
 .nameaddress{
-  margin-top: -5%;
+  margin-top: -9%;
 }
 
 .selectpading{
   margin-top:1%
 }
 .bg-class{
-  --background: linear-gradient(0deg, rgba(255,255,255,1) 24%, rgba(255, 81, 0, 0.829) 89%);
+  --background: linear-gradient(0deg, rgba(255,255,255,1) 24%,  rgba(240, 65, 65, 1) 89%);
 }
 .bg-card{
   background-color: white;
 }
 
-.percent_down {
-  padding-inline-start: 63%;
-  font-size: 13px;
-  margin-left: 15px;
-}
+// .percent_down {
+//   padding-inline-start: 63%;
+//   font-size: 13px;
+//   margin-left: 15px;
+// }
 .percent_down2 {
-  margin-left: 15px;
+  text-align: right;
+  margin-top: -6px;
 }
+.textpercent_down2 {
+  margin-right: -26px;
+  font-size: 14px;
+}
+.iconpercent_down2 {
+  width: 28px;
+  margin-left: 17px;
+  color: #c5bfbf;
+  margin-top: -12px;
+}
+
+
 .stylefont{
   font-weight: bold;
 }
 
-.select-down{
-  width: 28px;
-    color: #c5bfbf;
-    margin-left: 272px;
-    margin-top: -47px;
-}
+
 .per {
   line-height: 2.5rem;
   padding: 0 0.16rem;
@@ -125,14 +145,20 @@ ion-checkbox {
   background-color: #fff5f1;
  
 }
+.arowicon{    
+  width: 28px;
+  margin-left: 17px;
+  color: #c5bfbf;
+  margin-top: 2px;
+  }
 .arow-forward {
   position: absolute;
-  right: 0px;
-  top: 0%;
+  right: -18px;
+  bottom: -45px;
   color: #fdf9f9;
 }
 .address {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   color: white;
 }
@@ -187,6 +213,13 @@ ion-checkbox {
   padding-right: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.acept{
+  font-size: 12px;
+}
+.aceptcolor{
+  font-size: 12px;
+  color: rgb(17, 122, 243);
+}
 .phonename {
   font-size: 13px;
   font-weight: bold;
@@ -195,8 +228,7 @@ ion-checkbox {
   text-overflow: ellipsis;
 }
 .phoneprice {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 14px;
   color: white;
 }
 .quantity {
@@ -231,10 +263,15 @@ ion-checkbox {
   font-weight: bold;
 }
 .select-type-pay{
-  margin-left: 59px;
+  margin-right: -32px;
+  margin-top: 7px;
+  text-align: right;
   overflow: hidden;
   text-overflow: ellipsis;
   display:block;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(255, 72, 0);
 }
 
 .price2{
@@ -252,8 +289,8 @@ ion-checkbox {
   font-weight: bold;
 }
 .iconcheck {
-  height: 75%;
-  width: 7%;
+  height: 78%;
+  width: 6%;
 }
 .ion-col-border {
   border-style: solid;
@@ -311,7 +348,7 @@ ion-card{
 }
 
 ion-content {
-  --background: linear-gradient(0deg, rgb(240, 236, 236) 10%, rgba(240, 91, 65, 0.952) 89%);
+  --background: linear-gradient(0deg, rgb(247,247,247,1) 50%, rgba(240, 91, 65, 0.952) 89%);
 }
 ion-grid{
   margin-top: 0rem;
@@ -340,22 +377,33 @@ color: rgb(173, 173, 173);
 }
 .bordertop{
   border-top: 1px solid;
-  border-color:  rgb(194, 193, 193);;
+  border-color:  #e4e1e14d;
   height: 44px;
 }
 .borderselectdown{
   border-top: 1px solid;
-  border-color:  rgb(194, 193, 193);;
+  border-color:  #e4e1e14d;
   height: 30px;
 }
 .rowshipping{
   margin-bottom: -14px;
 }
-.percentdown{
-  margin-left: 52px;
-  font-size: 15px;
-}
+// .percentdown{
+ 
+// }
 .total{
   font-size:15px;
   color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
+}
+ion-header {
+    display: block;
+    position: relative;
+    -ms-flex-order: -1;
+    order: -1;
+    width: 100%;
+    z-index: 10;
+    height: 40px;
+}
+.tabselectpay{
+  margin-top: -16px;
 }

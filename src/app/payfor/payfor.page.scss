@@ -1,54 +1,96 @@
-ion-content {
-  --background: linear-gradient(0deg, rgb(255, 251, 251) 10%, rgba(247, 242, 241, 0.952) 89%);
-}
+// ion-content {
+//   --background: linear-gradient(0deg, rgb(255, 251, 251) 10%, rgba(247, 242, 241, 0.952) 89%);
+// }
 
-.card-title {
-  height: 20%;
+// .card-title {
+//   height: 20%;
+//   margin-top: 0px;
+//   margin-bottom: 0px;
+//   border-radius: 0px;
+//   margin-left: 0px;
+//   margin-right: 0px;
+//   background-color: #ff4b04;
+// }
+.grid-conten-title {
   margin-top: 0px;
-  margin-bottom: 0px;
-  border-radius: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+  height: 20%;
   background-color: #ff4b04;
-  
 }
-ion-grid{
-  margin-top: 0rem;
-  background-color: white;
-}
-.icon{
-  width: 63%;
-  margin-left: -12px;
-}
-.button-select{
-  margin-left: 54px;
-  color: #c5bfbf;
-  margin-top: 6px;
-  width: 32px;
-  }
-  .namebank{
-    margin-left: -37px;
-  }
-
-.hightrow{
-  height: 20px;
-}
-.hightrow2{
-  height: 20px;
-}
-.card-title-conten {
+.grid-conten {
   margin-top: -10%;
   background-color: white;
-  height: 13%;
+  height: 12%;
+  width: 90%;
 }
+.border-conten {
+  border-bottom: 1px solid;
+  border-color: #c2c1c1;
+  height: 65px;
+}
+.font-title {
+  margin-bottom: 0px;
+}
+.online_title {
+  margin-bottom: 0px;
+}
+.online_subtitle {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  color: lightslategrey;
+}
+.offline_title {
+  margin-bottom: 0px;
+}
+
+ion-grid {
+  // margin-top: 0.5rem;
+  background-color: white;
+}
+ion-content {
+  --padding-top: -100px !important;
+  --background: rgb(241, 235, 235) !important;
+}
+.KPLUS-icon {
+  width: 80%;
+  margin-left: -5px;
+}
+.icon-image {
+  width: 60%;
+  padding-top: 12%;
+}
+.btn-end {
+  padding-left: 20px;
+}
+// .button-select {
+//   margin-left: 54px;
+//   color: #c5bfbf;
+//   margin-top: 6px;
+//   width: 32px;
+// }
+// .namebank {
+//   margin-left: -37px;
+// }
+
+.hightrow {
+  height: 20px;
+}
+.hightrow2 {
+  height: 20px;
+}
+// .card-title-conten {
+//   margin-top: -10%;
+//   background-color: white;
+//   height: 13%;
+// }
 .title-limit {
   font-size: 18px;
-  color:#ffffff;
+  color: #ffffff;
 }
 .title-amount {
   font-size: 28px;
   font-weight: bold;
-  color:#ffffff;
+  color: #ffffff;
   margin-top: -16px;
   margin-bottom: 0px;
 }
@@ -62,12 +104,4 @@ ion-grid{
   border-radius: 0px;
   margin-left: 10px;
   margin-right: 10px;
-}
-.online_title {
-  margin-bottom: 0px;
-}
-.online_subtitle {
-  font-size: 16px;
-  color: lightslategrey;
-  margin-top: 0px;
 }
