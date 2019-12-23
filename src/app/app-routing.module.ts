@@ -82,7 +82,8 @@ const routes: Routes = [
   {
     path: 'credit',
     loadChildren: () => import('../app/credit/credit.module').then(m => m.CreditPageModule)
-  },  {
+  },
+  {
     path: 'productlist',
     loadChildren: () => import('./productlist/productlist.module').then( m => m.ProductlistPageModule)
   },
@@ -97,7 +98,12 @@ const routes: Routes = [
   {
     path: 'product-list-block',
     loadChildren: () => import('./product-list-block/product-list-block.module').then( m => m.ProductListBlockPageModule)
+  },
+  {
+    path: 'search-history',
+    loadChildren: () => import('./search-history/search-history.module').then( m => m.SearchHistoryPageModule)
   }
+
 
 
 

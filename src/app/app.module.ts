@@ -46,6 +46,7 @@ import { ModalFeedbackComponent } from './setting/modal-feedback/modal-feedback.
 import { ModalAboutComponent } from './setting/modal-about/modal-about.component';
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 import { TranslateModule } from '@ngx-translate/core';
+import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
 
 
 
@@ -72,6 +73,7 @@ import { TranslateModule } from '@ngx-translate/core';
     ModalAddressComponent,
     ModalFeedbackComponent,
     ModalAboutComponent,
+    ModalMyorderComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
@@ -109,6 +111,7 @@ import { TranslateModule } from '@ngx-translate/core';
     ModalAddressComponent,
     ModalFeedbackComponent,
     ModalAboutComponent,
+    ModalMyorderComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,

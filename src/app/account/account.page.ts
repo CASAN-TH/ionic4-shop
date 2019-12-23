@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountService } from './account.service';
 import { ScrollDetail } from '@ionic/core';
+import { ModalController } from '@ionic/angular';
+import { ModalMyorderComponent } from './modal-myorder/modal-myorder.component';
 
 @Component({
   selector: 'app-account',
@@ -16,7 +18,8 @@ export class AccountPage implements OnInit {
   scoreData: any;
   showToolbar: boolean;
 
-  constructor(private router: Router, private accountService: AccountService) { }
+  constructor(private router: Router, private accountService: AccountService, 
+    public modalController: ModalController) { }
 
   slideOpts = {
     initialSlide: 1,
@@ -31,7 +34,7 @@ export class AccountPage implements OnInit {
     })
     this.accountService.onAccountData2Changed.subscribe((accountData) => {
       // console.log(accountData);
-      // this.accountData = accountData;
+      this.accountData = accountData;
     })
     this.accountService.onPromotionChanged.subscribe((promotionData) => {
       // console.log(promotionData);
@@ -91,8 +94,11 @@ export class AccountPage implements OnInit {
     console.log("onToBrowseHistoryPage");
   }
 
-  onToViellAllMyOrdersPage() {
-    console.log("onToViellAllMyOrdersPage");
+  async ModalViellAllMyOrdersPage() {
+    const modal = await this.modalController.create({
+      component: ModalMyorderComponent,
+    });
+    return await modal.present();
   }
 
   onToPayViellAllMyOrdersPage() {
