@@ -44,27 +44,30 @@
 }
 
 ion-grid {
-  margin-top: 0.5rem;
+  // margin-top: 0.5rem;
   background-color: white;
 }
 ion-content {
   --padding-top: -100px !important;
   --background: rgb(241, 235, 235) !important;
 }
-.icon {
-  width: 100%;
+.KPLUS-icon {
+  width: 80%;
   margin-left: -5px;
 }
 .icon-image {
-  width: 70%;
+  width: 60%;
   padding-top: 12%;
 }
-.button-select {
-  margin-left: 54px;
-  color: #c5bfbf;
-  margin-top: 6px;
-  width: 32px;
+.btn-end {
+  padding-left: 20px;
 }
+// .button-select {
+//   margin-left: 54px;
+//   color: #c5bfbf;
+//   margin-top: 6px;
+//   width: 32px;
+// }
 // .namebank {
 //   margin-left: -37px;
 // }
