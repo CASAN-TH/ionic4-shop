@@ -17,6 +17,7 @@ import { CounterPaymentModalComponent } from './counter-payment-modal/counter-pa
 export class PayforPage implements OnInit {
   payforData: any;
   DebitCreditCardData: any;
+  onlineBankingData: any;
 
   constructor(private router: Router,
     private payforService: PayforService,
@@ -32,6 +33,11 @@ export class PayforPage implements OnInit {
     this.payforService.onDebitCreditCardDataChanged.subscribe((payforDataList: any) => {
       console.log(payforDataList);
       this.DebitCreditCardData = payforDataList;
+    })
+    
+    this.payforService.onlineBankingDataChanged.subscribe((payforDataList: any) => {
+      console.log(payforDataList);
+      this.onlineBankingData = payforDataList;
     })
   }
   goBackClick() {
@@ -60,7 +66,7 @@ export class PayforPage implements OnInit {
     const modal = await this.modalController.create({
       component: OnlineBankingModalComponent,
       componentProps: {
-        // ReviewData: this.ReviewData
+        DebitCreditCardData: this.DebitCreditCardData
       }
     });
     return await modal.present();

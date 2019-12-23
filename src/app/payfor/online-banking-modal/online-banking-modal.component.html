@@ -53,17 +53,50 @@
     </ion-col>
   </ion-row>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col size="12">
-        <ion-item no-padding>
-          <img class="icon-image" src="http://www.itbsth.com/images/bank/03.png">
-          <ion-label>
-            <ion-text class="font-padding">dddddddd</ion-text>
-          </ion-label>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item no-padding *ngFor="let item of DebitCreditCardData">
+              <img class="icon-image" [src]="item.image">
+              <ion-label>
+                <ion-text class="font-padding">{{item.Bankname}}</ion-text>
+              </ion-label>
+              <ion-note slot="end">
+                <ion-checkbox mode="ios"></ion-checkbox>
+              </ion-note>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item no-padding>
+              <img class="icon-image"
+                src="http://www.adslthailand.com/uploads/moxie/2018/TMN%20Lucky%20Bag%20campaign%20%281%29.jpg">
+              <ion-label>
+                <ion-text class="font-padding">ddddd</ion-text>
+              </ion-label>
+              <ion-note slot="end">
+                <ion-checkbox mode="ios"></ion-checkbox>
+              </ion-note>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <span>
+        <img src="https://image.flaticon.com/icons/png/512/1161/1161388.png">
+        <p text-center>การป้องกันการชำระเงิน</p>
+      </span>
+    </ion-col>
+  </ion-row>
 
 </ion-content>
