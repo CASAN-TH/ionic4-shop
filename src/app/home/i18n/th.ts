@@ -2,7 +2,8 @@ export const locale = {
     lang: 'th',
     data: {
         'HOME': {
-            'HELLO': 'สวัสดีชาวโลก!'
+            'HELLO': 'สวัสดีชาวโลก!',
+            'RECOMMEND': 'แนะนำ'
         }
     }
 };
