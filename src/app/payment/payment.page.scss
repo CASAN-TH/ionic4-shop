@@ -1,7 +1,7 @@
 .show-background {
   --padding-top: 0rem !important;
-  --background:rgb(240, 91, 65); 
-  --ion-color-base:rgb(240, 91, 65)!important;
+  --background: rgba(240, 65, 65, 1); 
+  --ion-color-base:rgb(240, 65, 65, 1)!important;
   --border-width: 0px !important;
   border: 1px !important;
   color: #ffffff !important;
@@ -35,7 +35,7 @@ ion-toolbar {
 }
 .show-footer {
   --padding-top: 0rem !important;
-  --background: #ffeae4;
+  --background:#fbf3f1;
   --border-width: 0px !important;
   border: 1px !important;
   color: #070101 !important;
@@ -94,7 +94,7 @@ ion-text-nowarp{
   margin-top:1%
 }
 .bg-class{
-  --background: linear-gradient(0deg, rgba(255,255,255,1) 24%, rgba(255, 81, 0, 0.829) 89%);
+  --background: linear-gradient(0deg, rgba(255,255,255,1) 24%,  rgba(240, 65, 65, 1) 89%);
 }
 .bg-card{
   background-color: white;

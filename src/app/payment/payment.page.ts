@@ -14,7 +14,7 @@ import { ScrollDetail } from '@ionic/core';
   styleUrls: ['./payment.page.scss'],
 })
 export class PaymentPage implements OnInit {
-  select: any;
+  select: any= "ผ่อนชำระ";
   downDataList: any;
   cartDataList: any;
   VouchersData: any;
