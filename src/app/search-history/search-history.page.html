@@ -1,9 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <ion-searchbar slot="start" placeholder="ค้นหาการสั่งซื้อทั้งหมด"></ion-searchbar>
+    <ion-searchbar slot="start" class="searchbar-padding" placeholder="ค้นหาการสั่งซื้อทั้งหมด"></ion-searchbar>
     <ion-buttons mode="ios" slot="end">
       <ion-button (click)="goBackClick()">
-        ยกเลิก
+        <p class="cancle-text">
+          ยกเลิก
+        </p>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -11,7 +13,7 @@
 
 <ion-content>
   <ion-row>
-    <p>
+    <p class="history-text">
       ประวัติการค้นหา
     </p>
   </ion-row>
