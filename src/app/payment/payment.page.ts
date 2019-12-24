@@ -23,6 +23,8 @@ export class PaymentPage implements OnInit {
   AddaddressData: any;
   AddressModalData:any;
   showToolbar: boolean;
+  unitSelected: any;
+
   
 
 
@@ -61,7 +63,11 @@ export class PaymentPage implements OnInit {
 
   }
  
-
+  onUnitClick(unitId: any) {
+    // this.router.navigateByUrl('search/' + cate2Id);
+    console.log(unitId);
+    this.unitSelected = unitId;
+  }
   goBackClick() {
     this._location.back();
   }
@@ -131,7 +137,6 @@ export class PaymentPage implements OnInit {
   }
 
   onPercenClick(percenId: any) {
-    // this.router.navigateByUrl('search/' + cate2Id);
     console.log(percenId);
     this.percenSelected = percenId;
   }
@@ -142,5 +147,6 @@ export class PaymentPage implements OnInit {
       this.showToolbar = scrollTop >= 50;
     }
   }
+
 
 }

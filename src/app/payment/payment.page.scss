@@ -1,18 +1,22 @@
-.show-background {
-  --padding-top: 0rem !important;
-  --background: rgba(240, 65, 65, 1); 
-  --ion-color-base:rgb(240, 65, 65, 1)!important;
-  --border-width: 0px !important;
-  border: 1px !important;
+// .show-background {
+//   --padding-top: 0rem !important;
+//   --background: rgba(240, 73, 73); 
+//   --ion-color-base:rgb(240, 73, 73)!important;
+//   --border-width: 0px !important;
+//   border: 1px !important;
+//   color: #ffffff !important;
+// }
+// ion-toolbar {
+//   --padding-top: 0rem !important;
+//   --background: transparent;
+//   --ion-color-base: transparent !important;
+//   --border-width: 0px !important;
+//   border: 0 !important;
+//   color: transparent !important;
+// }
+.bgtoolbar{
+  --background: rgba(240, 73, 73); 
   color: #ffffff !important;
-}
-ion-toolbar {
-  --padding-top: 0rem !important;
-  --background: transparent;
-  --ion-color-base: transparent !important;
-  --border-width: 0px !important;
-  border: 0 !important;
-  color: transparent !important;
 }
 .bg{
     background-color: white;
@@ -125,8 +129,14 @@ ion-text-nowarp{
   font-weight: bold;
 }
 
-
+.ion-col-border {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+}
 .per {
+  background-color: #fff5f1;
+  color: #f34602;
   line-height: 2.5rem;
   padding: 0 0.16rem;
   color: #333;
@@ -135,16 +145,23 @@ ion-text-nowarp{
   margin-bottom: 0.24rem;
   white-space: nowrap;
 }
-.selectpay{
-  width: 85px;
-  font-size: 13px;
-  height: 45px;
-  color: #333;
+.ion-item-percenselected {
+  font-size: 2rem;
+  color: red;
+  margin-top: -0.65rem;
+  margin-left: 36%;
+  position: absolute;
 }
-.selectpaybg{
-  background-color: #fff5f1;
- 
-}
+
+// .selectpay{
+//   width: 85px;
+//   font-size: 13px;
+//   height: 45px;
+//   color: #333;
+// }
+// .selectpaybg{
+//   background-color: #fff5f1;
+// }
 .arowicon{    
   width: 28px;
   margin-left: 17px;
@@ -175,9 +192,9 @@ ion-text-nowarp{
 .label-right3 {
   margin-right: -12rem;
 }
-.address-magin{
-  margin-top: -25px;
-}
+// .address-magin{
+//   margin-top: -25px;
+// }
 .add {
   font-size: 22px;
   font-weight: bold;
@@ -348,7 +365,7 @@ ion-card{
 }
 
 ion-content {
-  --background: linear-gradient(0deg, rgb(247,247,247,1) 50%, rgba(240, 91, 65, 0.952) 89%);
+  --background: linear-gradient(0deg, rgb(247,247,247,1) 50%, rgba(240, 65, 65, 0.952) 89%);
 }
 ion-grid{
   margin-top: 0rem;

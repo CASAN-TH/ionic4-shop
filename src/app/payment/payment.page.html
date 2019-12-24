@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar [class.show-background]="showToolbar">
+  <ion-toolbar class="bgtoolbar">
     <ion-title>ยืนยันข้อมูลการสั่งซื้อ</ion-title>
     <ion-buttons slot="start">
       <ion-button (click)="goBackClick()">
@@ -10,7 +10,7 @@
 </ion-header>
 
 
-<ion-content padding fullscreen="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
+<ion-content>
 
   <ion-row *ngIf="AddaddressData && AddaddressData.address" class="address-magin">
     <ion-col size="12">
@@ -154,9 +154,9 @@
     </ion-col>
   </ion-row> -->
 
+  
   <ion-row>
     <ion-col size="12" class="tabselectpay">
-
       <ion-row (click)="presentActionSheet()" class="bg">
         <ion-col size="5" class="ion-align-items-center">
           <ion-text class="selecttext">
@@ -221,22 +221,38 @@
               </span>
             </ion-col>
           </ion-row>
-          <ion-row>
-            <ion-col size="12" *ngFor="let data of downDataList">
-              <ion-row *ngIf="data.period_option && data.period_option.length">
-                <ion-col class="per" size="2" *ngFor="let period of data.period_option"
-                  [class.ion-col-border]="period._id == percenSelected">
 
+          <!-- <ion-row>
+            <ion-col size="12">
+              <ion-row *ngIf="data.period_option && data.period_option.length">
+                <ion-col class="per" size="3" *ngFor="let period of data.period_option" text-center
+                  [class.ion-col-border]="period._id == percenSelected" (click)="onUnitClick(period._id)">
                   <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="period._id == percenSelected">
                   </ion-icon>
-                  <ion-item class="selectpay">
-                    <ion-label class="selectpaybg" text-center>{{period.period}}{{period.unit}}</ion-label>
-                  </ion-item>
-
+                  <span>{{period.period}}{{period.unit}}</span>
                 </ion-col>
               </ion-row>
             </ion-col>
-          </ion-row>
+          </ion-row> -->
+
+         <ion-row>
+            <ion-col class="col-dow" size="12">
+              <ion-row class="top"
+                *ngIf="data.period_option && data.period_option.length">
+                <ion-col class="per" size="2" text-center
+                  *ngFor="let period of data.period_option"
+                  [class.ion-col-border]="period._id == percenSelected" (click)="onUnitClick(period._id)">
+                  <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="period._id == percenSelected"></ion-icon>
+                  <span>{{period.period}}{{period.unit}}</span>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row> 
+        
+
+
+
+
           <ion-row>
             <ion-col size="12">
               <span>
@@ -245,7 +261,7 @@
               <span class="acept">
                 ฉันเห็นด้วย
               </span>
-              <span >
+              <span>
                 <a class="aceptcolor" routerLink="/termsandcondition" routerLinkActive="active">ข้อตกลงการใช้บริการ</a>
               </span>
             </ion-col>
