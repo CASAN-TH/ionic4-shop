@@ -1,8 +1,109 @@
 {
     "status": 200,
-    "data": [
-        {
-            "name": "test1"
-        }
-    ]
+    "data": {
+        "Bank": [
+            {
+                "id": "1",
+                "Bankname": "Bangkok Bank",
+                "image": "http://www.itbsth.com/images/bank/03.png"
+            },
+            {
+                "id": "2",
+                "Bankname": "Bank of Ayutthaya",
+                "image": "https://2.bp.blogspot.com/-2E0kVShgd8Q/W795SxDUvRI/AAAAAAAAYmo/o_Lq3edDRAYitgpheyar4mRp3jwLGMxEwCLcBGAs/s1600/ayutthaya.png"
+            },
+            {
+                "id": "3",
+                "Bankname": "Kasikorn Bank",
+                "image": "https://f.ptcdn.info/153/058/000/pai0rk6qicHOT9p119l-o.png"
+            },
+            {
+                "id": "4",
+                "Bankname": "Krung Thai Bank",
+                "image": "https://pngimage.net/wp-content/uploads/2018/06/logo-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%84%E0%B8%97%E0%B8%A2-png-4.png"
+            },
+            {
+                "id": "5",
+                "Bankname": "Siam Commercial Bank",
+                "image": "https://pngimage.net/wp-content/uploads/2018/06/png-%E0%B8%98%E0%B8%99%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A3-2.png"
+            },
+            {
+                "id": "6",
+                "Bankname": "Thanachart Bank",
+                "image": "http://www.siamappraisal.com/images/10.png"
+            },
+            {
+                "id": "7",
+                "Bankname": "TMB Bank",
+                "image": "https://www.satapornbooks.co.th/SPBecommerce/images/logo-bank05.png"
+            },
+            {
+                "id": "8",
+                "Bankname": "United Overseas Bank",
+                "image": "https://logos-download.com/wp-content/uploads/2016/04/United_Overseas_Bank_UOB_logo_logotype.png"
+            },
+            {
+                "id": "9",
+                "Bankname": "CIMB THAI",
+                "image": "https://www.fintechfutures.com/files/2016/05/cimb-logo.jpg"
+            },
+            {
+                "id": "10",
+                "Bankname": "Export Import Bank of Thailand",
+                "image": "https://upload.wikimedia.org/wikipedia/th/c/ca/Eximthai.png"
+            },
+            {
+                "id": "11",
+                "Bankname": "Government Savings Bank",
+                "image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Logo_GSB_Thailand.svg/1200px-Logo_GSB_Thailand.svg.png"
+            },
+            {
+                "id": "12",
+                "Bankname": "Krungthai Card",
+                "image": "https://egogad.com/wp-content/uploads/2019/10/pudnzoimiX35PrfHl8x-o.png"
+            },
+            {
+                "id": "13",
+                "Bankname": "Kiatnakin Bank",
+                "image": "https://media.kiatnakin.co.th/image/2018/Jan/Kiatnakin_Bank_logo.png"
+            },
+            {
+                "id": "14",
+                "Bankname": "Citi Thailand",
+                "image": "https://blog.masii.co.th/wp-content/uploads/2017/12/Citi-logo.png"
+            },
+            {
+                "id": "15",
+                "Bankname": "ICBC",
+                "image": "https://seeklogo.com/images/I/ICBC-logo-71BB1FD4EA-seeklogo.com.png"
+            },
+            {
+                "id": "16",
+                "Bankname": "Bank of Thailand",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Seal_of_the_Bank_of_Thailand.png"
+            },
+            {
+                "id": "17",
+                "Bankname": "Bank of China",
+                "image": "http://logok.org/wp-content/uploads/2014/04/Bank-of-China-logo-2-219x286.png"
+            },
+            {
+                "id": "18",
+                "Bankname": "Aeon Thana Sinsap",
+                "image": "https://www.futurepark.co.th/stocks/shop/logo/01147_th.gif"
+            },
+            {
+                "id": "19",
+                "Bankname": "2C2P Payment Gateway",
+                "image": "http://www.adslthailand.com/uploads/moxie/2018/TMN%20Lucky%20Bag%20campaign%20%281%29.jpg"
+            }
+        ],
+        "Bank_Other": [
+            {
+                "id": "20",
+                "Bankname": "Other Bank",
+                "image": "http://www.adslthailand.com/uploads/moxie/2018/TMN%20Lucky%20Bag%20campaign%20%281%29.jpg"
+            }
+        ]
+    }
 }

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import {MatTabsModule} from '@angular/material/tabs';
+
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -53,6 +55,7 @@ import { ATMPaymentModalComponent } from './payfor/atmpayment-modal/atmpayment-m
 import { CounterPaymentModalComponent } from './payfor/counter-payment-modal/counter-payment-modal.component';
 import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
 import { PaymentListModalComponent } from './payment/payment-list-modal/payment-list-modal.component';
+
 
 
 
@@ -152,6 +155,7 @@ import { PaymentListModalComponent } from './payment/payment-list-modal/payment-
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatTabsModule,
     TranslateModule.forRoot(),
   ],
   providers: [

@@ -1,6 +1,6 @@
 {
     "status": 200,
-    "data": {
+    "data": [{
         "_id": "001",
         "menus": [
             {
@@ -29,5 +29,5 @@
                 "image": "../../../assets/images/menu/job.png"
             }
         ]
-    }
+    }]
 }

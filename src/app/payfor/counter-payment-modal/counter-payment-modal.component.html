@@ -10,8 +10,71 @@
 </ion-header>
 
 <ion-content>
-  <p>
-    counter-payment-modal works!
-  </p>
-</ion-content>
 
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <span class="font-conten">{{payforData.limit}} :</span>
+          </ion-col>
+          <ion-col size="6" text-end>
+            <span class="font-conten">{{payforData.cerren}} {{payforData.amount}}</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <p class="font-title">คู่มือการชำระเงินจะถูกส่งไปยังมือถือและอีเมลของคุณ</p>
+
+      <ion-grid>
+        <ion-item>
+          <ion-label>เบอร์โทรศัพท์</ion-label>
+          <ion-input text-end [(ngModel)]="Counter_PaymentData.Tel"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>อีเมล</ion-label>
+          <ion-input text-end [(ngModel)]="Counter_PaymentData.Email"></ion-input>
+        </ion-item>
+        <ion-grid class="grid-conten">
+          <ion-row>
+            <ion-col size="12">
+              <p class="counter-title">เคาน์เตอร์เซอร์วิส</p>
+              <ion-row>
+                <ion-col size="2" *ngFor="let item of Counter_PaymentData.CounterService">
+                  <div>
+                    <img class="counter-image" [src]="item.image" (click)="onCounterServiceClick(item.id)">
+                  </div>
+                </ion-col>
+              </ion-row>
+              <p class="counter-title">เคาน์เตอร์เซอร์วิสของธนาคาร</p>
+              <ion-row>
+                <ion-col size="2" *ngFor="let item of Counter_PaymentData.CounterBank">
+                  <div>
+                    <img class="counter-image" [src]="item.image" (click)="onCounterBankClick(item.id)">
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+          <p>* อาจมีค่าธรรมเนียมเพิ่มเติม</p>
+        </ion-grid>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-row>
+        <ion-col size="4" text-end>
+          <div>
+            <img class="img-shield" slot="icon-only" src="https://image.flaticon.com/icons/png/512/1161/1161388.png">
+          </div>
+        </ion-col>
+        <ion-col size="8" text-start>
+          <p>การป้องกันการชำระเงิน</p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
