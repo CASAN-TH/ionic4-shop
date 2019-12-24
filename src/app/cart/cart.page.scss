@@ -150,13 +150,11 @@ icon-checkbox {
   color: #8a8686;
   width: 27px;
   position: relative;
-  top: -4px;
+  top: -5px;
 }
 
 .icon-size {
-  font-size: 16px;
-  position: relative;
-  right: 3px;
+  position: absolute;
 }
 
 .num-size {
@@ -167,7 +165,8 @@ icon-checkbox {
 }
 
 .disprice {
-  margin-top: -8px;
+  position: relative;
+  top: -3px;
 }
 
 .getcupon {
