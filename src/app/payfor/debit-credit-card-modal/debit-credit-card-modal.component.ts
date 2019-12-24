@@ -8,7 +8,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class DebitCreditCardModalComponent implements OnInit {
 
-  @Input() DebitCreditCardData: any
+  @Input() DebitCreditCardData: any;
 
   constructor(public modalController: ModalController) { }
 
@@ -18,6 +18,10 @@ export class DebitCreditCardModalComponent implements OnInit {
 
   dismiss() {
     this.modalController.dismiss();
+  }
+
+  onSelectBankClick(SelectBankId: any) {
+    console.log(SelectBankId);
   }
 
 

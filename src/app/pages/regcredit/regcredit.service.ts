@@ -140,8 +140,16 @@ export class RegcreditService {
   }
 
   async updateSecondContactData(body) {
-    const res = await this.http.put(api_url + '/api/secondcontacts/' + body._id, body, { headers: this.authorizationHeader() }).toPromise();
-    return res
+    if (mockup) {
+      const res = {
+        "status": 200,
+        "data": body
+      }
+      return res
+    } else {
+      const res = await this.http.put(api_url + '/api/secondcontacts/' + body._id, body, { headers: this.authorizationHeader() }).toPromise();
+      return res
+    }
   }
 
   deleteSecondContactData(body): Promise<any> {

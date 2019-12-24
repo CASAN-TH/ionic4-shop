@@ -1,0 +1,116 @@
+{
+    "status": 200,
+    "data": {
+        "Tel": "66-0800871773",
+        "Email": "porapot12@gmail.com",
+        "CounterService": [
+            {
+                "id": "1",
+                "Bankname": "Central",
+                "image": "https://i2.wp.com/www.ogloba.com/wp-content/uploads/2014/05/central_logo_250x250.jpg?fit=250%2C250"
+            },
+            {
+                "id": "2",
+                "Bankname": "B2S",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuYeabCWWCKHZW-2u_Yi3sn6zI78qVoGj51rxcO1Sj2yca8cGi&s"
+            },
+            {
+                "id": "3",
+                "Bankname": "Makro",
+                "image": "http://tis-communication.com/wp-content/uploads/2013/04/Makro1.jpg"
+            },
+            {
+                "id": "4",
+                "Bankname": "CenPay",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHtI2Soq6Q7S72Fv4nD-o8RtltNHQqqby72UVxkMG1x4ArZoqO&s"
+            },
+            {
+                "id": "5",
+                "Bankname": "Office Mate",
+                "image": "https://www.bangkokfashionoutlet.com/uploads/tx_bfooutlet/officematelogo.jpg"
+            },
+            {
+                "id": "6",
+                "Bankname": "Tesco Lotus",
+                "image": "https://kasikornbank.com/th/promotion/credit-card/reward-points/publishingimages/logo-tesco.jpg"
+            },
+            {
+                "id": "7",
+                "Bankname": "2EN",
+                "image": "https://account.spinninrecords.com/uploads/profile/777347/profile.png"
+            },
+            {
+                "id": "8",
+                "Bankname": "Tops Market",
+                "image": "https://www.futurepark.co.th/stocks/magnet/logo/00007_logo.jpg"
+            },
+            {
+                "id": "9",
+                "Bankname": "Big C",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXnvdcCAX7mG0K1EidL84R4rYufQUkEh1rrCqCvlddRCFA9vCf&s"
+            },
+            {
+                "id": "10",
+                "Bankname": "Family Mart",
+                "image": "https://i.kym-cdn.com/entries/icons/facebook/000/010/351/famima-icon.jpg"
+            },
+            {
+                "id": "11",
+                "Bankname": "hw",
+                "image": "http://www.bticino.co.th/wp-content/uploads/2017/07/homeworks-01.png"
+            },
+            {
+                "id": "12",
+                "Bankname": "PowerBuy",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpwUrCNDljR2ueM8mmMUEnRcWujVSDyMqAgfgTdbJbBxwld19g&s"
+            },
+            {
+                "id": "13",
+                "Bankname": "Robinson",
+                "image": "https://yt3.ggpht.com/a/AGF-l78rzVJKxbxu5fpOyw9iGXW3ndRLwH04cahjvA=s900-c-k-c0xffffffff-no-rj-mo"
+            }
+        ],
+        "CounterBank": [
+            {
+                "id": "11",
+                "Bankname": "Kasikorn Bank",
+                "image": "http://cca.in.th/wpen/wp-content/uploads/donate/k-bank.jpg"
+            },
+            {
+                "id": "22",
+                "Bankname": "Siam Commercial Bank",
+                "image": "http://cca.in.th/wpen/wp-content/uploads/donate/scb-logo.jpg"
+            },
+            {
+                "id": "33",
+                "Bankname": "Krung Thai Bank",
+                "image": "https://iconsiam-aws-s3.s3.ap-southeast-1.amazonaws.com/assets/%E0%B8%98%E0%B8%99%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%84%E0%B8%97%E0%B8%A2.jpg"
+            },
+            {
+                "id": "44",
+                "Bankname": "Bank of Ayutthaya",
+                "image": "https://deepscope.com/setscope-include/images/icon/BAY.jpg"
+            },
+            {
+                "id": "55",
+                "Bankname": "Thanachart Bank",
+                "image": "https://www.matichon.co.th/wp-content/uploads/2017/11/Logo.jpg"
+            },
+            {
+                "id": "66",
+                "Bankname": "Bangkok Bank",
+                "image": "https://awards.brandingforum.org/wp-content/uploads/2016/10/BBL-New-EN.jpg"
+            },
+            {
+                "id": "77",
+                "Bankname": "United Overseas Bank",
+                "image": "https://i.pinimg.com/564x/b8/8d/d0/b88dd0c410fed9daf1e8de674d2f826e.jpg"
+            },
+            {
+                "id": "88",
+                "Bankname": "TMB Bank",
+                "image": "https://image.makewebeasy.net/makeweb/0/vPdscY57b/CWCustomers/TMBlogo.jpg"
+            }
+        ]
+    }
+}

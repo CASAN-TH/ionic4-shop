@@ -8,14 +8,21 @@ import { ModalController } from '@ionic/angular';
 })
 export class OnlineBankingModalComponent implements OnInit {
 
-  @Input() DebitCreditCardData: any
-  
+  @Input() onlineBankingData: any; payforData: any;
+
   constructor(public modalController: ModalController) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   dismiss() {
     this.modalController.dismiss();
+  }
+
+  onSelectcheckboxBankClick(SelectcheckboxBankId: any) {
+    console.log(SelectcheckboxBankId);
+  }
+  onSelectcheckboxBank_OtherClick(SelectcheckboxBank_Other: any) {
+    console.log(SelectcheckboxBank_Other);
   }
 
 }

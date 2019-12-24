@@ -15,38 +15,39 @@
     <ion-col size="12">
       <ion-grid>
         <ion-row class="border">
-          <ion-col size="8">
-            <span>jjjljljlj</span>
+          <ion-col size="6">
+            <span class="font-conten">{{payforData.limit}} :</span>
           </ion-col>
-          <ion-col size="4">
-            <span>jjjljljlj</span>
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col size="8">
-            <span>jjjljljlj</span>
-          </ion-col>
-          <ion-col size="4">
-            <span>jjjljljlj</span>
+          <ion-col size="6" text-end>
+            <span class="font-conten">{{payforData.cerren}} {{payforData.amount}}</span>
           </ion-col>
         </ion-row>
 
-        <ion-row>
-          <ion-col size="8">
-            <span>jjjljljlj</span>
+        <ion-row *ngFor="let item of payforData.order_amount">
+          <ion-col size="6">
+            <span>{{item.name}}</span>
           </ion-col>
-          <ion-col size="4">
-            <span>jjjljljlj</span>
+          <ion-col size="6" text-end>
+            <span class="font-conten">{{item.cerrency}} {{item.amount_price}}</span>
           </ion-col>
         </ion-row>
 
-        <ion-row>
-          <ion-col size="8">
-            <span>jjjljljlj</span>
+        <ion-row *ngFor="let item of payforData.down_payment">
+          <ion-col size="6">
+            <span>{{item.name}}</span>
           </ion-col>
-          <ion-col size="4">
-            <span>jjjljljlj</span>
+          <ion-col size="6" text-end>
+            <span class="font-conten">{{item.cerrency}} {{item.amount}}</span>
+          </ion-col>
+        </ion-row>
+
+        <ion-row *ngFor="let item of payforData.monthly_payment">
+          <ion-col size="6">
+            <span>{{item.name}}</span>
+          </ion-col>
+          <ion-col size="6" text-end>
+            <span class="font-conten">{{item.cerrency}} {{item.installment_amount}}</span>
+            <span> {{item.installment_period}} {{item.unit}}</span>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -58,7 +59,7 @@
       <ion-grid>
         <ion-row>
           <ion-col size="12">
-            <ion-item no-padding *ngFor="let item of DebitCreditCardData">
+            <ion-item no-padding *ngFor="let item of onlineBankingData.Bank" (click)="onSelectcheckboxBankClick(item.id)">
               <img class="icon-image" [src]="item.image">
               <ion-label>
                 <ion-text class="font-padding">{{item.Bankname}}</ion-text>
@@ -74,11 +75,10 @@
       <ion-grid>
         <ion-row>
           <ion-col size="12">
-            <ion-item no-padding>
-              <img class="icon-image"
-                src="http://www.adslthailand.com/uploads/moxie/2018/TMN%20Lucky%20Bag%20campaign%20%281%29.jpg">
+            <ion-item no-padding *ngFor="let item of onlineBankingData.Bank_Other" (click)="onSelectcheckboxBank_OtherClick(item.id)">
+              <img class="icon-image" [src]="item.image">
               <ion-label>
-                <ion-text class="font-padding">ddddd</ion-text>
+                <ion-text class="font-padding">{{item.Bankname}}</ion-text>
               </ion-label>
               <ion-note slot="end">
                 <ion-checkbox mode="ios"></ion-checkbox>
@@ -92,10 +92,16 @@
 
   <ion-row>
     <ion-col size="12">
-      <span>
-        <img src="https://image.flaticon.com/icons/png/512/1161/1161388.png">
-        <p text-center>การป้องกันการชำระเงิน</p>
-      </span>
+      <ion-row>
+        <ion-col size="4" text-end>
+          <div>
+            <img class="img-shield" slot="icon-only" src="https://image.flaticon.com/icons/png/512/1161/1161388.png">
+          </div>
+        </ion-col>
+        <ion-col size="8" text-start>
+          <p>การป้องกันการชำระเงิน</p>
+        </ion-col>
+      </ion-row>
     </ion-col>
   </ion-row>
 
