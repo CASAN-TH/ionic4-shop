@@ -51,6 +51,7 @@ import { DebitCreditCardModalComponent } from './payfor/debit-credit-card-modal/
 import { OnlineBankingModalComponent } from './payfor/online-banking-modal/online-banking-modal.component';
 import { ATMPaymentModalComponent } from './payfor/atmpayment-modal/atmpayment-modal.component';
 import { CounterPaymentModalComponent } from './payfor/counter-payment-modal/counter-payment-modal.component';
+import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
 
 
 
@@ -77,6 +78,7 @@ import { CounterPaymentModalComponent } from './payfor/counter-payment-modal/cou
     ModalAddressComponent,
     ModalFeedbackComponent,
     ModalAboutComponent,
+    ModalMyorderComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
@@ -120,6 +122,7 @@ import { CounterPaymentModalComponent } from './payfor/counter-payment-modal/cou
     ModalAddressComponent,
     ModalFeedbackComponent,
     ModalAboutComponent,
+    ModalMyorderComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
