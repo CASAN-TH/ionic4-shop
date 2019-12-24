@@ -18,6 +18,7 @@ export class PayforPage implements OnInit {
   payforData: any;
   DebitCreditCardData: any;
   onlineBankingData: any;
+  onATM_PaymentData: any;
 
   constructor(private router: Router,
     private payforService: PayforService,
@@ -34,10 +35,14 @@ export class PayforPage implements OnInit {
       console.log(payforDataList);
       this.DebitCreditCardData = payforDataList;
     })
-    
+
     this.payforService.onlineBankingDataChanged.subscribe((payforDataList: any) => {
       console.log(payforDataList);
       this.onlineBankingData = payforDataList;
+    })
+    this.payforService.onATM_PaymentDataChanged.subscribe((payforDataList: any) => {
+      console.log(payforDataList);
+      this.onATM_PaymentData = payforDataList;
     })
   }
   goBackClick() {
@@ -66,7 +71,8 @@ export class PayforPage implements OnInit {
     const modal = await this.modalController.create({
       component: OnlineBankingModalComponent,
       componentProps: {
-        DebitCreditCardData: this.DebitCreditCardData
+        onlineBankingData: this.onlineBankingData,
+        payforData: this.payforData
       }
     });
     return await modal.present();
@@ -75,7 +81,8 @@ export class PayforPage implements OnInit {
     const modal = await this.modalController.create({
       component: ATMPaymentModalComponent,
       componentProps: {
-        // ReviewData: this.ReviewData
+        onATM_PaymentData: this.onATM_PaymentData,
+        payforData: this.payforData
       }
     });
     return await modal.present();

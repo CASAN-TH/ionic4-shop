@@ -1,0 +1,34 @@
+{
+    "status": 200,
+    "data": {
+        "Tel": "66-0800871773",
+        "Email": "porapot12@gmail.com",
+        "Bank": [
+            {
+                "id": "1",
+                "Bankname": "Kasikorn Bank",
+                "image": "https://f.ptcdn.info/153/058/000/pai0rk6qicHOT9p119l-o.png"
+            },
+            {
+                "id": "2",
+                "Bankname": "Siam Commercial Bank",
+                "image": "https://mpng.pngfly.com/20180420/osw/kisspng-thailand-siam-commercial-bank-refinancing-kasikorn-thailand-logo-5ad9c886e80191.1694414415242220869503.jpg"
+            },
+            {
+                "id": "3",
+                "Bankname": "Krung Thai Bank",
+                "image": "https://pngimage.net/wp-content/uploads/2018/06/logo-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%84%E0%B8%97%E0%B8%A2-png-4.png"
+            },
+            {
+                "id": "4",
+                "Bankname": "Bank of Ayutthaya",
+                "image": "https://2.bp.blogspot.com/-2E0kVShgd8Q/W795SxDUvRI/AAAAAAAAYmo/o_Lq3edDRAYitgpheyar4mRp3jwLGMxEwCLcBGAs/s1600/ayutthaya.png   "
+            },
+            {
+                "id": "5",
+                "Bankname": "Bangkok Bank",
+                "image": "http://www.itbsth.com/images/bank/03.png"
+            }
+        ]
+    }
+}

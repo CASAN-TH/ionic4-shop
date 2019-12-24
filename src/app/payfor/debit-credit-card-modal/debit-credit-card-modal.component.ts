@@ -8,7 +8,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class DebitCreditCardModalComponent implements OnInit {
 
-  @Input() DebitCreditCardData: any
+  @Input() DebitCreditCardData: any;
 
   constructor(public modalController: ModalController) { }
 
