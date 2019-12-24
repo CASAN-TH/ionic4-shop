@@ -47,72 +47,84 @@
           </ion-col>
         </ion-row>
 
-        <ion-row *ngFor="let cate of cate.product; let j = index">
-          <ion-col size="1" class="ion-align-items-center">
-            <ion-thumbnail class="ion-align-items-center">
-              <ion-checkbox color="danger" mode="ios" (click)="onSelectProduct()"></ion-checkbox>
-            </ion-thumbnail>
-          </ion-col>
-          <ion-col size="3.5" class="ion-align-items-center img-margin">
-            <div class="ion-align-items-center" (click)="onOpenlistClick()">
-              <ion-chip class="ion-justify-content-center">
-                <ion-label class="discount">{{cate.discount}}</ion-label>
-              </ion-chip>
-              <img [src]="cate.img">
-            </div>
-          </ion-col>
-          <ion-col size="7.5">
-            <ion-row>
-              <ion-col size="12">
-                <ion-text class="phonename">
-                  {{cate.name}}
-                </ion-text>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col size="12">
-                <ion-label class="quantity" (click)="specModal()">
-                  {{cate.color}},{{cate.storage}}
-                  <span>
-                    <ion-icon class="arrow-down" name="arrow-down" mode="ios"></ion-icon>
-                  </span>
-                </ion-label>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col size="4" class="ion-align-items-center">
-                <ion-text class="phoneprice">
-                  {{cate.currency}}{{cate.price}}
-                </ion-text>
-              </ion-col>
-              <ion-col size="8">
-                <div class="btn-right-position">
-                  <span>
-                    <ion-button class="btn-size" fill="clear" (click)="onRemoveClick(i,j)"
-                      [disabled]="cartDataList.carts[i].product[j].amount_product === 0">
-                      <p class="icon-size">-</p>
-                    </ion-button>
-                  </span>
-                  <span class="num-size">
-                    {{cate.amount_product}}
-                  </span>
-                  <span>
-                    <ion-button class="btn-size" fill="clear" (click)="onAddClick(i,j)">
-                      <p class="icon-size">+</p>
-                    </ion-button>
-                  </span>
-                </div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col size="12">
-                <ion-text class="discount_price">
-                  <del>{{cate.currency}}{{cate.discount_price}}</del>
-                </ion-text>
-              </ion-col>
-            </ion-row>
-          </ion-col>
-        </ion-row>
+        <ion-item-sliding *ngFor="let cate of cate.product; let j = index">
+          <ion-item>
+            <ion-label>
+              <ion-row>
+                <ion-col size="1" class="ion-align-items-center">
+                  <ion-thumbnail class="ion-align-items-center">
+                    <ion-checkbox color="danger" mode="ios" (click)="onSelectProduct()"></ion-checkbox>
+                  </ion-thumbnail>
+                </ion-col>
+                <ion-col size="3.5" class="ion-align-items-center">
+                  <div class="ion-align-items-center" (click)="onOpenlistClick()">
+                    <ion-chip class="ion-justify-content-center">
+                      <ion-label class="discount">{{cate.discount}}</ion-label>
+                    </ion-chip>
+                    <img [src]="cate.img">
+                  </div>
+                </ion-col>
+                <ion-col size="7.5">
+                  <ion-row>
+                    <ion-col size="12">
+                      <ion-text class="phonename">
+                        {{cate.name}}
+                      </ion-text>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col size="12">
+                      <ion-label class="quantity" (click)="specModal()">
+                        {{cate.color}},{{cate.storage}}
+                        <span>
+                          <ion-icon class="arrow-down" name="arrow-down" mode="ios"></ion-icon>
+                        </span>
+                      </ion-label>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col size="4" class="ion-align-items-center">
+                      <ion-text class="phoneprice">
+                        {{cate.currency}}{{cate.price}}
+                      </ion-text>
+                    </ion-col>
+                    <ion-col size="8">
+                      <div class="btn-right-position">
+                        <span>
+                          <ion-button class="btn-size" fill="clear" (click)="onRemoveClick(i,j)"
+                            [disabled]="cartDataList.carts[i].product[j].amount_product === 0">
+                            <p class="icon-size">-</p>
+                          </ion-button>
+                        </span>
+                        <span class="num-size">
+                          {{cate.amount_product}}
+                        </span>
+                        <span>
+                          <ion-button class="btn-size" fill="clear" (click)="onAddClick(i,j)">
+                            <p class="icon-size">+</p>
+                          </ion-button>
+                        </span>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col size="12">
+                      <ion-text class="discount_price">
+                        <del>{{cate.currency}}{{cate.discount_price}}</del>
+                      </ion-text>
+                    </ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-label>
+          </ion-item>
+          <ion-item-options>
+            <ion-item-option color="primary">
+              <ion-icon slot="start" name="trash"></ion-icon>
+              Delete
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
 
       </ion-grid>
 
