@@ -35,35 +35,33 @@
     <ion-col size="12">
       <ion-grid *ngFor="let cate of cartDataList.carts; let i = index;">
         <ion-row class="border">
-          <ion-col size="2">
-            <ion-thumbnail>
-              <ion-checkbox color="danger" mode="ios" (click)="onSelectShop()"></ion-checkbox>
-            </ion-thumbnail>
+          <ion-col size="8" class="ion-align-items-center">
+            <ion-checkbox color="danger" mode="ios" (click)="onSelectShop()"></ion-checkbox>
+            <span class="span-title ion-align-items-center">
+              <ion-icon name="md-appstore" class="icon"></ion-icon>
+              <ion-label class="select">{{cate.shop_name}}</ion-label>
+            </span>
           </ion-col>
-          <ion-col size="6" class="shopname">
-            <ion-icon name="md-appstore" class="icon"></ion-icon>
-            <ion-label class="select">{{cate.shop_name}}</ion-label>
-          </ion-col>
-          <ion-col size="4" class="cupon">
+          <ion-col size="4" class="ion-align-items-center">
             <ion-label class="shopcupon" (click)="vouchersModal()">กดรับคูปอง</ion-label>
           </ion-col>
         </ion-row>
 
         <ion-row *ngFor="let cate of cate.product; let j = index">
-          <ion-col size="2" class="chekbox">
-            <ion-thumbnail>
+          <ion-col size="1" class="ion-align-items-center">
+            <ion-thumbnail class="ion-align-items-center">
               <ion-checkbox color="danger" mode="ios" (click)="onSelectProduct()"></ion-checkbox>
             </ion-thumbnail>
           </ion-col>
-          <ion-col size="3.5" class="imgcart">
-            <div (click)="onOpenlistClick()">
-              <ion-chip>
+          <ion-col size="3.5" class="ion-align-items-center img-margin">
+            <div class="ion-align-items-center" (click)="onOpenlistClick()">
+              <ion-chip class="ion-justify-content-center">
                 <ion-label class="discount">{{cate.discount}}</ion-label>
               </ion-chip>
-              <img class="imgchip" [src]="cate.img">
+              <img [src]="cate.img">
             </div>
           </ion-col>
-          <ion-col size="6.5" class="detail-card-cart">
+          <ion-col size="7.5">
             <ion-row>
               <ion-col size="12">
                 <ion-text class="phonename">
@@ -72,56 +70,45 @@
               </ion-col>
             </ion-row>
             <ion-row>
-              <ion-col size="7" (click)="specModal()" class="quantity3">
-                <ion-row class="quantity2">
-                  <ion-col size="10">
-                    <ion-label color="medium" class="quantity">
-                      {{cate.color}},{{cate.storage}}
-                    </ion-label>
-                  </ion-col>
-                  <ion-col size="2" class="arrow-down2">
+              <ion-col size="12">
+                <ion-label class="quantity" (click)="specModal()">
+                  {{cate.color}},{{cate.storage}}
+                  <span>
                     <ion-icon class="arrow-down" name="arrow-down" mode="ios"></ion-icon>
-                  </ion-col>
-                </ion-row>
+                  </span>
+                </ion-label>
               </ion-col>
             </ion-row>
             <ion-row>
-              <ion-col size="12">
+              <ion-col size="4" class="ion-align-items-center">
                 <ion-text class="phoneprice">
                   {{cate.currency}}{{cate.price}}
                 </ion-text>
               </ion-col>
+              <ion-col size="8">
+                <div class="btn-right-position">
+                  <span>
+                    <ion-button class="btn-size" fill="clear" (click)="onRemoveClick(i,j)"
+                      [disabled]="cartDataList.carts[i].product[j].amount_product === 0">
+                      <p class="icon-size">-</p>
+                    </ion-button>
+                  </span>
+                  <span class="num-size">
+                    {{cate.amount_product}}
+                  </span>
+                  <span>
+                    <ion-button class="btn-size" fill="clear" (click)="onAddClick(i,j)">
+                      <p class="icon-size">+</p>
+                    </ion-button>
+                  </span>
+                </div>
+              </ion-col>
             </ion-row>
             <ion-row>
-              <ion-col size="4" >
+              <ion-col size="12">
                 <ion-text class="discount_price">
                   <del>{{cate.currency}}{{cate.discount_price}}</del>
                 </ion-text>
-              </ion-col>
-
-              <ion-col size="8" class="addamount">
-                <ion-row class="addamount2">
-                  <ion-col size="4" class="add-remove">
-                    <ion-buttons>
-                      <ion-button (click)="onRemoveClick(i,j)"
-                        [disabled]="cartDataList.carts[i].product[j].amount_product === 0" class="addremoveicon">
-                        -
-                      </ion-button>
-                    </ion-buttons>
-                  </ion-col>
-                  <ion-col size="4" class="amountproduct">
-                    <div class="amountproduct2">
-                      <ion-text class="text">{{cate.amount_product}}</ion-text>
-                    </div>
-                  </ion-col>
-                  <ion-col size="4" class="add-remove">
-                    <ion-buttons>
-                      <ion-button (click)="onAddClick(i,j)" class="addremoveicon">
-                        +
-                      </ion-button>
-                    </ion-buttons>
-                  </ion-col>
-                </ion-row>
               </ion-col>
             </ion-row>
           </ion-col>
@@ -190,7 +177,7 @@
             ยอดรวม:
           </span>
           <span class="spanprice">
-            {{cartDataList.totalcart.currency}} {{cartDataList.totalcart.price}}
+            {{cartDataList.totalcart.currency}} {{cartDataList.totalcart.total_price}}
           </span>
           <span class="installment">
             {{cartDataList.totalcart.installment_currency}}{{cartDataList.totalcart.installment_amount}}

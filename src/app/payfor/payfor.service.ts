@@ -13,7 +13,9 @@ const mockup = environment.mockup;
 export class PayforService {
   routeParams: any;
 
+  onDebitCreditCardDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onPayforDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onlineBankingDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onPayforDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }
@@ -29,6 +31,8 @@ export class PayforService {
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
 
     this.getPayforData();
+    this.getDebitCreditCardData();
+    this.getOnlineBankingData();
     // if (this.routeParams.id) {
     //   this.getPayforData(this.routeParams.id);
     // } else {
@@ -60,6 +64,34 @@ export class PayforService {
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onPayforDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+  getDebitCreditCardData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/payfor/debit-creditcard.json').subscribe((res: any) => {
+          this.onDebitCreditCardDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onDebitCreditCardDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+  getOnlineBankingData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/payfor/online-banking.json').subscribe((res: any) => {
+          this.onlineBankingDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onlineBankingDataChanged.next(res.data);
         }, reject)
       }
 

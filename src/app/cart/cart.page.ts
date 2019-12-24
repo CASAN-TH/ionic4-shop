@@ -63,12 +63,12 @@ export class CartPage implements OnInit {
     console.log("onSelectProductClick")
   }
   onRemoveClick(i, j) {
-    this.cartDataList[i].product[j].amount_product -= 1
-    console.log(this.cartDataList[i].product[j].amount_product)
+    this.cartDataList.carts[i].product[j].amount_product -= 1
+    console.log(this.cartDataList.carts[i].product[j].amount_product)
   }
   onAddClick(i, j) {
-    this.cartDataList[i].product[j].amount_product += 1
-    console.log(this.cartDataList[i].product[j].amount_product)
+    this.cartDataList.carts[i].product[j].amount_product += 1
+    console.log(this.cartDataList.carts[i].product[j].amount_product)
   }
   onAcceptCodeClick() {
     console.log("Add")

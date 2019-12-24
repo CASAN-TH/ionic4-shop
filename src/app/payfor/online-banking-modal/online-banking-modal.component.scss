@@ -1,0 +1,20 @@
+ion-grid {
+  margin-top: 0.5rem;
+  background-color: white;
+}
+ion-content {
+  --padding-top: -100px !important;
+  --background: rgb(241, 235, 235) !important;
+}
+.border {
+  border-bottom: 1px solid;
+  border-color: rgb(194, 193, 193);
+  height: 40px;
+  margin-bottom: 10px;
+}
+.font-padding {
+  padding-left: 10%;
+}
+.icon-image {
+  width: 10%;
+}

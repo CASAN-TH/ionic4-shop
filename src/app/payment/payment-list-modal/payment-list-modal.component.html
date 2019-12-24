@@ -1,0 +1,88 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons class="backbutton" slot="start" (click)="dismiss()">
+        <ion-button>
+          <ion-icon slot="icon-only" color="black" mode="ios" name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title >รายการสินค้า</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+
+    <ion-row>
+        <ion-col size="12">
+          <ion-grid *ngFor="let cate of cartDataList.carts">
+            <ion-row>
+              <ion-col size="12">
+                <ion-row class="border">
+                  <ion-col size="3">
+                    <ion-icon name="md-appstore" class="icon"></ion-icon>
+                  </ion-col>
+                  <ion-col size="6" class="shopname">
+                    <ion-label class="select">{{cate.shop_name}}</ion-label>
+                  </ion-col>
+                </ion-row>
+                <ion-row *ngFor="let cate of cate.product">
+                  <ion-col size="4">
+                    <div (click)="onOpenlistClick()">
+                      <img class="img" [src]="cate.img">
+                    </div>
+                  </ion-col>
+                  <ion-col size="8">
+                    <ion-row>
+                      <ion-col size="12">
+                        <ion-text class="phonename">{{cate.name}}</ion-text>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col size="12" class="quantity2">
+                        <ion-label color="medium ion-text-nowrap">
+                          Options:{{cate.color}},{{cate.storage}}
+                        </ion-label>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col size="10">
+                        <ion-text class="price2">{{cate.currency}}{{cate.price}}</ion-text>
+                      </ion-col>
+                      <ion-col size="2">
+                        <ion-text class="price3">
+                          {{cate.quantity}}
+                        </ion-text>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col size="6">
+                        <del class="discountprice">{{cate.currency}}{{cate.discount_price}}</del>
+                      </ion-col>
+                      <ion-col size="6">
+                        <span class="discount">
+                          {{cate.discount}}
+                        </span>
+                      </ion-col>
+                    </ion-row>
+                  </ion-col>
+                </ion-row>
+                <ion-row *ngFor="let cate of cate.product">
+                  <ion-col size="12" *ngFor="let item of cate.promotions">
+                    <ion-row class="giftrow">
+                      <ion-col size="9" class="ion-text-nowrap giftdetail">
+                        <ion-text>
+                          {{item.gift}} {{item.name}}
+                        </ion-text>
+                      </ion-col>
+                      <ion-col size="3" class="giftdetail2">
+                        <ion-text>
+                          {{item.quantity}}
+                        </ion-text>
+                      </ion-col>
+                    </ion-row>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+</ion-content>

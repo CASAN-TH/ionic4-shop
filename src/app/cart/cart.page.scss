@@ -1,183 +1,201 @@
 .chip {
   margin-bottom: -7%;
 }
+
 .footter-font {
   font-size: 13px;
 }
+
 .footer-button {
   margin-top: 5%;
   width: 101%;
   border-radius: 5%;
 }
+
+ion-checkbox {
+  height: 20px;
+  width: 20px;
+}
+
+.span-title {
+  padding-left: 6px;
+}
+
 .select {
   font-size: 15px;
   font-weight: bold;
-  margin-top: 6px;
-  margin-left: 4px;
 }
+
 .icon {
-  margin-left: -18px;
+  margin-top: -3px;
+  margin-right: 4px;
 }
+
 .producttext {
   font-weight: bold;
 }
+
 .iconcart {
   padding-inline-start: 5%;
 }
+
 .phonename {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
 }
+
 .quantity {
   font-size: 12px;
-}
-.quantity2{
-  margin-top: -2px;
-  margin-left: 3px;
-  height: 25px;
-}
-.quantity3{
   background-color: rgba(228, 228, 228, 0.4);
+  padding: 4px;
 }
-.arrow-down{
-color: rgb(173, 173, 173);
+
+.arrow-down {
+  color: rgb(173, 173, 173);
+  position: relative;
+  top: 2px;
+  padding-left: 5px;
 }
-.arrow-down2{
-  margin-left: -4px;
-  }
+
 .phoneprice {
   font-weight: bold;
   font-size: 15px;
   color: red;
 }
+
 .icon-check {
-  margin-top:20%;
+  margin-top: 20%;
 }
-.installment{
+
+.installment {
   font-size: 13px;
 }
-.footer-pading{
+
+.footer-pading {
   padding-top: 15px;
 }
-.icon-inner{
+
+.icon-inner {
   margin-left: -1%;
   color: rgba(0, 0, 0, 0.29);
 }
-.spanprice{
+
+.spanprice {
   font-weight: bold;
   font-size: 15px;
   color: red;
 }
-.chekbox{
-  margin-top: 45px;
-}
 
-ion-text{
+ion-text {
   font-size: 12px;
 }
+
 ion-grid {
   margin-top: 0.5rem;
   background-color: white;
 }
+
 ion-content {
   --padding-top: -100px !important;
   --background: rgb(241, 235, 235) !important;
 }
+
 .iconimg {
   padding-top: 15%;
   width: 30%;
 }
+
 ion-chip {
   background-color: #ff5b02;
   color: white;
-  width: 70%;
+  width: 37px;
+  height: 17px;
+  padding: 0px;
+  position: absolute;
+  top: 2%;
 }
-icon-checkbox{
+
+icon-checkbox {
   width: 21px;
   height: 22px;
 }
-.imgchip {
-  margin-top: -22%;
-}
-.discount {
-  font-size: 10px;
-}
-.shopname{
-  padding-top: 11px;
-  font-weight: bold;
-}
-.shopcupon{
-  padding-top: 11px;
-  margin-left: 38px;
+
+.shopcupon {
   font-size: 13px;
   color: rgb(173, 173, 173);
+  position: absolute;
+  right: 5px;
 }
-.cupon{
-  padding-top: 13px;
-}
-.border{
-  border-bottom: 1px solid;
-  border-color:  rgb(194, 193, 193);;
-  height: 44px;
-}
-.imgcart{
-  margin-left: -25px;
-}
-.addamount{
-  margin-left: 91px;
-margin-top: -37px;
-}
-.addamount2{
-  margin-left: 47px;
-margin-top: -2px;
-}
-.add-remove{
-  background-color: #b0b0b03b;
-  height: 21px;
-}
-.addremoveicon{
-  width: 28px;
-  font-weight: bold;
-  color: #8a8686;
-  margin-top: -10px;
+
+.img-margin {
   margin-left: -5px;
 }
-.amountproduct{
-  color: rgba(0,0,0,.87);
-  background-color: #f7f5f5;
-  height: 21px;
+
+.discount {
+  font-size: 8px;
 }
-.amountproduct2{
-  margin-left: 3px;
-  margin-top: -3px;
+
+.border {
+  border-bottom: 1px solid;
+  border-color: rgb(194, 193, 193);
+  ;
+  height: 44px;
 }
-.text{
+
+.btn-right-position {
+  position: absolute;
+  right: 0px;
+}
+
+.btn-size {
+  background-color: #b0b0b03b;
+  height: 20px;
+  font-weight: bold;
+  color: #8a8686;
+  width: 27px;
+  position: relative;
+  top: -4px;
+}
+
+.icon-size {
+  font-size: 16px;
+  position: relative;
+  right: 3px;
+}
+
+.num-size {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
   font-size: 12px;
 }
-.disprice{
+
+.disprice {
   margin-top: -8px;
 }
-.detail-card-cart{
-  margin-left: -17px;
-}
-.getcupon{
+
+.getcupon {
   border: 1px solid;
   border-color: rgb(194, 193, 193);
   height: 40px;
 }
-.buttonget{
-padding-top: 0px;
-height: 1px;
+
+.buttonget {
+  padding-top: 0px;
+  height: 1px;
 }
-.buttonget2{
+
+.buttonget2 {
   height: 40px;
   font-size: 16px;
-  }
-.inputcupon{
+}
+
+.inputcupon {
   font-size: 13px;
   margin-top: -3px;
 }
-.reccomment{
+
+.reccomment {
   height: 63px;
   margin-top: -13px;
 }

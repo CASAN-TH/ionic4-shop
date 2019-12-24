@@ -7,6 +7,7 @@ import { VouchersModalComponent } from '../productdetail/vouchers-modal/vouchers
 import { SelectdownModalComponent } from './selectdown-modal/selectdown-modal.component';
 import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
 import { ScrollDetail } from '@ionic/core';
+import { PaymentListModalComponent } from './payment-list-modal/payment-list-modal.component';
 
 @Component({
   selector: 'app-payment',
@@ -19,7 +20,6 @@ export class PaymentPage implements OnInit {
   cartDataList: any;
   VouchersData: any;
   selectdownData: any;
-  percenSelected: any;
   AddaddressData: any;
   AddressModalData:any;
   showToolbar: boolean;
@@ -63,11 +63,7 @@ export class PaymentPage implements OnInit {
 
   }
  
-  onUnitClick(unitId: any) {
-    // this.router.navigateByUrl('search/' + cate2Id);
-    console.log(unitId);
-    this.unitSelected = unitId;
-  }
+
   goBackClick() {
     this._location.back();
   }
@@ -76,6 +72,11 @@ export class PaymentPage implements OnInit {
   }
   onAddaddressClick(){
     this.router.navigate(['addaddress'])
+  }
+  onUnitClick(unitId: any) {
+    // this.router.navigateByUrl('search/' + cate2Id);
+    console.log(unitId);
+    this.unitSelected = unitId;
   }
 
   async selectDownModal() {
@@ -89,6 +90,15 @@ export class PaymentPage implements OnInit {
     return await modal.present();
   }
 
+  async paymentlistModal() {
+    const modal = await this.modalController.create({
+      component: PaymentListModalComponent,
+      componentProps: {
+        cartDataList: this.cartDataList
+      }
+    });
+    return await modal.present();
+  }
 
   async vouchersModal() {
     const modal = await this.modalController.create({
@@ -136,10 +146,6 @@ export class PaymentPage implements OnInit {
     console.log("onOpenlistClick");
   }
 
-  onPercenClick(percenId: any) {
-    console.log(percenId);
-    this.percenSelected = percenId;
-  }
   
   onScroll($event: CustomEvent<ScrollDetail>) {
     if ($event && $event.detail && $event.detail.scrollTop) {

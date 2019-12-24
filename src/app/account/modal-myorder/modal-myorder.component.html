@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons mode="ios" slot="start" (click)="ModalDismiss()">
+      <ion-button>
+        <ion-icon mode="ios" slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>รายการสั่งซื้อของฉัน</ion-title>
+    <ion-buttons mode="ios" slot="end">
+      <ion-button (click)="ToSearchPage()">
+        <ion-icon slot="icon-only" name="search">
+        </ion-icon>
+      </ion-button>
+
+      <ion-button (click)="onToSettingPage()">
+        <ion-icon slot="icon-only" name="more">
+        </ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
