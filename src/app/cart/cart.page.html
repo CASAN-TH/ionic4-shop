@@ -48,8 +48,8 @@
         </ion-row>
 
         <ion-item-sliding *ngFor="let cate of cate.product; let j = index">
-          <ion-item>
-            <ion-label>
+          <ion-item lines="none">
+            <ion-label class="ion-no-margin">
               <ion-row>
                 <ion-col size="1" class="ion-align-items-center">
                   <ion-thumbnail class="ion-align-items-center">
@@ -74,12 +74,12 @@
                   </ion-row>
                   <ion-row>
                     <ion-col size="12">
-                      <ion-label class="quantity" (click)="specModal()">
-                        {{cate.color}},{{cate.storage}}
-                        <span>
-                          <ion-icon class="arrow-down" name="arrow-down" mode="ios"></ion-icon>
-                        </span>
-                      </ion-label>
+                      <span class="quantity" (click)="specModal()">
+                        {{cate.color}}
+                        <span *ngIf="cate.storage"> , </span>
+                        {{cate.storage}}
+                        <ion-icon class="arrow-down" name="arrow-down" mode="ios"></ion-icon>
+                      </span>
                     </ion-col>
                   </ion-row>
                   <ion-row>
@@ -93,7 +93,7 @@
                         <span>
                           <ion-button class="btn-size" fill="clear" (click)="onRemoveClick(i,j)"
                             [disabled]="cartDataList.carts[i].product[j].amount_product === 0">
-                            <p class="icon-size">-</p>
+                            <ion-icon class="icon-size" name="remove"></ion-icon>
                           </ion-button>
                         </span>
                         <span class="num-size">
@@ -101,7 +101,7 @@
                         </span>
                         <span>
                           <ion-button class="btn-size" fill="clear" (click)="onAddClick(i,j)">
-                            <p class="icon-size">+</p>
+                            <ion-icon class="icon-size" name="add"></ion-icon>
                           </ion-button>
                         </span>
                       </div>
@@ -109,7 +109,7 @@
                   </ion-row>
                   <ion-row>
                     <ion-col size="12">
-                      <ion-text class="discount_price">
+                      <ion-text class="disprice">
                         <del>{{cate.currency}}{{cate.discount_price}}</del>
                       </ion-text>
                     </ion-col>
