@@ -17,6 +17,7 @@ export class PayforService {
   onPayforDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onlineBankingDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onATM_PaymentDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onCounter_PaymentDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onPayforDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }
@@ -35,6 +36,7 @@ export class PayforService {
     this.getDebitCreditCardData();
     this.getOnlineBankingData();
     this.getATM_PaymentData();
+    this.getCounter_PaymentData();
     // if (this.routeParams.id) {
     //   this.getPayforData(this.routeParams.id);
     // } else {
@@ -108,6 +110,20 @@ export class PayforService {
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onATM_PaymentDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+  getCounter_PaymentData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/payfor/counter-payment.json').subscribe((res: any) => {
+          this.onCounter_PaymentDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onCounter_PaymentDataChanged.next(res.data);
         }, reject)
       }
 

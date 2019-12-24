@@ -13,7 +13,7 @@
   <ion-grid>
     <ion-row>
       <ion-col size="12">
-        <ion-item no-padding *ngFor="let item of DebitCreditCardData">
+        <ion-item no-padding *ngFor="let item of DebitCreditCardData" (click)="onSelectBankClick(item.id)">
           <img class="icon-image" [src]="item.image">
           <ion-label>
             <ion-text class="font-padding">{{item.Bankname}}</ion-text>

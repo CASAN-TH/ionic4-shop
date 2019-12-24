@@ -19,6 +19,7 @@ export class PayforPage implements OnInit {
   DebitCreditCardData: any;
   onlineBankingData: any;
   onATM_PaymentData: any;
+  Counter_PaymentData: any;
 
   constructor(private router: Router,
     private payforService: PayforService,
@@ -43,6 +44,10 @@ export class PayforPage implements OnInit {
     this.payforService.onATM_PaymentDataChanged.subscribe((payforDataList: any) => {
       console.log(payforDataList);
       this.onATM_PaymentData = payforDataList;
+    })
+    this.payforService.onCounter_PaymentDataChanged.subscribe((payforDataList: any) => {
+      console.log(payforDataList);
+      this.Counter_PaymentData = payforDataList;
     })
   }
   goBackClick() {
@@ -91,7 +96,8 @@ export class PayforPage implements OnInit {
     const modal = await this.modalController.create({
       component: CounterPaymentModalComponent,
       componentProps: {
-        // ReviewData: this.ReviewData
+        Counter_PaymentData: this.Counter_PaymentData,
+        payforData: this.payforData
       }
     });
     return await modal.present();

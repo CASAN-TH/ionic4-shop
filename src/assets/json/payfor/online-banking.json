@@ -10,7 +10,7 @@
             {
                 "id": "2",
                 "Bankname": "Bank of Ayutthaya",
-                "image": "https://2.bp.blogspot.com/-2E0kVShgd8Q/W795SxDUvRI/AAAAAAAAYmo/o_Lq3edDRAYitgpheyar4mRp3jwLGMxEwCLcBGAs/s1600/ayutthaya.png   "
+                "image": "https://2.bp.blogspot.com/-2E0kVShgd8Q/W795SxDUvRI/AAAAAAAAYmo/o_Lq3edDRAYitgpheyar4mRp3jwLGMxEwCLcBGAs/s1600/ayutthaya.png"
             },
             {
                 "id": "3",
@@ -98,8 +98,12 @@
                 "image": "http://www.adslthailand.com/uploads/moxie/2018/TMN%20Lucky%20Bag%20campaign%20%281%29.jpg"
             }
         ],
-        "id": "20",
-        "Bankname": "Other Bank",
-        "image": "http://www.adslthailand.com/uploads/moxie/2018/TMN%20Lucky%20Bag%20campaign%20%281%29.jpg"
+        "Bank_Other": [
+            {
+                "id": "20",
+                "Bankname": "Other Bank",
+                "image": "http://www.adslthailand.com/uploads/moxie/2018/TMN%20Lucky%20Bag%20campaign%20%281%29.jpg"
+            }
+        ]
     }
 }

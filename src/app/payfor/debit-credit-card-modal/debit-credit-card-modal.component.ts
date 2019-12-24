@@ -20,5 +20,9 @@ export class DebitCreditCardModalComponent implements OnInit {
     this.modalController.dismiss();
   }
 
+  onSelectBankClick(SelectBankId: any) {
+    console.log(SelectBankId);
+  }
+
 
 }

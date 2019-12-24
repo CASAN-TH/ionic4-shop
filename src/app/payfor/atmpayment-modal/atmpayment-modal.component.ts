@@ -18,4 +18,8 @@ export class ATMPaymentModalComponent implements OnInit {
     this.modalController.dismiss();
   }
 
+  onSelectcheckboxBankClick(CheckBoxBankId: any) {
+    console.log(CheckBoxBankId);
+  }
+
 }

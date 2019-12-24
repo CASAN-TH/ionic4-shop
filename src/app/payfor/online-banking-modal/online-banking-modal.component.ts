@@ -18,4 +18,11 @@ export class OnlineBankingModalComponent implements OnInit {
     this.modalController.dismiss();
   }
 
+  onSelectcheckboxBankClick(SelectcheckboxBankId: any) {
+    console.log(SelectcheckboxBankId);
+  }
+  onSelectcheckboxBank_OtherClick(SelectcheckboxBank_Other: any) {
+    console.log(SelectcheckboxBank_Other);
+  }
+
 }

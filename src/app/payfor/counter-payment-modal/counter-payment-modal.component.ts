@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 @Component({
@@ -8,12 +8,21 @@ import { ModalController } from '@ionic/angular';
 })
 export class CounterPaymentModalComponent implements OnInit {
 
+  @Input() Counter_PaymentData: any; payforData: any;
+
   constructor(public modalController: ModalController) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   dismiss() {
     this.modalController.dismiss();
+  }
+
+  onCounterServiceClick(CounterServiceId: any) {
+    console.log(CounterServiceId);
+  }
+  onCounterBankClick(CounterBankId: any) {
+    console.log(CounterBankId);
   }
 
 
