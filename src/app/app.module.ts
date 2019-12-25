@@ -54,13 +54,10 @@ import { OnlineBankingModalComponent } from './payfor/online-banking-modal/onlin
 import { ATMPaymentModalComponent } from './payfor/atmpayment-modal/atmpayment-modal.component';
 import { CounterPaymentModalComponent } from './payfor/counter-payment-modal/counter-payment-modal.component';
 import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
-<<<<<<< HEAD
-import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
-=======
 import { PaymentListModalComponent } from './payment/payment-list-modal/payment-list-modal.component';
 import { ModalLanguageComponent } from './account/modal-language/modal-language.component';
+import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
 
->>>>>>> dc7a1c561798a476cfa9716f6e04c43fde96d197
 
 
 
