@@ -4,6 +4,9 @@ import { AccountService } from './account.service';
 import { ScrollDetail } from '@ionic/core';
 import { ModalController } from '@ionic/angular';
 import { ModalMyorderComponent } from './modal-myorder/modal-myorder.component';
+import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
+import { ModalLanguageComponent } from './modal-language/modal-language.component';
+import { ModalCreditPointComponent } from '../credit/modal-credit-point/modal-credit-point.component';
 
 @Component({
   selector: 'app-account',
@@ -17,6 +20,9 @@ export class AccountPage implements OnInit {
   creditData: any;
   scoreData: any;
   showToolbar: boolean;
+  AddressData: any;
+  creditDatas: any;
+;
 
   constructor(private router: Router, private accountService: AccountService, 
     public modalController: ModalController) { }
@@ -47,6 +53,10 @@ export class AccountPage implements OnInit {
     this.accountService.onAccountScoreDataChanged.subscribe((scoreData) => {
       // console.log(scoreData);
       this.scoreData = scoreData;
+    })
+    this.accountService.onAddressDataListChanged.subscribe((AddressData) => {
+      // console.log(AddressData);
+      this.AddressData = AddressData.address;
     })
   }
 
@@ -121,8 +131,14 @@ export class AccountPage implements OnInit {
     console.log("onToViewAllMyBills");
   }
 
-  onToCreditPage() {
-    console.log("onToCreditPage");
+  async creditPointModal() {
+    const modal = await this.modalController.create({
+      component: ModalCreditPointComponent,
+      componentProps: {
+        creditPoint: this.creditData
+      }
+    });
+    return await modal.present();
   }
 
   onToMyCouponPage() {
@@ -145,13 +161,23 @@ export class AccountPage implements OnInit {
     console.log("onToCuustomerServicePage");
   }
 
-  onToLanguagesPage() {
-    console.log("onToLanguagesPage");
+  async ModalLanguage() {
+    const modal = await this.modalController.create({
+      component: ModalLanguageComponent,
+    });
+    return await modal.present();
   }
 
-  onToShippingAddressPage() {
-    console.log("onToShippingAddressPage");
+  async addresslModal() {
+    const modal = await this.modalController.create({
+      component: ModalAddressComponent,
+      componentProps: {
+        AddressData: this.AddressData
+      }
+    });
+    return await modal.present();
   }
+
 
   onToPromotion(item) {
     console.log(item);

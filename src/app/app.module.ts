@@ -55,6 +55,7 @@ import { ATMPaymentModalComponent } from './payfor/atmpayment-modal/atmpayment-m
 import { CounterPaymentModalComponent } from './payfor/counter-payment-modal/counter-payment-modal.component';
 import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
 import { PaymentListModalComponent } from './payment/payment-list-modal/payment-list-modal.component';
+import { ModalLanguageComponent } from './account/modal-language/modal-language.component';
 
 
 
@@ -84,6 +85,7 @@ import { PaymentListModalComponent } from './payment/payment-list-modal/payment-
     ModalFeedbackComponent,
     ModalAboutComponent,
     ModalMyorderComponent,
+    ModalLanguageComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
@@ -129,6 +131,7 @@ import { PaymentListModalComponent } from './payment/payment-list-modal/payment-
     ModalFeedbackComponent,
     ModalAboutComponent,
     ModalMyorderComponent,
+    ModalLanguageComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
