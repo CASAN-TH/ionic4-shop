@@ -104,9 +104,11 @@
       <div class="ion-margin-top hint-style ion-padding-start">
         กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
       </div>
-      <button class="btn-style" mat-raised-button matStepperNext (click)="onNext()">
-        ขั้นตอนต่อไป
-      </button>
+      <div class="ion-padding">
+        <button class="btn-style" mat-raised-button matStepperNext (click)="onNext()">
+          ขั้นตอนต่อไป
+        </button>
+      </div>
     </mat-step>
 
     <mat-step label="ที่อยู่ติดต่อ" completed="false">
@@ -121,20 +123,23 @@
       <div class="ion-margin-top hint-style ion-padding-start">
         กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
       </div>
-      <button class="btn-style" mat-raised-button color="primary" matStepperNext (click)="onNext()">
-        ขั้นตอนต่อไป
-      </button>
+      <div class="ion-padding">
+        <button class="btn-style" mat-raised-button color="primary" matStepperNext (click)="onNext()">
+          ขั้นตอนต่อไป
+        </button>
+      </div>
     </mat-step>
 
     <mat-step label="บุคคลติดต่อฉุกเฉิน" completed="false">
       <ion-item>
-          <ion-label>ความสัมพันธ์</ion-label>
-          <div class="ion-align-items-center" (click)="onActionRelation()">
-            <ion-text *ngIf="dataSecondContact.secondcontact[0].relation !==''">{{dataSecondContact.secondcontact[0].relation}}</ion-text>
-            <ion-text *ngIf="dataSecondContact.secondcontact[0].relation ===''">เลือก</ion-text>
-            <ion-icon name="arrow-forward" mode="ios"></ion-icon>
-          </div>
-        </ion-item>
+        <ion-label>ความสัมพันธ์</ion-label>
+        <div class="ion-align-items-center" (click)="onActionRelation()">
+          <ion-text *ngIf="dataSecondContact.secondcontact[0].relation !==''">
+            {{dataSecondContact.secondcontact[0].relation}}</ion-text>
+          <ion-text *ngIf="dataSecondContact.secondcontact[0].relation ===''">เลือก</ion-text>
+          <ion-icon name="arrow-forward" mode="ios"></ion-icon>
+        </div>
+      </ion-item>
       <ion-item>
         <ion-label>ชื่อ</ion-label>
         <ion-input class="ion-text-end" [(ngModel)]="dataSecondContact.secondcontact[0].name"></ion-input>
@@ -151,9 +156,11 @@
       <div class="ion-margin-top hint-style ion-padding-start">
         กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
       </div>
-      <button class="btn-style" mat-raised-button color="primary" (click)="onFinish()">
-        ส่ง
-      </button>
+      <div class="ion-padding">
+        <button class="btn-style" mat-raised-button color="primary" (click)="onFinish()">
+          ส่ง
+        </button>
+      </div>
     </mat-step>
   </mat-horizontal-stepper>
 </ion-content>
