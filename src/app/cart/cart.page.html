@@ -47,7 +47,7 @@
           </ion-col>
         </ion-row>
 
-        <ion-item-sliding *ngFor="let cate of cate.product; let j = index">
+        <ion-item-sliding *ngFor="let cate of cate.items; let j = index">
           <ion-item lines="none">
             <ion-label class="ion-no-margin">
               <ion-row>
@@ -92,7 +92,7 @@
                       <div class="btn-right-position">
                         <span>
                           <ion-button class="btn-size" fill="clear" (click)="onRemoveClick(i,j)"
-                            [disabled]="cartDataList.carts[i].product[j].amount_product === 0">
+                            [disabled]="cartDataList.carts[i].items[j].amount_product === 1">
                             <ion-icon class="icon-size" name="remove"></ion-icon>
                           </ion-button>
                         </span>
@@ -200,7 +200,7 @@
       </ion-row>
     </ion-col>
     <ion-col size="3">
-      <ion-item lines="none" (click)="onPayClick()" class="footer-button" color="warning">
+      <ion-item lines="none" (click)="presentAlert()" class="footer-button" color="warning">
         <ion-label text-center>
           <span class="quantity">
             ชำระ({{cartDataList.totalcart.amount_product}})

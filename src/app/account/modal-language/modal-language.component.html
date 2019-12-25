@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="ModalDismiss()">
+        <ion-icon mode="ios" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>ภาษา</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-item no-padding>
+        <img class="img-icon" src="https://image.flaticon.com/icons/png/512/197/197452.png" alt="">
+        <ion-label>
+          <ion-text class="font">ภาษาไทย</ion-text>
+        </ion-label>
+        <ion-note slot="end">
+          <ion-checkbox mode="ios"></ion-checkbox>
+        </ion-note>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-item no-padding>
+        <img class="img-icon" src="https://image.flaticon.com/icons/png/512/197/197374.png" alt="">
+        <ion-label>
+          <ion-text class="font">ภาษาอังกฤษ</ion-text>
+        </ion-label>
+        <ion-note slot="end">
+          <ion-checkbox mode="ios"></ion-checkbox>
+        </ion-note>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+
+<ion-button expand="full" (click)="OnsaveLanguage()">ยืนยัน</ion-button>

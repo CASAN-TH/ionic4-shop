@@ -4,3 +4,40 @@
 .icon-image {
   width: 10%;
 }
+.img-shield {
+  width: 25%;
+  padding-top: 10%;
+}
+ion-grid {
+  margin-top: 0.5rem;
+  background-color: white;
+}
+ion-content {
+  --padding-top: -100px !important;
+  --background: rgb(241, 235, 235) !important;
+}
+.font-conten {
+  color: #000;
+  font-weight: bold;
+}
+.font-conten-amount {
+  color: #ff4b04;
+  font-size: 18px;
+  font-weight: bold;
+}
+.font-title {
+  margin-bottom: 0px;
+}
+.font-title-content {
+  color: gray;
+}
+.toggle-padding {
+  padding-right: 10px;
+}
+.item-border-right {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.debit-image {
+  width: 100%;
+}

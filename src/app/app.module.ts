@@ -55,14 +55,16 @@ import { ATMPaymentModalComponent } from './payfor/atmpayment-modal/atmpayment-m
 import { CounterPaymentModalComponent } from './payfor/counter-payment-modal/counter-payment-modal.component';
 import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
 import { PaymentListModalComponent } from './payment/payment-list-modal/payment-list-modal.component';
+import { ModalLanguageComponent } from './account/modal-language/modal-language.component';
+import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, 
-    ModalCardComponent, 
-    ModalCameraComponent, 
+  declarations: [AppComponent,
+    ModalCardComponent,
+    ModalCameraComponent,
     PaymentModalComponent,
     VouchersModalComponent,
     PromotionModalComponent,
@@ -84,13 +86,14 @@ import { PaymentListModalComponent } from './payment/payment-list-modal/payment-
     ModalFeedbackComponent,
     ModalAboutComponent,
     ModalMyorderComponent,
+    ModalLanguageComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
     WarrantygiftModalComponent,
     SpecificationgiftModalComponent,
     ImformationspecgiftModalComponent,
-    
+
     ModalBillsComponent,
     ModalCreditPointComponent,
     ModalContactComponent,
@@ -102,14 +105,15 @@ import { PaymentListModalComponent } from './payment/payment-list-modal/payment-
 
     RecommendedMethodModalComponent,
     DebitCreditCardModalComponent,
+    BankModalComponent,
     OnlineBankingModalComponent,
     ATMPaymentModalComponent,
     CounterPaymentModalComponent
 
-   
+
   ],
-  entryComponents: [ModalCardComponent, 
-    ModalCameraComponent, 
+  entryComponents: [ModalCardComponent,
+    ModalCameraComponent,
     PaymentModalComponent,
     VouchersModalComponent,
     PromotionModalComponent,
@@ -129,6 +133,7 @@ import { PaymentListModalComponent } from './payment/payment-list-modal/payment-
     ModalFeedbackComponent,
     ModalAboutComponent,
     ModalMyorderComponent,
+    ModalLanguageComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
@@ -147,6 +152,7 @@ import { PaymentListModalComponent } from './payment/payment-list-modal/payment-
 
     RecommendedMethodModalComponent,
     DebitCreditCardModalComponent,
+    BankModalComponent,
     OnlineBankingModalComponent,
     ATMPaymentModalComponent,
     CounterPaymentModalComponent

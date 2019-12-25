@@ -16,8 +16,8 @@
             },
             {
                 "id": "3",
-                "Bankname": "Makro",
-                "image": "http://tis-communication.com/wp-content/uploads/2013/04/Makro1.jpg"
+                "Bankname": "Baan&Beyond",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAL7tL7_9NI57DrONleEKMaTPfhcQDp9FlxKjpkj9w6v5ZyWcm&s"
             },
             {
                 "id": "4",
@@ -36,8 +36,8 @@
             },
             {
                 "id": "7",
-                "Bankname": "2EN",
-                "image": "https://account.spinninrecords.com/uploads/profile/777347/profile.png"
+                "Bankname": "ZEN",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK22j2eUim6IG1qBRVP-b7k-nmyn-za7R-O0B9P9gsiW_btxCg&s"
             },
             {
                 "id": "8",
@@ -61,11 +61,21 @@
             },
             {
                 "id": "12",
+                "Bankname": "Central Food Hall",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF6kWH7jF_KyV57Xk_-LMHFo-YMKxgzD7DdsVoyuz_DbUGo8jd&s"
+            },
+            {
+                "id": "13",
                 "Bankname": "PowerBuy",
                 "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpwUrCNDljR2ueM8mmMUEnRcWujVSDyMqAgfgTdbJbBxwld19g&s"
             },
             {
-                "id": "13",
+                "id": "14",
+                "Bankname": "Thai Watsadu",
+                "image": "http://www.pro1.co.th/images/logo-thai.jpg"
+            },
+            {
+                "id": "15",
                 "Bankname": "Robinson",
                 "image": "https://yt3.ggpht.com/a/AGF-l78rzVJKxbxu5fpOyw9iGXW3ndRLwH04cahjvA=s900-c-k-c0xffffffff-no-rj-mo"
             }

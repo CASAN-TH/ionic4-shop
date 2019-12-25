@@ -5,6 +5,7 @@ import { ModalController, AlertController, ActionSheetController } from '@ionic/
 import { SpecificationModalComponent } from '../productdetail/specification-modal/specification-modal.component';
 import { PaymentModalComponent } from '../productdetail/payment-modal/payment-modal.component';
 import { VouchersModalComponent } from '../productdetail/vouchers-modal/vouchers-modal.component';
+import { PaymentService } from '../payment/payment.service';
 
 
 @Component({
@@ -19,10 +20,12 @@ export class CartPage implements OnInit {
   SpecificationData: any;
   PaymentData: any;
   VouchersData: any;
+  AddaddressData: any;
 
 
   constructor(private router: Router,
     private cartService: CartService,
+    private paymentService: PaymentService,
     public modalController: ModalController,
     private alertCtrl: AlertController,
     public actionSheetController: ActionSheetController) { }
@@ -48,6 +51,14 @@ export class CartPage implements OnInit {
       console.log(productdetailDataList);
       this.VouchersData = productdetailDataList;
     })
+    this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
+      console.log(AddaddressData);
+      this.AddaddressData = AddaddressData;
+    })
+    
+    if (!this.AddaddressData) {
+      this.presentAlert()
+    }
   }
 
   onShoppingClick() {
@@ -63,12 +74,12 @@ export class CartPage implements OnInit {
     console.log("onSelectProductClick")
   }
   onRemoveClick(i, j) {
-    this.cartDataList.carts[i].product[j].amount_product -= 1
-    console.log(this.cartDataList.carts[i].product[j].amount_product)
+    this.cartDataList.carts[i].items[j].amount_product -= 1
+    console.log(this.cartDataList.carts[i].items[j].amount_product)
   }
   onAddClick(i, j) {
-    this.cartDataList.carts[i].product[j].amount_product += 1
-    console.log(this.cartDataList.carts[i].product[j].amount_product)
+    this.cartDataList.carts[i].items[j].amount_product += 1
+    console.log(this.cartDataList.carts[i].items[j].amount_product)
   }
   onAcceptCodeClick() {
     console.log("Add")

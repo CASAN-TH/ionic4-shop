@@ -10,16 +10,113 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col size="12">
-        <ion-item no-padding *ngFor="let item of DebitCreditCardData" (click)="onSelectBankClick(item.id)">
-          <img class="icon-image" [src]="item.image">
-          <ion-label>
-            <ion-text class="font-padding">{{item.Bankname}}</ion-text>
-          </ion-label>
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <span class="font-conten">{{payforData.limit}} :</span>
+          </ion-col>
+          <ion-col size="6" text-end>
+            <span class="font-conten-amount">{{payforData.cerren}} {{payforData.amount}}</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <p class="font-title">เพิ่มบัตรเดบิต / เครดิตใหม่</p>
+      <ion-row>
+        <ion-col size="1.5" *ngFor="let item of DebitCreditCardData.Debit">
+          <div>
+            <img class="debit-image" [src]="item">
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid>
+        <ion-item no-padding class="item-border-right">
+          <ion-label>ธนาคาร</ion-label>
+          <ion-note text-end>
+            <ion-buttons (click)="BankModal()">
+              <ion-button>
+                <ion-text class="padding-select" *ngIf="BankData.Bankname !==''">{{BankData.Bankname}}</ion-text>
+                <ion-text class="font-select-color padding-select"
+                  *ngIf="!BankData.Bankname || BankData.Bankname === 'undefined' || BankData.Bankname ===''">เลือก
+                </ion-text>
+                <ion-icon mode="ios" name="ios-arrow-forward"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-note>
         </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+
+        <ion-item no-padding class="item-border-right">
+          <ion-label>หมายเลขบัตร</ion-label>
+          <ion-input class="font-title-content" text-end [(ngModel)]="DebitCreditCardData.Personal.Card_number">
+          </ion-input>
+        </ion-item>
+
+        <ion-item no-padding class="item-border-right">
+          <ion-label>ชื่อบัญชี</ion-label>
+          <ion-input class="font-title-content" text-end [(ngModel)]="DebitCreditCardData.Personal.Account_name">
+          </ion-input>
+        </ion-item>
+
+        <ion-item no-padding class="item-border-right">
+          <ion-label>Expiration(MM/YY)</ion-label>
+          <ion-note text-end>
+            <ion-buttons (click)="BankModal()">
+              <ion-button>
+                เลือก
+                <ion-icon mode="ios" name="ios-arrow-forward"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-note>
+        </ion-item>
+
+        <ion-item no-padding class="item-border-right">
+          <ion-label>CVV หรือ CCV</ion-label>
+          <ion-input class="font-title-content" text-end [(ngModel)]="DebitCreditCardData.Personal.Card_Back_Code">
+          </ion-input>
+        </ion-item>
+
+        <ion-item no-padding class="item-border-right">
+          <ion-label>บันทึกรายละเอียดบัตร</ion-label>
+          <ion-note text-end>
+            <ion-toggle class="toggle-padding" name="cherry" color="danger" checked></ion-toggle>
+          </ion-note>
+        </ion-item>
+
+        <ion-row>
+          <ion-col size="12">
+            <p class="font-title-content">รับประกันความปลอดภัยของข้อมูลบัตรของคุณและรหัส CVV หรือ CCV
+              ของคุณจะไม่ถูกบันทึก</p>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-row>
+        <ion-col size="4" text-end>
+          <div>
+            <img class="img-shield" slot="icon-only" src="https://image.flaticon.com/icons/png/512/1161/1161388.png">
+          </div>
+        </ion-col>
+        <ion-col size="8" text-start>
+          <p>การป้องกันการชำระเงิน</p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
 </ion-content>
