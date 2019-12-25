@@ -1,0 +1,104 @@
+
+  .border {
+    border-bottom: 1px solid;
+    border-color: #e4e1e14d;
+    height: 36px;
+  }
+  .shopname {
+    padding-top: 6px;
+    font-weight: bold;
+    margin-left: -58px;
+  }
+  .select {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 6px;
+    margin-left: 4px;
+  }
+  ion-text-nowarp {
+    overflow: hidden;
+  }
+  
+ 
+ 
+  .icon {
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .phonename {
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+ 
+  .quantity2 {
+    font-size: 13px;
+    margin-top: -10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+  .discount {
+    font-size: 13px;
+    margin-left: -42px;
+  }
+  .discountprice {
+    font-size: 13px;
+    color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
+  }
+ 
+  .price2 {
+    font-size: 15px;
+  }
+  .price3 {
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .colgif {
+    margin-top: -23px;
+  }
+
+  .giftdetail {
+    font-size: 12px;
+    color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
+  }
+  .giftdetail2 {
+    margin-right: 0px;
+      font-size: 13px;
+      text-align: right;
+  }
+  .giftrow{
+      height: 14px;
+  }
+ 
+  ion-card {
+    background-color: white;
+  }
+
+  ion-grid {
+    margin-top: 0rem;
+    background-color: white;
+    margin-bottom: 10px;
+  }
+  ion-toggle {
+    margin-left: 54px;
+  }
+  ion-content{
+    --background: #e4e1e17a;
+  }
+ 
+
+  .img {
+    max-width: 107%;
+    border: 0;
+    margin-left: -13px;
+    height: 107px;
+  }
+  
+  
+
+ 
+  

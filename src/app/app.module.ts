@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import {MatTabsModule} from '@angular/material/tabs';
+
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -52,7 +54,13 @@ import { OnlineBankingModalComponent } from './payfor/online-banking-modal/onlin
 import { ATMPaymentModalComponent } from './payfor/atmpayment-modal/atmpayment-modal.component';
 import { CounterPaymentModalComponent } from './payfor/counter-payment-modal/counter-payment-modal.component';
 import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
+<<<<<<< HEAD
 import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
+=======
+import { PaymentListModalComponent } from './payment/payment-list-modal/payment-list-modal.component';
+import { ModalLanguageComponent } from './account/modal-language/modal-language.component';
+
+>>>>>>> dc7a1c561798a476cfa9716f6e04c43fde96d197
 
 
 
@@ -64,6 +72,7 @@ import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
     VouchersModalComponent,
     PromotionModalComponent,
     SelectdownModalComponent,
+    PaymentListModalComponent,
 
     PaymentgiftModalComponent,
     TcoinModalComponent,
@@ -80,6 +89,7 @@ import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
     ModalFeedbackComponent,
     ModalAboutComponent,
     ModalMyorderComponent,
+    ModalLanguageComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
@@ -116,6 +126,7 @@ import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
     ReviewModalComponent,
     ImformationspecModalComponent,
     SelectdownModalComponent,
+    PaymentListModalComponent,
 
     ModalNicknameComponent,
     ModalPhoneComponent,
@@ -125,6 +136,7 @@ import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
     ModalFeedbackComponent,
     ModalAboutComponent,
     ModalMyorderComponent,
+    ModalLanguageComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
@@ -152,6 +164,7 @@ import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatTabsModule,
     TranslateModule.forRoot(),
   ],
   providers: [

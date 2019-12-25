@@ -7,6 +7,7 @@ import { VouchersModalComponent } from '../productdetail/vouchers-modal/vouchers
 import { SelectdownModalComponent } from './selectdown-modal/selectdown-modal.component';
 import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
 import { ScrollDetail } from '@ionic/core';
+import { PaymentListModalComponent } from './payment-list-modal/payment-list-modal.component';
 
 @Component({
   selector: 'app-payment',
@@ -19,10 +20,11 @@ export class PaymentPage implements OnInit {
   cartDataList: any;
   VouchersData: any;
   selectdownData: any;
-  percenSelected: any;
   AddaddressData: any;
   AddressModalData:any;
   showToolbar: boolean;
+  unitSelected: any;
+
   
 
 
@@ -41,10 +43,10 @@ export class PaymentPage implements OnInit {
       console.log(cartDataList);
       this.cartDataList = cartDataList;
     })
-    this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
-      console.log(AddaddressData);
-      this.AddaddressData = AddaddressData;
-    })
+    // this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
+    //   console.log(AddaddressData);
+    //   this.AddaddressData = AddaddressData;
+    // })
     this.paymentService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.VouchersData = productdetailDataList;
@@ -71,6 +73,11 @@ export class PaymentPage implements OnInit {
   onAddaddressClick(){
     this.router.navigate(['addaddress'])
   }
+  onUnitClick(unitId: any) {
+    // this.router.navigateByUrl('search/' + cate2Id);
+    console.log(unitId);
+    this.unitSelected = unitId;
+  }
 
   async selectDownModal() {
     const modal = await this.modalController.create({
@@ -83,6 +90,15 @@ export class PaymentPage implements OnInit {
     return await modal.present();
   }
 
+  async paymentlistModal() {
+    const modal = await this.modalController.create({
+      component: PaymentListModalComponent,
+      componentProps: {
+        cartDataList: this.cartDataList
+      }
+    });
+    return await modal.present();
+  }
 
   async vouchersModal() {
     const modal = await this.modalController.create({
@@ -130,11 +146,6 @@ export class PaymentPage implements OnInit {
     console.log("onOpenlistClick");
   }
 
-  onPercenClick(percenId: any) {
-    // this.router.navigateByUrl('search/' + cate2Id);
-    console.log(percenId);
-    this.percenSelected = percenId;
-  }
   
   onScroll($event: CustomEvent<ScrollDetail>) {
     if ($event && $event.detail && $event.detail.scrollTop) {
@@ -142,5 +153,6 @@ export class PaymentPage implements OnInit {
       this.showToolbar = scrollTop >= 50;
     }
   }
+
 
 }

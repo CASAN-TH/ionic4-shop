@@ -6,7 +6,7 @@
                 "shop_id": "5678",
                 "shop_name": "NuttyShop",
                 "image": "https://pub.thisshop.com/shop/block/2019126/69050171_1575617961791.jpg?x-oss-process=image/resize,w_1000/quality,q_80",
-                "product": [
+                "items": [
                     {
                         "product_id": "8891",
                         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSO9Llg_r3_YdskEDKSKhrLxXoCBkGM-Lt8Vd3R7PeOZ9Qgx5xH",
@@ -21,11 +21,41 @@
                         "installment_amount": "893.58",
                         "installment_period": "x18ต่องวด",
                         "installment_currency": "฿",
-                        "delivery_charge": " ",
-                        "coupon": "0",
-                        "currency_coupon": "-฿",
-                        "chipingfee": "0",
-                        "amount_product": 1
+                        "amount_product": 1,
+                        "shipingfree": "0",
+                        "shiping_currency": "฿",
+                        "promotions": [
+                            {
+                                "_id": "453",
+                                "gift": "[ของแถม]",
+                                "name": "3 in 1 data cable Random Color",
+                                "quantity": "x1"
+                            },
+                            {
+                                "_id": "786",
+                                "gift": "[ของแถม]",
+                                "name": "Power bank 12000mA",
+                                "quantity": "x1"
+                            },
+                            {
+                                "_id": "236",
+                                "gift": "[ของแถม]",
+                                "name": "Sport headset",
+                                "quantity": "x1"
+                            },
+                            {
+                                "_id": "988",
+                                "gift": "[ของแถม]",
+                                "name": "Porttable wireless speaker",
+                                "quantity": "x1"
+                            },
+                            {
+                                "_id": "766",
+                                "gift": "[ของแถม]",
+                                "name": "JBL T450 BT Powerful big-stage",
+                                "quantity": "x1"
+                            }
+                        ]
                     },
                     {
                         "product_id": "8891",
@@ -33,59 +63,33 @@
                         "name": "หัวเสียบชาร์จไฟอเนกประสงค์",
                         "color": "White",
                         "storage": "",
-                        "price": "495",
+                        "price": "450",
                         "currency": "฿",
-                        "discount_price": "450",
+                        "discount_price": "495",
                         "discount": "10% off",
                         "quantity": "x1",
                         "installment_amount": "129",
                         "installment_period": "x3ต่องวด",
                         "installment_currency": "฿",
-                        "delivery_charge": " ",
-                        "coupon": "0",
-                        "currency_coupon": "-฿",
-                        "chipingfee": "0",
-                        "amount_product": 1
+                        "amount_product": 1,
+                        "shipingfree": "0",
+                        "shiping_currency": "฿"
                     }
                 ],
-                "promotions": [
-                    {
-                        "_id": "453",
-                        "gift": "[ของแถม]",
-                        "name": "3 in 1 data cable Random Color",
-                        "quantity": "x1"
-                    },
-                    {
-                        "_id": "786",
-                        "gift": "[ของแถม]",
-                        "name": "Power bank 12000mA",
-                        "quantity": "x1"
-                    },
-                    {
-                        "_id": "236",
-                        "gift": "[ของแถม]",
-                        "name": "Sport headset",
-                        "quantity": "x1"
-                    },
-                    {
-                        "_id": "988",
-                        "gift": "[ของแถม]",
-                        "name": "Porttable wireless speaker",
-                        "quantity": "x1"
-                    },
-                    {
-                        "_id": "766",
-                        "gift": "[ของแถม]",
-                        "name": "JBL T450 BT Powerful big-stage",
-                        "quantity": "x1"
-                    }
-                ]
+                "total_shop": {
+                    "amount_product": 2,
+                    "unit": "สินค้า",
+                    "currency_discount": "-฿",
+                    "shipingfree": "0",
+                    "currency": "฿",
+                    "total_price": "15,350"
+                }
             },
             {
                 "shop_id": "1234",
                 "shop_name": "ThisShop",
                 "image": "https://pub.thisshop.com/shop/block/2019126/69050171_1575617961791.jpg?x-oss-process=image/resize,w_1000/quality,q_80",
-                "product": [
+                "items": [
                     {
                         "product_id": "8891",
                         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSO9Llg_r3_YdskEDKSKhrLxXoCBkGM-Lt8Vd3R7PeOZ9Qgx5xH",
@@ -100,53 +104,101 @@
                         "installment_amount": "893.58",
                         "installment_period": "x18ต่องวด",
                         "installment_currency": "฿",
-                        "delivery_charge": " ",
-                        "coupon": "0",
-                        "currency_coupon": "-฿",
-                        "chipingfee": "0",
-                        "amount_product": 1
+                        "amount_product": 1,
+                        "shipingfree": "0",
+                        "shiping_currency": "฿",
+                        "promotions": [
+                            {
+                                "_id": "453",
+                                "gift": "[ของแถม]",
+                                "name": "3 in 1 data cable Random Color",
+                                "quantity": "x1"
+                            },
+                            {
+                                "_id": "786",
+                                "gift": "[ของแถม]",
+                                "name": "Power bank 12000mA",
+                                "quantity": "x1"
+                            },
+                            {
+                                "_id": "236",
+                                "gift": "[ของแถม]",
+                                "name": "Sport headset",
+                                "quantity": "x1"
+                            },
+                            {
+                                "_id": "988",
+                                "gift": "[ของแถม]",
+                                "name": "Porttable wireless speaker",
+                                "quantity": "x1"
+                            },
+                            {
+                                "_id": "766",
+                                "gift": "[ของแถม]",
+                                "name": "JBL T450 BT Powerful big-stage",
+                                "quantity": "x1"
+                            }
+                        ]
                     }
                 ],
-                "promotions": [
-                    {
-                        "_id": "453",
-                        "gift": "[ของแถม]",
-                        "name": "3 in 1 data cable Random Color",
-                        "quantity": "x1"
-                    },
-                    {
-                        "_id": "786",
-                        "gift": "[ของแถม]",
-                        "name": "Power bank 12000mA",
-                        "quantity": "x1"
-                    },
-                    {
-                        "_id": "236",
-                        "gift": "[ของแถม]",
-                        "name": "Sport headset",
-                        "quantity": "x1"
-                    },
-                    {
-                        "_id": "988",
-                        "gift": "[ของแถม]",
-                        "name": "Porttable wireless speaker",
-                        "quantity": "x1"
-                    },
-                    {
-                        "_id": "766",
-                        "gift": "[ของแถม]",
-                        "name": "JBL T450 BT Powerful big-stage",
-                        "quantity": "x1"
-                    }
-                ]
+                "total_shop": {
+                    "amount_product": 2,
+                    "unit": "สินค้า",
+                    "currency_discount": "-฿",
+                    "shipingfree": "0",
+                    "currency": "฿",
+                    "total_price": "14,900"
+                }
             }
         ],
         "totalcart": {
-            "price": "14,900",
+            "total_price": "30,250",
+            "total_discount": "30,150",
             "currency": "฿",
-            "installment_amount": "893.58",
+            "installment_amount": "1680.55",
             "installment_period": "x18ต่องวด",
-            "amount_product": 1
+            "amount_product": 3,
+            "promotion": "0",
+            "currency_discount": "-฿",
+            "shipingfree": "0",
+            "cupon_discount": "100"
+        },
+        "cupon": [
+            {
+                "amount": "100",
+                "currency": "฿",
+                "title": "ใช้จ่ายขั้นต่ำ ฿ 1,000",
+                "type": "Flash Coupon",
+                "dateStart": "-",
+                "dateEnd": "-",
+                "flag": "0",
+                "cupon_discount": "-฿"
+            },
+            {
+                "amount": "50",
+                "currency": "฿",
+                "title": "ใช้จ่ายขั้นต่ำ ฿ 300",
+                "type": "Flash Coupon",
+                "dateStart": "-",
+                "dateEnd": "-",
+                "flag": "0",
+                "cupon_discount": "-฿"
+            },
+            {
+                "amount": "11",
+                "currency": "฿",
+                "title": "ใช้จ่ายขั้นต่ำ ฿ 80",
+                "type": "Mobile coupon",
+                "dateStart": "19/11/2562",
+                "dateEnd": "19/12/2562",
+                "flag": "0",
+                "cupon_discount": "-฿"
+            }
+        ],
+        "tcoin": {
+            "total": 500,
+            "tcoin_pay": 5,
+            "tcoin_currency": "฿"
         }
     }
 }

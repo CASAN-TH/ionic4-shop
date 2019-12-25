@@ -27,6 +27,7 @@ export class CartService {
   onVouchersDataChanged:BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
 
+
   constructor(private http: HttpClient) { }
 
   private authorizationHeader() {
@@ -43,6 +44,7 @@ export class CartService {
     this.getSpecificationModalData();
     this.getPaymentModalData();
     this.getVouchersModalData();
+    this.getAddressData();
     return;
   }
 

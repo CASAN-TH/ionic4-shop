@@ -1,22 +1,26 @@
-.show-background {
-  --padding-top: 0rem !important;
-  --background: rgba(240, 65, 65, 1);
-  --ion-color-base: rgb(240, 65, 65, 1) !important;
-  --border-width: 0px !important;
-  border: 1px !important;
+// .show-background {
+//   --padding-top: 0rem !important;
+//   --background: rgba(240, 73, 73); 
+//   --ion-color-base:rgb(240, 73, 73)!important;
+//   --border-width: 0px !important;
+//   border: 1px !important;
+//   color: #ffffff !important;
+// }
+// ion-toolbar {
+//   --padding-top: 0rem !important;
+//   --background: transparent;
+//   --ion-color-base: transparent !important;
+//   --border-width: 0px !important;
+//   border: 0 !important;
+//   color: transparent !important;
+// }
+.bgtoolbar{
+  --background: rgba(240, 73, 73); 
   color: #ffffff !important;
 }
-ion-toolbar {
-  --padding-top: 0rem !important;
-  --background: transparent;
-  --ion-color-base: transparent !important;
-  --border-width: 0px !important;
-  border: 0 !important;
-  color: transparent !important;
-}
-.bg {
-  background-color: white;
-  height: 41px;
+.bg{
+    background-color: white;
+    height: 41px;
 }
 .selecttext {
   font-size: 14px;
@@ -77,11 +81,10 @@ ion-text-nowarp {
   font-size: 23px;
   font-weight: bold;
 }
+.textright{
+  text-align: right;
+}
 
-// ion-checkbox {
-//   height: 5%;
-//   width: 6%;
-// }
 .address {
   margin-top: -1%;
 }
@@ -123,25 +126,41 @@ ion-text-nowarp {
   font-weight: bold;
 }
 
+.ion-col-border {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+}
 .per {
+  background-color: #fff5f1;
+  color: #f34602;
   line-height: 2.5rem;
   padding: 0 0.16rem;
   color: #333;
   font-size: 0.9rem;
-  margin-right: 0.9rem;
+  margin-right: 0.8rem;
   margin-bottom: 0.24rem;
   white-space: nowrap;
 }
-.selectpay {
-  width: 85px;
-  font-size: 13px;
-  height: 45px;
-  color: #333;
+.ion-item-unitselected {
+  font-size: 2rem;
+  color: red;
+  margin-top: -0.65rem;
+  margin-left: 50%;
+  position: absolute;
 }
-.selectpaybg {
-  background-color: #fff5f1;
-}
-.arowicon {
+
+
+// .selectpay{
+//   width: 85px;
+//   font-size: 13px;
+//   height: 45px;
+//   color: #333;
+// }
+// .selectpaybg{
+//   background-color: #fff5f1;
+// }
+.arowicon{    
   width: 28px;
   margin-left: 17px;
   color: #c5bfbf;
@@ -171,13 +190,17 @@ ion-text-nowarp {
 .label-right3 {
   margin-right: -12rem;
 }
-.address-magin {
-  margin-top: -25px;
-}
+// .address-magin{
+//   margin-top: -25px;
+// }
 .add {
   font-size: 22px;
   font-weight: bold;
   padding-top: 0.7rem;
+  color: white;
+}
+.ion-col-adadress{
+  margin-bottom: 18px;
 }
 .select {
   font-size: 14px;
@@ -251,7 +274,6 @@ ion-text-nowarp {
   font-weight: bold;
 }
 .orders2 {
-  margin-left: 69px;
   font-weight: bold;
 }
 .orders3 {
@@ -311,9 +333,12 @@ ion-text-nowarp {
   color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
 }
 .giftdetail2 {
-  margin-left: 39px;
-  font-size: 13px;
-  font-weight: bold;
+  margin-right: 0px;
+    font-size: 13px;
+    text-align: right;
+}
+.giftrow{
+    height: 14px;
 }
 .text {
   margin-left: -3px;
@@ -343,15 +368,12 @@ ion-card {
 }
 
 ion-content {
-  --background: linear-gradient(0deg, rgb(247, 247, 247, 1) 50%, rgba(240, 91, 65, 0.952) 89%);
-  --padding-start: var(--ion-padding, 5px);
-  --padding-end: var(--ion-padding, 5px);
-  --padding-top: var(--ion-padding, 16px);
-  --padding-bottom: var(--ion-padding, 16px);
+  --background: linear-gradient(0deg, rgb(247,247,247,1) 50%, rgba(240, 65, 65, 0.952) 89%);
 }
 ion-grid {
   margin-top: 0rem;
   background-color: white;
+  margin-bottom: 10px;
 }
 ion-toggle {
   margin-left: 54px;
@@ -405,4 +427,26 @@ ion-header {
 }
 .tabselectpay {
   margin-top: -16px;
+}
+.total-product{
+  margin-right: -26px;
+    font-size: 14px;
+}
+.total-product-col{
+  margin-top: 40px;
+}
+.total-product-icon{
+  width: 28px;
+  margin-left: 17px;
+  color: #c5bfbf;
+}
+.footterfont{
+  font-size: 18px;
+  color: #ff4800;
+  font-weight: bold;
+}
+.footterfont2{
+  font-size: 18px;
+  color: #ff4800;
+  font-weight: bold;
 }
