@@ -13,7 +13,8 @@ const mockup = environment.mockup;
 export class PayforService {
   routeParams: any;
 
-  onDebitCreditCardDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onDebitCreditCardDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onBankDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onPayforDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onlineBankingDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onATM_PaymentDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
@@ -34,6 +35,7 @@ export class PayforService {
 
     this.getPayforData();
     this.getDebitCreditCardData();
+    this.getBankData();
     this.getOnlineBankingData();
     this.getATM_PaymentData();
     this.getCounter_PaymentData();
@@ -82,6 +84,20 @@ export class PayforService {
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onDebitCreditCardDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+  getBankData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/payfor/bank-modal.json').subscribe((res: any) => {
+          this.onBankDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onBankDataChanged.next(res.data);
         }, reject)
       }
 

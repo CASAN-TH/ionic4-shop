@@ -9,6 +9,7 @@ import { OnlineBankingModalComponent } from './online-banking-modal/online-banki
 import { ATMPaymentModalComponent } from './atmpayment-modal/atmpayment-modal.component';
 import { CounterPaymentModalComponent } from './counter-payment-modal/counter-payment-modal.component';
 
+
 @Component({
   selector: 'app-payfor',
   templateUrl: './payfor.page.html',
@@ -67,7 +68,8 @@ export class PayforPage implements OnInit {
     const modal = await this.modalController.create({
       component: DebitCreditCardModalComponent,
       componentProps: {
-        DebitCreditCardData: this.DebitCreditCardData
+        DebitCreditCardData: this.DebitCreditCardData,
+        payforData: this.payforData
       }
     });
     return await modal.present();

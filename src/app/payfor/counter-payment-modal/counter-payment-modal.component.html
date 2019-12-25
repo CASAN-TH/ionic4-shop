@@ -19,7 +19,7 @@
             <span class="font-conten">{{payforData.limit}} :</span>
           </ion-col>
           <ion-col size="6" text-end>
-            <span class="font-conten">{{payforData.cerren}} {{payforData.amount}}</span>
+            <span class="font-conten-amount">{{payforData.cerren}} {{payforData.amount}}</span>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -40,7 +40,7 @@
             <ion-col size="12">
               <p class="counter-title">เคาน์เตอร์เซอร์วิส</p>
               <ion-row>
-                <ion-col size="2" *ngFor="let item of Counter_PaymentData.CounterService">
+                <ion-col size="1.5" *ngFor="let item of Counter_PaymentData.CounterService">
                   <div>
                     <img class="counter-image" [src]="item.image" (click)="onCounterServiceClick(item.id)">
                   </div>
@@ -48,7 +48,7 @@
               </ion-row>
               <p class="counter-title">เคาน์เตอร์เซอร์วิสของธนาคาร</p>
               <ion-row>
-                <ion-col size="2" *ngFor="let item of Counter_PaymentData.CounterBank">
+                <ion-col size="1.5" *ngFor="let item of Counter_PaymentData.CounterBank">
                   <div>
                     <img class="counter-image" [src]="item.image" (click)="onCounterBankClick(item.id)">
                   </div>

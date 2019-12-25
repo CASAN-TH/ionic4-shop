@@ -52,13 +52,14 @@ import { OnlineBankingModalComponent } from './payfor/online-banking-modal/onlin
 import { ATMPaymentModalComponent } from './payfor/atmpayment-modal/atmpayment-modal.component';
 import { CounterPaymentModalComponent } from './payfor/counter-payment-modal/counter-payment-modal.component';
 import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
+import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, 
-    ModalCardComponent, 
-    ModalCameraComponent, 
+  declarations: [AppComponent,
+    ModalCardComponent,
+    ModalCameraComponent,
     PaymentModalComponent,
     VouchersModalComponent,
     PromotionModalComponent,
@@ -85,7 +86,7 @@ import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.com
     WarrantygiftModalComponent,
     SpecificationgiftModalComponent,
     ImformationspecgiftModalComponent,
-    
+
     ModalBillsComponent,
     ModalCreditPointComponent,
     ModalContactComponent,
@@ -97,14 +98,15 @@ import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.com
 
     RecommendedMethodModalComponent,
     DebitCreditCardModalComponent,
+    BankModalComponent,
     OnlineBankingModalComponent,
     ATMPaymentModalComponent,
     CounterPaymentModalComponent
 
-   
+
   ],
-  entryComponents: [ModalCardComponent, 
-    ModalCameraComponent, 
+  entryComponents: [ModalCardComponent,
+    ModalCameraComponent,
     PaymentModalComponent,
     VouchersModalComponent,
     PromotionModalComponent,
@@ -141,6 +143,7 @@ import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.com
 
     RecommendedMethodModalComponent,
     DebitCreditCardModalComponent,
+    BankModalComponent,
     OnlineBankingModalComponent,
     ATMPaymentModalComponent,
     CounterPaymentModalComponent
