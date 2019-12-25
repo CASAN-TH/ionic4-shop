@@ -101,7 +101,7 @@
         <ion-label position="floating">ที่อยู่ตามบัตรประชาชน</ion-label>
         <ion-textarea rows="6" cols="20" [(ngModel)]="regProfile.addressbycard"></ion-textarea>
       </ion-item>
-      <div class="ion-margin-top hint-style">
+      <div class="ion-margin-top hint-style ion-padding-start">
         กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
       </div>
       <button class="btn-style" mat-raised-button matStepperNext (click)="onNext()">
@@ -118,7 +118,7 @@
         <ion-label position="floating">ที่อยู่ปัจจุบัน</ion-label>
         <ion-textarea rows="6" cols="20" [(ngModel)]="regProfile.address"></ion-textarea>
       </ion-item>
-      <div class="ion-margin-top hint-style">
+      <div class="ion-margin-top hint-style ion-padding-start">
         กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
       </div>
       <button class="btn-style" mat-raised-button color="primary" matStepperNext (click)="onNext()">
@@ -148,7 +148,7 @@
         <ion-input class="ion-text-end" [(ngModel)]="dataSecondContact.secondcontact[0].tel"></ion-input>
       </ion-item>
 
-      <div class="ion-margin-top hint-style">
+      <div class="ion-margin-top hint-style ion-padding-start">
         กรุณาตรวนสอบให้แน่ใจว่าข้อมูลนี่เป็นความจริงและถูกต้อง
       </div>
       <button class="btn-style" mat-raised-button color="primary" (click)="onFinish()">
