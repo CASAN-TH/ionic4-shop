@@ -11,33 +11,38 @@
         "unit": "x18",
         "per": "ต่องวด",
         "version": "32GB",
-        "quantity": "จำนวน",
         "selectcolor": {
             "titlename": "Color",
             "speccolor": [
                 {
                     "_id": "221",
-                    "color": "Silver"
+                    "color": "Silver",
+                    "image": "https://pub.thisshop.com/shop/old/119323611401490432.jpg?x-oss-process=image/quality,q_80&quot;);"
                 },
                 {
                     "_id": "222",
-                    "color": "Rose Gold"
+                    "color": "Rose Gold",
+                    "image": "https://pub.thisshop.com/shop/old/119323482353242112.jpg?x-oss-process=image/quality,q_80&quot;);"
                 },
                 {
                     "_id": "223",
-                    "color": "Red"
+                    "color": "Red",
+                    "image": "https://pub.thisshop.com/shop/old/119878445487820800.jpg?x-oss-process=image/quality,q_80&quot;);"
                 },
                 {
                     "_id": "224",
-                    "color": "Jet Black"
+                    "color": "Jet Black",
+                    "image": "https://pub.thisshop.com/shop/category/010101/010101/1538812403298.jpg?x-oss-process=image/quality,q_80&quot;);"
                 },
                 {
                     "_id": "225",
-                    "color": "Gold"
+                    "color": "Gold",
+                    "image": "https://pub.thisshop.com/shop/category/010101/01010111/1550811489521.jpg?x-oss-process=image/quality,q_80&quot;);"
                 },
                 {
                     "_id": "226",
-                    "color": "Black"
+                    "color": "Black",
+                    "image": "https://pub.thisshop.com/shop/category/010101/01010111/1550811537505.jpg?x-oss-process=image/quality,q_80&quot;);"
                 }
             ]
         },

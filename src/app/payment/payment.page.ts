@@ -43,10 +43,10 @@ export class PaymentPage implements OnInit {
       console.log(cartDataList);
       this.cartDataList = cartDataList;
     })
-    this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
-      console.log(AddaddressData);
-      this.AddaddressData = AddaddressData;
-    })
+    // this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
+    //   console.log(AddaddressData);
+    //   this.AddaddressData = AddaddressData;
+    // })
     this.paymentService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.VouchersData = productdetailDataList;
