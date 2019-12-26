@@ -20,6 +20,7 @@ import { Location } from '@angular/common'
 export class CreditPage implements OnInit {
   creditDataList: any;
   creditMenuList: any;
+  bill: any;
   creditPoint: any;
   showToolbar = false;
 
@@ -43,6 +44,10 @@ export class CreditPage implements OnInit {
     this.creditService.onCreditMenuListChanged.subscribe((menu: any) => {
       this.creditMenuList = menu[0];
       // console.log(this.creditMenuList);
+    });
+    this.creditService.onBillChanged.subscribe((cusBill: any) => {
+      this.bill = cusBill;
+      // console.log(this.bill);
     });
     this.creditService.onCreditPointChanged.subscribe((point: any) => {
       this.creditPoint = point
@@ -88,7 +93,10 @@ export class CreditPage implements OnInit {
 
   async openModalBills() {
     const modal = await this.modalController.create({
-      component: ModalBillsComponent
+      component: ModalBillsComponent,
+      componentProps: {
+        'billData': this.bill
+      }
     });
     return await modal.present();
   }

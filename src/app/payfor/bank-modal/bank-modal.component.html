@@ -13,10 +13,10 @@
   <ion-grid>
     <ion-row>
       <ion-col size="12">
-        <ion-item no-padding *ngFor="let item of BankData" (click)="onSelectBankClick(item.id, item.Bankname)">
+        <ion-item no-padding *ngFor="let item of bankData" (click)="onSelectBankClick(item.id, item.bankname)">
           <img class="icon-image" [src]="item.image">
           <ion-label>
-            <ion-text class="font-padding">{{item.Bankname}}</ion-text>
+            <ion-text class="font-padding">{{item.bankname}}</ion-text>
           </ion-label>
         </ion-item>
       </ion-col>

@@ -13,12 +13,30 @@ const mockup = environment.mockup;
 export class PayforService {
   routeParams: any;
 
-  onDebitCreditCardDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onDebitCreditCardDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "add_debit_credit": {},
+    "bank": {},
+    "card_number": {},
+    "account_name": {},
+    "expiration": {},
+    "cvv_or_ccv": {},
+    "save_card_details": {},
+    "guarantee": {}
+  });
   onBankDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onPayforDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onlineBankingDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onATM_PaymentDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  onCounter_PaymentDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onATM_PaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "manual": {},
+    "phone_number": {},
+    "email": {}
+  });
+  onCounter_PaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "manual": {},
+    "phone_number": {},
+    "email": {},
+    "fee": {}
+  });
   onPayforDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }

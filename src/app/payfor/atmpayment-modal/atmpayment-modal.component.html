@@ -24,26 +24,26 @@
         </ion-row>
       </ion-grid>
 
-      <p class="font-title">คู่มือการชำระเงินจะถูกส่งไปยังมือถือและอีเมลของคุณ</p>
+      <p class="font-title">{{atm_paymentData.manual.name}}</p>
 
       <ion-grid>
         <ion-item>
-          <ion-label>เบอร์โทรศัพท์</ion-label>
-          <ion-input text-end [(ngModel)]="onATM_PaymentData.Tel"></ion-input>
+          <ion-label>{{atm_paymentData.phone_number.name}}</ion-label>
+          <ion-input text-end [(ngModel)]="atm_paymentData.phone_number.tel"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label>อีเมล</ion-label>
-          <ion-input text-end [(ngModel)]="onATM_PaymentData.Email"></ion-input>
+          <ion-label>{{atm_paymentData.email.name}}</ion-label>
+          <ion-input text-end [(ngModel)]="atm_paymentData.email.mail"></ion-input>
         </ion-item>
       </ion-grid>
 
       <ion-grid>
         <ion-row>
           <ion-col size="12">
-            <ion-item no-padding *ngFor="let item of onATM_PaymentData.Bank" (click)="onSelectcheckboxBankClick(item.id)">
+            <ion-item no-padding *ngFor="let item of atm_paymentData.bank" (click)="onSelectcheckboxBankClick(item.id)">
               <img class="icon-image" [src]="item.image">
               <ion-label>
-                <ion-text class="font-padding">{{item.Bankname}}</ion-text>
+                <ion-text class="font-padding">{{item.bankname}}</ion-text>
               </ion-label>
               <ion-note slot="end">
                 <ion-checkbox mode="ios"></ion-checkbox>

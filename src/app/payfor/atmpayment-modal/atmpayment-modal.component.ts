@@ -8,7 +8,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class ATMPaymentModalComponent implements OnInit {
 
-  @Input() onATM_PaymentData: any; payforData: any;
+  @Input() atm_paymentData: any; payforData: any;
 
   constructor(public modalController: ModalController) { }
 

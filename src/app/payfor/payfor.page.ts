@@ -17,10 +17,10 @@ import { CounterPaymentModalComponent } from './counter-payment-modal/counter-pa
 })
 export class PayforPage implements OnInit {
   payforData: any;
-  DebitCreditCardData: any;
-  onlineBankingData: any;
-  onATM_PaymentData: any;
-  Counter_PaymentData: any;
+  debitcreditcardData: any;
+  onlinebankingData: any;
+  atm_paymentData: any;
+  counter_paymentData: any;
 
   constructor(private router: Router,
     private payforService: PayforService,
@@ -35,20 +35,20 @@ export class PayforPage implements OnInit {
 
     this.payforService.onDebitCreditCardDataChanged.subscribe((payforDataList: any) => {
       console.log(payforDataList);
-      this.DebitCreditCardData = payforDataList;
+      this.debitcreditcardData = payforDataList;
     })
 
     this.payforService.onlineBankingDataChanged.subscribe((payforDataList: any) => {
       console.log(payforDataList);
-      this.onlineBankingData = payforDataList;
+      this.onlinebankingData = payforDataList;
     })
     this.payforService.onATM_PaymentDataChanged.subscribe((payforDataList: any) => {
       console.log(payforDataList);
-      this.onATM_PaymentData = payforDataList;
+      this.atm_paymentData = payforDataList;
     })
     this.payforService.onCounter_PaymentDataChanged.subscribe((payforDataList: any) => {
       console.log(payforDataList);
-      this.Counter_PaymentData = payforDataList;
+      this.counter_paymentData = payforDataList;
     })
   }
   goBackClick() {
@@ -68,7 +68,7 @@ export class PayforPage implements OnInit {
     const modal = await this.modalController.create({
       component: DebitCreditCardModalComponent,
       componentProps: {
-        DebitCreditCardData: this.DebitCreditCardData,
+        debitcreditcardData: this.debitcreditcardData,
         payforData: this.payforData
       }
     });
@@ -78,7 +78,7 @@ export class PayforPage implements OnInit {
     const modal = await this.modalController.create({
       component: OnlineBankingModalComponent,
       componentProps: {
-        onlineBankingData: this.onlineBankingData,
+        onlinebankingData: this.onlinebankingData,
         payforData: this.payforData
       }
     });
@@ -88,7 +88,7 @@ export class PayforPage implements OnInit {
     const modal = await this.modalController.create({
       component: ATMPaymentModalComponent,
       componentProps: {
-        onATM_PaymentData: this.onATM_PaymentData,
+        atm_paymentData: this.atm_paymentData,
         payforData: this.payforData
       }
     });
@@ -98,7 +98,7 @@ export class PayforPage implements OnInit {
     const modal = await this.modalController.create({
       component: CounterPaymentModalComponent,
       componentProps: {
-        Counter_PaymentData: this.Counter_PaymentData,
+        counter_paymentData: this.counter_paymentData,
         payforData: this.payforData
       }
     });
