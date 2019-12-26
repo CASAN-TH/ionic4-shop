@@ -13,11 +13,11 @@
             },
             "period_amount": {
                 "_id": "1232",
-                "amount_period": "893.58",
+                "amount_period": "1680.55",
                 "monpayment": "จ่ายรายเดือน",
                 "inc": "(inc.service free)",
                 "currency": "฿",
-                "period": "x18",
+                "period": "x12",
                 "per": "ต่องวด",
                 "unit": "เดือน"
             },

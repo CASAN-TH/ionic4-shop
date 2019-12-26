@@ -40,7 +40,7 @@
       <ion-label>ความสัมพันธ์</ion-label>
       <div class="ion-align-items-center" (click)="openActionRelation(i)">
         <ion-text *ngIf="item.relation !==''">{{item.relation}}</ion-text>
-        <ion-text *ngIf="item.relation ===''">เลือก</ion-text>
+        <ion-text *ngIf="item.relation ==='' || !item.relation">เลือก</ion-text>
         <ion-icon name="arrow-forward" mode="ios"></ion-icon>
       </div>
     </ion-item>
@@ -59,7 +59,7 @@
       <ion-label>อาชีพ</ion-label>
       <div class="ion-align-items-center" (click)="openActionJob(i)">
         <ion-text *ngIf="item.job !==''">{{item.job}}</ion-text>
-        <ion-text *ngIf="item.job ===''">เลือก</ion-text>
+        <ion-text *ngIf="item.job ==='' || !item.job">เลือก</ion-text>
         <ion-icon name="arrow-forward" mode="ios"></ion-icon>
       </div>
     </ion-item>
@@ -76,7 +76,7 @@
       <ion-label>รายได้</ion-label>
       <div class="ion-align-items-center" (click)="openActionSalary(i)">
         <ion-text *ngIf="item.salary !==''">{{item.salary}}</ion-text>
-        <ion-text *ngIf="item.salary ===''">เลือก</ion-text>
+        <ion-text *ngIf="item.salary ==='' || !item.salary">เลือก</ion-text>
         <ion-icon name="arrow-forward" mode="ios"></ion-icon>
       </div>
     </ion-item>

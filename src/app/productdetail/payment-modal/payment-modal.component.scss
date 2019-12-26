@@ -28,7 +28,15 @@
   display: flex;
   justify-content: center;
   background-color: orangered;
-  height: 40px;
+  height: 50px;
+}
+.grid-footter {
+  background-color: #fbfbfb;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
 }
 
 .top {
@@ -75,11 +83,4 @@
 .col-dow {
   padding-top: 30px;
 }
-.grid-footter {
-  background-color: #fbfbfb;
-  padding-left: 0px;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  margin-top: 0px;
-}
+

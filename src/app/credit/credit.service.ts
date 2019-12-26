@@ -82,7 +82,7 @@ export class CreditService {
           this.onBillChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url + '/api/customerbills', { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/billbyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onBillChanged.next(res.data);
         }, reject)
       }

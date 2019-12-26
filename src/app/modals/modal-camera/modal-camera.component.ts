@@ -37,9 +37,14 @@ export class ModalCameraComponent implements OnInit {
       } 
       case "withme": { 
          //statements; 
-         result.url = "http://3.bp.blogspot.com/-GsOae7Gozl4/Vq5alQRmpiI/AAAAAAAACsM/o-nxqcmjvZ8/s1600/05.jpg";
+         result.url = "https://f.ptcdn.info/300/023/000/1410407472-b2-o.jpg";
          break; 
       } 
+      case "regular": { 
+        //statements; 
+        result.url = "https://spcdn.springnews.co.th/wp-content/uploads/2019/03/53046686_2149103205167393_4156877401579585536_n-1.jpg";
+        break; 
+     } 
       default: { 
          //statements; 
          result.url = "https://www.admission.nu.ac.th/student/citizencard.jpg";

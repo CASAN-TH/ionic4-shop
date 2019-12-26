@@ -46,7 +46,7 @@
                 <ion-text class="font-padding">{{item.bankname}}</ion-text>
               </ion-label>
               <ion-note slot="end">
-                <ion-checkbox mode="ios"></ion-checkbox>
+                <ion-checkbox mode="ios" [(ngModel)]="atm_paymentData.bank.id"></ion-checkbox>
               </ion-note>
             </ion-item>
           </ion-col>
@@ -71,3 +71,11 @@
   </ion-row>
 
 </ion-content>
+
+<ion-footer>
+  <ion-grid class="grid-footter">
+    <ion-buttons class="btn-center">
+      <ion-button class="btn-footer" [disabled]="!atm_paymentData.bank.id" (click)="AtmBillModal()">ชำระตอนนี้ {{payforData.cerren}} {{payforData.amount}}</ion-button>
+    </ion-buttons>
+  </ion-grid>
+</ion-footer>

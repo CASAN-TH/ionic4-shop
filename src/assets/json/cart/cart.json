@@ -105,7 +105,7 @@
                         "discount": "59% off",
                         "quantity": "x1",
                         "installment_amount": "893.58",
-                        "installment_period": "x18ต่องวด",
+                        "installment_period": "x12ต่องวด",
                         "installment_currency": "฿",
                         "amount_product": 1,
                         "shipingfree": "0",
@@ -156,48 +156,17 @@
         ],
         "totalcart": {
             "total_price": "30,250",
-            "total_discount": "30,150",
+            "total_discount": "30,250",
             "currency": "฿",
             "installment_amount": "1680.55",
-            "installment_period": "x18ต่องวด",
+            "installment_period": "x12ต่องวด",
             "amount_product": 3,
             "promotion": "0",
             "currency_discount": "-฿",
             "shipingfree": "0",
-            "cupon_discount": "100"
+            "cupon_discount": "0"
         },
-        "cupon": [
-            {
-                "amount": "100",
-                "currency": "฿",
-                "title": "ใช้จ่ายขั้นต่ำ ฿ 1,000",
-                "type": "Flash Coupon",
-                "dateStart": "-",
-                "dateEnd": "-",
-                "flag": "0",
-                "cupon_discount": "-฿"
-            },
-            {
-                "amount": "50",
-                "currency": "฿",
-                "title": "ใช้จ่ายขั้นต่ำ ฿ 300",
-                "type": "Flash Coupon",
-                "dateStart": "-",
-                "dateEnd": "-",
-                "flag": "0",
-                "cupon_discount": "-฿"
-            },
-            {
-                "amount": "11",
-                "currency": "฿",
-                "title": "ใช้จ่ายขั้นต่ำ ฿ 80",
-                "type": "Mobile coupon",
-                "dateStart": "19/11/2562",
-                "dateEnd": "19/12/2562",
-                "flag": "0",
-                "cupon_discount": "-฿"
-            }
-        ],
+       
         "tcoin": {
             "total": 500,
             "tcoin_pay": 5,
