@@ -179,16 +179,16 @@ export class ProductdetailPage implements OnInit {
     this._location.back();
   }
 
-  onCartClick() {
-    console.log("onCartClick");
-    this.router.navigateByUrl('tabs/cart');
-  }
-  onPaymentClick(paymentId: any) {
-    console.log("onPaymentClick");
-    this.router.navigateByUrl('payment/' + paymentId);
-  }
-  onChatClick() {
-    console.log("Chat Bot");
-  }
+  // onCartClick() {
+  //   console.log("onCartClick");
+  //   this.router.navigateByUrl('tabs/cart');
+  // }
+  // onPaymentClick(paymentId: any) {
+  //   console.log("onPaymentClick");
+  //   this.router.navigateByUrl('payment/' + paymentId);
+  // }
+  // onChatClick() {
+  //   console.log("Chat Bot");
+  // }
 
 }
