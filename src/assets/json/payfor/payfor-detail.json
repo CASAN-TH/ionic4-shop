@@ -9,7 +9,7 @@
             {
                 "name": "ยอดการสั่งซื้อ",
                 "cerrency": "฿",
-                "amount_price": "14,900"
+                "amount_price": "30,250"
             }
         ],
         "down_payment": [
@@ -23,7 +23,7 @@
             {
                 "name": "จ่ายรายเดือน",
                 "cerrency": "฿",
-                "installment_amount": "727.66",
+                "installment_amount": "1680.55",
                 "installment_period": "x12",
                 "unit": "mo."
             }

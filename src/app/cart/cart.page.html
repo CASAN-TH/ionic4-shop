@@ -47,7 +47,7 @@
           </ion-col>
         </ion-row>
 
-        <ion-item-sliding *ngFor="let cate of cate.items; let j = index">
+        <ion-item-sliding *ngFor="let cart of cate.items; let j = index">
           <ion-item lines="none">
             <ion-label class="ion-no-margin">
               <ion-row>
@@ -59,25 +59,25 @@
                 <ion-col size="3.5" class="ion-align-items-center">
                   <div class="ion-align-items-center" (click)="onOpenlistClick()">
                     <ion-chip class="ion-justify-content-center">
-                      <ion-label class="discount">{{cate.discount}}</ion-label>
+                      <ion-label class="discount">{{cart.discount}}</ion-label>
                     </ion-chip>
-                    <img [src]="cate.img">
+                    <img [src]="cart.img">
                   </div>
                 </ion-col>
                 <ion-col size="7.5">
                   <ion-row>
                     <ion-col size="12">
                       <ion-text class="phonename">
-                        {{cate.name}}
+                        {{cart.name}}
                       </ion-text>
                     </ion-col>
                   </ion-row>
                   <ion-row>
                     <ion-col size="12">
                       <span class="quantity" (click)="specModal()">
-                        {{cate.color}}
+                        {{cart.color}}
                         <span *ngIf="cate.storage"> , </span>
-                        {{cate.storage}}
+                        {{cart.storage}}
                         <ion-icon class="arrow-down" name="arrow-down" mode="ios"></ion-icon>
                       </span>
                     </ion-col>
@@ -85,7 +85,7 @@
                   <ion-row>
                     <ion-col size="4" class="ion-align-items-center">
                       <ion-text class="phoneprice">
-                        {{cate.currency}}{{cate.price}}
+                        {{cart.currency}}{{cart.price}}
                       </ion-text>
                     </ion-col>
                     <ion-col size="8">
@@ -97,7 +97,7 @@
                           </ion-button>
                         </span>
                         <span class="num-size">
-                          {{cate.amount_product}}
+                          {{cart.amount_product}}
                         </span>
                         <span>
                           <ion-button class="btn-size" fill="clear" (click)="onAddClick(i,j)">
@@ -110,7 +110,7 @@
                   <ion-row>
                     <ion-col size="12">
                       <ion-text class="disprice">
-                        <del>{{cate.currency}}{{cate.discount_price}}</del>
+                        <del>{{cart.currency}}{{cart.discount_price}}</del>
                       </ion-text>
                     </ion-col>
                   </ion-row>
@@ -146,7 +146,6 @@
           </ion-col>
         </ion-row>
       </ion-grid>
-
 
 
     </ion-col>

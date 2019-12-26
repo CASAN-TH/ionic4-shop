@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common'
 import { PayforService } from './payfor.service';
-import { ModalController } from '@ionic/angular';
+import { ModalController, AlertController } from '@ionic/angular';
 import { RecommendedMethodModalComponent } from './recommended-method-modal/recommended-method-modal.component';
 import { DebitCreditCardModalComponent } from './debit-credit-card-modal/debit-credit-card-modal.component';
 import { OnlineBankingModalComponent } from './online-banking-modal/online-banking-modal.component';
 import { ATMPaymentModalComponent } from './atmpayment-modal/atmpayment-modal.component';
 import { CounterPaymentModalComponent } from './counter-payment-modal/counter-payment-modal.component';
+
 
 
 @Component({
@@ -25,6 +26,7 @@ export class PayforPage implements OnInit {
   constructor(private router: Router,
     private payforService: PayforService,
     public modalController: ModalController,
+    private alertCtrl: AlertController,
     private _location: Location) { }
 
   ngOnInit() {
@@ -51,9 +53,7 @@ export class PayforPage implements OnInit {
       this.Counter_PaymentData = payforDataList;
     })
   }
-  goBackClick() {
-    this._location.back();
-  }
+  
 
   async RecommendedMethodModal() {
     const modal = await this.modalController.create({
@@ -105,5 +105,23 @@ export class PayforPage implements OnInit {
     return await modal.present();
   }
 
-
+  async confirmAlert() {
+    const alert = await this.alertCtrl.create({
+      header: 'คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการชำระเงิน',
+      buttons: [
+        {
+          text: 'ยกเลิก',
+          handler: () => {
+              this._location.back();
+          }
+        }, {
+          text: 'ดำเนินการชำระต่อ',
+          handler: () => {
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+  
 }
