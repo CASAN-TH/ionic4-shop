@@ -39,8 +39,11 @@
             <div class="font-title-header">
               บิลของฉัน
             </div>
-            <div class="font-title-subheader">
+            <div class="font-title-subheader" *ngIf="bill.u_id === ''">
               ยังไม่มีบิล
+            </div>
+            <div class="font-title-subheader" *ngIf="bill.u_id !== ''">
+              กำหนดเวลาคือ {{bill.bills[0].bill_datelimit}}
             </div>
           </ion-col>
           <ion-col size="6" class="menu-header-style" (click)="openModalCreditPoint()">

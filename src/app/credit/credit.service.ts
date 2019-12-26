@@ -96,7 +96,7 @@ export class CreditService {
           this.onCreditPointChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url + '/api/creditpoints', { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/creditpointsbyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onCreditPointChanged.next(res.data);
         }, reject)
       }
