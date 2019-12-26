@@ -44,7 +44,7 @@ export class CartService {
     this.getSpecificationModalData();
     this.getPaymentModalData();
     this.getVouchersModalData();
-    this.getAddressData();
+    // this.getAddressData();
     return;
   }
 
