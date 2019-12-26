@@ -82,9 +82,9 @@
   <!-- End รายการโปรด ร้านค้าที่ติดตาม ประวัติการเข้าชม -->
 
   <!-- รายการสั่งซื้อ -->
-  <ion-card class="ion-text-center">
+  <ion-card class="ion-text-center" (click)="ModalViellAllMyOrdersPage()">
     <ion-grid>
-      <ion-item class="ion-no-margin ion-no-padding" (click)="ModalViellAllMyOrdersPage()">
+      <ion-item class="ion-no-margin ion-no-padding" >
         <ion-col size="8">
           <p class="title-font">รายการสั่งซื้อของฉัน</p>
         </ion-col>
@@ -99,7 +99,7 @@
       </ion-item>
 
       <ion-row class="ion-text-center" class="ion-padding-top">
-        <ion-col size="3" (click)="onToPayViellAllMyOrdersPage()">
+        <ion-col size="3" >
           <div class="ion-justify-content-center">
             <img
               class="icon"
@@ -108,7 +108,7 @@
           </div>
           <p class="font-13">รอชำระเงิน</p>
         </ion-col>
-        <ion-col size="3" (click)="onToShipViellAllMyOrdersPage()">
+        <ion-col size="3" >
           <div class="ion-justify-content-center">
             <img
               class="icon"
@@ -117,7 +117,7 @@
           </div>
           <p class="font-13">รอการจัดส่ง</p>
         </ion-col>
-        <ion-col size="3" (click)="onToRecieveViellAllMyOrdersPage()">
+        <ion-col size="3" >
           <div class="ion-justify-content-center">
             <img
               class="icon"
@@ -126,7 +126,7 @@
           </div>
           <p class="font-13">รอรับสินค้า</p>
         </ion-col>
-        <ion-col size="3" (click)="onToReviewsViellAllMyOrdersPage()">
+        <ion-col size="3" >
           <div class="ion-justify-content-center">
             <img
               class="icon"
