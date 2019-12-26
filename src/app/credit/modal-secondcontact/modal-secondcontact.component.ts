@@ -35,7 +35,9 @@ export class ModalSecondcontactComponent implements OnInit {
   }
 
   onFinish() {
-    this.secondContact.secondcontact.push(this.mockup)
+    if (this.mockup.name) {
+      this.secondContact.secondcontact.push(this.mockup)
+    }
     console.log(this.secondContact);
     this.modalCtrl.dismiss(this.secondContact);
   }
