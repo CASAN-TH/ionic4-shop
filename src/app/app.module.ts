@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -57,6 +57,8 @@ import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.com
 import { PaymentListModalComponent } from './payment/payment-list-modal/payment-list-modal.component';
 import { ModalLanguageComponent } from './account/modal-language/modal-language.component';
 import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
+import { BillModalComponent } from './payfor/bill-modal/bill-modal.component';
+import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.component';
 
 
 
@@ -108,7 +110,9 @@ import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
     BankModalComponent,
     OnlineBankingModalComponent,
     ATMPaymentModalComponent,
-    CounterPaymentModalComponent
+    CounterPaymentModalComponent,
+    BillModalComponent,
+    AtmBillModalComponent
 
 
   ],
@@ -155,7 +159,9 @@ import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
     BankModalComponent,
     OnlineBankingModalComponent,
     ATMPaymentModalComponent,
-    CounterPaymentModalComponent
+    CounterPaymentModalComponent,
+    BillModalComponent,
+    AtmBillModalComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,
