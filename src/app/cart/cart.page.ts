@@ -27,7 +27,6 @@ export class CartPage implements OnInit {
     private cartService: CartService,
     private paymentService: PaymentService,
     public modalController: ModalController,
-    private alertCtrl: AlertController,
     public actionSheetController: ActionSheetController) { }
 
   ngOnInit() {
@@ -56,9 +55,6 @@ export class CartPage implements OnInit {
       this.AddaddressData = AddaddressData;
     })
     
-    if (!this.AddaddressData) {
-      this.presentAlert()
-    }
   }
 
   onShoppingClick() {
@@ -123,25 +119,6 @@ export class CartPage implements OnInit {
     return await modal.present();
   }
 
-  async presentAlert() {
-    const alert = await this.alertCtrl.create({
-      message: 'กรุณาเพิ่มที่อยู่จัดส่งใหม่',
-      buttons: [
-        {
-          text: 'ยกเลิก',
-          handler: (blah) => {
-          }
-        }, {
-          text: 'เพิ่ม',
-          handler: () => {
-            this.router.navigate(['addaddress'])
-          }
-        }
-      ]
-    });
-    await alert.present();
-    this.router.navigate(['payment'])
-  }
   async vouchersModal() {
     const modal = await this.modalController.create({
       component: VouchersModalComponent,

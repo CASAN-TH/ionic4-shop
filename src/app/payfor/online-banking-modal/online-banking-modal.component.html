@@ -59,10 +59,10 @@
       <ion-grid>
         <ion-row>
           <ion-col size="12">
-            <ion-item no-padding *ngFor="let item of onlineBankingData.Bank" (click)="onSelectcheckboxBankClick(item.id)">
+            <ion-item no-padding *ngFor="let item of onlinebankingData.bank" (click)="onSelectcheckboxBankClick(item.id)">
               <img class="icon-image" [src]="item.image">
               <ion-label>
-                <ion-text class="font-padding">{{item.Bankname}}</ion-text>
+                <ion-text class="font-padding">{{item.bankname}}</ion-text>
               </ion-label>
               <ion-note slot="end">
                 <ion-checkbox mode="ios"></ion-checkbox>
@@ -75,10 +75,10 @@
       <ion-grid>
         <ion-row>
           <ion-col size="12">
-            <ion-item no-padding *ngFor="let item of onlineBankingData.Bank_Other" (click)="onSelectcheckboxBank_OtherClick(item.id)">
+            <ion-item no-padding *ngFor="let item of onlinebankingData.bank_other" (click)="onSelectcheckboxBank_OtherClick(item.id)">
               <img class="icon-image" [src]="item.image">
               <ion-label>
-                <ion-text class="font-padding">{{item.Bankname}}</ion-text>
+                <ion-text class="font-padding">{{item.bankname}}</ion-text>
               </ion-label>
               <ion-note slot="end">
                 <ion-checkbox mode="ios"></ion-checkbox>

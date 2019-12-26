@@ -8,7 +8,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class CounterPaymentModalComponent implements OnInit {
 
-  @Input() Counter_PaymentData: any; payforData: any;
+  @Input() counter_paymentData: any; payforData: any;
 
   constructor(public modalController: ModalController) { }
 

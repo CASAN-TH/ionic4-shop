@@ -46,10 +46,10 @@
     </ion-col>
   </ion-row>
 
-  <ion-row *ngIf="!AddaddressData">
-    <ion-col size="12" class="ion-col-adadress">
+  <ion-row *ngIf="!AddaddressData" >
+    <ion-col size="6" class="ion-col-adadress" (click)="onAddaddressClick()">
         <ion-buttons>
-          <ion-button slot="start" class="add" (click)="onAddaddressClick()">
+          <ion-button slot="start" class="add" >
             <ion-icon mode="ios" name="add"></ion-icon>
           </ion-button>
           <ion-text class="add">โปรดเพิ่มที่อยู่</ion-text>
@@ -537,7 +537,7 @@
 
 
 
-<ion-footer class="footer" *ngIf="select === 'ชำระเต็มจำนวนเงิน'">
+<ion-footer class="footer" >
   <ion-row>
     <ion-col size="12">
       <ion-row *ngIf="cartDataList.totalcart">
@@ -546,6 +546,11 @@
             <span class="footterfont2">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.total_discount}}</span>
         </ion-col>
         <ion-col size="4" (click)="onOrderClick()">
+          <section>
+            <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
+          </section>
+        </ion-col>
+        <ion-col *ngIf="!AddaddressData" size="4" (click)="presentAlert()">
           <section>
             <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
           </section>

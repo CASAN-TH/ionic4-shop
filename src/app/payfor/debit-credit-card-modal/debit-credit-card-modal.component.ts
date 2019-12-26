@@ -11,7 +11,7 @@ import { BankModalComponent } from '../bank-modal/bank-modal.component';
 })
 export class DebitCreditCardModalComponent implements OnInit {
 
-  @Input() DebitCreditCardData: any; BankData: any; payforData: any;
+  @Input() debitcreditcardData: any; bankData: any; payforData: any;
 
   constructor(private router: Router,
     private payforService: PayforService,
@@ -21,10 +21,10 @@ export class DebitCreditCardModalComponent implements OnInit {
 
   ngOnInit() {
     this.payforService.onBankDataChanged.subscribe((payforDataList: any) => {
-      console.log(payforDataList);
-      this.BankData = payforDataList;
-      console.log(this.BankData.Bankname);
-      console.log(this.DebitCreditCardData);
+      // console.log(payforDataList);
+      this.bankData = payforDataList;
+      // console.log(this.bankData.Bankname);
+      // console.log(this.DebitCreditCardData);
     })
   }
 
@@ -36,7 +36,7 @@ export class DebitCreditCardModalComponent implements OnInit {
     const modal = await this.modalController.create({
       component: BankModalComponent,
       componentProps: {
-        BankData: this.BankData
+        bankData: this.bankData
       }
     });
     return await modal.present();
