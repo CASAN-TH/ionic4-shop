@@ -38,41 +38,9 @@
         "online": "วิธีการชำระเงินออนไลน์",
         "online_card": "บัตรธนาคารต้องเปิดใช้ธนาคารออนไลน์ ?",
         "offline": "วิธีการชำระเงินออฟไลน์",
-        "type_online": [
-            {
-                "type_name": "Debit/CreditCard",
-                "type_img": {
-                    "visa": "",
-                    "mastercard": "",
-                    "JCB": ""
-                }
-            },
-            {
-                "type_name": "Oline Banking",
-                "type_img": {
-                    "KBANK": "",
-                    "SCB": "",
-                    "BUALUNG": ""
-                }
-            }
-        ],
-        "type_offline": [
-            {
-                "type_name": "ATM Payment",
-                "type_img": {
-                    "KBANK": "",
-                    "SCB": "",
-                    "BUALUNG": ""
-                }
-            },
-            {
-                "type_name": "Counter Payment",
-                "type_img": {
-                    "bigc": "",
-                    "familymart": "",
-                    "teccolotus": ""
-                }
-            }
-        ]
+        "debit_name": "Debit/CreditCard",
+        "online_name": "Online Banking",
+        "atm_name": "ATM Payment",
+        "counter_name": "Counter Payment"
     }
 }

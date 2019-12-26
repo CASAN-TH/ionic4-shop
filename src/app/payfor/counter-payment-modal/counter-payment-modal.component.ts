@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { BillModalComponent } from '../bill-modal/bill-modal.component';
 
 @Component({
   selector: 'app-counter-payment-modal',
@@ -8,7 +9,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class CounterPaymentModalComponent implements OnInit {
 
-  @Input() Counter_PaymentData: any; payforData: any;
+  @Input() counter_paymentData: any; payforData: any;
 
   constructor(public modalController: ModalController) { }
 
@@ -24,6 +25,15 @@ export class CounterPaymentModalComponent implements OnInit {
   onCounterBankClick(CounterBankId: any) {
     console.log(CounterBankId);
   }
-
+  async BillModal() {
+    const modal = await this.modalController.create({
+      component: BillModalComponent,
+      componentProps: {
+        // counter_paymentData: this.counter_paymentData,
+        // payforData: this.payforData
+      }
+    });
+    return await modal.present();
+  }
 
 }

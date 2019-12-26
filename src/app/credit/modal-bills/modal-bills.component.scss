@@ -65,6 +65,11 @@ ion-content {
     color: #14c014;
 }
 
+.font-header-subtitle2 {
+    font-size: 13px;
+    color: #bcbcbc;
+}
+
 .header-number-payment {
     font-size: 28px;
     font-weight: bold;
@@ -118,12 +123,12 @@ ion-content {
     text-overflow: ellipsis;
     font-size: 17px;
     color: #585656;
+    margin-bottom: 13px;
 }
 
 .list-item-subname {
     font-size: 14px;
     color: #aeacac;
-    margin-top: 13px;
 }
 
 .list-right-container {

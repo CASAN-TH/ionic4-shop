@@ -59,13 +59,13 @@
       <ion-grid>
         <ion-row>
           <ion-col size="12">
-            <ion-item no-padding *ngFor="let item of onlineBankingData.Bank" (click)="onSelectcheckboxBankClick(item.id)">
+            <ion-item no-padding *ngFor="let item of onlinebankingData.bank" (click)="onSelectcheckboxBankClick(item.id)">
               <img class="icon-image" [src]="item.image">
               <ion-label>
-                <ion-text class="font-padding">{{item.Bankname}}</ion-text>
+                <ion-text class="font-padding">{{item.bankname}}</ion-text>
               </ion-label>
               <ion-note slot="end">
-                <ion-checkbox mode="ios"></ion-checkbox>
+                <ion-checkbox mode="ios" [(ngModel)]="onlinebankingData.bank.id"></ion-checkbox>
               </ion-note>
             </ion-item>
           </ion-col>
@@ -75,13 +75,13 @@
       <ion-grid>
         <ion-row>
           <ion-col size="12">
-            <ion-item no-padding *ngFor="let item of onlineBankingData.Bank_Other" (click)="onSelectcheckboxBank_OtherClick(item.id)">
+            <ion-item no-padding *ngFor="let item of onlinebankingData.bank_other" (click)="onSelectcheckboxBank_OtherClick(item.id)">
               <img class="icon-image" [src]="item.image">
               <ion-label>
-                <ion-text class="font-padding">{{item.Bankname}}</ion-text>
+                <ion-text class="font-padding">{{item.bankname}}</ion-text>
               </ion-label>
               <ion-note slot="end">
-                <ion-checkbox mode="ios"></ion-checkbox>
+                <ion-checkbox mode="ios" [(ngModel)]="onlinebankingData.bank_other.id"></ion-checkbox>
               </ion-note>
             </ion-item>
           </ion-col>
@@ -106,3 +106,11 @@
   </ion-row>
 
 </ion-content>
+
+<ion-footer>
+  <ion-grid class="grid-footter">
+    <ion-buttons class="btn-center" (click)="RecommendedMethodModal()">
+      <ion-button class="btn-footer" [disabled]="!onlinebankingData.bank.id">ชำระตอนนี้ {{payforData.cerren}} {{payforData.amount}}</ion-button>
+    </ion-buttons>
+  </ion-grid>
+</ion-footer>
