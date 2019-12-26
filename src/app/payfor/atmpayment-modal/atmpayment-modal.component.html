@@ -74,8 +74,8 @@
 
 <ion-footer>
   <ion-grid class="grid-footter">
-    <ion-buttons class="btn-center" (click)="AtmBillModal()">
-      <ion-button class="btn-footer" [disabled]="!atm_paymentData.bank.id">ชำระตอนนี้ {{payforData.cerren}} {{payforData.amount}}</ion-button>
+    <ion-buttons class="btn-center">
+      <ion-button class="btn-footer" [disabled]="!atm_paymentData.bank.id" (click)="AtmBillModal()">ชำระตอนนี้ {{payforData.cerren}} {{payforData.amount}}</ion-button>
     </ion-buttons>
   </ion-grid>
 </ion-footer>

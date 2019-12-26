@@ -109,8 +109,8 @@
 
 <ion-footer>
   <ion-grid class="grid-footter">
-    <ion-buttons class="btn-center" (click)="RecommendedMethodModal()">
-      <ion-button class="btn-footer" [disabled]="!onlinebankingData.bank.id">ชำระตอนนี้ {{payforData.cerren}} {{payforData.amount}}</ion-button>
+    <ion-buttons class="btn-center">
+      <ion-button class="btn-footer" [disabled]="!onlinebankingData.bank.id" (click)="RecommendedMethodModal()">ชำระตอนนี้ {{payforData.cerren}} {{payforData.amount}}</ion-button>
     </ion-buttons>
   </ion-grid>
 </ion-footer>
