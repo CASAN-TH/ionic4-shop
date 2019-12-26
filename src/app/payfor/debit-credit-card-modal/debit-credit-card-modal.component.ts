@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { PayforService } from '../payfor.service';
+import { BankModalComponent } from '../bank-modal/bank-modal.component';
 
 @Component({
   selector: 'app-debit-credit-card-modal',
@@ -8,21 +11,35 @@ import { ModalController } from '@ionic/angular';
 })
 export class DebitCreditCardModalComponent implements OnInit {
 
-  @Input() DebitCreditCardData: any;
+  @Input() DebitCreditCardData: any; BankData: any; payforData: any;
 
-  constructor(public modalController: ModalController) { }
+  constructor(private router: Router,
+    private payforService: PayforService,
+    public modalController: ModalController,
+  ) { }
+
 
   ngOnInit() {
-    console.log(this.DebitCreditCardData);
+    this.payforService.onBankDataChanged.subscribe((payforDataList: any) => {
+      console.log(payforDataList);
+      this.BankData = payforDataList;
+      console.log(this.BankData.Bankname);
+      console.log(this.DebitCreditCardData);
+    })
   }
 
   dismiss() {
     this.modalController.dismiss();
   }
 
-  onSelectBankClick(SelectBankId: any) {
-    console.log(SelectBankId);
+  async BankModal() {
+    const modal = await this.modalController.create({
+      component: BankModalComponent,
+      componentProps: {
+        BankData: this.BankData
+      }
+    });
+    return await modal.present();
   }
-
 
 }

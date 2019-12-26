@@ -191,7 +191,7 @@
         </ion-col>
       </ion-item>
       <ion-row *ngIf="accountData">
-        <ion-col size="3" (click)="onToCreditPage()">
+        <ion-col size="3" (click)="creditPointModal()">
           <h5>{{creditData.credit.creditremain}}</h5>
           <p class="font-13">วงเงินที่ใช้ได้</p>
         </ion-col>
@@ -266,7 +266,7 @@
         </div>
         <p>ติดต่อฝ่ายบริการลูกค้า</p>
       </ion-col>
-      <ion-col size="3" (click)="onToLanguagesPage()">
+      <ion-col size="3" (click)="ModalLanguage()">
         <div class="ion-justify-content-center">
           <img
             class="icon1"
@@ -275,7 +275,7 @@
         </div>
         <p>ภาษา</p>
       </ion-col>
-      <ion-col size="3" (click)="onToShippingAddressPage()">
+      <ion-col size="3" (click)="addresslModal()">
         <div class="ion-justify-content-center">
           <img
             class="icon1"
