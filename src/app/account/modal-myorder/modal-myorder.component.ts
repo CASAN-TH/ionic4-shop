@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 })
 export class ModalMyorderComponent implements OnInit {
 
+  @Input() BillDataList: any
+
+
   constructor(
     public modalController: ModalController,
     private router: Router
@@ -16,7 +19,9 @@ export class ModalMyorderComponent implements OnInit {
 
     
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.BillDataList);
+  }
 
   ModalDismiss() {
     this.modalController.dismiss();
@@ -25,6 +30,11 @@ export class ModalMyorderComponent implements OnInit {
   ToSearchPage(){
     this.router.navigate(["search-history"]);
     this.modalController.dismiss();
+  }
+
+  ToHomePage() {
+    this.modalController.dismiss();
+    this.router.navigate(["tabs/home"]);
   }
 
 }

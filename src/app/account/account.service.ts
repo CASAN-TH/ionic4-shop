@@ -26,6 +26,7 @@ export class AccountService {
   });
   onAccountScoreDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onAddressDataListChanged :  BehaviorSubject<any> = new BehaviorSubject({});
+  onBillDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }
 
@@ -47,6 +48,7 @@ export class AccountService {
       this.getCreditData();
       this.getAccountScoreData();
       this.getAddressDataList();
+      this.getBillDataList();
     }
     return;
   }
@@ -170,6 +172,20 @@ export class AccountService {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onAccountScoreDataChanged.next(res.data);
         }, reject)
+      }
+    })
+  }
+
+  getBillDataList(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if(mockup){
+        this.http.get('../../assets/json/cart/cart.json').subscribe((res: any) => {
+          this.onBillDataListChanged.next(res.data);
+        },reject)
+      }else{
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onBillDataListChanged.next(res.data);
+        },reject)
       }
     })
   }
