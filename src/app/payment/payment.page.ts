@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PaymentService } from './payment.service';
 import { Location } from '@angular/common';
-import { ModalController, ActionSheetController } from '@ionic/angular';
+import { ModalController, ActionSheetController, AlertController } from '@ionic/angular';
 import { VouchersModalComponent } from '../productdetail/vouchers-modal/vouchers-modal.component';
 import { SelectdownModalComponent } from './selectdown-modal/selectdown-modal.component';
 import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
@@ -32,6 +32,7 @@ export class PaymentPage implements OnInit {
     private paymentService: PaymentService,
     private _location: Location,
     public modalController: ModalController,
+    private alertCtrl: AlertController,
     public actionSheetController: ActionSheetController) { }
 
   ngOnInit() {
@@ -59,7 +60,10 @@ export class PaymentPage implements OnInit {
       console.log(AddressModalData);
       this.AddressModalData = AddressModalData;
     })
-    
+    if (!this.AddaddressData) {
+      console.log("11")
+      this.presentAlert();
+    }
 
   }
  
@@ -77,6 +81,24 @@ export class PaymentPage implements OnInit {
     // this.router.navigateByUrl('search/' + cate2Id);
     console.log(unitId);
     this.unitSelected = unitId;
+  }
+  async presentAlert() {
+    const alert = await this.alertCtrl.create({
+      message: 'กรุณาเพิ่มที่อยู่จัดส่งใหม่',
+      buttons: [
+        {
+          text: 'ยกเลิก',
+          handler: (blah) => {
+          }
+        }, {
+          text: 'เพิ่ม',
+          handler: () => {
+            this.router.navigate(['addaddress'])
+          }
+        }
+      ]
+    });
+    await alert.present();
   }
 
   async selectDownModal() {
