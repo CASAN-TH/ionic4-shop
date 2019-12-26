@@ -12,9 +12,6 @@ export class ModalJobComponent implements OnInit {
   @Input() job: any;
 
   sendBU: any;
-  mockup = {
-    "url": ""
-  }
   constructor(
     private modalCtrl: ModalController,
     public actionSheetCtrl: ActionSheetController
@@ -42,34 +39,50 @@ export class ModalJobComponent implements OnInit {
 
   addImage(status) {
     if (status === 'student') {
-      this.job.jobdata.student.studentimage.push(this.mockup);
-      console.log(this.job);
+      this.job.jobdata.student.studentimage.push({
+        "url": ""
+      });
+      // console.log(this.job);
     }
     if (status === 'other') {
-      this.job.jobdata.other.otherimage.push(this.mockup);
-      console.log(this.job);
+      this.job.jobdata.other.otherimage.push({
+        "url": ""
+      });
+      // console.log(this.job);
     }
   }
 
-  async openCamera(status) {
+  async openCamera(index, status) {
     if (status === 'student') {
       const modal = await this.modalCtrl.create({
-        component: ModalCameraComponent
+        component: ModalCameraComponent,
+        cssClass: 'modal-camera-style',
+        componentProps: {
+          modalData: {
+            actionType: "regular"
+          }
+        }
       });
       modal.onDidDismiss().then(url => {
         // console.log(url.data)
-        this.job.jobdata.student.imagecard = url.data.url
+        this.job.jobdata.student.studentimage[index].url = url.data.url
         // console.log(this.job)
       });
       return await modal.present();
     }
     if (status === 'other') {
       const modal = await this.modalCtrl.create({
-        component: ModalCameraComponent
+        component: ModalCameraComponent,
+        cssClass: 'modal-camera-style',
+        componentProps: {
+          modalData: {
+            actionType: "regular"
+          }
+        }
       });
       modal.onDidDismiss().then(url => {
         // console.log(url.data)
-        this.job.jobdata.other.payslip = url.data.url
+        this.job.jobdata.other.otherimage[index].url = url.data.url
         // console.log(this.job)
       });
       return await modal.present();

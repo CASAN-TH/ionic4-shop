@@ -78,7 +78,7 @@
       </ion-item>
     </ion-list>
     <div class="ion-padding-start">
-      <p>เพื่ิมบัตรนักศึกษา</p>
+      <p>เพิ่มบัตรนักศึกษา</p>
       <p>1.จำเป็นต้องอัปโหลดข้อมูลบัตรนักศึกษา</p>
       <p>2.หากบัตรนักศึกษาหมดอายุหรือสูญหายสามารถอัปโหลดเป็นระเบียนประวัติหรือหนังสือรายงานตัวนักศึกษา</p>
       <p>3.กรุณาตรวจสอบว่ารูปภาพที่อัปโหลดมานั้นชัดเจน</p>
@@ -87,7 +87,7 @@
       <ion-col size="3"></ion-col>
       <ion-col size="6" class="ion-text-center">
         <div *ngFor="let item of job.jobdata.student.studentimage;let i = index" class="ion-padding-bottom">
-          <div class="img-container" *ngIf="item.url === ''" (click)="openCamera('student')">
+          <div class="img-container" *ngIf="item.url === ''" (click)="openCamera(i, 'student')">
             <div class="avatar-icon">
               <ion-icon name="camera"></ion-icon>
             </div>
@@ -107,7 +107,7 @@
       <ion-col size="3"></ion-col>
     </ion-row>
 
-    <ion-row>
+    <ion-row class="btn-add-position">
       <ion-col size="12" class="ion-text-center">
         <ion-chip (click)="addImage('student')">
           <ion-icon name="add" class="ion-no-margin"></ion-icon>
@@ -182,7 +182,7 @@
       <ion-col size="3"></ion-col>
       <ion-col size="6" class="ion-text-center">
         <div *ngFor="let item of job.jobdata.other.otherimage;let i = index" class="ion-padding-bottom">
-          <div class="img-container" *ngIf="item.url === ''" (click)="openCamera('other')">
+          <div class="img-container" *ngIf="item.url === ''" (click)="openCamera(i, 'other')">
             <div class="avatar-icon">
               <ion-icon name="camera"></ion-icon>
             </div>
@@ -201,7 +201,7 @@
       </ion-col>
       <ion-col size="3"></ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row class="btn-add-position">
       <ion-col size="12" class="ion-text-center">
         <ion-chip (click)="addImage('other')">
           <ion-icon name="add" class="ion-no-margin"></ion-icon>
