@@ -25,6 +25,7 @@ export class CreditService {
   onCreditStatusChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onCreditMenuListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onCreditPointChanged: BehaviorSubject<any> = new BehaviorSubject(this.creditpoint);
+  onBillChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   onContactDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onMarriageDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
@@ -47,6 +48,7 @@ export class CreditService {
       this.getCreditData(this.routeParams.id);
     } else {
       this.getMenuDataList();
+      this.getCustomerBillData();
       this.getCreditPointData();
       this.getCreditStatus();
 
@@ -73,6 +75,20 @@ export class CreditService {
     })
   }
 
+  getCustomerBillData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/credit/bill.json').subscribe((res: any) => {
+          this.onBillChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url + '/api/customerbills', { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onBillChanged.next(res.data);
+        }, reject)
+      }
+    })
+  }
+
   getCreditPointData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
@@ -80,7 +96,7 @@ export class CreditService {
           this.onCreditPointChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/creditpoints', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onCreditPointChanged.next(res.data);
         }, reject)
       }
