@@ -1,7 +1,10 @@
 {
     "status": 200,
     "data": {
-        "Debit": [
+        "add_debit_credit": {
+            "name": "เพิ่มบัตรเดบิต / เครดิตใหม่"
+        },
+        "debit": [
             "https://paymentsafrika.com/live/wp-content/uploads/2019/01/visa-642x380.jpg",
             "https://www.kredittkortinfo.no/wp-content/uploads/2019/01/mastercard-logo.png",
             "https://financialit.net/sites/default/files/jcb_82032.png",
@@ -10,10 +13,29 @@
             "https://cdn1.iconfinder.com/data/icons/payment-method/480/dinner_club-512.png",
             "https://www.emspay.nl/sites/emspay.nl/files/images/Payment%20methods/Discover.png"
         ],
-        "Personal": {
-            "Card_number": "กรุณาใส่หมายเลขบัตร",
-            "Account_name": "กรุณาใส่ชื่อบนบัตร",
-            "Card_Back_Code": "โปรดป้อน CVV หรือ CCV"
+        "bank": {
+            "name": "ธนาคาร"
+        },
+        "card_number": {
+            "name": "หมายเลขบัตร",
+            "please_enter_card": "กรุณาใส่หมายเลขบัตร"
+        },
+        "account_name": {
+            "name": "ชื่อบัญชี",
+            "please_enter_name": "กรุณาใส่ชื่อบนบัตร"
+        },
+        "expiration": {
+            "name": "Expiration(MM/YY)"
+        },
+        "cvv_or_ccv": {
+            "name": "CVV หรือ CCV",
+            "card_back_code": "โปรดป้อน CVV หรือ CCV"
+        },
+        "save_card_details": {
+            "name": "บันทึกรายละเอียดบัตร"
+        },
+        "guarantee": {
+            "title": "รับประกันความปลอดภัยของข้อมูลบัตรของคุณและรหัส CVV หรือ CCV ของคุณจะไม่ถูกบันทึก"
         }
     }
 }

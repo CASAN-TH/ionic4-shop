@@ -8,14 +8,14 @@ import { ModalController } from '@ionic/angular';
 })
 export class BankModalComponent implements OnInit {
 
-  @Input() BankData: any;
+  @Input() bankData: any;
   BankSelectedId: any;
   BankSelected: any;
 
   constructor(public modalController: ModalController) { }
 
   ngOnInit() {
-    this.BankSelected = this.BankData.Bankname
+    this.BankSelected = this.bankData.bankname
   }
 
   dismiss() {
@@ -25,7 +25,7 @@ export class BankModalComponent implements OnInit {
   onSelectBankClick(SelectBankId: any, BanknameId: any) {
     this.modalController.dismiss();
     this.BankSelectedId = SelectBankId;
-    this.BankData.Bankname = BanknameId;
+    this.bankData.bankname = BanknameId;
     console.log(this.BankSelectedId);
   }
 }

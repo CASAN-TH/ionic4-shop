@@ -1,32 +1,41 @@
 {
     "status": 200,
     "data": {
-        "Tel": "66-0800871773",
-        "Email": "porapot12@gmail.com",
-        "Bank": [
+        "manual": {
+            "name": "คู่มือการชำระเงินจะถูกส่งไปยังมือถือและอีเมลของคุณ"
+        },
+        "phone_number": {
+            "name": "เบอร์โทรศัพท์",
+            "tel": "66-0800871773"
+        },
+        "email": {
+            "name": "อีเมล",
+            "mail": "porapot12@gmail.com"
+        },
+        "bank": [
             {
                 "id": "1",
-                "Bankname": "Kasikorn Bank",
+                "bankname": "Kasikorn Bank",
                 "image": "https://f.ptcdn.info/153/058/000/pai0rk6qicHOT9p119l-o.png"
             },
             {
                 "id": "2",
-                "Bankname": "Siam Commercial Bank",
+                "bankname": "Siam Commercial Bank",
                 "image": "https://pngimage.net/wp-content/uploads/2018/06/png-%E0%B8%98%E0%B8%99%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A3-2.png"
             },
             {
                 "id": "3",
-                "Bankname": "Krung Thai Bank",
+                "bankname": "Krung Thai Bank",
                 "image": "https://pngimage.net/wp-content/uploads/2018/06/logo-%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%84%E0%B8%97%E0%B8%A2-png-4.png"
             },
             {
                 "id": "4",
-                "Bankname": "Bank of Ayutthaya",
+                "bankname": "Bank of Ayutthaya",
                 "image": "https://2.bp.blogspot.com/-2E0kVShgd8Q/W795SxDUvRI/AAAAAAAAYmo/o_Lq3edDRAYitgpheyar4mRp3jwLGMxEwCLcBGAs/s1600/ayutthaya.png   "
             },
             {
                 "id": "5",
-                "Bankname": "Bangkok Bank",
+                "bankname": "Bangkok Bank",
                 "image": "http://www.itbsth.com/images/bank/03.png"
             }
         ]
