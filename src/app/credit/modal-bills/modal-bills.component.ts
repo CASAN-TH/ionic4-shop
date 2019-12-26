@@ -25,11 +25,11 @@ export class ModalBillsComponent implements OnInit {
 
   onPreviousBill() {
     this.inx -= 1
-    console.log(this.inx)
+    // console.log(this.inx)
   }
 
   onNextBill() {
     this.inx += 1
-    console.log(this.inx)
+    // console.log(this.inx)
   }
 }
