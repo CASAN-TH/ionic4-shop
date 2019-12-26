@@ -8,6 +8,7 @@ import { GiftsPageRoutingModule } from './gifts-routing.module';
 
 import { GiftsPage } from './gifts.page';
 import { ProductlistPageModule } from '../productlist/productlist.module';
+import { FooterPageModule } from '../footer/footer.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ProductlistPageModule } from '../productlist/productlist.module';
     FormsModule,
     IonicModule,
     GiftsPageRoutingModule,
-    ProductlistPageModule
+    ProductlistPageModule,
+    FooterPageModule
   ],
   declarations: [GiftsPage]
 })
