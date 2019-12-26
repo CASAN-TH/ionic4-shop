@@ -9,14 +9,27 @@ import { ModalController } from '@ionic/angular';
 export class ModalBillsComponent implements OnInit {
 
   @Input() billData: any;
+  inx = 0
 
   constructor(
     private modalCtrl: ModalController
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    console.log(this.billData)
+  }
 
   goBackClick() {
     this.modalCtrl.dismiss();
+  }
+
+  onPreviousBill() {
+    this.inx -= 1
+    console.log(this.inx)
+  }
+
+  onNextBill() {
+    this.inx += 1
+    console.log(this.inx)
   }
 }
