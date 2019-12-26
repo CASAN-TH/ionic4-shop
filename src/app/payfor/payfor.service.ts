@@ -25,7 +25,9 @@ export class PayforService {
   });
   onBankDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onPayforDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  onlineBankingDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onlineBankingDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "bank": []
+  });
   onATM_PaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({
     "manual": {},
     "phone_number": {},

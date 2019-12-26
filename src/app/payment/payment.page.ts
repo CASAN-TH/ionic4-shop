@@ -15,17 +15,18 @@ import { PaymentListModalComponent } from './payment-list-modal/payment-list-mod
   styleUrls: ['./payment.page.scss'],
 })
 export class PaymentPage implements OnInit {
-  select: any= "ผ่อนชำระ";
+  select: any = "ผ่อนชำระ";
   downDataList: any;
   cartDataList: any;
   VouchersData: any;
   selectdownData: any;
   AddaddressData: any;
-  AddressModalData:any;
+  AddressModalData: any;
   showToolbar: boolean;
   unitSelected: any;
-
   
+
+
 
 
   constructor(private router: Router,
@@ -44,10 +45,10 @@ export class PaymentPage implements OnInit {
       console.log(cartDataList);
       this.cartDataList = cartDataList;
     })
-    // this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
-    //   console.log(AddaddressData);
-    //   this.AddaddressData = AddaddressData;
-    // })
+    this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
+      console.log(AddaddressData);
+      this.AddaddressData = AddaddressData;
+    })
     this.paymentService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.VouchersData = productdetailDataList;
@@ -61,12 +62,11 @@ export class PaymentPage implements OnInit {
       this.AddressModalData = AddressModalData;
     })
     if (!this.AddaddressData) {
-      console.log("11")
       this.presentAlert();
     }
 
   }
- 
+
 
   goBackClick() {
     this._location.back();
@@ -74,7 +74,7 @@ export class PaymentPage implements OnInit {
   onOrderClick() {
     this.router.navigate(['payfor'])
   }
-  onAddaddressClick(){
+  onAddaddressClick() {
     this.router.navigate(['addaddress'])
   }
   onUnitClick(unitId: any) {
@@ -82,24 +82,7 @@ export class PaymentPage implements OnInit {
     console.log(unitId);
     this.unitSelected = unitId;
   }
-  async presentAlert() {
-    const alert = await this.alertCtrl.create({
-      message: 'กรุณาเพิ่มที่อยู่จัดส่งใหม่',
-      buttons: [
-        {
-          text: 'ยกเลิก',
-          handler: (blah) => {
-          }
-        }, {
-          text: 'เพิ่ม',
-          handler: () => {
-            this.router.navigate(['addaddress'])
-          }
-        }
-      ]
-    });
-    await alert.present();
-  }
+  
 
   async selectDownModal() {
     const modal = await this.modalController.create({
@@ -142,7 +125,7 @@ export class PaymentPage implements OnInit {
     });
     return await modal.present();
   }
-  
+
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
       header: 'วิธีการชำระเงิน',
@@ -161,20 +144,54 @@ export class PaymentPage implements OnInit {
     await actionSheet.present();
   }
 
+  async presentAlert() {
+    const alert = await this.alertCtrl.create({
+      message: 'กรุณาเพิ่มที่อยู่จัดส่งใหม่',
+      buttons: [
+        {
+          text: 'ยกเลิก',
+          handler: (blah) => {
+          }
+        }, {
+          text: 'เพิ่ม',
+          handler: () => {
+            this.router.navigate(['addaddress'])
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+  async AcceptAlert() {
+    const alert = await this.alertCtrl.create({
+      message: 'การผ่อนชำระต้องได้รับความยินยอมข้อตกลงการใช้บริการ',
+      buttons: [
+        {
+          text: 'ดูอีกครั้ง',
+          handler: (blah) => {
+          }
+        }, {
+          text: 'เห็นด้วย',
+          handler: () => {
+            this.router.navigate(['payfor'])
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
 
-
-  
   onOpenlistClick() {
     console.log("onOpenlistClick");
   }
 
-  
-  onScroll($event: CustomEvent<ScrollDetail>) {
-    if ($event && $event.detail && $event.detail.scrollTop) {
-      const scrollTop = $event.detail.scrollTop;
-      this.showToolbar = scrollTop >= 50;
-    }
-  }
+
+  // onScroll($event: CustomEvent<ScrollDetail>) {
+  //   if ($event && $event.detail && $event.detail.scrollTop) {
+  //     const scrollTop = $event.detail.scrollTop;
+  //     this.showToolbar = scrollTop >= 50;
+  //   }
+  // }
 
 
 }

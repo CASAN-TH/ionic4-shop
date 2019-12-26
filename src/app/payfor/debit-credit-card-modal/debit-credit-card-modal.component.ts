@@ -3,6 +3,7 @@ import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { PayforService } from '../payfor.service';
 import { BankModalComponent } from '../bank-modal/bank-modal.component';
+import { RecommendedMethodModalComponent } from '../recommended-method-modal/recommended-method-modal.component';
 
 @Component({
   selector: 'app-debit-credit-card-modal',
@@ -37,6 +38,16 @@ export class DebitCreditCardModalComponent implements OnInit {
       component: BankModalComponent,
       componentProps: {
         bankData: this.bankData
+      }
+    });
+    return await modal.present();
+  }
+
+  async RecommendedMethodModal() {
+    const modal = await this.modalController.create({
+      component: RecommendedMethodModalComponent,
+      componentProps: {
+        // ReviewData: this.ReviewData
       }
     });
     return await modal.present();
