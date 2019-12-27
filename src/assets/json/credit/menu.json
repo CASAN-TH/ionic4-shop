@@ -5,27 +5,27 @@
         "menus": [
             {
                 "name": "ข้อมูลผู้ติดต่อ",
-                "detail": "เพิ่มวงเงินได้สูงสุด B1000",
+                "detail": "เพิ่มวงเงินได้สูงสุด B1,000",
                 "image": "../../../assets/images/menu/contact.png"
             },
             {
                 "name": "สถานภาพสมรส",
-                "detail": "เพิ่มวงเงินได้สูงสุด B2200",
+                "detail": "เพิ่มวงเงินได้สูงสุด B2,200",
                 "image": "../../../assets/images/menu/marriage.png"
             },
             {
                 "name": "บุคคลติดต่อฉุกเฉิน",
-                "detail": "เพิ่มวงเงินได้สูงสุด B3000",
+                "detail": "เพิ่มวงเงินได้สูงสุด B3,000",
                 "image": "../../../assets/images/menu/second.png"
             },
             {
                 "name": "เอกสารสินทรัพย์",
-                "detail": "เพิ่มวงเงินได้สูงสุด B2000",
+                "detail": "เพิ่มวงเงินได้สูงสุด B2,000",
                 "image": "../../../assets/images/menu/asset.png"
             },
             {
                 "name": "ข้อมูลอาชีพ",
-                "detail": "เพิ่มวงเงินได้สูงสุด B5000",
+                "detail": "เพิ่มวงเงินได้สูงสุด B5,000",
                 "image": "../../../assets/images/menu/job.png"
             }
         ]

@@ -58,15 +58,13 @@
 
         <ion-item no-padding class="item-border-right">
           <ion-label>{{debitcreditcardData.card_number.name}}</ion-label>
-          <ion-input class="font-title-content" text-end
-            [(ngModel)]="debitcreditcardData.card_number.please_enter_card">
+          <ion-input class="font-title-content" text-end placeholder="กรุณาใส่หมายเลขบัตร">
           </ion-input>
         </ion-item>
 
         <ion-item no-padding class="item-border-right">
           <ion-label>{{debitcreditcardData.account_name.name}}</ion-label>
-          <ion-input class="font-title-content" text-end
-            [(ngModel)]="debitcreditcardData.account_name.please_enter_name">
+          <ion-input class="font-title-content" text-end placeholder="กรุณาใส่ชื่อบนบัตร">
           </ion-input>
         </ion-item>
 
@@ -79,7 +77,7 @@
 
         <ion-item no-padding class="item-border-right">
           <ion-label>{{debitcreditcardData.cvv_or_ccv.name}}</ion-label>
-          <ion-input class="font-title-content" text-end [(ngModel)]="debitcreditcardData.cvv_or_ccv.card_back_code">
+          <ion-input class="font-title-content" text-end placeholder="โปรดป้อน CVV หรือ CCV">
           </ion-input>
         </ion-item>
 

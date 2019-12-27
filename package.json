@@ -41,6 +41,7 @@
     "cordova-plugin-facebook4": "^6.2.0",
     "core-js": "^2.5.4",
     "ionic2-super-tabs": "^5.2.0",
+    "numeral": "^2.0.6",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"

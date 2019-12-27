@@ -7,6 +7,7 @@ import { ModalMyorderComponent } from './modal-myorder/modal-myorder.component';
 import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
 import { ModalLanguageComponent } from './modal-language/modal-language.component';
 import { ModalCreditPointComponent } from '../credit/modal-credit-point/modal-credit-point.component';
+import { ModalBillsComponent } from '../credit/modal-bills/modal-bills.component';
 
 @Component({
   selector: 'app-account',
@@ -22,6 +23,7 @@ export class AccountPage implements OnInit {
   showToolbar: boolean;
   AddressData: any;
   creditDatas: any;
+  CartDataList: any;
   BillDataList: any;
  
 ;
@@ -60,9 +62,14 @@ export class AccountPage implements OnInit {
       // console.log(AddressData);
       this.AddressData = AddressData.address;
     })
-    this.accountService.onBillDataListChanged.subscribe((BillDataList: any) => {
-      console.log(BillDataList);
-      this.BillDataList = BillDataList.carts;
+    this.accountService.onCartDataListChanged.subscribe((CartDataList: any) => {
+      // console.log(CartDataList);
+      this.CartDataList = CartDataList.carts;
+    })
+    this.accountService.onBillDataChanged.subscribe((BillDataList: any) => {
+      // console.log(BillDataList);
+      this.BillDataList = BillDataList;
+      console.log(this.BillDataList);
     })
   }
 
@@ -114,7 +121,7 @@ export class AccountPage implements OnInit {
     const modal = await this.modalController.create({
       component: ModalMyorderComponent,
       componentProps: {
-        BillDataList: this.BillDataList
+        CartDataList: this.CartDataList
       }
     });
     return await modal.present();
@@ -136,8 +143,14 @@ export class AccountPage implements OnInit {
     console.log("onToReviewsViellAllMyOrdersPage");
   }
 
-  onToViewAllMyBills() {
-    console.log("onToViewAllMyBills");
+  async openModalBills() {
+    const modal = await this.modalController.create({
+      component: ModalBillsComponent,
+      componentProps: {
+        billData: this.BillDataList
+      }
+    });
+    return await modal.present();
   }
 
   async creditPointModal() {

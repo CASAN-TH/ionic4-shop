@@ -225,8 +225,8 @@
             <ion-col size="12">
               <ion-row *ngIf="data.period_option && data.period_option.length">
                 <ion-col class="per" size="2.5" text-center *ngFor="let period of data.period_option"
-                  [class.ion-col-border]="period._id == percenSelected" (click)="onUnitClick(period._id)">
-                  <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="period._id == percenSelected">
+                  [class.ion-col-border]="period._id == unitSelected" (click)="onUnitClick(period._id)">
+                  <ion-icon class="ion-item-unitSelected" name="checkbox" *ngIf="period._id == unitSelected">
                   </ion-icon>
                   <span>{{period.period}}{{period.unit}}</span>
                 </ion-col>
