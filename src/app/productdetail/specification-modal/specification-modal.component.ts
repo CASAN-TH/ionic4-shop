@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-specification-modal',
@@ -14,7 +15,7 @@ export class SpecificationModalComponent implements OnInit {
 
   @Input() SpecificationData: any
 
-  constructor(public modalController: ModalController) { }
+  constructor(public modalController: ModalController, private router: Router) { }
 
   ngOnInit() {
     this.specColorSelected = this.SpecificationData.color
@@ -41,6 +42,17 @@ export class SpecificationModalComponent implements OnInit {
     console.log(specVertionId);
     this.specVertionSelected = specVertionId;
     this.SpecificationData.version = specVertionId;
+  }
+
+  onCartClick() {
+    console.log("onCartClick");
+    this.modalController.dismiss();
+    this.router.navigateByUrl('tabs/cart');
+  }
+  onPaymentClick(paymentId: any) {
+    console.log("onPaymentClick");
+    this.modalController.dismiss();
+    this.router.navigateByUrl('payment/' + paymentId);
   }
 
 }
