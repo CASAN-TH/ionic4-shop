@@ -17,7 +17,7 @@ export class ModalMyorderComponent implements OnInit {
     private router: Router
   ) { }
 
-    
+
 
   ngOnInit() {
     console.log(this.CartDataList);
@@ -27,7 +27,7 @@ export class ModalMyorderComponent implements OnInit {
     this.modalController.dismiss();
   }
 
-  ToSearchPage(){
+  ToSearchPage() {
     this.router.navigate(["search-history"]);
     this.modalController.dismiss();
   }
@@ -35,6 +35,10 @@ export class ModalMyorderComponent implements OnInit {
   ToHomePage() {
     this.modalController.dismiss();
     this.router.navigate(["tabs/home"]);
+  }
+
+  onToSettingPage() {
+    console.log("onToSettingPage");
   }
 
 }
