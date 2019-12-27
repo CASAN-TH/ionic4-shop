@@ -35,7 +35,7 @@ export class ModalCreditPointComponent implements OnInit {
     this.currencyTemporary = temporary
   }
 
-  onFinish() {
+  goBackClick() {
     this.modalCtrl.dismiss();
   }
 
