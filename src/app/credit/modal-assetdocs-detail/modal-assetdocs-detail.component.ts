@@ -56,7 +56,13 @@ export class ModalAssetdocsDetailComponent implements OnInit {
   async openCamera(index) {
     // console.log(index);
     const modal = await this.modalCtrl.create({
-      component: ModalCameraComponent
+      component: ModalCameraComponent,
+      cssClass: 'modal-camera-style',
+      componentProps: {
+        modalData: {
+          actionType: "regular"
+        }
+      }
     });
     modal.onDidDismiss().then(url => {
       // console.log(url.data)

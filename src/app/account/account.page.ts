@@ -22,6 +22,8 @@ export class AccountPage implements OnInit {
   showToolbar: boolean;
   AddressData: any;
   creditDatas: any;
+  BillDataList: any;
+ 
 ;
 
   constructor(private router: Router, private accountService: AccountService, 
@@ -57,6 +59,10 @@ export class AccountPage implements OnInit {
     this.accountService.onAddressDataListChanged.subscribe((AddressData) => {
       // console.log(AddressData);
       this.AddressData = AddressData.address;
+    })
+    this.accountService.onBillDataListChanged.subscribe((BillDataList: any) => {
+      console.log(BillDataList);
+      this.BillDataList = BillDataList.carts;
     })
   }
 
@@ -107,6 +113,9 @@ export class AccountPage implements OnInit {
   async ModalViellAllMyOrdersPage() {
     const modal = await this.modalController.create({
       component: ModalMyorderComponent,
+      componentProps: {
+        BillDataList: this.BillDataList
+      }
     });
     return await modal.present();
   }
