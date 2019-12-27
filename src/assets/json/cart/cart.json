@@ -84,7 +84,8 @@
                     "currency_discount": "-฿",
                     "shipingfree": "0",
                     "currency": "฿",
-                    "total_price": "15,350"
+                    "total_price": "15,350",
+                    "note":""
                 }
             },
             {
@@ -150,7 +151,8 @@
                     "currency_discount": "-฿",
                     "shipingfree": "0",
                     "currency": "฿",
-                    "total_price": "14,900"
+                    "total_price": "14,900",
+                    "note":""
                 }
             }
         ],
