@@ -87,16 +87,14 @@
     <ion-col size="12">
       <ion-grid>
         <ion-item no-padding lines="none" (click)="RecommendedMethodModal()">
-          <ion-row>
-            <ion-col size="3">
-              <div>
-                <img class="KPLUS-icon" [src]="item.bank_img">
-              </div>
-            </ion-col>
-            <ion-col size="7">
-              <p class="namebank">{{item.bank_name}}</p>
-            </ion-col>
-          </ion-row>
+
+          <ion-thumbnail slot="start">
+            <img class="icon-image" [src]="item.bank_img">
+          </ion-thumbnail>
+          <ion-label class="ion-text-wrap">
+            <h3 class="font-title-content">{{item.bank_name}}</h3>
+          </ion-label>
+         
           <ion-note text-end>
             <ion-buttons class="btn-end">
               <ion-button>
@@ -121,16 +119,20 @@
     <ion-col size="12">
       <ion-grid>
         <ion-item no-padding (click)="DebitCreditCardModal()">
-          <ion-row>
-            <ion-col size="3">
-              <div>
-                <img class="icon-image" src="https://image.flaticon.com/icons/png/512/1124/1124183.png">
-              </div>
+
+          <ion-thumbnail slot="start">
+            <img class="icon-image" src="https://image.flaticon.com/icons/png/512/1124/1124183.png">
+          </ion-thumbnail>
+          <ion-label class="ion-text-wrap">
+            <h3 class="font-title-content">{{payforData.debit_name}}</h3>
+
+          </ion-label>
+          <ion-label>
+            <ion-col size="1.5" *ngFor="let item of debitcreditcardData.debit">
+              <img class="debit-image" [src]="item">
             </ion-col>
-            <ion-col size="7">
-              <p>{{payforData.debit_name}}</p>
-            </ion-col>
-          </ion-row>
+          </ion-label>
+
           <ion-note text-end>
             <ion-buttons class="btn-end">
               <ion-button>
@@ -141,16 +143,20 @@
         </ion-item>
 
         <ion-item no-padding lines="none" (click)="OnlineBankingModal()">
-          <ion-row>
-            <ion-col size="3">
-              <div>
-                <img class="icon-image" src="https://image.flaticon.com/icons/png/512/1378/1378726.png">
-              </div>
+
+          <ion-thumbnail slot="start">
+            <img class="icon-image" src="https://image.flaticon.com/icons/png/512/1378/1378726.png">
+          </ion-thumbnail>
+          <ion-label class="ion-text-wrap">
+            <h3 class="font-title-content">{{payforData.online_name}}</h3>
+
+          </ion-label>
+          <ion-label>
+            <ion-col size="1.5" *ngFor="let item of onlinebankingData.bank">
+              <img class="debit-image" [src]="item.image">
             </ion-col>
-            <ion-col size="7">
-              <p>{{payforData.online_name}}</p>
-            </ion-col>
-          </ion-row>
+          </ion-label>
+
           <ion-note text-end>
             <ion-buttons class="btn-end">
               <ion-button>
@@ -174,16 +180,20 @@
     <ion-col size="12">
       <ion-grid>
         <ion-item no-padding (click)="ATMPaymentModal()">
-          <ion-row>
-            <ion-col size="3">
-              <div>
-                <img class="icon-image" src="https://image.flaticon.com/icons/png/512/2385/2385270.png">
-              </div>
+
+          <ion-thumbnail slot="start">
+            <img class="icon-image" src="https://image.flaticon.com/icons/png/512/2385/2385270.png">
+          </ion-thumbnail>
+          <ion-label class="ion-text-wrap">
+            <h3 class="font-title-content">{{payforData.atm_name}}</h3>
+
+          </ion-label>
+          <ion-label>
+            <ion-col size="1.5" *ngFor="let item of atm_paymentData.bank">
+              <img class="debit-image" [src]="item.image">
             </ion-col>
-            <ion-col size="7">
-              <p>{{payforData.atm_name}}</p>
-            </ion-col>
-          </ion-row>
+          </ion-label>
+
           <ion-note text-end>
             <ion-buttons class="btn-end">
               <ion-button>
@@ -194,16 +204,20 @@
         </ion-item>
 
         <ion-item no-padding lines="none" (click)="CounterPaymentModal()">
-          <ion-row>
-            <ion-col size="3">
-              <div>
-                <img class="icon-image" src="https://image.flaticon.com/icons/png/512/1425/1425003.png">
-              </div>
+
+          <ion-thumbnail slot="start">
+            <img class="icon-image" src="https://image.flaticon.com/icons/png/512/1425/1425003.png">
+          </ion-thumbnail>
+          <ion-label class="ion-text-wrap">
+            <h3 class="font-title-content">{{payforData.counter_name}}</h3>
+
+          </ion-label>
+          <ion-label>
+            <ion-col size="1.5" *ngFor="let item of counter_paymentData.counter_service.counter">
+              <img class="debit-image" [src]="item.image">
             </ion-col>
-            <ion-col size="7">
-              <p>{{payforData.counter_name}}</p>
-            </ion-col>
-          </ion-row>
+          </ion-label>
+
           <ion-note text-end>
             <ion-buttons class="btn-end">
               <ion-button>
@@ -216,5 +230,5 @@
       </ion-grid>
     </ion-col>
   </ion-row>
-  
+
 </ion-content>
