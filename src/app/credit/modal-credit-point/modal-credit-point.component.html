@@ -8,7 +8,7 @@
     <ion-row class="ion-padding-top">
       <ion-col size="12" class="ion-text-center">
         <div>วงเงินที่เหลือ</div>
-        <div class="point-size">{{creditPoint.credit.creditremain}}</div>
+        <div class="point-size">{{currencyRemain}}</div>
         <ion-progress-bar class="ion-margin-top	ion-margin-bottom" [value]="progressData"></ion-progress-bar>
       </ion-col>
     </ion-row>
@@ -16,15 +16,15 @@
   <ion-list>
     <ion-item>
       <ion-label>วงเงินทั้งหมด</ion-label>
-      <ion-note slot="end">{{creditPoint.credit.creditall}}</ion-note>
+      <ion-note slot="end">{{currencyAll}}</ion-note>
     </ion-item>
     <ion-item>
       <ion-label>วงเงินคงที่</ion-label>
-      <ion-note slot="end">{{creditPoint.credit.creditstable}}</ion-note>
+      <ion-note slot="end">{{currencyStable}}</ion-note>
     </ion-item>
     <ion-item>
       <ion-label>วงเงินชั่วคราว</ion-label>
-      <ion-note slot="end">{{creditPoint.credit.credittemporary}}</ion-note>
+      <ion-note slot="end">{{currencyTemporary}}</ion-note>
     </ion-item>
   </ion-list>
 </ion-content>
