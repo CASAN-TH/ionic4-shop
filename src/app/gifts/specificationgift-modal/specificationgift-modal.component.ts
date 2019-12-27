@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-specificationgift-modal',
@@ -14,7 +15,7 @@ export class SpecificationgiftModalComponent implements OnInit {
   specImageSelected: any;
   specVertionSelected: any;
 
-  constructor(public modalController: ModalController) { }
+  constructor(public modalController: ModalController, private router: Router) { }
 
   ngOnInit() {
 
@@ -37,5 +38,17 @@ export class SpecificationgiftModalComponent implements OnInit {
     this.SpecificationgiftData.image = specImage;
 
   }
+
+  onCartClick() {
+    console.log("onCartClick");
+    this.modalController.dismiss();
+    this.router.navigateByUrl('tabs/cart');
+  }
+  onPaymentClick(paymentId: any) {
+    console.log("onPaymentClick");
+    this.modalController.dismiss();
+    this.router.navigateByUrl('payment/' + paymentId);
+  }
+
 
 }
