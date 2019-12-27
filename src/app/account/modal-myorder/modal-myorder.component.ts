@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ModalMyorderComponent implements OnInit {
 
-  @Input() BillDataList: any
+  @Input() CartDataList: any
 
 
   constructor(
@@ -20,7 +20,7 @@ export class ModalMyorderComponent implements OnInit {
     
 
   ngOnInit() {
-    console.log(this.BillDataList);
+    console.log(this.CartDataList);
   }
 
   ModalDismiss() {

@@ -88,3 +88,28 @@ ion-card {
   height: 32px;
   width: 32px;
 }
+
+.btn-paybill {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text-price {
+  color: #f25454;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.text-paydate {
+  color: #f25454;
+}
+
+.margin-row {
+  margin-top: -19px;
+  margin-bottom: -18px;
+}
+
+.btn-pay-radius {
+    height: 32px;
+    margin-top: 5px;
+}
