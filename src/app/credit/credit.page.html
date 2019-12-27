@@ -19,7 +19,7 @@
       <ion-col size="12" class="ion-text-center ion-no-padding">
         <div>วงเงินที่ใช้ได้</div>
         <div *ngIf="creditPoint && creditPoint.credit" class="point-size">
-          {{creditPoint.credit.creditremain}}
+          {{creditCurrency}}
         </div>
         <div *ngIf="!creditPoint" class="point-size">
           --
@@ -51,7 +51,7 @@
               วงเงินที่ใช้ได้
             </div>
             <div *ngIf="creditPoint && creditPoint.credit" class="font-title-subheader">
-              โดยสิ้นเชิง {{creditPoint.credit.creditremain}}
+              โดยสิ้นเชิง {{creditCurrency}}
             </div>
             <div *ngIf="!creditPoint" class="font-title-subheader">
               โดยสิ้นเชิง --

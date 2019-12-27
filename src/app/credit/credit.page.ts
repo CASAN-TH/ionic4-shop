@@ -24,6 +24,9 @@ export class CreditPage implements OnInit {
   creditPoint: any;
   showToolbar = false;
 
+  numeral = require('numeral');
+  creditCurrency: any;
+
   url: any;
   status: any;
 
@@ -51,7 +54,11 @@ export class CreditPage implements OnInit {
     });
     this.creditService.onCreditPointChanged.subscribe((point: any) => {
       this.creditPoint = point
-      // console.log(this.creditPoint);
+      // console.log(this.creditPoint.credit.creditremain);
+      const dataNum = this.numeral(this.creditPoint.credit.creditremain).format('0,0');
+      // console.log(dataNum)
+      this.creditCurrency = dataNum
+      // console.log(this.creditCurrency)
     });
     this.creditService.onCreditStatusChanged.subscribe((status: any) => {
       this.status = status;
