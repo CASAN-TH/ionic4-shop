@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ModalMyorderComponent implements OnInit {
 
-  @Input() BillDataList: any
+  @Input() CartDataList: any
 
 
   constructor(
@@ -17,17 +17,17 @@ export class ModalMyorderComponent implements OnInit {
     private router: Router
   ) { }
 
-    
+
 
   ngOnInit() {
-    console.log(this.BillDataList);
+    console.log(this.CartDataList);
   }
 
   ModalDismiss() {
     this.modalController.dismiss();
   }
 
-  ToSearchPage(){
+  ToSearchPage() {
     this.router.navigate(["search-history"]);
     this.modalController.dismiss();
   }
@@ -35,6 +35,10 @@ export class ModalMyorderComponent implements OnInit {
   ToHomePage() {
     this.modalController.dismiss();
     this.router.navigate(["tabs/home"]);
+  }
+
+  onToSettingPage() {
+    console.log("onToSettingPage");
   }
 
 }

@@ -1,3 +1,17 @@
 ion-item {
     font-size: 13px;
 }
+
+ion-toolbar {
+    --background: #f25454;
+    --ion-color-base: #f25454 !important;
+    color: #ffffff;
+}
+
+.btn-back-position {
+    position: absolute;
+}
+
+.arrow-back {
+    color: white;
+}

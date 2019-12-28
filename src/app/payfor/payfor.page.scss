@@ -30,6 +30,7 @@
 .font-title {
   margin-bottom: 0px;
 }
+
 .online_title {
   margin-bottom: 0px;
 }
@@ -51,17 +52,24 @@ ion-content {
   --padding-top: -100px !important;
   --background: rgb(241, 235, 235) !important;
 }
-.KPLUS-icon {
-  width: 80%;
-  margin-left: -5px;
+// .KPLUS-icon {
+//   width: 80%;
+//   margin-left: -5px;
+// }
+// .icon-image {
+//   width: 40%;
+//   padding-top: 10%;
+// }
+.debit-image {
+  width: 30%;
 }
-.icon-image {
-  width: 60%;
-  padding-top: 12%;
+.font-title-content {
+  font-size: 12px;
+  // padding-right: 5px;
 }
-.btn-end {
-  padding-left: 20px;
-}
+// .btn-end {
+//   padding-left: 20px;
+// }
 // .button-select {
 //   margin-left: 54px;
 //   color: #c5bfbf;

@@ -25,8 +25,11 @@ export class AccountService {
     }
   });
   onAccountScoreDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onAddressDataListChanged :  BehaviorSubject<any> = new BehaviorSubject({});
-  onBillDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onAddressDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onCartDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onBillDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "u_id": ""
+  });
 
   constructor(private http: HttpClient) { }
 
@@ -48,7 +51,8 @@ export class AccountService {
       this.getCreditData();
       this.getAccountScoreData();
       this.getAddressDataList();
-      this.getBillDataList();
+      this.getCartDataList();
+      this.getBillData();
     }
     return;
   }
@@ -176,16 +180,30 @@ export class AccountService {
     })
   }
 
-  getBillDataList(): Observable<any> | Promise<any> | any {
+  getCartDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if (mockup) {
         this.http.get('../../assets/json/cart/cart.json').subscribe((res: any) => {
-          this.onBillDataListChanged.next(res.data);
-        },reject)
-      }else{
+          this.onCartDataListChanged.next(res.data);
+        }, reject)
+      } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onBillDataListChanged.next(res.data);
-        },reject)
+          this.onCartDataListChanged.next(res.data);
+        }, reject)
+      }
+    })
+  }
+
+  getBillData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/credit/bill.json').subscribe((res: any) => {
+          this.onBillDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url + '/api/billbyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onBillDataChanged.next(res.data);
+        }, reject)
       }
     })
   }

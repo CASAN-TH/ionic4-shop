@@ -3,32 +3,21 @@
     <ion-title>บัญชี</ion-title>
     <ion-buttons mode="ios" slot="end">
       <ion-button (click)="onToMessagePage()">
-        <ion-icon
-          slot="icon-only"
-          class="icon-header"
-          color="light"
+        <ion-icon slot="icon-only" class="icon-header" color="light"
           src="https://image.flaticon.com/icons/svg/126/126501.svg">
         </ion-icon>
       </ion-button>
 
       <ion-button (click)="onToSettingPage()">
-        <ion-icon
-          slot="icon-only"
-          class="icon-header"
-          color="light"
-          src="https://image.flaticon.com/icons/svg/126/126472.svg"
-        >
+        <ion-icon slot="icon-only" class="icon-header" color="light"
+          src="https://image.flaticon.com/icons/svg/126/126472.svg">
         </ion-icon>
       </ion-button>
 
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-content
-  padding
-  fullscreen="true"
-  [scrollEvents]="true"
-  (ionScroll)="onScroll($event)">
+<ion-content padding fullscreen="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
   <!-- User Profile Header -->
   <ion-row>
     <ion-col size="9">
@@ -82,9 +71,9 @@
   <!-- End รายการโปรด ร้านค้าที่ติดตาม ประวัติการเข้าชม -->
 
   <!-- รายการสั่งซื้อ -->
-  <ion-card class="ion-text-center" (click)="ModalViellAllMyOrdersPage()">
+  <ion-card class="ion-text-center">
     <ion-grid>
-      <ion-item class="ion-no-margin ion-no-padding" >
+      <ion-item class="ion-no-margin ion-no-padding" (click)="ModalViellAllMyOrdersPage()">
         <ion-col size="8">
           <p class="title-font">รายการสั่งซื้อของฉัน</p>
         </ion-col>
@@ -99,39 +88,27 @@
       </ion-item>
 
       <ion-row class="ion-text-center" class="ion-padding-top">
-        <ion-col size="3" >
+        <ion-col size="3">
           <div class="ion-justify-content-center">
-            <img
-              class="icon"
-              src="https://image.flaticon.com/icons/svg/1086/1086741.svg"
-            />
+            <img class="icon" src="https://image.flaticon.com/icons/svg/1086/1086741.svg" />
           </div>
           <p class="font-13">รอชำระเงิน</p>
         </ion-col>
-        <ion-col size="3" >
+        <ion-col size="3">
           <div class="ion-justify-content-center">
-            <img
-              class="icon"
-              src="https://image.flaticon.com/icons/svg/164/164414.svg"
-            />
+            <img class="icon" src="https://image.flaticon.com/icons/svg/164/164414.svg" />
           </div>
           <p class="font-13">รอการจัดส่ง</p>
         </ion-col>
-        <ion-col size="3" >
+        <ion-col size="3">
           <div class="ion-justify-content-center">
-            <img
-              class="icon"
-              src="https://image.flaticon.com/icons/svg/1493/1493693.svg"
-            />
+            <img class="icon" src="https://image.flaticon.com/icons/svg/1493/1493693.svg" />
           </div>
           <p class="font-13">รอรับสินค้า</p>
         </ion-col>
-        <ion-col size="3" >
+        <ion-col size="3">
           <div class="ion-justify-content-center">
-            <img
-              class="icon"
-              src="https://image.flaticon.com/icons/svg/1055/1055673.svg"
-            />
+            <img class="icon" src="https://image.flaticon.com/icons/svg/1055/1055673.svg" />
           </div>
           <p class="font-13">รอการรีวิว</p>
         </ion-col>
@@ -142,25 +119,53 @@
 
   <!-- บิลของฉัน -->
   <ion-card>
-    <ion-grid *ngIf="accountData">
+    <ion-grid *ngIf="accountData" (click)="openModalBills()">
       <ion-item class="ion-no-margin ion-no-padding">
         <ion-col size="8">
           <p class="title-font">บิลของฉัน</p>
         </ion-col>
         <ion-col size="4">
           <ion-buttons>
-            <ion-button class="more" (click)="onToViewAllMyBills()">
+            <ion-button class="more">
               ดูทั้งหมด
               <ion-icon mode="ios" name="arrow-forward"></ion-icon>
             </ion-button>
           </ion-buttons>
         </ion-col>
       </ion-item>
-      <ion-row>
-        <div class="ion-padding-start">
-          <h5>ยังไม่มีบิล</h5>
-        </div>
-      </ion-row>
+
+      <div *ngIf="BillDataList.u_id ===''">
+        <ion-row>
+          <div class="ion-padding-start">
+            <h5>ยังไม่มีบิล</h5>
+          </div>
+        </ion-row>
+      </div>
+
+
+      <div *ngIf="BillDataList.u_id !==''">
+        <ion-row>
+          <ion-col size="12">
+            <p>บิล {{BillDataList.bills[0].bill_month}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row class="margin-row">
+          <ion-col size="6">
+            <ion-text class="text-price">฿ {{BillDataList.bills[0].bill_price}}</ion-text>
+          </ion-col>
+          <ion-col size="6" class="btn-paybill">
+            <ion-button color="primary" class="btn-pay-radius">ชำระเงินทันที</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <p class="text-paydate">
+              วันที่ครบกำหนดคือ : {{BillDataList.bills[0].bill_datelimit}}
+            </p>
+          </ion-col>
+        </ion-row>
+      </div>
+
     </ion-grid>
 
     <ion-row *ngIf="!accountData">
@@ -187,7 +192,7 @@
           <p class="title-font">สิทธิประโยชน์ของฉัน</p>
         </ion-col>
         <ion-col size="4">
-          
+
         </ion-col>
       </ion-item>
       <ion-row *ngIf="accountData">
@@ -234,11 +239,7 @@
   <!-- โปรโมชั่น -->
   <ion-card>
     <ion-row>
-      <ion-col
-        size="6"
-        *ngFor="let promo of promotionData.promotions"
-        (click)="onToPromotion(promo.name)"
-      >
+      <ion-col size="6" *ngFor="let promo of promotionData.promotions" (click)="onToPromotion(promo.name)">
         <img [src]="promo.image" />
       </ion-col>
     </ion-row>
@@ -250,37 +251,25 @@
     <ion-row class="ion-padding-top">
       <ion-col size="3" (click)="onToHelpCenterPage()">
         <div class="ion-justify-content-center">
-          <img
-            class="icon1"
-            src="https://image.flaticon.com/icons/svg/149/149150.svg"
-          />
+          <img class="icon1" src="https://image.flaticon.com/icons/svg/149/149150.svg" />
         </div>
         <p>ศูนย์ช่วยเหลือ</p>
       </ion-col>
       <ion-col size="3" (click)="onToCuustomerServicePage()">
         <div class="ion-justify-content-center">
-          <img
-            class="icon1"
-            src="https://image.flaticon.com/icons/svg/223/223494.svg"
-          />
+          <img class="icon1" src="https://image.flaticon.com/icons/svg/223/223494.svg" />
         </div>
         <p>ติดต่อฝ่ายบริการลูกค้า</p>
       </ion-col>
       <ion-col size="3" (click)="ModalLanguage()">
         <div class="ion-justify-content-center">
-          <img
-            class="icon1"
-            src="https://image.flaticon.com/icons/svg/984/984204.svg"
-          />
+          <img class="icon1" src="https://image.flaticon.com/icons/svg/984/984204.svg" />
         </div>
         <p>ภาษา</p>
       </ion-col>
       <ion-col size="3" (click)="addresslModal()">
         <div class="ion-justify-content-center">
-          <img
-            class="icon1"
-            src="https://image.flaticon.com/icons/svg/149/149441.svg"
-          />
+          <img class="icon1" src="https://image.flaticon.com/icons/svg/149/149441.svg" />
         </div>
         <p>ที่อยู่รับสินค้า</p>
       </ion-col>

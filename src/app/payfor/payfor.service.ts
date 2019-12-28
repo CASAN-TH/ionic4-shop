@@ -37,7 +37,9 @@ export class PayforService {
     "manual": {},
     "phone_number": {},
     "email": {},
-    "fee": {}
+    "fee": {},
+    "counter_service":{},
+    "counter_bank":{}
   });
   onPayforDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 

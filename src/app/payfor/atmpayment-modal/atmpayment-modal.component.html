@@ -29,11 +29,11 @@
       <ion-grid>
         <ion-item>
           <ion-label>{{atm_paymentData.phone_number.name}}</ion-label>
-          <ion-input text-end [(ngModel)]="atm_paymentData.phone_number.tel"></ion-input>
+          <ion-input text-end placeholder="66-0800871773"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>{{atm_paymentData.email.name}}</ion-label>
-          <ion-input text-end [(ngModel)]="atm_paymentData.email.mail"></ion-input>
+          <ion-input text-end placeholder="porapot12@gmail.com"></ion-input>
         </ion-item>
       </ion-grid>
 
@@ -75,7 +75,8 @@
 <ion-footer>
   <ion-grid class="grid-footter">
     <ion-buttons class="btn-center">
-      <ion-button class="btn-footer" [disabled]="!atm_paymentData.bank.id" (click)="AtmBillModal()">ชำระตอนนี้ {{payforData.cerren}} {{payforData.amount}}</ion-button>
+      <ion-button class="btn-footer" [disabled]="!atm_paymentData.bank.id" (click)="AtmBillModal()">ชำระตอนนี้
+        {{payforData.cerren}} {{payforData.amount}}</ion-button>
     </ion-buttons>
   </ion-grid>
 </ion-footer>
