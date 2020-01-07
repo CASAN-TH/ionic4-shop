@@ -31,7 +31,7 @@
     </ion-col>
   </ion-row>
 
-  <ion-row>
+  <ion-row *ngIf="cartDataList && cartDataList.carts">
     <ion-col size="12">
       <ion-grid *ngFor="let cate of cartDataList.carts; let i = index;">
         <ion-row class="border">
