@@ -6,6 +6,9 @@
       </ion-button>
     </ion-buttons>
     <ion-title class="ion-text-center">บิลของฉัน</ion-title>
+    <div class="ion-text-end ion-padding-end" (click)="openMoreAction()">
+      ดูเพิ่มเติม
+    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -18,9 +21,9 @@
 <ion-content *ngIf="billData.u_id !== ''">
   <div class="color-header">
     <ion-row>
-      <ion-col size="4" class="date-header ion-text-left">
+      <ion-col size="4" class="date-header ion-text-left ion-padding-start">
         <div *ngIf="billData.bills[inx - 1]" (click)="onPreviousBill()">
-          <ion-icon mode="ios" name="arrow-back"></ion-icon>
+          <ion-icon class="icon-position" mode="ios" name="arrow-back"></ion-icon>
           {{billData.bills[inx - 1].bill_month}}
         </div>
       </ion-col>
@@ -30,10 +33,10 @@
         </div>
         <ion-icon class="icon-selected" name="remove"></ion-icon>
       </ion-col>
-      <ion-col size="4" class="date-header ion-text-end">
+      <ion-col size="4" class="date-header ion-text-end ion-padding-end">
         <div *ngIf="billData.bills[inx + 1]" (click)="onNextBill()">
           {{billData.bills[inx + 1].bill_month}}
-          <ion-icon mode="ios" name="arrow-forward"></ion-icon>
+          <ion-icon class="icon-position" mode="ios" name="arrow-forward"></ion-icon>
         </div>
       </ion-col>
     </ion-row>

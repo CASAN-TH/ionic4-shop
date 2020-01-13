@@ -1,0 +1,33 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons class="btn-back-position" mode="ios" slot="start" (click)="goBackClick()">
+      <ion-button>
+        <ion-icon mode="ios" slot="icon-only" class="arrow-back" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">ประวัติการคืนเงิน</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let item of paybackData.paybacks_history">
+    <div class="title-list">
+      {{item.payback_date}}
+    </div>
+    <ion-row *ngFor="let list of item.paybacks_list">
+      <ion-col class="col-left" size="8">
+        <div>
+          {{list.list_name}} ({{list.list_amount}} item)
+        </div>
+        <div class="price-position">
+          {{list.list_currency}}{{list.list_price}}
+        </div>
+      </ion-col>
+      <ion-col class="col-right" size="4">
+        <div class="status-position">
+          {{list.list_status}}
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

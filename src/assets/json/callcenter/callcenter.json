@@ -1,0 +1,56 @@
+{
+    "status": 200,
+    "data": {
+        "contacs_customer": [
+            {
+                "title": "สั่งซื้อ",
+                "subtitle": "การชำระเงินการจัดส่งหลังการขาย",
+                "image": "https://image.flaticon.com/icons/svg/2438/2438746.svg"
+            },
+            {
+                "title": "บิลการผ่อนชำระ",
+                "subtitle": "เครดิตการชำระคืน",
+                "image": "https://image.flaticon.com/icons/svg/2268/2268645.svg"
+            },
+            {
+                "title": "Thisshop กิจกรรม",
+                "subtitle": "การชำระเงินการจัดส่งหลังการขาย",
+                "image": "https://image.flaticon.com/icons/svg/415/415587.svg"
+            },
+            {
+                "title": "ระบบบัญชี",
+                "subtitle": "เข้าสู่ระบบลงทะเบียนบัญชี",
+                "image": "https://image.flaticon.com/icons/svg/1177/1177568.svg"
+            },
+            {
+                "title": "อื่นๆ",
+                "subtitle": "คำแนะนำการร้องเรียนข้อเสนอแนะ ฯลฯ",
+                "image": "https://image.flaticon.com/icons/svg/1177/1177519.svg"
+            }
+        ],
+        "contacts": {
+            "name": "ติดต่อเรา",
+            "social_facebook": {
+                "facebook_name": "@ThisshopOfficial",
+                "image": "http://www.highlandradio.com/wp-content/uploads/2015/04/facebook.jpeg"
+            },
+            "social_line": {
+                "line_name": "@Thisshop",
+                "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/75/68/d7/7568d72c-16af-7085-4eb3-dc5d048cd522/AppIcon-1x_U007emarketing-85-220-0-4.png/246x0w.jpg"
+            },
+            "mail": {
+                "mailname": "Service.thisshop@thaifintech.co.th",
+                "image": "https://image.flaticon.com/icons/svg/732/732200.svg"
+            },
+            "days": {
+                "phone_image": "https://image.flaticon.com/icons/svg/875/875602.svg",
+                "days_title_Monday": "Monday to Friday:",
+                "days_subtitle": "9:00-18:00 tel:02-105-4638 to 0",
+                "days_title_Saturday": "Saturday:",
+                "days_subtitle1": "10:00-17:00 tel:02-105-4638 to 0",
+                "days_subtitle2": "12:00-13:00 Break Time",
+                "days_subtitle3": "Service is closed on Sundays and Holidays"
+            }
+        }
+    }
+}

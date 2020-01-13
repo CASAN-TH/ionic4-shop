@@ -34,7 +34,6 @@ import { ModalNicknameComponent } from './pages/me/modal-nickname/modal-nickname
 import { ModalPhoneComponent } from './pages/me/modal-phone/modal-phone.component';
 import { ModalPasswordComponent } from './pages/me/modal-password/modal-password.component';
 import { ModalSocialComponent } from './pages/me/modal-social/modal-social.component';
-import { ModalBillsComponent } from './credit/modal-bills/modal-bills.component';
 import { ModalCreditPointComponent } from './credit/modal-credit-point/modal-credit-point.component';
 import { ModalContactComponent } from './credit/modal-contact/modal-contact.component';
 import { ModalMarriageComponent } from './credit/modal-marriage/modal-marriage.component';
@@ -59,6 +58,9 @@ import { ModalLanguageComponent } from './account/modal-language/modal-language.
 import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
 import { BillModalComponent } from './payfor/bill-modal/bill-modal.component';
 import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.component';
+import { SelectMenuComponent } from './productdetail/select-menu/select-menu.component';
+import { PaymentHistoryComponent } from './bill/payment-history/payment-history.component';
+import { PaybackHistoryComponent } from './bill/payback-history/payback-history.component';
 
 
 
@@ -96,7 +98,6 @@ import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.co
     SpecificationgiftModalComponent,
     ImformationspecgiftModalComponent,
 
-    ModalBillsComponent,
     ModalCreditPointComponent,
     ModalContactComponent,
     ModalMarriageComponent,
@@ -105,6 +106,9 @@ import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.co
     ModalAssetdocsDetailComponent,
     ModalJobComponent,
 
+    PaymentHistoryComponent,
+    PaybackHistoryComponent,
+
     RecommendedMethodModalComponent,
     DebitCreditCardModalComponent,
     BankModalComponent,
@@ -112,7 +116,9 @@ import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.co
     ATMPaymentModalComponent,
     CounterPaymentModalComponent,
     BillModalComponent,
-    AtmBillModalComponent
+    AtmBillModalComponent,
+
+    SelectMenuComponent
 
 
   ],
@@ -145,7 +151,6 @@ import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.co
     SpecificationgiftModalComponent,
     ImformationspecgiftModalComponent,
 
-    ModalBillsComponent,
     ModalCreditPointComponent,
     ModalContactComponent,
     ModalMarriageComponent,
@@ -154,6 +159,9 @@ import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.co
     ModalAssetdocsDetailComponent,
     ModalJobComponent,
 
+    PaymentHistoryComponent,
+    PaybackHistoryComponent,
+
     RecommendedMethodModalComponent,
     DebitCreditCardModalComponent,
     BankModalComponent,
@@ -161,7 +169,9 @@ import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.co
     ATMPaymentModalComponent,
     CounterPaymentModalComponent,
     BillModalComponent,
-    AtmBillModalComponent
+    AtmBillModalComponent,
+
+    SelectMenuComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,
