@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ModalBillsComponent } from './modal-bills.component';
+import { PaymentHistoryComponent } from './payment-history.component';
 
-describe('ModalBillsComponent', () => {
-  let component: ModalBillsComponent;
-  let fixture: ComponentFixture<ModalBillsComponent>;
+describe('PaymentHistoryComponent', () => {
+  let component: PaymentHistoryComponent;
+  let fixture: ComponentFixture<PaymentHistoryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModalBillsComponent ],
+      declarations: [PaymentHistoryComponent],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ModalBillsComponent);
+    fixture = TestBed.createComponent(PaymentHistoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
