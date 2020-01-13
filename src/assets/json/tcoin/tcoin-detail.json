@@ -1,0 +1,12 @@
+{
+    "status": 200,
+    "data": {
+        "mytcoin": "238",
+        "tcoinpromotion": [
+            {
+                "img": "https://pub.thisshop.com/shop/block/20191122/46509015_1574405762591.png?x-oss-process=image/resize,w_750/quality,q_80&quot",
+                "name": "fff"
+            }
+        ]
+    }
+}

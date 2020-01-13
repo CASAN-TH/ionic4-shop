@@ -202,7 +202,7 @@ export class AccountPage implements OnInit {
   }
 
   onToTcoinPage() {
-    console.log("onToTcoinPage");
+    this.router.navigate(['tcoin']);
   }
 
   onToCurrentAmountPage() {

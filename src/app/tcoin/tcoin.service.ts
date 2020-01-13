@@ -4,18 +4,18 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-const api_url = environment.apiUrl + '/api/settings/';
+const api_url = environment.apiUrl + '/api/tcoins/';
 const mockup = environment.mockup;
 
 @Injectable({
   providedIn: 'root'
 })
-export class SettingService {
+export class TcoinService {
   routeParams: any;
 
-  onSettingDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  onSettingDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onAboutDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onTcoinDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onTcoinDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onMyTcoinDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }
 
@@ -29,77 +29,77 @@ export class SettingService {
     this.routeParams = route.params;
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
     if (this.routeParams.id) {
-      this.getSettingData(this.routeParams.id);
+      this.getTcoinData(this.routeParams.id);
     } else {
-      this.getSettingDataList();
-      this.getAboutDataList();
+      this.getTcoinDataList();
+      this.getMyTcoinData();
     }
     return;
   }
 
-  getAboutDataList(): Observable<any> | Promise<any> | any {
+  getMyTcoinData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if(mockup){
-        this.http.get('../../assets/json/setting/about.json').subscribe((res: any) => {
-          this.onAboutDataListChanged.next(res.data);
+        this.http.get('../../assets/json/tcoin/tcoin-detail.json').subscribe((res: any) => {
+          this.onMyTcoinDataChanged.next(res.data);
         },reject)
       }else{
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onAboutDataListChanged.next(res.data);
+          this.onMyTcoinDataChanged.next(res.data);
         },reject)
       }
     })
   }
 
-  getSettingDataList(): Observable<any> | Promise<any> | any {
+  getTcoinDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if(mockup){
-        this.http.get('../../assets/json/setting/setting.json').subscribe((res: any) => {
-          this.onSettingDataListChanged.next(res.data);
+        this.http.get('../../assets/json/tcoin/tcoin.json').subscribe((res: any) => {
+          this.onTcoinDataListChanged.next(res.data);
         },reject)
       }else{
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onSettingDataListChanged.next(res.data);
+          this.onTcoinDataListChanged.next(res.data);
         },reject)
       }
     })
   }
 
-  getSettingData(id: string): Observable<any> | Promise<any> | any {
+  getTcoinData(id: string): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if(mockup){
-        this.http.get('../../assets/json/setting/setting-detail.json').subscribe((res: any) => {
-          this.onSettingDataListChanged.next(res.data);
+        this.http.get('../../assets/json/tcoin/tcoin-detail.json').subscribe((res: any) => {
+          this.onTcoinDataListChanged.next(res.data);
         },reject)
       }else{
         this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onSettingDataChanged.next(res.data);
+          this.onTcoinDataChanged.next(res.data);
         },reject)
       }
       
     })
   }
 
-  createSettingData(body): Promise<any> {
+  createTcoinData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getSettingDataList();
+        this.getTcoinDataList();
       },reject)
     })
   }
 
-  updateSettingData(body): Promise<any> {
+  updateTcoinData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getSettingDataList();
+        this.getTcoinDataList();
       },reject)
     })
   }
 
-  deleteSettingData(body): Promise<any> {
+  deleteTcoinData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.delete(api_url + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getSettingDataList();
+        this.getTcoinDataList();
       },reject)
     })
   }

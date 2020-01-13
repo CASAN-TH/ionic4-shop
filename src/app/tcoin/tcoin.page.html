@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons mode="ios" slot="start" (click)="onBackClick()">
+      <ion-button>
+        <ion-icon mode="ios" slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Tcoin ของฉัน</ion-title>
+    <ion-buttons mode="ios" slot="end">
+      <ion-button (click)="onToTcoinDetailPage()">
+        <p>
+          รายละเอียด
+        </p>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+<ion-row>
+  <ion-col size="12" class="ion-text-center">
+    <h1>
+      {{mytcoinDataList.mytcoin}} <img class="coin-icon" src="https://image.flaticon.com/icons/svg/1490/1490849.svg" alt="">
+    </h1>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col size="12">
+    <ion-grid class="list-shadow">
+      <ion-row>
+        <ion-col size="12">
+          test
+        </ion-col>
+      </ion-row>
+      
+      <ion-row >
+        <ion-col size="12">
+          <ion-button expand="block">เช็คอิน</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col size="12">
+    <ion-grid class="list-shadow">
+      <ion-row>
+        <ion-col size="6">
+          <img src="https://pub.thisshop.com/shop/block/20191122/46509015_1574405762591.png?x-oss-process=image/resize,w_750/quality,q_80&quot" alt="">
+        </ion-col>
+        <ion-col size="6">
+          <img src="https://pub.thisshop.com/shop/block/20191122/53348974_1574405771531.png?x-oss-process=image/resize,w_750/quality,q_80&quot" alt="">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-col>
+</ion-row>
+</ion-content>
