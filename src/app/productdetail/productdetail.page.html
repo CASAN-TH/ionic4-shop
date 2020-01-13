@@ -14,10 +14,10 @@
   <ion-grid class="grid-top">
     <div class="icon-menu">
       <span class="ioscart">
-        <ion-icon mode="ios" name="ios-cart"></ion-icon>
+        <ion-icon mode="ios" name="ios-cart" (click)="onCartClick()"></ion-icon>
       </span>
       <span class="iosmore">
-        <ion-icon mode="ios" name="ios-more"></ion-icon>
+        <ion-icon mode="ios" name="ios-more" (click)="presentPopover($event)"></ion-icon>
       </span>
     </div>
 

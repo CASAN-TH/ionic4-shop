@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductdetailService } from './productdetail.service';
-import { ModalController } from '@ionic/angular';
+import { ModalController, PopoverController } from '@ionic/angular';
 import { PaymentModalComponent } from './payment-modal/payment-modal.component';
 import { VouchersModalComponent } from './vouchers-modal/vouchers-modal.component';
 import { PromotionModalComponent } from './promotion-modal/promotion-modal.component';
@@ -11,7 +11,8 @@ import { SpecificationModalComponent } from './specification-modal/specification
 import { ReviewModalComponent } from './review-modal/review-modal.component';
 import { ImformationspecModalComponent } from './imformationspec-modal/imformationspec-modal.component';
 
-import { Location } from '@angular/common'
+import { Location } from '@angular/common';
+import { SelectMenuComponent } from './select-menu/select-menu.component';
 
 @Component({
   selector: 'app-productdetail',
@@ -41,7 +42,9 @@ export class ProductdetailPage implements OnInit {
     private router: Router,
     private productdetailService: ProductdetailService,
     public modalController: ModalController,
-    private _location: Location) { }
+    private _location: Location,
+    public popoverController: PopoverController
+  ) { }
 
   ngOnInit() {
     this.productdetailService.onProductdetailDataListChanged.subscribe((productdetailDataList: any) => {
@@ -179,10 +182,10 @@ export class ProductdetailPage implements OnInit {
     this._location.back();
   }
 
-  // onCartClick() {
-  //   console.log("onCartClick");
-  //   this.router.navigateByUrl('tabs/cart');
-  // }
+  onCartClick() {
+    console.log("onCartClick");
+    this.router.navigateByUrl('tabs/cart');
+  }
   // onPaymentClick(paymentId: any) {
   //   console.log("onPaymentClick");
   //   this.router.navigateByUrl('payment/' + paymentId);
@@ -190,5 +193,13 @@ export class ProductdetailPage implements OnInit {
   // onChatClick() {
   //   console.log("Chat Bot");
   // }
+  async presentPopover(ev: any) {
+    const popover = await this.popoverController.create({
+      component: SelectMenuComponent,
+      event: ev,
+      translucent: true
+    });
+    return await popover.present();
+  }
 
 }
