@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class ModalMyorderComponent implements OnInit {
 
-  @Input() CartDataList: any
+  @Input() CartDataList: any;
+  @Input() Tabs: any;
 
 
   constructor(
