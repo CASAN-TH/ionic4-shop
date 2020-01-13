@@ -1,0 +1,52 @@
+{
+    "status": 200,
+    "data": {
+        "_id": "001",
+        "u_id": "u_001",
+        "paybacks_history": [
+            {
+                "payback_date": "11/2019",
+                "paybacks_list": [
+                    {
+                        "list_name": "Oppo A5 2020 Dazzling White RAM 4 GB",
+                        "list_amount": 1,
+                        "list_price": "7,010.94",
+                        "list_currency": "฿",
+                        "list_status": "คืนเงินแล้ว"
+                    },
+                    {
+                        "list_name": "Huawei band 4 GRAPHITE BLACK",
+                        "list_amount": 1,
+                        "list_price": "827.64",
+                        "list_currency": "฿",
+                        "list_status": "คืนเงินแล้ว"
+                    }
+                ]
+            },
+            {
+                "payback_date": "12/2019",
+                "paybacks_list": [
+                    {
+                        "list_name": "Samsung Galaxy fit e BLACK",
+                        "list_amount": 1,
+                        "list_price": "1,114.38",
+                        "list_currency": "฿",
+                        "list_status": "คืนเงินแล้ว"
+                    }
+                ]
+            },
+            {
+                "payback_date": "01/2020",
+                "paybacks_list": [
+                    {
+                        "list_name": "Redmi note 8 Neptune",
+                        "list_amount": 1,
+                        "list_price": "4,455.26",
+                        "list_currency": "฿",
+                        "list_status": "รอดำเนินการ"
+                    }
+                ]
+            }
+        ]
+    }
+}
