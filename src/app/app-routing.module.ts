@@ -102,9 +102,14 @@ const routes: Routes = [
   {
     path: 'search-history',
     loadChildren: () => import('./search-history/search-history.module').then( m => m.SearchHistoryPageModule)
-  },  {
+  },
+  {
     path: 'footer',
     loadChildren: () => import('./footer/footer.module').then( m => m.FooterPageModule)
+  },
+  {
+    path: 'bill',
+    loadChildren: () => import('./bill/bill.module').then( m => m.BillPageModule)
   }
 
 

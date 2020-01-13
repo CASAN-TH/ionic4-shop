@@ -117,30 +117,64 @@ export class AccountPage implements OnInit {
     console.log("onToBrowseHistoryPage");
   }
 
-  async ModalViellAllMyOrdersPage() {
+  async ModalViewAllMyOrdersPage() {
+    const value = 0
     const modal = await this.modalController.create({
       component: ModalMyorderComponent,
       componentProps: {
-        CartDataList: this.CartDataList
+        CartDataList: this.CartDataList,
+        Tabs: value
       }
     });
     return await modal.present();
   }
 
-  onToPayViellAllMyOrdersPage() {
-    console.log("onToPayViellAllMyOrdersPage");
+  async ModalPayViewAllMyOrdersPage() {
+    const value = 1
+    const modal = await this.modalController.create({
+      component: ModalMyorderComponent,
+      componentProps: {
+        CartDataList: this.CartDataList,
+        Tabs: value
+      }
+    });
+    return await modal.present();
   }
 
-  onToShipViellAllMyOrdersPage() {
-    console.log("onToShipViellAllMyOrdersPage");
+  async ModalShipViewAllMyOrdersPage() {
+    const value = 2
+    const modal = await this.modalController.create({
+      component: ModalMyorderComponent,
+      componentProps: {
+        CartDataList: this.CartDataList,
+        Tabs: value
+      }
+    });
+    return await modal.present();
   }
 
-  onToRecieveViellAllMyOrdersPage() {
-    console.log("onToRecieveViellAllMyOrdersPage");
+  async ModalRecieveViewAllMyOrdersPage() {
+    const value = 3
+    const modal = await this.modalController.create({
+      component: ModalMyorderComponent,
+      componentProps: {
+        CartDataList: this.CartDataList,
+        Tabs: value
+      }
+    });
+    return await modal.present();
   }
 
-  onToReviewsViellAllMyOrdersPage() {
-    console.log("onToReviewsViellAllMyOrdersPage");
+  async ModalReviewsViewAllMyOrdersPage() {
+    const value = 4
+    const modal = await this.modalController.create({
+      component: ModalMyorderComponent,
+      componentProps: {
+        CartDataList: this.CartDataList,
+        Tabs: value
+      }
+    });
+    return await modal.present();
   }
 
   async openModalBills() {
