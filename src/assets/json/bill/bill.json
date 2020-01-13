@@ -1,0 +1,405 @@
+{
+    "status": 200,
+    "data": {
+        "_id": "001",
+        "u_id": "u001",
+        "bills": [
+            {
+                "bill_month": "12/2019",
+                "bill_status": "billing",
+                "bill_price": "1,045.91",
+                "bill_datelimit": "28/12/2019",
+                "bill_currency": "฿",
+                "bill_products": [
+                    {
+                        "product_name": "HUAWEI Band 4 GRAPHITE BLACK",
+                        "product_amount": "1",
+                        "product_currency": "฿",
+                        "product_allprice": "827.64",
+                        "product_charge": "35.64",
+                        "product_lists": [
+                            {
+                                "list_amount": "1/3",
+                                "list_month": "12/2019",
+                                "list_datelimit": "28/12/2019",
+                                "list_price": "275.88",
+                                "list_charge": "11.88" 
+                            },
+                            {
+                                "list_amount": "2/3",
+                                "list_month": "01/2020",
+                                "list_datelimit": "28/01/2020",
+                                "list_price": "275.88",
+                                "list_charge": "11.88" 
+                            },
+                            {
+                                "list_amount": "3/3",
+                                "list_month": "02/2020",
+                                "list_datelimit": "28/02/2020",
+                                "list_price": "275.88",
+                                "list_charge": "11.88" 
+                            }
+                        ]
+                    },
+                    {
+                        "product_name": "Oppo A5 2020 Dazzling White RAM 4 GB ROM 128 GB",
+                        "product_amount": "1",
+                        "product_currency": "฿",
+                        "product_allprice": "7,010.94",
+                        "product_charge": "1,069.44",
+                        "product_lists": [
+                            {
+                                "list_amount": "1/12",
+                                "list_month": "12/2019",
+                                "list_datelimit": "28/12/2019",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "2/12",
+                                "list_month": "01/2020",
+                                "list_datelimit": "28/01/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "3/12",
+                                "list_month": "02/2020",
+                                "list_datelimit": "28/02/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "4/12",
+                                "list_month": "03/2020",
+                                "list_datelimit": "28/03/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "5/12",
+                                "list_month": "04/2020",
+                                "list_datelimit": "28/04/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "6/12",
+                                "list_month": "05/2020",
+                                "list_datelimit": "28/05/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "7/12",
+                                "list_month": "06/2020",
+                                "list_datelimit": "28/06/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "8/12",
+                                "list_month": "07/2020",
+                                "list_datelimit": "28/07/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "9/12",
+                                "list_month": "08/2020",
+                                "list_datelimit": "28/08/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "10/12",
+                                "list_month": "09/2020",
+                                "list_datelimit": "28/09/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "11/12",
+                                "list_month": "10/2020",
+                                "list_datelimit": "28/10/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "12/12",
+                                "list_month": "11/2020",
+                                "list_datelimit": "28/11/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            }
+                        ]
+                    },
+                    {
+                        "product_name": "Samsung Galaxy Fit e Black",
+                        "product_amount": "1",
+                        "product_currency": "฿",
+                        "product_allprice": "1,114.38",
+                        "product_charge": "91.98",
+                        "product_lists": [
+                            {
+                                "list_amount": "1/6",
+                                "list_month": "12/2019",
+                                "list_datelimit": "28/12/2019",
+                                "list_price": "185.73",
+                                "list_charge": "15.33" 
+                            },
+                            {
+                                "list_amount": "2/6",
+                                "list_month": "01/2020",
+                                "list_datelimit": "28/01/2020",
+                                "list_price": "185.73",
+                                "list_charge": "15.33" 
+                            },
+                            {
+                                "list_amount": "3/6",
+                                "list_month": "02/2020",
+                                "list_datelimit": "28/02/2020",
+                                "list_price": "185.73",
+                                "list_charge": "15.33" 
+                            },
+                            {
+                                "list_amount": "4/6",
+                                "list_month": "03/2020",
+                                "list_datelimit": "28/03/2020",
+                                "list_price": "185.73",
+                                "list_charge": "15.33" 
+                            },
+                            {
+                                "list_amount": "5/6",
+                                "list_month": "04/2020",
+                                "list_datelimit": "28/04/2020",
+                                "list_price": "185.73",
+                                "list_charge": "15.33" 
+                            },
+                            {
+                                "list_amount": "6/6",
+                                "list_month": "05/2020",
+                                "list_datelimit": "28/05/2020",
+                                "list_price": "185.73",
+                                "list_charge": "15.33" 
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "bill_month": "01/2020",
+                "bill_status": "nobill",
+                "bill_price": "1,321.79",
+                "bill_datelimit": "28/01/2020",
+                "bill_currency": "฿",
+                "bill_products": [
+                    {
+                        "product_name": "HUAWEI Band 4 GRAPHITE BLACK",
+                        "product_amount": "1",
+                        "product_currency": "฿",
+                        "product_allprice": "827.64",
+                        "product_charge": "35.64",
+                        "product_lists": [
+                            {
+                                "list_amount": "1/3",
+                                "list_month": "12/2019",
+                                "list_datelimit": "28/12/2019",
+                                "list_price": "275.88",
+                                "list_charge": "11.88" 
+                            },
+                            {
+                                "list_amount": "2/3",
+                                "list_month": "01/2020",
+                                "list_datelimit": "28/01/2020",
+                                "list_price": "275.88",
+                                "list_charge": "11.88" 
+                            },
+                            {
+                                "list_amount": "3/3",
+                                "list_month": "02/2020",
+                                "list_datelimit": "28/02/2020",
+                                "list_price": "275.88",
+                                "list_charge": "11.88" 
+                            }
+                        ]
+                    },
+                    {
+                        "product_name": "Oppo A5 2020 Dazzling White RAM 4 GB ROM 128 GB",
+                        "product_amount": "1",
+                        "product_currency": "฿",
+                        "product_allprice": "7,010.94",
+                        "product_charge": "1,069.44",
+                        "product_lists": [
+                            {
+                                "list_amount": "1/12",
+                                "list_month": "12/2019",
+                                "list_datelimit": "28/12/2019",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "2/12",
+                                "list_month": "01/2020",
+                                "list_datelimit": "28/01/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "3/12",
+                                "list_month": "02/2020",
+                                "list_datelimit": "28/02/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "4/12",
+                                "list_month": "03/2020",
+                                "list_datelimit": "28/03/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "5/12",
+                                "list_month": "04/2020",
+                                "list_datelimit": "28/04/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "6/12",
+                                "list_month": "05/2020",
+                                "list_datelimit": "28/05/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "7/12",
+                                "list_month": "06/2020",
+                                "list_datelimit": "28/06/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "8/12",
+                                "list_month": "07/2020",
+                                "list_datelimit": "28/07/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "9/12",
+                                "list_month": "08/2020",
+                                "list_datelimit": "28/08/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "10/12",
+                                "list_month": "09/2020",
+                                "list_datelimit": "28/09/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "11/12",
+                                "list_month": "10/2020",
+                                "list_datelimit": "28/10/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            },
+                            {
+                                "list_amount": "12/12",
+                                "list_month": "11/2020",
+                                "list_datelimit": "28/11/2020",
+                                "list_price": "584.3",
+                                "list_charge": "89.12" 
+                            }
+                        ]
+                    },
+                    {
+                        "product_name": "Samsung Galaxy Fit e Black",
+                        "product_amount": "1",
+                        "product_currency": "฿",
+                        "product_allprice": "1,114.38",
+                        "product_charge": "91.98",
+                        "product_lists": [
+                            {
+                                "list_amount": "1/6",
+                                "list_month": "12/2019",
+                                "list_datelimit": "28/12/2019",
+                                "list_price": "185.73",
+                                "list_charge": "15.33" 
+                            },
+                            {
+                                "list_amount": "2/6",
+                                "list_month": "01/2020",
+                                "list_datelimit": "28/01/2020",
+                                "list_price": "185.73",
+                                "list_charge": "15.33" 
+                            },
+                            {
+                                "list_amount": "3/6",
+                                "list_month": "02/2020",
+                                "list_datelimit": "28/02/2020",
+                                "list_price": "185.73",
+                                "list_charge": "15.33" 
+                            },
+                            {
+                                "list_amount": "4/6",
+                                "list_month": "03/2020",
+                                "list_datelimit": "28/03/2020",
+                                "list_price": "185.73",
+                                "list_charge": "15.33" 
+                            },
+                            {
+                                "list_amount": "5/6",
+                                "list_month": "04/2020",
+                                "list_datelimit": "28/04/2020",
+                                "list_price": "185.73",
+                                "list_charge": "15.33" 
+                            },
+                            {
+                                "list_amount": "6/6",
+                                "list_month": "05/2020",
+                                "list_datelimit": "28/05/2020",
+                                "list_price": "185.73",
+                                "list_charge": "15.33" 
+                            }
+                        ]
+                    },
+                    {
+                        "product_name": "Mi Band 2",
+                        "product_amount": "1",
+                        "product_currency": "฿",
+                        "product_allprice": "827.64",
+                        "product_charge": "35.64",
+                        "product_lists": [
+                            {
+                                "list_amount": "1/3",
+                                "list_month": "01/2020",
+                                "list_datelimit": "28/01/2020",
+                                "list_price": "275.88",
+                                "list_charge": "11.88" 
+                            },
+                            {
+                                "list_amount": "2/3",
+                                "list_month": "02/2020",
+                                "list_datelimit": "28/02/2020",
+                                "list_price": "275.88",
+                                "list_charge": "11.88" 
+                            },
+                            {
+                                "list_amount": "3/3",
+                                "list_month": "03/2020",
+                                "list_datelimit": "28/03/2020",
+                                "list_price": "275.88",
+                                "list_charge": "11.88" 
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
