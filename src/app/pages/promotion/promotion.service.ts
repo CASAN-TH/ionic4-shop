@@ -13,7 +13,7 @@ const mockup = environment.mockup;
 export class PromotionService {
   routeParams: any;
 
-  onPromotionDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onPromotionDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onPromotionDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }

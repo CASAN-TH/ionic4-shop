@@ -25,7 +25,6 @@ export class CategoryPage implements OnInit {
         // console.log(this.data)
         this.tabSelected = this.data[0]._id;
       }
-
     })
   }
 
@@ -36,7 +35,7 @@ export class CategoryPage implements OnInit {
     let yHOffset = document.getElementById(cate_id).offsetHeight;
     // console.log(yOffset + " : " + yHOffset);
     this.content.scrollToPoint(0, yOffset, 1000);
-    
+
   }
 
   onBrandClick(categoryId: any, brandId: any) {
@@ -47,9 +46,20 @@ export class CategoryPage implements OnInit {
     this.router.navigateByUrl('search/' + cate2Id);
   }
 
-  onCoverClick(coverId: any) {
-    this.router.navigateByUrl('promotion/' + coverId);
+  onCoverImageClick(coverId: any, i: any) {
+    // console.log(this.data)
+    // console.log(this.data.cover_image[0].link_promotion);
+    // console.log(this.data[0].cover_image[0].type_promotion);
+    if (this.data[0].cover_image[i].type_promotion = 'page') {
+      this.router.navigateByUrl(this.data[0].cover_image[i].link_promotion + '/' + coverId);
+    } else {
+      this.router.navigateByUrl('promotion/' + coverId);
+    }
   }
+
+  // onCoverImageClick(){
+  //   this.router.navigateByUrl('promotion');
+  // }
 
   scrollTo(element: string) {
 

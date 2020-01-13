@@ -6,12 +6,21 @@
       </ion-button>
     </ion-buttons>
     <ion-title>productdetail</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
   <ion-grid class="grid-top">
+    <div class="icon-menu">
+      <span class="ioscart">
+        <ion-icon mode="ios" name="ios-cart"></ion-icon>
+      </span>
+      <span class="iosmore">
+        <ion-icon mode="ios" name="ios-more"></ion-icon>
+      </span>
+    </div>
+
     <ion-slides pager [options]="slideOpts">
       <ion-slide *ngFor="let itemimg of productdetailData.images">
         <img [src]="itemimg">

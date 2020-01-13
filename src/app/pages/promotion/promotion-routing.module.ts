@@ -15,6 +15,7 @@ const routes: Routes = [
     component: PromotionPage,
     resolve: [PromotionService]
   }
+
 ];
 
 @NgModule({

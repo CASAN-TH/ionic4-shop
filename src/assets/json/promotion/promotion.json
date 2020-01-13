@@ -1,8 +1,8 @@
 {
     "status": 200,
-    "data": [
-        {
-            "name": "test1"
-        }
-    ]
+    "data": {
+        "id": "12121",
+        "type_promotion": "web",
+        "link_promotion": "https://www.nekopost.net"
+    }
 }
