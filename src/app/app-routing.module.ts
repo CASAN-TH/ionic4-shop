@@ -108,6 +108,10 @@ const routes: Routes = [
     loadChildren: () => import('./footer/footer.module').then( m => m.FooterPageModule)
   },
   {
+    path: 'tcoin',
+    loadChildren: () => import('./tcoin/tcoin.module').then( m => m.TcoinPageModule)
+  },
+  {
     path: 'bill',
     loadChildren: () => import('./bill/bill.module').then( m => m.BillPageModule)
   },

@@ -13,6 +13,7 @@ import { ModalAboutComponent } from './modal-about/modal-about.component';
 })
 export class SettingPage implements OnInit {
   settingDataList: any;
+  AboutData: any;
 
   constructor(private router: Router, 
               private settingService : SettingService,
@@ -21,8 +22,12 @@ export class SettingPage implements OnInit {
 
   ngOnInit() {
     this.settingService.onSettingDataListChanged.subscribe((settingDataList:any)=>{
-      console.log(settingDataList);
+      // console.log(settingDataList);
       this.settingDataList = settingDataList;
+    })
+    this.settingService.onAboutDataListChanged.subscribe((AboutData) => {
+      console.log(AboutData);
+      this.AboutData = AboutData;
     })
   }
 
@@ -36,6 +41,9 @@ export class SettingPage implements OnInit {
   async aboutModal() {
     const modal = await this.modalController.create({
       component: ModalAboutComponent,
+      componentProps: {
+      AboutData: this.AboutData
+      }
     });
     return await modal.present();
   }
