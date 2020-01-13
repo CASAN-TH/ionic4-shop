@@ -10,24 +10,31 @@
 </ion-header>
 
 <ion-content>
-  <div *ngFor="let item of paybackData.paybacks_history">
-    <div class="title-list">
-      {{item.payback_date}}
+  <div *ngIf="paybackData && paybackData.paybacks_history[0]">
+    <div *ngFor="let item of paybackData.paybacks_history">
+      <div class="title-list">
+        {{item.payback_date}}
+      </div>
+      <ion-row *ngFor="let list of item.paybacks_list">
+        <ion-col class="col-left" size="8">
+          <div>
+            {{list.list_name}} ({{list.list_amount}} item)
+          </div>
+          <div class="price-position">
+            {{list.list_currency}}{{list.list_price}}
+          </div>
+        </ion-col>
+        <ion-col class="col-right" size="4">
+          <div class="status-position">
+            {{list.list_status}}
+          </div>
+        </ion-col>
+      </ion-row>
     </div>
-    <ion-row *ngFor="let list of item.paybacks_list">
-      <ion-col class="col-left" size="8">
-        <div>
-          {{list.list_name}} ({{list.list_amount}} item)
-        </div>
-        <div class="price-position">
-          {{list.list_currency}}{{list.list_price}}
-        </div>
-      </ion-col>
-      <ion-col class="col-right" size="4">
-        <div class="status-position">
-          {{list.list_status}}
-        </div>
-      </ion-col>
-    </ion-row>
+  </div>
+  <div class="no-item" *ngIf="!paybackData || !paybackData.paybacks_history[0]">
+    <div>
+      ไม่มีประวัติ
+    </div>
   </div>
 </ion-content>
