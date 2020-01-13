@@ -1,0 +1,85 @@
+{
+    "status": 200,
+    "data": {
+        "_id": "001",
+        "u_id": "u_001",
+        "orders_history": [
+            {
+                "order_date": "11/2019",
+                "orders_list": [
+                    {
+                        "list_name": "Oppo A5 2020 Dazzling White RAM 4 GB",
+                        "list_amount": 1,
+                        "list_price": "7,010.94",
+                        "list_currency": "฿",
+                        "list_status": "เงินเข้าบัญชีแล้ว"
+                    },
+                    {
+                        "list_name": "HAUWEI band 4 GRAPHITE BLACK",
+                        "list_amount": 1,
+                        "list_price": "827.64",
+                        "list_currency": "฿",
+                        "list_status": "เงินเข้าบัญชีแล้ว"
+                    }
+                ]
+            },
+            {
+                "order_date": "12/2019",
+                "orders_list": [
+                    {
+                        "list_name": "Samsung Galaxy fit e BLACK",
+                        "list_amount": 1,
+                        "list_price": "1,114.38",
+                        "list_currency": "฿",
+                        "list_status": "เงินเข้าบัญชีแล้ว"
+                    }
+                ]
+            },
+            {
+                "order_date": "01/2020",
+                "orders_list": [
+                    {
+                        "list_name": "Redmi note 8 Neptune",
+                        "list_amount": 1,
+                        "list_price": "4,455.26",
+                        "list_currency": "฿",
+                        "list_status": "รอเข้าบัญชี"
+                    }
+                ]
+            }
+        ],
+        "payments_history": [
+            {
+                "payments_date": "01/2020",
+                "payments_list": [
+                    {
+                        "list_date": "03/01/2020",
+                        "list_time": "21:26:27",
+                        "list_price": "1,045.85",
+                        "list_currency": "฿",
+                        "list_status": "การชำระเงินสำเร็จ"
+                    },
+                    {
+                        "list_date": "11/01/2020",
+                        "list_time": "01:54:10",
+                        "list_price": "1,045.85",
+                        "list_currency": "฿",
+                        "list_status": "การชำระเงินสำเร็จ"
+                    }
+                ]
+            },
+            {
+                "payments_date": "12/2019",
+                "payments_list": [
+                    {
+                        "list_date": "11/12/2019",
+                        "list_time": "01:54:10",
+                        "list_price": "1,045.85",
+                        "list_currency": "฿",
+                        "list_status": "การชำระเงินสำเร็จ"
+                    }
+                ]
+            }
+        ]
+    }
+}

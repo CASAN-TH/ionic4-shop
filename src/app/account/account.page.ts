@@ -7,7 +7,6 @@ import { ModalMyorderComponent } from './modal-myorder/modal-myorder.component';
 import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
 import { ModalLanguageComponent } from './modal-language/modal-language.component';
 import { ModalCreditPointComponent } from '../credit/modal-credit-point/modal-credit-point.component';
-import { ModalBillsComponent } from '../credit/modal-bills/modal-bills.component';
 
 @Component({
   selector: 'app-account',
@@ -178,13 +177,7 @@ export class AccountPage implements OnInit {
   }
 
   async openModalBills() {
-    const modal = await this.modalController.create({
-      component: ModalBillsComponent,
-      componentProps: {
-        billData: this.BillDataList
-      }
-    });
-    return await modal.present();
+    this.router.navigate(['/bill'])
   }
 
   async creditPointModal() {

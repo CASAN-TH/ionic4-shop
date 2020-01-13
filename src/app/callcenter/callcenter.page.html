@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="goBackClick()">
+      <ion-button>
+        <ion-icon slot="icon-only" mode="ios" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>ติดต่อฝ่ายบริการลูกค้า</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item no-padding class="item-border-right">
+    <ion-input class="font-title-content" placeholder="หมวดคำถาม"></ion-input>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item no-padding class="item-border-right" *ngFor="let contact of callcenterData.contacs_customer">
+          <ion-thumbnail slot="start">
+            <img [src]="contact.image">
+          </ion-thumbnail>
+          <ion-label class="ion-text-wrap">
+            <h3>{{contact.title}}</h3>
+            <p>{{contact.subtitle}}</p>
+          </ion-label>
+          <ion-buttons text-end>
+            <ion-button>
+              <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-grid>
+          <ion-item no-padding class="item-border-right">
+            <ion-label>
+              <ion-text class="titlewar">{{callcenterData.contacts.name}}</ion-text>
+            </ion-label>
+          </ion-item>
+
+          <ion-item lines="none" no-padding class="item-border-right topadding">
+            <ion-thumbnail slot="start">
+              <img [src]="callcenterData.contacts.mail.image">
+            </ion-thumbnail>
+            <ion-label class="ion-text-wrap">
+              <h3>{{callcenterData.contacts.mail.mailname}}</h3>
+            </ion-label>
+          </ion-item>
+
+          <ion-item lines="none" no-padding class="item-border-right">
+            <ion-thumbnail slot="start">
+              <img [src]="callcenterData.contacts.days.phone_image">
+            </ion-thumbnail>
+            <ion-label class="ion-text-wrap">
+              <h3>{{callcenterData.contacts.days.days_title_Monday}}</h3>
+              <p>{{callcenterData.contacts.days.days_subtitle}}</p>
+            </ion-label>
+          </ion-item>
+
+          <ion-item lines="none" no-padding class="item-border-right titlepadding">
+            <ion-label class="ion-text-wrap">
+              <h3>{{callcenterData.contacts.days.days_title_Saturday}}</h3>
+              <p>{{callcenterData.contacts.days.days_subtitle1}}</p>
+              <p>{{callcenterData.contacts.days.days_subtitle2}}</p>
+              <p>{{callcenterData.contacts.days.days_subtitle3}}</p>
+            </ion-label>
+          </ion-item>
+
+          <ion-row>
+            <ion-col text-center size="6">
+              <img class="image_size" [src]="callcenterData.contacts.social_facebook.image">
+              <p>{{callcenterData.contacts.social_facebook.facebook_name}}
+            </ion-col>
+            <ion-col text-center size="6">
+              <img class="image_size" [src]="callcenterData.contacts.social_line.image">
+              <p>{{callcenterData.contacts.social_line.line_name}}
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

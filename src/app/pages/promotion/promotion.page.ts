@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PromotionService } from './promotion.service';
 import { Location } from '@angular/common';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-promotion',
@@ -9,15 +10,26 @@ import { Location } from '@angular/common';
   styleUrls: ['./promotion.page.scss'],
 })
 export class PromotionPage implements OnInit {
-  promotionDataList: any;
+  promotionData: any;
 
-  constructor(private router: Router, private promotionService: PromotionService, private _location: Location) { }
+  constructor(
+    private router: Router,
+    private promotionService: PromotionService,
+    private _location: Location,
+    private dom: DomSanitizer
+  ) { }
 
   ngOnInit() {
     this.promotionService.onPromotionDataListChanged.subscribe((promotionDataList: any) => {
       console.log(promotionDataList);
-      this.promotionDataList = promotionDataList;
+      this.promotionData = promotionDataList;
+
+      this.promotionData.link_promotion = this.dom.bypassSecurityTrustResourceUrl(this.promotionData.link_promotion);
+      console.log(this.promotionData.link_promotion);
+
     })
+
+
   }
 
   goBackClick() {

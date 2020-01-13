@@ -28,8 +28,8 @@
           <ion-col size="12">
             <ion-text>{{cate.name}}</ion-text>
             <ion-slides pager>
-              <ion-slide *ngFor="let cover of cate.cover_image">
-                <img class="coverimage" [src]="cover" (click)="onCoverClick(cover._id)">
+              <ion-slide *ngFor="let cover of cate.cover_image; let i = index">
+                <img class="coverimage" [src]="cover.image" (click)="onCoverImageClick(cover.id,i)">
               </ion-slide>
             </ion-slides>
             <ion-row>

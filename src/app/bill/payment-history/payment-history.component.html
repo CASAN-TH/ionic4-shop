@@ -1,0 +1,73 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons class="btn-back-position" mode="ios" slot="start" (click)="goBackClick()">
+      <ion-button>
+        <ion-icon mode="ios" slot="icon-only" class="arrow-back" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">ประวัติการชำระเงิน</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <mat-tab-group animationDuration="0ms" mat-stretch-tabs [selectedIndex]="tabNav">
+    <mat-tab label="ประวัติการสั่งซื้อ">
+      <div *ngIf="paymentData && paymentData.orders_history[0]">
+        <div *ngFor="let item of paymentData.orders_history">
+          <div class="title-list">
+            {{item.order_date}}
+          </div>
+          <ion-row *ngFor="let list of item.orders_list">
+            <ion-col class="col-left" size="8">
+              <div>
+                {{list.list_name}} ({{list.list_amount}} item)
+              </div>
+              <div class="price-position">
+                {{list.list_currency}}{{list.list_price}}
+              </div>
+            </ion-col>
+            <ion-col class="col-right" size="4">
+              <div class="status-position">
+                {{list.list_status}}
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+      <div class="no-item" *ngIf="!paymentData || !paymentData.orders_history[0]">
+        <div>
+          ไม่มีประวัติ
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="ประวัติการชำระเงิน">
+      <div *ngIf="paymentData || paymentData.payments_history[0]">
+        <div *ngFor="let item of paymentData.payments_history">
+          <div class="title-list">
+            {{item.payments_date}}
+          </div>
+          <ion-row *ngFor="let list of item.payments_list">
+            <ion-col class="col-left" size="8">
+              <div>
+                {{list.list_date}} {{list.list_time}}
+              </div>
+              <div class="price-position">
+                {{list.list_currency}}{{list.list_price}}
+              </div>
+            </ion-col>
+            <ion-col class="col-right" size="4">
+              <div class="status-position">
+                {{list.list_status}}
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+      <div class="no-item" *ngIf="!paymentData || !paymentData.payments_history[0]">
+        <div>
+          ไม่มีประวัติ
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</ion-content>
