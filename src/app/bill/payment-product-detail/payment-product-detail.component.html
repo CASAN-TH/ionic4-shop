@@ -1,0 +1,62 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons class="btn-back-position" mode="ios" slot="start" (click)="goBackClick()">
+      <ion-button>
+        <ion-icon mode="ios" slot="icon-only" class="arrow-back" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">รายละเอียดการผ่อนชำระ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-margin-start ion-margin-end ion-margin-top ion-padding bill-title">
+    <div class="ion-text-center">
+      <p class="font-header-title ion-no-margin">
+        {{data.product_name}}
+      </p>
+      <p class="font-header-subtitle ion-no-margin">
+        จำนวนเงินผ่อนชำระ({{data.product_currency}})
+      </p>
+      <p class="header-number-payment ion-no-margin">
+        {{data.product_allprice}}
+      </p>
+      <p class="font-header-datelimit">
+        (ค่าบริการผ่อนชำระ{{data.product_currency}}{{data.product_charge}})
+      </p>
+    </div>
+  </div>
+
+  <ion-row class="ion-margin-start ion-margin-top ion-margin-end">
+    <ion-col size="6">
+      <div>
+        จำนวนงวด/วันชำระ
+      </div>
+    </ion-col>
+    <ion-col size="6">
+      <div class="ion-text-right">
+        ชำระต่องวด
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-grid class="ion-margin-start ion-margin-end list-shadow">
+    <ion-row class="bill-list" *ngFor="let item of data.product_lists">
+      <ion-col size="6">
+        <div class="main-size">
+          {{item.list_amount}}
+        </div>
+        <div class="sub-size">
+          วันที่ชำระเงิน {{item.list_datelimit}}
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="ion-text-right main-size">
+          {{data.product_currency}}{{item.list_price}}
+        </div>
+        <div class="sub-size ion-text-right">
+          (ค่าธรรมเนียมทั้งหมด{{data.product_currency}}{{item.list_charge}})
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

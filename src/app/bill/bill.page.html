@@ -74,7 +74,7 @@
   <p class="ion-margin-start font-list-title">รายละเอียดบิลของเดือนนี้ ({{billData.bills[inx].bill_products.length}})</p>
 
   <ion-grid class="ion-margin-start ion-margin-end list-shadow">
-    <ion-row class="bill-list" *ngFor="let product of billData.bills[inx].bill_products">
+    <ion-row class="bill-list" *ngFor="let product of billData.bills[inx].bill_products;let i = index" (click)="onListProduct(i)">
       <ion-col size="8">
         <div class="list-item-name">
           {{product.product_name}}

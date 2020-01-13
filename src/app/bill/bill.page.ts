@@ -5,6 +5,7 @@ import { Location } from '@angular/common'
 import { ActionSheetController, ModalController } from '@ionic/angular';
 import { PaymentHistoryComponent } from './payment-history/payment-history.component';
 import { PaybackHistoryComponent } from './payback-history/payback-history.component';
+import { PaymentProductDetailComponent } from './payment-product-detail/payment-product-detail.component';
 
 @Component({
   selector: 'app-bill',
@@ -115,4 +116,13 @@ export class BillPage implements OnInit {
     this._location.back();
   }
 
+  async onListProduct(idx){
+    const modal = await this.modalCtrl.create({
+      component: PaymentProductDetailComponent,
+      componentProps: {
+        "data": this.billData.bills[this.inx].bill_products[idx]
+      }
+    });
+    return await modal.present();
+  }
 }

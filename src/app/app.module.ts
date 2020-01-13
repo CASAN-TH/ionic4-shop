@@ -61,6 +61,7 @@ import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.co
 import { SelectMenuComponent } from './productdetail/select-menu/select-menu.component';
 import { PaymentHistoryComponent } from './bill/payment-history/payment-history.component';
 import { PaybackHistoryComponent } from './bill/payback-history/payback-history.component';
+import { PaymentProductDetailComponent } from './bill/payment-product-detail/payment-product-detail.component';
 
 
 
@@ -108,6 +109,7 @@ import { PaybackHistoryComponent } from './bill/payback-history/payback-history.
 
     PaymentHistoryComponent,
     PaybackHistoryComponent,
+    PaymentProductDetailComponent,
 
     RecommendedMethodModalComponent,
     DebitCreditCardModalComponent,
@@ -161,6 +163,7 @@ import { PaybackHistoryComponent } from './bill/payback-history/payback-history.
 
     PaymentHistoryComponent,
     PaybackHistoryComponent,
+    PaymentProductDetailComponent,
 
     RecommendedMethodModalComponent,
     DebitCreditCardModalComponent,
