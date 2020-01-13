@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-payback-history',
@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaybackHistoryComponent implements OnInit {
 
+  @Input() paybackData: any
+
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    console.log(this.paybackData)
+  }
 
 }

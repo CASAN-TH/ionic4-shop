@@ -19,6 +19,8 @@ export class BillService {
       "bill_products": []
     }]
   });
+  onPaymentHistoryDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onPaybackHistoryDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }
 
@@ -32,6 +34,8 @@ export class BillService {
     this.routeParams = route.params;
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
       this.getBillDataList();
+      this.getPaymentData();
+      this.getPaybackData();
     return;
   }
 
@@ -44,6 +48,34 @@ export class BillService {
       }else{
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onBillDataListChanged.next(res.data);
+        },reject)
+      }
+    })
+  }
+
+  getPaymentData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if(mockup){
+        this.http.get('../../assets/json/bill/payment-history.json').subscribe((res: any) => {
+          this.onPaymentHistoryDataChanged.next(res.data);
+        },reject)
+      }else{
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onPaymentHistoryDataChanged.next(res.data);
+        },reject)
+      }
+    })
+  }
+
+  getPaybackData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if(mockup){
+        this.http.get('../../assets/json/bill/payback-history.json').subscribe((res: any) => {
+          this.onPaybackHistoryDataChanged.next(res.data);
+        },reject)
+      }else{
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onPaybackHistoryDataChanged.next(res.data);
         },reject)
       }
     })

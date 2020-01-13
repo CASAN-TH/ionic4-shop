@@ -13,6 +13,8 @@ import { PaybackHistoryComponent } from './payback-history/payback-history.compo
 })
 export class BillPage implements OnInit {
   billData: any;
+  paymentData: any;
+  paybackData: any;
   inx = 0
 
   constructor(
@@ -27,7 +29,15 @@ export class BillPage implements OnInit {
     this.billService.onBillDataListChanged.subscribe((billData: any) => {
       console.log(billData);
       this.billData = billData;
-    })
+    });
+    this.billService.onPaymentHistoryDataChanged.subscribe((paymentData: any) => {
+      console.log(paymentData);
+      this.paymentData = paymentData;
+    });
+    this.billService.onPaybackHistoryDataChanged.subscribe((paybackData: any) => {
+      console.log(paybackData);
+      this.paybackData = paybackData;
+    });
   }
 
   async openMoreAction() { 
@@ -63,16 +73,19 @@ export class BillPage implements OnInit {
     const modal = await this.modalCtrl.create({
       component: PaymentHistoryComponent,
       componentProps: {
-        "tabNav": 1
+        "tabNav": 1,
+        "paymentData": this.paymentData
       }
     });
     return await modal.present();
   }
+
   async openPayment2(){
     const modal = await this.modalCtrl.create({
       component: PaymentHistoryComponent,
       componentProps: {
-        "tabNav": 2
+        "tabNav": 2,
+        "paymentData": this.paymentData
       }
     });
     return await modal.present();
@@ -81,6 +94,9 @@ export class BillPage implements OnInit {
   async openPayback(){
     const modal = await this.modalCtrl.create({
       component: PaybackHistoryComponent,
+      componentProps: {
+        "paybackData": this.paybackData
+      }
     });
     return await modal.present();
   }

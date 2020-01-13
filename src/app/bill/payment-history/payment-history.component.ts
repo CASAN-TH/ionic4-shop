@@ -8,11 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PaymentHistoryComponent implements OnInit {
 
   @Input() tabNav: any
+  @Input() paymentData: any
 
   constructor() { }
 
   ngOnInit() {
     console.log(this.tabNav)
+    console.log(this.paymentData)
   }
 
 }
