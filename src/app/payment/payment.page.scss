@@ -100,8 +100,35 @@ ion-text-nowarp {
 }
 .bg-card {
   background-color: white;
+  height: 112px;
+}
+.bg-payment{
+  height: 55px;
+  background-color: #fff5f1;
+}
+.bg-color-payment{
+  background-color: #fff5f1;
 }
 
+.payment{
+  font-size: 12.5px;
+  font-weight: lighter;
+}
+.ApplyForCredit{
+  font-size: 13px;
+    font-weight: bold;
+    color: #ff4800;
+    border: 1px solid;
+    border-color: #ff5e20;
+    height: 24px;
+    width: 61px;
+    margin-top: 7px;
+    text-align: right;
+    margin-right: 6px;
+}
+.bg-ApplyForCredit{
+  background: #fff5f1;
+}
 // .percent_down {
 //   padding-inline-start: 63%;
 //   font-size: 13px;

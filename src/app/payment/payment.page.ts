@@ -67,10 +67,6 @@ export class PaymentPage implements OnInit {
 
   }
 
-
-  goBackClick() {
-    this._location.back();
-  }
   onOrderClick() {
     this.router.navigate(['payfor'])
   }
@@ -82,7 +78,9 @@ export class PaymentPage implements OnInit {
     console.log(unitId);
     this.unitSelected = unitId;
   }
-  
+  onApplyForCredit(){
+  this.router.navigateByUrl('credit');
+  }
 
   async selectDownModal() {
     const modal = await this.modalController.create({
@@ -174,6 +172,43 @@ export class PaymentPage implements OnInit {
           text: 'เห็นด้วย',
           handler: () => {
             this.router.navigate(['payfor'])
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+  // async BackAlert() {
+  //   const alert = await this.alertCtrl.create({
+  //     message: 'คุณแน่ใจหรือไม่ว่าต้องออกจากระบบ',
+  //     buttons: [
+  //       {
+  //         text: 'ออกจากหน้านี้',
+  //         handler: () => {
+  //           this.router.navigate(['app-cart'])
+  //         }
+  //       }, {
+  //         text: 'ดูอีกครั้ง',
+  //         handler: () => {
+          
+  //         }
+  //       }
+  //     ]
+  //   });
+  //   await alert.present();
+  // }
+  async BackAlert() {
+    const alert = await this.alertCtrl.create({
+      header: 'คุณแน่ใจหรือไม่ว่าต้องออกจากระบบ',
+      buttons: [
+        {
+          text: 'ออกจากหน้านี้',
+          handler: () => {
+              this._location.back();
+          }
+        }, {
+          text: 'ดูอีกครั้ง',
+          handler: () => {
           }
         }
       ]
