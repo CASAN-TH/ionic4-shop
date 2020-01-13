@@ -1,0 +1,53 @@
+ion-toolbar {
+    --background: white !important;
+}
+
+// ion-content {
+//     --background: rgb(247, 247, 247) !important;
+// }
+
+.arrow-back {
+    color: rgb(0, 0, 0);
+}
+
+.btn-back-position {
+    position: absolute;
+}
+
+.title-list {
+    padding-left: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #f6f6f6;
+}
+
+ion-row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+    border-color: lightgray;
+}
+
+.col-left {
+    padding: 0px;
+    padding-left: 16px !important;
+    padding-right: 6px !important;
+    font-size: 14px;
+}
+
+.col-right {
+    padding-right: 10px;
+    font-size: 14px;
+    color: gray;
+    display: flex;
+    align-items: center;
+}
+
+.price-position {
+    margin-top: 8px;
+}
+
+.status-position {
+    width: 100%;
+    text-align: right;
+}

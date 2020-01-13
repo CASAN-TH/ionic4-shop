@@ -44,14 +44,14 @@ export class BillPage implements OnInit {
     const actionSheet = await this.actionSheetController.create({
       header: 'ดูเพิ่มเติม',
       buttons: [{
-        text: 'ประวัติการชำระหนี้',
+        text: 'ประวัติการชำระเงิน',
         handler: async () => {
           this.openPayment();
         }
       },{
-        text: 'ประวัติการซื้อ',
+        text: 'ประวัติการสั่งซื้อ',
         handler: async () => {
-          this.openPayment2();
+          this.openOrder();
         }
       },{
         text: 'เงินคืนเต็มจำนวน',
@@ -80,11 +80,11 @@ export class BillPage implements OnInit {
     return await modal.present();
   }
 
-  async openPayment2(){
+  async openOrder(){
     const modal = await this.modalCtrl.create({
       component: PaymentHistoryComponent,
       componentProps: {
-        "tabNav": 2,
+        "tabNav": 0,
         "paymentData": this.paymentData
       }
     });
