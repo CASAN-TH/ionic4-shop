@@ -110,6 +110,10 @@ const routes: Routes = [
   {
     path: 'bill',
     loadChildren: () => import('./bill/bill.module').then( m => m.BillPageModule)
+  },
+  {
+    path: 'callcenter',
+    loadChildren: () => import('./callcenter/callcenter.module').then( m => m.CallcenterPageModule)
   }
 
 

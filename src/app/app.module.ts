@@ -58,6 +58,7 @@ import { ModalLanguageComponent } from './account/modal-language/modal-language.
 import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
 import { BillModalComponent } from './payfor/bill-modal/bill-modal.component';
 import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.component';
+import { SelectMenuComponent } from './productdetail/select-menu/select-menu.component';
 import { PaymentHistoryComponent } from './bill/payment-history/payment-history.component';
 import { PaybackHistoryComponent } from './bill/payback-history/payback-history.component';
 
@@ -115,7 +116,9 @@ import { PaybackHistoryComponent } from './bill/payback-history/payback-history.
     ATMPaymentModalComponent,
     CounterPaymentModalComponent,
     BillModalComponent,
-    AtmBillModalComponent
+    AtmBillModalComponent,
+
+    SelectMenuComponent
 
 
   ],
@@ -166,7 +169,9 @@ import { PaybackHistoryComponent } from './bill/payback-history/payback-history.
     ATMPaymentModalComponent,
     CounterPaymentModalComponent,
     BillModalComponent,
-    AtmBillModalComponent
+    AtmBillModalComponent,
+
+    SelectMenuComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,
