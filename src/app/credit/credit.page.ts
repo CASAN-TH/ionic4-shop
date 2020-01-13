@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CreditService } from './credit.service';
 import { ModalController } from '@ionic/angular';
-import { ModalBillsComponent } from './modal-bills/modal-bills.component';
 import { ModalCreditPointComponent } from './modal-credit-point/modal-credit-point.component';
 import { ModalContactComponent } from './modal-contact/modal-contact.component';
 import { ModalMarriageComponent } from './modal-marriage/modal-marriage.component';
@@ -99,13 +98,7 @@ export class CreditPage implements OnInit {
   }
 
   async openModalBills() {
-    const modal = await this.modalController.create({
-      component: ModalBillsComponent,
-      componentProps: {
-        'billData': this.bill
-      }
-    });
-    return await modal.present();
+    this.router.navigate(['/bill'])
   }
 
   async openModalCreditPoint() {

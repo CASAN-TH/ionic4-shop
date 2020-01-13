@@ -34,7 +34,6 @@ import { ModalNicknameComponent } from './pages/me/modal-nickname/modal-nickname
 import { ModalPhoneComponent } from './pages/me/modal-phone/modal-phone.component';
 import { ModalPasswordComponent } from './pages/me/modal-password/modal-password.component';
 import { ModalSocialComponent } from './pages/me/modal-social/modal-social.component';
-import { ModalBillsComponent } from './credit/modal-bills/modal-bills.component';
 import { ModalCreditPointComponent } from './credit/modal-credit-point/modal-credit-point.component';
 import { ModalContactComponent } from './credit/modal-contact/modal-contact.component';
 import { ModalMarriageComponent } from './credit/modal-marriage/modal-marriage.component';
@@ -96,7 +95,6 @@ import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.co
     SpecificationgiftModalComponent,
     ImformationspecgiftModalComponent,
 
-    ModalBillsComponent,
     ModalCreditPointComponent,
     ModalContactComponent,
     ModalMarriageComponent,
@@ -145,7 +143,6 @@ import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.co
     SpecificationgiftModalComponent,
     ImformationspecgiftModalComponent,
 
-    ModalBillsComponent,
     ModalCreditPointComponent,
     ModalContactComponent,
     ModalMarriageComponent,
