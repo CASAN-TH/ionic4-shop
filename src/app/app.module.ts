@@ -62,6 +62,7 @@ import { SelectMenuComponent } from './productdetail/select-menu/select-menu.com
 import { PaymentHistoryComponent } from './bill/payment-history/payment-history.component';
 import { PaybackHistoryComponent } from './bill/payback-history/payback-history.component';
 import { PaymentProductDetailComponent } from './bill/payment-product-detail/payment-product-detail.component';
+import { PaynowComponent } from './bill/paynow/paynow.component';
 
 
 
@@ -110,6 +111,7 @@ import { PaymentProductDetailComponent } from './bill/payment-product-detail/pay
     PaymentHistoryComponent,
     PaybackHistoryComponent,
     PaymentProductDetailComponent,
+    PaynowComponent,
 
     RecommendedMethodModalComponent,
     DebitCreditCardModalComponent,
@@ -164,6 +166,7 @@ import { PaymentProductDetailComponent } from './bill/payment-product-detail/pay
     PaymentHistoryComponent,
     PaybackHistoryComponent,
     PaymentProductDetailComponent,
+    PaynowComponent,
 
     RecommendedMethodModalComponent,
     DebitCreditCardModalComponent,
