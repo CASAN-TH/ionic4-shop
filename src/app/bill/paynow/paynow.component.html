@@ -1,3 +1,25 @@
-<p>
-  paynow works!
-</p>
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons class="btn-back-position" mode="ios" slot="start" (click)="goBackClick()">
+      <ion-button>
+        <ion-icon mode="ios" slot="icon-only" class="arrow-back" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">ชำระ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bg-input ion-padding-start ion-padding-end">
+    <div class="ion-padding-start ion-padding-top text-size">ชำระ</div>
+    <ion-item lines="none">
+      <span [ngClass]="onCheck ? 'dis-currency' : 'on-currency'">{{data.currency}}</span>
+      <ion-input #myInput [disabled]="onCheck" [(ngModel)]="data.price"></ion-input>
+      <ion-buttons>
+        <ion-button (click)="onEdit()">แก้ไขจำนวนเงิน</ion-button>
+      </ion-buttons>
+    </ion-item>
+    <div class="ion-padding-start ion-padding-bottom text-size">สามารถชำระ{{data.currency}}{{priceCurrency}}</div>
+  </div>
+  <ion-button class="ion-padding-start ion-padding-end ion-margin-top" expand="block" color="primary" (click)="onConfirm()">ยืนยันการชำระ</ion-button>
+</ion-content>

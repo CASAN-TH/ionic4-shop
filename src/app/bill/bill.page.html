@@ -53,21 +53,21 @@
         (ไม่มีบิลรอชำระ)
       </p>
       <p class="header-number-payment ion-no-margin">
-        {{billData.bills[inx].bill_price}}
+        {{priceCurrency}}
       </p>
       <p class="font-header-datelimit">
         วันที่กำหนดชำระเงิน: {{billData.bills[inx].bill_datelimit}}
       </p>
       <div *ngIf="billData.bills[inx].bill_status === 'billing'">
-        <ion-button expand="block" color="primary">ชำระเงินทันที</ion-button>
+        <ion-button expand="block" color="primary" (click)="onPayNow()">ชำระเงินทันที</ion-button>
       </div>
       <div *ngIf="billData.bills[inx].bill_status === 'nobill'">
-        <ion-button expand="block" fill="outline" color="primary">ชำระเงินล่วงหน้า</ion-button>
+        <ion-button expand="block" fill="outline" color="primary" (click)="onPayNow()">ชำระเงินล่วงหน้า</ion-button>
       </div>
     </div>
     <div class="income-container">
       <span class="income-title font-header-title">เงินที่ต้องเข้าบัญชี</span>
-      <span class="income-value">{{billData.bills[inx].bill_currency}}{{billData.bills[inx].bill_price}}</span>
+      <span class="income-value">{{billData.bills[inx].bill_currency}}{{priceCurrency}}</span>
     </div>
   </div>
 

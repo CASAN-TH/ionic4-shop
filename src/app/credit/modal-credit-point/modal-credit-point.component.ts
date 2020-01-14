@@ -25,13 +25,13 @@ export class ModalCreditPointComponent implements OnInit {
     this.progressData = 1 - ((this.creditPoint.credit.creditall - this.creditPoint.credit.creditremain) / this.creditPoint.credit.creditall)
     console.log(this.creditPoint);
     // console.log(this.progressData);
-    const remain = this.numeral(this.creditPoint.credit.creditremain).format('0,0');
+    const remain = this.numeral(this.creditPoint.credit.creditremain).format('0,0.00');
     this.currencyRemain = remain
-    const all = this.numeral(this.creditPoint.credit.creditall).format('0,0');
+    const all = this.numeral(this.creditPoint.credit.creditall).format('0,0.00');
     this.currencyAll = all
-    const stable = this.numeral(this.creditPoint.credit.creditstable).format('0,0');
+    const stable = this.numeral(this.creditPoint.credit.creditstable).format('0,0.00');
     this.currencyStable = stable
-    const temporary = this.numeral(this.creditPoint.credit.credittemporary).format('0,0');
+    const temporary = this.numeral(this.creditPoint.credit.credittemporary).format('0,0.00');
     this.currencyTemporary = temporary
   }
 

@@ -2,12 +2,15 @@
     "status": 200,
     "data": {
         "_id": "001",
-        "u_id": "u001",
+        "u_id": "0992436806",
         "bills": [
             {
+                "_id": "001",
                 "bill_month": "12/2019",
                 "bill_status": "billing",
-                "bill_price": "1,045.91",
+                "bill_price": 1045.91,
+                "bill_payment": 0,
+                "bill_payment_log": [],
                 "bill_datelimit": "28/12/2019",
                 "bill_currency": "฿",
                 "bill_products": [
@@ -188,9 +191,20 @@
                 ]
             },
             {
+                "_id": "002",
                 "bill_month": "01/2020",
                 "bill_status": "nobill",
-                "bill_price": "1,321.79",
+                "bill_price": 1321.79,
+                "bill_payment": 1045.91,
+                "bill_payment_log": [
+                    {
+                        "log_currency": "฿",
+                        "log_price": 1045.91,
+                        "log_date": "27/12/2019",
+                        "log_time": "20:21:28",
+                        "log_status": "การชำหนี้ในปัจจุบัน"
+                    }
+                ],
                 "bill_datelimit": "28/01/2020",
                 "bill_currency": "฿",
                 "bill_products": [

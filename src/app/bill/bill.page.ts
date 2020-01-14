@@ -6,6 +6,7 @@ import { ActionSheetController, ModalController } from '@ionic/angular';
 import { PaymentHistoryComponent } from './payment-history/payment-history.component';
 import { PaybackHistoryComponent } from './payback-history/payback-history.component';
 import { PaymentProductDetailComponent } from './payment-product-detail/payment-product-detail.component';
+import { PaynowComponent } from './paynow/paynow.component';
 
 @Component({
   selector: 'app-bill',
@@ -13,6 +14,9 @@ import { PaymentProductDetailComponent } from './payment-product-detail/payment-
   styleUrls: ['./bill.page.scss'],
 })
 export class BillPage implements OnInit {
+
+  numeral = require('numeral');
+  priceCurrency: any;
   billData: any;
   paymentData: any;
   paybackData: any;
@@ -30,18 +34,21 @@ export class BillPage implements OnInit {
     this.billService.onBillDataListChanged.subscribe((billData: any) => {
       console.log(billData);
       this.billData = billData;
+
+      const price = this.numeral(this.billData.bills[0].bill_price).format('0,0.00');
+      this.priceCurrency = price
     });
     this.billService.onPaymentHistoryDataChanged.subscribe((paymentData: any) => {
-      console.log(paymentData);
+      // console.log(paymentData);
       this.paymentData = paymentData;
     });
     this.billService.onPaybackHistoryDataChanged.subscribe((paybackData: any) => {
-      console.log(paybackData);
+      // console.log(paybackData);
       this.paybackData = paybackData;
     });
   }
 
-  async openMoreAction() { 
+  async openMoreAction() {
     const actionSheet = await this.actionSheetController.create({
       header: 'ดูเพิ่มเติม',
       buttons: [{
@@ -49,17 +56,17 @@ export class BillPage implements OnInit {
         handler: async () => {
           this.openPayment();
         }
-      },{
+      }, {
         text: 'ประวัติการสั่งซื้อ',
         handler: async () => {
           this.openOrder();
         }
-      },{
+      }, {
         text: 'เงินคืนเต็มจำนวน',
         handler: () => {
           this.openPayback();
         }
-      },{
+      }, {
         text: 'ยกเลิก',
         role: 'cancel',
         handler: () => {
@@ -70,7 +77,7 @@ export class BillPage implements OnInit {
     await actionSheet.present();
   }
 
-  async openPayment(){
+  async openPayment() {
     const modal = await this.modalCtrl.create({
       component: PaymentHistoryComponent,
       componentProps: {
@@ -81,7 +88,7 @@ export class BillPage implements OnInit {
     return await modal.present();
   }
 
-  async openOrder(){
+  async openOrder() {
     const modal = await this.modalCtrl.create({
       component: PaymentHistoryComponent,
       componentProps: {
@@ -92,7 +99,7 @@ export class BillPage implements OnInit {
     return await modal.present();
   }
 
-  async openPayback(){
+  async openPayback() {
     const modal = await this.modalCtrl.create({
       component: PaybackHistoryComponent,
       componentProps: {
@@ -104,11 +111,17 @@ export class BillPage implements OnInit {
 
   onPreviousBill() {
     this.inx -= 1
+    const price = this.numeral(this.billData.bills[this.inx].bill_price).format('0,0.00');
+    this.priceCurrency = price
+    // console.log(this.priceCurrency)
     // console.log(this.inx)
   }
 
   onNextBill() {
     this.inx += 1
+    const price = this.numeral(this.billData.bills[this.inx].bill_price).format('0,0.00');
+    this.priceCurrency = price
+    // console.log(this.priceCurrency)
     // console.log(this.inx)
   }
 
@@ -116,11 +129,26 @@ export class BillPage implements OnInit {
     this._location.back();
   }
 
-  async onListProduct(idx){
+  async onListProduct(idx) {
     const modal = await this.modalCtrl.create({
       component: PaymentProductDetailComponent,
       componentProps: {
         "data": this.billData.bills[this.inx].bill_products[idx]
+      }
+    });
+    return await modal.present();
+  }
+
+  async onPayNow() {
+    let priceForPay = this.billData.bills[this.inx].bill_price - this.billData.bills[this.inx].bill_payment
+    const modal = await this.modalCtrl.create({
+      component: PaynowComponent,
+      componentProps: {
+        data: {
+          "billId": this.billData.bills[this.inx]._id,
+          "price": priceForPay.toFixed(2),
+          "currency": this.billData.bills[this.inx].bill_currency
+        }
       }
     });
     return await modal.present();
