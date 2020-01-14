@@ -17,10 +17,14 @@ export class CategoryService {
 
   onCategoryDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([
     {
-      "id": "",
-      "image": "",
-      "type_promotion": "",
-      "link_promotion": ""
+      "cover_image": [
+        {
+          "id": "",
+          "image": "",
+          "type_promotion": "",
+          "link_promotion": ""
+        }
+      ]
     }
 
   ]);

@@ -24,12 +24,12 @@
 
     <ion-col size="10" class="ion-no-padding">
       <ion-content #content>
-        <ion-row *ngFor="let cate of data" [id]="cate._id">
+        <ion-row *ngFor="let cate of data; let i = index;" [id]="cate._id">
           <ion-col size="12">
             <ion-text>{{cate.name}}</ion-text>
             <ion-slides pager>
-              <ion-slide *ngFor="let cover of cate.cover_image; let i = index">
-                <img class="coverimage" [src]="cover.image" (click)="onCoverImageClick(cover.id,i)">
+              <ion-slide *ngFor="let cover of cate.cover_image; let j = index;">
+                <img class="coverimage" [src]="cover.image" (click)="onCoverImageClick(cover.id,i,j)">
               </ion-slide>
             </ion-slides>
             <ion-row>

@@ -9,19 +9,19 @@
                     "id": "1111",
                     "image": "https://pub.thisshop.com/shop/block/2019111/66329368_1572583692544.jpg",
                     "type_promotion": "web",
-                    "link_promotion": "/promotion"
+                    "link_promotion": "promotion"
                 },
                 {
                     "id": "22222",
                     "image": "https://pub.thisshop.com/shop/block/2019111/76264354_1572583780793.png",
                     "type_promotion": "page",
-                    "link_promotion": "/search"
+                    "link_promotion": "search"
                 },
                 {
                     "id": "333333",
                     "image": "https://pub.thisshop.com/shop/block/2019111/80264441_1572583813126.png",
-                    "type_promotion": "web",
-                    "link_promotion": "/promotion"
+                    "type_promotion": "page",
+                    "link_promotion": "productdetail"
                 }
             ],
             "image": "https://res.cloudinary.com/hml20oe33/image/upload/v1576748453/catalog/bedroom_t9cxda.svg",

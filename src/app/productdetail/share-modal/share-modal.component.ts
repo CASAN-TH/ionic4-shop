@@ -30,7 +30,7 @@ export class ShareModalComponent implements OnInit {
   }
 
   onColse() {
-    console.log("onColse");
+    this.modalController.dismiss();
   }
 
 }
