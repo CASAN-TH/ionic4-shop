@@ -64,6 +64,7 @@ import { PaybackHistoryComponent } from './bill/payback-history/payback-history.
 import { PaymentProductDetailComponent } from './bill/payment-product-detail/payment-product-detail.component';
 import { PaynowComponent } from './bill/paynow/paynow.component';
 import { BillPaymentComponent } from './bill/bill-payment/bill-payment.component';
+import { ShareModalComponent } from './productdetail/share-modal/share-modal.component';
 
 
 
@@ -124,7 +125,8 @@ import { BillPaymentComponent } from './bill/bill-payment/bill-payment.component
     BillModalComponent,
     AtmBillModalComponent,
 
-    SelectMenuComponent
+    SelectMenuComponent,
+    ShareModalComponent
 
 
   ],
@@ -180,7 +182,8 @@ import { BillPaymentComponent } from './bill/bill-payment/bill-payment.component
     BillModalComponent,
     AtmBillModalComponent,
 
-    SelectMenuComponent
+    SelectMenuComponent,
+    ShareModalComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,

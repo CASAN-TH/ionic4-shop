@@ -13,6 +13,7 @@ import { ImformationspecModalComponent } from './imformationspec-modal/imformati
 
 import { Location } from '@angular/common';
 import { SelectMenuComponent } from './select-menu/select-menu.component';
+import { ShareModalComponent } from './share-modal/share-modal.component';
 
 @Component({
   selector: 'app-productdetail',
@@ -30,6 +31,7 @@ export class ProductdetailPage implements OnInit {
   SpecificationData: any
   ReviewData: any
   ImformationSpecData: any
+  ShareData: any
   ReccommentData: any
 
   slideOpts = {
@@ -95,6 +97,11 @@ export class ProductdetailPage implements OnInit {
     this.productdetailService.onImformationSpecDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.ImformationSpecData = productdetailDataList;
+    })
+
+    this.productdetailService.onShareDataChanged.subscribe((productdetailDataList: any) => {
+      console.log(productdetailDataList);
+      this.ShareData = productdetailDataList;
     })
   }
 
@@ -200,6 +207,18 @@ export class ProductdetailPage implements OnInit {
       translucent: true
     });
     return await popover.present();
+  }
+
+
+  async onShareModalClick() {
+    const modal = await this.modalController.create({
+      component: ShareModalComponent,
+      cssClass: 'share-modal-css',
+      componentProps: {
+        ShareData: this.ShareData
+      }
+    });
+    return await modal.present();
   }
 
 }
