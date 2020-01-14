@@ -53,6 +53,22 @@
   box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
   background-color: #efefef;
 }
+.share-modal-css {
+  position: absolute;
+  overflow: hidden;
+  max-width: 100%;
+  border-radius: 0px;
+  width: 55vh;
+  height: 50vh !important;
+  top: 0;
+  bottom: -50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 0;
+  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
+  background-color: #efefef;
+}
 
 .mat-step-header .mat-step-icon-selected,
 .mat-step-header .mat-step-icon-state-done,

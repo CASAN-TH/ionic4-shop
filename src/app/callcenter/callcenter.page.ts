@@ -31,4 +31,11 @@ export class CallcenterPage implements OnInit {
     this._location.back();
   }
 
+  onFackbookclick() {
+    console.log("onFackbookclick");
+  }
+  onLineclick() {
+    console.log("onLineclick");
+  }
+
 }

@@ -47,6 +47,7 @@ export class ProductdetailService {
   onSpecificationDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onReviewDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onImformationSpecDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onShareDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onReccommentDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
   constructor(private http: HttpClient) { }
@@ -71,6 +72,7 @@ export class ProductdetailService {
       this.getSpecificationModalData();
       this.getReviewModalData();
       this.getImformationSpecModalData();
+      this.getShareModalData();
     } else {
       // return new Promise((resolve, reject) => {
       //   return reject('rejected')
@@ -258,6 +260,22 @@ export class ProductdetailService {
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onImformationSpecDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+
+
+  getShareModalData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/productdetail/share-modal.json').subscribe((res: any) => {
+          this.onShareDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onShareDataChanged.next(res.data);
         }, reject)
       }
 
