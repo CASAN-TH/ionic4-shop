@@ -2,7 +2,7 @@
     "status": 200,
     "data": {
         "carts": [
-            {
+            { 
                 "shop_id": "5678",
                 "shop_name": "NuttyShop",
                 "image": "https://pub.thisshop.com/shop/block/2019126/69050171_1575617961791.jpg?x-oss-process=image/resize,w_1000/quality,q_80",

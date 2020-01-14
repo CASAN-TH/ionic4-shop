@@ -76,11 +76,11 @@
 
           <ion-row>
             <ion-col text-center size="6">
-              <img class="image_size" [src]="callcenterData.contacts.social_facebook.image">
+              <img class="image_size" [src]="callcenterData.contacts.social_facebook.image" (click)="onFackbookclick()">
               <p>{{callcenterData.contacts.social_facebook.facebook_name}}
             </ion-col>
             <ion-col text-center size="6">
-              <img class="image_size" [src]="callcenterData.contacts.social_line.image">
+              <img class="image_size" [src]="callcenterData.contacts.social_line.image" (click)="onLineclick()">
               <p>{{callcenterData.contacts.social_line.line_name}}
             </ion-col>
           </ion-row>

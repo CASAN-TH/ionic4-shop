@@ -6,8 +6,8 @@ import { ModalController, ActionSheetController, AlertController } from '@ionic/
 import { VouchersModalComponent } from '../productdetail/vouchers-modal/vouchers-modal.component';
 import { SelectdownModalComponent } from './selectdown-modal/selectdown-modal.component';
 import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
-import { ScrollDetail } from '@ionic/core';
 import { PaymentListModalComponent } from './payment-list-modal/payment-list-modal.component';
+
 
 @Component({
   selector: 'app-payment',
@@ -15,7 +15,7 @@ import { PaymentListModalComponent } from './payment-list-modal/payment-list-mod
   styleUrls: ['./payment.page.scss'],
 })
 export class PaymentPage implements OnInit {
-  select: any = "ผ่อนชำระ";
+  select: any = "ชำระเต็มจำนวนเงิน";
   downDataList: any;
   cartDataList: any;
   VouchersData: any;
@@ -25,6 +25,7 @@ export class PaymentPage implements OnInit {
   showToolbar: boolean;
   unitSelected: any;
   
+  profilestatus: any;
 
 
 
@@ -37,34 +38,41 @@ export class PaymentPage implements OnInit {
     public actionSheetController: ActionSheetController) { }
 
   ngOnInit() {
+    this.paymentService.onCreditStatusChanged.subscribe((profilestatus: any) => {
+      console.log(this.profilestatus)
+      this.profilestatus = profilestatus;
+    })
     this.paymentService.onDownDataListChanged.subscribe((downDataList: any) => {
-      console.log(downDataList);
+      // console.log(downDataList);
       this.downDataList = downDataList;
     })
     this.paymentService.onCartDataListChanged.subscribe((cartDataList: any) => {
-      console.log(cartDataList);
+      // console.log(cartDataList);
       this.cartDataList = cartDataList;
     })
     this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
-      console.log(AddaddressData);
+      // console.log(AddaddressData);
       this.AddaddressData = AddaddressData;
     })
     this.paymentService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
+      // console.log(productdetailDataList);
       this.VouchersData = productdetailDataList;
     })
     this.paymentService.onSelectdownDataChanged.subscribe((selectdownData: any) => {
-      console.log(selectdownData);
+      // console.log(selectdownData);
       this.selectdownData = selectdownData;
     })
     this.paymentService.onAddressModalDataChanged.subscribe((AddressModalData: any) => {
-      console.log(AddressModalData);
+      // console.log(AddressModalData);
       this.AddressModalData = AddressModalData;
     })
     if (!this.AddaddressData) {
       this.presentAlert();
     }
 
+  }
+  profile_status(profile_status: any) {
+    throw new Error("Method not implemented.");
   }
 
   onOrderClick() {

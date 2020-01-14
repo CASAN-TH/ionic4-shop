@@ -11,3 +11,37 @@
     padding-bottom: 0px;
     padding-top: 0px;
 }
+
+.coin-icon-sm{
+    width: 20px;
+    height: 18px;
+    position: relative;
+    bottom: -3px;
+}
+
+.ApplyForCredit{
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff4800;
+    border: 1px solid;
+    border-color: #ff5e20;
+    height: 40px;
+    width: 67px;
+    margin-top: 33px;
+    text-align: right;
+    margin-right: 6px;
+  }
+
+.row-border{
+    border-bottom: solid 1px;
+    border-color: lightgray;
+}
+
+// ion-content {
+//     --background: linear-gradient(0deg, rgb(247,247,247,1) 50%, rgba(240, 65, 65, 0.952) 89%);
+//     --padding-top: -55px;
+//   }
+
+.header-color{
+    background-color: red;
+}

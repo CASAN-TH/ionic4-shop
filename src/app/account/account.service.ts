@@ -197,7 +197,7 @@ export class AccountService {
   getBillData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/credit/bill.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/bill/bill.json').subscribe((res: any) => {
           this.onBillDataChanged.next(res.data);
         }, reject)
       } else {

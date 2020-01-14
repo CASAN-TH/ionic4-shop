@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { TcoinPageRoutingModule } from './tcoin-routing.module';
 
 import { TcoinPage } from './tcoin.page';
+import { ProductlistPageModule } from '../productlist/productlist.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TcoinPageRoutingModule
+    TcoinPageRoutingModule,
+    ProductlistPageModule
   ],
   declarations: [TcoinPage]
 })

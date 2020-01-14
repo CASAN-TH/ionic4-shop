@@ -16,6 +16,7 @@ export class TcoinService {
   onTcoinDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onTcoinDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onMyTcoinDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onRecommendDataListChanged: BehaviorSubject<any> = new BehaviorSubject([]);
 
   constructor(private http: HttpClient) { }
 
@@ -33,8 +34,23 @@ export class TcoinService {
     } else {
       this.getTcoinDataList();
       this.getMyTcoinData();
+      this.getRecommendDataList()
     }
     return;
+  }
+
+  getRecommendDataList(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if(mockup){
+        this.http.get('../../assets/json/cart/reccomment.json').subscribe((res: any) => {
+          this.onRecommendDataListChanged.next(res.data);
+        },reject)
+      }else{
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onRecommendDataListChanged.next(res.data);
+        },reject)
+      }
+    })
   }
 
   getMyTcoinData(): Observable<any> | Promise<any> | any {
