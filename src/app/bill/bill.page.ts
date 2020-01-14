@@ -7,6 +7,7 @@ import { PaymentHistoryComponent } from './payment-history/payment-history.compo
 import { PaybackHistoryComponent } from './payback-history/payback-history.component';
 import { PaymentProductDetailComponent } from './payment-product-detail/payment-product-detail.component';
 import { PaynowComponent } from './paynow/paynow.component';
+import { BillPaymentComponent } from './bill-payment/bill-payment.component';
 
 @Component({
   selector: 'app-bill',
@@ -17,6 +18,7 @@ export class BillPage implements OnInit {
 
   numeral = require('numeral');
   priceCurrency: any;
+  paymentCurrency: any;
   billData: any;
   paymentData: any;
   paybackData: any;
@@ -37,6 +39,8 @@ export class BillPage implements OnInit {
 
       const price = this.numeral(this.billData.bills[0].bill_price).format('0,0.00');
       this.priceCurrency = price
+      const payment = this.numeral(this.billData.bills[0].bill_payment).format('0,0.00');
+      this.paymentCurrency = payment
     });
     this.billService.onPaymentHistoryDataChanged.subscribe((paymentData: any) => {
       // console.log(paymentData);
@@ -113,6 +117,8 @@ export class BillPage implements OnInit {
     this.inx -= 1
     const price = this.numeral(this.billData.bills[this.inx].bill_price).format('0,0.00');
     this.priceCurrency = price
+    const payment = this.numeral(this.billData.bills[this.inx].bill_payment).format('0,0.00');
+    this.paymentCurrency = payment
     // console.log(this.priceCurrency)
     // console.log(this.inx)
   }
@@ -121,6 +127,8 @@ export class BillPage implements OnInit {
     this.inx += 1
     const price = this.numeral(this.billData.bills[this.inx].bill_price).format('0,0.00');
     this.priceCurrency = price
+    const payment = this.numeral(this.billData.bills[this.inx].bill_payment).format('0,0.00');
+    this.paymentCurrency = payment
     // console.log(this.priceCurrency)
     // console.log(this.inx)
   }
@@ -149,6 +157,16 @@ export class BillPage implements OnInit {
           "price": priceForPay.toFixed(2),
           "currency": this.billData.bills[this.inx].bill_currency
         }
+      }
+    });
+    return await modal.present();
+  }
+
+  async openBillPayment() {
+    const modal = await this.modalCtrl.create({
+      component: BillPaymentComponent,
+      componentProps: {
+        "data": this.billData.bills[this.inx].bill_payment_log  
       }
     });
     return await modal.present();

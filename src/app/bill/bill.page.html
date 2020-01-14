@@ -69,6 +69,13 @@
       <span class="income-title font-header-title">เงินที่ต้องเข้าบัญชี</span>
       <span class="income-value">{{billData.bills[inx].bill_currency}}{{priceCurrency}}</span>
     </div>
+    <div class="ion-margin-top" *ngIf="billData.bills[inx].bill_payment > 0" (click)="openBillPayment()">
+      <span class="income-title font-header-title">ชำระคืนแล้ว</span>
+      <span class="income-value">
+        {{billData.bills[inx].bill_currency}}{{paymentCurrency}}
+        <ion-icon mode="ios" slot="icon-only" class="icon-payment" name="arrow-forward"></ion-icon>
+      </span>
+    </div>
   </div>
 
   <p class="ion-margin-start font-list-title">รายละเอียดบิลของเดือนนี้ ({{billData.bills[inx].bill_products.length}})</p>
