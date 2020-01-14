@@ -19,6 +19,11 @@ const routes: Routes = [
     path: ':cate2Id',
     component: SearchPage,
     resolve: [ SearchService ]
+  },
+  {
+    path: ':coverId',
+    component: SearchPage,
+    resolve: [ SearchService ]
   }
 ];
 
