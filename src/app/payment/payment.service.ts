@@ -19,6 +19,7 @@ export class PaymentService {
   onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onSelectdownDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onAddressModalDataChanged:BehaviorSubject<any> = new BehaviorSubject({});
+  onCreditStatusChanged: BehaviorSubject<any> = new BehaviorSubject({});
  
 
   constructor(private http: HttpClient) { }
@@ -38,6 +39,7 @@ export class PaymentService {
     this.getVouchersModalData();
     this.getSelectdownModalData();
     this.getAddressModalData();
+    this.getCreditStatus();
   
  
 
@@ -131,6 +133,19 @@ export class PaymentService {
 
     })
   }
+  getCreditStatus(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/regcredit/profile.json').subscribe((res: any) => {
+          this.onCreditStatusChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url + '/api/cusprofilesbyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onCreditStatusChanged.next(res.data);
+        }, reject)
+      }
+    })
+  };
  
   createPaymentData(body): Promise<any> {
     return new Promise((resolve, reject) => {
