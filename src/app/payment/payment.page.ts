@@ -15,7 +15,7 @@ import { PaymentListModalComponent } from './payment-list-modal/payment-list-mod
   styleUrls: ['./payment.page.scss'],
 })
 export class PaymentPage implements OnInit {
-  select: any = "ผ่อนชำระ";
+  select: any = "ชำระเต็มจำนวนเงิน";
   downDataList: any;
   cartDataList: any;
   VouchersData: any;
