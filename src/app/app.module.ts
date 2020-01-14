@@ -63,6 +63,7 @@ import { PaymentHistoryComponent } from './bill/payment-history/payment-history.
 import { PaybackHistoryComponent } from './bill/payback-history/payback-history.component';
 import { PaymentProductDetailComponent } from './bill/payment-product-detail/payment-product-detail.component';
 import { PaynowComponent } from './bill/paynow/paynow.component';
+import { BillPaymentComponent } from './bill/bill-payment/bill-payment.component';
 
 
 
@@ -112,6 +113,7 @@ import { PaynowComponent } from './bill/paynow/paynow.component';
     PaybackHistoryComponent,
     PaymentProductDetailComponent,
     PaynowComponent,
+    BillPaymentComponent,
 
     RecommendedMethodModalComponent,
     DebitCreditCardModalComponent,
@@ -167,6 +169,7 @@ import { PaynowComponent } from './bill/paynow/paynow.component';
     PaybackHistoryComponent,
     PaymentProductDetailComponent,
     PaynowComponent,
+    BillPaymentComponent,
 
     RecommendedMethodModalComponent,
     DebitCreditCardModalComponent,
