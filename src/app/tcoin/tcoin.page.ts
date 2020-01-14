@@ -11,6 +11,7 @@ import { Location } from '@angular/common';
 export class TcoinPage implements OnInit {
   tcoinDataList: any;
   mytcoinDataList: any;
+  recommendDataList: any;
 
   constructor(private router: Router, private tcoinService : TcoinService,
     private _location: Location) { }
@@ -23,6 +24,10 @@ export class TcoinPage implements OnInit {
     this.tcoinService.onMyTcoinDataChanged.subscribe((mytcoinDataList:any)=>{
       console.log(mytcoinDataList);
       this.mytcoinDataList = mytcoinDataList;
+    })
+    this.tcoinService.onRecommendDataListChanged.subscribe((recommendDataList:any)=>{
+      console.log(recommendDataList);
+      this.recommendDataList = recommendDataList;
     })
 
   }

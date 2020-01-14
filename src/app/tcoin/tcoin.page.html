@@ -49,14 +49,58 @@
   <ion-col size="12">
     <ion-grid class="list-shadow">
       <ion-row>
-        <ion-col size="6">
-          <img src="https://pub.thisshop.com/shop/block/20191122/46509015_1574405762591.png?x-oss-process=image/resize,w_750/quality,q_80&quot" alt="">
+        <ion-col size="6" *ngFor="let promo of mytcoinDataList.tcoinpromotion">
+          <img [src]="promo.img">
         </ion-col>
-        <ion-col size="6">
-          <img src="https://pub.thisshop.com/shop/block/20191122/53348974_1574405771531.png?x-oss-process=image/resize,w_750/quality,q_80&quot" alt="">
-        </ion-col>
+
       </ion-row>
     </ion-grid>
   </ion-col>
 </ion-row>
+
+<ion-row>
+  <ion-col size="12">
+    <ion-grid class="list-shadow">
+      <ion-row>
+        <ion-col size="12">
+          <h5 class="ion-text-center">
+            Tcoin Tasks
+          </h5>
+        </ion-col>
+      </ion-row>
+      <ion-row class="row-border" *ngFor="let task of mytcoinDataList.tcointask">
+        <ion-col size="9">
+          <h5>
+            {{task.name}}
+          </h5>
+          <p>
+            {{task.description}}
+          </p>
+        </ion-col>
+        <ion-col size="3">
+          <ion-buttons *ngIf="task.point">
+            <ion-button class="ApplyForCredit" >
+              <ion-text>+{{task.point}}<img class="coin-icon-sm" src="https://image.flaticon.com/icons/svg/1490/1490849.svg"></ion-text>
+            </ion-button>
+          </ion-buttons>
+
+          <ion-buttons *ngIf="!task.point">
+            <ion-button class="ApplyForCredit" >
+              <ion-text>Check in</ion-text>
+            </ion-button>
+          </ion-buttons>
+
+        </ion-col>
+
+
+
+
+      </ion-row>
+    </ion-grid>
+  </ion-col>
+</ion-row>
+
+<h1 style="text-align: center;">สินค้าแนะนำ</h1>
+<productlist [recivedata]="recommendDataList"></productlist>
+
 </ion-content>
