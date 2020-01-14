@@ -39,7 +39,7 @@ export class PaynowComponent implements OnInit {
   }
 
   onConfirm() {
-    this.router.navigate(['/payfor', this.data])
+    this.router.navigate(['/payfor'], { queryParams: { billId: this.data.billId, price: this.data.price } })
     setTimeout(() => {
       this.modalCtrl.dismiss();
     }, 800)

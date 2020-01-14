@@ -144,7 +144,7 @@ export class BillPage implements OnInit {
     const modal = await this.modalCtrl.create({
       component: PaynowComponent,
       componentProps: {
-        data: {
+        "data": {
           "billId": this.billData.bills[this.inx]._id,
           "price": priceForPay.toFixed(2),
           "currency": this.billData.bills[this.inx].bill_currency

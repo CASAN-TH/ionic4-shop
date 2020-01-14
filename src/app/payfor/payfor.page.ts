@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common'
 import { PayforService } from './payfor.service';
 import { ModalController, AlertController } from '@ionic/angular';
@@ -17,13 +17,18 @@ import { CounterPaymentModalComponent } from './counter-payment-modal/counter-pa
   styleUrls: ['./payfor.page.scss'],
 })
 export class PayforPage implements OnInit {
+  numeral = require('numeral');
+  billPrice: any;
+  payBillData: any;
   payforData: any;
   debitcreditcardData: any;
   onlinebankingData: any;
   atm_paymentData: any;
   counter_paymentData: any;
+  mockData: any = {};
 
   constructor(private router: Router,
+    private route: ActivatedRoute,
     private payforService: PayforService,
     public modalController: ModalController,
     private alertCtrl: AlertController,
@@ -33,6 +38,11 @@ export class PayforPage implements OnInit {
     this.payforService.onPayforDataChanged.subscribe((payforDataList: any) => {
       console.log(payforDataList);
       this.payforData = payforDataList;
+    })
+
+    this.payforService.onPayBillDataListChanged.subscribe((payBillData: any) => {
+      console.log(payBillData);
+      this.payBillData = payBillData;
     })
 
     this.payforService.onDebitCreditCardDataChanged.subscribe((payforDataList: any) => {
@@ -52,8 +62,19 @@ export class PayforPage implements OnInit {
       console.log(payforDataList);
       this.counter_paymentData = payforDataList;
     })
+
+    this.route.queryParams
+      .subscribe(params => {
+        this.mockData.billId = params.billId ? params.billId : "";
+        this.mockData.price = params.price ? params.price : "";
+        // console.log(this.mockData);
+
+        const price = this.numeral(this.mockData.price).format('0,0.00');
+        this.billPrice = price
+        // console.log(this.billPrice)
+      });
   }
-  
+
 
   async RecommendedMethodModal() {
     const modal = await this.modalController.create({
@@ -112,7 +133,7 @@ export class PayforPage implements OnInit {
         {
           text: 'ยกเลิก',
           handler: () => {
-              this._location.back();
+            this._location.back();
           }
         }, {
           text: 'ดำเนินการชำระต่อ',
@@ -123,5 +144,5 @@ export class PayforPage implements OnInit {
     });
     await alert.present();
   }
-  
+
 }

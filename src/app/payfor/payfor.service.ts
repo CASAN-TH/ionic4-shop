@@ -24,7 +24,7 @@ export class PayforService {
     "guarantee": {}
   });
   onBankDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  onPayforDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onPayBillDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onlineBankingDataChanged: BehaviorSubject<any> = new BehaviorSubject({
     "bank": []
   });
@@ -38,8 +38,8 @@ export class PayforService {
     "phone_number": {},
     "email": {},
     "fee": {},
-    "counter_service":{},
-    "counter_bank":{}
+    "counter_service": {},
+    "counter_bank": {}
   });
   onPayforDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
@@ -54,7 +54,7 @@ export class PayforService {
   resolve(route: ActivatedRouteSnapshot): Observable<any> | Promise<any> | any {
     this.routeParams = route.params;
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
-
+    this.getPayBillDataList();
     this.getPayforData();
     this.getDebitCreditCardData();
     this.getBankData();
@@ -69,15 +69,15 @@ export class PayforService {
     return;
   }
 
-  getPayforDataList(): Observable<any> | Promise<any> | any {
+  getPayBillDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/payfor/payfor.json').subscribe((res: any) => {
-          this.onPayforDataListChanged.next(res.data);
+        this.http.get('../../assets/json/payfor/paybill.json').subscribe((res: any) => {
+          this.onPayBillDataListChanged.next(res.data);
         }, reject)
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onPayforDataListChanged.next(res.data);
+          this.onPayBillDataListChanged.next(res.data);
         }, reject)
       }
     })
@@ -185,7 +185,7 @@ export class PayforService {
   createPayforData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getPayforDataList();
+        this.getPayBillDataList();
       }, reject)
     })
   }
@@ -193,7 +193,7 @@ export class PayforService {
   updatePayforData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getPayforDataList();
+        this.getPayBillDataList();
       }, reject)
     })
   }
@@ -201,7 +201,7 @@ export class PayforService {
   deletePayforData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.delete(api_url + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getPayforDataList();
+        this.getPayBillDataList();
       }, reject)
     })
   }
