@@ -1,21 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start" (click)="goBackClick()">
+    <ion-buttons class="btn-icon-padding" slot="start" (click)="goBackClick()">
       <ion-button>
         <ion-icon slot="icon-only" mode="ios" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-searchbar class="searchbar-padding" slot="start" placeholder="Enter item keyword"></ion-searchbar>
-    <ion-buttons class="iconchat-padding" slot="end">
+    <ion-buttons class="btn-icon-padding" slot="end" (click)="onCartClick()">
       <ion-button>
-        <ion-icon slot="icon-only" src="https://image.flaticon.com/icons/svg/126/126501.svg">
-        </ion-icon>
+        <ion-icon mode="ios" name="ios-cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons class="btn-icon-padding" slot="end" (click)="openMenu()" main>
+      <ion-button>
+        <ion-icon mode="ios" name="ios-menu"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
   <ion-card class="ion-no-margin-custom" *ngIf="searchData.categories && searchData.categories.length">
     <h6>ประเภทสินค้า</h6>
     <ion-row>
@@ -45,11 +50,43 @@
       <mat-tab-group mat-align-tabs="start">
         <mat-tab *ngFor="let tabproduct of searchData.productItems" [label]="tabproduct.tabname">
 
-            <productlist [recivedata]="tabproduct.products"></productlist>
+          <productlist [recivedata]="tabproduct.products"></productlist>
 
         </mat-tab>
       </mat-tab-group>
     </ion-row>
   </ion-card>
-
 </ion-content>
+
+
+
+<ion-menu side="end" type="push">
+  <ion-header>
+    <ion-toolbar color="gray">
+      <ion-title>เช็คเลือก</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-grid>
+      <app-selectcheck [recivedata]="selectcheckData"></app-selectcheck>
+    </ion-grid>
+  </ion-content>
+  <ion-footer>
+    <ion-row>
+      <ion-col size="6" class="add-cart">
+        <ion-buttons class="btn-center" (click)="onReset()">
+          <ion-button class="butcolor">
+            รีเซ็ต
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="6" class="buy">
+        <ion-buttons class="btn-center" (click)="onConfirm()">
+          <ion-button class="butcolor">
+            ยืนยัน
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
+</ion-menu>

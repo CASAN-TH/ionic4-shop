@@ -1,0 +1,38 @@
+{
+    "status": 200,
+    "data": {
+        "category_name":"หมวดหมู่",
+        "categories": [
+            {
+                "_id": "111",
+                "name": "โทรศัพท์มือถือ"
+            },
+            {
+                "_id": "222",
+                "name": "สมาร์ทโฟน"
+            }
+        ],
+        "brand_name":"ยี่ห้อ",
+        "brands": [
+            {
+                "_id": "333",
+                "name": "iPhone"
+            },
+            {
+                "_id": "444",
+                "name": "vivo"
+            }
+        ],
+        "pricerange_name":"ช่วงราคา",
+        "priceranges": [
+            {
+                "_id": "555",
+                "name": "ราคาต่ำสุด"
+            },
+            {
+                "_id": "666",
+                "name": "ราคาสูงสุด"
+            }
+        ]
+    }
+}

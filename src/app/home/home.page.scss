@@ -5,11 +5,10 @@ ion-toolbar {
   // color: #ffffff;
 }
 .searchbar-padding {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 15px;
 }
-.iconchat-padding {
-  padding-top: 5px;
+.btn-icon-padding {
+  padding-top: 10px;
 }
 ion-grid {
   margin-top: 0.5rem;
@@ -25,11 +24,11 @@ ion-content {
   font-size: 18px;
 }
 
-.sc-ion-searchbar-ios-h {
-  // --icon-color: #ece8e8;
-  // --background: rgba(241, 235, 235, 0.42) !important;
-  // --color: #ece8e8 !important;
-}
+// .sc-ion-searchbar-ios-h {
+//   --icon-color: #ece8e8;
+//   --background: rgba(241, 235, 235, 0.42) !important;
+//   --color: #ece8e8 !important;
+// }
 
 .show-background {
   --background: rgb(217, 212, 211);

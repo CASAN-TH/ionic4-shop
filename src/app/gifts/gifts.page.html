@@ -6,6 +6,16 @@
       </ion-button>
     </ion-buttons>
     <ion-title>gifts</ion-title>
+    <ion-buttons slot="end" (click)="onCartClick()">
+      <ion-button>
+        <ion-icon mode="ios" name="ios-cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" (click)="presentPopover($event)">
+      <ion-button>
+        <ion-icon mode="ios" name="ios-more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

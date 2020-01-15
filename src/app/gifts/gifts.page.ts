@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GiftsService } from './gifts.service';
-import { ModalController } from '@ionic/angular';
+import { ModalController, PopoverController } from '@ionic/angular';
 import { PaymentgiftModalComponent } from './paymentgift-modal/paymentgift-modal.component';
 import { TcoingiftModalComponent } from './tcoingift-modal/tcoingift-modal.component';
 import { WarrantygiftModalComponent } from './warrantygift-modal/warrantygift-modal.component';
@@ -9,6 +9,7 @@ import { SpecificationgiftModalComponent } from './specificationgift-modal/speci
 import { ImformationspecgiftModalComponent } from './imformationspecgift-modal/imformationspecgift-modal.component';
 
 import { Location } from '@angular/common'
+import { SelectMenuComponent } from '../productdetail/select-menu/select-menu.component';
 
 @Component({
   selector: 'app-gifts',
@@ -35,7 +36,9 @@ export class GiftsPage implements OnInit {
     private router: Router,
     private giftsService: GiftsService,
     public modalController: ModalController,
-    private _location: Location) { }
+    private _location: Location,
+    public popoverController: PopoverController
+    ) { }
 
   ngOnInit() {
     this.giftsService.onGiftsDataListChanged.subscribe((giftsDataList: any) => {
@@ -134,6 +137,15 @@ export class GiftsPage implements OnInit {
   }
   onChatClick() {
     console.log("Chat Bot");
+  }
+
+  async presentPopover(ev: any) {
+    const popover = await this.popoverController.create({
+      component: SelectMenuComponent,
+      event: ev,
+      translucent: true
+    });
+    return await popover.present();
   }
 
 }
