@@ -118,7 +118,11 @@ const routes: Routes = [
   {
     path: 'callcenter',
     loadChildren: () => import('./callcenter/callcenter.module').then( m => m.CallcenterPageModule)
+  },  {
+    path: 'selectcheck',
+    loadChildren: () => import('./selectcheck/selectcheck.module').then( m => m.SelectcheckPageModule)
   }
+
 
 
 

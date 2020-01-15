@@ -9,6 +9,7 @@ import { SearchPageRoutingModule } from "./search-routing.module";
 import { SearchPage } from "./search.page";
 import { MatTabsModule } from "@angular/material/tabs";
 import { ProductlistPageModule } from 'src/app/productlist/productlist.module';
+import { SelectcheckPageModule } from 'src/app/selectcheck/selectcheck.module';
 
 
 
@@ -19,7 +20,8 @@ import { ProductlistPageModule } from 'src/app/productlist/productlist.module';
     IonicModule,
     SearchPageRoutingModule,
     ProductlistPageModule,
-    MatTabsModule
+    MatTabsModule,
+    SelectcheckPageModule
 
   ],
   declarations: [SearchPage]

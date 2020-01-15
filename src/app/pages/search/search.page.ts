@@ -12,10 +12,9 @@ import { MenuController } from '@ionic/angular';
 export class SearchPage implements OnInit {
 
   searchData: any;
-  menuData: any;
+  selectcheckData: any;
   cate2Selected: any;
   brandSelected: any;
-
 
   constructor(
     private router: Router, 
@@ -31,7 +30,7 @@ export class SearchPage implements OnInit {
     })
     this.searchService.onMenuDataChanged.subscribe((searchDataList: any) => {
       console.log(searchDataList);
-      this.menuData = searchDataList;
+      this.selectcheckData = searchDataList;
     })
   }
 
@@ -63,5 +62,14 @@ export class SearchPage implements OnInit {
   openMenu() {
     this.menu.open('end');
   }
+
+  onReset(){
+    console.log("onReset")
+  }
+  onConfirm(){
+    console.log("onConfirm")
+  }
+
+
 
 }

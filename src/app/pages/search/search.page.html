@@ -20,6 +20,7 @@
 </ion-header>
 
 <ion-content>
+
   <ion-card class="ion-no-margin-custom" *ngIf="searchData.categories && searchData.categories.length">
     <h6>ประเภทสินค้า</h6>
     <ion-row>
@@ -55,23 +56,37 @@
       </mat-tab-group>
     </ion-row>
   </ion-card>
-
 </ion-content>
 
-<!-- [recivedata]="menuData.categories" -->
-<!-- <ion-menu side="end" type="push">
+
+
+<ion-menu side="end" type="push">
   <ion-header>
-    <ion-toolbar color="danger">
-      <ion-title>End Menu</ion-title>
+    <ion-toolbar color="gray">
+      <ion-title>เช็คเลือก</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <ion-list>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-    </ion-list>
+    <ion-grid>
+      <app-selectcheck [recivedata]="selectcheckData"></app-selectcheck>
+    </ion-grid>
   </ion-content>
-</ion-menu> -->
+  <ion-footer>
+    <ion-row>
+      <ion-col size="6" class="add-cart">
+        <ion-buttons class="btn-center" (click)="onReset()">
+          <ion-button class="butcolor">
+            รีเซ็ต
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="6" class="buy">
+        <ion-buttons class="btn-center" (click)="onConfirm()">
+          <ion-button class="butcolor">
+            ยืนยัน
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
+</ion-menu>

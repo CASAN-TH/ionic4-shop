@@ -24,6 +24,11 @@ const routes: Routes = [
     path: ':coverId',
     component: SearchPage,
     resolve: [ SearchService ]
+  },
+  {
+    path: ':selectcheckId',
+    component: SearchPage,
+    resolve: [ SearchService ]
   }
 ];
 
