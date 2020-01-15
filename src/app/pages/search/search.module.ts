@@ -10,6 +10,8 @@ import { SearchPage } from "./search.page";
 import { MatTabsModule } from "@angular/material/tabs";
 import { ProductlistPageModule } from 'src/app/productlist/productlist.module';
 
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +20,7 @@ import { ProductlistPageModule } from 'src/app/productlist/productlist.module';
     SearchPageRoutingModule,
     ProductlistPageModule,
     MatTabsModule
+
   ],
   declarations: [SearchPage]
 })
