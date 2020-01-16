@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons mode="ios" slot="start" (click)="ModalDismiss()">
+      <ion-button>
+        <ion-icon mode="ios" slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>รายละเอียด Tcoin</ion-title>
+    <ion-buttons mode="ios" slot="end">
+      <ion-button>
+        <p>
+          เงื่อนไข Tcoin
+        </p>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+      <div class="bg">
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <p class="tcoin-p1 header-p-color">
+          Tcoinที่ใช้ได้
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <h1 class="tcoin-p2 header-p-color">
+          <img class="tcoin-logo" src="https://image.flaticon.com/icons/svg/566/566445.svg"> {{TcoinData}}
+        </h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center header-p-color">
+        <p>100 Tcoin = 1 THB,สามารถใช้ในการสั่งซื้อ</p>
+      </ion-col>
+    </ion-row>
+  </div>
+
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid class="list-shadow grid">
+
+        <ion-row class="row-border" *ngFor="let detail of TcoinDetailData">
+          <ion-col size="9">
+            <p class="margin-p-content-detail">
+              {{detail.detail}}
+            </p>
+            <p class="margin-p-content-time">
+              {{detail.date}} {{detail.time}}
+            </p>
+          </ion-col>
+          <ion-col size="3">
+            <p class="margin-p-content-point">+{{detail.point}}</p>
+          </ion-col>
+
+
+
+
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

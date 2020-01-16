@@ -1,14 +1,14 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
     <ion-buttons mode="ios" slot="start" (click)="onBackClick()">
       <ion-button>
-        <ion-icon mode="ios" slot="icon-only" name="arrow-back"></ion-icon>
+        <ion-icon mode="ios" slot="icon-only" class="arrow-back" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title>Tcoin ของฉัน</ion-title>
     <ion-buttons mode="ios" slot="end">
-      <ion-button (click)="onToTcoinDetailPage()">
-        <p>
+      <ion-button (click)="TcoinDetailModal()">
+        <p class="detail">
           รายละเอียด
         </p>
       </ion-button>
@@ -20,7 +20,7 @@
   
 <ion-row>
   <ion-col size="12" class="ion-text-center">
-    <h1>
+    <h1 class="coin-header">
       {{mytcoinDataList.mytcoin}} <img class="coin-icon" src="https://image.flaticon.com/icons/svg/1490/1490849.svg" alt="">
     </h1>
   </ion-col>

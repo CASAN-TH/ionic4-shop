@@ -7,7 +7,8 @@ import { VouchersModalComponent } from '../productdetail/vouchers-modal/vouchers
 import { SelectdownModalComponent } from './selectdown-modal/selectdown-modal.component';
 import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
 import { PaymentListModalComponent } from './payment-list-modal/payment-list-modal.component';
-
+import { AcceptModalComponent } from './accept-modal/accept-modal.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-payment',
@@ -24,7 +25,10 @@ export class PaymentPage implements OnInit {
   AddressModalData: any;
   showToolbar: boolean;
   unitSelected: any;
-  
+
+  creditPoint: any; 
+
+
   profilestatus: any;
 
 
@@ -35,13 +39,18 @@ export class PaymentPage implements OnInit {
     private _location: Location,
     public modalController: ModalController,
     private alertCtrl: AlertController,
-    public actionSheetController: ActionSheetController) { }
-
+    public actionSheetController: ActionSheetController,
+    public dialog: MatDialog) { }
+  
   ngOnInit() {
     this.paymentService.onCreditStatusChanged.subscribe((profilestatus: any) => {
-      console.log(this.profilestatus)
       this.profilestatus = profilestatus;
+      console.log(this.profilestatus)
     })
+    this.paymentService.onCreditPointChanged.subscribe((point: any) => {
+      this.creditPoint = point
+      console.log(point);
+    });
     this.paymentService.onDownDataListChanged.subscribe((downDataList: any) => {
       // console.log(downDataList);
       this.downDataList = downDataList;
@@ -121,6 +130,16 @@ export class PaymentPage implements OnInit {
     });
     return await modal.present();
   }
+ 
+  acceptModal(): void {
+    const dialogRef = this.dialog.open(AcceptModalComponent, {
+      width: '500px',
+      height:'120px',
+      data: {}
+    });
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }
 
   async addresslModal() {
     const modal = await this.modalController.create({
@@ -186,25 +205,7 @@ export class PaymentPage implements OnInit {
     });
     await alert.present();
   }
-  // async BackAlert() {
-  //   const alert = await this.alertCtrl.create({
-  //     message: 'คุณแน่ใจหรือไม่ว่าต้องออกจากระบบ',
-  //     buttons: [
-  //       {
-  //         text: 'ออกจากหน้านี้',
-  //         handler: () => {
-  //           this.router.navigate(['app-cart'])
-  //         }
-  //       }, {
-  //         text: 'ดูอีกครั้ง',
-  //         handler: () => {
-          
-  //         }
-  //       }
-  //     ]
-  //   });
-  //   await alert.present();
-  // }
+  
   async BackAlert() {
     const alert = await this.alertCtrl.create({
       header: 'คุณแน่ใจหรือไม่ว่าต้องออกจากระบบ',

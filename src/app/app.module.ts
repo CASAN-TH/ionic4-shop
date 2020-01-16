@@ -65,6 +65,9 @@ import { PaymentProductDetailComponent } from './bill/payment-product-detail/pay
 import { PaynowComponent } from './bill/paynow/paynow.component';
 import { BillPaymentComponent } from './bill/bill-payment/bill-payment.component';
 import { ShareModalComponent } from './productdetail/share-modal/share-modal.component';
+import { AcceptModalComponent } from './payment/accept-modal/accept-modal.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ModalTcoinDetailComponent } from './tcoin/modal-tcoin-detail/modal-tcoin-detail.component';
 import { SearchModalComponent } from './home/search-modal/search-modal.component';
 
 
@@ -79,6 +82,7 @@ import { SearchModalComponent } from './home/search-modal/search-modal.component
     PromotionModalComponent,
     SelectdownModalComponent,
     PaymentListModalComponent,
+    AcceptModalComponent,
 
     PaymentgiftModalComponent,
     TcoinModalComponent,
@@ -96,6 +100,8 @@ import { SearchModalComponent } from './home/search-modal/search-modal.component
     ModalAboutComponent,
     ModalMyorderComponent,
     ModalLanguageComponent,
+
+    ModalTcoinDetailComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
@@ -144,6 +150,7 @@ import { SearchModalComponent } from './home/search-modal/search-modal.component
     ImformationspecModalComponent,
     SelectdownModalComponent,
     PaymentListModalComponent,
+    AcceptModalComponent,
 
     ModalNicknameComponent,
     ModalPhoneComponent,
@@ -154,6 +161,8 @@ import { SearchModalComponent } from './home/search-modal/search-modal.component
     ModalAboutComponent,
     ModalMyorderComponent,
     ModalLanguageComponent,
+
+    ModalTcoinDetailComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
@@ -193,6 +202,7 @@ import { SearchModalComponent } from './home/search-modal/search-modal.component
     BrowserAnimationsModule,
     FormsModule,
     MatTabsModule,
+    MatDialogModule,
     TranslateModule.forRoot(),
   ],
   providers: [

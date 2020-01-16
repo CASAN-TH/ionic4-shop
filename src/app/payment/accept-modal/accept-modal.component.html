@@ -1,0 +1,18 @@
+<ion-row class="text">
+  <ion-col size="12">
+    <ion-text class="font">การผ่อนชำระต้องได้รับความยินยอม<a class="aceptcolor" routerLink="/termsandcondition"
+        routerLinkActive="active" (click)="dismiss()">ข้อตกลงการใช้บริการ</a>สั่งซื้ออีกครั้ง</ion-text>
+  </ion-col>
+</ion-row>
+<ion-row class="font text">
+  <ion-col size="6" (click)="dismiss()">
+    <ion-text>
+      ดูอีกครั้ง
+    </ion-text>
+  </ion-col>
+  <ion-col size="6" class="border-solid" (click)="onacceptClick()">
+    <ion-text>
+      เห็นด้วย
+    </ion-text>
+  </ion-col>
+</ion-row>
