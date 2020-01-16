@@ -68,7 +68,7 @@
       </ion-col>
     </ion-row>
     <ion-row class="ion-padding-start ion-padding-end" *ngIf="creditMenuList">
-      <ion-col size="6" *ngFor="let item of creditMenuList.menus">
+      <ion-col size="6" *ngFor="let item of creditMenuList">
         <ion-card class="ion-no-margin" mode="md" (click)="openModalMenu(item.name)">
           <img [src]="item.image" class="img-size-menu">
           <div style="padding: 5px;">
