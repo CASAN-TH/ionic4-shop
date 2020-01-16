@@ -102,6 +102,22 @@
               </ion-buttons>
             </ion-col>
           </ion-row>
+          <ion-row class="bg-payment" *ngIf="!profilestatus.accountstatus || profilestatus.accountstatus === 'member'">
+            <ion-col size="9">
+              <div class="bg-color-payment">
+                <ion-item lines="none" color="#fff5f1" class="payment">
+                  <ion-text>คุณยังไม่มีวงเงิน คุณสามารถสมัครเพื่อเปิดใช้งานการช้อปปิ้งแบบผ่อนชำระ</ion-text>
+                </ion-item>
+              </div>
+            </ion-col>
+            <ion-col size="3" class="bg-color-payment">
+              <ion-buttons class="bg-ApplyForCredit" (click)="onApplyForCredit()">
+                <ion-button class="ApplyForCredit">
+                  <ion-text>ไปสมัคร</ion-text>
+                </ion-button>
+              </ion-buttons>
+            </ion-col>
+          </ion-row>
           <!-- <ion-row class="bg-payment">
             <ion-col size="12">
               <div class="bg-color-payment">
@@ -115,22 +131,7 @@
       </ion-row>
 
 
-      <ion-row class="bg-payment" *ngIf="!profilestatus.accountstatus || profilestatus.accountstatus === 'member'">
-        <ion-col size="9">
-          <div class="bg-color-payment">
-            <ion-item lines="none" color="#fff5f1" class="payment">
-              <ion-text>คุณยังไม่มีวงเงิน คุณสามารถสมัครเพื่อเปิดใช้งานการช้อปปิ้งแบบผ่อนชำระ</ion-text>
-            </ion-item>
-          </div>
-        </ion-col>
-        <ion-col size="3" class="bg-color-payment">
-          <ion-buttons class="bg-ApplyForCredit" (click)="onApplyForCredit()">
-            <ion-button class="ApplyForCredit">
-              <ion-text>ไปสมัคร</ion-text>
-            </ion-button>
-          </ion-buttons>
-        </ion-col>
-      </ion-row>
+     
 
 
       <ion-row *ngIf="select === 'ผ่อนชำระ'" class="bgwhite">
@@ -213,8 +214,6 @@
   <ion-row>
     <ion-col size="12">
       <ion-grid *ngFor="let cate of cartDataList.carts">
-
-
         <ion-row>
           <ion-col size="12">
             <ion-row class="border">
