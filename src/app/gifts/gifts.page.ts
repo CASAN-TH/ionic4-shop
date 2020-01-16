@@ -10,6 +10,7 @@ import { ImformationspecgiftModalComponent } from './imformationspecgift-modal/i
 
 import { Location } from '@angular/common'
 import { SelectMenuComponent } from '../productdetail/select-menu/select-menu.component';
+import { ShareModalComponent } from '../productdetail/share-modal/share-modal.component';
 
 @Component({
   selector: 'app-gifts',
@@ -24,6 +25,7 @@ export class GiftsPage implements OnInit {
   WarrantygiftData: any
   SpecificationgiftData: any
   ImformationSpecgiftData: any
+  ShareData: any
   ReccommentData: any
 
   slideOpts = {
@@ -38,7 +40,7 @@ export class GiftsPage implements OnInit {
     public modalController: ModalController,
     private _location: Location,
     public popoverController: PopoverController
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.giftsService.onGiftsDataListChanged.subscribe((giftsDataList: any) => {
@@ -69,6 +71,10 @@ export class GiftsPage implements OnInit {
     this.giftsService.onImformationSpecgiftDataChanged.subscribe((giftsDataList: any) => {
       console.log(giftsDataList);
       this.ImformationSpecgiftData = giftsDataList;
+    })
+    this.giftsService.onShareDataChanged.subscribe((productdetailDataList: any) => {
+      console.log(productdetailDataList);
+      this.ShareData = productdetailDataList;
     })
   }
 
@@ -146,6 +152,17 @@ export class GiftsPage implements OnInit {
       translucent: true
     });
     return await popover.present();
+  }
+
+  async onShareModalClick() {
+    const modal = await this.modalController.create({
+      component: ShareModalComponent,
+      cssClass: 'share-modal-css',
+      componentProps: {
+        ShareData: this.ShareData
+      }
+    });
+    return await modal.present();
   }
 
 }

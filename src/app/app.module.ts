@@ -67,6 +67,8 @@ import { BillPaymentComponent } from './bill/bill-payment/bill-payment.component
 import { ShareModalComponent } from './productdetail/share-modal/share-modal.component';
 import { AcceptModalComponent } from './payment/accept-modal/accept-modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ModalTcoinDetailComponent } from './tcoin/modal-tcoin-detail/modal-tcoin-detail.component';
+import { SearchModalComponent } from './home/search-modal/search-modal.component';
 
 
 
@@ -99,6 +101,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     ModalMyorderComponent,
     ModalLanguageComponent,
 
+    ModalTcoinDetailComponent,
+
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
     WarrantygiftModalComponent,
@@ -129,7 +133,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     AtmBillModalComponent,
 
     SelectMenuComponent,
-    ShareModalComponent
+    ShareModalComponent,
+    SearchModalComponent
 
 
   ],
@@ -157,6 +162,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     ModalMyorderComponent,
     ModalLanguageComponent,
 
+    ModalTcoinDetailComponent,
+
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
     WarrantygiftModalComponent,
@@ -187,7 +194,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     AtmBillModalComponent,
 
     SelectMenuComponent,
-    ShareModalComponent
+    ShareModalComponent,
+    SearchModalComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,

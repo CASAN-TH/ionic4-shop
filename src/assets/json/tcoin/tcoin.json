@@ -1,8 +1,48 @@
 {
     "status": 200,
-    "data": [
-        {
-            "name": "test1"
-        }
-    ]
+    "data": {
+        "mytcoin": "238",
+        "tcoinpromotion": [
+            {
+                "img": "https://pub.thisshop.com/shop/block/20191122/46509015_1574405762591.png?x-oss-process=image/resize,w_750/quality,q_80&quot",
+                "name": "luck draw"
+            },
+            {
+                "img": "https://pub.thisshop.com/shop/block/20191122/53348974_1574405771531.png?x-oss-process=image/resize,w_750/quality,q_80&quot",
+                "name": "tcoin exchange"
+            }
+        ],
+        "tcointask": [
+            {
+                "name": "link to social account",
+                "description": "connect your line, facebook and other social media account",
+                "point": "50",
+                "url": ""
+            },
+            {
+                "name": "evaluate",
+                "description": "confirm the order after receiving the product",
+                "point": "50",
+                "url": ""
+            },
+            {
+                "name": "perfect personal information",
+                "description": "update personal data, every item is available",
+                "point": "10",
+                "url": ""
+            },
+            {
+                "name": "perfect certification information",
+                "description": "get more credit by adding more information",
+                "point": "50",
+                "url": ""
+            },
+            {
+                "name": "place order",
+                "description": "get 1 Tcoin for every 5THB paid",
+                "point": "",
+                "url": ""
+            }
+        ]
+    }
 }

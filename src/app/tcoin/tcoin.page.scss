@@ -37,11 +37,31 @@
     border-color: lightgray;
 }
 
-// ion-content {
-//     --background: linear-gradient(0deg, rgb(247,247,247,1) 50%, rgba(240, 65, 65, 0.952) 89%);
-//     --padding-top: -55px;
-//   }
+ion-content {
+    --background: linear-gradient(0deg, rgb(247,247,247,1) 50%, rgba(240, 65, 65, 0.952) 89%);
+    --padding-top: -55px;
+  }
+
+
 
 .header-color{
     background-color: red;
+}
+
+.coin-header{
+    color: white;
+}
+
+ion-toolbar {
+    --background: rgba(240, 65, 65, 0.952);
+    --ion-color-base: rgba(240, 65, 65, 0.952) !important;
+    color: #ffffff;
+}
+
+.arrow-back{
+    color: white;
+}
+
+.detail{
+    color: white;
 }
