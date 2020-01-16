@@ -36,7 +36,7 @@
       <ion-grid *ngFor="let cate of cartDataList.carts; let i = index;">
         <ion-row class="border">
           <ion-col size="8" class="ion-align-items-center">
-            <ion-checkbox color="danger" mode="ios" (click)="onSelectShop()"></ion-checkbox>
+            <ion-checkbox color="danger" mode="ios" (click)="onSelectShop(i,cate.shop_id)"></ion-checkbox>
             <span class="span-title ion-align-items-center">
               <ion-icon name="md-appstore" class="icon"></ion-icon>
               <ion-label class="select">{{cate.shop_name}}</ion-label>

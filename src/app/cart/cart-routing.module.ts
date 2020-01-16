@@ -10,7 +10,6 @@ const routes: Routes = [
     path: '',
     component: CartPage,
     resolve: [CartService],
-    // canActivate: [AuthGuard]
   }
 ];
 

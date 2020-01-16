@@ -54,7 +54,7 @@ export class CartPage implements OnInit {
       console.log(AddaddressData);
       this.AddaddressData = AddaddressData;
     })
-    
+
   }
 
   onShoppingClick() {
@@ -92,8 +92,9 @@ export class CartPage implements OnInit {
   onSelectAll() {
     console.log("54")
   }
-  onSelectShop() {
-    console.log("54")
+  onSelectShop(i, shopId: any) {
+    this.router.navigateByUrl('shop/' + shopId);
+    console.log(i);
   }
   onSelectProduct() {
     console.log("54")

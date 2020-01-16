@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SearchproductPageRoutingModule } from './searchproduct-routing.module';
+import { ShopPageRoutingModule } from './shop-routing.module';
 
-import { SearchproductPage } from './searchproduct.page';
+import { ShopPage } from './shop.page';
 import { SelectcheckPageModule } from '../selectcheck/selectcheck.module';
 import { FooterSelectcheckPageModule } from '../footer-selectcheck/footer-selectcheck.module';
 import { ProductlistPageModule } from '../productlist/productlist.module';
@@ -17,12 +17,12 @@ import { MatTabsModule } from '@angular/material/tabs';
     CommonModule,
     FormsModule,
     IonicModule,
-    SearchproductPageRoutingModule,
+    ShopPageRoutingModule,
     SelectcheckPageModule,
     FooterSelectcheckPageModule,
     ProductlistPageModule,
-    MatTabsModule,
+    MatTabsModule
   ],
-  declarations: [SearchproductPage]
+  declarations: [ShopPage]
 })
-export class SearchproductPageModule {}
+export class ShopPageModule {}

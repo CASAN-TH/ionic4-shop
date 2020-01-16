@@ -12,7 +12,7 @@ import { Location } from '@angular/common';
 })
 export class SearchproductPage implements OnInit {
   
-  searchproductDataList: any;
+  searchproductData: any;
   selectcheckData: any;
 
   constructor(
@@ -25,7 +25,7 @@ export class SearchproductPage implements OnInit {
   ngOnInit() {
     this.searchproductService.onSearchproductDataListChanged.subscribe((searchproductDataList: any) => {
       console.log(searchproductDataList);
-      this.searchproductDataList = searchproductDataList;
+      this.searchproductData = searchproductDataList;
     })
     this.searchproductService.onMenuDataChanged.subscribe((searchproductDataList: any) => {
       console.log(searchproductDataList);

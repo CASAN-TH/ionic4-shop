@@ -126,9 +126,14 @@ const routes: Routes = [
   {
     path: 'searchproduct',
     loadChildren: () => import('./searchproduct/searchproduct.module').then( m => m.SearchproductPageModule)
-  },  {
+  },
+  {
     path: 'footer-selectcheck',
     loadChildren: () => import('./footer-selectcheck/footer-selectcheck.module').then( m => m.FooterSelectcheckPageModule)
+  },
+  {
+    path: 'shop',
+    loadChildren: () => import('./shop/shop.module').then( m => m.ShopPageModule)
   }
 
 
