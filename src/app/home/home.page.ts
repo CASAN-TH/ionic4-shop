@@ -5,6 +5,8 @@ import { ScrollDetail } from "@ionic/core";
 import { TranslateService } from "@ngx-translate/core";
 import { locale as english } from "./i18n/en";
 import { locale as thai } from "./i18n/th";
+import { ModalController } from '@ionic/angular';
+import { SearchModalComponent } from './search-modal/search-modal.component';
 @Component({
   selector: "app-home",
   templateUrl: "./home.page.html",
@@ -20,7 +22,8 @@ export class HomePage implements OnInit {
   constructor(
     private router: Router,
     private homeService: HomeService,
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    public modalController: ModalController
   ) {
     this.translateService.setTranslation(english.lang, english.data);
     this.translateService.setTranslation(thai.lang, thai.data);
@@ -47,6 +50,16 @@ export class HomePage implements OnInit {
       const scrollTop = $event.detail.scrollTop;
       this.showToolbar = scrollTop >= 141;
     }
+  }
+
+  async SearchModal() {
+    const modal = await this.modalController.create({
+      component: SearchModalComponent,
+      componentProps: {
+        
+      }
+    });
+    return await modal.present();
   }
 
 

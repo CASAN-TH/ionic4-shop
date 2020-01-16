@@ -10,6 +10,7 @@ import { SearchPage } from "./search.page";
 import { MatTabsModule } from "@angular/material/tabs";
 import { ProductlistPageModule } from 'src/app/productlist/productlist.module';
 import { SelectcheckPageModule } from 'src/app/selectcheck/selectcheck.module';
+import { FooterSelectcheckPageModule } from 'src/app/footer-selectcheck/footer-selectcheck.module';
 
 
 
@@ -21,7 +22,8 @@ import { SelectcheckPageModule } from 'src/app/selectcheck/selectcheck.module';
     SearchPageRoutingModule,
     ProductlistPageModule,
     MatTabsModule,
-    SelectcheckPageModule
+    SelectcheckPageModule,
+    FooterSelectcheckPageModule
 
   ],
   declarations: [SearchPage]

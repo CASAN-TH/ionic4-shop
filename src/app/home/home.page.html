@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar [class.show-background]="showToolbar">
-    <ion-searchbar class="searchbar-padding" slot="start" placeholder="Enter item keyword"></ion-searchbar>
+    <ion-searchbar class="searchbar-padding" slot="start" placeholder="Enter item keyword" (click)="SearchModal()"></ion-searchbar>
     <ion-buttons class="btn-icon-padding" slot="end">
       <ion-button>
         <ion-icon slot="icon-only" mode="ios" color="medium"
