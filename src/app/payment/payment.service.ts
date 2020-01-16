@@ -12,15 +12,16 @@ const mockup = environment.mockup;
 })
 export class PaymentService {
   routeParams: any;
+  creditpoint: any;
 
   onDownDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onCartDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onAddressDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onSelectdownDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  onAddressModalDataChanged:BehaviorSubject<any> = new BehaviorSubject({});
+  onAddressModalDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onCreditStatusChanged: BehaviorSubject<any> = new BehaviorSubject({});
- 
+  onCreditPointChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }
 
@@ -40,8 +41,8 @@ export class PaymentService {
     this.getSelectdownModalData();
     this.getAddressModalData();
     this.getCreditStatus();
-  
- 
+
+
 
     return;
   }
@@ -90,7 +91,7 @@ export class PaymentService {
 
     })
   }
-  
+
   getVouchersModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
@@ -146,7 +147,20 @@ export class PaymentService {
       }
     })
   };
- 
+  getCreditPointData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/credit/credit-point.json').subscribe((res: any) => {
+          this.onCreditPointChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url + '/api/creditpointsbyuserid', { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onCreditPointChanged.next(res.data);
+        }, reject)
+      }
+    })
+  };
+
   createPaymentData(body): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {

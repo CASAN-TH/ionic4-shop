@@ -57,103 +57,9 @@
     </ion-col>
   </ion-row>
 
-  <!-- <ion-row>
-    <ion-col size="12">
-      <ion-item lines="none" (click)="presentActionSheet()">
-        <ion-label>
-          <span class="select">
-            วิธีการชำระเงิน
-          </span>
-        </ion-label>
-        <ion-label>
-          <span class="phonename">
-            {{select}}
-          </span>
-        </ion-label>
-        <ion-buttons slot="end">
-          <ion-button>
-            <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-item>
-
-      <ion-grid>
-        <ion-row *ngIf="select === 'ผ่อนชำระ'">
-          <ion-col size="12">
-            <ion-list-header>
-              <ion-text class="texthead">
-                เงินดาวน์
-              </ion-text>
-            </ion-list-header>
-            <ion-item lines="none" *ngFor="let data of downDataList" (click)="selectDownModal()">
-              <ion-label *ngFor="let down of data.down_payment">
-                <span class="phonename">
-                  {{down.cerrency}}{{down.amount}}
-                </span>
-
-                <span *ngFor="let down of data.down_payment" class="percent_down">
-                  {{down.percent_down}}{{down.unit}}
-                </span>
-              </ion-label>
-              <ion-buttons>
-                <ion-button slot="end">
-                  <ion-icon mode="ios" name="arrow-forward"></ion-icon>
-                </ion-button>
-              </ion-buttons>
-            </ion-item>
-
-            <ion-row>
-              <ion-col size="12" *ngFor="let data of downDataList">
-                <span class="texthead">
-                  จ่ายรายเดือน (ค่าบริการรายเดือน{{data.period_service}} {{data.cerrency}} รวม)
-                </span>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col size="12" text-center *ngFor="let data of downDataList">
-                <ion-text class="installment">
-                  {{data.cerrency}}{{data.installment_amount}}
-                </ion-text>
-                <span class="quantity">
-                  {{data.installment_period}}{{data.unit}}
-                </span>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col size="12" *ngFor="let data of downDataList">
-                <ion-row *ngIf="data.period_option && data.period_option.length">
-                  <ion-col class="per" size="3" text-center *ngFor="let period of data.period_option"
-                    [class.ion-col-border]="period._id == percenSelected" (click)="onPercenClick(period._id)">
-                    <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="period._id == percenSelected">
-                    </ion-icon>
-                    <span>
-                      {{period.period}}{{period.unit}}
-                    </span>
-                  </ion-col>
-                </ion-row>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col size="12">
-                <span>
-                  <ion-checkbox class="iconcheck" mode="ios" color="danger" checked></ion-checkbox>
-                </span>
-                <span class="user">
-                  ฉันเห็นด้วย
-                </span>
-                <span class="ordertitle">
-                  <a routerLink="/termsandcondition" routerLinkActive="active">ข้อตกลงการใช้บริการ</a>
-                </span>
-              </ion-col>
-            </ion-row>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-col>
-  </ion-row> -->
 
 
-  <ion-row >
+ <ion-row>
     <ion-col size="12" class="tabselectpay">
       <ion-row (click)="presentActionSheet()" class="bg" *ngIf="select === 'ผ่อนชำระ'">
         <ion-col size="5" class="ion-align-items-center">
@@ -180,7 +86,7 @@
           <ion-row (click)="presentActionSheet()" class="bg">
             <ion-col size="5" class="ion-align-items-center">
               <ion-text class="selecttext">
-                วิธีการชำระเงิน 
+                วิธีการชำระเงิน
               </ion-text>
             </ion-col>
             <ion-col size="5">
@@ -196,22 +102,6 @@
               </ion-buttons>
             </ion-col>
           </ion-row>
-          <ion-row class="bg-payment" *ngIf="!profilestatus.accountstatus || profilestatus.accountstatus === 'member'">
-            <ion-col size="9">
-              <div class="bg-color-payment">
-                <ion-item lines="none" color="#fff5f1" class="payment">
-                  <ion-text>คุณยังไม่มีวงเงิน คุณสามารถสมัครเพื่อเปิดใช้งานการช้อปปิ้งแบบผ่อนชำระ</ion-text>
-                </ion-item>
-              </div>
-            </ion-col>
-            <ion-col size="3" class="bg-color-payment">
-              <ion-buttons class="bg-ApplyForCredit" (click)="onApplyForCredit()">
-                <ion-button class="ApplyForCredit">
-                  <ion-text>ไปสมัคร</ion-text>
-                </ion-button>
-              </ion-buttons>
-            </ion-col>
-          </ion-row>
           <!-- <ion-row class="bg-payment">
             <ion-col size="12">
               <div class="bg-color-payment">
@@ -223,7 +113,26 @@
           </ion-row> -->
         </ion-col>
       </ion-row>
-      
+
+
+      <ion-row class="bg-payment" *ngIf="!profilestatus.accountstatus || profilestatus.accountstatus === 'member'">
+        <ion-col size="9">
+          <div class="bg-color-payment">
+            <ion-item lines="none" color="#fff5f1" class="payment">
+              <ion-text>คุณยังไม่มีวงเงิน คุณสามารถสมัครเพื่อเปิดใช้งานการช้อปปิ้งแบบผ่อนชำระ</ion-text>
+            </ion-item>
+          </div>
+        </ion-col>
+        <ion-col size="3" class="bg-color-payment">
+          <ion-buttons class="bg-ApplyForCredit" (click)="onApplyForCredit()">
+            <ion-button class="ApplyForCredit">
+              <ion-text>ไปสมัคร</ion-text>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+
+
       <ion-row *ngIf="select === 'ผ่อนชำระ'" class="bgwhite">
         <ion-col size="12" *ngFor="let data of downDataList">
           <ion-row class="borderselectdown">
@@ -283,9 +192,6 @@
             </ion-col>
           </ion-row>
 
-
-
-
           <ion-row>
             <ion-col size="12">
               <span>
@@ -302,13 +208,11 @@
         </ion-col>
       </ion-row>
     </ion-col>
-  </ion-row>
+  </ion-row> 
 
   <ion-row>
     <ion-col size="12">
       <ion-grid *ngFor="let cate of cartDataList.carts">
-
-        <!-- <ion-row>
           <ion-col size="12">
             <ion-row class="border">
               <ion-col size="3">
@@ -374,7 +278,7 @@
               </ion-col>
             </ion-row>
           </ion-col>
-        </ion-row> -->
+        </ion-row>  -->
 
         <ion-row>
           <ion-col size="12">
@@ -454,7 +358,8 @@
                     <ion-text class="text">ค่าจัดส่ง</ion-text>
                   </ion-col>
                   <ion-col size="3" class="textright">
-                    <ion-text class="chipping">{{cate.total_shop.currency}}{{cate.total_shop.shipingfree}}</ion-text>
+                    <ion-text class="chipping">{{cate.total_shop.currency}}{{cate.total_shop.shipingfree}}
+                    </ion-text>
                   </ion-col>
                 </ion-row>
                 <ion-row class="bordertop">
@@ -535,7 +440,8 @@
             <ion-text class="total">โปรโมชั่น</ion-text>
           </ion-col>
           <ion-col size="6" class="textright">
-            <ion-text class="orders">{{cartDataList.totalcart.currency_discount}}{{cartDataList.totalcart.promotion}}
+            <ion-text class="orders">
+              {{cartDataList.totalcart.currency_discount}}{{cartDataList.totalcart.promotion}}
             </ion-text>
           </ion-col>
         </ion-row>
@@ -560,7 +466,7 @@
       </ion-grid>
     </ion-col>
   </ion-row>
-
+  <ion-text *ngIf="creditPoint.credit">{{creditPoint.credit.creditremain}}</ion-text>
 </ion-content>
 
 
@@ -592,8 +498,9 @@
         <ion-col size="8">
           <span class="ordertitle">จำนวนเงินที่ต้องชำระ:</span>
           <span class="footterfont2">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.total_discount}}</span>
+          <ion-text *ngIf="creditPoint.creditremain">{{creditPoint.creditremain}}</ion-text>
         </ion-col>
-        <ion-col size="4" (click)="AcceptAlert()" *ngIf="AddaddressData">
+        <ion-col size="4" (click)="acceptModal()" *ngIf="AddaddressData">
           <section>
             <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
           </section>

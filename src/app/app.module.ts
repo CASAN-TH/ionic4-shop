@@ -65,6 +65,8 @@ import { PaymentProductDetailComponent } from './bill/payment-product-detail/pay
 import { PaynowComponent } from './bill/paynow/paynow.component';
 import { BillPaymentComponent } from './bill/bill-payment/bill-payment.component';
 import { ShareModalComponent } from './productdetail/share-modal/share-modal.component';
+import { AcceptModalComponent } from './payment/accept-modal/accept-modal.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -78,6 +80,7 @@ import { ShareModalComponent } from './productdetail/share-modal/share-modal.com
     PromotionModalComponent,
     SelectdownModalComponent,
     PaymentListModalComponent,
+    AcceptModalComponent,
 
     PaymentgiftModalComponent,
     TcoinModalComponent,
@@ -142,6 +145,7 @@ import { ShareModalComponent } from './productdetail/share-modal/share-modal.com
     ImformationspecModalComponent,
     SelectdownModalComponent,
     PaymentListModalComponent,
+    AcceptModalComponent,
 
     ModalNicknameComponent,
     ModalPhoneComponent,
@@ -190,6 +194,7 @@ import { ShareModalComponent } from './productdetail/share-modal/share-modal.com
     BrowserAnimationsModule,
     FormsModule,
     MatTabsModule,
+    MatDialogModule,
     TranslateModule.forRoot(),
   ],
   providers: [
