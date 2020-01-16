@@ -65,6 +65,7 @@ import { PaymentProductDetailComponent } from './bill/payment-product-detail/pay
 import { PaynowComponent } from './bill/paynow/paynow.component';
 import { BillPaymentComponent } from './bill/bill-payment/bill-payment.component';
 import { ShareModalComponent } from './productdetail/share-modal/share-modal.component';
+import { SearchModalComponent } from './home/search-modal/search-modal.component';
 
 
 
@@ -126,7 +127,8 @@ import { ShareModalComponent } from './productdetail/share-modal/share-modal.com
     AtmBillModalComponent,
 
     SelectMenuComponent,
-    ShareModalComponent
+    ShareModalComponent,
+    SearchModalComponent
 
 
   ],
@@ -183,7 +185,8 @@ import { ShareModalComponent } from './productdetail/share-modal/share-modal.com
     AtmBillModalComponent,
 
     SelectMenuComponent,
-    ShareModalComponent
+    ShareModalComponent,
+    SearchModalComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,
