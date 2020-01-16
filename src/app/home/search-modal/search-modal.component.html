@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-searchbar class="searchbar-padding" slot="start" placeholder="Enter item keyword"
+      (ionInput)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="isItemAvailable">
+    <ion-item *ngFor="let item of items" (click)="onSearchProduct()">{{ item }}</ion-item>
+  </ion-list>
+</ion-content>

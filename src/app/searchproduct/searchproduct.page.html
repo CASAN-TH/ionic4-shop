@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="btn-icon-padding" slot="start" (click)="goBackClick()">
+      <ion-button>
+        <ion-icon slot="icon-only" mode="ios" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-searchbar class="searchbar-padding" slot="start" placeholder="Enter item keyword"></ion-searchbar>
+    <ion-buttons class="btn-icon-padding" slot="end" (click)="onCartClick()">
+      <ion-button>
+        <ion-icon mode="ios" name="ios-cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons class="btn-icon-padding" slot="end" (click)="openMenu()" main>
+      <ion-button>
+        <ion-icon mode="ios" name="ios-menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row>
+  <ion-col size="12" *ngFor="let item of searchproductDataList">
+    {{item.name}}
+  </ion-col>
+</ion-row>
+</ion-content>
+
+<ion-menu side="end" type="push">
+  <ion-header>
+    <ion-toolbar color="gray">
+      <ion-title>เช็คเลือก</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-grid>
+      <app-selectcheck [recivedata]="selectcheckData"></app-selectcheck>
+    </ion-grid>
+  </ion-content>
+
+  <app-footer-selectcheck [recivedata]="selectcheckData"></app-footer-selectcheck>
+
+</ion-menu>

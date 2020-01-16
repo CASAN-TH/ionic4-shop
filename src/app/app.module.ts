@@ -66,6 +66,7 @@ import { PaynowComponent } from './bill/paynow/paynow.component';
 import { BillPaymentComponent } from './bill/bill-payment/bill-payment.component';
 import { ShareModalComponent } from './productdetail/share-modal/share-modal.component';
 import { ModalTcoinDetailComponent } from './tcoin/modal-tcoin-detail/modal-tcoin-detail.component';
+import { SearchModalComponent } from './home/search-modal/search-modal.component';
 
 
 
@@ -129,7 +130,8 @@ import { ModalTcoinDetailComponent } from './tcoin/modal-tcoin-detail/modal-tcoi
     AtmBillModalComponent,
 
     SelectMenuComponent,
-    ShareModalComponent
+    ShareModalComponent,
+    SearchModalComponent
 
 
   ],
@@ -188,7 +190,8 @@ import { ModalTcoinDetailComponent } from './tcoin/modal-tcoin-detail/modal-tcoi
     AtmBillModalComponent,
 
     SelectMenuComponent,
-    ShareModalComponent
+    ShareModalComponent,
+    SearchModalComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,

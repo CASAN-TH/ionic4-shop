@@ -31,6 +31,7 @@ export class GiftsService {
   onWarrantygiftDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onSpecificationgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onImformationSpecgiftDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onShareDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onReccommentDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
   constructor(private http: HttpClient) { }
@@ -54,6 +55,7 @@ export class GiftsService {
       this.getWarrantygiftModalData();
       this.getSpecificationgiftModalData();
       this.getImformationSpecgiftModalData();
+      this.getShareModalData();
     }
     return;
   }
@@ -137,7 +139,7 @@ export class GiftsService {
         }, reject)
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onGiftsDataChanged.next(res.data);
+          this.onPaymentgiftDataChanged.next(res.data);
         }, reject)
       }
 
@@ -151,7 +153,7 @@ export class GiftsService {
         }, reject)
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onGiftsDataChanged.next(res.data);
+          this.onTcoingiftDataChanged.next(res.data);
         }, reject)
       }
 
@@ -165,7 +167,7 @@ export class GiftsService {
         }, reject)
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onGiftsDataChanged.next(res.data);
+          this.onWarrantygiftDataChanged.next(res.data);
         }, reject)
       }
 
@@ -179,7 +181,7 @@ export class GiftsService {
         }, reject)
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onGiftsDataChanged.next(res.data);
+          this.onSpecificationgiftDataChanged.next(res.data);
         }, reject)
       }
 
@@ -193,7 +195,21 @@ export class GiftsService {
         }, reject)
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onGiftsDataChanged.next(res.data);
+          this.onImformationSpecgiftDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+  getShareModalData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/productdetail/share-modal.json').subscribe((res: any) => {
+          this.onShareDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onShareDataChanged.next(res.data);
         }, reject)
       }
 
