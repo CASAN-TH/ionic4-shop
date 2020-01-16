@@ -65,6 +65,7 @@ import { PaymentProductDetailComponent } from './bill/payment-product-detail/pay
 import { PaynowComponent } from './bill/paynow/paynow.component';
 import { BillPaymentComponent } from './bill/bill-payment/bill-payment.component';
 import { ShareModalComponent } from './productdetail/share-modal/share-modal.component';
+import { ModalTcoinDetailComponent } from './tcoin/modal-tcoin-detail/modal-tcoin-detail.component';
 
 
 
@@ -95,6 +96,8 @@ import { ShareModalComponent } from './productdetail/share-modal/share-modal.com
     ModalAboutComponent,
     ModalMyorderComponent,
     ModalLanguageComponent,
+
+    ModalTcoinDetailComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
@@ -152,6 +155,8 @@ import { ShareModalComponent } from './productdetail/share-modal/share-modal.com
     ModalAboutComponent,
     ModalMyorderComponent,
     ModalLanguageComponent,
+
+    ModalTcoinDetailComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,

@@ -1,48 +1,59 @@
 {
     "status": 200,
-    "data": {
-        "mytcoin": "238",
-        "tcoinpromotion": [
-            {
-                "img": "https://pub.thisshop.com/shop/block/20191122/46509015_1574405762591.png?x-oss-process=image/resize,w_750/quality,q_80&quot",
-                "name": "luck draw"
-            },
-            {
-                "img": "https://pub.thisshop.com/shop/block/20191122/53348974_1574405771531.png?x-oss-process=image/resize,w_750/quality,q_80&quot",
-                "name": "tcoin exchange"
-            }
-        ],
-        "tcointask": [
-            {
-                "name": "link to social account",
-                "description": "connect your line, facebook and other social media account",
-                "point": "50",
-                "url": ""
-            },
-            {
-                "name": "evaluate",
-                "description": "confirm the order after receiving the product",
-                "point": "50",
-                "url": ""
-            },
-            {
-                "name": "perfect personal information",
-                "description": "update personal data, every item is available",
-                "point": "10",
-                "url": ""
-            },
-            {
-                "name": "perfect certification information",
-                "description": "get more credit by adding more information",
-                "point": "50",
-                "url": ""
-            },
-            {
-                "name": "place order",
-                "description": "get 1 Tcoin for every 5THB paid",
-                "point": "",
-                "url": ""
-            }
-        ]
-    }
+    "data": [
+        {
+            "detail": "ลงชื่อเข้าใช้",
+            "date": "16/01/2020",
+            "time": "10:15:02",
+            "point": "1"
+        },
+        {
+            "detail": "ลงชื่อเข้าใช้",
+            "date": "14/01/2020",
+            "time": "10:15:02",
+            "point": "1"
+        },
+        {
+            "detail": "ลงชื่อเข้าใช้",
+            "date": "12/01/2020",
+            "time": "10:15:02",
+            "point": "1"
+        },
+        {
+            "detail": "ลงชื่อเข้าใช้",
+            "date": "10/01/2020",
+            "time": "10:15:02",
+            "point": "1"
+        },
+        {
+            "detail": "ลงชื่อเข้าใช้",
+            "date": "08/01/2020",
+            "time": "10:15:02",
+            "point": "1"
+        },
+        {
+            "detail": "ลงชื่อเข้าใช้",
+            "date": "06/01/2020",
+            "time": "10:15:02",
+            "point": "1"
+        },
+        {
+            "detail": "ลงชื่อเข้าใช้",
+            "date": "04/01/2020",
+            "time": "10:15:02",
+            "point": "1"
+        },
+        {
+            "detail": "ลงชื่อเข้าใช้",
+            "date": "02/01/2020",
+            "time": "10:15:02",
+            "point": "1"
+        },
+        {
+            "detail": "เครดิตเสร็จสมบูรณ์",
+            "date": "01/01/2020",
+            "time": "10:15:02",
+            "point": "100"
+        }
+    ]
 }
