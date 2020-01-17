@@ -69,6 +69,7 @@ import { AcceptModalComponent } from './payment/accept-modal/accept-modal.compon
 import {MatDialogModule} from '@angular/material/dialog';
 import { ModalTcoinDetailComponent } from './tcoin/modal-tcoin-detail/modal-tcoin-detail.component';
 import { SearchModalComponent } from './home/search-modal/search-modal.component';
+import { ModalCouponCenterComponent } from './mycoupon/modal-coupon-center/modal-coupon-center.component';
 
 
 
@@ -102,6 +103,7 @@ import { SearchModalComponent } from './home/search-modal/search-modal.component
     ModalLanguageComponent,
 
     ModalTcoinDetailComponent,
+    ModalCouponCenterComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
@@ -163,6 +165,7 @@ import { SearchModalComponent } from './home/search-modal/search-modal.component
     ModalLanguageComponent,
 
     ModalTcoinDetailComponent,
+    ModalCouponCenterComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,

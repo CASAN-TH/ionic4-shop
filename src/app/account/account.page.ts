@@ -191,7 +191,7 @@ export class AccountPage implements OnInit {
   }
 
   onToMyCouponPage() {
-    console.log("onToMyCouponPage");
+    this.router.navigate(["my-coupon"]);
   }
 
   onToTcoinPage() {
