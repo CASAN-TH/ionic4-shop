@@ -16,7 +16,7 @@ import {MatDialog} from '@angular/material/dialog';
   styleUrls: ['./payment.page.scss'],
 })
 export class PaymentPage implements OnInit {
-  select: any = "ชำระเต็มจำนวนเงิน";
+  select: any = "ผ่อนชำระ";
   downDataList: any;
   cartDataList: any;
   VouchersData: any;
@@ -27,7 +27,8 @@ export class PaymentPage implements OnInit {
   unitSelected: any;
 
   creditPoint: any; 
-
+  numeral = require('numeral');
+  creditCurrency: any;
 
   profilestatus: any;
 
@@ -49,7 +50,8 @@ export class PaymentPage implements OnInit {
     })
     this.paymentService.onCreditPointChanged.subscribe((point: any) => {
       this.creditPoint = point
-      console.log(point);
+      const dataNum = this.numeral(this.creditPoint.credit.creditremain).format('0,0');
+      this.creditCurrency = dataNum
     });
     this.paymentService.onDownDataListChanged.subscribe((downDataList: any) => {
       // console.log(downDataList);

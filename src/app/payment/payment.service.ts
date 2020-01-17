@@ -12,7 +12,11 @@ const mockup = environment.mockup;
 })
 export class PaymentService {
   routeParams: any;
-  creditpoint: any;
+  creditpoint: any = {
+    "credit": {
+      "creditremain": {}
+    }
+  };
 
   onDownDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onCartDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
@@ -21,7 +25,7 @@ export class PaymentService {
   onSelectdownDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onAddressModalDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onCreditStatusChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onCreditPointChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onCreditPointChanged: BehaviorSubject<any> = new BehaviorSubject(this.creditpoint);
 
   constructor(private http: HttpClient) { }
 
@@ -41,7 +45,7 @@ export class PaymentService {
     this.getSelectdownModalData();
     this.getAddressModalData();
     this.getCreditStatus();
-
+    this.getCreditPointData();
 
 
     return;
