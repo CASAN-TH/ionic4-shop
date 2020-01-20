@@ -17,6 +17,7 @@ export class ShopPage implements OnInit {
   shopData: any;
   selectcheckData: any;
   promotionData: any;
+  tabType: any = "homeProduct";
 
   constructor(
     private router: Router,
@@ -68,13 +69,11 @@ export class ShopPage implements OnInit {
   }
 
 
-  onHomeProduct(promotionData: any) {
-    this.promotionData;
-    console.log(promotionData);
+  onHomeProduct() {
+    this.tabType = 'homeProduct';
   }
-  onProductAll(shopData: any) {
-    this.shopData;
-    console.log(shopData);
+  onProductAll() {
+    this.tabType = 'productAll';
   }
 
 
