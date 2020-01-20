@@ -19,7 +19,11 @@ export class PaymentService {
   };
 
   onDownDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  onCartDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onCartDataListChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "totalcart": {
+      "total_discount": 0
+    }
+  });
   onAddressDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onSelectdownDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);

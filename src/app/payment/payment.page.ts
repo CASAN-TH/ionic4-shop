@@ -8,7 +8,7 @@ import { SelectdownModalComponent } from './selectdown-modal/selectdown-modal.co
 import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
 import { PaymentListModalComponent } from './payment-list-modal/payment-list-modal.component';
 import { AcceptModalComponent } from './accept-modal/accept-modal.component';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-payment',
@@ -16,7 +16,7 @@ import {MatDialog} from '@angular/material/dialog';
   styleUrls: ['./payment.page.scss'],
 })
 export class PaymentPage implements OnInit {
-  select: any = "ผ่อนชำระ";
+  select: any;
   downDataList: any;
   cartDataList: any;
   VouchersData: any;
@@ -26,13 +26,13 @@ export class PaymentPage implements OnInit {
   showToolbar: boolean;
   unitSelected: any;
 
-  creditPoint: any; 
+  creditPoint: any;
   numeral = require('numeral');
   creditCurrency: any;
 
   profilestatus: any;
 
-
+  AcceptClick: boolean = false;
 
 
   constructor(private router: Router,
@@ -42,7 +42,7 @@ export class PaymentPage implements OnInit {
     private alertCtrl: AlertController,
     public actionSheetController: ActionSheetController,
     public dialog: MatDialog) { }
-  
+
   ngOnInit() {
     this.paymentService.onCreditStatusChanged.subscribe((profilestatus: any) => {
       this.profilestatus = profilestatus;
@@ -50,16 +50,19 @@ export class PaymentPage implements OnInit {
     })
     this.paymentService.onCreditPointChanged.subscribe((point: any) => {
       this.creditPoint = point
+      console.log(this.creditPoint)
       const dataNum = this.numeral(this.creditPoint.credit.creditremain).format('0,0');
       this.creditCurrency = dataNum
+      // console.log(this.creditCurrency);
+      this.paymentService.onCartDataListChanged.subscribe((cartDataList: any) => {
+        console.log(cartDataList);
+        this.cartDataList = cartDataList;
+        this.select = this.cartDataList.totalcart.total_discount > this.creditPoint.credit.creditremain ? "ชำระเต็มจำนวนเงิน" : "ผ่อนชำระ"
+      })
     });
     this.paymentService.onDownDataListChanged.subscribe((downDataList: any) => {
       // console.log(downDataList);
       this.downDataList = downDataList;
-    })
-    this.paymentService.onCartDataListChanged.subscribe((cartDataList: any) => {
-      // console.log(cartDataList);
-      this.cartDataList = cartDataList;
     })
     this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
       // console.log(AddaddressData);
@@ -81,14 +84,21 @@ export class PaymentPage implements OnInit {
       this.presentAlert();
     }
 
+
   }
   profile_status(profile_status: any) {
     throw new Error("Method not implemented.");
   }
 
   onOrderClick() {
-    this.router.navigate(['payfor'])
+    console.log(this.AcceptClick)
+    if (!this.AcceptClick) {
+      this.acceptModal();
+    } else {
+      this.router.navigate(['payfor'])
+    }
   }
+
   onAddaddressClick() {
     this.router.navigate(['addaddress'])
   }
@@ -97,8 +107,8 @@ export class PaymentPage implements OnInit {
     console.log(unitId);
     this.unitSelected = unitId;
   }
-  onApplyForCredit(){
-  this.router.navigateByUrl('credit');
+  onApplyForCredit() {
+    this.router.navigateByUrl('credit');
   }
 
   async selectDownModal() {
@@ -132,11 +142,11 @@ export class PaymentPage implements OnInit {
     });
     return await modal.present();
   }
- 
+
   acceptModal(): void {
     const dialogRef = this.dialog.open(AcceptModalComponent, {
       width: '500px',
-      height:'120px',
+      height: '120px',
       data: {}
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -170,7 +180,36 @@ export class PaymentPage implements OnInit {
     });
     await actionSheet.present();
   }
-
+  async actionPayment() {
+    if (this.cartDataList.totalcart.total_discount > this.creditPoint.credit.creditremain) {
+      const actionSheet = await this.actionSheetController.create({
+        header: 'วิธีการชำระเงิน',
+        buttons: [{
+          text: 'ชำระเต็มจำนวนเงิน',
+          handler: () => {
+            this.select = "ชำระเต็มจำนวนเงิน"
+          }
+        }]
+      });
+      await actionSheet.present();
+    } else {
+      const actionSheet = await this.actionSheetController.create({
+        header: 'วิธีการชำระเงิน',
+        buttons: [{
+          text: 'ผ่อนชำระ',
+          handler: () => {
+            this.select = "ผ่อนชำระ"
+          }
+        }, {
+          text: 'ชำระเต็มจำนวนเงิน',
+          handler: () => {
+            this.select = "ชำระเต็มจำนวนเงิน"
+          }
+        }]
+      });
+      await actionSheet.present();
+    }
+  }
   async presentAlert() {
     const alert = await this.alertCtrl.create({
       message: 'กรุณาเพิ่มที่อยู่จัดส่งใหม่',
@@ -207,7 +246,7 @@ export class PaymentPage implements OnInit {
     });
     await alert.present();
   }
-  
+
   async BackAlert() {
     const alert = await this.alertCtrl.create({
       header: 'คุณแน่ใจหรือไม่ว่าต้องออกจากระบบ',
@@ -215,7 +254,7 @@ export class PaymentPage implements OnInit {
         {
           text: 'ออกจากหน้านี้',
           handler: () => {
-              this._location.back();
+            this._location.back();
           }
         }, {
           text: 'ดูอีกครั้ง',
