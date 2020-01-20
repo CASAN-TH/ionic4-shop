@@ -138,6 +138,10 @@ const routes: Routes = [
   {
     path: 'my-coupon',
     loadChildren: () => import('./mycoupon/mycoupon.module').then( m => m.MycouponPageModule)
+  },
+  {
+    path: 'current-amount',
+    loadChildren: () => import('./currentamount/currentamount.module').then( m => m.CurrentamountPageModule)
   }
 
 

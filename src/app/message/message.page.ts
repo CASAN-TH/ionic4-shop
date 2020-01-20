@@ -15,7 +15,7 @@ export class MessagePage implements OnInit {
   recommendDataList: any;
 
   constructor(private router: Router, private messageService : MessageService,
-    private _location: Location,) { }
+    private _location: Location) { }
 
   ngOnInit() {
     this.messageService.onMessageDataListChanged.subscribe((messageDataList:any)=>{

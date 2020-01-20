@@ -199,7 +199,7 @@ export class AccountPage implements OnInit {
   }
 
   onToCurrentAmountPage() {
-    console.log("onToCurrentAmountPage");
+    this.router.navigate(['current-amount']);
   }
 
   onToHelpCenterPage() {

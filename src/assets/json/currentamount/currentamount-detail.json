@@ -1,0 +1,10 @@
+{
+    "status": 200,
+    "data": {
+        "withdrawamount": "0",
+        "totalamount": "0",
+        "withdrawmoney": "0",
+        "friendregistered": "0",
+        "friendcredit": "0"
+    }
+}
