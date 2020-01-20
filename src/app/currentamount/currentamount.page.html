@@ -23,7 +23,7 @@
 
   <ion-row class="row-margin">
     <ion-col size="6">
-      <p>
+      <p class="p1-margin">
         จำนวนเงินที่ถอน
       </p>
       <ion-text class="amount-withdraw">
@@ -39,40 +39,40 @@
   <ion-row>
     <ion-col size="12">
       <ion-grid class="list-shadow">
-        <ion-row>
-          <ion-col size="6">
+        <ion-row class="border-bottom"> 
+          <ion-col size="6" class="right-border">
             <p>
               ยอดเงินทั้งหมดที่เคยมี
             </p>
-            <p>
+            <h3>
               {{currentamountData.totalamount}}
-            </p>
+            </h3>
           </ion-col>
           <ion-col size="6">
             <p>
               การถอนเงิน
             </p>
-            <p>
+            <h3>
               {{currentamountData.withdrawmoney}}
-            </p>
+            </h3>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col size="6">
+          <ion-col size="6" class="right-border">
             <p>
               เพื่อนที่ลงทะเบียนเเล้ว
             </p>
-            <p>
+            <h3>
               {{currentamountData.friendregistered}}
-            </p>
+            </h3>
           </ion-col>
           <ion-col size="6">
             <p>
               เพื่อนที่สมัครเครดิตเเล้ว
             </p>
-            <p>
+            <h3>
               {{currentamountData.friendcredit}}
-            </p>
+            </h3>
           </ion-col>
         </ion-row>
 

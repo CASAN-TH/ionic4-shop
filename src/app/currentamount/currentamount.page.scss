@@ -14,6 +14,7 @@
 .profile-pic{
     position: absolute;
     top: -78px;
+    left: 10px;
 }
 
 .list-shadow {
@@ -21,20 +22,38 @@
     box-shadow: 0px 2px 7px 1px rgb(209, 206, 209);
     padding-bottom: 0px;
     padding-top: 0px;
+    width: 385px;
 }
 
 .amount-withdraw{
     font-size: 36px;
     font-weight: 500;
+    margin-left: 10px;
+    color:  #f25454;
 }
 
 .btn-morecash{
     width: 160px;
     height: 36px;
     position: absolute;
-    right: 8px;
+    right: 11px;
 }
 
 .row-margin{
     margin-top: -40px;
+}
+
+.p1-margin{
+    margin-top: 1px;
+    margin-left: 10px;
+}
+
+.border-bottom{
+    border-bottom: 1px solid;
+    border-color: lightgray;
+}
+
+.right-border{
+    border-right: 1px solid;
+    border-color: lightgray;
 }
