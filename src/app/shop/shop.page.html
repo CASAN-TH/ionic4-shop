@@ -43,14 +43,14 @@
           <ion-searchbar placeholder="ค้นหา" (click)="SearchModal()"></ion-searchbar>
         </ion-col>
         <ion-col size="4">
-          <ion-buttons class="btn-center" (click)="onHomeProduct(promotionData)">
+          <ion-buttons class="btn-center" (click)="onHomeProduct()">
             <ion-button class="butcolor">
               หน้าแรกของสินค้า
             </ion-button>
           </ion-buttons>
         </ion-col>
         <ion-col size="4">
-          <ion-buttons class="btn-center" (click)="onProductAll(shopData)">
+          <ion-buttons class="btn-center" (click)="onProductAll()">
             <ion-button class="butcolor">
               สินค้าทั้งหมด
             </ion-button>
@@ -68,8 +68,12 @@
     </ion-col>
   </ion-row>
 
+  <iframe *ngIf="tabType === 'homeProduct'" width="100%" height="100%" [src]="promotionData.link_promotion"
+    frameborder="0" allowfullscreen>
+  </iframe>
 
-  <div *ngIf="shopData === promotionData">
+
+  <div *ngIf="tabType === 'productAll'">
     <ion-card class="ion-no-margin-collection">
       <ion-row>
         <mat-tab-group mat-align-tabs="start">
@@ -81,9 +85,7 @@
     </ion-card>
   </div>
 
-  <iframe *ngIf="promotionData === promotionData" width="100%" height="100%" [src]="promotionData.link_promotion" frameborder="0"
-    allowfullscreen>
-  </iframe>
+
 
 </ion-content>
 
