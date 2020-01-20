@@ -102,6 +102,22 @@
               </ion-buttons>
             </ion-col>
           </ion-row>
+          <ion-row class="bg-payment" *ngIf="!profilestatus.accountstatus || profilestatus.accountstatus === 'member'">
+            <ion-col size="9">
+              <div class="bg-color-payment">
+                <ion-item lines="none" color="#fff5f1" class="payment">
+                  <ion-text>คุณยังไม่มีวงเงิน คุณสามารถสมัครเพื่อเปิดใช้งานการช้อปปิ้งแบบผ่อนชำระ</ion-text>
+                </ion-item>
+              </div>
+            </ion-col>
+            <ion-col size="3" class="bg-color-payment">
+              <ion-buttons class="bg-ApplyForCredit" (click)="onApplyForCredit()">
+                <ion-button class="ApplyForCredit">
+                  <ion-text>ไปสมัคร</ion-text>
+                </ion-button>
+              </ion-buttons>
+            </ion-col>
+          </ion-row>
           <!-- <ion-row class="bg-payment">
             <ion-col size="12">
               <div class="bg-color-payment">
@@ -115,22 +131,7 @@
       </ion-row>
 
 
-      <ion-row class="bg-payment" *ngIf="!profilestatus.accountstatus || profilestatus.accountstatus === 'member'">
-        <ion-col size="9">
-          <div class="bg-color-payment">
-            <ion-item lines="none" color="#fff5f1" class="payment">
-              <ion-text>คุณยังไม่มีวงเงิน คุณสามารถสมัครเพื่อเปิดใช้งานการช้อปปิ้งแบบผ่อนชำระ</ion-text>
-            </ion-item>
-          </div>
-        </ion-col>
-        <ion-col size="3" class="bg-color-payment">
-          <ion-buttons class="bg-ApplyForCredit" (click)="onApplyForCredit()">
-            <ion-button class="ApplyForCredit">
-              <ion-text>ไปสมัคร</ion-text>
-            </ion-button>
-          </ion-buttons>
-        </ion-col>
-      </ion-row>
+     
 
 
       <ion-row *ngIf="select === 'ผ่อนชำระ'" class="bgwhite">
@@ -213,8 +214,6 @@
   <ion-row>
     <ion-col size="12">
       <ion-grid *ngFor="let cate of cartDataList.carts">
-
-
         <ion-row>
           <ion-col size="12">
             <ion-row class="border">
@@ -401,7 +400,8 @@
       </ion-grid>
     </ion-col>
   </ion-row>
-  <ion-text *ngIf="creditPoint.credit">{{creditPoint.credit.creditremain}}</ion-text>
+  
+ 
 </ion-content>
 
 
@@ -431,9 +431,18 @@
     <ion-col size="12">
       <ion-row *ngIf="cartDataList.totalcart">
         <ion-col size="8">
-          <span class="ordertitle">จำนวนเงินที่ต้องชำระ:</span>
-          <span class="footterfont2">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.total_discount}}</span>
-          <ion-text *ngIf="creditPoint.creditremain">{{creditPoint.creditremain}}</ion-text>
+          <ion-row>
+              <ion-col size="12">
+                  <span class="ordertitle">จำนวนเงินที่ต้องชำระ:</span>
+                  <span class="footterfont2">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.total_discount}}</span>
+                </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col size="12" class="credit-use">
+                  <span>วงเงินที่ใช้ได้:</span>
+                  <span *ngIf="creditPoint && creditPoint.credit">{{creditCurrency}}</span >
+                </ion-col>
+          </ion-row>
         </ion-col>
         <ion-col size="4" (click)="acceptModal()" *ngIf="AddaddressData">
           <section>
@@ -446,6 +455,7 @@
           </section>
         </ion-col>
       </ion-row>
+      
     </ion-col>
   </ion-row>
 </ion-footer>
@@ -455,8 +465,10 @@
     <ion-col size="12">
       <ion-row *ngIf="cartDataList.totalcart">
         <ion-col size="8">
-          <span class="ordertitle">จำนวนเงินที่ต้องชำระ:</span>
-          <span class="footterfont2">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.total_discount}}</span>
+          <div class="amount-pay">
+              <span class="ordertitle">จำนวนเงินที่ต้องชำระ:</span>
+              <span class="footterfont2">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.total_discount}}</span>
+          </div>
         </ion-col>
         <ion-col size="4" (click)="onOrderClick()" *ngIf="AddaddressData">
           <section>

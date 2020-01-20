@@ -100,7 +100,6 @@ ion-text-nowarp {
 }
 .bg-card {
   background-color: white;
-  height: 112px;
 }
 .bg-payment{
   height: 55px;
@@ -439,9 +438,7 @@ ion-toggle {
 .rowshipping {
   margin-bottom: -14px;
 }
-// .percentdown{
 
-// }
 .total {
   font-size: 15px;
   color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
@@ -482,4 +479,11 @@ ion-header {
 }
 .font-total-footter{
   font-size: 15px;
+}
+.amount-pay{
+  margin-top: 17px;
+}
+.credit-use{
+  font-size: 13px;
+  font-weight: 100;
 }
