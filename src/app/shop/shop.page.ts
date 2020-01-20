@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ShopService } from './shop.service';
-import { MenuController, PopoverController } from '@ionic/angular';
+import { MenuController, PopoverController, ModalController } from '@ionic/angular';
 
 import { Location } from '@angular/common';
 import { SelectMenuComponent } from '../productdetail/select-menu/select-menu.component';
+import { DomSanitizer } from '@angular/platform-browser';
+import { SearchModalComponent } from '../home/search-modal/search-modal.component';
 
 @Component({
   selector: 'app-shop',
@@ -14,23 +16,34 @@ import { SelectMenuComponent } from '../productdetail/select-menu/select-menu.co
 export class ShopPage implements OnInit {
   shopData: any;
   selectcheckData: any;
+  promotionData: any;
 
   constructor(
-    private router: Router, 
-    private shopService : ShopService,
+    private router: Router,
+    private shopService: ShopService,
     private _location: Location,
     private menu: MenuController,
-    public popoverController: PopoverController
-    ) { }
+    public popoverController: PopoverController,
+    private dom: DomSanitizer,
+    public modalController: ModalController
+  ) { }
 
   ngOnInit() {
-    this.shopService.onShopDataListChanged.subscribe((shopDataList:any)=>{
+    this.shopService.onShopDataListChanged.subscribe((shopDataList: any) => {
       console.log(shopDataList);
       this.shopData = shopDataList;
     })
     this.shopService.onMenuDataChanged.subscribe((searchproductDataList: any) => {
       console.log(searchproductDataList);
       this.selectcheckData = searchproductDataList;
+    })
+    this.shopService.onPromotionDataChanged.subscribe((promotionDataList: any) => {
+      console.log(promotionDataList);
+      this.promotionData = promotionDataList;
+
+      this.promotionData.link_promotion = this.dom.bypassSecurityTrustResourceUrl(this.promotionData.link_promotion);
+      console.log(this.promotionData.link_promotion);
+
     })
   }
 
@@ -54,6 +67,17 @@ export class ShopPage implements OnInit {
     console.log("onConfirm")
   }
 
+
+  onHomeProduct(promotionData: any) {
+    this.promotionData;
+    console.log(promotionData);
+  }
+  onProductAll(shopData: any) {
+    this.shopData;
+    console.log(shopData);
+  }
+
+
   async presentPopover(ev: any) {
     const popover = await this.popoverController.create({
       component: SelectMenuComponent,
@@ -61,6 +85,17 @@ export class ShopPage implements OnInit {
       translucent: true
     });
     return await popover.present();
+  }
+
+
+  async SearchModal() {
+    const modal = await this.modalController.create({
+      component: SearchModalComponent,
+      componentProps: {
+
+      }
+    });
+    return await modal.present();
   }
 
 }

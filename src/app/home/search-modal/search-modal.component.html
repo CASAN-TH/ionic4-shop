@@ -1,7 +1,13 @@
 <ion-header>
   <ion-toolbar>
     <ion-searchbar class="searchbar-padding" slot="start" placeholder="Enter item keyword"
-      (ionInput)="getItems($event)"></ion-searchbar>
+      (ionInput)="getItems($event)">
+    </ion-searchbar>
+    <ion-buttons class="btn-icon-padding" slot="end" (click)="dismiss()">
+      <ion-button>
+        ยกเลิก
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

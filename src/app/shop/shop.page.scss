@@ -17,3 +17,19 @@
 .icon-right {
   padding-right: 0px;
 }
+.btn-center {
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.sc-ion-searchbar-ios-h {
+  padding-left: unset;
+  padding-right: unset;
+  padding-bottom: 20px;
+  padding-top: 0px;
+  /* -webkit-padding-start: 12px; */
+  /* padding-inline-start: 12px; */
+  /* -webkit-padding-end: 12px; */
+  /* padding-inline-end: 12px; */
+}

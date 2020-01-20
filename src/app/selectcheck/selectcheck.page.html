@@ -2,7 +2,8 @@
   <ion-col size="12">
     <p class="font-selectcheck">{{recivedata.category_name}}</p>
     <ion-row>
-      <ion-col text-center class="selectcheck" size="5" *ngFor="let item of recivedata.categories" (click)="onCategories(item._id)">
+      <ion-col text-center class="selectcheck" size="5" *ngFor="let item of recivedata.categories"
+        (click)="onCategories(item._id)">
         {{item.name}}
       </ion-col>
     </ion-row>
@@ -13,7 +14,8 @@
   <ion-col size="12">
     <p class="font-selectcheck">{{recivedata.brand_name}}</p>
     <ion-row>
-      <ion-col text-center class="selectcheck" size="5" *ngFor="let item of recivedata.brands" (click)="onBrands(item._id)">
+      <ion-col text-center class="selectcheck" size="5" *ngFor="let item of recivedata.brands"
+        (click)="onBrands(item._id)">
         {{item.name}}
       </ion-col>
     </ion-row>
@@ -24,8 +26,9 @@
   <ion-col size="12">
     <p class="font-selectcheck">{{recivedata.pricerange_name}}</p>
     <ion-row>
-      <ion-col text-center class="selectcheck" size="5" *ngFor="let item of recivedata.priceranges" (click)="onPriceranges(item._id)">
-        {{item.name}}
+      <ion-col text-center class="selectcheck" size="5" *ngFor="let item of recivedata.priceranges"
+        (click)="onPriceranges(item._id)">
+        <ion-input text-center class="font-title-content" placeholder="{{item.name}}"></ion-input>
       </ion-col>
     </ion-row>
   </ion-col>

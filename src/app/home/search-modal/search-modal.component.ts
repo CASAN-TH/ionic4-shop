@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 
+import { Location } from '@angular/common';
+
 @Component({
   selector: 'app-search-modal',
   templateUrl: './search-modal.component.html',
@@ -14,11 +16,16 @@ export class SearchModalComponent implements OnInit {
 
   constructor(
     private router: Router,
-    public modalController: ModalController
+    public modalController: ModalController,
+    private _location: Location,
   ) { this.isItemAvailable = false; }
 
   ngOnInit() {
 
+  }
+
+  dismiss() {
+    this.modalController.dismiss();
   }
 
   onSearchProduct() {

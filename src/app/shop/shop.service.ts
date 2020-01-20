@@ -14,6 +14,7 @@ export class ShopService {
   routeParams: any;
 
   onShopDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onPromotionDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onShopDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onMenuDataChanged: BehaviorSubject<any> = new BehaviorSubject({
     "category_name": "",
@@ -40,6 +41,7 @@ export class ShopService {
     } else {
       this.getShopDataList();
       this.getMenuData();
+      this.getPromotionDataList();
     }
     return;
   }
@@ -83,6 +85,20 @@ export class ShopService {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onMenuDataChanged.next(res.data);
         }, reject)
+      }
+    })
+  }
+
+  getPromotionDataList(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if(mockup){
+        this.http.get('../../assets/json/promotion/promotion.json').subscribe((res: any) => {
+          this.onPromotionDataChanged.next(res.data);
+        },reject)
+      }else{
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onPromotionDataChanged.next(res.data);
+        },reject)
       }
     })
   }
