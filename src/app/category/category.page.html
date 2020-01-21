@@ -29,7 +29,7 @@
             <ion-text>{{cate.name}}</ion-text>
             <ion-slides pager>
               <ion-slide *ngFor="let cover of cate.cover_image; let j = index;">
-                <img class="coverimage" [src]="cover.image" (click)="onCoverImageClick(cover.id,i,j)">
+                <img class="coverimage" [src]="cover.image" (click)="onCoverImageClick(cover.link_parameter,i,j)">
               </ion-slide>
             </ion-slides>
             <ion-row>
