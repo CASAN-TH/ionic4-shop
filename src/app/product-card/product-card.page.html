@@ -1,4 +1,4 @@
-<ion-card (click)="onProductdetailClick(recivedata._id)">
+<!-- <ion-card (click)="onProductdetailClick(recivedata._id)">
   <ion-chip>
     <ion-label>{{recivedata.discount}}</ion-label>
   </ion-chip>
@@ -15,4 +15,24 @@
       <span>{{recivedata.installment.currency}}{{recivedata.installment.amount}}</span><small>{{recivedata.installment.period}}</small> 
     </ion-card-subtitle>
   </ion-card-content>
+</ion-card> -->
+
+<ion-card (click)="onProductdetailClick(recivedata._id)">
+  <ion-chip>
+    <ion-label>{{recivedata.installment.period}}%</ion-label>
+  </ion-chip>
+  <img [src]="recivedata.images" />
+  <ion-card-content>
+    <ion-card-title>
+      <em>{{recivedata.name}}</em> 
+    </ion-card-title>
+    <ion-card-subtitle>
+      <strong>{{recivedata.sale_price.currency}}{{recivedata.sale_price.price}}</strong> 
+      <del>{{recivedata.regular_price.currency}}{{recivedata.regular_price.price}}</del>
+    </ion-card-subtitle>
+    <ion-card-subtitle>
+      <span>{{recivedata.installment.currency}}{{recivedata.installment.price}}</span><small>x{{recivedata.installment.period}}MO</small> 
+    </ion-card-subtitle>
+  </ion-card-content>
 </ion-card>
+

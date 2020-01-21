@@ -52,6 +52,7 @@ export class ProductdetailPage implements OnInit {
     this.productdetailService.onProductdetailDataListChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.productdetailData = productdetailDataList;
+      console.log(this.productdetailData)
     })
 
     this.productdetailService.onReccommentDataChanged.subscribe((productdetailDataList: any) => {

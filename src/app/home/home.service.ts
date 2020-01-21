@@ -4,8 +4,10 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-const api_url = environment.apiUrl + '/api/homes/';
-const mockup = environment.mockup;
+const api_url = environment.apiUrl;
+// const mockup = environment.mockup;
+
+const mockup = false;
 
 @Injectable({
   providedIn: 'root'
@@ -29,10 +31,10 @@ export class HomeService {
     this.routeParams = route.params;
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
     if (this.routeParams.id) {
-      this.getHomeData(this.routeParams.id);
+      // this.getHomeData(this.routeParams.id);
     } else {
       this.getHomeDataList();
-      this.getHomeReccommentData();
+      // this.getHomeReccommentData();
       this.getCateProductListData();
     }
     return;
@@ -45,7 +47,7 @@ export class HomeService {
           this.onHomeDataListChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/features', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onHomeDataListChanged.next(res.data);
         }, reject)
       }
@@ -68,7 +70,7 @@ export class HomeService {
   }
   getHomeReccommentData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if (mockup) {
+      if (!mockup) {
         this.http.get('../../assets/json/home/reccomment.json').subscribe((res: any) => {
           this.onHomeReccommentDataChanged.next(res.data);
         }, reject)
@@ -88,7 +90,7 @@ export class HomeService {
           this.onCateProductListChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/cateproducthome', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onCateProductListChanged.next(res.data);
         }, reject)
       }
