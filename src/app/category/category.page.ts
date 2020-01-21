@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { CategoryService } from './category.service';
 import { Content } from '@angular/compiler/src/render3/r3_ast';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
@@ -13,7 +14,11 @@ export class CategoryPage implements OnInit {
   @ViewChild('content', { static: false }) private content: any;
   data: any;
   tabSelected: any;
-  constructor(private router: Router, private categoryService: CategoryService) { }
+  constructor(
+    private router: Router, 
+    private categoryService: CategoryService,
+    private dom: DomSanitizer
+    ) { }
 
 
 
@@ -25,6 +30,9 @@ export class CategoryPage implements OnInit {
         // console.log(this.data)
         this.tabSelected = this.data[0]._id;
       }
+
+      // this.data.cover_image.link_promotion = this.dom.bypassSecurityTrustResourceUrl(this.data.cover_image.link_promotion);
+      // console.log(this.data.cover_imagelink_promotion);
     })
   }
 
