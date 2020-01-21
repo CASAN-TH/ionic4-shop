@@ -118,8 +118,8 @@
               </ion-buttons>
             </ion-col>
           </ion-row>
-          <ion-row *ngIf="cartDataList.totalcart.total_discount > creditPoint.credit.creditremain">
-            <ion-col size="12">
+          <ion-row *ngIf="profilestatus.accountstatus === 'approve'">
+            <ion-col size="12" *ngIf="cartDataList.totalcart.total_discount > creditPoint.credit.creditremain">
               <div class="bg-color-payment">
                 <ion-item lines="none" color="#fff5f1" class="payment">
                   <ion-text>วงเงินไม่เพียงพอ โปรดเลือกการชำระแบบเต็มจำนวน</ion-text>

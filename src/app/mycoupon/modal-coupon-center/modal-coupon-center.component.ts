@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 @Component({
@@ -8,9 +8,13 @@ import { ModalController } from '@ionic/angular';
 })
 export class ModalCouponCenterComponent implements OnInit {
 
+  @Input() voucherdata: any;
+
   constructor(public modalController: ModalController) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.voucherdata);
+  }
 
   ModalDismiss() {
     this.modalController.dismiss();

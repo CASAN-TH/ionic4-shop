@@ -12,6 +12,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class MycouponPage implements OnInit {
   mycouponDataList: any;
+  voucherdata: any;
 
   constructor(private router: Router, private mycouponService : MycouponService,
     private _location: Location,
@@ -21,6 +22,10 @@ export class MycouponPage implements OnInit {
     this.mycouponService.onMycouponDataListChanged.subscribe((mycouponDataList:any)=>{
       console.log(mycouponDataList);
       this.mycouponDataList = mycouponDataList;
+    })
+    this.mycouponService.onVoucherDataListChanged.subscribe((voucherdata:any)=>{
+      console.log(voucherdata);
+      this.voucherdata = voucherdata;
     })
   }
 
@@ -33,7 +38,7 @@ export class MycouponPage implements OnInit {
     const modal = await this.modalController.create({
       component: ModalCouponCenterComponent,
       componentProps: {
-
+        voucherdata: this.voucherdata,
       }
     });
     return await modal.present();

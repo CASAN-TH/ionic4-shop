@@ -15,6 +15,7 @@ export class MycouponService {
 
   onMycouponDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onMycouponDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onVoucherDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }
 
@@ -31,8 +32,23 @@ export class MycouponService {
       this.getMycouponData(this.routeParams.id);
     } else {
       this.getMycouponDataList();
+      this.getVoucherData();
     }
     return;
+  }
+
+  getVoucherData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/productdetail/vouchers-modal.json').subscribe((res: any) => {
+          this.onVoucherDataListChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onVoucherDataListChanged.next(res.data);
+        }, reject)
+      }
+    })
   }
 
   getMycouponDataList(): Observable<any> | Promise<any> | any {
