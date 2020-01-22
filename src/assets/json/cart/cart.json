@@ -1,180 +1,145 @@
 {
     "status": 200,
-    "data": {
-        "carts": [
-            { 
-                "shop_id": "5678",
-                "shop_name": "NuttyShop",
-                "image": "https://pub.thisshop.com/shop/block/2019126/69050171_1575617961791.jpg?x-oss-process=image/resize,w_1000/quality,q_80",
-                "items": [
-                    {
-                        "product_id": "8891",
-                        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSO9Llg_r3_YdskEDKSKhrLxXoCBkGM-Lt8Vd3R7PeOZ9Qgx5xH",
-                        "name": "iphone 7 plus/Gold/32GB",
-                        "product_status":"waitpayment",
-                        "color": "Gold",
-                        "storage": "32GB",
-                        "price": "14,900",
-                        "currency": "฿",
-                        "discount_price": "35,900",
-                        "discount": "59% off",
-                        "quantity": "x1",
-                        "installment_amount": "893.58",
-                        "installment_period": "x18ต่องวด",
-                        "installment_currency": "฿",
-                        "amount_product": 1,
-                        "shipingfree": "0",
-                        "shiping_currency": "฿",
-                        "promotions": [
-                            {
-                                "_id": "453",
-                                "gift": "[ของแถม]",
-                                "name": "3 in 1 data cable Random Color",
-                                "quantity": "x1"
-                            },
-                            {
-                                "_id": "786",
-                                "gift": "[ของแถม]",
-                                "name": "Power bank 12000mA",
-                                "quantity": "x1"
-                            },
-                            {
-                                "_id": "236",
-                                "gift": "[ของแถม]",
-                                "name": "Sport headset",
-                                "quantity": "x1"
-                            },
-                            {
-                                "_id": "988",
-                                "gift": "[ของแถม]",
-                                "name": "Porttable wireless speaker",
-                                "quantity": "x1"
-                            },
-                            {
-                                "_id": "766",
-                                "gift": "[ของแถม]",
-                                "name": "JBL T450 BT Powerful big-stage",
-                                "quantity": "x1"
-                            }
-                        ]
-                    },
-                    {
-                        "product_id": "8891",
-                        "img": "https://pub.thisshop.com/shop/old/125812303496417280.jpg",
-                        "name": "หัวเสียบชาร์จไฟอเนกประสงค์",
-                        "product_status":"waitpayment",
-                        "color": "White",
-                        "storage": "",
-                        "price": "450",
-                        "currency": "฿",
-                        "discount_price": "495",
-                        "discount": "10% off",
-                        "quantity": "x1",
-                        "installment_amount": "129",
-                        "installment_period": "x3ต่องวด",
-                        "installment_currency": "฿",
-                        "amount_product": 1,
-                        "shipingfree": "0",
-                        "shiping_currency": "฿"
-                    }
-                ],
-                "total_shop": {
-                    "amount_product": 2,
-                    "unit": "สินค้า",
-                    "currency_discount": "-฿",
-                    "shipingfree": "0",
-                    "currency": "฿",
-                    "total_price": "15,350",
-                    "note":""
-                }
+    "data": [
+        {
+            "u_id": "0992436806",
+            "shop": {
+                "shop_id": "shop001",
+                "shop_name": "shopTest",
+                "shop_image": "image.jpg"
             },
-            {
-                "shop_id": "1234",
-                "shop_name": "ThisShop",
-                "image": "https://pub.thisshop.com/shop/block/2019126/69050171_1575617961791.jpg?x-oss-process=image/resize,w_1000/quality,q_80",
-                "items": [
-                    {
-                        "product_id": "8891",
-                        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSO9Llg_r3_YdskEDKSKhrLxXoCBkGM-Lt8Vd3R7PeOZ9Qgx5xH",
-                        "name": "iphone 7 plus/Gold/32GB",
-                        "product_status":"waitpayment",
-                        "color": "Gold",
-                        "storage": "32GB",
-                        "price": "14,900",
-                        "currency": "฿",
-                        "discount_price": "35,900",
-                        "discount": "59% off",
-                        "quantity": "x1",
-                        "installment_amount": "893.58",
-                        "installment_period": "x12ต่องวด",
-                        "installment_currency": "฿",
-                        "amount_product": 1,
-                        "shipingfree": "0",
-                        "shiping_currency": "฿",
-                        "promotions": [
-                            {
-                                "_id": "453",
-                                "gift": "[ของแถม]",
-                                "name": "3 in 1 data cable Random Color",
-                                "quantity": "x1"
-                            },
-                            {
-                                "_id": "786",
-                                "gift": "[ของแถม]",
-                                "name": "Power bank 12000mA",
-                                "quantity": "x1"
-                            },
-                            {
-                                "_id": "236",
-                                "gift": "[ของแถม]",
-                                "name": "Sport headset",
-                                "quantity": "x1"
-                            },
-                            {
-                                "_id": "988",
-                                "gift": "[ของแถม]",
-                                "name": "Porttable wireless speaker",
-                                "quantity": "x1"
-                            },
-                            {
-                                "_id": "766",
-                                "gift": "[ของแถม]",
-                                "name": "JBL T450 BT Powerful big-stage",
-                                "quantity": "x1"
-                            }
-                        ]
-                    }
-                ],
-                "total_shop": {
+            "items": [
+                {
+                    "product_id": "Product001",
+                    "sku": "sku",
+                    "images": [
+                        "https://res.cloudinary.com/hml20oe33/image/upload/v1576751856/catalog/2_pfwgiy.jpg"
+                    ],
+                    "name": "Vivo v13 Pro Crystal Sky RAM 8 GB ROM 128 GB",
+                    "option1": "green",
+                    "option2": "32GB",
+                    "sale_price_percentage": 50,
+                    "sale_avaliable": true,
+                    "sale_price": {
+                        "price": 5000,
+                        "currency": "฿"
+                    },
+                    "sale_price_text": "฿5,000",
+                    "regular_price": {
+                        "price": 10000,
+                        "currency": "฿"
+                    },
+                    "regular_price_text": "฿10,000",
+                    "down_payment": {
+                        "price": 1000,
+                        "currency": "฿"
+                    },
+                    "down_payment_text": "฿1,000",
+                    "installment": {
+                        "price": 222.222222222223,
+                        "period": 18,
+                        "currency": "฿"
+                    },
+                    "installment_price_text": "฿222.22",
                     "amount_product": 2,
-                    "unit": "สินค้า",
-                    "currency_discount": "-฿",
-                    "shipingfree": "0",
-                    "currency": "฿",
-                    "total_price": "14,900",
-                    "note":""
+                    "shipping": {
+                        "shipping_name": "kerry",
+                        "shipping_fee": 50,
+                        "shipping_currency": "฿"
+                    },
+                    "promotions": [
+                        {
+                            "gift_type": "ของแถม",
+                            "gift_name": "หูฟังไร้สาย",
+                            "gift_amount": 1
+                        }
+                    ],
+                    "down_payment_lists": [
+                        20,
+                        30,
+                        40,
+                        50
+                    ],
+                    "periods_lists": [
+                        3,
+                        6,
+                        9,
+                        12,
+                        18
+                    ]
                 }
-            }
-        ],
-        "totalcart": {
-            "total_price": 30250,
-            "total_price_text": "30,250",
-            "total_discount": 30250,
-            "total_discount_text": "30,250",
-            "currency": "฿",
-            "installment_amount": "1680.55",
-            "installment_period": "x12เดือน",
-            "amount_product": 3,
-            "promotion": "0",
-            "currency_discount": "-฿",
-            "shipingfree": "0",
-            "cupon_discount": "0"
+            ]
         },
-       
-        "tcoin": {
-            "total": 500,
-            "tcoin_pay": 5,
-            "tcoin_currency": "฿"
+        {
+            "u_id": "0992436806",
+            "shop": {
+                "shop_id": "shop002",
+                "shop_name": "shopBan",
+                "shop_image": "image.jpg"
+            },
+            "items": [
+                {
+                    "product_id": "Product001",
+                    "sku": "sku",
+                    "images": [
+                        "https://res.cloudinary.com/hml20oe33/image/upload/v1576751856/catalog/2_pfwgiy.jpg"
+                    ],
+                    "name": "Vivo v13 Pro Crystal Sky RAM 8 GB ROM 128 GB",
+                    "options": [
+                        "green",
+                        "32GB"
+                    ],
+                    "sale_price_percentage": 50,
+                    "sale_avaliable": true,
+                    "sale_price": {
+                        "price": 5000,
+                        "currency": "฿"
+                    },
+                    "sale_price_text": "฿5,000",
+                    "regular_price": {
+                        "price": 10000,
+                        "currency": "฿"
+                    },
+                    "regular_price_text": "฿10,000",
+                    "down_payment": {
+                        "price": 1000,
+                        "currency": "฿"
+                    },
+                    "down_payment_text": "฿1,000",
+                    "installment": {
+                        "price": 222.222222222223,
+                        "period": 18,
+                        "currency": "฿"
+                    },
+                    "installment_price_text": "฿222.22",
+                    "amount_product": 2,
+                    "shipping": {
+                        "shipping_name": "kerry",
+                        "shipping_fee": 50,
+                        "shipping_currency": "฿"
+                    },
+                    "promotions": [
+                        {
+                            "gift_type": "ของแถม",
+                            "gift_name": "หูฟังไร้สาย",
+                            "gift_amount": 1
+                        }
+                    ],
+                    "down_payment_lists": [
+                        20,
+                        30,
+                        40,
+                        50
+                    ],
+                    "periods_lists": [
+                        3,
+                        6,
+                        9,
+                        12,
+                        18
+                    ]
+                }
+            ]
         }
-    }
+    ]
 }

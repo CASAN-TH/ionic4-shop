@@ -98,7 +98,9 @@ export class PaymentPage implements OnInit {
       this.router.navigate(['payfor'])
     }
   }
-
+  onOrderClick2() {
+      this.router.navigate(['payfor'])
+  }
   onAddaddressClick() {
     this.router.navigate(['addaddress'])
   }
