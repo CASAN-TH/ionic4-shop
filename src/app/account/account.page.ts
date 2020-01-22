@@ -203,11 +203,11 @@ export class AccountPage implements OnInit {
   }
 
   onToHelpCenterPage() {
-    console.log("onToHelpCenterPage");
+    this.router.navigate(['helpcenter']);
   }
 
   onToCuustomerServicePage() {
-    console.log("onToCuustomerServicePage");
+    this.router.navigate(['callcenter']);
   }
 
   async ModalLanguage() {

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons mode="ios" slot="start" (click)="onBackClick()">
+      <ion-button>
+        <ion-icon mode="ios" slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>ศูนย์ช่วยเหลือ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<ion-row>
+  <ion-col size="12" *ngFor="let item of helpcenterDataList">
+    {{item.name}}
+  </ion-col>
+</ion-row>
+</ion-content>

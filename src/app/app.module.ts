@@ -70,6 +70,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ModalTcoinDetailComponent } from './tcoin/modal-tcoin-detail/modal-tcoin-detail.component';
 import { SearchModalComponent } from './home/search-modal/search-modal.component';
 import { ModalCouponCenterComponent } from './mycoupon/modal-coupon-center/modal-coupon-center.component';
+import { PopoverSelectComponent } from './account/popover-select/popover-select.component';
 
 
 
@@ -104,6 +105,7 @@ import { ModalCouponCenterComponent } from './mycoupon/modal-coupon-center/modal
 
     ModalTcoinDetailComponent,
     ModalCouponCenterComponent,
+    PopoverSelectComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
@@ -166,6 +168,7 @@ import { ModalCouponCenterComponent } from './mycoupon/modal-coupon-center/modal
 
     ModalTcoinDetailComponent,
     ModalCouponCenterComponent,
+    PopoverSelectComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,

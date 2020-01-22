@@ -142,6 +142,10 @@ const routes: Routes = [
   {
     path: 'current-amount',
     loadChildren: () => import('./currentamount/currentamount.module').then( m => m.CurrentamountPageModule)
+  },
+  {
+    path: 'helpcenter',
+    loadChildren: () => import('./helpcenter/helpcenter.module').then( m => m.HelpcenterPageModule)
   }
 
 
