@@ -6,7 +6,6 @@ import { environment } from 'src/environments/environment';
 
 const api_url = environment.apiUrl + '/api/productdetails/';
 const mockup = environment.mockup;
-// const mockup = false;
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +14,10 @@ export class ProductdetailService {
   routeParams: any;
 
   onProductdetailDataListChanged: BehaviorSubject<any> = new BehaviorSubject({
-    "details":{},
-    "warranties":{}
+    "regular_price": {
+      "price": "",
+      "currency": ""
+  }
   });
   onProductdetailDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
@@ -63,8 +64,7 @@ export class ProductdetailService {
     this.routeParams = route.params;
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
     if (this.routeParams.id) {
-      this.getProductdetailData(this.routeParams.id); 
-    } else {
+      this.getProductdetailData(this.routeParams.id);
       this.getProductdetailDataList();
       this.getReccommentData();
       this.getPaymentModalData();
@@ -76,6 +76,10 @@ export class ProductdetailService {
       this.getReviewModalData();
       this.getImformationSpecModalData();
       this.getShareModalData();
+    } else {
+      // return new Promise((resolve, reject) => {
+      //   return reject('rejected')
+      // });
     }
   }
 
@@ -93,15 +97,15 @@ export class ProductdetailService {
     })
   }
 
-  getProductdetailData(product_id: string): Observable<any> | Promise<any> | any {
+  getProductdetailData(id: string): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/productdetail/productdetail.json').subscribe((res: any) => {
-          this.onProductdetailDataListChanged.next(res.data);
+        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+          this.onProductdetailDataChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url + '/api/products/' + product_id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onProductdetailDataListChanged.next(res.data);
+        this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onProductdetailDataChanged.next(res.data);
         }, reject)
       }
 

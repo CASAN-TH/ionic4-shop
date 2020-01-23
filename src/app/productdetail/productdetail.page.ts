@@ -23,6 +23,7 @@ import { ShareModalComponent } from './share-modal/share-modal.component';
 export class ProductdetailPage implements OnInit {
 
   productdetailData: any;
+  productwarrantyData: any;
   PaymentData: any
   VouchersData: any
   PromotionData: any
@@ -54,11 +55,16 @@ export class ProductdetailPage implements OnInit {
       this.productdetailData = productdetailDataList;
       console.log(this.productdetailData)
     })
-
-    this.productdetailService.onReccommentDataChanged.subscribe((productdetailDataList: any) => {
+    this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
-      this.ReccommentData = productdetailDataList;
+      this.productwarrantyData = productdetailDataList;
+      console.log(this.productwarrantyData)
     })
+
+    // this.productdetailService.onReccommentDataChanged.subscribe((productdetailDataList: any) => {
+    //   console.log(productdetailDataList);
+    //   this.ReccommentData = productdetailDataList;
+    // })
 
     this.productdetailService.onPaymentDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);

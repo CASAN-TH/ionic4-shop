@@ -33,7 +33,7 @@
       <ion-grid>
         <ion-row>
           <ion-col size="12">
-            <h1 class="pri">{{productdetailData.currency}} {{productdetailData.price}}</h1>
+            <h1 class="pri">{{productdetailData.regular_price_text}}</h1>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -158,7 +158,7 @@
         </ion-item>
 
         <ion-item no-padding class="item-border-right" lines="none" (click)="specificationModal()">
-          <ion-text>สเปค.</ion-text>
+          <ion-text>สเปค</ion-text>
           <ion-label>
             <ion-text class="text-padding">
               {{SpecificationData.color}} {{SpecificationData.version}}
@@ -253,11 +253,11 @@
       <ion-grid>
         <ion-item no-padding class="item-border-right">
           <ion-label>
-            <ion-text class="titlewar">{{productdetailData.details.detailname}}</ion-text>
+            <ion-text class="titlewar">{{productdetailData.description}}</ion-text>
           </ion-label>
         </ion-item>
         <div>
-          <img *ngFor="let item of productdetailData.details.images" [src]="item">
+          <img *ngFor="let item of productdetailData.description_image" [src]="item">
         </div>
       </ion-grid>
     </ion-col>
@@ -268,18 +268,40 @@
       <ion-grid>
         <ion-item no-padding class="item-border-right">
           <ion-label>
-            <ion-text class="titlewar">{{productdetailData.warranties.warrantyname}}</ion-text>
+            <ion-text class="titlewar">{{productwarrantyData.warranty_name}}</ion-text>
+            <!-- <ion-text class="titlewar">{{productdetailData.warranties.warrantyname}}</ion-text> -->
           </ion-label>
         </ion-item>
 
         <ion-row>
+          <ion-col size="12" *ngFor="let itemwarranty of productwarrantyData.warranties_lists">
+            <p class="titlewar">{{itemwarranty.title}}</p>
+            <p class="subtitlewar">{{itemwarranty.subtitle}}</p>
+          </ion-col>
+        </ion-row>
+
+        <!-- <ion-row>
           <ion-col size="12" *ngFor="let warranty2 of productdetailData.warranties.warrantiestitle">
             <p class="titlewar">{{warranty2.title}}</p>
             <p class="subtitlewar">{{warranty2.subtitle}}</p>
           </ion-col>
-        </ion-row>
+        </ion-row> -->
+        <ion-item no-padding class="item-border-right">
+          <ion-label>
+            <ion-text class="titlewar">{{productwarrantyData.aftersales_name}}</ion-text>
+            <!-- <ion-text class="titlewar">{{productdetailData.warranties.warrantyname}}</ion-text> -->
+          </ion-label>
+        </ion-item>
 
         <ion-row>
+          <ion-col size="12">
+            <p class="subtitlewar" *ngFor="let itemaftersales of productwarrantyData.aftersales_lists">
+              {{itemaftersales.title}}
+            </p>
+            <p>หากมีคำถามอื่นๆ สามารถสอบถามเจ้าพนักงานได้โดยตรง</p>
+          </ion-col>
+        </ion-row>
+        <!-- <ion-row>
           <ion-col size="12">
             <p class="subtitlewar">{{productdetailData.warranties.sub1}}</p>
             <p class="subtitlewar">{{productdetailData.warranties.sub2}}</p>
@@ -289,7 +311,7 @@
             <p class="subtitlewar">{{productdetailData.warranties.sub6}}</p>
             <p>หากมีคำถามอื่นๆ สามารถสอบถามเจ้าพนักงานได้โดยตรง</p>
           </ion-col>
-        </ion-row>
+        </ion-row> -->
 
       </ion-grid>
     </ion-col>
