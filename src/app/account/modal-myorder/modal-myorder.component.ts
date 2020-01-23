@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, PopoverController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { PopoverSelectComponent } from '../popover-select/popover-select.component';
 
 @Component({
   selector: 'app-modal-myorder',
@@ -15,7 +16,8 @@ export class ModalMyorderComponent implements OnInit {
 
   constructor(
     public modalController: ModalController,
-    private router: Router
+    private router: Router,
+    public popoverController: PopoverController
   ) { }
 
 
@@ -38,8 +40,13 @@ export class ModalMyorderComponent implements OnInit {
     this.router.navigate(["tabs/home"]);
   }
 
-  onToSettingPage() {
-    console.log("onToSettingPage");
+  async presentPopover(ev: any) {
+    const popover = await this.popoverController.create({
+      component: PopoverSelectComponent,
+      event: ev,
+      translucent: true
+    });
+    return await popover.present();
   }
 
 }

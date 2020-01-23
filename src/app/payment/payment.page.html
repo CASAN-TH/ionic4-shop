@@ -443,11 +443,6 @@
             </ion-col>
           </ion-row>
         </ion-col>
-        <!-- <ion-col size="4" (click)="acceptModal()" *ngIf="AddaddressData">
-          <section>
-            <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
-          </section>
-        </ion-col> -->
         <ion-col size="4" (click)="onOrderClick()" *ngIf="AddaddressData">
           <section>
             <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
@@ -475,7 +470,7 @@
               class="footterfont2">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.total_discount}}</span>
           </div>
         </ion-col>
-        <ion-col size="4" (click)="onOrderClick()" *ngIf="AddaddressData">
+        <ion-col size="4" (click)="onOrderClick2()" *ngIf="AddaddressData">
           <section>
             <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
           </section>

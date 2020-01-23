@@ -21,6 +21,7 @@ export class CartPage implements OnInit {
   PaymentData: any;
   VouchersData: any;
   AddaddressData: any;
+  TotalCartDataList: any;
 
   // isIndeterminate:boolean;
   // masterCheck:boolean;
@@ -30,33 +31,37 @@ export class CartPage implements OnInit {
     private cartService: CartService,
     private paymentService: PaymentService,
     public modalController: ModalController,
-    public actionSheetController: ActionSheetController) { 
-      // this.checkBoxList = [];
-    }
+    public actionSheetController: ActionSheetController) {
+    // this.checkBoxList = [];
+  }
 
   ngOnInit() {
     this.cartService.onCartDataListChanged.subscribe((cartDataList: any) => {
-      console.log(cartDataList);
       this.cartDataList = cartDataList;
+      console.log(cartDataList);
+    })
+    this.cartService.onTotalCartDataChanged.subscribe((TotalCartDataList: any) => {
+      this.TotalCartDataList = TotalCartDataList;
+      console.log(TotalCartDataList);
     })
     this.cartService.onReccommentDataListChanged.subscribe((reccommentDataList: any) => {
-      console.log(reccommentDataList);
+      // console.log(reccommentDataList);
       this.reccommentDataList = reccommentDataList;
     })
     this.cartService.onSpecificationDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
+      // console.log(productdetailDataList);
       this.SpecificationData = productdetailDataList;
     })
     this.cartService.onPaymentDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
+      // console.log(productdetailDataList);
       this.PaymentData = productdetailDataList;
     })
     this.cartService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
+      // console.log(productdetailDataList);
       this.VouchersData = productdetailDataList;
     })
     this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
-      console.log(AddaddressData);
+      // console.log(AddaddressData);
       this.AddaddressData = AddaddressData;
     })
 
@@ -75,12 +80,12 @@ export class CartPage implements OnInit {
     console.log("onSelectProductClick")
   }
   onRemoveClick(i, j) {
-    this.cartDataList.carts[i].items[j].amount_product -= 1
-    console.log(this.cartDataList.carts[i].items[j].amount_product)
+    this.cartDataList[i].items[j].amount_product -= 1
+    console.log(this.cartDataList[i].items[j].amount_product)
   }
   onAddClick(i, j) {
-    this.cartDataList.carts[i].items[j].amount_product += 1
-    console.log(this.cartDataList.carts[i].items[j].amount_product)
+    this.cartDataList[i].items[j].amount_product += 1
+    console.log(this.cartDataList[i].items[j].amount_product)
   }
   onAcceptCodeClick() {
     console.log("Add")

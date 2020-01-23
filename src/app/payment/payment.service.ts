@@ -61,7 +61,7 @@ export class PaymentService {
   getCartDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/cart/cart.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/payment/payment.json').subscribe((res: any) => {
           this.onCartDataListChanged.next(res.data);
         }, reject)
       } else {
