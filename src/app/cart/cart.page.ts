@@ -21,7 +21,7 @@ export class CartPage implements OnInit {
   PaymentData: any;
   VouchersData: any;
   AddaddressData: any;
-  TotalCartDataList: any;
+ 
 
   // isIndeterminate:boolean;
   // masterCheck:boolean;
@@ -39,10 +39,6 @@ export class CartPage implements OnInit {
     this.cartService.onCartDataListChanged.subscribe((cartDataList: any) => {
       this.cartDataList = cartDataList;
       console.log(cartDataList);
-    })
-    this.cartService.onTotalCartDataChanged.subscribe((TotalCartDataList: any) => {
-      this.TotalCartDataList = TotalCartDataList;
-      console.log(TotalCartDataList);
     })
     this.cartService.onReccommentDataListChanged.subscribe((reccommentDataList: any) => {
       // console.log(reccommentDataList);
