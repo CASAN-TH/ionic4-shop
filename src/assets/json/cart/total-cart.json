@@ -9,9 +9,8 @@
         "installment_amount": "840.33",
         "installment_period": "x12เดือน",
         "amount_product": 4,
-        "promotion": "0",
-        "currency_discount": "-฿",
-        "shipingfree": "0",
-        "cupon_discount": "0"
+        "promotion": 0,
+        "shippingfee": 0,
+        "coupon_discount": 0
     }
 }

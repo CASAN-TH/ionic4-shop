@@ -4,8 +4,11 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-const api_url = environment.apiUrl + '/api/carts/';
-const mockup = environment.mockup;
+const api_url = environment.apiUrl;
+// const mockup = environment.mockup;
+
+
+const mockup = false;
 
 @Injectable({
   providedIn: 'root'
@@ -41,11 +44,11 @@ export class CartService {
     this.routeParams = route.params;
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
     this.getCartDataList();
-    this.getReccommentDataList();
-    this.getSpecificationModalData();
-    this.getPaymentModalData();
-    this.getVouchersModalData();
-    this.getTotalCartDataList();
+    // this.getReccommentDataList();
+    // this.getSpecificationModalData();
+    // this.getPaymentModalData();
+    // this.getVouchersModalData();
+    // this.getTotalCartDataList();
 
     return;
   }
@@ -57,81 +60,81 @@ export class CartService {
           this.onCartDataListChanged.next(res.data);
         },reject)
       }else{
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/cartsbyuser', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onCartDataListChanged.next(res.data);
         },reject)
       }
     })
   }
-  getTotalCartDataList(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if(mockup){
-        this.http.get('../../assets/json/cart/total-cart.json').subscribe((res: any) => {
-          this.onTotalCartDataChanged.next(res.data);
-        },reject)
-      }else{
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onTotalCartDataChanged.next(res.data);
-        },reject)
-      }
-    })
-  }
-  getReccommentDataList(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if(mockup){
-        this.http.get('../../assets/json/cart/reccomment.json').subscribe((res: any) => {
-          this.onReccommentDataListChanged.next(res.data);
-        },reject)
-      }else{
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onReccommentDataListChanged.next(res.data);
-        },reject)
-      }
-    })
-  }
-  getSpecificationModalData(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if (mockup) {
-        this.http.get('../../assets/json/cart/specification-modal.json').subscribe((res: any) => {
-          this.onSpecificationDataChanged.next(res.data);
-        }, reject)
-      } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onSpecificationDataChanged.next(res.data);
-        }, reject)
-      }
+  // getTotalCartDataList(): Observable<any> | Promise<any> | any {
+  //   return new Promise((resolve, reject) => {
+  //     if(mockup){
+  //       this.http.get('../../assets/json/cart/total-cart.json').subscribe((res: any) => {
+  //         this.onTotalCartDataChanged.next(res.data);
+  //       },reject)
+  //     }else{
+  //       this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+  //         this.onTotalCartDataChanged.next(res.data);
+  //       },reject)
+  //     }
+  //   })
+  // }
+  // getReccommentDataList(): Observable<any> | Promise<any> | any {
+  //   return new Promise((resolve, reject) => {
+  //     if(mockup){
+  //       this.http.get('../../assets/json/cart/reccomment.json').subscribe((res: any) => {
+  //         this.onReccommentDataListChanged.next(res.data);
+  //       },reject)
+  //     }else{
+  //       this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+  //         this.onReccommentDataListChanged.next(res.data);
+  //       },reject)
+  //     }
+  //   })
+  // }
+  // getSpecificationModalData(): Observable<any> | Promise<any> | any {
+  //   return new Promise((resolve, reject) => {
+  //     if (mockup) {
+  //       this.http.get('../../assets/json/cart/specification-modal.json').subscribe((res: any) => {
+  //         this.onSpecificationDataChanged.next(res.data);
+  //       }, reject)
+  //     } else {
+  //       this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+  //         this.onSpecificationDataChanged.next(res.data);
+  //       }, reject)
+  //     }
 
-    })
-  }
-  getVouchersModalData(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if (mockup) {
-        this.http.get('../../assets/json/productdetail/vouchers-modal.json').subscribe((res: any) => {
-          this.onVouchersDataChanged.next(res.data);
-        }, reject)
-      } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onVouchersDataChanged.next(res.data);
-        }, reject)
-      }
+  //   })
+  // }
+  // getVouchersModalData(): Observable<any> | Promise<any> | any {
+  //   return new Promise((resolve, reject) => {
+  //     if (mockup) {
+  //       this.http.get('../../assets/json/productdetail/vouchers-modal.json').subscribe((res: any) => {
+  //         this.onVouchersDataChanged.next(res.data);
+  //       }, reject)
+  //     } else {
+  //       this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+  //         this.onVouchersDataChanged.next(res.data);
+  //       }, reject)
+  //     }
 
-    })
-  }
+  //   })
+  // }
 
-  getPaymentModalData(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if (mockup) {
-        this.http.get('../../assets/json/cart/payment-modal.json').subscribe((res: any) => {
-          this.onPaymentDataChanged.next(res.data);
-        }, reject)
-      } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onPaymentDataChanged.next(res.data);
-        }, reject)
-      }
+  // getPaymentModalData(): Observable<any> | Promise<any> | any {
+  //   return new Promise((resolve, reject) => {
+  //     if (mockup) {
+  //       this.http.get('../../assets/json/cart/payment-modal.json').subscribe((res: any) => {
+  //         this.onPaymentDataChanged.next(res.data);
+  //       }, reject)
+  //     } else {
+  //       this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+  //         this.onPaymentDataChanged.next(res.data);
+  //       }, reject)
+  //     }
 
-    })
-  }
+  //   })
+  // }
 
   createCartData(body): Promise<any> {
     return new Promise((resolve, reject) => {
