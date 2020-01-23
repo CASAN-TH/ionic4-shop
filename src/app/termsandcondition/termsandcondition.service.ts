@@ -4,7 +4,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-const api_url = environment.apiUrl + '/api/termsandconditions/';
+const api_url = environment.apiUrl;
 const mockup = environment.mockup;
 
 @Injectable({
