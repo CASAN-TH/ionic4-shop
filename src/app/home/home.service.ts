@@ -34,7 +34,7 @@ export class HomeService {
       // this.getHomeData(this.routeParams.id);
     } else {
       this.getHomeDataList();
-      // this.getHomeReccommentData();
+      this.getHomeReccommentData();
       this.getCateProductListData();
     }
     return;
@@ -70,12 +70,12 @@ export class HomeService {
   }
   getHomeReccommentData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if (!mockup) {
+      if (mockup) {
         this.http.get('../../assets/json/home/reccomment.json').subscribe((res: any) => {
           this.onHomeReccommentDataChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/cateproducthome', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onHomeReccommentDataChanged.next(res.data);
         }, reject)
       }

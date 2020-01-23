@@ -39,6 +39,7 @@ export class HomePage implements OnInit {
     this.homeService.onHomeReccommentDataChanged.subscribe((homeDataList: any) => {
       console.log(homeDataList);
       this.homeReccommentData = homeDataList;
+      console.log(this.homeReccommentData)
     });
     this.homeService.onCateProductListChanged.subscribe((CateProductListData: any) => {
       console.log(CateProductListData);
