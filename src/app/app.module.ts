@@ -71,7 +71,9 @@ import { ModalTcoinDetailComponent } from './tcoin/modal-tcoin-detail/modal-tcoi
 import { SearchModalComponent } from './home/search-modal/search-modal.component';
 import { ModalCouponCenterComponent } from './mycoupon/modal-coupon-center/modal-coupon-center.component';
 import { PopoverSelectComponent } from './account/popover-select/popover-select.component';
-
+import { ModalFavoriteComponent } from './account/modal-favorite/modal-favorite.component';
+import { ModalFollowedshopComponent } from './account/modal-followedshop/modal-followedshop.component';
+import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal-browsehistory.component';
 
 
 
@@ -106,6 +108,9 @@ import { PopoverSelectComponent } from './account/popover-select/popover-select.
     ModalTcoinDetailComponent,
     ModalCouponCenterComponent,
     PopoverSelectComponent,
+    ModalFavoriteComponent,
+    ModalFollowedshopComponent,
+    ModalBrowsehistoryComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,
@@ -169,6 +174,9 @@ import { PopoverSelectComponent } from './account/popover-select/popover-select.
     ModalTcoinDetailComponent,
     ModalCouponCenterComponent,
     PopoverSelectComponent,
+    ModalFavoriteComponent,
+    ModalFollowedshopComponent,
+    ModalBrowsehistoryComponent,
 
     PaymentgiftModalComponent,
     TcoingiftModalComponent,

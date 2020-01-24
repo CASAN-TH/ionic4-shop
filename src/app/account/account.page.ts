@@ -1,3 +1,4 @@
+import { ModalBrowsehistoryComponent } from './modal-browsehistory/modal-browsehistory.component';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountService } from './account.service';
@@ -7,6 +8,8 @@ import { ModalMyorderComponent } from './modal-myorder/modal-myorder.component';
 import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
 import { ModalLanguageComponent } from './modal-language/modal-language.component';
 import { ModalCreditPointComponent } from '../credit/modal-credit-point/modal-credit-point.component';
+import { ModalFavoriteComponent } from './modal-favorite/modal-favorite.component';
+import { ModalFollowedshopComponent } from './modal-followedshop/modal-followedshop.component';
 
 @Component({
   selector: 'app-account',
@@ -24,6 +27,7 @@ export class AccountPage implements OnInit {
   creditDatas: any;
   CartDataList: any;
   BillDataList: any;
+  recommendDataList: any;
  
 ;
 
@@ -70,6 +74,10 @@ export class AccountPage implements OnInit {
       this.BillDataList = BillDataList;
       console.log(this.BillDataList);
     })
+    this.accountService.onRecommendDataListChanged.subscribe((recommendDataList:any)=>{
+      console.log(recommendDataList);
+      this.recommendDataList = recommendDataList;
+    })
   }
 
   onScroll($event: CustomEvent<ScrollDetail>) {
@@ -104,16 +112,29 @@ export class AccountPage implements OnInit {
     this.router.navigate(['setting']);
   }
 
-  onToWishlistPage() {
-    console.log("onToWishlistPage");
+  async ModalFavorite() {
+    const modal = await this.modalController.create({
+      component: ModalFavoriteComponent,
+      componentProps: {
+        recommendDataList: this.recommendDataList
+      
+      }
+    });
+    return await modal.present();
   }
 
-  onToFollowedShopPage() {
-    console.log("onToFollowedShopPage");
+  async ModalFollowedshop() {
+    const modal = await this.modalController.create({
+      component: ModalFollowedshopComponent,
+    });
+    return await modal.present();
   }
 
-  onToBrowseHistoryPage() {
-    console.log("onToBrowseHistoryPage");
+  async ModalBrowsehistory() {
+    const modal = await this.modalController.create({
+      component: ModalBrowsehistoryComponent,
+    });
+    return await modal.present();
   }
 
   async ModalViewAllMyOrdersPage() {

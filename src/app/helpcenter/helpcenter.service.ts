@@ -13,7 +13,7 @@ const mockup = environment.mockup;
 export class HelpcenterService {
   routeParams: any;
 
-  onHelpcenterDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onHelpcenterDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onHelpcenterDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }
@@ -38,7 +38,7 @@ export class HelpcenterService {
   getHelpcenterDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if(mockup){
-        this.http.get('../../assets/json/helpcenter/helpcenter.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/helpcenter/helpcenter-detail.json').subscribe((res: any) => {
           this.onHelpcenterDataListChanged.next(res.data);
         },reject)
       }else{
@@ -52,8 +52,8 @@ export class HelpcenterService {
   getHelpcenterData(id: string): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if(mockup){
-        this.http.get('../../assets/json/helpcenter/helpcenter-detail.json').subscribe((res: any) => {
-          this.onHelpcenterDataListChanged.next(res.data);
+        this.http.get('../../assets/json/helpcenter/helpcenter.json').subscribe((res: any) => {
+          this.onHelpcenterDataChanged.next(res.data);
         },reject)
       }else{
         this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {

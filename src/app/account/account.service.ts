@@ -30,6 +30,7 @@ export class AccountService {
   onBillDataChanged: BehaviorSubject<any> = new BehaviorSubject({
     "u_id": ""
   });
+  onRecommendDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor(private http: HttpClient) { }
 
@@ -53,8 +54,23 @@ export class AccountService {
       this.getAddressDataList();
       this.getCartDataList();
       this.getBillData();
+      this.getRecommendDataList();
     }
     return;
+  }
+
+  getRecommendDataList(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if(mockup){
+        this.http.get('../../assets/json/cart/reccomment.json').subscribe((res: any) => {
+          this.onRecommendDataListChanged.next(res.data);
+        },reject)
+      }else{
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onRecommendDataListChanged.next(res.data);
+        },reject)
+      }
+    })
   }
 
   getAddressDataList(): Observable<any> | Promise<any> | any {
