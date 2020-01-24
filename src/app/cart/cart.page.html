@@ -188,10 +188,10 @@
             ยอดรวม:
           </span>
           <span class="spanprice">
-            {{TotalCartDataList.currency}} {{TotalCartDataList.total_price}}
+            {{TotalCartDataList.currency}} {{TotalCartDataList.total_regularprice_text}}
           </span>
           <span class="installment">
-            {{TotalCartDataList.installment_currency}}{{TotalCartDataList.installment_amount}}
+            {{TotalCartDataList.currency}}{{TotalCartDataList.installment_price_text}}
             {{TotalCartDataList.installment_period}}
             <ion-icon class="icon-inner" mode="ios" name="arrow-forward" (click)="InstallmentModal()"></ion-icon>
           </span>

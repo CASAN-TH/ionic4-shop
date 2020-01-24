@@ -17,6 +17,7 @@ export class CartService {
   routeParams: any;
 
   onCartDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onTotalCartDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onReccommentDataListChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onSpecificationDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({
@@ -47,7 +48,7 @@ export class CartService {
     // this.getSpecificationModalData();
     // this.getPaymentModalData();
     // this.getVouchersModalData();
-  
+    // this.getTotalCartDataList();
 
     return;
   }
@@ -65,7 +66,19 @@ export class CartService {
       }
     })
   }
-
+  // getTotalCartDataList(): Observable<any> | Promise<any> | any {
+  //   return new Promise((resolve, reject) => {
+  //     if(mockup){
+  //       this.http.get('../../assets/json/cart/total-cart.json').subscribe((res: any) => {
+  //         this.onTotalCartDataChanged.next(res.data);
+  //       },reject)
+  //     }else{
+  //       this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+  //         this.onTotalCartDataChanged.next(res.data);
+  //       },reject)
+  //     }
+  //   })
+  // }
   // getReccommentDataList(): Observable<any> | Promise<any> | any {
   //   return new Promise((resolve, reject) => {
   //     if(mockup){
