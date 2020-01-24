@@ -50,12 +50,12 @@ export class ProductdetailPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.productdetailService.onProductdetailDataListChanged.subscribe((productdetailDataList: any) => {
+    this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.productdetailData = productdetailDataList;
       console.log(this.productdetailData)
     })
-    this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
+    this.productdetailService.onProductdetailWarrantyDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.productwarrantyData = productdetailDataList;
       console.log(this.productwarrantyData)
@@ -66,11 +66,12 @@ export class ProductdetailPage implements OnInit {
     //   this.ReccommentData = productdetailDataList;
     // })
 
-    this.productdetailService.onPaymentDataChanged.subscribe((productdetailDataList: any) => {
+    this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.PaymentData = productdetailDataList;
+      console.log(this.PaymentData)
     })
-
+    /////////////////////////////////////////////////////////////////////
     this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.VouchersData = productdetailDataList;
@@ -90,12 +91,12 @@ export class ProductdetailPage implements OnInit {
       console.log(productdetailDataList);
       this.WarrantyData = productdetailDataList;
     })
-
-    this.productdetailService.onSpecificationDataChanged.subscribe((productdetailDataList: any) => {
+    /////////////////////////////////////////////////////////////////////
+    this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.SpecificationData = productdetailDataList;
     })
-
+    /////////////////////////////////////////////////////////////////////
     this.productdetailService.onReviewDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.ReviewData = productdetailDataList;
@@ -196,9 +197,9 @@ export class ProductdetailPage implements OnInit {
     this._location.back();
   }
 
-  onCartClick() {
+  onCartClick(cartId: any) {
     console.log("onCartClick");
-    this.router.navigateByUrl('tabs/cart');
+    this.router.navigateByUrl('tabs/cart' + cartId);
   }
   // onPaymentClick(paymentId: any) {
   //   console.log("onPaymentClick");

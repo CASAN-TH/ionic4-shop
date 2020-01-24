@@ -13,11 +13,11 @@
   <ion-row>
     <ion-col size="4">
       <div>
-        <img class="img-spac" [src]="SpecificationData.image">
+        <!-- <img class="img-spac" [src]="SpecificationData.image"> -->
       </div>
     </ion-col>
     <ion-col size="8">
-      <h3 class="pri">
+      <!-- <h3 class="pri">
         {{SpecificationData.currency}}
         {{SpecificationData.price}}
       </h3>
@@ -28,14 +28,14 @@
       <span class="unit">
         {{SpecificationData.unit}}
         {{SpecificationData.per}}
-      </span>
+      </span> -->
       <ion-row>
         <ion-col size="12">
           <span>
-            <ion-text class="name">{{SpecificationData.color}}</ion-text>
+            <ion-text class="name">{{SpecificationData.options_list1.list_items.name}}</ion-text>
           </span>,
           <span>
-            <ion-text class="name">{{SpecificationData.version}}</ion-text>
+            <ion-text class="name">{{SpecificationData.options_list2.list_items.name}}</ion-text>
           </span>
         </ion-col>
       </ion-row>
@@ -44,37 +44,54 @@
 
   <ion-row>
     <ion-col size="12">
-      <h3>{{SpecificationData.selectcolor.titlename}}</h3>
+      <h3>{{SpecificationData.options_list1.name}}</h3>
     </ion-col>
   </ion-row>
 
-  <ion-row *ngIf="SpecificationData.selectcolor.speccolor && SpecificationData.selectcolor.speccolor.length">
-    <ion-col class="selectcolor" size="4" text-center *ngFor="let item of SpecificationData.selectcolor.speccolor"
-      [class.ion-col-border]="item._id == specColorSelected" (click)="onspecColorClick(item.color,item.image)">
-      <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="item.color == specColorSelected"></ion-icon>
-      {{item.color}}
+  <ion-row *ngIf="SpecificationData.options_list1.list_items && SpecificationData.options_list1.list_items.length">
+    <ion-col class="selectcolor" size="4" text-center *ngFor="let item of SpecificationData.options_list1.list_items"
+      [class.ion-col-border]="item == specColorSelected" (click)="onspecColorClick(item.name,item.image)">
+      <!-- <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="item.color == specColorSelected"></ion-icon> -->
+      {{item.name}}
     </ion-col>
   </ion-row>
+
+  <!-- <ion-row>
+    <ion-col class="selectcolor" size="4"
+      *ngFor="let itemver of SpecificationData.options_list1.list_items">
+      
+      {{itemver.name}}
+    </ion-col>
+  </ion-row> -->
+  
 
   <ion-row>
     <ion-col size="12">
-      <h3>{{SpecificationData.selectversion.titlename}}</h3>
+      <h3>{{SpecificationData.options_list2.name}}</h3>
     </ion-col>
   </ion-row>
 
-  <ion-row *ngIf="SpecificationData.selectversion.specversion && SpecificationData.selectversion.specversion.length">
-    <ion-col class="selectcolor" size="6" text-center
-      *ngFor="let itemver of SpecificationData.selectversion.specversion"
-      [class.ion-col-border]="itemver._id == specVertionSelected" (click)="onspecVertionClick(itemver.version)">
-      <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="itemver.version == specVertionSelected"></ion-icon>
-      {{itemver.version}}
+  <ion-row *ngIf="SpecificationData.options_list2.list_items && SpecificationData.options_list2.list_items.length">
+    <ion-col class="selectcolor" size="4" text-center
+      *ngFor="let itemver of SpecificationData.options_list2.list_items"
+      [class.ion-col-border]="itemver == specVertionSelected" (click)="onspecVertionClick(itemver.name)">
+      <!-- <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="itemver.version == specVertionSelected"></ion-icon> -->
+      {{itemver.name}}
     </ion-col>
   </ion-row>
+
+  <!-- <ion-row>
+    <ion-col class="selectcolor" size="4" 
+      *ngFor="let itemver of SpecificationData.options_list2.list_items">
+      
+      {{itemver.name}}
+    </ion-col>
+  </ion-row> -->
 
   <ion-row>
     <ion-col size="12">
       <span>
-        <h3>{{SpecificationData.quantity}}</h3>
+        <!-- <h3>{{SpecificationData.quantity}}</h3> -->
       </span>
     </ion-col>
   </ion-row>

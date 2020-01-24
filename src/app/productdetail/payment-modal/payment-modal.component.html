@@ -13,13 +13,13 @@
   <ion-row>
     <ion-col size="12" class="ion-text-center">
       <span class="pri">
-        {{PaymentData.selected.down_amount.currency}}
-        {{PaymentData.selected.period_amount.amount_period}}
+        {{PaymentData.installment_price_text}}
       </span>
+      <span class="unit">x</span>
       <span class="unit">
-        {{PaymentData.selected.period_amount.period}}
-        {{PaymentData.selected.period_amount.unit}}
+        {{PaymentData.periods_lists}}
       </span>
+      <span class="unit">เดือน</span>
     </ion-col>
   </ion-row>
 
@@ -30,19 +30,19 @@
           <ion-col size="12">
             <ion-row>
               <ion-col size="12">
-                <span>
+                <!-- <span>
                   {{PaymentData.selected.down_amount.down}}
                 </span>
                 <span class="subdow">
                   {{PaymentData.selected.down_amount.currency}}
                   {{PaymentData.selected.down_amount.amount_down}}
-                </span>
+                </span> -->
               </ion-col>
             </ion-row>
 
             <ion-row>
               <ion-col size="12">
-                <span>
+                <!-- <span>
                   {{PaymentData.selected.period_amount.monpayment}}
                 </span>
                 <span class="subdow">
@@ -50,7 +50,7 @@
                 </span>
                 <span>
                   {{PaymentData.selected.period_amount.inc}}
-                </span>
+                </span> -->
               </ion-col>
             </ion-row>
           </ion-col>
@@ -61,14 +61,12 @@
 
   <ion-row>
     <ion-col class="col-dow" size="12">
-      <ion-text>{{PaymentData.selected.down_options.down_payment}}</ion-text>
-      <ion-row class="top"
-        *ngIf="PaymentData.selected.down_options.payment_percent && PaymentData.selected.down_options.payment_percent.length">
-        <ion-col class="pay" size="2" text-center
-          *ngFor="let itempay of PaymentData.selected.down_options.payment_percent"
-          [class.ion-col-border]="itempay._id == percenSelected" (click)="onPercenClick(itempay._id)">
-          <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="itempay._id == percenSelected"></ion-icon>
-          <span>{{itempay.rate}} {{itempay.unit}}</span>
+      <ion-text>ddddddddddddddddddd</ion-text>
+      <ion-row class="top" *ngIf="PaymentData.down_payment_lists && PaymentData.down_payment_lists.length">
+        <ion-col class="pay" size="2" text-center *ngFor="let itempay of PaymentData.down_payment_lists"
+          [class.ion-col-border]="itempay == percenSelected" (click)="onPercenClick(itempay)">
+          <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="itempay == percenSelected"></ion-icon>
+          <span>{{itempay}}</span> <span>%</span>
         </ion-col>
       </ion-row>
     </ion-col>
@@ -76,18 +74,17 @@
 
   <ion-row>
     <ion-col size="12">
-      <ion-text>{{PaymentData.selected.period_option.installments}}</ion-text>
-      <ion-row class="top"
-        *ngIf="PaymentData.selected.period_option.installperiod && PaymentData.selected.period_option.installperiod.length">
-        <ion-col class="per" size="3" text-center
-          *ngFor="let itemper of PaymentData.selected.period_option.installperiod"
-          [class.ion-col-border]="itemper._id == unitSelected" (click)="onUnitClick(itemper._id)">
-          <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="itemper._id == unitSelected"></ion-icon>
-          <span>{{itemper.period}} {{itemper.unit}}</span>
+      <ion-text>ddddddddddddddddddd</ion-text>
+      <ion-row class="top" *ngIf="PaymentData.periods_lists && PaymentData.periods_lists.length">
+        <ion-col class="per" size="3" text-center *ngFor="let itemper of PaymentData.periods_lists"
+          [class.ion-col-border]="itemper == unitSelected" (click)="onUnitClick(itemper)">
+          <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="itemper == unitSelected"></ion-icon>
+          <span>{{itemper}}</span> <span>เดือน</span>
         </ion-col>
       </ion-row>
     </ion-col>
   </ion-row>
+
 </ion-content>
 
 <ion-footer>

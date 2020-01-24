@@ -4,8 +4,10 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-const api_url = environment.apiUrl + '/api/productdetails/';
-const mockup = environment.mockup;
+const api_url = environment.apiUrl;
+// const mockup = environment.mockup;
+
+const mockup = false;
 
 @Injectable({
   providedIn: 'root'
@@ -17,18 +19,12 @@ export class ProductdetailService {
     "regular_price": {
       "price": "",
       "currency": ""
-  }
-  });
-  onProductdetailDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-
-  onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({
-    "selected": {
-      "down_amount": {
-        "amount_period": ""
-      },
-      "period_amount": ""
     }
   });
+  onProductdetailWarrantyDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+  onProductdetailDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+
+  onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onPromotionDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([
     {
@@ -46,7 +42,18 @@ export class ProductdetailService {
   ]);
   onTcoinDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onWarrantyDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  onSpecificationDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+
+  onSpecificationDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "options_list1": {
+      "name": "",
+      "list_items": [
+        {
+          "name": ""
+        }
+      ]
+    }
+  });
+
   onReviewDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onImformationSpecDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onShareDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
@@ -65,22 +72,38 @@ export class ProductdetailService {
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
     if (this.routeParams.id) {
       this.getProductdetailData(this.routeParams.id);
-      this.getProductdetailDataList();
-      this.getReccommentData();
+      // this.getProductdetailDataList();
+      this.getProductdetailWarrantyData();
+      // this.getReccommentData();
       this.getPaymentModalData();
-      this.getVouchersModalData();
-      this.getPromotionModalData();
-      this.getTcoinModalData();
-      this.getWarrantyModalData();
-      this.getSpecificationModalData();
-      this.getReviewModalData();
-      this.getImformationSpecModalData();
-      this.getShareModalData();
+      // this.getVouchersModalData();
+      // this.getPromotionModalData();
+      // this.getTcoinModalData();
+      // this.getWarrantyModalData();
+      // this.getSpecificationModalData();
+      // this.getReviewModalData();
+      // this.getImformationSpecModalData();
+      // this.getShareModalData();
     } else {
       // return new Promise((resolve, reject) => {
       //   return reject('rejected')
       // });
     }
+  }
+
+  getProductdetailData(id: string): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
+          this.onProductdetailDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url + '/api/products/' + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onProductdetailDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
   }
 
   getProductdetailDataList(): Observable<any> | Promise<any> | any {
@@ -96,19 +119,17 @@ export class ProductdetailService {
       }
     })
   }
-
-  getProductdetailData(id: string): Observable<any> | Promise<any> | any {
+  getProductdetailWarrantyData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
         this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
-          this.onProductdetailDataChanged.next(res.data);
+          this.onProductdetailWarrantyDataChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onProductdetailDataChanged.next(res.data);
+        this.http.get(api_url + '/api/notices', { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onProductdetailWarrantyDataChanged.next(res.data);
         }, reject)
       }
-
     })
   }
 
@@ -162,7 +183,7 @@ export class ProductdetailService {
           this.onPaymentDataChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/products', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onPaymentDataChanged.next(res.data);
         }, reject)
       }

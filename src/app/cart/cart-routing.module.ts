@@ -10,6 +10,11 @@ const routes: Routes = [
     path: '',
     component: CartPage,
     resolve: [CartService],
+  },
+  {
+    path: ':cartId',
+    component: CartPage,
+    resolve: [CartService],
   }
 ];
 
