@@ -54,14 +54,14 @@ export class CategoryPage implements OnInit {
     this.router.navigateByUrl('search/' + cate2Id);
   }
 
-  onCoverImageClick(coverId: any, i: any, j: any) {
+  onCoverImageClick( i: any, j: any) {
     if (this.data[i].cover_image[j].type_promotion === 'page') {
       //  console.log("a");
       //  console.log(this.data[i].cover_image[j].type_promotion);
-      this.router.navigateByUrl(this.data[i].cover_image[j].link_promotion + '/' + coverId);
+      this.router.navigateByUrl(this.data[i].cover_image[j].link_promotion);
     } else {
       // console.log("b");
-      this.router.navigateByUrl(this.data[i].cover_image[j].link_promotion + '/' + coverId);
+      this.router.navigate(['/promotion']);
     }
   }
 

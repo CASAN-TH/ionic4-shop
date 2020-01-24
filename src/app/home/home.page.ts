@@ -15,7 +15,7 @@ import { SearchModalComponent } from './search-modal/search-modal.component';
 export class HomePage implements OnInit {
   homeDataList: any;
   homeReccommentData: any
-  CateProductListData: any;
+  cateProductHomeData: any;
   showToolbar = false;
 
 
@@ -34,14 +34,17 @@ export class HomePage implements OnInit {
     this.homeService.onHomeDataListChanged.subscribe((homeDataList: any) => {
       console.log(homeDataList);
       this.homeDataList = homeDataList;
+      console.log(this.homeDataList);
     });
     this.homeService.onHomeReccommentDataChanged.subscribe((homeDataList: any) => {
       console.log(homeDataList);
       this.homeReccommentData = homeDataList;
+      console.log(this.homeReccommentData)
     });
     this.homeService.onCateProductListChanged.subscribe((CateProductListData: any) => {
       console.log(CateProductListData);
-      this.CateProductListData = CateProductListData;
+      this.cateProductHomeData = CateProductListData;
+      console.log(this.cateProductHomeData);
     });
   }
 

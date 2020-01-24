@@ -1,48 +1,128 @@
 {
     "status": 200,
     "data": {
-        "_id": "112121234",
-        "name": "Vivo V17 Pro Crystal Sky RAM 8 GB ROM 128 GB",
-        "images": [
-            "https://pub.thisshop.com/shop/category/01010111/01010111/ebccf9612b634a06a0bc88089e606a2d.jpg",
-            "https://pub.thisshop.com/shop/category/01010111/01010111/7025313aa87c4d82b376877bfea55d18.jpg",
-            "https://pub.thisshop.com/shop/category/01010111/01010111/ebccf9612b634a06a0bc88089e606a2d.jpg"
-        ],
-        "price": "12,999.00",
-        "currency": "฿",
-        "details": {
-            "detailname": "รายละเอียดสินค้า",
-            "images": [
-                "https://pub.thisshop.com/shop/category/01010111/01010111/ebccf9612b634a06a0bc88089e606a2d.jpg",
-                "https://pub.thisshop.com/shop/category/01010111/01010111/7025313aa87c4d82b376877bfea55d18.jpg",
-                "https://pub.thisshop.com/shop/category/01010111/01010111/ebccf9612b634a06a0bc88089e606a2d.jpg"
-            ]
+        "createby": {
+            "_id": "5def1d09dcbc0a00132d0326",
+            "displayname": "unknow unknow",
+            "username": "0992436806"
         },
-        "warranties": {
-            "warrantyname": "การรับประกัน",
-            "warrantiestitle": [
-                {
-                    "title": "การรับประกันหลังการสั่งซื้อสินค้า",
-                    "subtitle": "คุณลูกค้าที่สั่งซื้อสินค้ากับเว็บไซต์ Thisshop สามารถมั่นใจได้ว่าจะได้รับบริการหลังการขายที่ดี และการรับประกันสินค้าจากศูนย์บริการ Thisshop ขอรับประกันว่าสินค้าที่ลูกค้าได้รับเป็นสินค้าแท้จากศูนย์ และเป็นสินค้าชิ้นใหม่แน่นอน ขออภัยหากไม่สามารถอัพเดทข้อมูลได้ทันเวลา หมายเหตุ: สินค้าที่มีของแถม ของแถมแต่ละรายการมีจำนวนจำกัด คุณลูกค้าอาจจะได้รับของแถมไม่ครบถ้วน ทางบริษัทจึงขอสงวนสิทธิ์ในการเปลี่ยนแปลงแก้ไข ยกเลิกได้ โดยไม่ต้องแจ้งให้ทราบล่วงหน้า"
-                },
-                {
-                    "title": "สินค้าลิขสิทธิ์แท้ 100%",
-                    "subtitle": "Thisshop รับประกันสินค้าของแท้จากศูนย์บริการ 100% และได้รับใบอนุญาต จากทางศูนย์บริการสินค้า"
-                },
-                {
-                    "title": "บริการหลังการขาย(7วันการันตี)",
-                    "subtitle": "หากสินค้าเกิดปัญหา เกิดความเสียหาย และได้รับสินค้าไม่ตรงตามที่สั่งซื้อ สามารถทำการ คืน/เปลี่ยนสินค้า/คืนเงิน ได้ภายใน 7 วันทำการเท่านั้น นับจากวันที่ได้รับสินค้า คลิกที่นี่เพื่ออ่านรายละเอียดเพิ่มเติม"
-                },
-                {
-                    "title": "บริการหลังการขาย สินค้าประเภทเสื้อผ้าและเครื่องแต่งกาย"
-                }
-            ],
-            "sub1": "1. รบกวนเช็คสินค้าทันทีเมื่อได้รับสินค้า หากสินค้ามีตำหนิ หรือผิดแบบ กรุณาแจ้งเปลี่ยน/คืนสินค้าภายใน 7 วัน โดยนับจากวันที่เซ็นรับของ หากแจ้งหลังกำหนดเกิน 7 วัน ทางร้านจะไม่ทำการเปลี่ยน/คืน สินค้าให้",
-            "sub2": "2. สินค้าที่ไม่สามารถเปลี่ยน/คืนได้มีดังนี้ เสื้อผ้ารัดรูป ชุดชั้นใน ชุดนอนและชุดว่ายน้ำ",
-            "sub3": "3. ลูกค้าสามารถเปลี่ยน/คืนสินค้าได้ หากสินค้าที่ได้รับไม่ตรงตามที่สั่ง หรือไม่ตรงตามที่แสดงในหน้าเว็บ",
-            "sub4": "4. สินค้าที่เปลี่ยน/คืนต้องอยู่ในสภาพ 100% พร้อมแพ็คเกจ ถุง กล่อง ป้าย ไม่ผ่านการซักและใช้งาน หากสินค้าฉีกขาด ได้รับความเสียหายหรือซักแล้ว จะไม่สามารถส่งเปลี่ยน/คืนได้",
-            "sub5": "5. ค่าใช้จ่ายในการส่งคืนสินค้าและค่าประกันภัยสินค้าทั้งหมดที่เกิดขึ้น ลูกค้าจะต้องเป็นผู้ออกค่าใช้จ่ายเองทั้งหมด",
-            "sub6": "6. เมื่อลูกค้าทำการเปลี่ยน/คืนสินค้า คูปองที่ใช้ในการสั่งซื้อสินค้าดังกล่าวไม่สามารถทำการคืนได้"
-        }
+        "type_id": "simple",
+        "images": [
+            "https://res.cloudinary.com/hml20oe33/image/upload/v1576751856/catalog/2_pfwgiy.jpg",
+            "https://res.cloudinary.com/hml20oe33/image/upload/v1576751856/catalog/2_pfwgiy.jpg"
+        ],
+        "down_payment_lists": [
+            20,
+            30,
+            40,
+            50
+        ],
+        "periods_lists": [
+            3,
+            6,
+            9,
+            12,
+            18
+        ],
+        "status": "published",
+        "featured": true,
+        "catalog_visibility": "visible",
+        "description_image": [
+            "https://res.cloudinary.com/hml20oe33/image/upload/v1576751856/catalog/2_pfwgiy.jpg",
+            "https://res.cloudinary.com/hml20oe33/image/upload/v1576751856/catalog/2_pfwgiy.jpg"
+        ],
+        "tax_status": "taxable",
+        "tax_class": "standard",
+        "stock_status": true,
+        "backorders": "1",
+        "sold_individually": true,
+        "reviews_allowed": true,
+        "categorys": [
+            "bedroom",
+            "restroom"
+        ],
+        "_id": "5e27d9586777423c70f5ed75",
+        "sku": "sku",
+        "shop": {
+            "shop_id": "shop001",
+            "shop_name": "shopTest",
+            "shop_image": "image.jpg"
+        },
+        "name": "Vivo v13 Pro Crystal Sky RAM 8 GB ROM 128 GB",
+        "options": [
+            {
+                "_id": "5e27d9586777423c70f5ed79",
+                "name": "color",
+                "option_lists": [
+                    {
+                        "_id": "5e27d9586777423c70f5ed7b",
+                        "lists_name": "green"
+                    },
+                    {
+                        "_id": "5e27d9586777423c70f5ed7a",
+                        "lists_name": "yellow",
+                        "lists_price": 3000
+                    }
+                ]
+            },
+            {
+                "_id": "5e27d9586777423c70f5ed76",
+                "name": "size",
+                "option_lists": [
+                    {
+                        "_id": "5e27d9586777423c70f5ed78",
+                        "lists_name": "M",
+                        "lists_price": 3000
+                    },
+                    {
+                        "_id": "5e27d9586777423c70f5ed77",
+                        "lists_name": "L",
+                        "lists_price": 5200
+                    }
+                ]
+            }
+        ],
+        "sale_price_percentage": 50,
+        "sale_avaliable": true,
+        "sale_price": {
+            "price": 5000,
+            "currency": "฿"
+        },
+        "regular_price": {
+            "price": 10000,
+            "currency": "฿"
+        },
+        "down_payment": {
+            "price": 1000,
+            "currency": "฿"
+        },
+        "installment": {
+            "price": 222.222222222223,
+            "period": 18,
+            "currency": "฿"
+        },
+        "shippings": [
+            {
+                "_id": "5e27d9586777423c70f5ed7d",
+                "shipping_name": "post office Thailand",
+                "shipping_fee": 30,
+                "shipping_currency": "฿"
+            },
+            {
+                "_id": "5e27d9586777423c70f5ed7c",
+                "shipping_name": "kerry",
+                "shipping_fee": 50,
+                "shipping_currency": "฿"
+            }
+        ],
+        "description": "รายละเอียดสินค้า",
+        "sale_price_text": "฿5,000.00",
+        "regular_price_text": "฿10,000.00",
+        "installment_price_text": "฿222.22",
+        "down_payment_text": "฿1,000.00",
+        "attributes": [],
+        "downloads": [],
+        "created": "2020-01-22T05:10:48.486Z",
+        "__v": 0
     }
 }

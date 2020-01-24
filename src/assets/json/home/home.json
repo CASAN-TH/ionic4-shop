@@ -13,58 +13,6 @@
                 "image": "https://res.cloudinary.com/hml20oe33/image/upload/v1576748337/catalog/S__20217883_rf1cco.jpg"
             }
         ],
-        "menus": [
-            {
-                "id": "11",
-                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/15757151_1575254343134.png",
-                "name_menu": "Global Mall"
-            },
-            {
-                "id": "12",
-                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/28362678_1575254354634.png",
-                "name_menu": "Cash Reward"
-            },
-            {
-                "id": "13",
-                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/52948858_1575254365384.png",
-                "name_menu": "คูปองเซ็นเตอร์"
-            },
-            {
-                "id": "14",
-                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/68170014_1575254398656.png",
-                "name_menu": "Tcoin Mall"
-            },
-            {
-                "id": "15",
-                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/36087295_1575254409640.png",
-                "name_menu": "Super Discount"
-            },
-            {
-                "id": "16",
-                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/37417659_1575254419243.png",
-                "name_menu": "สมาร์ทโฟน"
-            },
-            {
-                "id": "17",
-                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/43585606_1575254434593.png",
-                "name_menu": "คอมพิวเตอร์"
-            },
-            {
-                "id": "18",
-                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/5932061_1575255064034.gif",
-                "name_menu": "12.2"
-            },
-            {
-                "id": "19",
-                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/32809533_1575254496030.png",
-                "name_menu": "Konvy Official"
-            },
-            {
-                "id": "20",
-                "icon_menu": "https://pub.thisshop.com/shop/block/2019122/35003507_1575254514238.png",
-                "name_menu": "TrendX"
-            }
-        ],
         "blocks": [
             {
                 "name": "ห้องนอน",

@@ -14,8 +14,10 @@ export class ProductdetailService {
   routeParams: any;
 
   onProductdetailDataListChanged: BehaviorSubject<any> = new BehaviorSubject({
-    "details":{},
-    "warranties":{}
+    "regular_price": {
+      "price": "",
+      "currency": ""
+  }
   });
   onProductdetailDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
@@ -62,6 +64,7 @@ export class ProductdetailService {
     this.routeParams = route.params;
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
     if (this.routeParams.id) {
+      this.getProductdetailData(this.routeParams.id);
       this.getProductdetailDataList();
       this.getReccommentData();
       this.getPaymentModalData();
@@ -98,7 +101,7 @@ export class ProductdetailService {
     return new Promise((resolve, reject) => {
       if (mockup) {
         this.http.get('../../assets/json/productdetail/productdetail-detail.json').subscribe((res: any) => {
-          this.onProductdetailDataListChanged.next(res.data);
+          this.onProductdetailDataChanged.next(res.data);
         }, reject)
       } else {
         this.http.get(api_url + id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
