@@ -66,7 +66,7 @@ export class AccountService {
           this.onRecommendDataListChanged.next(res.data);
         },reject)
       }else{
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/cateproducthome',  { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onRecommendDataListChanged.next(res.data);
         },reject)
       }
