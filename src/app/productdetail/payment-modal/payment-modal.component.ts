@@ -24,16 +24,16 @@ export class PaymentModalComponent implements OnInit {
     this.modalController.dismiss();
   }
 
-  onPercenClick(percenId: any) {
+  onPercenClick(percen: any) {
     // this.router.navigateByUrl('search/' + cate2Id);
-    console.log(percenId);
-    this.percenSelected = percenId;
+    console.log(percen);
+    this.percenSelected = percen;
   }
 
-  onUnitClick(unitId: any) {
+  onUnitClick(unit: any) {
     // this.router.navigateByUrl('search/' + cate2Id);
-    console.log(unitId);
-    this.unitSelected = unitId;
+    console.log(unit);
+    this.unitSelected = unit;
   }
 
   onPayClick() {
