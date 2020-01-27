@@ -68,7 +68,7 @@ export class CartPage implements OnInit {
   }
 
   onShoppingClick() {
-    console.log("ShoppingClick")
+    this.router.navigate(['/tabs/category'])
   }
   onDeleteClick() {
     console.log("Delete")
