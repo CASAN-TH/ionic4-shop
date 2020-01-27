@@ -15,12 +15,7 @@ const mockup = false;
 export class ProductdetailService {
   routeParams: any;
 
-  onProductdetailDataListChanged: BehaviorSubject<any> = new BehaviorSubject({
-    "regular_price": {
-      "price": "",
-      "currency": ""
-    }
-  });
+  onProductdetailDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onProductdetailWarrantyDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onProductdetailDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
@@ -72,11 +67,10 @@ export class ProductdetailService {
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
     if (this.routeParams.id) {
       this.getProductdetailData(this.routeParams.id);
-      // this.getProductdetailDataList();
+      this.getProductdetailDataList();
       this.getProductdetailWarrantyData();
-      // this.getReccommentData();
       this.getPaymentModalData();
-     
+      // this.getReccommentData();
       // this.getVouchersModalData();
       // this.getPromotionModalData();
       // this.getTcoinModalData();
@@ -106,19 +100,14 @@ export class ProductdetailService {
 
     })
   }
-  // adProductCartList(): Observable<any> | Promise<any> | any {
-  //   return new Promise((resolve, reject) => {
-  //     if (mockup) {
-  //       this.http.get('../../assets/json/productdetail/productdetail.json').subscribe((res: any) => {
-  //         // this.onProductdetailDataListChanged.next(res.data);
-  //       }, reject)
-  //     } else {
-  //       this.http.post(api_url + 'api/carts/', { headers: this.authorizationHeader() }).subscribe((res: any) => {
-  //         // this.onProductdetailDataListChanged.next(res.data);
-  //       }, reject)
-  //     }
-  //   })
-  // }
+
+  adProductCartList(body): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.http.post(api_url + '/api/carts', body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.getProductdetailDataList();
+      }, reject)
+    })
+  }
 
   getProductdetailDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
@@ -127,12 +116,13 @@ export class ProductdetailService {
           this.onProductdetailDataListChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/products', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onProductdetailDataListChanged.next(res.data);
         }, reject)
       }
     })
   }
+
   getProductdetailWarrantyData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
@@ -149,8 +139,8 @@ export class ProductdetailService {
 
   createProductdetailData(body): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.http.post(api_url + '/api/carts', body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getProductdetailData(this.routeParams.id);
+      this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.getProductdetailDataList();
       }, reject)
     })
   }

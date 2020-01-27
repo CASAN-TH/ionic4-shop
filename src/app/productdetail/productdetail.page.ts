@@ -36,7 +36,7 @@ export class ProductdetailPage implements OnInit {
   ReccommentData: any
 
 
-  addproductcart: any
+  productCartData: any
 
   slideOpts = {
     initialSlide: 1,
@@ -56,6 +56,7 @@ export class ProductdetailPage implements OnInit {
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.productdetailData = productdetailDataList;
+      this.productCartData = productdetailDataList;
       console.log(this.productdetailData)
     })
     this.productdetailService.onProductdetailWarrantyDataChanged.subscribe((productdetailDataList: any) => {
@@ -201,10 +202,14 @@ export class ProductdetailPage implements OnInit {
   }
 
   onCartClick(cartId: any) {
-    console.log("onCartClick");
+    // console.log(this.productCartData);
+    this.productdetailService.adProductCartList(this.productCartData).then(value => {
+      this._location.back();
+    });
+    // console.log("onCartClick");
     // this.addproductcart.post(this.productdetailData)
-    this.productdetailService.createProductdetailData(this.productdetailData)
-    this.router.navigateByUrl('tabs/cart/' + cartId);
+    // this.productdetailService.adProductCartList(this.productdetailData)
+    // this.router.navigateByUrl('tabs/cart');
   }
   // onPaymentClick(paymentId: any) {
   //   console.log("onPaymentClick");
