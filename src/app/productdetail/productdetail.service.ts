@@ -76,6 +76,7 @@ export class ProductdetailService {
       this.getProductdetailWarrantyData();
       // this.getReccommentData();
       this.getPaymentModalData();
+     
       // this.getVouchersModalData();
       // this.getPromotionModalData();
       // this.getTcoinModalData();
@@ -105,6 +106,19 @@ export class ProductdetailService {
 
     })
   }
+  // adProductCartList(): Observable<any> | Promise<any> | any {
+  //   return new Promise((resolve, reject) => {
+  //     if (mockup) {
+  //       this.http.get('../../assets/json/productdetail/productdetail.json').subscribe((res: any) => {
+  //         // this.onProductdetailDataListChanged.next(res.data);
+  //       }, reject)
+  //     } else {
+  //       this.http.post(api_url + 'api/carts/', { headers: this.authorizationHeader() }).subscribe((res: any) => {
+  //         // this.onProductdetailDataListChanged.next(res.data);
+  //       }, reject)
+  //     }
+  //   })
+  // }
 
   getProductdetailDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
@@ -135,8 +149,8 @@ export class ProductdetailService {
 
   createProductdetailData(body): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-        this.getProductdetailDataList();
+      this.http.post(api_url + '/api/carts', body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.getProductdetailData(this.routeParams.id);
       }, reject)
     })
   }

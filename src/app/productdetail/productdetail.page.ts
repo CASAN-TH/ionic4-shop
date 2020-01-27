@@ -35,6 +35,9 @@ export class ProductdetailPage implements OnInit {
   ShareData: any
   ReccommentData: any
 
+
+  addproductcart: any
+
   slideOpts = {
     initialSlide: 1,
     speed: 400,
@@ -199,7 +202,9 @@ export class ProductdetailPage implements OnInit {
 
   onCartClick(cartId: any) {
     console.log("onCartClick");
-    this.router.navigateByUrl('tabs/cart' + cartId);
+    // this.addproductcart.post(this.productdetailData)
+    this.productdetailService.createProductdetailData(this.productdetailData)
+    this.router.navigateByUrl('tabs/cart/' + cartId);
   }
   // onPaymentClick(paymentId: any) {
   //   console.log("onPaymentClick");
