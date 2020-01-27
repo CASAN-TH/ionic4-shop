@@ -18,14 +18,66 @@
 
 <ion-content>
   <ion-row>
-    <ion-col size="6">
-      <img class="coupon-img" src="https://image.flaticon.com/icons/svg/411/411816.svg" alt="">
-    </ion-col>
-    <ion-col size="6">
-      <h3 class="h3-1">
-        คูปองวันนี้
-      </h3>
+    <ion-col size="12" text-center>
+      <div class="coupon_today">
+        <span><img class="coupon-img" src="https://image.flaticon.com/icons/svg/411/411816.svg"></span>
+        <span>
+          <ion-text class="h3-1">
+            คูปองวันนี้
+          </ion-text>
+        </span>
+      </div>
+
     </ion-col>
   </ion-row>
+
+  <ion-row *ngFor="let voucher of voucherdata" >
+    <ion-col size="12" class="rowvocher">
+      <ion-row>
+        <ion-col size="8">
+          <ion-row>
+            <ion-col size="4">
+              <img [src]="voucher.img">
+            </ion-col>
+            <ion-col size="8">
+              <p class="vouname">{{voucher.name_coupon}}</p>
+              <ion-text class="vou">{{voucher.currency}} {{voucher.amount}}</ion-text>
+              <p>{{voucher.title}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="4">
+          <ion-buttons>
+            <ion-button  class="voucherbutton" size="small">
+              <span class="btnspan">รับตอนนี้</span>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <!-- <ion-item no-padding class="item-border-right" *ngFor="let voucher of voucherdata">
+    <ion-label class="ion-text-wrap">
+      <ion-row>
+        <ion-col size="4">
+          <h1 class="vou">{{voucher.currency}} {{voucher.amount}}</h1>
+          <p class="vouchertitle">{{voucher.title}}</p>
+        </ion-col>
+        <ion-col size="5">
+          <h6 class="voucher">{{voucher.type}}</h6>
+          <p class="vouchertitle">{{voucher.dateStart}} {{voucher.dateEnd}}</p>
+        </ion-col>
+        <ion-col size="3">
+          <ion-buttons>
+            <ion-button class="voucherbutton" size="small">
+              <span class="btnspan">รับตอนนี้</span>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+
+    </ion-label>
+  </ion-item> -->
 
 </ion-content>

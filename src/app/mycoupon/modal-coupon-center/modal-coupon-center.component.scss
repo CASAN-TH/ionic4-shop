@@ -1,13 +1,44 @@
 .coupon-img{
     width: 50px;
     height: 50px;
-    position: absolute;
     right: 27px;
     top: 25px;
 }
 
 .h3-1{
     position: absolute;
-    top: 20px;
-    left: -18px;
+    top: 18px;
+    font-weight: bold;
 }
+.coupon_today{
+    margin-right: 61px;
+}
+.rowvocher{
+    margin-top: -10px;
+}
+.vouchertitle {
+    font-size: 10px;
+  }
+  .voucher {
+    font-weight: bold;
+  }
+  .vou {
+    font-weight: bold;
+  }
+  .vouname{
+    font-weight: bold;
+    font-size: 11px;
+}
+  
+  .voucherbutton {
+    font-size: 16px;
+    background-color: tomato;
+  }
+  .btnspan {
+    color: aliceblue;
+  }
+  .item-border-right {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
