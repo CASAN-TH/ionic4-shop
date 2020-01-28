@@ -65,5 +65,8 @@ export class HomePage implements OnInit {
     return await modal.present();
   }
 
+  onProductClick(productId) {
+    this.router.navigateByUrl('/productdetail/' + productId)
+  }
 
 }

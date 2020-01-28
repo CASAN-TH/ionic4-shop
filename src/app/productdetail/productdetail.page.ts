@@ -202,6 +202,7 @@ export class ProductdetailPage implements OnInit {
   }
 
   onCartClick(cartId: any) {
+<<<<<<< HEAD
     const body = {
       // u_id: this.productdetailData.u_id,
       "u_id": "0992436806",
@@ -277,6 +278,10 @@ export class ProductdetailPage implements OnInit {
     }
     console.log(body);
     this.productdetailService.adProductCartList(body).then(value => {
+=======
+    console.log(this.productCartData);
+    this.productdetailService.adProductCartList(this.productCartData).then(value => {
+>>>>>>> 198ee5511733642686acb53d3858bde5426ca7d1
       this._location.back();
       this.router.navigateByUrl('tabs/cart');
     });

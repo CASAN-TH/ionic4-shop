@@ -20,20 +20,6 @@
     </ion-slide>
   </ion-slides>
 
-  <!-- <ion-grid>
-    <ion-row>
-      <ion-col size="12">
-        <ion-row>
-          <ion-col size="2.4" style="font-size: 12px;" text-center *ngFor="let item of homeDataList.menus">
-            <div>
-              <img class="shotcut" [src]="item.icon_menu" />
-            </div>
-            <ion-text>{{item.name_menu}}</ion-text>
-          </ion-col>
-        </ion-row>
-      </ion-col>
-    </ion-row>
-  </ion-grid> -->
 
   <ion-row>
     <ion-col size="12" class="ion-no-margin ion-no-padding" *ngFor="let blockitem of cateProductHomeData">
@@ -58,6 +44,7 @@
     </ion-col>
   </ion-row>
 
-  <productlist *ngFor="let reccomment of homeReccommentData" [recivedata]="reccomment.products"></productlist>
+  <!-- <productlist *ngFor="let reccomment of homeReccommentData" [recivedata]="reccomment.products"></productlist> -->
+  <app-product-list *ngFor="let reccomment of homeReccommentData" [recivedata]="reccomment.products" (onProductClick)="onProductClick($event)"></app-product-list>
 
 </ion-content>
