@@ -202,7 +202,7 @@ export class ProductdetailPage implements OnInit {
   }
 
   onCartClick(cartId: any) {
-    // console.log(this.productCartData);
+    console.log(this.productCartData);
     this.productdetailService.adProductCartList(this.productCartData).then(value => {
       this._location.back();
     });

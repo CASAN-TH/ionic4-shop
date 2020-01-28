@@ -1,0 +1,26 @@
+ion-grid {
+    margin-top: 0.5rem;
+    background-color: white;
+  }
+  
+  .forecast_container {
+    overflow-x: scroll !important;
+    overflow-y: hidden;
+    word-wrap: break-word;
+  }
+  
+  .more {
+    --padding-start: 1.5rem !important;
+  }
+  
+  .block-product {
+    margin-top: -22%;
+  }
+  .title-font {
+    margin-left: 0.5rem;
+    margin-top: 4px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
