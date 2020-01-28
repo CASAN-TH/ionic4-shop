@@ -55,7 +55,7 @@ export class CartService {
 
   getCartDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(mockup){
+      if(!mockup){
         this.http.get('../../assets/json/cart/cart.json').subscribe((res: any) => {
           this.onCartDataListChanged.next(res.data);
         },reject)

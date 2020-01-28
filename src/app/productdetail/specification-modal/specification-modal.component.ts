@@ -9,19 +9,19 @@ import { Router } from '@angular/router';
 })
 export class SpecificationModalComponent implements OnInit {
 
-  specColorSelected: any;
-  specImageSelected: any;
-  specVertionSelected: any;
+  specColor: any;
+  specSize: any;
+  specImages: any;
 
   @Input() SpecificationData: any
 
   constructor(public modalController: ModalController, private router: Router) { }
 
   ngOnInit() {
-    this.specColorSelected = this.SpecificationData.color
-    this.specVertionSelected = this.SpecificationData.version
-    this.specImageSelected = this.SpecificationData.image
-    console.log(this.SpecificationData.image);
+    this.specColor = this.SpecificationData.options_list1.list_items.name
+    this.specSize = this.SpecificationData.options_list2.list_items.name
+    // this.specImages = this.SpecificationData.image
+    // console.log(this.SpecificationData.image);
   }
 
   dismiss() {
@@ -29,19 +29,17 @@ export class SpecificationModalComponent implements OnInit {
   }
 
   onspecColorClick(specColorId: any, specImage: any) {
-    // this.router.navigateByUrl('search/' + cate2Id);
     console.log(specColorId);
-    this.specColorSelected = specColorId;
-    this.SpecificationData.color = specColorId;
-    this.SpecificationData.image = specImage;
+    this.specColor = specColorId;
+    this.SpecificationData.options_list1.list_items.name = specColorId;
+    // this.SpecificationData.image = specImage;
 
   }
 
-  onspecVertionClick(specVertionId: any) {
-    // this.router.navigateByUrl('search/' + cate2Id);
-    console.log(specVertionId);
-    this.specVertionSelected = specVertionId;
-    this.SpecificationData.version = specVertionId;
+  onspecVertionClick(specSizeId: any) {
+    console.log(specSizeId);
+    this.specSize = specSizeId;
+    this.SpecificationData.options_list2.list_items.name = specSizeId;
   }
 
   onCartClick() {
