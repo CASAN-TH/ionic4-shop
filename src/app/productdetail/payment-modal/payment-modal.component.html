@@ -62,10 +62,10 @@
     <ion-col class="col-dow" size="12">
       <ion-text>อัตราส่วนการชำระเงินดาวน์</ion-text>
       <ion-row class="top" *ngIf="PaymentData.down_payment_lists && PaymentData.down_payment_lists.length">
-        <ion-col class="pay" size="2" text-center *ngFor="let itempay of PaymentData.down_payment_lists"
-          [class.ion-col-border]="itempay == percenSelected" (click)="onPercenClick(itempay)">
-          <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="itempay == percenSelected"></ion-icon>
-          <span>{{itempay}}</span> <span>%</span>
+        <ion-col class="pay" size="3" *ngFor="let item of PaymentData.down_payment_lists"
+          [class.ion-col-border]="item == percenSelected" (click)="onPercenClick(item)">
+          <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="item == percenSelected"></ion-icon>
+          <span class="font-size">{{item}}%</span>
         </ion-col>
       </ion-row>
     </ion-col>
@@ -75,10 +75,10 @@
     <ion-col size="12">
       <ion-text>จำนวนเดือน</ion-text>
       <ion-row class="top" *ngIf="PaymentData.periods_lists && PaymentData.periods_lists.length">
-        <ion-col class="per" size="3" text-center *ngFor="let itemper of PaymentData.periods_lists"
-          [class.ion-col-border]="itemper == unitSelected" (click)="onUnitClick(itemper)">
-          <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="itemper == unitSelected"></ion-icon>
-          <span>{{itemper}}</span> <span>เดือน</span>
+        <ion-col class="per" size="3" *ngFor="let item of PaymentData.periods_lists"
+          [class.ion-col-border]="item == unitSelected" (click)="onUnitClick(item)">
+          <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="item == unitSelected"></ion-icon>
+          <span class="font-size">{{item}}เดือน</span>
         </ion-col>
       </ion-row>
     </ion-col>

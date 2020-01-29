@@ -64,16 +64,22 @@
   font-size: 2rem;
   color: red;
   margin-top: -0.65rem;
-  margin-left: 36%;
+  margin-left: 70%;
   position: absolute;
 }
 .ion-item-unitselected {
   font-size: 2rem;
   color: red;
   margin-top: -0.65rem;
-  margin-left: 50%;
+  margin-left: 70%;
   position: absolute;
 }
+.font-size {
+  display: flex;
+  justify-content: center;
+}
+
+
 .col-item {
   padding-left: 15px;
   padding-right: 15px;

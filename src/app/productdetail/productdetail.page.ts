@@ -56,7 +56,7 @@ export class ProductdetailPage implements OnInit {
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.productdetailData = productdetailDataList;
-      this.productCartData = productdetailDataList;
+      // this.productCartData = productdetailDataList;
       console.log(this.productdetailData)
     })
     this.productdetailService.onProductdetailWarrantyDataChanged.subscribe((productdetailDataList: any) => {
@@ -202,14 +202,83 @@ export class ProductdetailPage implements OnInit {
   }
 
   onCartClick(cartId: any) {
-    console.log(this.productCartData);
-    this.productdetailService.adProductCartList(this.productCartData).then(value => {
-      this._location.back();
+    const body = {
+      // u_id: this.productdetailData.u_id,
+      "u_id": "0992436806",
+      shop: {
+        shop_id: this.productdetailData.shop.shop_id,
+        shop_name: this.productdetailData.shop.shop_name,
+        shop_image: this.productdetailData.shop.shop_image
+      },
+      items: [
+        {
+          // product_id: this.productdetailData.product_id,
+          "product_id": "Product001",
+          sku: this.productdetailData.sku,
+          images: this.productdetailData.images,
+          name: this.productdetailData.name,
+          option1: this.productdetailData.option1,
+          option2: this.productdetailData.option2,
+          // "option1": "green",
+          // "option2": "32GB",
+          sale_price_percentage: this.productdetailData.sale_price_percentage,
+          sale_avaliable: this.productdetailData.sale_avaliable,
+          sale_price: {
+            price: this.productdetailData.sale_price.price,
+            currency: this.productdetailData.sale_price.currency
+          },
+          sale_price_text: this.productdetailData.sale_price_text,
+          regular_price: {
+            price: this.productdetailData.regular_price.price,
+            currency: this.productdetailData.regular_price.currency
+          },
+          regular_price_text: this.productdetailData.regular_price_text,
+          down_payment: {
+            price: this.productdetailData.down_payment.price,
+            currency: this.productdetailData.down_payment.currency
+          },
+          down_payment_text: this.productdetailData.down_payment_text,
+          installment: {
+            price: this.productdetailData.installment.price,
+            period: this.productdetailData.installment.period,
+            currency: this.productdetailData.installment.currency
+          },
+          installment_price_text: this.productdetailData.installment_price_text,
+          // amount_product: this.productdetailData.amount_product,
+          "amount_product": 2,
+          // shipping: {
+          //   shipping_name: this.productdetailData.shipping.shipping_name,
+          //   shipping_fee: this.productdetailData.shipping.shipping_fee,
+          //   shipping_currency: this.productdetailData.shipping.shipping_currency
+          // },
+          "shipping": {
+            "shipping_name": "kerry",
+            "shipping_fee": 50,
+            "shipping_currency": "฿"
+          },
+          // promotions: [
+          //   {
+          //     gift_type: this.productdetailData.promotions.gift_type,
+          //     gift_name: this.productdetailData.promotions.gift_name,
+          //     gift_amount: this.productdetailData.promotions.gift_amount
+          //   }
+          // ],
+          "promotions": [
+            {
+              "gift_type": "ของแถม",
+              "gift_name": "หูฟังไร้สาย",
+              "gift_amount": 1
+            }
+          ],
+          down_payment_lists: this.productdetailData.down_payment_lists,
+          periods_lists: this.productdetailData.periods_lists
+        }
+      ]
+    }
+    console.log(body);
+    this.productdetailService.adProductCartList(body).then(value => {
+      this.router.navigateByUrl('tabs/cart');
     });
-    // console.log("onCartClick");
-    // this.addproductcart.post(this.productdetailData)
-    // this.productdetailService.adProductCartList(this.productdetailData)
-    // this.router.navigateByUrl('tabs/cart');
   }
   // onPaymentClick(paymentId: any) {
   //   console.log("onPaymentClick");
