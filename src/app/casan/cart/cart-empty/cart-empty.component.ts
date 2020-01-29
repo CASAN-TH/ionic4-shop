@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart-empty',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartEmptyComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {}
 
+  onShoppingClick() {
+    this.router.navigate(['/tabs/category'])
+  }
 }
