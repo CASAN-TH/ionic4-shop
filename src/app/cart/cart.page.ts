@@ -17,108 +17,62 @@ import { PaymentService } from '../payment/payment.service';
 export class CartPage implements OnInit {
   cartDataList: any;
   reccommentDataList: any;
-  SpecificationData: any;
-  PaymentData: any;
+  specificationData: any;
+  paymentData: any;
   vouchersData: any;
-  AddaddressData: any;
-  TotalCartDataList: any;
+  addaddressData: any;
+  totalCartDataList: any;
 
-  // isIndeterminate:boolean;
-  // masterCheck:boolean;
-  // checkBoxList:any;
-
-  constructor(private router: Router,
+  constructor(
+    private router: Router,
     private cartService: CartService,
     private paymentService: PaymentService,
     public modalController: ModalController,
-    public actionSheetController: ActionSheetController) {
-    // this.checkBoxList = [];
-  }
+    public actionSheetController: ActionSheetController
+    ) {}
 
   ngOnInit() {
     this.cartService.onCartDataListChanged.subscribe((cartDataList: any) => {
       this.cartDataList = cartDataList;
-      console.log(cartDataList);
     })
     this.cartService.onTotalCartDataChanged.subscribe((TotalCartDataList: any) => {
-      this.TotalCartDataList = TotalCartDataList;
-      console.log(TotalCartDataList);
+      this.totalCartDataList = TotalCartDataList;
     })
     this.cartService.onReccommentDataListChanged.subscribe((reccommentDataList: any) => {
-      // console.log(reccommentDataList);
       this.reccommentDataList = reccommentDataList;
     })
     this.cartService.onSpecificationDataChanged.subscribe((productdetailDataList: any) => {
-      // console.log(productdetailDataList);
-      this.SpecificationData = productdetailDataList;
+      this.specificationData = productdetailDataList;
     })
     this.cartService.onPaymentDataChanged.subscribe((productdetailDataList: any) => {
-      // console.log(productdetailDataList);
-      this.PaymentData = productdetailDataList;
+      this.paymentData = productdetailDataList;
     })
     this.cartService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
-      // console.log(productdetailDataList);
       this.vouchersData = productdetailDataList;
     })
     this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
-      // console.log(AddaddressData);
-      this.AddaddressData = AddaddressData;
+      this.addaddressData = AddaddressData;
     })
-
   }
 
-  onDeleteClick() {
-    console.log("Delete")
-  }
-  onOpenlistClick() {
-    console.log("nevigate Productlist")
-  }
-  onSelectProductClick() {
-    console.log("onSelectProductClick")
-  }
-  onRemoveClick(i, j) {
-    this.cartDataList[i].items[j].amount_product -= 1
-    console.log(this.cartDataList[i].items[j].amount_product)
-  }
-  onAddClick(i, j) {
-    this.cartDataList[i].items[j].amount_product += 1
-    console.log(this.cartDataList[i].items[j].amount_product)
-  }
   onAcceptCodeClick() {
-    console.log("Add")
+    console.log("Add Code")
   }
-  onOpenDetailClick() {
-    console.log("nevigate Productlist")
-  }
-  onAddToCartClick() {
-    console.log("addtocart")
-  }
+
   onPayClick() {
     this.router.navigate(['payment'])
   }
+
   onSelectAll() {
-    console.log("54")
+    console.log("select all")
   }
 
-  onSelectProduct() {
-    console.log("54")
-  }
-  async specModal() {
-    const modal = await this.modalController.create({
-      component: SpecificationModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        SpecificationData: this.SpecificationData
-      }
-    });
-    return await modal.present();
-  }
   async InstallmentModal() {
     const modal = await this.modalController.create({
       component: PaymentModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
-        PaymentData: this.PaymentData
+        PaymentData: this.paymentData
       }
     });
     return await modal.present();

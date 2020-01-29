@@ -12,6 +12,7 @@ export class CartByShopComponent implements OnInit {
 
   @Input() cartDataList: any;
   @Input() vouchersData: any;
+  @Input() specificationData: any;
   constructor(
     private router: Router,
     private modalController: ModalController
