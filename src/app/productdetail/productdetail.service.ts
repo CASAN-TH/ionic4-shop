@@ -78,12 +78,17 @@ export class ProductdetailService {
       // this.getSpecificationModalData();
       // this.getReviewModalData();
       // this.getImformationSpecModalData();
-      // this.getShareModalData();
+      this.getShareModalData();
     } else {
       // return new Promise((resolve, reject) => {
       //   return reject('rejected')
       // });
     }
+  }
+
+  getUser(){
+    const resData = this.http.get(api_url + '/api/me', {headers: this.authorizationHeader()}).toPromise();
+    return resData;
   }
 
   getProductdetailData(id: string): Observable<any> | Promise<any> | any {
@@ -297,7 +302,7 @@ export class ProductdetailService {
 
   getShareModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if (mockup) {
+      if (!mockup) {
         this.http.get('../../assets/json/productdetail/share-modal.json').subscribe((res: any) => {
           this.onShareDataChanged.next(res.data);
         }, reject)

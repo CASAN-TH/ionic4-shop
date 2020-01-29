@@ -14,6 +14,8 @@ import { ImformationspecModalComponent } from './imformationspec-modal/imformati
 import { Location } from '@angular/common';
 import { SelectMenuComponent } from './select-menu/select-menu.component';
 import { ShareModalComponent } from './share-modal/share-modal.component';
+import { ProductPaymentModalComponent } from '../casan/productdetail/product-payment/product-payment-modal/product-payment-modal.component';
+import { ProductShareModalComponent } from '../casan/productdetail/product-share/product-share-modal/product-share-modal.component';
 
 @Component({
   selector: 'app-productdetail',
@@ -34,15 +36,15 @@ export class ProductdetailPage implements OnInit {
   ImformationSpecData: any
   ShareData: any
   ReccommentData: any
-
+  userData: any
 
   productCartData: any
 
-  slideOpts = {
-    initialSlide: 1,
-    speed: 400,
-    autoplay: true
-  };
+  // slideOpts = {
+  //   initialSlide: 1,
+  //   speed: 400,
+  //   autoplay: true
+  // };
 
   constructor(
     private router: Router,
@@ -53,6 +55,7 @@ export class ProductdetailPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.productdetailData = productdetailDataList;
@@ -115,11 +118,20 @@ export class ProductdetailPage implements OnInit {
       console.log(productdetailDataList);
       this.ShareData = productdetailDataList;
     })
+
+
+    this.getUser()  //get เอา id จาก User
   }
 
-  async paymentModal() {
+  async getUser(){
+    const res = await this.productdetailService.getUser()
+    this.userData = res   //get เอา id จาก User
+    console.log(this.userData.data.username)
+  }
+
+  async openPaymentModal() {
     const modal = await this.modalController.create({
-      component: PaymentModalComponent,
+      component: ProductPaymentModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
         PaymentData: this.PaymentData
@@ -203,8 +215,7 @@ export class ProductdetailPage implements OnInit {
 
   onCartClick(cartId: any) {
     const body = {
-      // u_id: this.productdetailData.u_id,
-      "u_id": "0992436806",
+      u_id: this.userData.data.username,
       shop: {
         shop_id: this.productdetailData.shop.shop_id,
         shop_name: this.productdetailData.shop.shop_name,
@@ -212,15 +223,12 @@ export class ProductdetailPage implements OnInit {
       },
       items: [
         {
-          // product_id: this.productdetailData.product_id,
-          "product_id": "Product001",
+          product_id: this.productdetailData._id,
           sku: this.productdetailData.sku,
           images: this.productdetailData.images,
           name: this.productdetailData.name,
-          option1: this.productdetailData.option1,
-          option2: this.productdetailData.option2,
-          // "option1": "green",
-          // "option2": "32GB",
+          option1: this.productdetailData.options_list1.list_items.name,
+          option2: this.productdetailData.options_list2.list_items.name,
           sale_price_percentage: this.productdetailData.sale_price_percentage,
           sale_avaliable: this.productdetailData.sale_avaliable,
           sale_price: {
@@ -297,9 +305,9 @@ export class ProductdetailPage implements OnInit {
   }
 
 
-  async onShareModalClick() {
+  async openShareModal() {
     const modal = await this.modalController.create({
-      component: ShareModalComponent,
+      component: ProductShareModalComponent,
       cssClass: 'share-modal-css',
       componentProps: {
         ShareData: this.ShareData

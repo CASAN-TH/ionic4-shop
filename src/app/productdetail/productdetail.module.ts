@@ -9,6 +9,7 @@ import { ProductdetailPageRoutingModule } from './productdetail-routing.module';
 import { ProductdetailPage } from './productdetail.page';
 import { ProductlistPageModule } from '../productlist/productlist.module';
 import { FooterPageModule } from '../footer/footer.module';
+import { ProductdetailModule } from '../casan/productdetail/productdetail.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,9 @@ import { FooterPageModule } from '../footer/footer.module';
     IonicModule,
     ProductdetailPageRoutingModule,
     ProductlistPageModule,
-    FooterPageModule
+    FooterPageModule,
+
+    ProductdetailModule
   ],
   declarations: [ProductdetailPage]
 })

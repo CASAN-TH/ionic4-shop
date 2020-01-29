@@ -40,6 +40,7 @@ export class CartPage implements OnInit {
     })
     this.cartService.onReccommentDataListChanged.subscribe((reccommentDataList: any) => {
       this.reccommentDataList = reccommentDataList;
+      console.log(this.reccommentDataList);
     })
     this.cartService.onSpecificationDataChanged.subscribe((productdetailDataList: any) => {
       this.specificationData = productdetailDataList;
@@ -76,6 +77,10 @@ export class CartPage implements OnInit {
       }
     });
     return await modal.present();
+  }
+
+  onProductClick(productId) {
+    this.router.navigateByUrl('/productdetail/' + productId)
   }
 
 }
