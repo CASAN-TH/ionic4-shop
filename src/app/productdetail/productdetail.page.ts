@@ -15,6 +15,7 @@ import { Location } from '@angular/common';
 import { SelectMenuComponent } from './select-menu/select-menu.component';
 import { ShareModalComponent } from './share-modal/share-modal.component';
 import { ProductPaymentModalComponent } from '../casan/productdetail/product-payment/product-payment-modal/product-payment-modal.component';
+import { ProductShareModalComponent } from '../casan/productdetail/product-share/product-share-modal/product-share-modal.component';
 
 @Component({
   selector: 'app-productdetail',
@@ -306,7 +307,7 @@ export class ProductdetailPage implements OnInit {
 
   async openShareModal() {
     const modal = await this.modalController.create({
-      component: ShareModalComponent,
+      component: ProductShareModalComponent,
       cssClass: 'share-modal-css',
       componentProps: {
         ShareData: this.ShareData
