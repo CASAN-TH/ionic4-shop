@@ -8,6 +8,7 @@ import { CartPageRoutingModule } from './cart-routing.module';
 
 import { CartPage } from './cart.page';
 import { ProductlistPageModule } from '../productlist/productlist.module';
+import { CatalogModule } from '../casan/catalog/catalog.module';
 
 
 
@@ -17,7 +18,9 @@ import { ProductlistPageModule } from '../productlist/productlist.module';
     FormsModule,
     IonicModule,
     CartPageRoutingModule,
-    ProductlistPageModule
+    ProductlistPageModule,
+
+    CatalogModule
   ],
   declarations: [CartPage]
 })
