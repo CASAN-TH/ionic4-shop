@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-product-gift',
@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductGiftComponent implements OnInit {
 
+  @Input() recivedata: any;
+  @Output() openpromotionGift = new EventEmitter();
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+  promotiongiftModal() {
+    this.openpromotionGift.emit();
+  }
 
 }

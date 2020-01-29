@@ -139,36 +139,36 @@ export class ProductdetailPage implements OnInit {
     });
     return await modal.present();
   }
-  async vouchersModal() {
-    const modal = await this.modalController.create({
-      component: VouchersModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        VouchersData: this.VouchersData
-      }
-    });
-    return await modal.present();
-  }
-  async promotionModal() {
-    const modal = await this.modalController.create({
-      component: PromotionModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        PromotionData: this.PromotionData
-      }
-    });
-    return await modal.present();
-  }
-  async tcoinModal() {
-    const modal = await this.modalController.create({
-      component: TcoinModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        TcoinData: this.TcoinData
-      }
-    });
-    return await modal.present();
-  }
+  // async openVoucherModal() {
+  //   const modal = await this.modalController.create({
+  //     component: VouchersModalComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       VouchersData: this.VouchersData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
+  // async promotionModal() {
+  //   const modal = await this.modalController.create({
+  //     component: PromotionModalComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       PromotionData: this.PromotionData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
+  // async tcoinModal() {
+  //   const modal = await this.modalController.create({
+  //     component: TcoinModalComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       TcoinData: this.TcoinData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
   async warrantyModal() {
     const modal = await this.modalController.create({
       component: WarrantyModalComponent,

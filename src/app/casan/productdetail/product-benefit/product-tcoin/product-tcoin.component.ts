@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-product-tcoin',
@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductTcoinComponent implements OnInit {
 
+  @Input() recivedata: any;
+  @Output() openTcoin = new EventEmitter();
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+  tcoinModal() {
+    this.openTcoin.emit();
+  }
 
 }
