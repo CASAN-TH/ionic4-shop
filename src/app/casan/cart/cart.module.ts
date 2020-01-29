@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CartEmptyComponent } from './cart-empty/cart-empty.component';
+import { IonicModule } from '@ionic/angular';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CartEmptyComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    IonicModule
+  ],
+  exports: [
+    CartEmptyComponent
   ]
 })
 export class CartModule { }
