@@ -20,13 +20,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid class="grid-top">
-    <ion-slides pager [options]="slideOpts">
-      <ion-slide *ngFor="let itemimg of productdetailData.images">
-        <img [src]="itemimg">
-      </ion-slide>
-    </ion-slides>
-  </ion-grid>
+  
+  <app-product-slide  [recivedata]="productdetailData.images"></app-product-slide>
 
   <ion-row>
     <ion-col size="12">

@@ -38,11 +38,11 @@ export class ProductdetailPage implements OnInit {
 
   productCartData: any
 
-  slideOpts = {
-    initialSlide: 1,
-    speed: 400,
-    autoplay: true
-  };
+  // slideOpts = {
+  //   initialSlide: 1,
+  //   speed: 400,
+  //   autoplay: true
+  // };
 
   constructor(
     private router: Router,
