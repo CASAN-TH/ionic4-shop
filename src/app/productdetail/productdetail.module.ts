@@ -20,7 +20,6 @@ import { ProductdetailModule } from '../casan/productdetail/productdetail.module
     ProductlistPageModule,
     FooterPageModule,
 
-
     ProductdetailModule
   ],
   declarations: [ProductdetailPage]

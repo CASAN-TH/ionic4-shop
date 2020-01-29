@@ -14,6 +14,7 @@ import { ImformationspecModalComponent } from './imformationspec-modal/imformati
 import { Location } from '@angular/common';
 import { SelectMenuComponent } from './select-menu/select-menu.component';
 import { ShareModalComponent } from './share-modal/share-modal.component';
+import { ProductPaymentModalComponent } from '../casan/productdetail/product-payment/product-payment-modal/product-payment-modal.component';
 
 @Component({
   selector: 'app-productdetail',
@@ -117,9 +118,9 @@ export class ProductdetailPage implements OnInit {
     })
   }
 
-  async paymentModal() {
+  async openPaymentModal() {
     const modal = await this.modalController.create({
-      component: PaymentModalComponent,
+      component: ProductPaymentModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
         PaymentData: this.PaymentData
@@ -297,7 +298,7 @@ export class ProductdetailPage implements OnInit {
   }
 
 
-  async onShareModalClick() {
+  async openShareModal() {
     const modal = await this.modalController.create({
       component: ShareModalComponent,
       cssClass: 'share-modal-css',
