@@ -8,7 +8,7 @@ const api_url = environment.apiUrl;
 // const mockup = environment.mockup;
 
 
-const mockup = false;
+const mockup = true;
 
 @Injectable({
   providedIn: 'root'
@@ -28,8 +28,8 @@ export class CartService {
       "period_amount": ""
     }
   });
-  onVouchersDataChanged:BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  
+  onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
+
 
 
   constructor(private http: HttpClient) { }
@@ -44,7 +44,7 @@ export class CartService {
     this.routeParams = route.params;
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
     this.getCartDataList();
-    // this.getReccommentDataList();
+    this.getReccommentDataList();
     // this.getSpecificationModalData();
     // this.getPaymentModalData();
     // this.getVouchersModalData();
@@ -58,11 +58,11 @@ export class CartService {
       if(mockup){
         this.http.get('../../assets/json/cart/cart.json').subscribe((res: any) => {
           this.onCartDataListChanged.next(res.data);
-        },reject)
-      }else{
+        }, reject)
+      } else {
         this.http.get(api_url + '/api/cartsbyuser', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onCartDataListChanged.next(res.data);
-        },reject)
+        }, reject)
       }
     })
   }
@@ -79,19 +79,19 @@ export class CartService {
   //     }
   //   })
   // }
-  // getReccommentDataList(): Observable<any> | Promise<any> | any {
-  //   return new Promise((resolve, reject) => {
-  //     if(mockup){
-  //       this.http.get('../../assets/json/cart/reccomment.json').subscribe((res: any) => {
-  //         this.onReccommentDataListChanged.next(res.data);
-  //       },reject)
-  //     }else{
-  //       this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-  //         this.onReccommentDataListChanged.next(res.data);
-  //       },reject)
-  //     }
-  //   })
-  // }
+  getReccommentDataList(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (!mockup) {
+        this.http.get('../../assets/json/cart/reccomment.json').subscribe((res: any) => {
+          this.onReccommentDataListChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url + '/api/cateproducthome', { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onReccommentDataListChanged.next(res.data);
+        }, reject)
+      }
+    })
+  }
   // getSpecificationModalData(): Observable<any> | Promise<any> | any {
   //   return new Promise((resolve, reject) => {
   //     if (mockup) {
@@ -140,7 +140,7 @@ export class CartService {
     return new Promise((resolve, reject) => {
       this.http.post(api_url, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getCartDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -148,7 +148,7 @@ export class CartService {
     return new Promise((resolve, reject) => {
       this.http.put(api_url + body._id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getCartDataList();
-      },reject)
+      }, reject)
     })
   }
 
@@ -156,7 +156,7 @@ export class CartService {
     return new Promise((resolve, reject) => {
       this.http.delete(api_url + body._id, { headers: this.authorizationHeader() }).subscribe((res: any) => {
         this.getCartDataList();
-      },reject)
+      }, reject)
     })
   }
 

@@ -45,8 +45,8 @@ export class CartPage implements OnInit {
       console.log(TotalCartDataList);
     })
     this.cartService.onReccommentDataListChanged.subscribe((reccommentDataList: any) => {
-      // console.log(reccommentDataList);
       this.reccommentDataList = reccommentDataList;
+      console.log(this.reccommentDataList);
     })
     this.cartService.onSpecificationDataChanged.subscribe((productdetailDataList: any) => {
       // console.log(productdetailDataList);
