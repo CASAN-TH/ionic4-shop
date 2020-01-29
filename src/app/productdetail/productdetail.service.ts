@@ -86,6 +86,11 @@ export class ProductdetailService {
     }
   }
 
+  getUser(){
+    const resData = this.http.get(api_url + '/api/me', {headers: this.authorizationHeader()}).toPromise();
+    return resData;
+  }
+
   getProductdetailData(id: string): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {

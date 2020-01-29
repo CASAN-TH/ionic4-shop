@@ -35,7 +35,7 @@ export class ProductdetailPage implements OnInit {
   ImformationSpecData: any
   ShareData: any
   ReccommentData: any
-
+  userData: any
 
   productCartData: any
 
@@ -54,6 +54,7 @@ export class ProductdetailPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.productdetailData = productdetailDataList;
@@ -116,6 +117,15 @@ export class ProductdetailPage implements OnInit {
       console.log(productdetailDataList);
       this.ShareData = productdetailDataList;
     })
+
+
+    this.getUser()  //get เอา id จาก User
+  }
+
+  async getUser(){
+    const res = await this.productdetailService.getUser()
+    this.userData = res   //get เอา id จาก User
+    console.log(this.userData.data.username)
   }
 
   async openPaymentModal() {
@@ -204,8 +214,7 @@ export class ProductdetailPage implements OnInit {
 
   onCartClick(cartId: any) {
     const body = {
-      // u_id: this.productdetailData.u_id,
-      "u_id": "0992436806",
+      u_id: this.userData.data.username,
       shop: {
         shop_id: this.productdetailData.shop.shop_id,
         shop_name: this.productdetailData.shop.shop_name,
@@ -213,15 +222,12 @@ export class ProductdetailPage implements OnInit {
       },
       items: [
         {
-          // product_id: this.productdetailData.product_id,
-          "product_id": "Product001",
+          product_id: this.productdetailData._id,
           sku: this.productdetailData.sku,
           images: this.productdetailData.images,
           name: this.productdetailData.name,
-          option1: this.productdetailData.option1,
-          option2: this.productdetailData.option2,
-          // "option1": "green",
-          // "option2": "32GB",
+          option1: this.productdetailData.options_list1.list_items.name,
+          option2: this.productdetailData.options_list2.list_items.name,
           sale_price_percentage: this.productdetailData.sale_price_percentage,
           sale_avaliable: this.productdetailData.sale_avaliable,
           sale_price: {
