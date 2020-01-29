@@ -64,7 +64,7 @@
       <ion-row class="top"
         *ngIf="SpecificationData.options_list2.list_items && SpecificationData.options_list2.list_items.length">
         <ion-col class="pay" size="3" *ngFor="let item of SpecificationData.options_list2.list_items"
-          [class.ion-col-border]="item == specSize" (click)="onspecVertionClick(item.name)">
+          [class.ion-col-border]="item == specSize" (click)="onspecSizeClick(item.name)">
           <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="item.name == specSize"></ion-icon>
           <span class="font-size">{{item.name}}</span>
         </ion-col>

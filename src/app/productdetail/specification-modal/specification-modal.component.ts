@@ -36,7 +36,7 @@ export class SpecificationModalComponent implements OnInit {
 
   }
 
-  onspecVertionClick(specSizeId: any) {
+  onspecSizeClick(specSizeId: any) {
     console.log(specSizeId);
     this.specSize = specSizeId;
     this.SpecificationData.options_list2.list_items.name = specSizeId;
