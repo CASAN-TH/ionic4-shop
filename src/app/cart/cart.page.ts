@@ -19,7 +19,7 @@ export class CartPage implements OnInit {
   reccommentDataList: any;
   SpecificationData: any;
   PaymentData: any;
-  VouchersData: any;
+  vouchersData: any;
   AddaddressData: any;
   TotalCartDataList: any;
 
@@ -58,7 +58,7 @@ export class CartPage implements OnInit {
     })
     this.cartService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
       // console.log(productdetailDataList);
-      this.VouchersData = productdetailDataList;
+      this.vouchersData = productdetailDataList;
     })
     this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
       // console.log(AddaddressData);
@@ -99,10 +99,7 @@ export class CartPage implements OnInit {
   onSelectAll() {
     console.log("54")
   }
-  onSelectShop(i, shopId: any) {
-    this.router.navigateByUrl('shop/' + shopId);
-    console.log(i);
-  }
+
   onSelectProduct() {
     console.log("54")
   }
@@ -126,45 +123,6 @@ export class CartPage implements OnInit {
     });
     return await modal.present();
   }
-
-  async vouchersModal() {
-    const modal = await this.modalController.create({
-      component: VouchersModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        VouchersData: this.VouchersData
-      }
-    });
-    return await modal.present();
-  }
-  // checkMaster() {
-  //   setTimeout(() => {
-  //     this.checkBoxList.forEach(obj => {
-  //       obj.isChecked = this.masterCheck;
-  //     });
-  //   });
-  // }
-
-  // checkEvent() {
-  //   const totalItems = this.checkBoxList.length;
-  //   let checked = 0;
-  //   this.checkBoxList.map(obj => {
-  //     if (obj.isChecked) checked++;
-  //   });
-  //   if (checked > 0 && checked < totalItems) {
-  //     //If even one item is checked but not all
-  //     this.isIndeterminate = true;
-  //     this.masterCheck = false;
-  //   } else if (checked == totalItems) {
-  //     //If all are checked
-  //     this.masterCheck = true;
-  //     this.isIndeterminate = false;
-  //   } else {
-  //     //If none is checked
-  //     this.isIndeterminate = false;
-  //     this.masterCheck = false;
-  //   }
-  // }
 
 }
 
