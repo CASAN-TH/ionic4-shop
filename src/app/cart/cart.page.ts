@@ -169,6 +169,10 @@ export class CartPage implements OnInit {
   //   }
   // }
 
+  onProductClick(productId) {
+    this.router.navigateByUrl('/productdetail/' + productId)
+  }
+
 }
 
 
