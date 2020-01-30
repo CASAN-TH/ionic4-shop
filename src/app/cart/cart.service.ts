@@ -93,6 +93,14 @@ export class CartService {
       }
     })
   }
+
+  updateShopItems(body, id): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.http.put(api_url + '/api/carts/' + id, body, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.getTotalCartDataList();
+      }, reject)
+    })
+  }
   // getSpecificationModalData(): Observable<any> | Promise<any> | any {
   //   return new Promise((resolve, reject) => {
   //     if (mockup) {

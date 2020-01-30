@@ -12,9 +12,10 @@
   <div *ngIf="cartDataList.length >= 1">
     <ion-row>
       <ion-col size="12">
-        <ion-grid *ngFor="let cart of cartDataList; let i = index;">
-          <app-cart-by-shop [cartData]="cart" [vouchersData]="vouchersData" [specificationData]="specificationData">
-            <app-cart-by-shopitem [itemDatas]="cart.items" [specificationData]="specificationData">
+        <ion-grid *ngFor="let shop of cartDataList; let i = index;">
+          <app-cart-by-shop [cartData]="shop" [vouchersData]="vouchersData" [specificationData]="specificationData">
+            <app-cart-by-shopitem [itemDatas]="shop.items" [specificationData]="specificationData"
+            (amountChanged)="onSaveProductItems($event, shop._id)">
             </app-cart-by-shopitem>
           </app-cart-by-shop>
         </ion-grid>
