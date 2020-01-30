@@ -1,0 +1,29 @@
+<ion-row *ngIf="accountData" class="font">
+  <ion-col size="4" (click)="ModalFavorite()">
+    <h2>{{scoreData.wishlist}}</h2>
+    <p class="font-detail font-13">รายการโปรด</p>
+  </ion-col>
+  <ion-col size="4" (click)="ModalFollowedshop()">
+    <h2>{{scoreData.followedshop}}</h2>
+    <p class="font-detail font-13">ร้านค้าที่ติดตาม</p>
+  </ion-col>
+  <ion-col size="4" (click)="ModalBrowsehistory()">
+    <h2>{{scoreData.browsehistory}}</h2>
+    <p class="font-detail font-13">ประวัติการเข้าชม</p>
+  </ion-col>
+</ion-row>
+
+<ion-row *ngIf="!accountData" class="font">
+  <ion-col size="4" (click)="ModalFavorite()">
+    <h2>--</h2>
+    <p class="font-detail font-13">รายการโปรด</p>
+  </ion-col>
+  <ion-col size="4" (click)="ModalFollowedshop()">
+    <h2>--</h2>
+    <p class="font-detail font-13">ร้านค้าที่ติดตาม</p>
+  </ion-col>
+  <ion-col size="4" (click)="ModalBrowsehistory()">
+    <h2>--</h2>
+    <p class="font-detail font-13">ประวัติการเข้าชม</p>
+  </ion-col>
+</ion-row>
