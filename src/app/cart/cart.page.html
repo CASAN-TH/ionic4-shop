@@ -14,6 +14,8 @@
       <ion-col size="12">
         <ion-grid *ngFor="let cart of cartDataList; let i = index;">
           <app-cart-by-shop [cartData]="cart" [vouchersData]="vouchersData" [specificationData]="specificationData">
+            <app-cart-by-shopitem [itemDatas]="cart.items" [specificationData]="specificationData">
+            </app-cart-by-shopitem>
           </app-cart-by-shop>
         </ion-grid>
       </ion-col>
