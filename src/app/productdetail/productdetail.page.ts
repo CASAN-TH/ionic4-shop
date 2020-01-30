@@ -41,6 +41,8 @@ export class ProductdetailPage implements OnInit {
   ReccommentData: any
   userData: any
 
+  amount: any
+
   productCartData: any
 
   // slideOpts = {
@@ -58,7 +60,7 @@ export class ProductdetailPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    
+
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.productdetailData = productdetailDataList;
@@ -126,7 +128,7 @@ export class ProductdetailPage implements OnInit {
     this.getUser()  //get เอา id จาก User
   }
 
-  async getUser(){
+  async getUser() {
     const res = await this.productdetailService.getUser()
     this.userData = res   //get เอา id จาก User
     console.log(this.userData.data.username)
@@ -217,6 +219,8 @@ export class ProductdetailPage implements OnInit {
   }
 
   onCartClick(cartId: any) {
+    var amount = 1;
+    console.log(this.amount);
     const body = {
       u_id: this.userData.data.username,
       shop: {
