@@ -19,6 +19,9 @@ import { ProductSpecComponent } from './product-spec/product-spec.component';
 import { ProductSpecModalComponent } from './product-spec/product-spec-modal/product-spec-modal.component';
 import { ProductReviewsComponent } from './product-reviews/product-reviews.component';
 import { ProductReviewsModalComponent } from './product-reviews/product-reviews-modal/product-reviews-modal.component';
+import { ProductImformationSpecComponent } from './product-imformation-spec/product-imformation-spec.component';
+import { ProductImformationSpecModalComponent } from './product-imformation-spec/product-imformation-spec-modal/product-imformation-spec-modal.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 
@@ -41,7 +44,10 @@ import { ProductReviewsModalComponent } from './product-reviews/product-reviews-
     ProductSpecComponent,
     ProductSpecModalComponent,
     ProductReviewsComponent,
-    ProductReviewsModalComponent
+    ProductReviewsModalComponent,
+    ProductImformationSpecComponent,
+    ProductImformationSpecModalComponent,
+    ProductDetailComponent
   ],
   imports: [
     CommonModule,
@@ -54,7 +60,9 @@ import { ProductReviewsModalComponent } from './product-reviews/product-reviews-
     ProductBenefitComponent,
     ProductServiceComponent,
     ProductSpecComponent,
-    ProductReviewsComponent
+    ProductReviewsComponent,
+    ProductImformationSpecComponent,
+    ProductDetailComponent
   ],
   entryComponents: [
     ProductPaymentModalComponent,
@@ -64,7 +72,8 @@ import { ProductReviewsModalComponent } from './product-reviews/product-reviews-
     ProductVoucherModalComponent,
     ProductServiceModalComponent,
     ProductSpecModalComponent,
-    ProductReviewsModalComponent
+    ProductReviewsModalComponent,
+    ProductImformationSpecModalComponent
   ]
 })
 export class ProductdetailModule { }

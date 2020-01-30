@@ -1,0 +1,10 @@
+<ion-grid>
+  <ion-item no-padding class="item-border-right">
+    <ion-label>
+      <ion-text class="titlewar">{{recivedata.description}}</ion-text>
+    </ion-label>
+  </ion-item>
+  <div>
+    <img *ngFor="let itemimage of recivedata.description_image" [src]="itemimage">
+  </div>
+</ion-grid>

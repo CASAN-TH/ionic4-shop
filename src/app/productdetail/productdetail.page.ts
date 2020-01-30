@@ -18,6 +18,7 @@ import { ProductPaymentModalComponent } from '../casan/productdetail/product-pay
 import { ProductShareModalComponent } from '../casan/productdetail/product-share/product-share-modal/product-share-modal.component';
 import { ProductSpecModalComponent } from '../casan/productdetail/product-spec/product-spec-modal/product-spec-modal.component';
 import { ProductReviewsModalComponent } from '../casan/productdetail/product-reviews/product-reviews-modal/product-reviews-modal.component';
+import { ProductImformationSpecModalComponent } from '../casan/productdetail/product-imformation-spec/product-imformation-spec-modal/product-imformation-spec-modal.component';
 
 @Component({
   selector: 'app-productdetail',
@@ -200,9 +201,9 @@ export class ProductdetailPage implements OnInit {
     });
     return await modal.present();
   }
-  async imformationSpecModal() {
+  async openImformationSpecModal() {
     const modal = await this.modalController.create({
-      component: ImformationspecModalComponent,
+      component: ProductImformationSpecModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
         ImformationSpecData: this.ImformationSpecData
