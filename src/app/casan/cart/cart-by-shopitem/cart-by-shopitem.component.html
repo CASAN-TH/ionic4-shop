@@ -1,4 +1,4 @@
-<ion-item-sliding *ngFor="let cart of cateData.items; let j = index;">
+<ion-item-sliding *ngFor="let itemData of itemDatas; let j = index;">
   <ion-item lines="none">
     <ion-label class="ion-no-margin">
       <ion-row>
@@ -10,25 +10,25 @@
         <ion-col size="3.5" class="ion-align-items-center">
           <div class="ion-align-items-center" (click)="onOpenlistClick()">
             <ion-chip class="ion-justify-content-center">
-              <ion-label class="discount">{{cart.sale_price_percentage}}%</ion-label>
+              <ion-label class="discount">{{itemData.sale_price_percentage}}%</ion-label>
             </ion-chip>
-            <img [src]="cart.images">
+            <img [src]="itemData.images">
           </div>
         </ion-col>
         <ion-col size="7.5">
           <ion-row>
             <ion-col size="12">
               <ion-text class="phonename">
-                {{cart.name}}
+                {{itemData.name}}
               </ion-text>
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col size="12">
               <span class="quantity" (click)="specModal()">
-                {{cart.option1}}
-                <span *ngIf="cart.options2">,</span>
-                {{cart.option2}}
+                {{itemData.option1}}
+                <span *ngIf="itemData.options2 && itemData.option2 !==''">,</span>
+                {{itemData.option2}}
                 <ion-icon class="arrow-down" name="arrow-down" mode="ios"></ion-icon>
               </span>
             </ion-col>
@@ -36,19 +36,19 @@
           <ion-row>
             <ion-col size="4" class="ion-align-items-center">
               <ion-text class="phoneprice">
-                {{cart.sale_price_text}}
+                {{itemData.sale_price_text}}
               </ion-text>
             </ion-col>
             <ion-col size="8">
               <div class="btn-right-position">
                 <span>
                   <ion-button class="btn-size" fill="clear" (click)="onRemoveClick(j)"
-                    [disabled]="cart.amount_product === 1">
+                    [disabled]="itemData.amount_product === 1">
                     <ion-icon class="icon-size" name="remove"></ion-icon>
                   </ion-button>
                 </span>
                 <span class="num-size">
-                  {{cart.amount_product}}
+                  {{itemData.amount_product}}
                 </span>
                 <span>
                   <ion-button class="btn-size" fill="clear" (click)="onAddClick(j)">
@@ -61,7 +61,7 @@
           <ion-row>
             <ion-col size="12">
               <ion-text class="disprice">
-                <del>{{cart.regular_price_text}}</del>
+                <del>{{itemData.regular_price_text}}</del>
               </ion-text>
             </ion-col>
           </ion-row>

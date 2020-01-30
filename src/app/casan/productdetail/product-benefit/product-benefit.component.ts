@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { VouchersModalComponent } from 'src/app/productdetail/vouchers-modal/vouchers-modal.component';
-import { PromotionModalComponent } from 'src/app/productdetail/promotion-modal/promotion-modal.component';
-import { TcoinModalComponent } from 'src/app/productdetail/tcoin-modal/tcoin-modal.component';
+import { ProductVoucherModalComponent } from './product-voucher/product-voucher-modal/product-voucher-modal.component';
+import { ProductGiftModalComponent } from './product-gift/product-gift-modal/product-gift-modal.component';
+import { ProductTcoinModalComponent } from './product-tcoin/product-tcoin-modal/product-tcoin-modal.component';
 
 @Component({
   selector: 'app-product-benefit',
@@ -24,7 +24,7 @@ export class ProductBenefitComponent implements OnInit {
 
   async openVoucherModal() {
     const modal = await this.modalController.create({
-      component: VouchersModalComponent,
+      component: ProductVoucherModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
         VouchersData: this.VouchersData
@@ -35,7 +35,7 @@ export class ProductBenefitComponent implements OnInit {
 
   async openpromotionGiftModal() {
     const modal = await this.modalController.create({
-      component: PromotionModalComponent,
+      component: ProductGiftModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
         PromotionData: this.PromotionData
@@ -46,7 +46,7 @@ export class ProductBenefitComponent implements OnInit {
 
   async openTcoinModal() {
     const modal = await this.modalController.create({
-      component: TcoinModalComponent,
+      component: ProductTcoinModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
         TcoinData: this.TcoinData

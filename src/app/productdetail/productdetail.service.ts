@@ -70,7 +70,7 @@ export class ProductdetailService {
       this.getProductdetailDataList();
       this.getProductdetailWarrantyData();
       this.getPaymentModalData();
-      // this.getReccommentData();
+      this.getReccommentData();
       // this.getVouchersModalData();
       // this.getPromotionModalData();
       // this.getTcoinModalData();
@@ -86,8 +86,8 @@ export class ProductdetailService {
     }
   }
 
-  getUser(){
-    const resData = this.http.get(api_url + '/api/me', {headers: this.authorizationHeader()}).toPromise();
+  getUser() {
+    const resData = this.http.get(api_url + '/api/me', { headers: this.authorizationHeader() }).toPromise();
     return resData;
   }
 
@@ -174,7 +174,7 @@ export class ProductdetailService {
           this.onReccommentDataChanged.next(res.data);
         }, reject)
       } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+        this.http.get(api_url + '/api/cateproducthome', { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onReccommentDataChanged.next(res.data);
         }, reject)
       }

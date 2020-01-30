@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { SpecificationModalComponent } from 'src/app/productdetail/specification-modal/specification-modal.component';
 
@@ -9,14 +9,15 @@ import { SpecificationModalComponent } from 'src/app/productdetail/specification
 })
 export class CartByShopitemComponent implements OnInit {
 
-  @Input() cateData: any;
+  @Input() itemDatas: Array<any>;
   @Input() specificationData: any;
+  @Output() amountChanged: EventEmitter<any> = new EventEmitter()
   constructor(
     private modalController: ModalController
   ) { }
 
   ngOnInit() {
-    // console.log(this.specificationData)
+    // console.log(this.itemDatas)
   }
 
   onSelectProduct() {
@@ -38,12 +39,12 @@ export class CartByShopitemComponent implements OnInit {
     return await modal.present();
   }
 
-  // onRemoveClick(j) {
-  //   this.cartDataList[i].items[j].amount_product -= 1
-  //   console.log(this.cartDataList[i].items[j].amount_product)
-  // }
-  // onAddClick(j) {
-  //   this.cartDataList[i].items[j].amount_product += 1
-  //   console.log(this.cartDataList[i].items[j].amount_product)
-  // }
+  onRemoveClick(j) {
+    this.itemDatas[j].amount_product -= 1;
+    this.amountChanged.emit(this.itemDatas);
+  }
+  onAddClick(j) {
+    this.itemDatas[j].amount_product += 1;
+    this.amountChanged.emit(this.itemDatas);
+  }
 }

@@ -12,6 +12,7 @@
 </ion-header>
 
 <ion-content fullscreen="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
+  
   <ion-slides pager="ios" #slider>
     <ion-slide *ngFor="let item of homeDataList">
       <div [style.background-color]="item.background_color">

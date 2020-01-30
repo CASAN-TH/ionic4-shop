@@ -4,6 +4,7 @@ import { CartEmptyComponent } from './cart-empty/cart-empty.component';
 import { IonicModule } from '@ionic/angular';
 import { CartByShopComponent } from './cart-by-shop/cart-by-shop.component';
 import { CartByShopitemComponent } from './cart-by-shopitem/cart-by-shopitem.component';
+import { TotalcartComponent } from './totalcart/totalcart.component';
 
 
 
@@ -11,7 +12,8 @@ import { CartByShopitemComponent } from './cart-by-shopitem/cart-by-shopitem.com
   declarations: [
     CartEmptyComponent,
     CartByShopComponent,
-    CartByShopitemComponent
+    CartByShopitemComponent,
+    TotalcartComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { CartByShopitemComponent } from './cart-by-shopitem/cart-by-shopitem.com
   exports: [
     CartEmptyComponent,
     CartByShopComponent,
-    CartByShopitemComponent
+    CartByShopitemComponent,
+    TotalcartComponent
   ]
 })
 export class CartModule { }

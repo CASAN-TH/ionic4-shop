@@ -1,0 +1,18 @@
+.item-border-right {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .text-padding {
+    padding-left: 5%;
+  }
+  .img-promotion {
+    width: 70%;
+  }
+  ion-grid {
+    margin-top: 0.5rem;
+    background-color: white;
+  }
+  ion-content {
+    --padding-top: -100px !important;
+    --background: rgb(241, 235, 235) !important;
+  }

@@ -162,7 +162,10 @@
   <ion-row>
     <ion-col size="12">
       <ion-grid>
-        <ion-item no-padding class="item-border-right" (click)="warrantyModal()">
+        
+        <app-product-service [recivedata]="WarrantyData" (openService)="openServiceModal()"></app-product-service>
+        <app-product-spec [recivedata]="SpecificationData" (openSpec)="openSpecModal()"></app-product-spec>
+        <!-- <ion-item no-padding class="item-border-right" (click)="warrantyModal()">
           <ion-text>บริการ</ion-text>
           <ion-label>
             <ion-text class="text-padding" *ngFor="let item of WarrantyData.warranties">{{item.title}}</ion-text>
@@ -174,9 +177,9 @@
               </ion-button>
             </ion-buttons>
           </ion-note>
-        </ion-item>
+        </ion-item> -->
 
-        <ion-item no-padding class="item-border-right" lines="none" (click)="specificationModal()">
+        <!-- <ion-item no-padding class="item-border-right" lines="none" (click)="specificationModal()">
           <ion-text>สเปค</ion-text>
           <ion-label>
             <ion-text class="text-padding">
@@ -190,14 +193,17 @@
               </ion-button>
             </ion-buttons>
           </ion-note>
-        </ion-item>
+        </ion-item> -->
+        
       </ion-grid>
     </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col size="12">
-      <ion-grid>
+      <app-product-reviews [recivedata]="ReviewData" (openReviews)="openReviewsModal()"></app-product-reviews>
+      
+      <!-- <ion-grid>
         <ion-item no-padding class="item-border-right" (click)="reviewModal()">
           <ion-label>รีวิว</ion-label>
           <ion-note text-end>
@@ -246,13 +252,15 @@
             </ion-item>
           </ion-col>
         </ion-row>
-      </ion-grid>
+      </ion-grid> -->
+
     </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col size="12">
-      <ion-grid>
+      <app-product-imformation-spec (openImformationSpec)="openImformationSpecModal()"></app-product-imformation-spec>
+      <!-- <ion-grid>
         <ion-item no-padding class="item-border-right" lines="none" (click)="imformationSpecModal()">
           <ion-label>ข้อมูลจำเพาะ</ion-label>
           <ion-note text-end>
@@ -263,13 +271,14 @@
             </ion-buttons>
           </ion-note>
         </ion-item>
-      </ion-grid>
+      </ion-grid> -->
     </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col size="12">
-      <ion-grid>
+      <app-product-detail [recivedata]="productdetailData"></app-product-detail>
+      <!-- <ion-grid>
         <ion-item no-padding class="item-border-right">
           <ion-label>
             <ion-text class="titlewar">{{productdetailData.description}}</ion-text>
@@ -278,11 +287,13 @@
         <div>
           <img *ngFor="let itemimage of productdetailData.description_image" [src]="itemimage">
         </div>
-      </ion-grid>
+      </ion-grid> -->
     </ion-col>
   </ion-row>
 
-  <ion-row *ngFor="let item of productwarrantyData">
+  <app-product-warranty [recivedata]="productwarrantyData"></app-product-warranty>
+
+  <!-- <ion-row *ngFor="let item of productwarrantyData">
     <ion-col size="12">
       <ion-grid>
         <ion-item no-padding class="item-border-right">
@@ -313,7 +324,7 @@
 
       </ion-grid>
     </ion-col>
-  </ion-row>
+  </ion-row> -->
 
   <ion-row>
     <ion-col size="12">
@@ -331,7 +342,8 @@
     </ion-col>
   </ion-row>
 
-  <productlist [recivedata]="ReccommentData"></productlist>
+  <!-- <productlist [recivedata]="ReccommentData"></productlist> -->
+  <app-product-list *ngFor="let reccomment of ReccommentData" [recivedata]="reccomment.products" (onProductClick)="onProductClick($event)"></app-product-list>
 
 </ion-content>
 

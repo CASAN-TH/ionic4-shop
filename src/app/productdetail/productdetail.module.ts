@@ -10,6 +10,7 @@ import { ProductdetailPage } from './productdetail.page';
 import { ProductlistPageModule } from '../productlist/productlist.module';
 import { FooterPageModule } from '../footer/footer.module';
 import { ProductdetailModule } from '../casan/productdetail/productdetail.module';
+import { CatalogModule } from '../casan/catalog/catalog.module';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { ProductdetailModule } from '../casan/productdetail/productdetail.module
     ProductlistPageModule,
     FooterPageModule,
 
-    ProductdetailModule
+    ProductdetailModule,
+    CatalogModule
   ],
   declarations: [ProductdetailPage]
 })

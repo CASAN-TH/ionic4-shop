@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="backbutton" slot="end" (click)="dismiss()">
+      <ion-button>
+        <ion-icon slot="icon-only" mode="ios" name="ios-close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>ข้อมูลจำเพาะ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12">
+      <ion-item no-padding class="item-border-right" *ngFor="let item1 of ImformationSpecData.colors">
+        <ion-text>Color</ion-text>
+        <ion-label>
+          <ion-text class="text-color">{{item1.color}}</ion-text>
+        </ion-label>
+      </ion-item>
+      <ion-item no-padding class="item-border-right" *ngFor="let item2 of ImformationSpecData.specs">
+        <ion-text>Version</ion-text>
+        <ion-label>
+          <ion-text class="text-vertion">{{item2.version}}</ion-text>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-content>

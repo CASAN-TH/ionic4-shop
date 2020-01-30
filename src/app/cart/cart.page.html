@@ -10,7 +10,17 @@
   </div>
 
   <div *ngIf="cartDataList.length >= 1">
-    <app-cart-by-shop [cartDataList]="cartDataList" [vouchersData]="vouchersData" [specificationData]="specificationData"></app-cart-by-shop>
+    <ion-row>
+      <ion-col size="12">
+        <ion-grid *ngFor="let shop of cartDataList; let i = index;">
+          <app-cart-by-shop [cartData]="shop" [vouchersData]="vouchersData" [specificationData]="specificationData">
+            <app-cart-by-shopitem [itemDatas]="shop.items" [specificationData]="specificationData"
+            (amountChanged)="onSaveProductItems($event, shop._id)">
+            </app-cart-by-shopitem>
+          </app-cart-by-shop>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
   </div>
 
   <ion-grid>
@@ -32,7 +42,6 @@
     </ion-row>
   </ion-grid>
 
-
   <ion-row class="reccomment">
     <ion-col size="12">
       <ion-row>
@@ -49,45 +58,11 @@
     </ion-col>
   </ion-row>
 
-  <app-product-list   *ngFor="let reccomment of reccommentDataList" [recivedata]="reccomment.products" (onProductClick)="onProductClick($event)"></app-product-list >
- 
+  <app-product-list *ngFor="let reccomment of reccommentDataList" [recivedata]="reccomment.products"
+    (onProductClick)="onProductClick($event)"></app-product-list>
+
 </ion-content>
 
 <ion-footer *ngIf="cartDataList.length > 0">
-  <ion-row *ngIf="TotalCartDataList">
-    <ion-col size="9">
-      <ion-row>
-        <ion-col size="2">
-          <span>
-            <ion-checkbox class="icon-check" color="danger" mode="ios" (click)="onSelectAll()"></ion-checkbox>
-          </span>
-        </ion-col>
-        <ion-col size="3" class="footer-pading">
-          <ion-text>ทั้งหมด</ion-text>
-        </ion-col>
-        <ion-col size="7">
-          <span>
-            ยอดรวม:
-          </span>
-          <span class="spanprice">
-            {{TotalCartDataList.currency}} {{TotalCartDataList.total_regularprice_text}}
-          </span>
-          <span class="installment">
-            {{TotalCartDataList.currency}}{{TotalCartDataList.installment_price_text}}
-            {{TotalCartDataList.installment_period}}
-            <ion-icon class="icon-inner" mode="ios" name="arrow-forward" (click)="InstallmentModal()"></ion-icon>
-          </span>
-        </ion-col>
-      </ion-row>
-    </ion-col>
-    <ion-col size="3">
-      <ion-item lines="none" (click)="onPayClick()" class="footer-button" color="warning">
-        <ion-label text-center>
-          <span class="quantity">
-            ชำระ({{TotalCartDataList.amount_product}})
-          </span>
-        </ion-label>
-      </ion-item>
-    </ion-col>
-  </ion-row>
+  <app-totalcart [totalCartDataList]="totalCartDataList" [paymentData]="paymentData"></app-totalcart>
 </ion-footer>

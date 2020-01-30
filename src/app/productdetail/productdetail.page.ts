@@ -16,6 +16,9 @@ import { SelectMenuComponent } from './select-menu/select-menu.component';
 import { ShareModalComponent } from './share-modal/share-modal.component';
 import { ProductPaymentModalComponent } from '../casan/productdetail/product-payment/product-payment-modal/product-payment-modal.component';
 import { ProductShareModalComponent } from '../casan/productdetail/product-share/product-share-modal/product-share-modal.component';
+import { ProductSpecModalComponent } from '../casan/productdetail/product-spec/product-spec-modal/product-spec-modal.component';
+import { ProductReviewsModalComponent } from '../casan/productdetail/product-reviews/product-reviews-modal/product-reviews-modal.component';
+import { ProductImformationSpecModalComponent } from '../casan/productdetail/product-imformation-spec/product-imformation-spec-modal/product-imformation-spec-modal.component';
 
 @Component({
   selector: 'app-productdetail',
@@ -38,6 +41,8 @@ export class ProductdetailPage implements OnInit {
   ReccommentData: any
   userData: any
 
+  amount: any
+
   productCartData: any
 
   // slideOpts = {
@@ -55,7 +60,7 @@ export class ProductdetailPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    
+
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
       this.productdetailData = productdetailDataList;
@@ -68,10 +73,10 @@ export class ProductdetailPage implements OnInit {
       console.log(this.productwarrantyData)
     })
 
-    // this.productdetailService.onReccommentDataChanged.subscribe((productdetailDataList: any) => {
-    //   console.log(productdetailDataList);
-    //   this.ReccommentData = productdetailDataList;
-    // })
+    this.productdetailService.onReccommentDataChanged.subscribe((productdetailDataList: any) => {
+      console.log(productdetailDataList);
+      this.ReccommentData = productdetailDataList;
+    })
 
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
@@ -123,7 +128,7 @@ export class ProductdetailPage implements OnInit {
     this.getUser()  //get เอา id จาก User
   }
 
-  async getUser(){
+  async getUser() {
     const res = await this.productdetailService.getUser()
     this.userData = res   //get เอา id จาก User
     console.log(this.userData.data.username)
@@ -169,7 +174,7 @@ export class ProductdetailPage implements OnInit {
   //   });
   //   return await modal.present();
   // }
-  async warrantyModal() {
+  async openServiceModal() {
     const modal = await this.modalController.create({
       component: WarrantyModalComponent,
       cssClass: 'my-modal-css',
@@ -179,9 +184,9 @@ export class ProductdetailPage implements OnInit {
     });
     return await modal.present();
   }
-  async specificationModal() {
+  async openSpecModal() {
     const modal = await this.modalController.create({
-      component: SpecificationModalComponent,
+      component: ProductSpecModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
         SpecificationData: this.SpecificationData
@@ -189,18 +194,18 @@ export class ProductdetailPage implements OnInit {
     });
     return await modal.present();
   }
-  async reviewModal() {
+  async openReviewsModal() {
     const modal = await this.modalController.create({
-      component: ReviewModalComponent,
+      component: ProductReviewsModalComponent,
       componentProps: {
         ReviewData: this.ReviewData
       }
     });
     return await modal.present();
   }
-  async imformationSpecModal() {
+  async openImformationSpecModal() {
     const modal = await this.modalController.create({
-      component: ImformationspecModalComponent,
+      component: ProductImformationSpecModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
         ImformationSpecData: this.ImformationSpecData
@@ -214,6 +219,8 @@ export class ProductdetailPage implements OnInit {
   }
 
   onCartClick(cartId: any) {
+    var amount = 1;
+    console.log(this.amount);
     const body = {
       u_id: this.userData.data.username,
       shop: {
@@ -285,8 +292,8 @@ export class ProductdetailPage implements OnInit {
     }
     console.log(body);
     this.productdetailService.adProductCartList(body).then(value => {
-      this.router.navigateByUrl('tabs/cart');
     });
+    this.router.navigateByUrl('tabs/cart');
   }
   // onPaymentClick(paymentId: any) {
   //   console.log("onPaymentClick");
@@ -314,6 +321,9 @@ export class ProductdetailPage implements OnInit {
       }
     });
     return await modal.present();
+  }
+  onProductClick(productId) {
+    this.router.navigateByUrl('/productdetail/' + productId)
   }
 
 }

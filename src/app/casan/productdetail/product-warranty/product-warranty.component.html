@@ -1,0 +1,32 @@
+<ion-row *ngFor="let item of recivedata">
+  <ion-col size="12">
+    <ion-grid>
+      <ion-item no-padding class="item-border-right">
+        <ion-label>
+          <ion-text class="titlewar">{{item.warranty_name}}</ion-text>
+        </ion-label>
+      </ion-item>
+
+      <ion-row>
+        <ion-col size="12" *ngFor="let itemwarranty of item.warranties_lists">
+          <p class="titlewar">{{itemwarranty.title}}</p>
+          <p class="subtitlewar">{{itemwarranty.subtitle}}</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-item no-padding class="item-border-right">
+        <ion-text class="titlewar">{{item.aftersales_name}}</ion-text>
+      </ion-item>
+
+      <ion-row>
+        <ion-col size="12">
+          <p class="subtitlewar" *ngFor="let itemaftersales of item.aftersales_lists">
+            {{itemaftersales.title}}
+          </p>
+          <p>หากมีคำถามอื่นๆ สามารถสอบถามเจ้าพนักงานได้โดยตรง</p>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </ion-col>
+</ion-row>
