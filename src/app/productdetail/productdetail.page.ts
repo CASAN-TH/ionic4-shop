@@ -16,6 +16,8 @@ import { SelectMenuComponent } from './select-menu/select-menu.component';
 import { ShareModalComponent } from './share-modal/share-modal.component';
 import { ProductPaymentModalComponent } from '../casan/productdetail/product-payment/product-payment-modal/product-payment-modal.component';
 import { ProductShareModalComponent } from '../casan/productdetail/product-share/product-share-modal/product-share-modal.component';
+import { ProductSpecModalComponent } from '../casan/productdetail/product-spec/product-spec-modal/product-spec-modal.component';
+import { ProductReviewsModalComponent } from '../casan/productdetail/product-reviews/product-reviews-modal/product-reviews-modal.component';
 
 @Component({
   selector: 'app-productdetail',
@@ -169,7 +171,7 @@ export class ProductdetailPage implements OnInit {
   //   });
   //   return await modal.present();
   // }
-  async warrantyModal() {
+  async openServiceModal() {
     const modal = await this.modalController.create({
       component: WarrantyModalComponent,
       cssClass: 'my-modal-css',
@@ -179,9 +181,9 @@ export class ProductdetailPage implements OnInit {
     });
     return await modal.present();
   }
-  async specificationModal() {
+  async openSpecModal() {
     const modal = await this.modalController.create({
-      component: SpecificationModalComponent,
+      component: ProductSpecModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
         SpecificationData: this.SpecificationData
@@ -189,9 +191,9 @@ export class ProductdetailPage implements OnInit {
     });
     return await modal.present();
   }
-  async reviewModal() {
+  async openReviewsModal() {
     const modal = await this.modalController.create({
-      component: ReviewModalComponent,
+      component: ProductReviewsModalComponent,
       componentProps: {
         ReviewData: this.ReviewData
       }

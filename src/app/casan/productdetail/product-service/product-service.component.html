@@ -1,0 +1,13 @@
+<ion-item no-padding class="item-border-right" (click)="serviceModal()">
+  <ion-text>บริการ</ion-text>
+  <ion-label>
+    <ion-text class="text-padding" *ngFor="let item of recivedata.warranties">{{item.title}}</ion-text>
+  </ion-label>
+  <ion-note text-end>
+    <ion-buttons>
+      <ion-button>
+        <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-note>
+</ion-item>
