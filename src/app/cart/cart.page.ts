@@ -27,7 +27,7 @@ export class CartPage implements OnInit {
     private paymentService: PaymentService,
     public modalController: ModalController,
     public actionSheetController: ActionSheetController
-    ) {}
+  ) { }
 
   ngOnInit() {
     this.cartService.onCartDataListChanged.subscribe((cartDataList: any) => {
@@ -51,6 +51,13 @@ export class CartPage implements OnInit {
     this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
       this.addaddressData = AddaddressData;
     })
+  }
+
+  onSaveProductItems(data, id) {
+    const body = {
+      items: data
+    }
+    this.cartService.updateShopItems(body, id);
   }
 
   onAcceptCodeClick() {

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { SpecificationModalComponent } from 'src/app/productdetail/specification-modal/specification-modal.component';
 
@@ -11,6 +11,7 @@ export class CartByShopitemComponent implements OnInit {
 
   @Input() itemDatas: Array<any>;
   @Input() specificationData: any;
+  @Output() amountChanged: EventEmitter<any> = new EventEmitter()
   constructor(
     private modalController: ModalController
   ) { }
@@ -39,9 +40,11 @@ export class CartByShopitemComponent implements OnInit {
   }
 
   onRemoveClick(j) {
-    this.itemDatas[j].amount_product -= 1
+    this.itemDatas[j].amount_product -= 1;
+    this.amountChanged.emit(this.itemDatas);
   }
   onAddClick(j) {
-    this.itemDatas[j].amount_product += 1
+    this.itemDatas[j].amount_product += 1;
+    this.amountChanged.emit(this.itemDatas);
   }
 }
