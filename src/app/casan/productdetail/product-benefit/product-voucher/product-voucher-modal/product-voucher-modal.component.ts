@@ -8,12 +8,12 @@ import { ModalController } from '@ionic/angular';
 })
 export class ProductVoucherModalComponent implements OnInit {
 
-  @Input() VouchersData: any
+  @Input() vouchersData: any
 
   constructor(public modalController: ModalController) { }
 
   ngOnInit() {
-    console.log(this.VouchersData);
+    console.log(this.vouchersData);
   }
 
   dismiss() {

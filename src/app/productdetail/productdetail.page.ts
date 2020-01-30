@@ -84,10 +84,10 @@ export class ProductdetailPage implements OnInit {
       console.log(this.PaymentData)
     })
     /////////////////////////////////////////////////////////////////////
-    this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
-      this.VouchersData = productdetailDataList;
-    })
+    // this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
+    //   console.log(productdetailDataList);
+    //   this.VouchersData = productdetailDataList;
+    // })
 
     this.productdetailService.onPromotionDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);

@@ -12,7 +12,9 @@ export class ProductVoucherComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    console.log(this.recivedata)
+  }
 
   voucherModal() {
     this.openVoucher.emit();

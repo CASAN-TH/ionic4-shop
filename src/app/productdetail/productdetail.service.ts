@@ -71,7 +71,8 @@ export class ProductdetailService {
       this.getProductdetailWarrantyData();
       this.getPaymentModalData();
       this.getReccommentData();
-      // this.getVouchersModalData();
+
+      this.getVouchersModalData();
       // this.getPromotionModalData();
       // this.getTcoinModalData();
       // this.getWarrantyModalData();
@@ -201,7 +202,7 @@ export class ProductdetailService {
   }
   getVouchersModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if (mockup) {
+      if (!mockup) {
         this.http.get('../../assets/json/productdetail/vouchers-modal.json').subscribe((res: any) => {
           this.onVouchersDataChanged.next(res.data);
         }, reject)
