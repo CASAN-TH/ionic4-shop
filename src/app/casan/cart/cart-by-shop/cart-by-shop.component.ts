@@ -10,7 +10,7 @@ import { VouchersModalComponent } from 'src/app/productdetail/vouchers-modal/vou
 })
 export class CartByShopComponent implements OnInit {
 
-  @Input() cartDataList: any;
+  @Input() cartData: any;
   @Input() vouchersData: any;
   @Input() specificationData: any;
   constructor(
@@ -19,8 +19,7 @@ export class CartByShopComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // console.log(this.cartDataList);
-    // console.log(this.vouchersData);
+
   }
 
   onSelectShop(i, shopId: any) {
