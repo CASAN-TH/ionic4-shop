@@ -66,7 +66,7 @@ export class AccountPage implements OnInit {
       this.AddressData = AddressData.address;
     })
     this.accountService.onCartDataListChanged.subscribe((CartDataList: any) => {
-      // console.log(CartDataList);
+      console.log(CartDataList);
       this.CartDataList = CartDataList.carts;
     })
     this.accountService.onBillDataChanged.subscribe((BillDataList: any) => {
@@ -112,30 +112,7 @@ export class AccountPage implements OnInit {
     this.router.navigate(['setting']);
   }
 
-  async ModalFavorite() {
-    const modal = await this.modalController.create({
-      component: ModalFavoriteComponent,
-      componentProps: {
-        recommendDataList: this.recommendDataList
-      
-      }
-    });
-    return await modal.present();
-  }
 
-  async ModalFollowedshop() {
-    const modal = await this.modalController.create({
-      component: ModalFollowedshopComponent,
-    });
-    return await modal.present();
-  }
-
-  async ModalBrowsehistory() {
-    const modal = await this.modalController.create({
-      component: ModalBrowsehistoryComponent,
-    });
-    return await modal.present();
-  }
 
   async ModalViewAllMyOrdersPage() {
     const value = 0

@@ -38,8 +38,11 @@
   </ion-row>
   <!-- End User Profile Header -->
 
+  <app-favorite-summary [accountData]="accountData" [scoreData]="scoreData"></app-favorite-summary>
+
   <!-- รายการโปรด ร้านค้าที่ติดตาม ประวัติการเข้าชม -->
-  <ion-row *ngIf="accountData" class="font">
+
+   <!-- <ion-row *ngIf="accountData" class="font">
     <ion-col size="4" (click)="ModalFavorite()">
       <h2>{{scoreData.wishlist}}</h2>
       <p class="font-detail font-13">รายการโปรด</p>
@@ -67,7 +70,8 @@
       <h2>--</h2>
       <p class="font-detail font-13">ประวัติการเข้าชม</p>
     </ion-col>
-  </ion-row>
+  </ion-row> -->
+
   <!-- End รายการโปรด ร้านค้าที่ติดตาม ประวัติการเข้าชม -->
 
   <!-- รายการสั่งซื้อ -->
