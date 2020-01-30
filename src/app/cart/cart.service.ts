@@ -45,17 +45,18 @@ export class CartService {
     console.log("resolve with params : " + JSON.stringify(this.routeParams));
     this.getCartDataList();
     this.getReccommentDataList();
+    this.getTotalCartDataList();
     // this.getSpecificationModalData();
     // this.getPaymentModalData();
     // this.getVouchersModalData();
-    // this.getTotalCartDataList();
+   
 
     return;
   }
 
   getCartDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if(!mockup){
+      if (!mockup) {
         this.http.get('../../assets/json/cart/cart.json').subscribe((res: any) => {
           this.onCartDataListChanged.next(res.data);
         }, reject)
@@ -66,19 +67,19 @@ export class CartService {
       }
     })
   }
-  // getTotalCartDataList(): Observable<any> | Promise<any> | any {
-  //   return new Promise((resolve, reject) => {
-  //     if(mockup){
-  //       this.http.get('../../assets/json/cart/total-cart.json').subscribe((res: any) => {
-  //         this.onTotalCartDataChanged.next(res.data);
-  //       },reject)
-  //     }else{
-  //       this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-  //         this.onTotalCartDataChanged.next(res.data);
-  //       },reject)
-  //     }
-  //   })
-  // }
+  getTotalCartDataList(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/cart/total-cart.json').subscribe((res: any) => {
+          this.onTotalCartDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url + '/api/cartstotal', { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onTotalCartDataChanged.next(res.data);
+        }, reject)
+      }
+    })
+  }
   getReccommentDataList(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (!mockup) {
