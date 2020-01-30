@@ -14,6 +14,8 @@
       <ion-col size="12">
         <ion-grid *ngFor="let cart of cartDataList; let i = index;">
           <app-cart-by-shop [cartData]="cart" [vouchersData]="vouchersData" [specificationData]="specificationData">
+            <app-cart-by-shopitem [itemDatas]="cart.items" [specificationData]="specificationData">
+            </app-cart-by-shopitem>
           </app-cart-by-shop>
         </ion-grid>
       </ion-col>
@@ -78,11 +80,10 @@
             ยอดรวม:
           </span>
           <span class="spanprice">
-            {{totalCartDataList.currency}} {{totalCartDataList.total_regularprice_text}}
+           {{totalCartDataList.totalprice_text}}
           </span>
           <span class="installment">
-            {{totalCartDataList.currency}}{{totalCartDataList.installment_price_text}}
-            {{totalCartDataList.installment_period}}
+            {{totalCartDataList.total_installmentPrice_text}}x{{totalCartDataList.installmentPeriod}}เดือน
             <ion-icon class="icon-inner" mode="ios" name="arrow-forward" (click)="InstallmentModal()"></ion-icon>
           </span>
         </ion-col>
@@ -92,7 +93,7 @@
       <ion-item lines="none" (click)="onPayClick()" class="footer-button" color="warning">
         <ion-label text-center>
           <span class="quantity">
-            ชำระ({{totalCartDataList.amount_product}})
+            ชำระ({{totalCartDataList.amountProduct}})
           </span>
         </ion-label>
       </ion-item>

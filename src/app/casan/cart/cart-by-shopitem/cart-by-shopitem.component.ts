@@ -9,14 +9,14 @@ import { SpecificationModalComponent } from 'src/app/productdetail/specification
 })
 export class CartByShopitemComponent implements OnInit {
 
-  @Input() itemData: any;
+  @Input() itemDatas: Array<any>;
   @Input() specificationData: any;
   constructor(
     private modalController: ModalController
   ) { }
 
   ngOnInit() {
-
+    // console.log(this.itemDatas)
   }
 
   onSelectProduct() {
@@ -39,9 +39,9 @@ export class CartByShopitemComponent implements OnInit {
   }
 
   onRemoveClick(j) {
-    this.itemData.amount_product -= 1
+    this.itemDatas[j].amount_product -= 1
   }
   onAddClick(j) {
-    this.itemData.amount_product += 1
+    this.itemDatas[j].amount_product += 1
   }
 }
