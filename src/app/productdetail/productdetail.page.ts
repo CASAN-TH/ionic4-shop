@@ -71,10 +71,10 @@ export class ProductdetailPage implements OnInit {
       console.log(this.productwarrantyData)
     })
 
-    // this.productdetailService.onReccommentDataChanged.subscribe((productdetailDataList: any) => {
-    //   console.log(productdetailDataList);
-    //   this.ReccommentData = productdetailDataList;
-    // })
+    this.productdetailService.onReccommentDataChanged.subscribe((productdetailDataList: any) => {
+      console.log(productdetailDataList);
+      this.ReccommentData = productdetailDataList;
+    })
 
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
@@ -317,6 +317,9 @@ export class ProductdetailPage implements OnInit {
       }
     });
     return await modal.present();
+  }
+  onProductClick(productId) {
+    this.router.navigateByUrl('/productdetail/' + productId)
   }
 
 }

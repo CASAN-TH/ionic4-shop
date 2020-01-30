@@ -342,7 +342,8 @@
     </ion-col>
   </ion-row>
 
-  <productlist [recivedata]="ReccommentData"></productlist>
+  <!-- <productlist [recivedata]="ReccommentData"></productlist> -->
+  <app-product-list *ngFor="let reccomment of ReccommentData" [recivedata]="reccomment.products" (onProductClick)="onProductClick($event)"></app-product-list>
 
 </ion-content>
 
