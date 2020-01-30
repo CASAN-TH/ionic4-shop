@@ -57,25 +57,6 @@ export class CartPage implements OnInit {
     console.log("Add Code")
   }
 
-  onPayClick() {
-    this.router.navigate(['payment'])
-  }
-
-  onSelectAll() {
-    console.log("select all")
-  }
-
-  async InstallmentModal() {
-    const modal = await this.modalController.create({
-      component: PaymentModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        PaymentData: this.paymentData
-      }
-    });
-    return await modal.present();
-  }
-
   onProductClick(productId) {
     this.router.navigateByUrl('/productdetail/' + productId)
   }

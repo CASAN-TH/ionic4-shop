@@ -1,3 +1,35 @@
-<p>
-  totalcart works!
-</p>
+<ion-row *ngIf="totalCartDataList">
+  <ion-col size="9">
+    <ion-row>
+      <ion-col size="2">
+        <span>
+          <ion-checkbox class="icon-check" color="danger" mode="ios" (click)="onSelectAll()"></ion-checkbox>
+        </span>
+      </ion-col>
+      <ion-col size="3" class="footer-pading">
+        <ion-text>ทั้งหมด</ion-text>
+      </ion-col>
+      <ion-col size="7">
+        <span>
+          ยอดรวม:
+        </span>
+        <span class="spanprice">
+          {{totalCartDataList.totalprice_text}}
+        </span>
+        <span class="installment">
+          {{totalCartDataList.total_installmentPrice_text}}x{{totalCartDataList.installmentPeriod}}เดือน
+          <ion-icon class="icon-inner" mode="ios" name="arrow-forward" (click)="installmentModal()"></ion-icon>
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-col>
+  <ion-col size="3">
+    <ion-item lines="none" (click)="onPayClick()" class="footer-button" color="warning">
+      <ion-label text-center>
+        <span class="quantity">
+          ชำระ({{totalCartDataList.amountProduct}})
+        </span>
+      </ion-label>
+    </ion-item>
+  </ion-col>
+</ion-row>
