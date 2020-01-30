@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from './cart.service';
-import { ModalController, AlertController, ActionSheetController } from '@ionic/angular';
-import { SpecificationModalComponent } from '../productdetail/specification-modal/specification-modal.component';
+import { ModalController, ActionSheetController } from '@ionic/angular';
 import { PaymentModalComponent } from '../productdetail/payment-modal/payment-modal.component';
-import { VouchersModalComponent } from '../productdetail/vouchers-modal/vouchers-modal.component';
 import { PaymentService } from '../payment/payment.service';
 
 
@@ -40,7 +38,6 @@ export class CartPage implements OnInit {
     })
     this.cartService.onReccommentDataListChanged.subscribe((reccommentDataList: any) => {
       this.reccommentDataList = reccommentDataList;
-      console.log(this.reccommentDataList);
     })
     this.cartService.onSpecificationDataChanged.subscribe((productdetailDataList: any) => {
       this.specificationData = productdetailDataList;
