@@ -291,7 +291,9 @@
     </ion-col>
   </ion-row>
 
-  <ion-row *ngFor="let item of productwarrantyData">
+  <app-product-warranty [recivedata]="productwarrantyData"></app-product-warranty>
+
+  <!-- <ion-row *ngFor="let item of productwarrantyData">
     <ion-col size="12">
       <ion-grid>
         <ion-item no-padding class="item-border-right">
@@ -322,7 +324,7 @@
 
       </ion-grid>
     </ion-col>
-  </ion-row>
+  </ion-row> -->
 
   <ion-row>
     <ion-col size="12">

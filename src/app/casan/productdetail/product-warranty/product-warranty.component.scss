@@ -1,0 +1,21 @@
+.item-border-right {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.titlewar {
+  color: #000000;
+  line-height: 1.5;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.subtitlewar {
+  margin-top: 0%;
+}
+ion-grid {
+  margin-top: 0.5rem;
+  background-color: white;
+}
+ion-content {
+  --padding-top: -100px !important;
+  --background: rgb(241, 235, 235) !important;
+}

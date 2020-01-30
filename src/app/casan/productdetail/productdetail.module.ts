@@ -22,6 +22,7 @@ import { ProductReviewsModalComponent } from './product-reviews/product-reviews-
 import { ProductImformationSpecComponent } from './product-imformation-spec/product-imformation-spec.component';
 import { ProductImformationSpecModalComponent } from './product-imformation-spec/product-imformation-spec-modal/product-imformation-spec-modal.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductWarrantyComponent } from './product-warranty/product-warranty.component';
 
 
 
@@ -47,7 +48,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ProductReviewsModalComponent,
     ProductImformationSpecComponent,
     ProductImformationSpecModalComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductWarrantyComponent
   ],
   imports: [
     CommonModule,
@@ -62,7 +64,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ProductSpecComponent,
     ProductReviewsComponent,
     ProductImformationSpecComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductWarrantyComponent
   ],
   entryComponents: [
     ProductPaymentModalComponent,
