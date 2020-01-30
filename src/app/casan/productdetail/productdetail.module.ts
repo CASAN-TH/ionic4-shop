@@ -10,6 +10,15 @@ import { ProductBenefitComponent } from './product-benefit/product-benefit.compo
 import { ProductGiftComponent } from './product-benefit/product-gift/product-gift.component';
 import { ProductTcoinComponent } from './product-benefit/product-tcoin/product-tcoin.component';
 import { ProductVoucherComponent } from './product-benefit/product-voucher/product-voucher.component';
+import { ProductGiftModalComponent } from './product-benefit/product-gift/product-gift-modal/product-gift-modal.component';
+import { ProductTcoinModalComponent } from './product-benefit/product-tcoin/product-tcoin-modal/product-tcoin-modal.component';
+import { ProductVoucherModalComponent } from './product-benefit/product-voucher/product-voucher-modal/product-voucher-modal.component';
+import { ProductServiceComponent } from './product-service/product-service.component';
+import { ProductServiceModalComponent } from './product-service/product-service-modal/product-service-modal.component';
+import { ProductSpecComponent } from './product-spec/product-spec.component';
+import { ProductSpecModalComponent } from './product-spec/product-spec-modal/product-spec-modal.component';
+import { ProductReviewsComponent } from './product-reviews/product-reviews.component';
+import { ProductReviewsModalComponent } from './product-reviews/product-reviews-modal/product-reviews-modal.component';
 
 
 
@@ -23,21 +32,39 @@ import { ProductVoucherComponent } from './product-benefit/product-voucher/produ
     ProductBenefitComponent,
     ProductGiftComponent,
     ProductTcoinComponent,
-    ProductVoucherComponent
+    ProductVoucherComponent,
+    ProductGiftModalComponent,
+    ProductTcoinModalComponent,
+    ProductVoucherModalComponent,
+    ProductServiceComponent,
+    ProductServiceModalComponent,
+    ProductSpecComponent,
+    ProductSpecModalComponent,
+    ProductReviewsComponent,
+    ProductReviewsModalComponent
   ],
   imports: [
     CommonModule,
     IonicModule
   ],
-  exports:[
+  exports: [
     ProductSlideComponent,
     ProductPaymentComponent,
     ProductShareComponent,
-    ProductBenefitComponent
+    ProductBenefitComponent,
+    ProductServiceComponent,
+    ProductSpecComponent,
+    ProductReviewsComponent
   ],
-  entryComponents:[
+  entryComponents: [
     ProductPaymentModalComponent,
-    ProductShareModalComponent
+    ProductShareModalComponent,
+    ProductGiftModalComponent,
+    ProductTcoinModalComponent,
+    ProductVoucherModalComponent,
+    ProductServiceModalComponent,
+    ProductSpecModalComponent,
+    ProductReviewsModalComponent
   ]
 })
 export class ProductdetailModule { }

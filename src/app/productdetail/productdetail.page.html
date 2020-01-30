@@ -162,7 +162,10 @@
   <ion-row>
     <ion-col size="12">
       <ion-grid>
-        <ion-item no-padding class="item-border-right" (click)="warrantyModal()">
+        
+        <app-product-service [recivedata]="WarrantyData" (openService)="openServiceModal()"></app-product-service>
+        <app-product-spec [recivedata]="SpecificationData" (openSpec)="openSpecModal()"></app-product-spec>
+        <!-- <ion-item no-padding class="item-border-right" (click)="warrantyModal()">
           <ion-text>บริการ</ion-text>
           <ion-label>
             <ion-text class="text-padding" *ngFor="let item of WarrantyData.warranties">{{item.title}}</ion-text>
@@ -174,9 +177,9 @@
               </ion-button>
             </ion-buttons>
           </ion-note>
-        </ion-item>
+        </ion-item> -->
 
-        <ion-item no-padding class="item-border-right" lines="none" (click)="specificationModal()">
+        <!-- <ion-item no-padding class="item-border-right" lines="none" (click)="specificationModal()">
           <ion-text>สเปค</ion-text>
           <ion-label>
             <ion-text class="text-padding">
@@ -190,7 +193,8 @@
               </ion-button>
             </ion-buttons>
           </ion-note>
-        </ion-item>
+        </ion-item> -->
+        
       </ion-grid>
     </ion-col>
   </ion-row>
@@ -198,7 +202,9 @@
   <ion-row>
     <ion-col size="12">
       <ion-grid>
-        <ion-item no-padding class="item-border-right" (click)="reviewModal()">
+
+        <app-product-reviews [recivedata]="ReviewData" (openReviews)="openReviewsModal()"></app-product-reviews>
+        <!-- <ion-item no-padding class="item-border-right" (click)="reviewModal()">
           <ion-label>รีวิว</ion-label>
           <ion-note text-end>
             <ion-buttons>
@@ -207,9 +213,9 @@
               </ion-button>
             </ion-buttons>
           </ion-note>
-        </ion-item>
+        </ion-item> -->
 
-        <ion-row *ngFor="let item of ReviewData.user">
+        <!-- <ion-row *ngFor="let item of ReviewData.user">
           <ion-col size="12">
             <ion-item no-padding class="item-border-right" lines="none">
               <ion-avatar slot="start">
@@ -245,7 +251,8 @@
               </ion-row>
             </ion-item>
           </ion-col>
-        </ion-row>
+        </ion-row> -->
+
       </ion-grid>
     </ion-col>
   </ion-row>
