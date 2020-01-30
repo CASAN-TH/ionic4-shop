@@ -10,7 +10,14 @@
   </div>
 
   <div *ngIf="cartDataList.length >= 1">
-    <app-cart-by-shop [cartDataList]="cartDataList" [vouchersData]="vouchersData" [specificationData]="specificationData"></app-cart-by-shop>
+    <ion-row>
+      <ion-col size="12">
+        <ion-grid *ngFor="let cate of cartDataList; let i = index;">
+          <app-cart-by-shop [cartDataList]="cate" [vouchersData]="vouchersData"
+            [specificationData]="specificationData"></app-cart-by-shop>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
   </div>
 
   <ion-grid>
@@ -49,12 +56,13 @@
     </ion-col>
   </ion-row>
 
-  <app-product-list   *ngFor="let reccomment of reccommentDataList" [recivedata]="reccomment.products" (onProductClick)="onProductClick($event)"></app-product-list >
- 
+  <app-product-list *ngFor="let reccomment of reccommentDataList" [recivedata]="reccomment.products"
+    (onProductClick)="onProductClick($event)"></app-product-list>
+
 </ion-content>
 
 <ion-footer *ngIf="cartDataList.length > 0">
-  <ion-row *ngIf="TotalCartDataList">
+  <ion-row *ngIf="totalCartDataList">
     <ion-col size="9">
       <ion-row>
         <ion-col size="2">
@@ -70,11 +78,11 @@
             ยอดรวม:
           </span>
           <span class="spanprice">
-            {{TotalCartDataList.currency}} {{TotalCartDataList.total_regularprice_text}}
+            {{totalCartDataList.currency}} {{totalCartDataList.total_regularprice_text}}
           </span>
           <span class="installment">
-            {{TotalCartDataList.currency}}{{TotalCartDataList.installment_price_text}}
-            {{TotalCartDataList.installment_period}}
+            {{totalCartDataList.currency}}{{totalCartDataList.installment_price_text}}
+            {{totalCartDataList.installment_period}}
             <ion-icon class="icon-inner" mode="ios" name="arrow-forward" (click)="InstallmentModal()"></ion-icon>
           </span>
         </ion-col>
@@ -84,7 +92,7 @@
       <ion-item lines="none" (click)="onPayClick()" class="footer-button" color="warning">
         <ion-label text-center>
           <span class="quantity">
-            ชำระ({{TotalCartDataList.amount_product}})
+            ชำระ({{totalCartDataList.amount_product}})
           </span>
         </ion-label>
       </ion-item>

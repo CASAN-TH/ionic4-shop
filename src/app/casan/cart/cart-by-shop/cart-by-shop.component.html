@@ -1,6 +1,4 @@
-<ion-row>
-  <ion-col size="12">
-    <ion-grid *ngFor="let cate of cartDataList; let i = index;">
+
       <ion-row class="border">
         <ion-col size="8" class="ion-align-items-center">
           <ion-checkbox color="danger" mode="ios"></ion-checkbox>
@@ -15,6 +13,3 @@
       </ion-row>
 
       <app-cart-by-shopitem *ngIf="cartDataList" [cateData]="cartDataList[i]" [specificationData]="specificationData"></app-cart-by-shopitem>
-    </ion-grid>
-  </ion-col>
-</ion-row>
