@@ -288,8 +288,8 @@ export class ProductdetailPage implements OnInit {
     }
     console.log(body);
     this.productdetailService.adProductCartList(body).then(value => {
-      this.router.navigateByUrl('tabs/cart');
     });
+    this.router.navigateByUrl('tabs/cart');
   }
   // onPaymentClick(paymentId: any) {
   //   console.log("onPaymentClick");
