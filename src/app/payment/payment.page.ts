@@ -35,55 +35,49 @@ export class PaymentPage implements OnInit {
   AcceptClick: boolean = false;
 
 
-  constructor(private router: Router,
+  constructor(
+    private router: Router,
     private paymentService: PaymentService,
     private _location: Location,
     public modalController: ModalController,
     private alertCtrl: AlertController,
     public actionSheetController: ActionSheetController,
-    public dialog: MatDialog) { }
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit() {
     this.paymentService.onCreditStatusChanged.subscribe((profilestatus: any) => {
       this.profilestatus = profilestatus;
-      console.log(this.profilestatus)
     })
     this.paymentService.onCreditPointChanged.subscribe((point: any) => {
       this.creditPoint = point
-      console.log(this.creditPoint)
       const dataNum = this.numeral(this.creditPoint.credit.creditremain).format('0,0');
       this.creditCurrency = dataNum
-      // console.log(this.creditCurrency);
       this.paymentService.onCartDataListChanged.subscribe((cartDataList: any) => {
-        console.log(cartDataList);
+
         this.cartDataList = cartDataList;
         this.select = this.cartDataList.totalcart.total_discount > this.creditPoint.credit.creditremain ? "ชำระเต็มจำนวนเงิน" : "ผ่อนชำระ"
+      
       })
     });
     this.paymentService.onDownDataListChanged.subscribe((downDataList: any) => {
-      // console.log(downDataList);
       this.downDataList = downDataList;
     })
     this.paymentService.onAddressDataChanged.subscribe((AddaddressData: any) => {
-      // console.log(AddaddressData);
       this.AddaddressData = AddaddressData;
     })
     this.paymentService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
-      // console.log(productdetailDataList);
       this.VouchersData = productdetailDataList;
     })
     this.paymentService.onSelectdownDataChanged.subscribe((selectdownData: any) => {
-      // console.log(selectdownData);
       this.selectdownData = selectdownData;
     })
     this.paymentService.onAddressModalDataChanged.subscribe((AddressModalData: any) => {
-      // console.log(AddressModalData);
       this.AddressModalData = AddressModalData;
     })
     if (!this.AddaddressData) {
       this.presentAlert();
     }
-
 
   }
   profile_status(profile_status: any) {
@@ -91,7 +85,6 @@ export class PaymentPage implements OnInit {
   }
 
   onOrderClick() {
-    console.log(this.AcceptClick)
     if (!this.AcceptClick) {
       this.acceptModal();
     } else {
@@ -99,11 +92,9 @@ export class PaymentPage implements OnInit {
     }
   }
   onOrderClick2() {
-      this.router.navigate(['payfor'])
+    this.router.navigate(['payfor'])
   }
-  onAddaddressClick() {
-    this.router.navigate(['addaddress'])
-  }
+
   onUnitClick(unitId: any) {
     // this.router.navigateByUrl('search/' + cate2Id);
     console.log(unitId);
@@ -153,16 +144,6 @@ export class PaymentPage implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
     });
-  }
-
-  async addresslModal() {
-    const modal = await this.modalController.create({
-      component: ModalAddressComponent,
-      componentProps: {
-        AddressData: this.AddressModalData.address
-      }
-    });
-    return await modal.present();
   }
 
   async presentActionSheet() {
@@ -271,14 +252,5 @@ export class PaymentPage implements OnInit {
   onOpenlistClick() {
     console.log("onOpenlistClick");
   }
-
-
-  // onScroll($event: CustomEvent<ScrollDetail>) {
-  //   if ($event && $event.detail && $event.detail.scrollTop) {
-  //     const scrollTop = $event.detail.scrollTop;
-  //     this.showToolbar = scrollTop >= 50;
-  //   }
-  // }
-
 
 }
