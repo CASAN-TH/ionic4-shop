@@ -1,19 +1,8 @@
-.bgtoolbar{
-  --background: rgba(240, 73, 73); 
+.bgtoolbar {
+  --background: rgba(240, 73, 73);
   color: #ffffff !important;
 }
-.bg{
-    background-color: white;
-    height: 41px;
-}
-.selecttext {
-  font-size: 14px;
-  font-weight: bold;
-  margin-left: 4px;
-}
-.bgwhite {
-  background-color: white;
-}
+
 .ion-toolbar {
   --background: transparent;
   --ion-color-base: transparent !important;
@@ -21,6 +10,7 @@
   border: 0 !important;
   color: transparent !important;
 }
+
 .show-footer {
   --padding-top: 0rem !important;
   --background: #fbf3f1;
@@ -28,32 +18,38 @@
   border: 1px !important;
   color: #070101 !important;
 }
+
 .backicon {
   color: #ffffff !important;
   margin-top: -62px;
 }
+
 .backicon2 {
   width: 28px;
   margin-left: 3px;
   color: #c5bfbf;
   margin-top: -5px;
 }
+
 .border {
   border-bottom: 1px solid;
   border-color: #e4e1e14d;
   height: 36px;
 }
+
 .shopname {
   padding-top: 6px;
   font-weight: bold;
   margin-left: -58px;
 }
+
 .select {
   font-size: 15px;
   font-weight: bold;
   margin-top: 6px;
   margin-left: 4px;
 }
+
 ion-text-nowarp {
   overflow: hidden;
 }
@@ -61,69 +57,22 @@ ion-text-nowarp {
 .percent_down {
   margin-left: 52px;
 }
-.paydown {
-  font-size: 23px;
-  font-weight: bold;
-}
-.textright{
+
+.textright {
   text-align: right;
 }
 
 .selectpading {
   margin-top: 1%;
 }
+
 .bg-class {
   --background: linear-gradient(0deg, rgba(255, 255, 255, 1) 24%, rgba(240, 65, 65, 1) 89%);
 }
-.bg-card {
-  background-color: white;
-}
-.bg-payment{
-  height: 55px;
-  background-color: #fff5f1;
-}
-.bg-color-payment{
-  background-color: #fff5f1;
-}
 
-mat-dialog-container{
+mat-dialog-container {
   padding-top: 50px;
-  
-}
 
-.payment{
-  font-size: 12.5px;
-  font-weight: lighter;
-}
-.ApplyForCredit{
-  font-size: 13px;
-    font-weight: bold;
-    color: #ff4800;
-    border: 1px solid;
-    border-color: #ff5e20;
-    height: 24px;
-    width: 61px;
-    margin-top: 7px;
-    text-align: right;
-    margin-right: 6px;
-}
-.bg-ApplyForCredit{
-  background: #fff5f1;
-}
-
-.percent_down2 {
-  text-align: right;
-  margin-top: -6px;
-}
-.textpercent_down2 {
-  margin-right: -26px;
-  font-size: 14px;
-}
-.iconpercent_down2 {
-  width: 28px;
-  margin-left: 17px;
-  color: #c5bfbf;
-  margin-top: -12px;
 }
 
 .stylefont {
@@ -135,46 +84,26 @@ mat-dialog-container{
   border-width: 2px;
   border-color: red;
 }
-.per {
-  background-color: #fff5f1;
-  line-height: 2.5rem;
-  padding: 0 0.16rem;
-  color: #333;
-  font-size: 0.9rem;
-  margin-right: 0.8rem;
-  margin-bottom: 0.24rem;
-  white-space: nowrap;
-}
-.ion-item-unitSelected {
-  font-size: 2rem;
-  color: red;
-  margin-top: -0.65rem;
-  margin-left: 45%;
-  position: absolute;
-}
-
-.arowicon{    
-  width: 28px;
-  margin-left: 17px;
-  color: #c5bfbf;
-  margin-top: 2px;
-}
 
 .address {
   font-size: 20px;
   font-weight: bold;
   color: white;
 }
+
 .arow-forwardicon {
   margin-right: -87%;
 }
+
 .label-right {
   margin-right: -15rem;
 }
+
 .label-right2 {
   margin-left: -5px;
   font-size: 16px;
 }
+
 .label-right3 {
   margin-right: -12rem;
 }
@@ -184,6 +113,7 @@ mat-dialog-container{
   font-weight: bold;
   margin-top: 7px;
 }
+
 .select2 {
   font-size: 14px;
   font-weight: bold;
@@ -191,6 +121,7 @@ mat-dialog-container{
   margin-top: 7px;
   margin-left: 34px;
 }
+
 .button-select {
   width: 28px;
   margin-left: 280px;
@@ -201,17 +132,12 @@ mat-dialog-container{
 .price {
   padding-inline-start: 2%;
 }
+
 .icon {
   padding-right: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.acept {
-  font-size: 12px;
-}
-.aceptcolor {
-  font-size: 12px;
-  color: rgb(17, 122, 243);
-}
+
 .phonename {
   font-size: 13px;
   font-weight: bold;
@@ -220,10 +146,6 @@ mat-dialog-container{
   text-overflow: ellipsis;
 }
 
-.quantity {
-  font-size: 13px;
-  margin-top: -10px;
-}
 .quantity2 {
   font-size: 13px;
   margin-top: -10px;
@@ -231,65 +153,50 @@ mat-dialog-container{
   text-overflow: ellipsis;
   display: block;
 }
+
 .discount {
   font-size: 13px;
   margin-left: -42px;
 }
+
 .discountprice {
   font-size: 13px;
   color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
 }
+
 .orders {
   margin-left: 102px;
   font-weight: bold;
 }
+
 .orders2 {
   font-weight: bold;
 }
+
 .orders3 {
   margin-left: 109px;
   font-weight: bold;
-}
-.select-type-pay {
-  margin-right: -32px;
-  margin-top: 7px;
-  text-align: right;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-  color: rgb(255, 72, 0);
 }
 
 .price2 {
   font-size: 15px;
 }
+
 .price3 {
   font-size: 13px;
   font-weight: bold;
 }
+
 .colgif {
   margin-top: -23px;
 }
-.installment {
-  font-size: 22px;
-  font-weight: bold;
-}
-.iconcheck {
-  height: 78%;
-  width: 6%;
-}
-.ion-col-border {
-  border-style: solid;
-  border-width: 2px;
-  border-color: red;
-}
+
 .discount_price {
   font-size: 13px;
   margin-top: -2px;
   color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
 }
+
 .ion-item-percenselected {
   font-size: 2rem;
   color: red;
@@ -298,22 +205,27 @@ mat-dialog-container{
   padding-top: 2%;
   position: absolute;
 }
+
 .giftdetail {
   font-size: 12px;
   color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
 }
+
 .giftdetail2 {
   margin-right: 0px;
-    font-size: 13px;
-    text-align: right;
+  font-size: 13px;
+  text-align: right;
 }
-.giftrow{
-    height: 14px;
+
+.giftrow {
+  height: 14px;
 }
+
 .text {
   margin-left: -3px;
   font-size: 15px;
 }
+
 .text2 {
   margin-left: 6px;
   font-size: 15px;
@@ -323,59 +235,59 @@ mat-dialog-container{
   margin-left: 36px;
   font-size: 16px;
 }
+
 .input {
   margin-top: -8px;
   margin-left: -37px;
   font-size: 15px;
 }
+
 .input2 {
   margin-top: -8px;
   margin-left: -92px;
   font-size: 15px;
 }
+
 ion-card {
   background-color: white;
 }
 
 ion-content {
-  --background: linear-gradient(0deg, rgb(247,247,247,1) 50%, rgba(240, 65, 65, 0.952) 89%);
+  --background: linear-gradient(0deg, rgb(247, 247, 247, 1) 50%, rgba(240, 65, 65, 0.952) 89%);
 }
+
 ion-grid {
   margin-top: 0rem;
   background-color: white;
   margin-bottom: 10px;
 }
+
 ion-toggle {
   margin-left: 54px;
 }
+
 .image {
   width: 15px;
 }
+
 .footer {
   background-color: white;
   height: 66px;
 }
-.texthead {
-  font-size: 14px;
-  font-weight: 300;
-  color: rgb(173, 173, 173);
-}
+
 .img {
   max-width: 107%;
   border: 0;
   margin-left: -13px;
   height: 107px;
 }
+
 .bordertop {
   border-top: 1px solid;
   border-color: #e4e1e14d;
   height: 44px;
 }
-.borderselectdown {
-  border-top: 1px solid;
-  border-color: #e4e1e14d;
-  height: 30px;
-}
+
 .rowshipping {
   margin-bottom: -14px;
 }
@@ -384,6 +296,7 @@ ion-toggle {
   font-size: 15px;
   color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
 }
+
 ion-header {
   display: block;
   position: relative;
@@ -393,38 +306,47 @@ ion-header {
   z-index: 10;
   height: 40px;
 }
+
 .tabselectpay {
   margin-top: -16px;
 }
-.total-product{
+
+.total-product {
   margin-right: -26px;
-    font-size: 14px;
+  font-size: 14px;
 }
-.total-product-col{
+
+.total-product-col {
   margin-top: 40px;
 }
-.total-product-icon{
+
+.total-product-icon {
   width: 28px;
   margin-left: 17px;
   color: #c5bfbf;
 }
-.footterfont{
+
+.footterfont {
   font-size: 18px;
   color: #ff4800;
   font-weight: bold;
 }
-.footterfont2{
+
+.footterfont2 {
   font-size: 18px;
   color: #ff4800;
   font-weight: bold;
 }
-.font-total-footter{
+
+.font-total-footter {
   font-size: 15px;
 }
-.amount-pay{
+
+.amount-pay {
   margin-top: 17px;
 }
-.credit-use{
+
+.credit-use {
   font-size: 13px;
   font-weight: 100;
 }

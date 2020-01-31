@@ -24,8 +24,7 @@ export class PaymentPage implements OnInit {
   AddaddressData: any;
   AddressModalData: any;
   showToolbar: boolean;
-  unitSelected: any;
-
+  
   creditPoint: any;
   numeral = require('numeral');
   creditCurrency: any;
@@ -56,7 +55,7 @@ export class PaymentPage implements OnInit {
       this.paymentService.onCartDataListChanged.subscribe((cartDataList: any) => {
 
         this.cartDataList = cartDataList;
-        this.select = this.cartDataList.totalcart.total_discount > this.creditPoint.credit.creditremain ? "ชำระเต็มจำนวนเงิน" : "ผ่อนชำระ"
+        this.select = this.cartDataList.totalcart.total_discount > this.creditPoint.credit.creditremain ? "ชำระเต็มจำนวนเงิน" : "ผ่อนชำระ";
       
       })
     });
@@ -95,26 +94,6 @@ export class PaymentPage implements OnInit {
     this.router.navigate(['payfor'])
   }
 
-  onUnitClick(unitId: any) {
-    // this.router.navigateByUrl('search/' + cate2Id);
-    console.log(unitId);
-    this.unitSelected = unitId;
-  }
-  onApplyForCredit() {
-    this.router.navigateByUrl('credit');
-  }
-
-  async selectDownModal() {
-    const modal = await this.modalController.create({
-      component: SelectdownModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        selectdownData: this.selectdownData
-      }
-    });
-    return await modal.present();
-  }
-
   async paymentlistModal() {
     const modal = await this.modalController.create({
       component: PaymentListModalComponent,
@@ -146,53 +125,6 @@ export class PaymentPage implements OnInit {
     });
   }
 
-  async presentActionSheet() {
-    const actionSheet = await this.actionSheetController.create({
-      header: 'วิธีการชำระเงิน',
-      buttons: [{
-        text: 'ผ่อนชำระ',
-        handler: () => {
-          this.select = "ผ่อนชำระ"
-        }
-      }, {
-        text: 'ชำระเต็มจำนวนเงิน',
-        handler: () => {
-          this.select = "ชำระเต็มจำนวนเงิน"
-        }
-      }]
-    });
-    await actionSheet.present();
-  }
-  async actionPayment() {
-    if (this.cartDataList.totalcart.total_discount > this.creditPoint.credit.creditremain) {
-      const actionSheet = await this.actionSheetController.create({
-        header: 'วิธีการชำระเงิน',
-        buttons: [{
-          text: 'ชำระเต็มจำนวนเงิน',
-          handler: () => {
-            this.select = "ชำระเต็มจำนวนเงิน"
-          }
-        }]
-      });
-      await actionSheet.present();
-    } else {
-      const actionSheet = await this.actionSheetController.create({
-        header: 'วิธีการชำระเงิน',
-        buttons: [{
-          text: 'ผ่อนชำระ',
-          handler: () => {
-            this.select = "ผ่อนชำระ"
-          }
-        }, {
-          text: 'ชำระเต็มจำนวนเงิน',
-          handler: () => {
-            this.select = "ชำระเต็มจำนวนเงิน"
-          }
-        }]
-      });
-      await actionSheet.present();
-    }
-  }
   async presentAlert() {
     const alert = await this.alertCtrl.create({
       message: 'กรุณาเพิ่มที่อยู่จัดส่งใหม่',
