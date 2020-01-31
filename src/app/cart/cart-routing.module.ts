@@ -10,11 +10,12 @@ const routes: Routes = [
     path: '',
     component: CartPage,
     resolve: [CartService],
+    canActivate: [AuthGuard]
   },
   {
     path: ':cartId',
     component: CartPage,
-    resolve: [CartService],
+    resolve: [CartService]
   }
 ];
 
