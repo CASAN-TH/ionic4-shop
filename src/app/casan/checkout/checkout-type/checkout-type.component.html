@@ -1,3 +1,145 @@
-<p>
-  checkout-type works!
-</p>
+<ion-row (click)="presentActionSheet()" class="bg" *ngIf="checkoutType === 'ผ่อนชำระ'">
+  <ion-col size="5" class="ion-align-items-center">
+    <ion-text class="selecttext">
+      วิธีการชำระเงิน
+    </ion-text>
+  </ion-col>
+  <ion-col size="5">
+    <ion-text class="select-type-pay ion-text-nowarp">
+      {{checkoutType}}
+    </ion-text>
+  </ion-col>
+  <ion-col size="2">
+    <ion-buttons>
+      <ion-button class="arrow-icon">
+        <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-col>
+</ion-row>
+
+<ion-row class="bg-card" *ngIf="checkoutType === 'ชำระเต็มจำนวนเงิน'">
+  <ion-col size="12">
+    <ion-row (click)="actionPayment()" class="bg">
+      <ion-col size="5" class="ion-align-items-center">
+        <ion-text class="selecttext">
+          วิธีการชำระเงิน
+        </ion-text>
+      </ion-col>
+      <ion-col size="5">
+        <ion-text class="select-type-pay ion-text-nowarp">
+          {{checkoutType}}
+        </ion-text>
+      </ion-col>
+      <ion-col size="2">
+        <ion-buttons>
+          <ion-button class="arrow-icon">
+            <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+    <ion-row class="bg-payment" *ngIf="!profilestatus.accountstatus || profilestatus.accountstatus === 'member'">
+      <ion-col size="9">
+        <div class="bg-color-payment">
+          <ion-item lines="none" color="#fff5f1" class="payment">
+            <ion-text>คุณยังไม่มีวงเงิน คุณสามารถสมัครเพื่อเปิดใช้งานการช้อปปิ้งแบบผ่อนชำระ</ion-text>
+          </ion-item>
+        </div>
+      </ion-col>
+      <ion-col size="3" class="bg-color-payment">
+        <ion-buttons class="bg-ApplyForCredit" (click)="onApplyForCredit()">
+          <ion-button class="ApplyForCredit">
+            <ion-text>ไปสมัคร</ion-text>
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="profilestatus.accountstatus === 'approve'">
+      <ion-col size="12" *ngIf="cartDataList.totalcart.total_discount > creditPoint.credit.creditremain">
+        <div class="bg-color-payment">
+          <ion-item lines="none" color="#fff5f1" class="payment">
+            <ion-text>วงเงินไม่เพียงพอ โปรดเลือกการชำระแบบเต็มจำนวน</ion-text>
+          </ion-item>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-col>
+</ion-row>
+
+
+<ion-row *ngIf="checkoutType === 'ผ่อนชำระ'" class="bgwhite">
+  <ion-col size="12" *ngFor="let data of downDataList">
+    <ion-row class="borderselectdown">
+      <ion-col size="12">
+        <ion-text class="texthead">
+          เงินดาวน์
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let down of data.down_payment" (click)="selectDownModal()">
+      <ion-col size="5">
+        <ion-text class="paydown">
+          {{down.cerrency}}{{down.amount}}
+        </ion-text>
+      </ion-col>
+      <ion-col size="5" class="percent-down2">
+        <ion-text class="textpercent-down2">
+          {{down.percent_down}}{{down.unit}}
+        </ion-text>
+      </ion-col>
+      <ion-col size="2">
+        <ion-buttons>
+          <ion-button class="iconpercent-down2">
+            <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+    <ion-row class="borderselectdown">
+      <ion-col size="12">
+        <span class="texthead">
+          จ่ายรายเดือน (ค่าบริการรายเดือน{{data.period_service}} {{data.cerrency}} รวม)
+        </span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <span class="installment">
+          {{data.cerrency}}{{data.installment_amount}}
+        </span>
+        <span class="quantity">
+          {{data.installment_period}}{{data.unit}}
+        </span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-row *ngIf="data.period_option && data.period_option.length">
+          <ion-col class="per" size="2.5" text-center *ngFor="let period of data.period_option"
+            [class.ion-col-border]="period._id == unitSelected" (click)="onUnitClick(period._id)">
+            <ion-icon class="ion-item-unitSelected" name="checkbox" *ngIf="period._id == unitSelected">
+            </ion-icon>
+            <span>{{period.period}}{{period.unit}}</span>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <span>
+          <ion-checkbox [(ngModel)]="AcceptClick" class="iconcheck" mode="ios" color="danger" checked>
+          </ion-checkbox>
+        </span>
+        <span class="accept">
+          ฉันเห็นด้วย
+        </span>
+        <span>
+          <a class="accept-color" routerLink="/termsandcondition" routerLinkActive="active">ข้อตกลงการใช้บริการ</a>
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-col>
+</ion-row>
