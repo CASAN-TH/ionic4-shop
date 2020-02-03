@@ -40,7 +40,7 @@ import { ModalMarriageComponent } from './credit/modal-marriage/modal-marriage.c
 import { ModalSecondcontactComponent } from './credit/modal-secondcontact/modal-secondcontact.component';
 import { ModalAssetdocsComponent } from './credit/modal-assetdocs/modal-assetdocs.component';
 import { ModalJobComponent } from './credit/modal-job/modal-job.component';
-import { SelectdownModalComponent } from './payment/selectdown-modal/selectdown-modal.component';
+import { SelectdownModalComponent } from './casan/checkout/checkout-type/selectdown-modal/selectdown-modal.component';
 import { ModalAssetdocsDetailComponent } from './credit/modal-assetdocs-detail/modal-assetdocs-detail.component';
 import { ModalAddressComponent } from './pages/me/modal-address/modal-address.component';
 import { ModalFeedbackComponent } from './setting/modal-feedback/modal-feedback.component';

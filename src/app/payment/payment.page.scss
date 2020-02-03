@@ -31,25 +31,6 @@
   margin-top: -5px;
 }
 
-.border {
-  border-bottom: 1px solid;
-  border-color: #e4e1e14d;
-  height: 36px;
-}
-
-.shopname {
-  padding-top: 6px;
-  font-weight: bold;
-  margin-left: -58px;
-}
-
-.select {
-  font-size: 15px;
-  font-weight: bold;
-  margin-top: 6px;
-  margin-left: 4px;
-}
-
 ion-text-nowarp {
   overflow: hidden;
 }
@@ -72,7 +53,6 @@ ion-text-nowarp {
 
 mat-dialog-container {
   padding-top: 50px;
-
 }
 
 .stylefont {
@@ -97,11 +77,6 @@ mat-dialog-container {
 
 .label-right {
   margin-right: -15rem;
-}
-
-.label-right2 {
-  margin-left: -5px;
-  font-size: 16px;
 }
 
 .label-right3 {
@@ -133,60 +108,6 @@ mat-dialog-container {
   padding-inline-start: 2%;
 }
 
-.icon {
-  padding-right: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.phonename {
-  font-size: 13px;
-  font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.quantity2 {
-  font-size: 13px;
-  margin-top: -10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
-}
-
-.discount {
-  font-size: 13px;
-  margin-left: -42px;
-}
-
-.discountprice {
-  font-size: 13px;
-  color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
-}
-
-.orders {
-  margin-left: 102px;
-  font-weight: bold;
-}
-
-.orders2 {
-  font-weight: bold;
-}
-
-.orders3 {
-  margin-left: 109px;
-  font-weight: bold;
-}
-
-.price2 {
-  font-size: 15px;
-}
-
-.price3 {
-  font-size: 13px;
-  font-weight: bold;
-}
-
 .colgif {
   margin-top: -23px;
 }
@@ -206,39 +127,8 @@ mat-dialog-container {
   position: absolute;
 }
 
-.giftdetail {
-  font-size: 12px;
-  color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
-}
-
-.giftdetail2 {
-  margin-right: 0px;
-  font-size: 13px;
-  text-align: right;
-}
-
-.giftrow {
-  height: 14px;
-}
-
-.text {
-  margin-left: -3px;
-  font-size: 15px;
-}
-
 .text2 {
   margin-left: 6px;
-  font-size: 15px;
-}
-
-.chipping {
-  margin-left: 36px;
-  font-size: 16px;
-}
-
-.input {
-  margin-top: -8px;
-  margin-left: -37px;
   font-size: 15px;
 }
 
@@ -275,26 +165,10 @@ ion-toggle {
   height: 66px;
 }
 
-.img {
-  max-width: 107%;
-  border: 0;
-  margin-left: -13px;
-  height: 107px;
-}
-
 .bordertop {
   border-top: 1px solid;
   border-color: #e4e1e14d;
   height: 44px;
-}
-
-.rowshipping {
-  margin-bottom: -14px;
-}
-
-.total {
-  font-size: 15px;
-  color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
 }
 
 ion-header {

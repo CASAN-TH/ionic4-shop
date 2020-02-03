@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-checkout-product',
@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutProductComponent implements OnInit {
 
+  @Input() cartDataList: any;
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
+
+  onOpenlistClick() {
+    console.log("onOpenlistClick");
+  }
 
 }

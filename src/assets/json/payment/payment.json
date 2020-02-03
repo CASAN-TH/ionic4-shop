@@ -157,9 +157,9 @@
             }
         ],
         "totalcart": {
-            "total_price": 30250,
+            "total_price": 5250,
             "total_price_text": "30,250",
-            "total_discount": 30250,
+            "total_discount": 5250,
             "total_discount_text": "30,250",
             "currency": "฿",
             "installment_amount": "1680.55",

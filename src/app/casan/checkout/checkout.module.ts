@@ -7,6 +7,7 @@ import { CheckoutProductComponent } from './checkout-product/checkout-product.co
 import { CheckoutTotalComponent } from './checkout-total/checkout-total.component';
 import { CheckoutTypeComponent } from './checkout-type/checkout-type.component';
 import { NoAddressComponent } from './no-address/no-address.component';
+import { CheckoutSummaryComponent } from './checkout-summary/checkout-summary.component';
 
 
 
@@ -16,7 +17,8 @@ import { NoAddressComponent } from './no-address/no-address.component';
     NoAddressComponent,
     CheckoutProductComponent,
     CheckoutTotalComponent,
-    CheckoutTypeComponent
+    CheckoutTypeComponent,
+    CheckoutSummaryComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { NoAddressComponent } from './no-address/no-address.component';
     NoAddressComponent,
     CheckoutProductComponent,
     CheckoutTotalComponent,
-    CheckoutTypeComponent
+    CheckoutTypeComponent,
+    CheckoutSummaryComponent
   ]
 })
 export class CheckoutModule { }
