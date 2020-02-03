@@ -168,8 +168,4 @@ export class PaymentPage implements OnInit {
     await alert.present();
   }
 
-  onOpenlistClick() {
-    console.log("onOpenlistClick");
-  }
-
 }

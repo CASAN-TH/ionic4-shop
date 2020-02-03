@@ -1,0 +1,125 @@
+ion-text-nowarp {
+    overflow: hidden;
+}
+
+ion-grid {
+    margin-top: 0rem;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.border {
+    border-bottom: 1px solid;
+    border-color: #e4e1e14d;
+    height: 36px;
+}
+
+.icon {
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.shopname {
+    padding-top: 6px;
+    font-weight: bold;
+    margin-left: -58px;
+}
+
+.select {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 6px;
+    margin-left: 4px;
+}
+
+.img {
+    max-width: 107%;
+    border: 0;
+    margin-left: -13px;
+    height: 107px;
+}
+
+.phonename {
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.quantity2 {
+    font-size: 13px;
+    margin-top: -10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.price2 {
+    font-size: 15px;
+}
+
+.price3 {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.discountprice {
+    font-size: 13px;
+    color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
+}
+
+.discount {
+    font-size: 13px;
+    margin-left: -42px;
+}
+
+.giftrow {
+    height: 14px;
+}
+
+.giftdetail {
+    font-size: 12px;
+    color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
+}
+
+.giftdetail2 {
+    margin-right: 0px;
+    font-size: 13px;
+    text-align: right;
+}
+
+.rowshipping {
+    margin-bottom: -14px;
+}
+
+.bordertop {
+    border-top: 1px solid;
+    border-color: #e4e1e14d;
+    height: 44px;
+}
+
+.text {
+    margin-left: -3px;
+    font-size: 15px;
+}
+
+.textright {
+    text-align: right;
+}
+
+.chipping {
+    margin-left: 36px;
+    font-size: 16px;
+}
+
+.input {
+    margin-top: -8px;
+    margin-left: -37px;
+    font-size: 15px;
+}
+
+.label-right2 {
+    margin-left: -5px;
+    font-size: 16px;
+}
