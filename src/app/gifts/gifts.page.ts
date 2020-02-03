@@ -9,8 +9,8 @@ import { SpecificationgiftModalComponent } from './specificationgift-modal/speci
 import { ImformationspecgiftModalComponent } from './imformationspecgift-modal/imformationspecgift-modal.component';
 
 import { Location } from '@angular/common'
-import { SelectMenuComponent } from '../productdetail/select-menu/select-menu.component';
-import { ShareModalComponent } from '../productdetail/share-modal/share-modal.component';
+// import { SelectMenuComponent } from '../productdetail/select-menu/select-menu.component';
+// import { ShareModalComponent } from '../productdetail/share-modal/share-modal.component';
 
 @Component({
   selector: 'app-gifts',
@@ -145,24 +145,24 @@ export class GiftsPage implements OnInit {
     console.log("Chat Bot");
   }
 
-  async presentPopover(ev: any) {
-    const popover = await this.popoverController.create({
-      component: SelectMenuComponent,
-      event: ev,
-      translucent: true
-    });
-    return await popover.present();
-  }
+  // async presentPopover(ev: any) {
+  //   const popover = await this.popoverController.create({
+  //     component: SelectMenuComponent,
+  //     event: ev,
+  //     translucent: true
+  //   });
+  //   return await popover.present();
+  // }
 
-  async onShareModalClick() {
-    const modal = await this.modalController.create({
-      component: ShareModalComponent,
-      cssClass: 'share-modal-css',
-      componentProps: {
-        ShareData: this.ShareData
-      }
-    });
-    return await modal.present();
-  }
+  // async onShareModalClick() {
+  //   const modal = await this.modalController.create({
+  //     component: ShareModalComponent,
+  //     cssClass: 'share-modal-css',
+  //     componentProps: {
+  //       ShareData: this.ShareData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
 
 }

@@ -11,8 +11,8 @@ import { HomePage } from './home.page';
 import { MatTabsModule } from '@angular/material/tabs';
 
 import { CateProductListPageModule } from '../cate-product-list/cate-product-list.module';
-import { ProductListBlockPageModule } from '../product-list-block/product-list-block.module';
-import { ProductlistPageModule } from '../productlist/productlist.module';
+// import { ProductListBlockPageModule } from '../product-list-block/product-list-block.module';
+// import { ProductlistPageModule } from '../productlist/productlist.module';
 import { CatalogModule } from '../casan/catalog/catalog.module';
 
 @NgModule({
@@ -23,9 +23,9 @@ import { CatalogModule } from '../casan/catalog/catalog.module';
     TranslateModule,
     HomePageRoutingModule,
     MatTabsModule,
-    ProductListBlockPageModule,
+    // ProductListBlockPageModule,
     CateProductListPageModule,
-    ProductlistPageModule,
+    // ProductlistPageModule,
     CatalogModule
 
   ],

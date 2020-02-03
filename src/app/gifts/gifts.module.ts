@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { GiftsPageRoutingModule } from './gifts-routing.module';
 
 import { GiftsPage } from './gifts.page';
-import { ProductlistPageModule } from '../productlist/productlist.module';
+// import { ProductlistPageModule } from '../productlist/productlist.module';
 import { FooterPageModule } from '../footer/footer.module';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { FooterPageModule } from '../footer/footer.module';
     FormsModule,
     IonicModule,
     GiftsPageRoutingModule,
-    ProductlistPageModule,
+    // ProductlistPageModule,
     FooterPageModule
   ],
   declarations: [GiftsPage]
