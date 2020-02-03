@@ -8,12 +8,12 @@ import { ModalController } from '@ionic/angular';
 })
 export class ProductServiceModalComponent implements OnInit {
 
-  @Input() WarrantyData: any
+  @Input() warrantyData: any
 
   constructor(public modalController: ModalController) { }
 
   ngOnInit() {
-    console.log(this.WarrantyData);
+    console.log(this.warrantyData);
   }
 
   dismiss() {

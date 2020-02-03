@@ -13,8 +13,8 @@ import { ProductdetailService } from 'src/app/productdetail/productdetail.servic
 export class ProductBenefitComponent implements OnInit {
 
   vouchersData: any;
-  PromotionData: any;
-  TcoinData: any;
+  promotiongiftData: any;
+  tcoinData: any;
 
   constructor(
     private productdetailService: ProductdetailService,
@@ -24,7 +24,14 @@ export class ProductBenefitComponent implements OnInit {
   ngOnInit() { 
     this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
       this.vouchersData = productdetailDataList;
-      console.log(this.vouchersData);
+    })
+    this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
+      this.promotiongiftData = productdetailDataList;
+      console.log(this.promotiongiftData);
+    })
+
+    this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
+      this.tcoinData = productdetailDataList;
     })
   }
 
@@ -45,7 +52,7 @@ export class ProductBenefitComponent implements OnInit {
       component: ProductGiftModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
-        PromotionData: this.PromotionData
+        promotiongiftData: this.promotiongiftData
       }
     });
     return await modal.present();
@@ -56,7 +63,7 @@ export class ProductBenefitComponent implements OnInit {
       component: ProductTcoinModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
-        TcoinData: this.TcoinData
+        tcoinData: this.tcoinData
       }
     });
     return await modal.present();

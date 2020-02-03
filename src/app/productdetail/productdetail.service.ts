@@ -20,35 +20,26 @@ export class ProductdetailService {
   onProductdetailDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  onPromotionDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([
-    {
-      "image": ""
-    },
-    {
-      "image": ""
-    },
-    {
-      "image": ""
-    },
-    {
-      "image": ""
-    }
-  ]);
-  onTcoinDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onWarrantyDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-
-  onSpecificationDataChanged: BehaviorSubject<any> = new BehaviorSubject({
-    "options_list1": {
-      "name": "",
-      "list_items": [
-        {
-          "name": ""
-        }
-      ]
+  onVouchersDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "promotions": [
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      }
+    ],
+    "tcoins": {
+      "tcoinname": ""
     }
   });
-
+  onWarrantyDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onReviewDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onImformationSpecDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
   onShareDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
@@ -71,15 +62,13 @@ export class ProductdetailService {
       this.getProductdetailWarrantyData();
       this.getPaymentModalData();
       this.getReccommentData();
-
       this.getVouchersModalData();
-      // this.getPromotionModalData();
-      // this.getTcoinModalData();
-      // this.getWarrantyModalData();
-      // this.getSpecificationModalData();
-      // this.getReviewModalData();
-      // this.getImformationSpecModalData();
+      this.getWarrantyModalData();
       this.getShareModalData();
+      this.getImformationSpecModalData();
+      this.getReviewModalData();
+
+
     } else {
       // return new Promise((resolve, reject) => {
       //   return reject('rejected')
@@ -167,25 +156,6 @@ export class ProductdetailService {
     })
   }
 
-
-  getReccommentData(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if (mockup) {
-        this.http.get('../../assets/json/productdetail/reccomment.json').subscribe((res: any) => {
-          this.onReccommentDataChanged.next(res.data);
-        }, reject)
-      } else {
-        this.http.get(api_url + '/api/cateproducthome', { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onReccommentDataChanged.next(res.data);
-        }, reject)
-      }
-
-    })
-  }
-
-
-
-
   getPaymentModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
@@ -200,10 +170,11 @@ export class ProductdetailService {
 
     })
   }
+
   getVouchersModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (!mockup) {
-        this.http.get('../../assets/json/productdetail/vouchers-modal.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/benefit-modal.json').subscribe((res: any) => {
           this.onVouchersDataChanged.next(res.data);
         }, reject)
       } else {
@@ -214,38 +185,10 @@ export class ProductdetailService {
 
     })
   }
-  getPromotionModalData(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if (mockup) {
-        this.http.get('../../assets/json/productdetail/promotion-modal.json').subscribe((res: any) => {
-          console.log(res);
-          this.onPromotionDataChanged.next(res.data);
-        }, reject)
-      } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onPromotionDataChanged.next(res.data);
-        }, reject)
-      }
 
-    })
-  }
-  getTcoinModalData(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if (mockup) {
-        this.http.get('../../assets/json/productdetail/tcoin-modal.json').subscribe((res: any) => {
-          this.onTcoinDataChanged.next(res.data);
-        }, reject)
-      } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onTcoinDataChanged.next(res.data);
-        }, reject)
-      }
-
-    })
-  }
   getWarrantyModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if (mockup) {
+      if (!mockup) {
         this.http.get('../../assets/json/productdetail/warranty-modal.json').subscribe((res: any) => {
           this.onWarrantyDataChanged.next(res.data);
         }, reject)
@@ -257,37 +200,10 @@ export class ProductdetailService {
 
     })
   }
-  getSpecificationModalData(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if (mockup) {
-        this.http.get('../../assets/json/productdetail/specification-modal.json').subscribe((res: any) => {
-          this.onSpecificationDataChanged.next(res.data);
-        }, reject)
-      } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onSpecificationDataChanged.next(res.data);
-        }, reject)
-      }
 
-    })
-  }
-  getReviewModalData(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if (mockup) {
-        this.http.get('../../assets/json/productdetail/review-modal.json').subscribe((res: any) => {
-          this.onReviewDataChanged.next(res.data);
-        }, reject)
-      } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onReviewDataChanged.next(res.data);
-        }, reject)
-      }
-
-    })
-  }
   getImformationSpecModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if (mockup) {
+      if (!mockup) {
         this.http.get('../../assets/json/productdetail/imformation-modal.json').subscribe((res: any) => {
           this.onImformationSpecDataChanged.next(res.data);
         }, reject)
@@ -300,7 +216,21 @@ export class ProductdetailService {
     })
   }
 
+  getReviewModalData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (!mockup) {
+        this.http.get('../../assets/json/productdetail/review-modal.json').subscribe((res: any) => {
+          this.onReviewDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onReviewDataChanged.next(res.data);
+        }, reject)
+      }
 
+    })
+  }
+ 
   getShareModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (!mockup) {
@@ -310,6 +240,21 @@ export class ProductdetailService {
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onShareDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
+
+  getReccommentData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (mockup) {
+        this.http.get('../../assets/json/productdetail/reccomment.json').subscribe((res: any) => {
+          this.onReccommentDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url + '/api/cateproducthome', { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onReccommentDataChanged.next(res.data);
         }, reject)
       }
 

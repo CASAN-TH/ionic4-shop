@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ProductShareModalComponent implements OnInit {
 
-  @Input() ShareData: any;
+  @Input() shareData: any;
 
   constructor(
     public modalController: ModalController,
@@ -17,7 +17,7 @@ export class ProductShareModalComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.ShareData)
+    console.log(this.shareData)
   }
 
   dismiss() {

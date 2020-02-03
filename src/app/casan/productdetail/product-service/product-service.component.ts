@@ -12,7 +12,9 @@ export class ProductServiceComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    console.log(this.recivedata)
+   }
 
   serviceModal() {
     this.openService.emit();

@@ -13,30 +13,30 @@
   <ion-row>
     <ion-col size="4">
       <div>
-        <!-- <img class="img-spac" [src]="SpecificationData.image"> -->
+        <!-- <img class="img-spac" [src]="specificationData.image"> -->
       </div>
     </ion-col>
     <ion-col size="8">
       <h3 class="pri">
-        {{SpecificationData.regular_price_text}}
+        {{specificationData.regular_price_text}}
       </h3>
       <span class="ti">
-        {{SpecificationData.installment_price_text}}
+        {{specificationData.installment_price_text}}
       </span>
 
       <span class="unit">x</span>
       <span class="unit">
-        {{SpecificationData.periods_lists}}
+        {{specificationData.periods_lists}}
       </span>
       <span class="unit">เดือน</span>
 
       <ion-row>
         <ion-col size="12">
           <span>
-            <ion-text class="name">{{SpecificationData.options_list1.list_items.name}}</ion-text>
+            <ion-text class="name">{{specificationData.options_list1.list_items.name}}</ion-text>
           </span>,
           <span>
-            <ion-text class="name">{{SpecificationData.options_list2.list_items.name}}</ion-text>
+            <ion-text class="name">{{specificationData.options_list2.list_items.name}}</ion-text>
           </span>
         </ion-col>
       </ion-row>
@@ -46,10 +46,10 @@
 
   <ion-row>
     <ion-col class="col-dow" size="12">
-      <ion-text>{{SpecificationData.options_list1.name}}</ion-text>
+      <ion-text>{{specificationData.options_list1.name}}</ion-text>
       <ion-row class="top"
-        *ngIf="SpecificationData.options_list1.list_items && SpecificationData.options_list1.list_items.length">
-        <ion-col class="pay" size="3" *ngFor="let item of SpecificationData.options_list1.list_items"
+        *ngIf="specificationData.options_list1.list_items && specificationData.options_list1.list_items.length">
+        <ion-col class="pay" size="3" *ngFor="let item of specificationData.options_list1.list_items"
           [class.ion-col-border]="item == specColor" (click)="onspecColorClick(item.name)">
           <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="item.name == specColor"></ion-icon>
           <span class="font-size">{{item.name}}</span>
@@ -60,10 +60,10 @@
 
   <ion-row>
     <ion-col class="col-dow" size="12">
-      <ion-text>{{SpecificationData.options_list2.name}}</ion-text>
+      <ion-text>{{specificationData.options_list2.name}}</ion-text>
       <ion-row class="top"
-        *ngIf="SpecificationData.options_list2.list_items && SpecificationData.options_list2.list_items.length">
-        <ion-col class="pay" size="3" *ngFor="let item of SpecificationData.options_list2.list_items"
+        *ngIf="specificationData.options_list2.list_items && specificationData.options_list2.list_items.length">
+        <ion-col class="pay" size="3" *ngFor="let item of specificationData.options_list2.list_items"
           [class.ion-col-border]="item == specSize" (click)="onspecSizeClick(item.name)">
           <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="item.name == specSize"></ion-icon>
           <span class="font-size">{{item.name}}</span>
@@ -78,14 +78,14 @@
   <ion-grid class="grid-footter">
     <ion-row>
       <ion-col size="6" class="add-cart">
-        <ion-buttons class="btn-center" (click)="onCartClick(SpecificationData._id)">
+        <ion-buttons class="btn-center" (click)="onCartClick(specificationData._id)">
           <ion-button class="butcolor">
             เพิ่มใส่รถเข็น
           </ion-button>
         </ion-buttons>
       </ion-col>
       <ion-col size="6" class="buy">
-        <ion-buttons class="btn-center" (click)="onPaymentClick(SpecificationData._id)">
+        <ion-buttons class="btn-center" (click)="onPaymentClick(specificationData._id)">
           <ion-button class="butcolor">
             ซื้อทันที
           </ion-button>

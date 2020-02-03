@@ -8,12 +8,12 @@ import { ModalController } from '@ionic/angular';
 })
 export class ProductTcoinModalComponent implements OnInit {
 
-  @Input() TcoinData: any
+  @Input() tcoinData: any
 
   constructor(public modalController: ModalController) { }
 
   ngOnInit() {
-    console.log(this.TcoinData);
+    console.log(this.tcoinData);
   }
 
   dismiss() {

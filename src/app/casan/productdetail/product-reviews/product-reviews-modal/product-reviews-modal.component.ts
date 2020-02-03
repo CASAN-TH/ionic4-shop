@@ -9,13 +9,13 @@ import { ModalController } from '@ionic/angular';
 })
 export class ProductReviewsModalComponent implements OnInit {
 
-  @Input() ReviewData: any
+  @Input() reviewData: any
   showToolbar = false;
 
   constructor(public modalController: ModalController) { }
 
   ngOnInit() {
-    console.log(this.ReviewData);
+    console.log(this.reviewData);
   }
 
   dismiss() {
