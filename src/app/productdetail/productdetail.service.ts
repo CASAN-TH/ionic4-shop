@@ -64,6 +64,14 @@ export class ProductdetailService {
           "name": ""
         }
       ]
+    },
+    "options_list2": {
+      "name": "",
+      "list_items": [
+        {
+          "name": ""
+        }
+      ]
     }
   });
 
@@ -92,13 +100,10 @@ export class ProductdetailService {
       this.getVouchersModalData();
       this.getWarrantyModalData();
       this.getShareModalData();
+      this.getImformationSpecModalData();
 
-      // this.getPromotionModalData();
-      // this.getTcoinModalData();
-      // this.getWarrantyModalData();
-      // this.getSpecificationModalData();
       // this.getReviewModalData();
-      // this.getImformationSpecModalData();
+      
     } else {
       // return new Promise((resolve, reject) => {
       //   return reject('rejected')
@@ -247,6 +252,20 @@ export class ProductdetailService {
 
     })
   }
+  getImformationSpecModalData(): Observable<any> | Promise<any> | any {
+    return new Promise((resolve, reject) => {
+      if (!mockup) {
+        this.http.get('../../assets/json/productdetail/imformation-modal.json').subscribe((res: any) => {
+          this.onImformationSpecDataChanged.next(res.data);
+        }, reject)
+      } else {
+        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+          this.onImformationSpecDataChanged.next(res.data);
+        }, reject)
+      }
+
+    })
+  }
   // getPromotionModalData(): Observable<any> | Promise<any> | any {
   //   return new Promise((resolve, reject) => {
   //     if (mockup) {
@@ -318,20 +337,20 @@ export class ProductdetailService {
 
     })
   }
-  getImformationSpecModalData(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if (mockup) {
-        this.http.get('../../assets/json/productdetail/imformation-modal.json').subscribe((res: any) => {
-          this.onImformationSpecDataChanged.next(res.data);
-        }, reject)
-      } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onImformationSpecDataChanged.next(res.data);
-        }, reject)
-      }
+  // getImformationSpecModalData(): Observable<any> | Promise<any> | any {
+  //   return new Promise((resolve, reject) => {
+  //     if (mockup) {
+  //       this.http.get('../../assets/json/productdetail/imformation-modal.json').subscribe((res: any) => {
+  //         this.onImformationSpecDataChanged.next(res.data);
+  //       }, reject)
+  //     } else {
+  //       this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+  //         this.onImformationSpecDataChanged.next(res.data);
+  //       }, reject)
+  //     }
 
-    })
-  }
+  //   })
+  // }
 
 
   getShareModalData(): Observable<any> | Promise<any> | any {
