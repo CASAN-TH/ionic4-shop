@@ -12,7 +12,9 @@ export class ProductGiftComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    console.log(this.recivedata);
+   }
 
   promotiongiftModal() {
     this.openpromotionGift.emit();

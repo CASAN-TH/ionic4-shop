@@ -9,14 +9,14 @@ import { Router } from '@angular/router';
 })
 export class ProductGiftModalComponent implements OnInit {
 
-  @Input() PromotionData: any
+  @Input() promotiongiftData: any
 
   constructor(
     public modalController: ModalController,
     private router: Router) { }
 
   ngOnInit() {
-    console.log(this.PromotionData);
+    console.log(this.promotiongiftData);
   }
 
   dismiss() {

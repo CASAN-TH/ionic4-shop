@@ -19,6 +19,7 @@ import { ProductShareModalComponent } from '../casan/productdetail/product-share
 import { ProductSpecModalComponent } from '../casan/productdetail/product-spec/product-spec-modal/product-spec-modal.component';
 import { ProductReviewsModalComponent } from '../casan/productdetail/product-reviews/product-reviews-modal/product-reviews-modal.component';
 import { ProductImformationSpecModalComponent } from '../casan/productdetail/product-imformation-spec/product-imformation-spec-modal/product-imformation-spec-modal.component';
+import { ProductServiceModalComponent } from '../casan/productdetail/product-service/product-service-modal/product-service-modal.component';
 
 @Component({
   selector: 'app-productdetail',
@@ -30,10 +31,10 @@ export class ProductdetailPage implements OnInit {
   productdetailData: any;
   productwarrantyData: any;
   PaymentData: any
-  VouchersData: any
-  PromotionData: any
-  TcoinData: any
-  WarrantyData: any
+  // VouchersData: any
+  // PromotionData: any
+  // TcoinData: any
+  warrantyData: any
   SpecificationData: any
   ReviewData: any
   ImformationSpecData: any
@@ -89,19 +90,19 @@ export class ProductdetailPage implements OnInit {
     //   this.VouchersData = productdetailDataList;
     // })
 
-    this.productdetailService.onPromotionDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
-      this.PromotionData = productdetailDataList;
-    })
+    // this.productdetailService.onPromotionDataChanged.subscribe((productdetailDataList: any) => {
+    //   console.log(productdetailDataList);
+    //   this.PromotionData = productdetailDataList;
+    // })
 
-    this.productdetailService.onTcoinDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
-      this.TcoinData = productdetailDataList;
-    })
+    // this.productdetailService.onTcoinDataChanged.subscribe((productdetailDataList: any) => {
+    //   console.log(productdetailDataList);
+    //   this.TcoinData = productdetailDataList;
+    // })
 
     this.productdetailService.onWarrantyDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
-      this.WarrantyData = productdetailDataList;
+      this.warrantyData = productdetailDataList;
+      console.log(this.warrantyData);
     })
     /////////////////////////////////////////////////////////////////////
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
@@ -176,10 +177,10 @@ export class ProductdetailPage implements OnInit {
   // }
   async openServiceModal() {
     const modal = await this.modalController.create({
-      component: WarrantyModalComponent,
+      component: ProductServiceModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
-        WarrantyData: this.WarrantyData
+        warrantyData: this.warrantyData
       }
     });
     return await modal.present();

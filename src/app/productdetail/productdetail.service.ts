@@ -20,22 +20,40 @@ export class ProductdetailService {
   onProductdetailDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
 
   onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
-  onVouchersDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  onPromotionDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([
-    {
-      "image": ""
-    },
-    {
-      "image": ""
-    },
-    {
-      "image": ""
-    },
-    {
-      "image": ""
+  onVouchersDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "promotions": [
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      },
+      {
+        "image": ""
+      }
+    ],
+    "tcoins": {
+      "tcoinname": ""
     }
-  ]);
-  onTcoinDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  });
+  // onPromotionDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([
+  //   {
+  //     "image": ""
+  //   },
+  //   {
+  //     "image": ""
+  //   },
+  //   {
+  //     "image": ""
+  //   },
+  //   {
+  //     "image": ""
+  //   }
+  // ]);
+  // onTcoinDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onWarrantyDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
 
   onSpecificationDataChanged: BehaviorSubject<any> = new BehaviorSubject({
@@ -71,15 +89,16 @@ export class ProductdetailService {
       this.getProductdetailWarrantyData();
       this.getPaymentModalData();
       this.getReccommentData();
-
       this.getVouchersModalData();
+      this.getWarrantyModalData();
+      this.getShareModalData();
+
       // this.getPromotionModalData();
       // this.getTcoinModalData();
       // this.getWarrantyModalData();
       // this.getSpecificationModalData();
       // this.getReviewModalData();
       // this.getImformationSpecModalData();
-      this.getShareModalData();
     } else {
       // return new Promise((resolve, reject) => {
       //   return reject('rejected')
@@ -203,41 +222,12 @@ export class ProductdetailService {
   getVouchersModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (!mockup) {
-        this.http.get('../../assets/json/productdetail/vouchers-modal.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/benefit-modal.json').subscribe((res: any) => {
           this.onVouchersDataChanged.next(res.data);
         }, reject)
       } else {
         this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
           this.onVouchersDataChanged.next(res.data);
-        }, reject)
-      }
-
-    })
-  }
-  getPromotionModalData(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if (mockup) {
-        this.http.get('../../assets/json/productdetail/promotion-modal.json').subscribe((res: any) => {
-          console.log(res);
-          this.onPromotionDataChanged.next(res.data);
-        }, reject)
-      } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onPromotionDataChanged.next(res.data);
-        }, reject)
-      }
-
-    })
-  }
-  getTcoinModalData(): Observable<any> | Promise<any> | any {
-    return new Promise((resolve, reject) => {
-      if (mockup) {
-        this.http.get('../../assets/json/productdetail/tcoin-modal.json').subscribe((res: any) => {
-          this.onTcoinDataChanged.next(res.data);
-        }, reject)
-      } else {
-        this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
-          this.onTcoinDataChanged.next(res.data);
         }, reject)
       }
 
@@ -245,7 +235,7 @@ export class ProductdetailService {
   }
   getWarrantyModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
-      if (mockup) {
+      if (!mockup) {
         this.http.get('../../assets/json/productdetail/warranty-modal.json').subscribe((res: any) => {
           this.onWarrantyDataChanged.next(res.data);
         }, reject)
@@ -257,6 +247,49 @@ export class ProductdetailService {
 
     })
   }
+  // getPromotionModalData(): Observable<any> | Promise<any> | any {
+  //   return new Promise((resolve, reject) => {
+  //     if (mockup) {
+  //       this.http.get('../../assets/json/productdetail/promotion-modal.json').subscribe((res: any) => {
+  //         console.log(res);
+  //         this.onPromotionDataChanged.next(res.data);
+  //       }, reject)
+  //     } else {
+  //       this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+  //         this.onPromotionDataChanged.next(res.data);
+  //       }, reject)
+  //     }
+
+  //   })
+  // }
+  // getTcoinModalData(): Observable<any> | Promise<any> | any {
+  //   return new Promise((resolve, reject) => {
+  //     if (mockup) {
+  //       this.http.get('../../assets/json/productdetail/tcoin-modal.json').subscribe((res: any) => {
+  //         this.onTcoinDataChanged.next(res.data);
+  //       }, reject)
+  //     } else {
+  //       this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+  //         this.onTcoinDataChanged.next(res.data);
+  //       }, reject)
+  //     }
+
+  //   })
+  // }
+  // getWarrantyModalData(): Observable<any> | Promise<any> | any {
+  //   return new Promise((resolve, reject) => {
+  //     if (mockup) {
+  //       this.http.get('../../assets/json/productdetail/warranty-modal.json').subscribe((res: any) => {
+  //         this.onWarrantyDataChanged.next(res.data);
+  //       }, reject)
+  //     } else {
+  //       this.http.get(api_url, { headers: this.authorizationHeader() }).subscribe((res: any) => {
+  //         this.onWarrantyDataChanged.next(res.data);
+  //       }, reject)
+  //     }
+
+  //   })
+  // }
   getSpecificationModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
