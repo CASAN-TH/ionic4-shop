@@ -10,6 +10,8 @@ export class ProductListBlockComponent implements OnInit {
   @Input() recivedata: any
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.recivedata)
+  }
 
 }

@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ProductListBlockPage } from './product-list-block.page';
+import { PromotionShotcutComponent } from './promotion-shotcut.component';
 
-describe('ProductListBlockPage', () => {
-  let component: ProductListBlockPage;
-  let fixture: ComponentFixture<ProductListBlockPage>;
+describe('PromotionShotcutComponent', () => {
+  let component: PromotionShotcutComponent;
+  let fixture: ComponentFixture<PromotionShotcutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProductListBlockPage ],
+      declarations: [ PromotionShotcutComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ProductListBlockPage);
+    fixture = TestBed.createComponent(PromotionShotcutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
