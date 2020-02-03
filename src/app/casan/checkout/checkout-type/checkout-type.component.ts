@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActionSheetController, ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { SelectdownModalComponent } from 'src/app/payment/selectdown-modal/selectdown-modal.component';
+import { SelectdownModalComponent } from 'src/app/casan/checkout/checkout-type/selectdown-modal/selectdown-modal.component';
 
 @Component({
   selector: 'app-checkout-type',

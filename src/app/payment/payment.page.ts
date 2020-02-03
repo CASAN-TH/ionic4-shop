@@ -4,9 +4,6 @@ import { PaymentService } from './payment.service';
 import { Location } from '@angular/common';
 import { ModalController, ActionSheetController, AlertController } from '@ionic/angular';
 import { VouchersModalComponent } from '../productdetail/vouchers-modal/vouchers-modal.component';
-import { SelectdownModalComponent } from './selectdown-modal/selectdown-modal.component';
-import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
-import { PaymentListModalComponent } from './payment-list-modal/payment-list-modal.component';
 import { AcceptModalComponent } from './accept-modal/accept-modal.component';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -92,16 +89,6 @@ export class PaymentPage implements OnInit {
   }
   onOrderClick2() {
     this.router.navigate(['payfor'])
-  }
-
-  async paymentlistModal() {
-    const modal = await this.modalController.create({
-      component: PaymentListModalComponent,
-      componentProps: {
-        cartDataList: this.cartDataList
-      }
-    });
-    return await modal.present();
   }
 
   async vouchersModal() {
