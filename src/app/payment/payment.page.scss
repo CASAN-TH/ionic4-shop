@@ -11,14 +11,6 @@
   color: transparent !important;
 }
 
-.show-footer {
-  --padding-top: 0rem !important;
-  --background: #fbf3f1;
-  --border-width: 0px !important;
-  border: 1px !important;
-  color: #070101 !important;
-}
-
 .backicon {
   color: #ffffff !important;
   margin-top: -62px;
@@ -53,10 +45,6 @@ ion-text-nowarp {
 
 mat-dialog-container {
   padding-top: 50px;
-}
-
-.stylefont {
-  font-weight: bold;
 }
 
 .ion-col-border {
@@ -204,23 +192,4 @@ ion-header {
   font-size: 18px;
   color: #ff4800;
   font-weight: bold;
-}
-
-.footterfont2 {
-  font-size: 18px;
-  color: #ff4800;
-  font-weight: bold;
-}
-
-.font-total-footter {
-  font-size: 15px;
-}
-
-.amount-pay {
-  margin-top: 17px;
-}
-
-.credit-use {
-  font-size: 13px;
-  font-weight: 100;
 }

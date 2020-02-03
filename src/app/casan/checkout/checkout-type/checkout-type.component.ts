@@ -16,18 +16,22 @@ export class CheckoutTypeComponent implements OnInit {
   @Input() profilestatus: any;
   @Input() downDataList: any;
   @Input() selectdownData: any;
+  @Input() acceptClick: boolean;
 
   @Output() typeBack: EventEmitter<any> = new EventEmitter();
+  @Output() acceptBack: EventEmitter<any> = new EventEmitter();
 
   unitSelected: any;
-  AcceptClick: boolean = false;
+
   constructor(
     public actionSheetController: ActionSheetController,
     private router: Router,
     private modalController: ModalController
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+
+  }
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
@@ -47,6 +51,10 @@ export class CheckoutTypeComponent implements OnInit {
       }]
     });
     await actionSheet.present();
+  }
+
+  onAcceptClick() {
+    this.acceptBack.emit(this.acceptClick);
   }
 
   async actionPayment() {
@@ -97,13 +105,13 @@ export class CheckoutTypeComponent implements OnInit {
     });
     return await modal.present();
   }
-  
+
   onUnitClick(unitId: any) {
     // this.router.navigateByUrl('search/' + cate2Id);
     console.log(unitId);
     this.unitSelected = unitId;
   }
-  onViewClick(){
+  onViewClick() {
     this.router.navigateByUrl('termsandcondition');
   }
 }
