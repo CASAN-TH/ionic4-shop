@@ -96,5 +96,7 @@ export class CheckoutTypeComponent implements OnInit {
     console.log(unitId);
     this.unitSelected = unitId;
   }
-
+  onViewClick(){
+    this.router.navigateByUrl('termsandcondition');
+  }
 }

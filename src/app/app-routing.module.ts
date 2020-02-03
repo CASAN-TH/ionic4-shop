@@ -60,7 +60,7 @@ const routes: Routes = [
   },
   {
     path: 'termsandcondition',
-    loadChildren: () => import('../app/termsandcondition/termsandcondition.module').then(m => m.TermsandconditionPageModule)
+    loadChildren: () => import('../app/casan/checkout/termsandcondition/termsandcondition.module').then(m => m.TermsandconditionPageModule)
   },
   {
     path: 'message',
