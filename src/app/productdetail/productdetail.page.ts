@@ -1,19 +1,11 @@
+import { SelectMenuComponent } from './select-menu/select-menu.component';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductdetailService } from './productdetail.service';
 import { ModalController, PopoverController } from '@ionic/angular';
-import { PaymentModalComponent } from './payment-modal/payment-modal.component';
-import { VouchersModalComponent } from './vouchers-modal/vouchers-modal.component';
-import { PromotionModalComponent } from './promotion-modal/promotion-modal.component';
-import { TcoinModalComponent } from './tcoin-modal/tcoin-modal.component';
-import { WarrantyModalComponent } from './warranty-modal/warranty-modal.component';
-import { SpecificationModalComponent } from './specification-modal/specification-modal.component';
-import { ReviewModalComponent } from './review-modal/review-modal.component';
-import { ImformationspecModalComponent } from './imformationspec-modal/imformationspec-modal.component';
 
 import { Location } from '@angular/common';
-import { SelectMenuComponent } from './select-menu/select-menu.component';
-import { ShareModalComponent } from './share-modal/share-modal.component';
+
 import { ProductPaymentModalComponent } from '../casan/productdetail/product-payment/product-payment-modal/product-payment-modal.component';
 import { ProductShareModalComponent } from '../casan/productdetail/product-share/product-share-modal/product-share-modal.component';
 import { ProductSpecModalComponent } from '../casan/productdetail/product-spec/product-spec-modal/product-spec-modal.component';
@@ -30,16 +22,16 @@ export class ProductdetailPage implements OnInit {
 
   productdetailData: any;
   productwarrantyData: any;
-  PaymentData: any
+  paymentData: any
   // VouchersData: any
   // PromotionData: any
   // TcoinData: any
   warrantyData: any
-  SpecificationData: any
-  ReviewData: any
-  ImformationSpecData: any
-  ShareData: any
-  ReccommentData: any
+  specificationData: any
+  reviewData: any
+  imformationSpecData: any
+  shareData: any
+  reccommentData: any
   userData: any
 
   amount: any
@@ -63,66 +55,38 @@ export class ProductdetailPage implements OnInit {
   ngOnInit() {
 
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
       this.productdetailData = productdetailDataList;
-      // this.productCartData = productdetailDataList;
-      console.log(this.productdetailData)
     })
     this.productdetailService.onProductdetailWarrantyDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
       this.productwarrantyData = productdetailDataList;
-      console.log(this.productwarrantyData)
     })
 
     this.productdetailService.onReccommentDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
-      this.ReccommentData = productdetailDataList;
+      this.reccommentData = productdetailDataList;
     })
 
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
-      this.PaymentData = productdetailDataList;
-      console.log(this.PaymentData)
+      this.paymentData = productdetailDataList;
     })
-    /////////////////////////////////////////////////////////////////////
-    // this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
-    //   console.log(productdetailDataList);
-    //   this.VouchersData = productdetailDataList;
-    // })
-
-    // this.productdetailService.onPromotionDataChanged.subscribe((productdetailDataList: any) => {
-    //   console.log(productdetailDataList);
-    //   this.PromotionData = productdetailDataList;
-    // })
-
-    // this.productdetailService.onTcoinDataChanged.subscribe((productdetailDataList: any) => {
-    //   console.log(productdetailDataList);
-    //   this.TcoinData = productdetailDataList;
-    // })
 
     this.productdetailService.onWarrantyDataChanged.subscribe((productdetailDataList: any) => {
       this.warrantyData = productdetailDataList;
-      console.log(this.warrantyData);
     })
-    /////////////////////////////////////////////////////////////////////
+
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
-      this.SpecificationData = productdetailDataList;
+      this.specificationData = productdetailDataList;
     })
-    /////////////////////////////////////////////////////////////////////
+
     this.productdetailService.onReviewDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
-      this.ReviewData = productdetailDataList;
+      this.reviewData = productdetailDataList;
     })
 
     this.productdetailService.onImformationSpecDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
-      this.ImformationSpecData = productdetailDataList;
+      this.imformationSpecData = productdetailDataList;
     })
 
     this.productdetailService.onShareDataChanged.subscribe((productdetailDataList: any) => {
-      console.log(productdetailDataList);
-      this.ShareData = productdetailDataList;
+      this.shareData = productdetailDataList;
     })
 
 
@@ -132,7 +96,6 @@ export class ProductdetailPage implements OnInit {
   async getUser() {
     const res = await this.productdetailService.getUser()
     this.userData = res   //get เอา id จาก User
-    console.log(this.userData.data.username)
   }
 
   async openPaymentModal() {
@@ -140,41 +103,12 @@ export class ProductdetailPage implements OnInit {
       component: ProductPaymentModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
-        PaymentData: this.PaymentData
+        paymentData: this.paymentData
       }
     });
     return await modal.present();
   }
-  // async openVoucherModal() {
-  //   const modal = await this.modalController.create({
-  //     component: VouchersModalComponent,
-  //     cssClass: 'my-modal-css',
-  //     componentProps: {
-  //       VouchersData: this.VouchersData
-  //     }
-  //   });
-  //   return await modal.present();
-  // }
-  // async promotionModal() {
-  //   const modal = await this.modalController.create({
-  //     component: PromotionModalComponent,
-  //     cssClass: 'my-modal-css',
-  //     componentProps: {
-  //       PromotionData: this.PromotionData
-  //     }
-  //   });
-  //   return await modal.present();
-  // }
-  // async tcoinModal() {
-  //   const modal = await this.modalController.create({
-  //     component: TcoinModalComponent,
-  //     cssClass: 'my-modal-css',
-  //     componentProps: {
-  //       TcoinData: this.TcoinData
-  //     }
-  //   });
-  //   return await modal.present();
-  // }
+ 
   async openServiceModal() {
     const modal = await this.modalController.create({
       component: ProductServiceModalComponent,
@@ -190,7 +124,7 @@ export class ProductdetailPage implements OnInit {
       component: ProductSpecModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
-        SpecificationData: this.SpecificationData
+        specificationData: this.specificationData
       }
     });
     return await modal.present();
@@ -199,7 +133,7 @@ export class ProductdetailPage implements OnInit {
     const modal = await this.modalController.create({
       component: ProductReviewsModalComponent,
       componentProps: {
-        ReviewData: this.ReviewData
+        reviewData: this.reviewData
       }
     });
     return await modal.present();
@@ -209,7 +143,7 @@ export class ProductdetailPage implements OnInit {
       component: ProductImformationSpecModalComponent,
       cssClass: 'my-modal-css',
       componentProps: {
-        ImformationSpecData: this.ImformationSpecData
+        imformationSpecData: this.imformationSpecData
       }
     });
     return await modal.present();
@@ -220,8 +154,8 @@ export class ProductdetailPage implements OnInit {
   }
 
   onCartClick(cartId: any) {
-    var amount = 1;
-    console.log(this.amount);
+    // var amount = 1;
+    // console.log(this.amount);
     const body = {
       u_id: this.userData.data.username,
       shop: {
@@ -300,9 +234,7 @@ export class ProductdetailPage implements OnInit {
   //   console.log("onPaymentClick");
   //   this.router.navigateByUrl('payment/' + paymentId);
   // }
-  // onChatClick() {
-  //   console.log("Chat Bot");
-  // }
+
   async presentPopover(ev: any) {
     const popover = await this.popoverController.create({
       component: SelectMenuComponent,
@@ -318,7 +250,7 @@ export class ProductdetailPage implements OnInit {
       component: ProductShareModalComponent,
       cssClass: 'share-modal-css',
       componentProps: {
-        ShareData: this.ShareData
+        shareData: this.shareData
       }
     });
     return await modal.present();

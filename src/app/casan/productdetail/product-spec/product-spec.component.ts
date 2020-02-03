@@ -12,7 +12,9 @@ export class ProductSpecComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    console.log(this.recivedata)
+   }
 
   specModal() {
     this.openSpec.emit();

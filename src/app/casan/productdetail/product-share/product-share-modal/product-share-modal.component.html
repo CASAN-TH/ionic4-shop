@@ -5,16 +5,16 @@
         <ion-icon slot="icon-only" mode="ios" name="ios-close"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>{{ShareData.share_title}}</ion-title>
+    <ion-title>{{shareData.share_title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-row>
     <ion-col size="12">
-      <p text-center>{{ShareData.share_subtitle}}</p>
+      <p text-center>{{shareData.share_subtitle}}</p>
       <ion-row>
-        <ion-col text-center size="3" *ngFor="let item of ShareData.shares">
+        <ion-col text-center size="3" *ngFor="let item of shareData.shares">
           <img class="imageshare" [src]="item.image" (click)="onShareSocial(item.id)">
           <p>{{item.name}}</p>
         </ion-col>

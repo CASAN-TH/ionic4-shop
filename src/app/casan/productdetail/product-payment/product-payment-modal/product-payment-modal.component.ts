@@ -12,12 +12,12 @@ export class ProductPaymentModalComponent implements OnInit {
   percenSelected: any;
   unitSelected: any;
 
-  @Input() PaymentData: any
+  @Input() paymentData: any
 
   constructor(public modalController: ModalController, private router: Router) { }
 
   ngOnInit() {
-    console.log(this.PaymentData);
+    console.log(this.paymentData);
   }
 
   dismiss() {
