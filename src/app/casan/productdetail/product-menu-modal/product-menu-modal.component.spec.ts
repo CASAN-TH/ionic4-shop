@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ShareModalComponent } from './share-modal.component';
+import { ProductMenuModalComponent } from './product-menu-modal.component';
 
-describe('ShareModalComponent', () => {
-  let component: ShareModalComponent;
-  let fixture: ComponentFixture<ShareModalComponent>;
+describe('ProductMenuModalComponent', () => {
+  let component: ProductMenuModalComponent;
+  let fixture: ComponentFixture<ProductMenuModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShareModalComponent ],
+      declarations: [ ProductMenuModalComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ShareModalComponent);
+    fixture = TestBed.createComponent(ProductMenuModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
