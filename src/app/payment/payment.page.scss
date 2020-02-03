@@ -3,19 +3,6 @@
   color: #ffffff !important;
 }
 
-.ion-toolbar {
-  --background: transparent;
-  --ion-color-base: transparent !important;
-  --border-width: 0px !important;
-  border: 0 !important;
-  color: transparent !important;
-}
-
-.backicon {
-  color: #ffffff !important;
-  margin-top: -62px;
-}
-
 .backicon2 {
   width: 28px;
   margin-left: 3px;
@@ -23,96 +10,12 @@
   margin-top: -5px;
 }
 
-ion-text-nowarp {
-  overflow: hidden;
-}
-
-.percent_down {
-  margin-left: 52px;
-}
-
 .textright {
   text-align: right;
 }
 
-.selectpading {
-  margin-top: 1%;
-}
-
-.bg-class {
-  --background: linear-gradient(0deg, rgba(255, 255, 255, 1) 24%, rgba(240, 65, 65, 1) 89%);
-}
-
 mat-dialog-container {
   padding-top: 50px;
-}
-
-.ion-col-border {
-  border-style: solid;
-  border-width: 2px;
-  border-color: red;
-}
-
-.address {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-}
-
-.arow-forwardicon {
-  margin-right: -87%;
-}
-
-.label-right {
-  margin-right: -15rem;
-}
-
-.label-right3 {
-  margin-right: -12rem;
-}
-
-.select {
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 7px;
-}
-
-.select2 {
-  font-size: 14px;
-  font-weight: bold;
-  color: rgb(255, 72, 0);
-  margin-top: 7px;
-  margin-left: 34px;
-}
-
-.button-select {
-  width: 28px;
-  margin-left: 280px;
-  color: #c5bfbf;
-  margin-top: -37px;
-}
-
-.price {
-  padding-inline-start: 2%;
-}
-
-.colgif {
-  margin-top: -23px;
-}
-
-.discount_price {
-  font-size: 13px;
-  margin-top: -2px;
-  color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.4);
-}
-
-.ion-item-percenselected {
-  font-size: 2rem;
-  color: red;
-  margin-top: -0.65rem;
-  padding-inline-start: 55%;
-  padding-top: 2%;
-  position: absolute;
 }
 
 .text2 {
@@ -124,10 +27,6 @@ mat-dialog-container {
   margin-top: -8px;
   margin-left: -92px;
   font-size: 15px;
-}
-
-ion-card {
-  background-color: white;
 }
 
 ion-content {
@@ -142,15 +41,6 @@ ion-grid {
 
 ion-toggle {
   margin-left: 54px;
-}
-
-.image {
-  width: 15px;
-}
-
-.footer {
-  background-color: white;
-  height: 66px;
 }
 
 .bordertop {
@@ -171,25 +61,4 @@ ion-header {
 
 .tabselectpay {
   margin-top: -16px;
-}
-
-.total-product {
-  margin-right: -26px;
-  font-size: 14px;
-}
-
-.total-product-col {
-  margin-top: 40px;
-}
-
-.total-product-icon {
-  width: 28px;
-  margin-left: 17px;
-  color: #c5bfbf;
-}
-
-.footterfont {
-  font-size: 18px;
-  color: #ff4800;
-  font-weight: bold;
 }
