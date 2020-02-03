@@ -25,7 +25,8 @@
   <ion-row>
     <ion-col size="12" class="tabselectpay">
       <app-checkout-type [checkoutType]="select" [cartDataList]="cartDataList" [creditPoint]="creditPoint"
-        [profilestatus]="profilestatus" [downDataList]="downDataList" [selectdownData]="selectdownData">
+        [profilestatus]="profilestatus" [downDataList]="downDataList" [selectdownData]="selectdownData"
+        (typeBack)="onTypeBack($event)">
       </app-checkout-type>
     </ion-col>
   </ion-row>

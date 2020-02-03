@@ -87,6 +87,11 @@ export class PaymentPage implements OnInit {
       this.router.navigate(['payfor'])
     }
   }
+
+  onTypeBack(e){
+    this.select = e
+  }
+
   onOrderClick2() {
     this.router.navigate(['payfor'])
   }

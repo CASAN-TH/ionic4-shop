@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActionSheetController, ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { SelectdownModalComponent } from 'src/app/casan/checkout/checkout-type/selectdown-modal/selectdown-modal.component';
@@ -17,6 +17,8 @@ export class CheckoutTypeComponent implements OnInit {
   @Input() downDataList: any;
   @Input() selectdownData: any;
 
+  @Output() typeBack: EventEmitter<any> = new EventEmitter();
+
   unitSelected: any;
   AcceptClick: boolean = false;
   constructor(
@@ -33,12 +35,14 @@ export class CheckoutTypeComponent implements OnInit {
       buttons: [{
         text: 'ผ่อนชำระ',
         handler: () => {
-          this.checkoutType = "ผ่อนชำระ"
+          this.checkoutType = "ผ่อนชำระ";
+          this.typeBack.emit("ผ่อนชำระ");
         }
       }, {
         text: 'ชำระเต็มจำนวนเงิน',
         handler: () => {
-          this.checkoutType = "ชำระเต็มจำนวนเงิน"
+          this.checkoutType = "ชำระเต็มจำนวนเงิน";
+          this.typeBack.emit("ชำระเต็มจำนวนเงิน");
         }
       }]
     });
@@ -52,7 +56,8 @@ export class CheckoutTypeComponent implements OnInit {
         buttons: [{
           text: 'ชำระเต็มจำนวนเงิน',
           handler: () => {
-            this.checkoutType = "ชำระเต็มจำนวนเงิน"
+            this.checkoutType = "ชำระเต็มจำนวนเงิน";
+            this.typeBack.emit("ชำระเต็มจำนวนเงิน");
           }
         }]
       });
@@ -63,12 +68,14 @@ export class CheckoutTypeComponent implements OnInit {
         buttons: [{
           text: 'ผ่อนชำระ',
           handler: () => {
-            this.checkoutType = "ผ่อนชำระ"
+            this.checkoutType = "ผ่อนชำระ";
+            this.typeBack.emit("ผ่อนชำระ");
           }
         }, {
           text: 'ชำระเต็มจำนวนเงิน',
           handler: () => {
-            this.checkoutType = "ชำระเต็มจำนวนเงิน"
+            this.checkoutType = "ชำระเต็มจำนวนเงิน";
+            this.typeBack.emit("ชำระเต็มจำนวนเงิน");
           }
         }]
       });
