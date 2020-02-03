@@ -67,7 +67,8 @@ import { ProductMenuModalComponent } from './product-menu-modal/product-menu-mod
     ProductReviewsComponent,
     ProductImformationSpecComponent,
     ProductDetailComponent,
-    ProductWarrantyComponent
+    ProductWarrantyComponent,
+    ProductMenuModalComponent
   ],
   entryComponents: [
     ProductPaymentModalComponent,

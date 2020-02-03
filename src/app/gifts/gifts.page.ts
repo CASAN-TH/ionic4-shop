@@ -9,6 +9,8 @@ import { SpecificationgiftModalComponent } from './specificationgift-modal/speci
 import { ImformationspecgiftModalComponent } from './imformationspecgift-modal/imformationspecgift-modal.component';
 
 import { Location } from '@angular/common'
+import { ProductShareModalComponent } from '../casan/productdetail/product-share/product-share-modal/product-share-modal.component';
+import { ProductMenuModalComponent } from '../casan/productdetail/product-menu-modal/product-menu-modal.component';
 // import { SelectMenuComponent } from '../productdetail/select-menu/select-menu.component';
 // import { ShareModalComponent } from '../productdetail/share-modal/share-modal.component';
 
@@ -25,7 +27,7 @@ export class GiftsPage implements OnInit {
   WarrantygiftData: any
   SpecificationgiftData: any
   ImformationSpecgiftData: any
-  ShareData: any
+  shareData: any
   ReccommentData: any
 
   slideOpts = {
@@ -74,7 +76,7 @@ export class GiftsPage implements OnInit {
     })
     this.giftsService.onShareDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
-      this.ShareData = productdetailDataList;
+      this.shareData = productdetailDataList;
     })
   }
 
@@ -145,24 +147,24 @@ export class GiftsPage implements OnInit {
     console.log("Chat Bot");
   }
 
-  // async presentPopover(ev: any) {
-  //   const popover = await this.popoverController.create({
-  //     component: SelectMenuComponent,
-  //     event: ev,
-  //     translucent: true
-  //   });
-  //   return await popover.present();
-  // }
+  async presentPopover(ev: any) {
+    const popover = await this.popoverController.create({
+      component: ProductMenuModalComponent,
+      event: ev,
+      translucent: true
+    });
+    return await popover.present();
+  }
 
-  // async onShareModalClick() {
-  //   const modal = await this.modalController.create({
-  //     component: ShareModalComponent,
-  //     cssClass: 'share-modal-css',
-  //     componentProps: {
-  //       ShareData: this.ShareData
-  //     }
-  //   });
-  //   return await modal.present();
-  // }
+  async onShareModalClick() {
+    const modal = await this.modalController.create({
+      component: ProductShareModalComponent,
+      cssClass: 'share-modal-css',
+      componentProps: {
+        shareData: this.shareData
+      }
+    });
+    return await modal.present();
+  }
 
 }
