@@ -1,0 +1,7 @@
+<ion-slides pager="ios" #slider>
+  <ion-slide *ngFor="let item of recivedata">
+    <div [style.background-color]="item.background_color">
+      <img class="slide" [src]="item.image" />
+    </div>
+  </ion-slide>
+</ion-slides>

@@ -65,10 +65,6 @@ export class CategoryPage implements OnInit {
     }
   }
 
-  // onCoverImageClick(){
-  //   this.router.navigateByUrl('promotion');
-  // }
-
   scrollTo(element: string) {
 
   }
