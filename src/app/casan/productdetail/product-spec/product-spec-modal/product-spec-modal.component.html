@@ -50,7 +50,7 @@
       <ion-row class="top"
         *ngIf="specificationData.options_list1.list_items && specificationData.options_list1.list_items.length">
         <ion-col class="pay" size="3" *ngFor="let item of specificationData.options_list1.list_items"
-          [class.ion-col-border]="item == specColor" (click)="onspecColorClick(item.name)">
+          [class.ion-col-border]="item.name == specColor" (click)="onspecColorClick(item.name)">
           <ion-icon class="ion-item-percenselected" name="checkbox" *ngIf="item.name == specColor"></ion-icon>
           <span class="font-size">{{item.name}}</span>
         </ion-col>
@@ -64,7 +64,7 @@
       <ion-row class="top"
         *ngIf="specificationData.options_list2.list_items && specificationData.options_list2.list_items.length">
         <ion-col class="pay" size="3" *ngFor="let item of specificationData.options_list2.list_items"
-          [class.ion-col-border]="item == specSize" (click)="onspecSizeClick(item.name)">
+          [class.ion-col-border]="item.name == specSize" (click)="onspecSizeClick(item.name)">
           <ion-icon class="ion-item-unitselected" name="checkbox" *ngIf="item.name == specSize"></ion-icon>
           <span class="font-size">{{item.name}}</span>
         </ion-col>

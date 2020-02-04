@@ -23,9 +23,6 @@ export class ProductdetailPage implements OnInit {
   productdetailData: any;
   productwarrantyData: any;
   paymentData: any
-  // VouchersData: any
-  // PromotionData: any
-  // TcoinData: any
   warrantyData: any
   specificationData: any
   reviewData: any
@@ -33,16 +30,8 @@ export class ProductdetailPage implements OnInit {
   shareData: any
   reccommentData: any
   userData: any
-
   amount: any
-
   productCartData: any
-
-  // slideOpts = {
-  //   initialSlide: 1,
-  //   speed: 400,
-  //   autoplay: true
-  // };
 
   constructor(
     private router: Router,
@@ -75,6 +64,7 @@ export class ProductdetailPage implements OnInit {
 
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       this.specificationData = productdetailDataList;
+    console.log(this.specificationData)
     })
 
     this.productdetailService.onReviewDataChanged.subscribe((productdetailDataList: any) => {
