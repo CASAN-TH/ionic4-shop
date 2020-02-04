@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-card',
@@ -8,8 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProductCardComponent implements OnInit {
 
   @Input() recivedata: any;
-  constructor() { }
+  constructor(private router: Router) {}
 
   ngOnInit() {}
+
+  onProductdetailClick(productId: any) {
+    this.router.navigateByUrl("productdetail/" + productId);
+  }
 
 }

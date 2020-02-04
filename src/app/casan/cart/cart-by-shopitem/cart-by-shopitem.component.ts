@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { SpecificationModalComponent } from 'src/app/productdetail/specification-modal/specification-modal.component';
+// import { SpecificationModalComponent } from 'src/app/productdetail/specification-modal/specification-modal.component';
 
 @Component({
   selector: 'app-cart-by-shopitem',
@@ -28,16 +28,16 @@ export class CartByShopitemComponent implements OnInit {
     console.log("nevigate Productlist")
   }
 
-  async specModal() {
-    const modal = await this.modalController.create({
-      component: SpecificationModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        SpecificationData: this.specificationData
-      }
-    });
-    return await modal.present();
-  }
+  // async specModal() {
+  //   const modal = await this.modalController.create({
+  //     component: SpecificationModalComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       SpecificationData: this.specificationData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
 
   onRemoveClick(j) {
     this.itemDatas[j].amount_product -= 1;

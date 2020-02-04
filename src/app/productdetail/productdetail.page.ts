@@ -1,4 +1,3 @@
-import { SelectMenuComponent } from './select-menu/select-menu.component';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductdetailService } from './productdetail.service';
@@ -12,6 +11,7 @@ import { ProductSpecModalComponent } from '../casan/productdetail/product-spec/p
 import { ProductReviewsModalComponent } from '../casan/productdetail/product-reviews/product-reviews-modal/product-reviews-modal.component';
 import { ProductImformationSpecModalComponent } from '../casan/productdetail/product-imformation-spec/product-imformation-spec-modal/product-imformation-spec-modal.component';
 import { ProductServiceModalComponent } from '../casan/productdetail/product-service/product-service-modal/product-service-modal.component';
+import { ProductMenuModalComponent } from '../casan/productdetail/product-menu-modal/product-menu-modal.component';
 
 @Component({
   selector: 'app-productdetail',
@@ -23,9 +23,6 @@ export class ProductdetailPage implements OnInit {
   productdetailData: any;
   productwarrantyData: any;
   paymentData: any
-  // VouchersData: any
-  // PromotionData: any
-  // TcoinData: any
   warrantyData: any
   specificationData: any
   reviewData: any
@@ -33,16 +30,8 @@ export class ProductdetailPage implements OnInit {
   shareData: any
   reccommentData: any
   userData: any
-
   amount: any
-
   productCartData: any
-
-  // slideOpts = {
-  //   initialSlide: 1,
-  //   speed: 400,
-  //   autoplay: true
-  // };
 
   constructor(
     private router: Router,
@@ -75,6 +64,7 @@ export class ProductdetailPage implements OnInit {
 
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       this.specificationData = productdetailDataList;
+    console.log(this.specificationData)
     })
 
     this.productdetailService.onReviewDataChanged.subscribe((productdetailDataList: any) => {
@@ -230,14 +220,10 @@ export class ProductdetailPage implements OnInit {
     });
     this.router.navigateByUrl('tabs/cart');
   }
-  // onPaymentClick(paymentId: any) {
-  //   console.log("onPaymentClick");
-  //   this.router.navigateByUrl('payment/' + paymentId);
-  // }
-
+  
   async presentPopover(ev: any) {
     const popover = await this.popoverController.create({
-      component: SelectMenuComponent,
+      component: ProductMenuModalComponent,
       event: ev,
       translucent: true
     });

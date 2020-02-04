@@ -9,7 +9,7 @@ import { ShopPageRoutingModule } from './shop-routing.module';
 import { ShopPage } from './shop.page';
 import { SelectcheckPageModule } from '../selectcheck/selectcheck.module';
 import { FooterSelectcheckPageModule } from '../footer-selectcheck/footer-selectcheck.module';
-import { ProductlistPageModule } from '../productlist/productlist.module';
+// import { ProductlistPageModule } from '../productlist/productlist.module';
 import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
@@ -20,7 +20,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     ShopPageRoutingModule,
     SelectcheckPageModule,
     FooterSelectcheckPageModule,
-    ProductlistPageModule,
+    // ProductlistPageModule,
     MatTabsModule
   ],
   declarations: [ShopPage]

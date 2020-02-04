@@ -21,7 +21,7 @@ export class ProductSpecModalComponent implements OnInit {
     this.specColor = this.specificationData.options_list1.list_items.name
     this.specSize = this.specificationData.options_list2.list_items.name
     // this.specImages = this.specificationData.image
-    // console.log(this.specificationData.image);
+    console.log(this.specificationData);
   }
 
   dismiss() {

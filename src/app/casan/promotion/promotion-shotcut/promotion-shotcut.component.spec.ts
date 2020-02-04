@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ImformationspecModalComponent } from './imformationspec-modal.component';
+import { PromotionShotcutComponent } from './promotion-shotcut.component';
 
-describe('ImformationspecModalComponent', () => {
-  let component: ImformationspecModalComponent;
-  let fixture: ComponentFixture<ImformationspecModalComponent>;
+describe('PromotionShotcutComponent', () => {
+  let component: PromotionShotcutComponent;
+  let fixture: ComponentFixture<PromotionShotcutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ImformationspecModalComponent ],
+      declarations: [ PromotionShotcutComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ImformationspecModalComponent);
+    fixture = TestBed.createComponent(PromotionShotcutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

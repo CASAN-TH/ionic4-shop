@@ -3,7 +3,9 @@ import { Router } from '@angular/router';
 import { PaymentService } from './payment.service';
 import { Location } from '@angular/common';
 import { ModalController, ActionSheetController, AlertController } from '@ionic/angular';
-import { VouchersModalComponent } from '../productdetail/vouchers-modal/vouchers-modal.component';
+// import { ProductVoucherComponent } from '../casan/productdetail/product-benefit/product-voucher/product-voucher.component';
+
+
 
 @Component({
   selector: 'app-payment',
@@ -82,16 +84,16 @@ export class PaymentPage implements OnInit {
     this.acceptClick = e
   }
 
-  async vouchersModal() {
-    const modal = await this.modalController.create({
-      component: VouchersModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        VouchersData: this.VouchersData
-      }
-    });
-    return await modal.present();
-  }
+  // async vouchersModal() {
+  //   const modal = await this.modalController.create({
+  //     component: ProductVoucherComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       VouchersData: this.VouchersData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
 
   async presentAlert() {
     const alert = await this.alertCtrl.create({

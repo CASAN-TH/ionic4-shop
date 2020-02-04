@@ -17,7 +17,21 @@ export class ProductdetailService {
 
   onProductdetailDataListChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onProductdetailWarrantyDataChanged: BehaviorSubject<Array<any>> = new BehaviorSubject([]);
-  onProductdetailDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
+  onProductdetailDataChanged: BehaviorSubject<any> = new BehaviorSubject({
+    "options_list1": {
+      "name": "",
+      "list_items": [
+        "name"
+      ]
+    },
+    "options_list2": {
+      "name": "",
+      "list_items": [
+        "name"
+      ]
+    }
+
+  });
 
   onPaymentDataChanged: BehaviorSubject<any> = new BehaviorSubject({});
   onVouchersDataChanged: BehaviorSubject<any> = new BehaviorSubject({
@@ -230,7 +244,7 @@ export class ProductdetailService {
 
     })
   }
- 
+
   getShareModalData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (!mockup) {

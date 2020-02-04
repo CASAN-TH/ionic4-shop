@@ -1,4 +1,4 @@
-import { ProductlistPageModule } from './../productlist/productlist.module';
+// import { ProductlistPageModule } from './../productlist/productlist.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -17,7 +17,7 @@ import { MessagePage } from './message.page';
     FormsModule,
     IonicModule,
     MessagePageRoutingModule,
-    ProductlistPageModule
+    // ProductlistPageModule
   ],
   declarations: [MessagePage]
 })

@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-select-menu',
-  templateUrl: './select-menu.component.html',
-  styleUrls: ['./select-menu.component.scss'],
+  selector: 'app-product-menu-modal',
+  templateUrl: './product-menu-modal.component.html',
+  styleUrls: ['./product-menu-modal.component.scss'],
 })
-export class SelectMenuComponent implements OnInit {
+export class ProductMenuModalComponent implements OnInit {
 
   constructor(
     private router: Router,

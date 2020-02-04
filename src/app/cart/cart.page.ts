@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from './cart.service';
 import { ModalController, ActionSheetController } from '@ionic/angular';
-import { PaymentModalComponent } from '../productdetail/payment-modal/payment-modal.component';
+// import { PaymentModalComponent } from '../productdetail/payment-modal/payment-modal.component';
 import { PaymentService } from '../payment/payment.service';
 
 

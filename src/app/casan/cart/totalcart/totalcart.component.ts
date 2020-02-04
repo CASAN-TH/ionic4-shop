@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { PaymentModalComponent } from 'src/app/productdetail/payment-modal/payment-modal.component';
+// import { PaymentModalComponent } from 'src/app/productdetail/payment-modal/payment-modal.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -23,16 +23,16 @@ export class TotalcartComponent implements OnInit {
     console.log("select all")
   }
 
-  async installmentModal() {
-    const modal = await this.modalController.create({
-      component: PaymentModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        PaymentData: this.paymentData
-      }
-    });
-    return await modal.present();
-  }
+  // async installmentModal() {
+  //   const modal = await this.modalController.create({
+  //     component: PaymentModalComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       PaymentData: this.paymentData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
 
   onPayClick() {
     this.router.navigate(['payment'])
