@@ -1,3 +1,338 @@
-<p>
-  order-history works!
-</p>
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons mode="ios" slot="start" (click)="ModalDismiss()">
+      <ion-button>
+        <ion-icon mode="ios" slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>รายการสั่งซื้อของฉัน</ion-title>
+    <ion-buttons mode="ios" slot="end">
+      <ion-button (click)="ToSearchPage()">
+        <ion-icon slot="icon-only" name="search">
+        </ion-icon>
+      </ion-button>
+
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" name="more">
+        </ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<!-- <ion-content>
+
+  <mat-tab-group [selectedIndex]="Tabs">
+    <div>
+      <mat-tab label="ทั้งหมด">
+        <div *ngIf="CartDataList">
+          <ion-row>
+            <ion-col size="12">
+              <ion-grid class="list-shadow" *ngFor="let bill of CartDataList let i = index;">
+                <ion-row class="border">
+                  <ion-col size="8" class="ion-align-items-center">
+
+                    <span class="span-title ion-align-items-center">
+                      <ion-icon name="md-appstore" class="icon"></ion-icon>
+                      <ion-label class="select">{{bill.shop_name}}</ion-label>
+                    </span>
+                  </ion-col>
+                  <ion-col size="4" class="ion-align-items-center">
+                    <ion-label class="pay-text">รอการชำระเงิน</ion-label>
+                  </ion-col>
+                </ion-row>
+
+
+                <div *ngFor="let bill of bill.items; let j = index">
+                  <ion-row>
+                    <ion-col size="4">
+                      <div class="ion-align-items-center">
+                        <ion-chip class="ion-justify-content-center">
+                          <ion-label class="discount">{{bill.discount}}</ion-label>
+                        </ion-chip>
+                        <img [src]="bill.img">
+                      </div>
+                    </ion-col>
+
+                    <ion-col size="8">
+                      <ion-row>
+                        <ion-col size="6">
+                          <ion-label>
+                            <h2 class="text-bold">{{bill.name}}</h2>
+                           
+                          </ion-label>
+                        </ion-col>
+                        <ion-col size="6">
+                          <ion-label>
+                            <h2 class="text-bold text-right">{{bill.currency}}{{bill.price}}</h2>
+                           
+                          </ion-label>
+                        </ion-col>
+ 
+                      </ion-row>
+                      <ion-row>
+                        <ion-col size="6">
+                          <ion-label>
+                            <h3>{{bill.color}} {{bill.storage}}</h3>
+                          </ion-label>
+                        </ion-col>
+                        <ion-col size="6">
+                          <ion-label>
+                            <h3 class="text-right">x {{bill.amount_product}}</h3>
+                          </ion-label>
+                        </ion-col>
+
+                      </ion-row>
+
+
+                    </ion-col>
+                  </ion-row>
+
+                  <ion-row>
+
+                    <ion-col size="12" class="text-right">
+                      <ion-text >total {{bill.amount_product}} item(s) Total Payment {{bill.currency}}{{bill.price}}
+                        (Inc.Shipping{{bill.currency}}{{bill.shipingfree}})</ion-text>
+                    </ion-col>
+                  </ion-row>
+
+                  <ion-row >
+                    <ion-col size="12" class="btn-right">
+                      <ion-button color="primary" class="btn-width">ชำระ</ion-button>
+                    </ion-col>
+                  </ion-row>
+                </div>
+
+              </ion-grid>
+
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <div *ngIf="!CartDataList">
+          <ion-row>
+            <ion-col size="12">
+              <img class="img-box" src="https://image.flaticon.com/icons/png/512/1095/1095925.png" alt="">
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12">
+              <p class="ion-text-center">
+                ยังไม่มีข้อมูลสั่งซื้อ ไปช้อปปิ้งกันก่อนได้นะ
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" class="btn-center">
+              <ion-button expand="block" color="primary" (click)="ToHomePage()">ช้อปปิ้งสินค้าในเว็บของเรา</ion-button>
+            </ion-col>
+          </ion-row>
+        </div>
+      </mat-tab>
+    </div>
+
+    <div>
+      <mat-tab label="รอการชำระ">
+        <div *ngIf="CartDataList">
+          <ion-row>
+            <ion-col size="12">
+              <ion-grid class="list-shadow" *ngFor="let bill of CartDataList let i = index;">
+                <ion-row class="border">
+                  <ion-col size="8" class="ion-align-items-center">
+
+                    <span class="span-title ion-align-items-center">
+                      <ion-icon name="md-appstore" class="icon"></ion-icon>
+                      <ion-label class="select">{{bill.shop_name}}</ion-label>
+                    </span>
+                  </ion-col>
+                  <ion-col size="4" class="ion-align-items-center">
+                    <ion-label class="pay-text">รอการชำระเงิน</ion-label>
+                  </ion-col>
+                </ion-row>
+
+
+                <div *ngFor="let bill of bill.items; let j = index">
+                  <ion-row>
+                    <ion-col size="4">
+                      <div class="ion-align-items-center">
+                        <ion-chip class="ion-justify-content-center">
+                          <ion-label class="discount">{{bill.discount}}</ion-label>
+                        </ion-chip>
+                        <img [src]="bill.img">
+                      </div>
+                    </ion-col>
+
+                    <ion-col size="8">
+                      <ion-row>
+                        <ion-col size="6">
+                          <ion-label>
+                            <h2 class="text-bold">{{bill.name}}</h2>
+                           
+                          </ion-label>
+                        </ion-col>
+                        <ion-col size="6">
+                          <ion-label>
+                            <h2 class="text-bold text-right">{{bill.currency}}{{bill.price}}</h2>
+                           
+                          </ion-label>
+                        </ion-col>
+ 
+                      </ion-row>
+                      <ion-row>
+                        <ion-col size="6">
+                          <ion-label>
+                            <h3>{{bill.color}} {{bill.storage}}</h3>
+                          </ion-label>
+                        </ion-col>
+                        <ion-col size="6">
+                          <ion-label>
+                            <h3 class="text-right">x {{bill.amount_product}}</h3>
+                          </ion-label>
+                        </ion-col>
+
+                      </ion-row>
+
+
+                    </ion-col>
+                  </ion-row>
+
+                  <ion-row>
+                    <ion-col size="12">
+                      <ion-text class="text-right">total {{bill.amount_product}} item(s) Total Payment {{bill.currency}}{{bill.price}}
+                        (Inc.Shipping{{bill.currency}}{{bill.shipingfree}})</ion-text>
+                    </ion-col>
+                  </ion-row>
+
+                  <ion-row>
+                    <ion-col size="12" class="btn-right">
+                      <ion-button color="primary" class="btn-width">ชำระ</ion-button>
+                    </ion-col>
+                  </ion-row>
+                </div>
+              </ion-grid>
+            </ion-col>
+          </ion-row>
+        </div>
+        <div *ngIf="!CartDataList">
+          <ion-row>
+            <ion-col size="12">
+              <img class="img-box" src="https://image.flaticon.com/icons/png/512/1095/1095925.png" alt="">
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12">
+              <p class="ion-text-center">
+                ยังไม่มีข้อมูลสั่งซื้อ ไปช้อปปิ้งกันก่อนได้นะ
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" class="btn-center">
+              <ion-button color="primary" (click)="ToHomePage()">ช้อปปิ้งสินค้าในเว็บของเรา</ion-button>
+            </ion-col>
+          </ion-row>
+        </div>
+      </mat-tab>
+    </div>
+
+    <div>
+      <mat-tab label="รอการจัดส่ง">
+        <ion-row>
+          <ion-col size="12">
+            <img class="img-box" src="https://image.flaticon.com/icons/png/512/1095/1095925.png" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <p class="ion-text-center">
+              ยังไม่มีข้อมูลสั่งซื้อ ไปช้อปปิ้งกันก่อนได้นะ
+            </p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="btn-center">
+            <ion-button  color="primary" (click)="ToHomePage()">ช้อปปิ้งสินค้าในเว็บของเรา</ion-button>
+          </ion-col>
+        </ion-row>
+      </mat-tab>
+    </div>
+
+    <div>
+      <mat-tab label="รอรับสินค้า">
+        <ion-row>
+          <ion-col size="12">
+            <img class="img-box" src="https://image.flaticon.com/icons/png/512/1095/1095925.png" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <p class="ion-text-center">
+              ยังไม่มีข้อมูลสั่งซื้อ ไปช้อปปิ้งกันก่อนได้นะ
+            </p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="btn-center">
+            <ion-button color="primary" (click)="ToHomePage()">ช้อปปิ้งสินค้าในเว็บของเรา</ion-button>
+          </ion-col>
+        </ion-row>
+      </mat-tab>
+    </div>
+
+    <div>
+      <mat-tab label="รอการรีวิว">
+        <ion-row>
+          <ion-col size="12">
+            <img class="img-box" src="https://image.flaticon.com/icons/png/512/1095/1095925.png" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <p class="ion-text-center">
+              ยังไม่มีข้อมูลสั่งซื้อ ไปช้อปปิ้งกันก่อนได้นะ
+            </p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="btn-center">
+            <ion-button color="primary" (click)="ToHomePage()">ช้อปปิ้งสินค้าในเว็บของเรา</ion-button>
+          </ion-col>
+        </ion-row>
+      </mat-tab>
+    </div>
+
+    <div>
+      <mat-tab label="หลังการขาย">
+        <ion-row>
+          <ion-col size="12">
+            <img class="img-box" src="https://image.flaticon.com/icons/png/512/1095/1095925.png" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <p class="ion-text-center">
+              ยังไม่มีข้อมูลสั่งซื้อ ไปช้อปปิ้งกันก่อนได้นะ
+            </p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="btn-center">
+            <ion-button color="primary" (click)="ToHomePage()">ช้อปปิ้งสินค้าในเว็บของเรา</ion-button>
+          </ion-col>
+        </ion-row>
+      </mat-tab>
+    </div>
+
+
+
+
+
+  </mat-tab-group>
+
+
+</ion-content>
+
+<p>555</p> -->
