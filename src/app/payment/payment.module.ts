@@ -16,7 +16,8 @@ import { CheckoutModule } from '../casan/checkout/checkout.module';
     FormsModule,
     IonicModule,
     CheckoutModule,
-    PaymentPageRoutingModule
+    PaymentPageRoutingModule,
+  
   ],
   declarations: [PaymentPage]
 })

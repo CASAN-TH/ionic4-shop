@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { AcceptModalComponent } from 'src/app/payment/accept-modal/accept-modal.component';
+import { AcceptModalComponent } from 'src/app/casan/checkout/checkout-total/accept-modal/accept-modal.component';
 import { MatDialog } from '@angular/material/dialog';
 import { AlertController } from '@ionic/angular';
 

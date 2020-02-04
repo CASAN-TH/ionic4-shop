@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { PaymentListModalComponent } from './payment-list-modal.component';
+import { PaymentMethodRecommentComponent } from './payment-method-recomment.component';
 
-describe('PaymentListModalComponent', () => {
-  let component: PaymentListModalComponent;
-  let fixture: ComponentFixture<PaymentListModalComponent>;
+describe('PaymentMethodRecommentComponent', () => {
+  let component: PaymentMethodRecommentComponent;
+  let fixture: ComponentFixture<PaymentMethodRecommentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PaymentListModalComponent ],
+      declarations: [ PaymentMethodRecommentComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PaymentListModalComponent);
+    fixture = TestBed.createComponent(PaymentMethodRecommentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
