@@ -1,12 +1,20 @@
+import { PaymentAmountComponent } from './payment-amount/payment-amount.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { IonicModule } from '@ionic/angular';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    PaymentAmountComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    IonicModule
+  ],
+  exports: [
+    PaymentAmountComponent
   ]
 })
 export class PaymentModule { }
