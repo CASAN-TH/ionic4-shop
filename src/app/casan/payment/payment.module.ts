@@ -3,13 +3,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { PaymentMethodRecommentComponent } from './payment-method-recomment/payment-method-recomment.component';
+import { CounterServiceListComponent } from './counter-service-list/counter-service-list.component';
+import { BillModalComponent } from './counter-service-list/bill-modal/bill-modal.component';
 
 
 
 @NgModule({
   declarations: [
     PaymentAmountComponent,
-    PaymentMethodRecommentComponent
+    PaymentMethodRecommentComponent,
+    CounterServiceListComponent,
+    BillModalComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +23,9 @@ import { PaymentMethodRecommentComponent } from './payment-method-recomment/paym
     PaymentAmountComponent
   ],
   entryComponents: [
-    PaymentMethodRecommentComponent
+    PaymentMethodRecommentComponent,
+    CounterServiceListComponent,
+    BillModalComponent
   ]
 })
 export class PaymentModule { }

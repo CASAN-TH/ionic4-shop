@@ -6,8 +6,8 @@ import { ModalController, AlertController } from '@ionic/angular';
 import { DebitCreditCardModalComponent } from './debit-credit-card-modal/debit-credit-card-modal.component';
 import { OnlineBankingModalComponent } from './online-banking-modal/online-banking-modal.component';
 import { ATMPaymentModalComponent } from './atmpayment-modal/atmpayment-modal.component';
-import { CounterPaymentModalComponent } from './counter-payment-modal/counter-payment-modal.component';
 import { PaymentMethodRecommentComponent } from '../casan/payment/payment-method-recomment/payment-method-recomment.component';
+import { CounterServiceListComponent } from '../casan/payment/counter-service-list/counter-service-list.component';
 
 
 
@@ -117,7 +117,7 @@ export class PayforPage implements OnInit {
   }
   async CounterPaymentModal() {
     const modal = await this.modalController.create({
-      component: CounterPaymentModalComponent,
+      component: CounterServiceListComponent,
       componentProps: {
         counter_paymentData: this.counter_paymentData,
         payforData: this.payforData

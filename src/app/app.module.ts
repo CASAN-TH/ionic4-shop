@@ -50,11 +50,9 @@ import { TranslateModule } from '@ngx-translate/core';
 import { DebitCreditCardModalComponent } from './payfor/debit-credit-card-modal/debit-credit-card-modal.component';
 import { OnlineBankingModalComponent } from './payfor/online-banking-modal/online-banking-modal.component';
 import { ATMPaymentModalComponent } from './payfor/atmpayment-modal/atmpayment-modal.component';
-import { CounterPaymentModalComponent } from './payfor/counter-payment-modal/counter-payment-modal.component';
 import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
 import { ModalLanguageComponent } from './account/modal-language/modal-language.component';
 import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
-import { BillModalComponent } from './payfor/bill-modal/bill-modal.component';
 import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.component';
 // import { SelectMenuComponent } from './productdetail/select-menu/select-menu.component';
 import { PaymentHistoryComponent } from './bill/payment-history/payment-history.component';
@@ -79,18 +77,10 @@ import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal
   declarations: [AppComponent,
     ModalCardComponent,
     ModalCameraComponent,
-    // PaymentModalComponent,
-    // VouchersModalComponent,
-    // PromotionModalComponent,
     SelectdownModalComponent,
     AcceptModalComponent,
 
     PaymentgiftModalComponent,
-    // TcoinModalComponent,
-    // WarrantyModalComponent,
-    // SpecificationModalComponent,
-    // ReviewModalComponent,
-    // ImformationspecModalComponent,
 
     ModalNicknameComponent,
     ModalPhoneComponent,
@@ -133,26 +123,14 @@ import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal
     BankModalComponent,
     OnlineBankingModalComponent,
     ATMPaymentModalComponent,
-    CounterPaymentModalComponent,
-    BillModalComponent,
     AtmBillModalComponent,
-
-    // SelectMenuComponent,
-    // ShareModalComponent,
     SearchModalComponent
 
 
   ],
   entryComponents: [ModalCardComponent,
     ModalCameraComponent,
-    // PaymentModalComponent,
-    // VouchersModalComponent,
-    // PromotionModalComponent,
-    // TcoinModalComponent,
-    // WarrantyModalComponent,
-    // SpecificationModalComponent,
-    // ReviewModalComponent,
-    // ImformationspecModalComponent,
+
     SelectdownModalComponent,
     AcceptModalComponent,
 
@@ -197,8 +175,6 @@ import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal
     BankModalComponent,
     OnlineBankingModalComponent,
     ATMPaymentModalComponent,
-    CounterPaymentModalComponent,
-    BillModalComponent,
     AtmBillModalComponent,
 
     // SelectMenuComponent,
