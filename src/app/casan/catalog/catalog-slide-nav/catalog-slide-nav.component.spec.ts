@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { OnlineBankingModalComponent } from './online-banking-modal.component';
+import { CatalogSlideNavComponent } from './catalog-slide-nav.component';
 
-describe('OnlineBankingModalComponent', () => {
-  let component: OnlineBankingModalComponent;
-  let fixture: ComponentFixture<OnlineBankingModalComponent>;
+describe('CatalogSlideNavComponent', () => {
+  let component: CatalogSlideNavComponent;
+  let fixture: ComponentFixture<CatalogSlideNavComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OnlineBankingModalComponent ],
+      declarations: [ CatalogSlideNavComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(OnlineBankingModalComponent);
+    fixture = TestBed.createComponent(CatalogSlideNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

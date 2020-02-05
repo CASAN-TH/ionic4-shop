@@ -13,13 +13,15 @@
 
 <ion-content fullscreen="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
   
-  <ion-slides pager="ios" #slider>
+  <!-- <ion-slides pager="ios" #slider>
     <ion-slide *ngFor="let item of homeDataList">
       <div [style.background-color]="item.background_color">
         <img class="slide" [src]="item.image" />
       </div>
     </ion-slide>
-  </ion-slides>
+  </ion-slides> -->
+
+  <app-catalog-slide-nav [recivedata]="homeDataList"></app-catalog-slide-nav>
 
 
   <ion-row>
@@ -45,7 +47,6 @@
     </ion-col>
   </ion-row>
 
-  <!-- <productlist *ngFor="let reccomment of homeReccommentData" [recivedata]="reccomment.products"></productlist> -->
   <app-product-list *ngFor="let reccomment of homeReccommentData" [recivedata]="reccomment.products" (onProductClick)="onProductClick($event)"></app-product-list>
 
 </ion-content>

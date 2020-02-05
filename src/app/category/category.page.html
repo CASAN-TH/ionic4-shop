@@ -33,6 +33,7 @@
                 <img class="coverimage" [src]="cover.image" (click)="onCoverImageClick(i,j)">
               </ion-slide>
             </ion-slides>
+            <!-- <app-catalog-slide-nav [recivedata]="cate.cover_image" (openSlide)="onCoverImageClick(i)"></app-catalog-slide-nav> -->
             <ion-row>
               <ion-col size="4" *ngFor="let brand of cate.brands" (click)="onBrandClick(cate._id,brand._id)">
                 <img class="brand" [src]="brand.image">
