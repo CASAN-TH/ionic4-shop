@@ -11,12 +11,14 @@ import { FormsModule } from '@angular/forms';
 import { OnlineBankListComponent } from './online-bank-list/online-bank-list.component';
 import { CreditBankListComponent } from './credit-bank-list/credit-bank-list.component';
 import { BankModalComponent } from './credit-bank-list/bank-modal/bank-modal.component';
+import { PaymentMethodListComponent } from './payment-method-list/payment-method-list.component';
 
 
 
 @NgModule({
   declarations: [
     PaymentAmountComponent,
+    PaymentMethodListComponent,
     PaymentMethodRecommentComponent,
     CounterServiceListComponent,
     BillModalComponent,
@@ -32,7 +34,8 @@ import { BankModalComponent } from './credit-bank-list/bank-modal/bank-modal.com
     IonicModule
   ],
   exports: [
-    PaymentAmountComponent
+    PaymentAmountComponent,
+    PaymentMethodListComponent
   ],
   entryComponents: [
     PaymentMethodRecommentComponent,

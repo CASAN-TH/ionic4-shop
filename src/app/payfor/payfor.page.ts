@@ -3,11 +3,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common'
 import { PayforService } from './payfor.service';
 import { ModalController, AlertController } from '@ionic/angular';
-import { PaymentMethodRecommentComponent } from '../casan/payment/payment-method-recomment/payment-method-recomment.component';
-import { CounterServiceListComponent } from '../casan/payment/counter-service-list/counter-service-list.component';
-import { AtmBankListComponent } from '../casan/payment/atm-bank-list/atm-bank-list.component';
-import { OnlineBankListComponent } from '../casan/payment/online-bank-list/online-bank-list.component';
-import { CreditBankListComponent } from '../casan/payment/credit-bank-list/credit-bank-list.component';
 
 
 
@@ -27,12 +22,14 @@ export class PayforPage implements OnInit {
   counter_paymentData: any;
   mockData: any = {};
 
-  constructor(private router: Router,
+  constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private payforService: PayforService,
     public modalController: ModalController,
     private alertCtrl: AlertController,
-    private _location: Location) { }
+    private _location: Location
+  ) { }
 
   ngOnInit() {
     this.payforService.onPayforDataChanged.subscribe((payforDataList: any) => {
@@ -73,57 +70,6 @@ export class PayforPage implements OnInit {
         this.billPrice = price
         // console.log(this.billPrice)
       });
-  }
-
-
-  async RecommendedMethodModal() {
-    const modal = await this.modalController.create({
-      component: PaymentMethodRecommentComponent,
-      componentProps: {
-        // ReviewData: this.ReviewData
-      }
-    });
-    return await modal.present();
-  }
-  async DebitCreditCardModal() {
-    const modal = await this.modalController.create({
-      component: CreditBankListComponent,
-      componentProps: {
-        debitcreditcardData: this.debitcreditcardData,
-        payforData: this.payforData
-      }
-    });
-    return await modal.present();
-  }
-  async OnlineBankingModal() {
-    const modal = await this.modalController.create({
-      component: OnlineBankListComponent,
-      componentProps: {
-        onlinebankingData: this.onlinebankingData,
-        payforData: this.payforData
-      }
-    });
-    return await modal.present();
-  }
-  async ATMPaymentModal() {
-    const modal = await this.modalController.create({
-      component: AtmBankListComponent,
-      componentProps: {
-        atm_paymentData: this.atm_paymentData,
-        payforData: this.payforData
-      }
-    });
-    return await modal.present();
-  }
-  async CounterPaymentModal() {
-    const modal = await this.modalController.create({
-      component: CounterServiceListComponent,
-      componentProps: {
-        counter_paymentData: this.counter_paymentData,
-        payforData: this.payforData
-      }
-    });
-    return await modal.present();
   }
 
   async confirmAlert() {
