@@ -1,3 +1,82 @@
-<p>
-  atm-bank-list works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="backbutton" slot="end" (click)="dismiss()">
+      <ion-button>
+        <ion-icon slot="icon-only" mode="ios" name="ios-close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>ATM Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <span class="font-conten">{{payforData.limit}} :</span>
+          </ion-col>
+          <ion-col size="6" text-end>
+            <span class="font-conten-amount">{{payforData.cerren}} {{payforData.amount}}</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <p class="font-title">{{atm_paymentData.manual.name}}</p>
+
+      <ion-grid>
+        <ion-item>
+          <ion-label>{{atm_paymentData.phone_number.name}}</ion-label>
+          <ion-input text-end placeholder="66-0800871773"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{atm_paymentData.email.name}}</ion-label>
+          <ion-input text-end placeholder="porapot12@gmail.com"></ion-input>
+        </ion-item>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item no-padding *ngFor="let item of atm_paymentData.bank" (click)="onSelectcheckboxBankClick(item.id)">
+              <img class="icon-image" [src]="item.image">
+              <ion-label>
+                <ion-text class="font-padding">{{item.bankname}}</ion-text>
+              </ion-label>
+              <ion-note slot="end">
+                <ion-checkbox mode="ios" [(ngModel)]="atm_paymentData.bank.id"></ion-checkbox>
+              </ion-note>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-row>
+        <ion-col size="4" text-end>
+          <div>
+            <img class="img-shield" slot="icon-only" src="https://image.flaticon.com/icons/png/512/1161/1161388.png">
+          </div>
+        </ion-col>
+        <ion-col size="8" text-start>
+          <p>การป้องกันการชำระเงิน</p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+
+<ion-footer>
+  <ion-grid class="grid-footter">
+    <ion-buttons class="btn-center">
+      <ion-button class="btn-footer" [disabled]="!atm_paymentData.bank.id" (click)="AtmBillModal()">ชำระตอนนี้
+        {{payforData.cerren}} {{payforData.amount}}</ion-button>
+    </ion-buttons>
+  </ion-grid>
+</ion-footer>

@@ -5,9 +5,9 @@ import { PayforService } from './payfor.service';
 import { ModalController, AlertController } from '@ionic/angular';
 import { DebitCreditCardModalComponent } from './debit-credit-card-modal/debit-credit-card-modal.component';
 import { OnlineBankingModalComponent } from './online-banking-modal/online-banking-modal.component';
-import { ATMPaymentModalComponent } from './atmpayment-modal/atmpayment-modal.component';
 import { PaymentMethodRecommentComponent } from '../casan/payment/payment-method-recomment/payment-method-recomment.component';
 import { CounterServiceListComponent } from '../casan/payment/counter-service-list/counter-service-list.component';
+import { AtmBankListComponent } from '../casan/payment/atm-bank-list/atm-bank-list.component';
 
 
 
@@ -107,7 +107,7 @@ export class PayforPage implements OnInit {
   }
   async ATMPaymentModal() {
     const modal = await this.modalController.create({
-      component: ATMPaymentModalComponent,
+      component: AtmBankListComponent,
       componentProps: {
         atm_paymentData: this.atm_paymentData,
         payforData: this.payforData

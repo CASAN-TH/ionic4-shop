@@ -49,11 +49,9 @@ import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 import { TranslateModule } from '@ngx-translate/core';
 import { DebitCreditCardModalComponent } from './payfor/debit-credit-card-modal/debit-credit-card-modal.component';
 import { OnlineBankingModalComponent } from './payfor/online-banking-modal/online-banking-modal.component';
-import { ATMPaymentModalComponent } from './payfor/atmpayment-modal/atmpayment-modal.component';
 import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
 import { ModalLanguageComponent } from './account/modal-language/modal-language.component';
 import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
-import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.component';
 // import { SelectMenuComponent } from './productdetail/select-menu/select-menu.component';
 import { PaymentHistoryComponent } from './bill/payment-history/payment-history.component';
 import { PaybackHistoryComponent } from './bill/payback-history/payback-history.component';
@@ -122,8 +120,6 @@ import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal
     DebitCreditCardModalComponent,
     BankModalComponent,
     OnlineBankingModalComponent,
-    ATMPaymentModalComponent,
-    AtmBillModalComponent,
     SearchModalComponent
 
 
@@ -174,8 +170,6 @@ import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal
     DebitCreditCardModalComponent,
     BankModalComponent,
     OnlineBankingModalComponent,
-    ATMPaymentModalComponent,
-    AtmBillModalComponent,
 
     // SelectMenuComponent,
     // ShareModalComponent,

@@ -5,6 +5,9 @@ import { IonicModule } from '@ionic/angular';
 import { PaymentMethodRecommentComponent } from './payment-method-recomment/payment-method-recomment.component';
 import { CounterServiceListComponent } from './counter-service-list/counter-service-list.component';
 import { BillModalComponent } from './counter-service-list/bill-modal/bill-modal.component';
+import { AtmBankListComponent } from './atm-bank-list/atm-bank-list.component';
+import { AtmBillModalComponent } from './atm-bank-list/atm-bill-modal/atm-bill-modal.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,10 +16,13 @@ import { BillModalComponent } from './counter-service-list/bill-modal/bill-modal
     PaymentAmountComponent,
     PaymentMethodRecommentComponent,
     CounterServiceListComponent,
-    BillModalComponent
+    BillModalComponent,
+    AtmBankListComponent,
+    AtmBillModalComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
     IonicModule
   ],
   exports: [
@@ -25,7 +31,9 @@ import { BillModalComponent } from './counter-service-list/bill-modal/bill-modal
   entryComponents: [
     PaymentMethodRecommentComponent,
     CounterServiceListComponent,
-    BillModalComponent
+    BillModalComponent,
+    AtmBankListComponent,
+    AtmBillModalComponent
   ]
 })
 export class PaymentModule { }
