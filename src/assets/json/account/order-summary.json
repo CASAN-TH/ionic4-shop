@@ -1,0 +1,30 @@
+{
+    "status": 200,
+    "data": [
+        {
+            "orderstatusname": "ทั้งหมด",
+            "orderstatusimg": "1"
+        },
+        {
+            "orderstatusname": "รอการชำระ",
+            "orderstatusimg": "1"
+        },
+        {
+            "orderstatusname": "รอการจัดส่ง",
+            "orderstatusimg": "1"
+        },
+        {
+            "orderstatusname": "รอรับสินค้า",
+            "orderstatusimg": "1"
+        },
+        {
+            "orderstatusname": "รอการรีวิว",
+            "orderstatusimg": "1"
+        },
+        {
+            "orderstatusname": "หลังการขาย",
+            "orderstatusimg": "1"
+        }
+        
+    ]
+}

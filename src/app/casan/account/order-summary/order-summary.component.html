@@ -1,3 +1,44 @@
-<p>
-  order-summary works!
-</p>
+<ion-card class="ion-text-center">
+  <ion-grid>
+    <ion-item class="ion-no-margin ion-no-padding" (click)="ModalViewAllMyOrdersPage()">
+      <ion-col size="8">
+        <p class="title-font">รายการสั่งซื้อของฉัน</p>
+      </ion-col>
+      <ion-col size="4">
+        <ion-buttons>
+          <ion-button class="more">
+            ดูทั้งหมด
+            <ion-icon mode="ios" name="arrow-forward"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-item>
+
+    <ion-row class="ion-text-center" class="ion-padding-top">
+      <ion-col size="3" (click)="ModalPayViewAllMyOrdersPage()">
+        <div class="ion-justify-content-center">
+          <img class="icon" src="https://image.flaticon.com/icons/svg/1086/1086741.svg" />
+        </div>
+        <p class="font-13">รอชำระเงิน</p>
+      </ion-col>
+      <ion-col size="3" (click)="ModalShipViewAllMyOrdersPage()">
+        <div class="ion-justify-content-center">
+          <img class="icon" src="https://image.flaticon.com/icons/svg/164/164414.svg" />
+        </div>
+        <p class="font-13">รอการจัดส่ง</p>
+      </ion-col>
+      <ion-col size="3" (click)="ModalRecieveViewAllMyOrdersPage()">
+        <div class="ion-justify-content-center">
+          <img class="icon" src="https://image.flaticon.com/icons/svg/1493/1493693.svg" />
+        </div>
+        <p class="font-13">รอรับสินค้า</p>
+      </ion-col>
+      <ion-col size="3" (click)="ModalReviewsViewAllMyOrdersPage()">
+        <div class="ion-justify-content-center">
+          <img class="icon" src="https://image.flaticon.com/icons/svg/1055/1055673.svg" />
+        </div>
+        <p class="font-13">รอการรีวิว</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
