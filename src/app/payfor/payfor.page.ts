@@ -3,11 +3,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common'
 import { PayforService } from './payfor.service';
 import { ModalController, AlertController } from '@ionic/angular';
-import { DebitCreditCardModalComponent } from './debit-credit-card-modal/debit-credit-card-modal.component';
 import { PaymentMethodRecommentComponent } from '../casan/payment/payment-method-recomment/payment-method-recomment.component';
 import { CounterServiceListComponent } from '../casan/payment/counter-service-list/counter-service-list.component';
 import { AtmBankListComponent } from '../casan/payment/atm-bank-list/atm-bank-list.component';
 import { OnlineBankListComponent } from '../casan/payment/online-bank-list/online-bank-list.component';
+import { CreditBankListComponent } from '../casan/payment/credit-bank-list/credit-bank-list.component';
 
 
 
@@ -87,7 +87,7 @@ export class PayforPage implements OnInit {
   }
   async DebitCreditCardModal() {
     const modal = await this.modalController.create({
-      component: DebitCreditCardModalComponent,
+      component: CreditBankListComponent,
       componentProps: {
         debitcreditcardData: this.debitcreditcardData,
         payforData: this.payforData

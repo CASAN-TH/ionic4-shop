@@ -9,6 +9,8 @@ import { AtmBankListComponent } from './atm-bank-list/atm-bank-list.component';
 import { AtmBillModalComponent } from './atm-bank-list/atm-bill-modal/atm-bill-modal.component';
 import { FormsModule } from '@angular/forms';
 import { OnlineBankListComponent } from './online-bank-list/online-bank-list.component';
+import { CreditBankListComponent } from './credit-bank-list/credit-bank-list.component';
+import { BankModalComponent } from './credit-bank-list/bank-modal/bank-modal.component';
 
 
 
@@ -20,7 +22,9 @@ import { OnlineBankListComponent } from './online-bank-list/online-bank-list.com
     BillModalComponent,
     AtmBankListComponent,
     AtmBillModalComponent,
-    OnlineBankListComponent
+    OnlineBankListComponent,
+    CreditBankListComponent,
+    BankModalComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +40,9 @@ import { OnlineBankListComponent } from './online-bank-list/online-bank-list.com
     BillModalComponent,
     AtmBankListComponent,
     AtmBillModalComponent,
-    OnlineBankListComponent
+    OnlineBankListComponent,
+    CreditBankListComponent,
+    BankModalComponent
   ]
 })
 export class PaymentModule { }

@@ -47,11 +47,8 @@ import { ModalFeedbackComponent } from './setting/modal-feedback/modal-feedback.
 import { ModalAboutComponent } from './setting/modal-about/modal-about.component';
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 import { TranslateModule } from '@ngx-translate/core';
-import { DebitCreditCardModalComponent } from './payfor/debit-credit-card-modal/debit-credit-card-modal.component';
 import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
 import { ModalLanguageComponent } from './account/modal-language/modal-language.component';
-import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
-// import { SelectMenuComponent } from './productdetail/select-menu/select-menu.component';
 import { PaymentHistoryComponent } from './bill/payment-history/payment-history.component';
 import { PaybackHistoryComponent } from './bill/payback-history/payback-history.component';
 import { PaymentProductDetailComponent } from './bill/payment-product-detail/payment-product-detail.component';
@@ -59,7 +56,6 @@ import { PaynowComponent } from './bill/paynow/paynow.component';
 import { BillPaymentComponent } from './bill/bill-payment/bill-payment.component';
 import { AcceptModalComponent } from './casan/checkout/checkout-total/accept-modal/accept-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
-// import { ShareModalComponent } from './productdetail/share-modal/share-modal.component';
 import { ModalTcoinDetailComponent } from './tcoin/modal-tcoin-detail/modal-tcoin-detail.component';
 import { SearchModalComponent } from './home/search-modal/search-modal.component';
 import { ModalCouponCenterComponent } from './mycoupon/modal-coupon-center/modal-coupon-center.component';
@@ -116,8 +112,6 @@ import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal
     PaynowComponent,
     BillPaymentComponent,
 
-    DebitCreditCardModalComponent,
-    BankModalComponent,
     SearchModalComponent
 
 
@@ -164,9 +158,6 @@ import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal
     PaymentProductDetailComponent,
     PaynowComponent,
     BillPaymentComponent,
-
-    DebitCreditCardModalComponent,
-    BankModalComponent,
 
     SearchModalComponent
   ],
