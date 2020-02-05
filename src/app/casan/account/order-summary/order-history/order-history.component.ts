@@ -26,6 +26,11 @@ export class OrderHistoryComponent implements OnInit {
     this.modalController.dismiss();
   }
 
+  ToHomePage() {
+    this.modalController.dismiss();
+    this.router.navigate(["tabs/home"]);
+  }
+
   async ToSearchPage() {
     const modal = await this.modalController.create({
       component: SearchHistoryComponent,
