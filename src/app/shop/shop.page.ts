@@ -4,7 +4,7 @@ import { ShopService } from './shop.service';
 import { MenuController, PopoverController, ModalController } from '@ionic/angular';
 
 import { Location } from '@angular/common';
-import { SelectMenuComponent } from '../productdetail/select-menu/select-menu.component';
+// import { SelectMenuComponent } from '../productdetail/select-menu/select-menu.component';
 import { DomSanitizer } from '@angular/platform-browser';
 import { SearchModalComponent } from '../home/search-modal/search-modal.component';
 
@@ -77,14 +77,14 @@ export class ShopPage implements OnInit {
   }
 
 
-  async presentPopover(ev: any) {
-    const popover = await this.popoverController.create({
-      component: SelectMenuComponent,
-      event: ev,
-      translucent: true
-    });
-    return await popover.present();
-  }
+  // async presentPopover(ev: any) {
+  //   const popover = await this.popoverController.create({
+  //     component: SelectMenuComponent,
+  //     event: ev,
+  //     translucent: true
+  //   });
+  //   return await popover.present();
+  // }
 
 
   async SearchModal() {

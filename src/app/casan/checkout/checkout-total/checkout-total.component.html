@@ -1,3 +1,76 @@
-<p>
-  checkout-total works!
-</p>
+<div *ngIf="typeSelect === 'ผ่อนชำระ'">
+  <ion-toolbar>
+    <ion-row *ngFor="let data of downDataList" class="border-footer">
+      <ion-col size="12">
+        <ion-row>
+          <ion-col size="12" *ngFor="let item of data.down_payment">
+            เงินดาวน์:<span class="stylefont">{{item.cerrency}}{{item.amount}}</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="font-total-footter">
+            จ่ายรายเดือน:<span class="stylefont">{{data.cerrency}}{{data.installment_amount}}</span>
+            <span>{{data.installment_period}}{{data.unit}}(รวมค่าธรรมเนียม)</span>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+  <ion-row>
+    <ion-col size="12">
+      <ion-row *ngIf="cartDataList.totalcart">
+        <ion-col size="8">
+          <ion-row>
+            <ion-col size="12">
+              <span>จำนวนเงินที่ต้องชำระ:</span>
+              <span
+                class="footterfont2">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.total_discount}}</span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" class="credit-use">
+              <span>วงเงินที่ใช้ได้:</span>
+              <span *ngIf="creditPoint && creditPoint.credit">{{creditCurrency}}</span>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="4" (click)="onOrderClick()" *ngIf="AddaddressData">
+          <section>
+            <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
+          </section>
+        </ion-col>
+        <ion-col size="4" (click)="presentAlert()" *ngIf="!AddaddressData">
+          <section>
+            <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
+          </section>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</div>
+
+<div *ngIf="typeSelect === 'ชำระเต็มจำนวนเงิน'">
+  <ion-row>
+    <ion-col size="12">
+      <ion-row *ngIf="cartDataList.totalcart">
+        <ion-col size="8">
+          <div class="amount-pay">
+            <span>จำนวนเงินที่ต้องชำระ:</span>
+            <span
+              class="footterfont2">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.total_discount}}</span>
+          </div>
+        </ion-col>
+        <ion-col size="4" (click)="onOrderClick2()" *ngIf="AddaddressData">
+          <section>
+            <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
+          </section>
+        </ion-col>
+        <ion-col size="4" (click)="presentAlert()" *ngIf="!AddaddressData">
+          <section>
+            <ion-button expand="full" color="danger">สั่งซื้อสินค้า</ion-button>
+          </section>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</div>

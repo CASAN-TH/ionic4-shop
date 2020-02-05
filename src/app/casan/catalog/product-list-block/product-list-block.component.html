@@ -1,4 +1,4 @@
-<ion-grid class="ion-no-margin ion-no-padding" *ngIf="recivedata">
+<ion-grid class="ion-no-margin ion-no-padding">
   <ion-row>
     <ion-col size="8">
       <p class="title-font">{{recivedata.name}}</p>
@@ -19,7 +19,7 @@
   </ion-row>
   <ion-row nowrap class="forecast_container block-product">
     <ion-col size="5" *ngFor="let product of recivedata.products">
-      <app-product-card></app-product-card>
+      <app-product-card [recivedata]="product"></app-product-card>
     </ion-col>
   </ion-row>
 </ion-grid>

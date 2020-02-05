@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { AccountPageRoutingModule } from './account-routing.module';
 import { AccountPage } from './account.page';
-import { ProductlistPageModule } from '../productlist/productlist.module';
+// import { ProductlistPageModule } from '../productlist/productlist.module';
 import { AccountModule } from '../casan/account/account.module';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { AccountModule } from '../casan/account/account.module';
     FormsModule,
     IonicModule,
     AccountPageRoutingModule,
-    ProductlistPageModule,
+    // ProductlistPageModule,
     AccountModule
 
   ],

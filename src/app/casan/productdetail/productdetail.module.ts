@@ -23,6 +23,7 @@ import { ProductImformationSpecComponent } from './product-imformation-spec/prod
 import { ProductImformationSpecModalComponent } from './product-imformation-spec/product-imformation-spec-modal/product-imformation-spec-modal.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductWarrantyComponent } from './product-warranty/product-warranty.component';
+import { ProductMenuModalComponent } from './product-menu-modal/product-menu-modal.component';
 
 
 
@@ -49,7 +50,8 @@ import { ProductWarrantyComponent } from './product-warranty/product-warranty.co
     ProductImformationSpecComponent,
     ProductImformationSpecModalComponent,
     ProductDetailComponent,
-    ProductWarrantyComponent
+    ProductWarrantyComponent,
+    ProductMenuModalComponent
   ],
   imports: [
     CommonModule,
@@ -65,7 +67,8 @@ import { ProductWarrantyComponent } from './product-warranty/product-warranty.co
     ProductReviewsComponent,
     ProductImformationSpecComponent,
     ProductDetailComponent,
-    ProductWarrantyComponent
+    ProductWarrantyComponent,
+    ProductMenuModalComponent
   ],
   entryComponents: [
     ProductPaymentModalComponent,
@@ -76,7 +79,8 @@ import { ProductWarrantyComponent } from './product-warranty/product-warranty.co
     ProductServiceModalComponent,
     ProductSpecModalComponent,
     ProductReviewsModalComponent,
-    ProductImformationSpecModalComponent
+    ProductImformationSpecModalComponent,
+    ProductMenuModalComponent
   ]
 })
 export class ProductdetailModule { }

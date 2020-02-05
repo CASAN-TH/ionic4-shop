@@ -130,14 +130,15 @@
     <ion-row>
       <ion-col size="12">
         <span>
-          <ion-checkbox [(ngModel)]="AcceptClick" class="iconcheck" mode="ios" color="danger" checked>
+          <ion-checkbox [(ngModel)]="acceptClick" (ngModelChange)="onAcceptClick()" class="iconcheck" mode="ios"
+            color="danger" checked>
           </ion-checkbox>
         </span>
         <span class="accept">
           ฉันเห็นด้วย
         </span>
         <span>
-          <a class="accept-color" routerLink="/termsandcondition" routerLinkActive="active">ข้อตกลงการใช้บริการ</a>
+          <a class="accept-color" (click)="onViewClick()">ข้อตกลงการใช้บริการ</a>
         </span>
       </ion-col>
     </ion-row>

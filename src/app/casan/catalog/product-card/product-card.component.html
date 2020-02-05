@@ -1,4 +1,4 @@
-<ion-card>
+<ion-card (click)="onProductdetailClick(recivedata._id)">
   <ion-chip>
     <ion-label>{{recivedata.sale_price_percentage}}%</ion-label>
   </ion-chip>
@@ -18,3 +18,4 @@
     </ion-card-subtitle>
   </ion-card-content>
 </ion-card>
+

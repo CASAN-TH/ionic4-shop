@@ -7,8 +7,10 @@ import { IonicModule } from '@ionic/angular';
 import { GiftsPageRoutingModule } from './gifts-routing.module';
 
 import { GiftsPage } from './gifts.page';
-import { ProductlistPageModule } from '../productlist/productlist.module';
+// import { ProductlistPageModule } from '../productlist/productlist.module';
 import { FooterPageModule } from '../footer/footer.module';
+import { CatalogModule } from '../casan/catalog/catalog.module';
+import { ProductdetailModule } from '../casan/productdetail/productdetail.module';
 
 @NgModule({
   imports: [
@@ -16,8 +18,10 @@ import { FooterPageModule } from '../footer/footer.module';
     FormsModule,
     IonicModule,
     GiftsPageRoutingModule,
-    ProductlistPageModule,
-    FooterPageModule
+    // ProductlistPageModule,
+    FooterPageModule,
+    ProductdetailModule,
+    CatalogModule
   ],
   declarations: [GiftsPage]
 })

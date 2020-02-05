@@ -1,0 +1,41 @@
+<ion-grid>
+  <ion-row *ngIf="cartDataList.totalcart">
+    <ion-col size="6">
+      <ion-text class="total">ยอดรวม ({{cartDataList.totalcart.amount_product}} สินค้า)</ion-text>
+    </ion-col>
+
+    <ion-col size="6" class="textright">
+      <ion-text class="orders2">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.total_discount}}
+      </ion-text>
+    </ion-col>
+  </ion-row>
+
+  <ion-row *ngIf="cartDataList.totalcart">
+    <ion-col size="6">
+      <ion-text class="total">โปรโมชั่น</ion-text>
+    </ion-col>
+    <ion-col size="6" class="textright">
+      <ion-text class="orders">
+        {{cartDataList.totalcart.currency_discount}}{{cartDataList.totalcart.promotion}}
+      </ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="cartDataList.totalcart">
+    <ion-col size="6">
+      <ion-text class="total">คูปอง</ion-text>
+    </ion-col>
+    <ion-col size="6" class="textright">
+      <ion-text class="orders3">
+        {{cartDataList.totalcart.currency_discount}}{{cartDataList.totalcart.cupon_discount}}</ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="cartDataList.totalcart">
+    <ion-col size="6">
+      <ion-text class="total">ค่าจัดส่ง</ion-text>
+    </ion-col>
+    <ion-col size="6" class="textright">
+      <ion-text class="orders">{{cartDataList.totalcart.currency}}{{cartDataList.totalcart.shipingfree}}
+      </ion-text>
+    </ion-col>
+  </ion-row>
+</ion-grid>

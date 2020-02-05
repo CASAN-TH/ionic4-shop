@@ -1,0 +1,96 @@
+.img-box {
+    padding-top: 50px;
+    height: 150px;
+    width: 120px;
+    margin: auto;
+    display: block;
+}
+
+.chip {
+  margin-bottom: -7%;
+}
+
+.icon {
+  margin-top: -3px;
+  margin-right: 4px;
+}
+
+.text-bold {
+  font-size: 14px;
+  font-weight: bold;
+
+}
+
+
+ion-text {
+  font-size: 12px;
+}
+
+ion-grid {
+  margin-top: 0.5rem;
+  background-color: white;
+}
+
+ion-content {
+  --padding-top: -100px !important;
+  --background: white !important;
+}
+
+.iconimg {
+  padding-top: 15%;
+  width: 30%;
+}
+
+ion-chip {
+  background-color: #ff5b02;
+  color: white;
+  width: 37px;
+  height: 17px;
+  padding: 0px;
+  position: absolute;
+  top: 2%;
+}
+
+
+.discount {
+  font-size: 8px;
+}
+
+.border {
+  border-bottom: 1px solid;
+  border-color: rgb(194, 193, 193);
+  height: 44px;
+}
+
+
+.pay-text {
+    color: #f25454;
+}
+
+.list-shadow {
+    background-color: white;
+    box-shadow: 0px 2px 7px 1px rgb(209, 206, 209);
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.btn-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-center {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-width {
+    width: 130px;
+    height: 35px;
+}
+
+

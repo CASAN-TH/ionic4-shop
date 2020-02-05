@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
-import { VouchersModalComponent } from 'src/app/productdetail/vouchers-modal/vouchers-modal.component';
+// import { VouchersModalComponent } from 'src/app/productdetail/vouchers-modal/vouchers-modal.component';
 
 @Component({
   selector: 'app-cart-by-shop',
@@ -27,14 +27,14 @@ export class CartByShopComponent implements OnInit {
     console.log(i);
   }
 
-  async vouchersModal() {
-    const modal = await this.modalController.create({
-      component: VouchersModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        VouchersData: this.vouchersData
-      }
-    });
-    return await modal.present();
-  }
+  // async vouchersModal() {
+  //   const modal = await this.modalController.create({
+  //     component: VouchersModalComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       VouchersData: this.vouchersData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
 }

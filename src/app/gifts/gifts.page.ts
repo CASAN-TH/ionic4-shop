@@ -9,8 +9,10 @@ import { SpecificationgiftModalComponent } from './specificationgift-modal/speci
 import { ImformationspecgiftModalComponent } from './imformationspecgift-modal/imformationspecgift-modal.component';
 
 import { Location } from '@angular/common'
-import { SelectMenuComponent } from '../productdetail/select-menu/select-menu.component';
-import { ShareModalComponent } from '../productdetail/share-modal/share-modal.component';
+import { ProductShareModalComponent } from '../casan/productdetail/product-share/product-share-modal/product-share-modal.component';
+import { ProductMenuModalComponent } from '../casan/productdetail/product-menu-modal/product-menu-modal.component';
+// import { SelectMenuComponent } from '../productdetail/select-menu/select-menu.component';
+// import { ShareModalComponent } from '../productdetail/share-modal/share-modal.component';
 
 @Component({
   selector: 'app-gifts',
@@ -25,7 +27,7 @@ export class GiftsPage implements OnInit {
   WarrantygiftData: any
   SpecificationgiftData: any
   ImformationSpecgiftData: any
-  ShareData: any
+  shareData: any
   ReccommentData: any
 
   slideOpts = {
@@ -74,7 +76,7 @@ export class GiftsPage implements OnInit {
     })
     this.giftsService.onShareDataChanged.subscribe((productdetailDataList: any) => {
       console.log(productdetailDataList);
-      this.ShareData = productdetailDataList;
+      this.shareData = productdetailDataList;
     })
   }
 
@@ -147,7 +149,7 @@ export class GiftsPage implements OnInit {
 
   async presentPopover(ev: any) {
     const popover = await this.popoverController.create({
-      component: SelectMenuComponent,
+      component: ProductMenuModalComponent,
       event: ev,
       translucent: true
     });
@@ -156,10 +158,10 @@ export class GiftsPage implements OnInit {
 
   async onShareModalClick() {
     const modal = await this.modalController.create({
-      component: ShareModalComponent,
+      component: ProductShareModalComponent,
       cssClass: 'share-modal-css',
       componentProps: {
-        ShareData: this.ShareData
+        shareData: this.shareData
       }
     });
     return await modal.present();

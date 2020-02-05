@@ -3,12 +3,9 @@ import { Router } from '@angular/router';
 import { PaymentService } from './payment.service';
 import { Location } from '@angular/common';
 import { ModalController, ActionSheetController, AlertController } from '@ionic/angular';
-import { VouchersModalComponent } from '../productdetail/vouchers-modal/vouchers-modal.component';
-import { SelectdownModalComponent } from './selectdown-modal/selectdown-modal.component';
-import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
-import { PaymentListModalComponent } from './payment-list-modal/payment-list-modal.component';
-import { AcceptModalComponent } from './accept-modal/accept-modal.component';
-import { MatDialog } from '@angular/material/dialog';
+// import { ProductVoucherComponent } from '../casan/productdetail/product-benefit/product-voucher/product-voucher.component';
+
+
 
 @Component({
   selector: 'app-payment',
@@ -23,16 +20,13 @@ export class PaymentPage implements OnInit {
   selectdownData: any;
   AddaddressData: any;
   AddressModalData: any;
-  showToolbar: boolean;
-  
+
   creditPoint: any;
   numeral = require('numeral');
   creditCurrency: any;
 
   profilestatus: any;
-
-  AcceptClick: boolean = false;
-
+  acceptClick: boolean = false;
 
   constructor(
     private router: Router,
@@ -40,8 +34,7 @@ export class PaymentPage implements OnInit {
     private _location: Location,
     public modalController: ModalController,
     private alertCtrl: AlertController,
-    public actionSheetController: ActionSheetController,
-    public dialog: MatDialog
+    public actionSheetController: ActionSheetController
   ) { }
 
   ngOnInit() {
@@ -56,7 +49,7 @@ export class PaymentPage implements OnInit {
 
         this.cartDataList = cartDataList;
         this.select = this.cartDataList.totalcart.total_discount > this.creditPoint.credit.creditremain ? "ชำระเต็มจำนวนเงิน" : "ผ่อนชำระ";
-      
+
       })
     });
     this.paymentService.onDownDataListChanged.subscribe((downDataList: any) => {
@@ -83,47 +76,24 @@ export class PaymentPage implements OnInit {
     throw new Error("Method not implemented.");
   }
 
-  onOrderClick() {
-    if (!this.AcceptClick) {
-      this.acceptModal();
-    } else {
-      this.router.navigate(['payfor'])
-    }
-  }
-  onOrderClick2() {
-    this.router.navigate(['payfor'])
+  onTypeBack(e) {
+    this.select = e
   }
 
-  async paymentlistModal() {
-    const modal = await this.modalController.create({
-      component: PaymentListModalComponent,
-      componentProps: {
-        cartDataList: this.cartDataList
-      }
-    });
-    return await modal.present();
+  onAcceptBack(e) {
+    this.acceptClick = e
   }
 
-  async vouchersModal() {
-    const modal = await this.modalController.create({
-      component: VouchersModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        VouchersData: this.VouchersData
-      }
-    });
-    return await modal.present();
-  }
-
-  acceptModal(): void {
-    const dialogRef = this.dialog.open(AcceptModalComponent, {
-      width: '500px',
-      height: '120px',
-      data: {}
-    });
-    dialogRef.afterClosed().subscribe(result => {
-    });
-  }
+  // async vouchersModal() {
+  //   const modal = await this.modalController.create({
+  //     component: ProductVoucherComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       VouchersData: this.VouchersData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
 
   async presentAlert() {
     const alert = await this.alertCtrl.create({
@@ -179,10 +149,6 @@ export class PaymentPage implements OnInit {
       ]
     });
     await alert.present();
-  }
-
-  onOpenlistClick() {
-    console.log("onOpenlistClick");
   }
 
 }

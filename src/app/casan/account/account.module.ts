@@ -11,6 +11,7 @@ import { LanguageComponent } from './setting/language/language.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { OrderHistoryComponent } from './order-summary/order-history/order-history.component';
 import { SearchHistoryComponent } from './order-summary/search-history/search-history.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -30,10 +31,12 @@ import { SearchHistoryComponent } from './order-summary/search-history/search-hi
     OrderSummaryComponent,
     OrderHistoryComponent,
     SearchHistoryComponent
+    
   ],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    MatTabsModule
   ],
   exports: [
     FavoriteSummaryComponent,

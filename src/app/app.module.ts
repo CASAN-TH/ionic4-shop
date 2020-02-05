@@ -14,14 +14,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalCardComponent } from './pages/regcredit/modals/modal-card/modal-card.component';
-import { PaymentModalComponent } from './productdetail/payment-modal/payment-modal.component';
-import { VouchersModalComponent } from './productdetail/vouchers-modal/vouchers-modal.component';
-import { PromotionModalComponent } from './productdetail/promotion-modal/promotion-modal.component';
-import { TcoinModalComponent } from './productdetail/tcoin-modal/tcoin-modal.component';
-import { WarrantyModalComponent } from './productdetail/warranty-modal/warranty-modal.component';
-import { SpecificationModalComponent } from './productdetail/specification-modal/specification-modal.component';
-import { ReviewModalComponent } from './productdetail/review-modal/review-modal.component';
-import { ImformationspecModalComponent } from './productdetail/imformationspec-modal/imformationspec-modal.component';
+// import { PaymentModalComponent } from './productdetail/payment-modal/payment-modal.component';
+// import { VouchersModalComponent } from './productdetail/vouchers-modal/vouchers-modal.component';
+// import { PromotionModalComponent } from './productdetail/promotion-modal/promotion-modal.component';
+// import { TcoinModalComponent } from './productdetail/tcoin-modal/tcoin-modal.component';
+// import { WarrantyModalComponent } from './productdetail/warranty-modal/warranty-modal.component';
+// import { SpecificationModalComponent } from './productdetail/specification-modal/specification-modal.component';
+// import { ReviewModalComponent } from './productdetail/review-modal/review-modal.component';
+// import { ImformationspecModalComponent } from './productdetail/imformationspec-modal/imformationspec-modal.component';
 
 
 import { ModalCameraComponent } from './modals/modal-camera/modal-camera.component';
@@ -40,7 +40,7 @@ import { ModalMarriageComponent } from './credit/modal-marriage/modal-marriage.c
 import { ModalSecondcontactComponent } from './credit/modal-secondcontact/modal-secondcontact.component';
 import { ModalAssetdocsComponent } from './credit/modal-assetdocs/modal-assetdocs.component';
 import { ModalJobComponent } from './credit/modal-job/modal-job.component';
-import { SelectdownModalComponent } from './payment/selectdown-modal/selectdown-modal.component';
+import { SelectdownModalComponent } from './casan/checkout/checkout-type/selectdown-modal/selectdown-modal.component';
 import { ModalAssetdocsDetailComponent } from './credit/modal-assetdocs-detail/modal-assetdocs-detail.component';
 import { ModalAddressComponent } from './pages/me/modal-address/modal-address.component';
 import { ModalFeedbackComponent } from './setting/modal-feedback/modal-feedback.component';
@@ -53,20 +53,19 @@ import { OnlineBankingModalComponent } from './payfor/online-banking-modal/onlin
 import { ATMPaymentModalComponent } from './payfor/atmpayment-modal/atmpayment-modal.component';
 import { CounterPaymentModalComponent } from './payfor/counter-payment-modal/counter-payment-modal.component';
 import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
-import { PaymentListModalComponent } from './payment/payment-list-modal/payment-list-modal.component';
 import { ModalLanguageComponent } from './account/modal-language/modal-language.component';
 import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
 import { BillModalComponent } from './payfor/bill-modal/bill-modal.component';
 import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.component';
-import { SelectMenuComponent } from './productdetail/select-menu/select-menu.component';
+// import { SelectMenuComponent } from './productdetail/select-menu/select-menu.component';
 import { PaymentHistoryComponent } from './bill/payment-history/payment-history.component';
 import { PaybackHistoryComponent } from './bill/payback-history/payback-history.component';
 import { PaymentProductDetailComponent } from './bill/payment-product-detail/payment-product-detail.component';
 import { PaynowComponent } from './bill/paynow/paynow.component';
 import { BillPaymentComponent } from './bill/bill-payment/bill-payment.component';
-import { ShareModalComponent } from './productdetail/share-modal/share-modal.component';
-import { AcceptModalComponent } from './payment/accept-modal/accept-modal.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { AcceptModalComponent } from './casan/checkout/checkout-total/accept-modal/accept-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
+// import { ShareModalComponent } from './productdetail/share-modal/share-modal.component';
 import { ModalTcoinDetailComponent } from './tcoin/modal-tcoin-detail/modal-tcoin-detail.component';
 import { SearchModalComponent } from './home/search-modal/search-modal.component';
 import { ModalCouponCenterComponent } from './mycoupon/modal-coupon-center/modal-coupon-center.component';
@@ -81,19 +80,18 @@ import { PopoverSelectComponent } from 'src/app/casan/account/order-summary/popo
   declarations: [AppComponent,
     ModalCardComponent,
     ModalCameraComponent,
-    PaymentModalComponent,
-    VouchersModalComponent,
-    PromotionModalComponent,
+    // PaymentModalComponent,
+    // VouchersModalComponent,
+    // PromotionModalComponent,
     SelectdownModalComponent,
-    PaymentListModalComponent,
     AcceptModalComponent,
 
     PaymentgiftModalComponent,
-    TcoinModalComponent,
-    WarrantyModalComponent,
-    SpecificationModalComponent,
-    ReviewModalComponent,
-    ImformationspecModalComponent,
+    // TcoinModalComponent,
+    // WarrantyModalComponent,
+    // SpecificationModalComponent,
+    // ReviewModalComponent,
+    // ImformationspecModalComponent,
 
     ModalNicknameComponent,
     ModalPhoneComponent,
@@ -142,24 +140,23 @@ import { PopoverSelectComponent } from 'src/app/casan/account/order-summary/popo
     BillModalComponent,
     AtmBillModalComponent,
 
-    SelectMenuComponent,
-    ShareModalComponent,
+    // SelectMenuComponent,
+    // ShareModalComponent,
     SearchModalComponent
 
 
   ],
   entryComponents: [ModalCardComponent,
     ModalCameraComponent,
-    PaymentModalComponent,
-    VouchersModalComponent,
-    PromotionModalComponent,
-    TcoinModalComponent,
-    WarrantyModalComponent,
-    SpecificationModalComponent,
-    ReviewModalComponent,
-    ImformationspecModalComponent,
+    // PaymentModalComponent,
+    // VouchersModalComponent,
+    // PromotionModalComponent,
+    // TcoinModalComponent,
+    // WarrantyModalComponent,
+    // SpecificationModalComponent,
+    // ReviewModalComponent,
+    // ImformationspecModalComponent,
     SelectdownModalComponent,
-    PaymentListModalComponent,
     AcceptModalComponent,
 
     ModalNicknameComponent,
@@ -209,8 +206,8 @@ import { PopoverSelectComponent } from 'src/app/casan/account/order-summary/popo
     BillModalComponent,
     AtmBillModalComponent,
 
-    SelectMenuComponent,
-    ShareModalComponent,
+    // SelectMenuComponent,
+    // ShareModalComponent,
     SearchModalComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,

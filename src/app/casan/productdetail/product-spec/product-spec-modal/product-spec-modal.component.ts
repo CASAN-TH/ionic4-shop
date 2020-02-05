@@ -13,15 +13,15 @@ export class ProductSpecModalComponent implements OnInit {
   specSize: any;
   specImages: any;
 
-  @Input() SpecificationData: any
+  @Input() specificationData: any
 
   constructor(public modalController: ModalController, private router: Router) { }
 
   ngOnInit() {
-    this.specColor = this.SpecificationData.options_list1.list_items.name
-    this.specSize = this.SpecificationData.options_list2.list_items.name
-    // this.specImages = this.SpecificationData.image
-    // console.log(this.SpecificationData.image);
+    this.specColor = this.specificationData.options_list1.list_items.name
+    this.specSize = this.specificationData.options_list2.list_items.name
+    // this.specImages = this.specificationData.image
+    console.log(this.specificationData);
   }
 
   dismiss() {
@@ -31,15 +31,15 @@ export class ProductSpecModalComponent implements OnInit {
   onspecColorClick(specColorId: any, specImage: any) {
     console.log(specColorId);
     this.specColor = specColorId;
-    this.SpecificationData.options_list1.list_items.name = specColorId;
-    // this.SpecificationData.image = specImage;
+    this.specificationData.options_list1.list_items.name = specColorId;
+    // this.specificationData.image = specImage;
 
   }
 
   onspecSizeClick(specSizeId: any) {
     console.log(specSizeId);
     this.specSize = specSizeId;
-    this.SpecificationData.options_list2.list_items.name = specSizeId;
+    this.specificationData.options_list2.list_items.name = specSizeId;
   }
 
   onCartClick() {
