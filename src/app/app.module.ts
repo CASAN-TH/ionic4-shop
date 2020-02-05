@@ -48,7 +48,6 @@ import { ModalAboutComponent } from './setting/modal-about/modal-about.component
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 import { TranslateModule } from '@ngx-translate/core';
 import { DebitCreditCardModalComponent } from './payfor/debit-credit-card-modal/debit-credit-card-modal.component';
-import { OnlineBankingModalComponent } from './payfor/online-banking-modal/online-banking-modal.component';
 import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
 import { ModalLanguageComponent } from './account/modal-language/modal-language.component';
 import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
@@ -119,7 +118,6 @@ import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal
 
     DebitCreditCardModalComponent,
     BankModalComponent,
-    OnlineBankingModalComponent,
     SearchModalComponent
 
 
@@ -169,10 +167,7 @@ import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal
 
     DebitCreditCardModalComponent,
     BankModalComponent,
-    OnlineBankingModalComponent,
 
-    // SelectMenuComponent,
-    // ShareModalComponent,
     SearchModalComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,

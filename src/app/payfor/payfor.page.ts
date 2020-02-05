@@ -4,10 +4,10 @@ import { Location } from '@angular/common'
 import { PayforService } from './payfor.service';
 import { ModalController, AlertController } from '@ionic/angular';
 import { DebitCreditCardModalComponent } from './debit-credit-card-modal/debit-credit-card-modal.component';
-import { OnlineBankingModalComponent } from './online-banking-modal/online-banking-modal.component';
 import { PaymentMethodRecommentComponent } from '../casan/payment/payment-method-recomment/payment-method-recomment.component';
 import { CounterServiceListComponent } from '../casan/payment/counter-service-list/counter-service-list.component';
 import { AtmBankListComponent } from '../casan/payment/atm-bank-list/atm-bank-list.component';
+import { OnlineBankListComponent } from '../casan/payment/online-bank-list/online-bank-list.component';
 
 
 
@@ -97,7 +97,7 @@ export class PayforPage implements OnInit {
   }
   async OnlineBankingModal() {
     const modal = await this.modalController.create({
-      component: OnlineBankingModalComponent,
+      component: OnlineBankListComponent,
       componentProps: {
         onlinebankingData: this.onlinebankingData,
         payforData: this.payforData
