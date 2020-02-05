@@ -3,11 +3,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common'
 import { PayforService } from './payfor.service';
 import { ModalController, AlertController } from '@ionic/angular';
-import { RecommendedMethodModalComponent } from './recommended-method-modal/recommended-method-modal.component';
 import { DebitCreditCardModalComponent } from './debit-credit-card-modal/debit-credit-card-modal.component';
 import { OnlineBankingModalComponent } from './online-banking-modal/online-banking-modal.component';
 import { ATMPaymentModalComponent } from './atmpayment-modal/atmpayment-modal.component';
 import { CounterPaymentModalComponent } from './counter-payment-modal/counter-payment-modal.component';
+import { PaymentMethodRecommentComponent } from '../casan/payment/payment-method-recomment/payment-method-recomment.component';
 
 
 
@@ -78,7 +78,7 @@ export class PayforPage implements OnInit {
 
   async RecommendedMethodModal() {
     const modal = await this.modalController.create({
-      component: RecommendedMethodModalComponent,
+      component: PaymentMethodRecommentComponent,
       componentProps: {
         // ReviewData: this.ReviewData
       }

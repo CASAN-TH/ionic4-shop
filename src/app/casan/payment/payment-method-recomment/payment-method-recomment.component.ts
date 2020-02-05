@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ModalController } from '@ionic/angular';
+import { Location } from '@angular/common'
 @Component({
   selector: 'app-payment-method-recomment',
   templateUrl: './payment-method-recomment.component.html',
@@ -7,8 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentMethodRecommentComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public modalController: ModalController,
+    private _location: Location
+    ) { }
 
   ngOnInit() {}
 
+  dismiss() {
+    this.modalController.dismiss();
+  }
+
+  onPayment(){
+    this._location.back();
+    this.modalController.dismiss();
+  }
 }

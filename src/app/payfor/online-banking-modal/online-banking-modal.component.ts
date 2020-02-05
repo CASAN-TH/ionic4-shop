@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { RecommendedMethodModalComponent } from '../recommended-method-modal/recommended-method-modal.component';
+import { PaymentMethodRecommentComponent } from 'src/app/casan/payment/payment-method-recomment/payment-method-recomment.component';
 
 @Component({
   selector: 'app-online-banking-modal',
@@ -28,7 +28,7 @@ export class OnlineBankingModalComponent implements OnInit {
 
   async RecommendedMethodModal() {
     const modal = await this.modalController.create({
-      component: RecommendedMethodModalComponent,
+      component: PaymentMethodRecommentComponent,
       componentProps: {
         // ReviewData: this.ReviewData
       }

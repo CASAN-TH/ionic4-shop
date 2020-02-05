@@ -2,12 +2,14 @@ import { PaymentAmountComponent } from './payment-amount/payment-amount.componen
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
+import { PaymentMethodRecommentComponent } from './payment-method-recomment/payment-method-recomment.component';
 
 
 
 @NgModule({
   declarations: [
-    PaymentAmountComponent
+    PaymentAmountComponent,
+    PaymentMethodRecommentComponent
   ],
   imports: [
     CommonModule,
@@ -15,6 +17,9 @@ import { IonicModule } from '@ionic/angular';
   ],
   exports: [
     PaymentAmountComponent
+  ],
+  entryComponents: [
+    PaymentMethodRecommentComponent
   ]
 })
 export class PaymentModule { }
