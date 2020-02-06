@@ -71,7 +71,11 @@ import { ProductGeneralInfoComponent } from './product-general-info/product-gene
     ProductDetailComponent,
     ProductWarrantyComponent,
     ProductMenuModalComponent,
-    ProductGeneralInfoComponent
+    ProductGeneralInfoComponent,
+    ProductVoucherComponent,
+    ProductGiftComponent,
+    ProductTcoinComponent,
+
   ],
   entryComponents: [
     ProductPaymentModalComponent,

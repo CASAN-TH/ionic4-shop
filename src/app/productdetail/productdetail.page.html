@@ -26,18 +26,20 @@
       <app-product-slide [recivedata]="productdetailData.images"></app-product-slide>
     </ion-col>
   </ion-row>
-  
+
   <app-product-general-info [recivedata]="productdetailData">
     <app-product-payment class="primary" [recivedata]="paymentData" (openPayment)="openPaymentModal()">
     </app-product-payment>
     <app-product-share class="secondary" (openShare)="openShareModal()"></app-product-share>
   </app-product-general-info>
- 
-  <ion-row>
-    <ion-col size="12">
-      <app-product-benefit></app-product-benefit>
-    </ion-col>
-  </ion-row>
+
+  <app-product-benefit>
+    <app-product-voucher class="one" [recivedata]="vouchersData" (openVoucher)="openVoucherModal()">
+    </app-product-voucher>
+    <app-product-gift class="two" [recivedata]="promotiongiftData" (openpromotionGift)="openpromotionGiftModal()">
+    </app-product-gift>
+    <app-product-tcoin class="three" [recivedata]="tcoinData" (openTcoin)="openTcoinModal()"></app-product-tcoin>
+  </app-product-benefit>
 
   <ion-row>
     <ion-col size="12">
