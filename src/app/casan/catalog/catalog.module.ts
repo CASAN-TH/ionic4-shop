@@ -7,6 +7,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { CatalogSlideNavComponent } from './catalog-slide-nav/catalog-slide-nav.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ProductGeneralReccommentComponent } from './product-general-reccomment/product-general-reccomment.component';
+import { CataProductListComponent } from './cata-product-list/cata-product-list.component';
 
 
 
@@ -17,7 +18,8 @@ import { ProductGeneralReccommentComponent } from './product-general-reccomment/
     ProductCardComponent,
     CatalogSlideNavComponent,
     CategoriesComponent,
-    ProductGeneralReccommentComponent
+    ProductGeneralReccommentComponent,
+    CataProductListComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { ProductGeneralReccommentComponent } from './product-general-reccomment/
     ProductListBlockComponent,
     CatalogSlideNavComponent,
     CategoriesComponent,
-    ProductGeneralReccommentComponent
+    ProductGeneralReccommentComponent,
+    CataProductListComponent
   ]
 })
 export class CatalogModule { }

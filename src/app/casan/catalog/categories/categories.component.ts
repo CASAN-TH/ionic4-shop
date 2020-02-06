@@ -19,7 +19,7 @@ export class CategoriesComponent implements OnInit {
   ngOnInit() { }
 
   onCoverImage(i: any, j: any) {
-    this.openSlide.emit(i + j);
+    this.openSlide.emit({i : i, j : j});
   }
   onBrandClick(categoryId: any, brandId: any) {
     this.openBrand.emit({categoryId :categoryId, brandId: brandId});
