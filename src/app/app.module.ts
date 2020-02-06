@@ -42,7 +42,6 @@ import { ModalAssetdocsComponent } from './credit/modal-assetdocs/modal-assetdoc
 import { ModalJobComponent } from './credit/modal-job/modal-job.component';
 import { SelectdownModalComponent } from './casan/checkout/checkout-type/selectdown-modal/selectdown-modal.component';
 import { ModalAssetdocsDetailComponent } from './credit/modal-assetdocs-detail/modal-assetdocs-detail.component';
-import { ModalAddressComponent } from './pages/me/modal-address/modal-address.component';
 import { ModalFeedbackComponent } from './setting/modal-feedback/modal-feedback.component';
 import { ModalAboutComponent } from './setting/modal-about/modal-about.component';
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
@@ -79,7 +78,6 @@ import { PopoverSelectComponent } from 'src/app/casan/account/order-summary/popo
     ModalPhoneComponent,
     ModalPasswordComponent,
     ModalSocialComponent,
-    ModalAddressComponent,
     ModalFeedbackComponent,
     ModalAboutComponent,
     ModalMyorderComponent,
@@ -117,7 +115,8 @@ import { PopoverSelectComponent } from 'src/app/casan/account/order-summary/popo
 
 
   ],
-  entryComponents: [ModalCardComponent,
+  entryComponents: [
+    ModalCardComponent,
     ModalCameraComponent,
 
     SelectdownModalComponent,
@@ -127,7 +126,6 @@ import { PopoverSelectComponent } from 'src/app/casan/account/order-summary/popo
     ModalPhoneComponent,
     ModalPasswordComponent,
     ModalSocialComponent,
-    ModalAddressComponent,
     ModalFeedbackComponent,
     ModalAboutComponent,
     ModalMyorderComponent,

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { ModalAddressComponent } from 'src/app/pages/me/modal-address/modal-address.component';
+import { AddressListComponent } from '../../account/address-list/address-list.component';
 
 @Component({
   selector: 'app-address',
@@ -21,7 +21,7 @@ export class AddressComponent implements OnInit {
 
   async addresslModal() {
     const modal = await this.modalController.create({
-      component: ModalAddressComponent,
+      component: AddressListComponent,
       componentProps: {
         AddressData: this.modalData.address
       }

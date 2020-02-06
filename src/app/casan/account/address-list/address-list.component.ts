@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-address-list',
@@ -7,8 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddressListComponent implements OnInit {
 
-  constructor() { }
+  @Input() AddressData: any
 
-  ngOnInit() {}
+  constructor(
+    public modalController: ModalController,
+    private router: Router
+  ) { }
+
+  ngOnInit() {
+    console.log(this.AddressData);
+  }
+
+  ModalDismiss() {
+    this.modalController.dismiss();
+  }
+
+  onEditAddress() {
+    console.log("onEditAddress");
+  }
+
+  onAddNewAddress() {
+    this.router.navigate(['addaddress']);
+    this.modalController.dismiss();
+  }
+
+  onDeleteAddress() {
+    console.log("onDeleteAddress");
+  }
 
 }

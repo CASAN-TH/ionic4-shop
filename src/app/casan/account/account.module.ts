@@ -11,15 +11,10 @@ import { LanguageComponent } from './setting/language/language.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { OrderHistoryComponent } from './order-summary/order-history/order-history.component';
 import { SearchHistoryComponent } from './order-summary/search-history/search-history.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { AddAddressComponent } from './add-address/add-address.component';
 import { AddressListComponent } from './address-list/address-list.component';
-
-
-
-
-
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,11 +30,11 @@ import { AddressListComponent } from './address-list/address-list.component';
     SearchHistoryComponent,
     AddAddressComponent,
     AddressListComponent
-    
   ],
   imports: [
     CommonModule,
     IonicModule,
+    FormsModule,
     MatTabsModule
   ],
   exports: [
@@ -47,7 +42,7 @@ import { AddressListComponent } from './address-list/address-list.component';
     SettingComponent,
     OrderSummaryComponent
   ],
-  entryComponents:[
+  entryComponents: [
     WishListComponent,
     FollowedShopComponent,
     BrowseHistoryComponent,

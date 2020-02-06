@@ -5,11 +5,11 @@ import { AccountService } from './account.service';
 import { ScrollDetail } from '@ionic/core';
 import { ModalController } from '@ionic/angular';
 import { ModalMyorderComponent } from './modal-myorder/modal-myorder.component';
-import { ModalAddressComponent } from '../pages/me/modal-address/modal-address.component';
 import { ModalLanguageComponent } from './modal-language/modal-language.component';
 import { ModalCreditPointComponent } from '../credit/modal-credit-point/modal-credit-point.component';
 import { ModalFavoriteComponent } from './modal-favorite/modal-favorite.component';
 import { ModalFollowedshopComponent } from './modal-followedshop/modal-followedshop.component';
+import { AddressListComponent } from '../casan/account/address-list/address-list.component';
 
 @Component({
   selector: 'app-account',
@@ -218,7 +218,7 @@ export class AccountPage implements OnInit {
 
   async addresslModal() {
     const modal = await this.modalController.create({
-      component: ModalAddressComponent,
+      component: AddressListComponent,
       componentProps: {
         AddressData: this.AddressData
       }
