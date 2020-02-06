@@ -11,16 +11,16 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./category.page.scss'],
 })
 export class CategoryPage implements OnInit {
+
   @ViewChild('content', { static: false }) private content: any;
+  
   data: any;
   tabSelected: any;
+
   constructor(
-    private router: Router, 
-    private categoryService: CategoryService,
-    private dom: DomSanitizer
-    ) { }
-
-
+    private router: Router,
+    private categoryService: CategoryService
+  ) { }
 
   ngOnInit() {
     this.categoryService.onCategoryDataListChanged.subscribe((categoryDataList: any) => {
@@ -30,34 +30,29 @@ export class CategoryPage implements OnInit {
         // console.log(this.data)
         this.tabSelected = this.data[0]._id;
       }
-
-      // this.data.cover_image.link_promotion = this.dom.bypassSecurityTrustResourceUrl(this.data.cover_image.link_promotion);
-      // console.log(this.data.cover_imagelink_promotion);
     })
   }
 
   onMenuClick(cate_id) {
-
     this.tabSelected = cate_id;
     let yOffset = document.getElementById(cate_id).offsetTop;
     let yHOffset = document.getElementById(cate_id).offsetHeight;
     // console.log(yOffset + " : " + yHOffset);
     this.content.scrollToPoint(0, yOffset, 1000);
-
   }
 
-  onBrandClick(categoryId: any, brandId: any) {
-    this.router.navigateByUrl('search/' + categoryId + '/' + brandId);
+  onBrandClick(e: any) {
+    this.router.navigateByUrl('search/' + e.categoryId + '/' + e.brandId);
   }
 
   onPromotionClick(cate2Id: any) {
     this.router.navigateByUrl('search/' + cate2Id);
   }
 
-  onCoverImageClick( i: any, j: any) {
+  onCoverImage(i: any, j: any) {
     if (this.data[i].cover_image[j].type_promotion === 'page') {
       //  console.log("a");
-      //  console.log(this.data[i].cover_image[j].type_promotion);
+      console.log(this.data[i].cover_image[j].type_promotion);
       this.router.navigateByUrl(this.data[i].cover_image[j].link_promotion);
     } else {
       // console.log("b");
@@ -65,8 +60,8 @@ export class CategoryPage implements OnInit {
     }
   }
 
-  scrollTo(element: string) {
+  // scrollTo(element: string) {
 
-  }
+  // }
 
 }

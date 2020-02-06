@@ -24,6 +24,7 @@ import { ProductImformationSpecModalComponent } from './product-imformation-spec
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductWarrantyComponent } from './product-warranty/product-warranty.component';
 import { ProductMenuModalComponent } from './product-menu-modal/product-menu-modal.component';
+import { ProductGeneralInfoComponent } from './product-general-info/product-general-info.component';
 
 
 
@@ -51,7 +52,8 @@ import { ProductMenuModalComponent } from './product-menu-modal/product-menu-mod
     ProductImformationSpecModalComponent,
     ProductDetailComponent,
     ProductWarrantyComponent,
-    ProductMenuModalComponent
+    ProductMenuModalComponent,
+    ProductGeneralInfoComponent
   ],
   imports: [
     CommonModule,
@@ -68,7 +70,8 @@ import { ProductMenuModalComponent } from './product-menu-modal/product-menu-mod
     ProductImformationSpecComponent,
     ProductDetailComponent,
     ProductWarrantyComponent,
-    ProductMenuModalComponent
+    ProductMenuModalComponent,
+    ProductGeneralInfoComponent
   ],
   entryComponents: [
     ProductPaymentModalComponent,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-promotion-shotcut',
@@ -7,8 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PromotionShotcutComponent implements OnInit {
 
+  @Input() recivedata: any
+  @Output() openBrand = new EventEmitter();
+  @Output() openPromotion = new EventEmitter();
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.recivedata);
+  }
 
+  onBrand(categoryId: any, brandId: any) {
+    this.openBrand.emit(categoryId + brandId);
+  }
+  onPromotion(cate2Id: any) {
+    this.openPromotion.emit(cate2Id);
+  }
 }

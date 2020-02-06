@@ -26,35 +26,13 @@
       <app-product-slide [recivedata]="productdetailData.images"></app-product-slide>
     </ion-col>
   </ion-row>
-
-  <ion-row>
-    <ion-col size="12">
-      <ion-grid>
-
-        <ion-row>
-          <ion-col size="12">
-            <h1 class="pri">{{productdetailData.regular_price_text}}</h1>
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col size="12">
-            <app-product-payment [recivedata]="paymentData" (openPayment)="openPaymentModal()"></app-product-payment>
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col size="12">
-            <h4 class="titlewar">{{productdetailData.name}}</h4>
-          </ion-col>
-        </ion-row>
-
-        <app-product-share (openShare)="openShareModal()"></app-product-share>
-
-      </ion-grid>
-    </ion-col>
-  </ion-row>
-
+  
+  <app-product-general-info [recivedata]="productdetailData">
+    <app-product-payment class="primary" [recivedata]="paymentData" (openPayment)="openPaymentModal()">
+    </app-product-payment>
+    <app-product-share class="secondary" (openShare)="openShareModal()"></app-product-share>
+  </app-product-general-info>
+ 
   <ion-row>
     <ion-col size="12">
       <app-product-benefit></app-product-benefit>

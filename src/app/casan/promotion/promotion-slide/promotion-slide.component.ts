@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-promotion-slide',
@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PromotionSlideComponent implements OnInit {
 
+  @Input() recivedata: any
+  @Output() openSlide = new EventEmitter();
   constructor() { }
 
   ngOnInit() {}
 
+  // openImageSlide(ij: any) {
+  //   this.openSlide.emit(ij);
+  // }
 }

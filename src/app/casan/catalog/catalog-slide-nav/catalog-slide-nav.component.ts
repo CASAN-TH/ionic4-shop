@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
+import { CategoryService } from 'src/app/category/category.service';
 
 @Component({
   selector: 'app-catalog-slide-nav',
@@ -6,15 +7,30 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./catalog-slide-nav.component.scss'],
 })
 export class CatalogSlideNavComponent implements OnInit {
+  data: any;
+  
+  // @ViewChild('content', { static: false }) private content: any;
+  @Input() recivedata: any; tabSelected: any;
+  @Output() openMenu = new EventEmitter();
 
-  @Input() recivedata: any
-  // @Output() openSlide = new EventEmitter();
-  constructor() { }
+  constructor(
+    private categoryService: CategoryService
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.categoryService.onCategoryDataListChanged.subscribe((categoryDataList: any) => {
+      // console.log(categoryDataList);
+      this.data = categoryDataList;
+      if (this.data.length > 0) {
+        // console.log(this.data)
+        this.tabSelected = this.data[0]._id;
+      }
+    })
+  }
 
-  // openSlideNav(productId: any) {
-  //   this.openSlide.emit(productId);
-  // }
+  onMenuClick(cate_id) {
+    this.tabSelected = cate_id;
+    this.openMenu.emit(cate_id);
+  }
 
 }
