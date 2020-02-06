@@ -12,6 +12,8 @@ import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { OrderHistoryComponent } from './order-summary/order-history/order-history.component';
 import { SearchHistoryComponent } from './order-summary/search-history/search-history.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { AddAddressComponent } from './add-address/add-address.component';
+import { AddressListComponent } from './address-list/address-list.component';
 
 
 
@@ -30,7 +32,9 @@ import {MatTabsModule} from '@angular/material/tabs';
     LanguageComponent,
     OrderSummaryComponent,
     OrderHistoryComponent,
-    SearchHistoryComponent
+    SearchHistoryComponent,
+    AddAddressComponent,
+    AddressListComponent
     
   ],
   imports: [
@@ -50,7 +54,9 @@ import {MatTabsModule} from '@angular/material/tabs';
     AboutComponent,
     LanguageComponent,
     OrderHistoryComponent,
-    SearchHistoryComponent
+    SearchHistoryComponent,
+    AddAddressComponent,
+    AddressListComponent
   ]
 })
 export class AccountModule { }
