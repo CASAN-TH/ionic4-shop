@@ -1,0 +1,29 @@
+ion-grid {
+    margin-top: 0.5rem;
+    background-color: white;
+}
+
+ion-content {
+    --padding-top: -100px !important;
+    --background: rgb(241, 235, 235) !important;
+}
+
+.grid-footter {
+    background-color: #fbfbfb;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+}
+
+.btn-footer {
+    color: antiquewhite;
+}
+
+.btn-center {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    height: 40px;
+}

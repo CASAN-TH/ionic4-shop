@@ -7,8 +7,8 @@ import { ModalNicknameComponent } from './modal-nickname/modal-nickname.componen
 import { ModalPhoneComponent } from './modal-phone/modal-phone.component';
 import { ModalPasswordComponent } from './modal-password/modal-password.component';
 import { ModalSocialComponent } from './modal-social/modal-social.component';
-import { ModalAddressComponent } from './modal-address/modal-address.component';
 import { ModalCreditPointComponent } from 'src/app/credit/modal-credit-point/modal-credit-point.component';
+import { AddressListComponent } from 'src/app/casan/account/address-list/address-list.component';
 
 @Component({
   selector: 'app-me',
@@ -92,7 +92,7 @@ export class MePage implements OnInit {
 
   async addresslModal() {
     const modal = await this.modalController.create({
-      component: ModalAddressComponent,
+      component: AddressListComponent,
       componentProps: {
         AddressData: this.AddressData
       }
