@@ -1,3 +1,4 @@
+import { ProductGeneralWarrantyComponent } from './product-general-warranty/product-general-warranty.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductSlideComponent } from './product-slide/product-slide.component';
@@ -53,7 +54,8 @@ import { ProductGeneralInfoComponent } from './product-general-info/product-gene
     ProductDetailComponent,
     ProductWarrantyComponent,
     ProductMenuModalComponent,
-    ProductGeneralInfoComponent
+    ProductGeneralInfoComponent,
+    ProductGeneralWarrantyComponent
   ],
   imports: [
     CommonModule,
@@ -72,9 +74,10 @@ import { ProductGeneralInfoComponent } from './product-general-info/product-gene
     ProductWarrantyComponent,
     ProductMenuModalComponent,
     ProductGeneralInfoComponent,
+    ProductGeneralWarrantyComponent,
     ProductVoucherComponent,
     ProductGiftComponent,
-    ProductTcoinComponent,
+    ProductTcoinComponent
 
   ],
   entryComponents: [

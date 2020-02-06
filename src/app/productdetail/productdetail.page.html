@@ -62,14 +62,19 @@
     </ion-col>
   </ion-row>
 
-  <ion-row>
+  <!-- <ion-row>
     <ion-col size="12">
       <app-product-detail [recivedata]="productdetailData"></app-product-detail>
     </ion-col>
-  </ion-row>
+  </ion-row> -->
 
-  <app-product-warranty [recivedata]="productwarrantyData"></app-product-warranty>
+  <app-product-general-warranty>
+    <app-product-detail class="eight" [recivedata]="productdetailData"></app-product-detail>
+    <app-product-warranty class="nine" [recivedata]="productwarrantyData"></app-product-warranty>
+  </app-product-general-warranty>
 
+  <!-- <app-product-warranty [recivedata]="productwarrantyData"></app-product-warranty> -->
+  
   <ion-row>
     <ion-col size="12">
       <ion-row>
