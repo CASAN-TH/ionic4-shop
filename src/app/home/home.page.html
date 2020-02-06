@@ -25,11 +25,6 @@
     <app-product-list-block class="one" *ngFor="let blockitem of cateProductHomeData" [recivedata]="blockitem">
     </app-product-list-block>
   </app-cata-product-list>
-  <!-- <ion-row>
-    <ion-col size="12" class="ion-no-margin ion-no-padding" >
-      <app-product-list-block *ngFor="let blockitem of cateProductHomeData" [recivedata]="blockitem"></app-product-list-block>
-    </ion-col>
-  </ion-row> -->
 
   <app-product-general-reccomment>
     <app-product-list class="ten" *ngFor="let reccomment of homeReccommentData" [recivedata]="reccomment.products"

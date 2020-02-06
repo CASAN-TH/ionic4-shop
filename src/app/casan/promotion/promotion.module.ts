@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PromotionShotcutComponent } from './promotion-shotcut/promotion-shotcut.component';
 import { PromotionSlideComponent } from './promotion-slide/promotion-slide.component';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { PromotionGeneralShortcutComponent } from './promotion-general-shortcut/promotion-general-shortcut.component';
 
 
 
 @NgModule({
   declarations: [
-    PromotionShotcutComponent,
+    PromotionGeneralShortcutComponent,
     PromotionSlideComponent
   ],
   imports: [
@@ -18,7 +18,7 @@ import { IonicModule } from '@ionic/angular';
     IonicModule,
   ],
   exports:[
-    PromotionShotcutComponent,
+    PromotionGeneralShortcutComponent,
     PromotionSlideComponent
   ]
 })

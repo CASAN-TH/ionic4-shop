@@ -8,12 +8,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class PromotionSlideComponent implements OnInit {
 
   @Input() recivedata: any
-  @Output() openSlide = new EventEmitter();
-  constructor() { }
 
-  ngOnInit() {}
+  constructor(
 
-  // openImageSlide(ij: any) {
-  //   this.openSlide.emit(ij);
-  // }
+  ) { }
+
+  ngOnInit() {
+
+  }
 }

@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { PromotionShotcutComponent } from './promotion-shotcut.component';
+import { PromotionGeneralShortcutComponent } from './promotion-general-shortcut.component';
 
-describe('PromotionShotcutComponent', () => {
-  let component: PromotionShotcutComponent;
-  let fixture: ComponentFixture<PromotionShotcutComponent>;
+describe('PromotionGeneralShortcutComponent', () => {
+  let component: PromotionGeneralShortcutComponent;
+  let fixture: ComponentFixture<PromotionGeneralShortcutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PromotionShotcutComponent ],
+      declarations: [ PromotionGeneralShortcutComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PromotionShotcutComponent);
+    fixture = TestBed.createComponent(PromotionGeneralShortcutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

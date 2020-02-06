@@ -59,9 +59,4 @@ export class CategoryPage implements OnInit {
       this.router.navigate(['/promotion']);
     }
   }
-
-  // scrollTo(element: string) {
-
-  // }
-
 }
