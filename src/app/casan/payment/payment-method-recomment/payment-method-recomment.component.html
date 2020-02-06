@@ -1,3 +1,17 @@
-<p>
-  payment-method-recomment works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="backbutton" slot="end" (click)="dismiss()">
+      <ion-button>
+        <ion-icon slot="icon-only" mode="ios" name="ios-close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>BankOnline Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>
+    recommended-method-modal works!
+  </p>
+</ion-content>
+<ion-button class="ion-padding-start ion-padding-end ion-margin-top" expand="block" color="primary" (click)="onPayment()">ยืนยันการชำระ</ion-button>

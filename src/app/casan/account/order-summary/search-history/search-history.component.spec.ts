@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { RecommendedMethodModalComponent } from './recommended-method-modal.component';
+import { SearchHistoryComponent } from './search-history.component';
 
-describe('RecommendedMethodModalComponent', () => {
-  let component: RecommendedMethodModalComponent;
-  let fixture: ComponentFixture<RecommendedMethodModalComponent>;
+describe('SearchHistoryComponent', () => {
+  let component: SearchHistoryComponent;
+  let fixture: ComponentFixture<SearchHistoryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RecommendedMethodModalComponent ],
+      declarations: [ SearchHistoryComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(RecommendedMethodModalComponent);
+    fixture = TestBed.createComponent(SearchHistoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

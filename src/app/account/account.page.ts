@@ -109,6 +109,7 @@ export class AccountPage implements OnInit {
   }
 
   onToSettingPage() {
+    console.log("555");
     this.router.navigate(['setting']);
   }
 

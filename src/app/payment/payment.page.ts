@@ -40,6 +40,7 @@ export class PaymentPage implements OnInit {
   ngOnInit() {
     this.paymentService.onCreditStatusChanged.subscribe((profilestatus: any) => {
       this.profilestatus = profilestatus;
+      console.log(this.profilestatus)
     })
     this.paymentService.onCreditPointChanged.subscribe((point: any) => {
       this.creditPoint = point
@@ -66,6 +67,7 @@ export class PaymentPage implements OnInit {
     })
     this.paymentService.onAddressModalDataChanged.subscribe((AddressModalData: any) => {
       this.AddressModalData = AddressModalData;
+      console.log(this.AddressModalData)
     })
     if (!this.AddaddressData) {
       this.presentAlert();

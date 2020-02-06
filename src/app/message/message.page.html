@@ -52,35 +52,7 @@
   </ion-card>
 
   <h1 style="text-align: center;">สินค้าแนะนำ</h1>
+  
   <productlist [recivedata]="recommendDataList"></productlist>
 
-  <!-- <ion-row>
-    <ion-col size="6" *ngFor="let recommend of recommendDataList">
-      <ion-card>
-        <div  (click)="onOpenDetailClick()">
-          <img [src]="recommend.image">
-        </div>
-        <ion-row>
-          <ion-col size="12" text-wrap>
-            {{recommend.name}}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="12">
-            {{recommend.price.currency}} {{recommend.price.amount}}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="10">
-            {{recommend.price.currency}} {{recommend.installment.amount}} {{recommend.installment.period}}
-          </ion-col>
-          <ion-col size="2">
-            <div (click)="onAddToCartClick()">
-              <ion-icon name="cart"></ion-icon>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-card>
-    </ion-col>
-  </ion-row> -->
 </ion-content>

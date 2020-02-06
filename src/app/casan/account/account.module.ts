@@ -8,6 +8,14 @@ import { IonicModule } from '@ionic/angular';
 import { SettingComponent } from './setting/setting.component';
 import { AboutComponent } from './setting/about/about.component';
 import { LanguageComponent } from './setting/language/language.component';
+import { OrderSummaryComponent } from './order-summary/order-summary.component';
+import { OrderHistoryComponent } from './order-summary/order-history/order-history.component';
+import { SearchHistoryComponent } from './order-summary/search-history/search-history.component';
+import {MatTabsModule} from '@angular/material/tabs';
+
+
+
+
 
 
 
@@ -19,22 +27,30 @@ import { LanguageComponent } from './setting/language/language.component';
     FavoriteSummaryComponent,
     SettingComponent,
     AboutComponent,
-    LanguageComponent
+    LanguageComponent,
+    OrderSummaryComponent,
+    OrderHistoryComponent,
+    SearchHistoryComponent
+    
   ],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    MatTabsModule
   ],
   exports: [
     FavoriteSummaryComponent,
-    SettingComponent
+    SettingComponent,
+    OrderSummaryComponent
   ],
   entryComponents:[
     WishListComponent,
     FollowedShopComponent,
     BrowseHistoryComponent,
     AboutComponent,
-    LanguageComponent
+    LanguageComponent,
+    OrderHistoryComponent,
+    SearchHistoryComponent
   ]
 })
 export class AccountModule { }

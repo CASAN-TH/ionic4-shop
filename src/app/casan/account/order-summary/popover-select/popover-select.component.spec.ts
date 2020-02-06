@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { OnlineBankingModalComponent } from './online-banking-modal.component';
+import { PopoverSelectComponent } from './popover-select.component';
 
-describe('OnlineBankingModalComponent', () => {
-  let component: OnlineBankingModalComponent;
-  let fixture: ComponentFixture<OnlineBankingModalComponent>;
+describe('PopoverSelectComponent', () => {
+  let component: PopoverSelectComponent;
+  let fixture: ComponentFixture<PopoverSelectComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OnlineBankingModalComponent ],
+      declarations: [ PopoverSelectComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(OnlineBankingModalComponent);
+    fixture = TestBed.createComponent(PopoverSelectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

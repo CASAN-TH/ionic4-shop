@@ -47,17 +47,8 @@ import { ModalFeedbackComponent } from './setting/modal-feedback/modal-feedback.
 import { ModalAboutComponent } from './setting/modal-about/modal-about.component';
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 import { TranslateModule } from '@ngx-translate/core';
-import { RecommendedMethodModalComponent } from './payfor/recommended-method-modal/recommended-method-modal.component';
-import { DebitCreditCardModalComponent } from './payfor/debit-credit-card-modal/debit-credit-card-modal.component';
-import { OnlineBankingModalComponent } from './payfor/online-banking-modal/online-banking-modal.component';
-import { ATMPaymentModalComponent } from './payfor/atmpayment-modal/atmpayment-modal.component';
-import { CounterPaymentModalComponent } from './payfor/counter-payment-modal/counter-payment-modal.component';
 import { ModalMyorderComponent } from './account/modal-myorder/modal-myorder.component';
 import { ModalLanguageComponent } from './account/modal-language/modal-language.component';
-import { BankModalComponent } from './payfor/bank-modal/bank-modal.component';
-import { BillModalComponent } from './payfor/bill-modal/bill-modal.component';
-import { AtmBillModalComponent } from './payfor/atm-bill-modal/atm-bill-modal.component';
-// import { SelectMenuComponent } from './productdetail/select-menu/select-menu.component';
 import { PaymentHistoryComponent } from './bill/payment-history/payment-history.component';
 import { PaybackHistoryComponent } from './bill/payback-history/payback-history.component';
 import { PaymentProductDetailComponent } from './bill/payment-product-detail/payment-product-detail.component';
@@ -65,14 +56,13 @@ import { PaynowComponent } from './bill/paynow/paynow.component';
 import { BillPaymentComponent } from './bill/bill-payment/bill-payment.component';
 import { AcceptModalComponent } from './casan/checkout/checkout-total/accept-modal/accept-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
-// import { ShareModalComponent } from './productdetail/share-modal/share-modal.component';
 import { ModalTcoinDetailComponent } from './tcoin/modal-tcoin-detail/modal-tcoin-detail.component';
 import { SearchModalComponent } from './home/search-modal/search-modal.component';
 import { ModalCouponCenterComponent } from './mycoupon/modal-coupon-center/modal-coupon-center.component';
-import { PopoverSelectComponent } from './account/popover-select/popover-select.component';
 import { ModalFavoriteComponent } from './account/modal-favorite/modal-favorite.component';
 import { ModalFollowedshopComponent } from './account/modal-followedshop/modal-followedshop.component';
 import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal-browsehistory.component';
+import { PopoverSelectComponent } from 'src/app/casan/account/order-summary/popover-select/popover-select.component';
 
 
 
@@ -80,18 +70,10 @@ import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal
   declarations: [AppComponent,
     ModalCardComponent,
     ModalCameraComponent,
-    // PaymentModalComponent,
-    // VouchersModalComponent,
-    // PromotionModalComponent,
     SelectdownModalComponent,
     AcceptModalComponent,
 
     PaymentgiftModalComponent,
-    // TcoinModalComponent,
-    // WarrantyModalComponent,
-    // SpecificationModalComponent,
-    // ReviewModalComponent,
-    // ImformationspecModalComponent,
 
     ModalNicknameComponent,
     ModalPhoneComponent,
@@ -102,6 +84,7 @@ import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal
     ModalAboutComponent,
     ModalMyorderComponent,
     ModalLanguageComponent,
+    PopoverSelectComponent,
 
     ModalTcoinDetailComponent,
     ModalCouponCenterComponent,
@@ -130,31 +113,13 @@ import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal
     PaynowComponent,
     BillPaymentComponent,
 
-    RecommendedMethodModalComponent,
-    DebitCreditCardModalComponent,
-    BankModalComponent,
-    OnlineBankingModalComponent,
-    ATMPaymentModalComponent,
-    CounterPaymentModalComponent,
-    BillModalComponent,
-    AtmBillModalComponent,
-
-    // SelectMenuComponent,
-    // ShareModalComponent,
     SearchModalComponent
 
 
   ],
   entryComponents: [ModalCardComponent,
     ModalCameraComponent,
-    // PaymentModalComponent,
-    // VouchersModalComponent,
-    // PromotionModalComponent,
-    // TcoinModalComponent,
-    // WarrantyModalComponent,
-    // SpecificationModalComponent,
-    // ReviewModalComponent,
-    // ImformationspecModalComponent,
+
     SelectdownModalComponent,
     AcceptModalComponent,
 
@@ -167,6 +132,7 @@ import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal
     ModalAboutComponent,
     ModalMyorderComponent,
     ModalLanguageComponent,
+    PopoverSelectComponent,
 
     ModalTcoinDetailComponent,
     ModalCouponCenterComponent,
@@ -195,17 +161,6 @@ import { ModalBrowsehistoryComponent } from './account/modal-browsehistory/modal
     PaynowComponent,
     BillPaymentComponent,
 
-    RecommendedMethodModalComponent,
-    DebitCreditCardModalComponent,
-    BankModalComponent,
-    OnlineBankingModalComponent,
-    ATMPaymentModalComponent,
-    CounterPaymentModalComponent,
-    BillModalComponent,
-    AtmBillModalComponent,
-
-    // SelectMenuComponent,
-    // ShareModalComponent,
     SearchModalComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,

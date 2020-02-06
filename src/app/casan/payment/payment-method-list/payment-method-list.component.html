@@ -1,3 +1,152 @@
-<p>
-  payment-method-list works!
-</p>
+<ion-row *ngFor="let item of payforData.recommended_method">
+  <ion-col size="12">
+    <p class="font-title">{{item.name}}</p>
+  </ion-col>
+</ion-row>
+
+<ion-row *ngFor="let item of payforData.recommended_method">
+  <ion-col size="12">
+    <ion-grid>
+      <ion-item no-padding lines="none" (click)="RecommendedMethodModal()">
+
+        <ion-thumbnail slot="start">
+          <img [src]="item.bank_img">
+        </ion-thumbnail>
+        <ion-label>
+          <h3 class="font-title-content">{{item.bank_name}}</h3>
+        </ion-label>
+
+        <ion-note text-end>
+          <ion-buttons>
+            <ion-button>
+              <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-note>
+      </ion-item>
+    </ion-grid>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col size="12">
+    <p class="online_title">{{payforData.online}}</p>
+    <p class="online_subtitle">{{payforData.online_card}}</p>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col size="12">
+    <ion-grid>
+      <ion-item no-padding (click)="DebitCreditCardModal()">
+
+        <ion-thumbnail slot="start">
+          <img src="https://image.flaticon.com/icons/png/512/1124/1124183.png">
+        </ion-thumbnail>
+        <ion-label>
+          <h3 class="font-title-content">{{payforData.debit_name}}</h3>
+
+        </ion-label>
+        <ion-label>
+          <ion-col size="1.5" *ngFor="let item of debitcreditcardData.debit">
+            <img class="debit-image" [src]="item">
+          </ion-col>
+        </ion-label>
+
+        <ion-note text-end>
+          <ion-buttons>
+            <ion-button>
+              <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-note>
+      </ion-item>
+
+      <ion-item no-padding lines="none" (click)="OnlineBankingModal()">
+
+        <ion-thumbnail slot="start">
+          <img src="https://image.flaticon.com/icons/png/512/1378/1378726.png">
+        </ion-thumbnail>
+        <ion-label>
+          <h3 class="font-title-content">{{payforData.online_name}}</h3>
+
+        </ion-label>
+        <ion-label>
+          <ion-col size="1.5" *ngFor="let item of onlinebankingData.bank">
+            <img class="debit-image" [src]="item.image">
+          </ion-col>
+        </ion-label>
+
+        <ion-note text-end>
+          <ion-buttons>
+            <ion-button>
+              <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-note>
+      </ion-item>
+
+    </ion-grid>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col size="12">
+    <p class="offline_title">{{payforData.offline}}</p>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col size="12">
+    <ion-grid>
+      <ion-item no-padding (click)="ATMPaymentModal()">
+
+        <ion-thumbnail slot="start">
+          <img src="https://image.flaticon.com/icons/png/512/2385/2385270.png">
+        </ion-thumbnail>
+        <ion-label >
+          <h3 class="font-title-content">{{payforData.atm_name}}</h3>
+
+        </ion-label>
+        <ion-label>
+          <ion-col size="1.5" *ngFor="let item of atm_paymentData.bank">
+            <img class="debit-image" [src]="item.image">
+          </ion-col>
+        </ion-label>
+
+        <ion-note text-end>
+          <ion-buttons>
+            <ion-button>
+              <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-note>
+      </ion-item>
+
+      <ion-item no-padding lines="none" (click)="CounterPaymentModal()">
+
+        <ion-thumbnail slot="start">
+          <img  src="https://image.flaticon.com/icons/png/512/1425/1425003.png">
+        </ion-thumbnail>
+        <ion-label >
+          <h3 class="font-title-content">{{payforData.counter_name}}</h3>
+
+        </ion-label>
+        <ion-label>
+          <ion-col size="1.5" *ngFor="let item of counter_paymentData.counter_service.counter">
+            <img class="debit-image" [src]="item.image">
+          </ion-col>
+        </ion-label>
+
+        <ion-note text-end>
+          <ion-buttons>
+            <ion-button>
+              <ion-icon slot="icon-only" name="ios-arrow-forward"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-note>
+      </ion-item>
+
+    </ion-grid>
+  </ion-col>
+</ion-row>

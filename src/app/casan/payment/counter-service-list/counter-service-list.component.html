@@ -1,3 +1,88 @@
-<p>
-  counter-service-list works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="backbutton" slot="end" (click)="dismiss()">
+      <ion-button>
+        <ion-icon slot="icon-only" mode="ios" name="ios-close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Counter Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <span class="font-conten">{{payforData.limit}} :</span>
+          </ion-col>
+          <ion-col size="6" text-end>
+            <span class="font-conten-amount">{{payforData.cerren}} {{payforData.amount}}</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <p class="font-title">{{counter_paymentData.manual.name}}</p>
+
+      <ion-grid>
+        <ion-item>
+          <ion-label>{{counter_paymentData.phone_number.name}}</ion-label>
+          <ion-input text-end placeholder="66-0800871773"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{counter_paymentData.email.name}}</ion-label>
+          <ion-input text-end placeholder="porapot12@gmail.com"></ion-input>
+        </ion-item>
+        <ion-grid class="grid-conten">
+          <ion-row>
+            <ion-col size="12">
+              <p class="counter-title">{{counter_paymentData.counter_service.counter_name}}</p>
+              <ion-row>
+                <ion-col size="1.5" *ngFor="let item of counter_paymentData.counter_service.counter">
+                  <div>
+                    <img class="counter-image" [src]="item.image" (click)="onCounterServiceClick(item.id)">
+                  </div>
+                </ion-col>
+              </ion-row>
+              <p class="counter-title">{{counter_paymentData.counter_bank.counter_name}}</p>
+              <ion-row>
+                <ion-col size="1.5" *ngFor="let item of counter_paymentData.counter_bank.counter">
+                  <div>
+                    <img class="counter-image" [src]="item.image" (click)="onCounterBankClick(item.id)">
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+          <p>{{counter_paymentData.fee.title}}</p>
+        </ion-grid>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-row>
+        <ion-col size="4" text-end>
+          <div>
+            <img class="img-shield" slot="icon-only" src="https://image.flaticon.com/icons/png/512/1161/1161388.png">
+          </div>
+        </ion-col>
+        <ion-col size="8" text-start>
+          <p>การป้องกันการชำระเงิน</p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+
+<ion-footer>
+  <ion-grid class="grid-footter">
+    <ion-buttons class="btn-center" (click)="BillModal()">
+      <ion-button class="btn-footer">ชำระตอนนี้ {{payforData.cerren}} {{payforData.amount}}</ion-button>
+    </ion-buttons>
+  </ion-grid>
+</ion-footer>
