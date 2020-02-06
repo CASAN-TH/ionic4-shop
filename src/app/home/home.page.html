@@ -13,19 +13,13 @@
 
 <ion-content fullscreen="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
   
-  <!-- <ion-slides pager="ios" #slider>
+  <ion-slides pager="ios" #slider>
     <ion-slide *ngFor="let item of homeDataList">
       <div [style.background-color]="item.background_color">
         <img class="slide" [src]="item.image" />
       </div>
     </ion-slide>
-  </ion-slides> -->
-
-  <ion-row>
-    <ion-col size="12">
-      <!-- <app-catalog-slide-nav [recivedata]="homeDataList"></app-catalog-slide-nav> -->
-    </ion-col>
-  </ion-row>
+  </ion-slides>
 
   <ion-row>
     <ion-col size="12" class="ion-no-margin ion-no-padding" *ngFor="let blockitem of cateProductHomeData">
