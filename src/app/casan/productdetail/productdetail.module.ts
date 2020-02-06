@@ -26,6 +26,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductWarrantyComponent } from './product-warranty/product-warranty.component';
 import { ProductMenuModalComponent } from './product-menu-modal/product-menu-modal.component';
 import { ProductGeneralInfoComponent } from './product-general-info/product-general-info.component';
+import { ProductGeneralComponent } from './product-general/product-general.component';
+import { ProductGeneralReviewComponent } from './product-general-review/product-general-review.component';
 
 
 
@@ -55,7 +57,9 @@ import { ProductGeneralInfoComponent } from './product-general-info/product-gene
     ProductWarrantyComponent,
     ProductMenuModalComponent,
     ProductGeneralInfoComponent,
-    ProductGeneralWarrantyComponent
+    ProductGeneralWarrantyComponent,
+    ProductGeneralComponent,
+    ProductGeneralReviewComponent
   ],
   imports: [
     CommonModule,
@@ -77,7 +81,9 @@ import { ProductGeneralInfoComponent } from './product-general-info/product-gene
     ProductGeneralWarrantyComponent,
     ProductVoucherComponent,
     ProductGiftComponent,
-    ProductTcoinComponent
+    ProductTcoinComponent,
+    ProductGeneralComponent,
+    ProductGeneralReviewComponent
 
   ],
   entryComponents: [

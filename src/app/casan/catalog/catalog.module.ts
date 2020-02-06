@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { CatalogSlideNavComponent } from './catalog-slide-nav/catalog-slide-nav.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { ProductGeneralReccommentComponent } from './product-general-reccomment/product-general-reccomment.component';
 
 
 
@@ -15,7 +16,8 @@ import { CategoriesComponent } from './categories/categories.component';
     ProductListBlockComponent,
     ProductCardComponent,
     CatalogSlideNavComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    ProductGeneralReccommentComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { CategoriesComponent } from './categories/categories.component';
     ProductListComponent,
     ProductListBlockComponent,
     CatalogSlideNavComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    ProductGeneralReccommentComponent
   ]
 })
 export class CatalogModule { }
