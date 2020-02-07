@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { SelectcheckPage } from './selectcheck.page';
+import { MenuGeneralSelectCheckComponent } from './menu-general-select-check.component';
 
-describe('SelectcheckPage', () => {
-  let component: SelectcheckPage;
-  let fixture: ComponentFixture<SelectcheckPage>;
+describe('MenuGeneralSelectCheckComponent', () => {
+  let component: MenuGeneralSelectCheckComponent;
+  let fixture: ComponentFixture<MenuGeneralSelectCheckComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SelectcheckPage ],
+      declarations: [ MenuGeneralSelectCheckComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(SelectcheckPage);
+    fixture = TestBed.createComponent(MenuGeneralSelectCheckComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

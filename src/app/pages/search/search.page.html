@@ -38,9 +38,10 @@
     </ion-header>
 
     <ion-content>
-      <ion-grid>
-        <app-selectcheck [recivedata]="selectcheckData"></app-selectcheck>
-      </ion-grid>
+      <app-menu-general-select-check>
+        <app-menu-select-check class="four" [recivedata]="selectcheckData" (openCategories)="onCategories($event)"
+        (openBrands)="onBrands($event)" (openPriceranges)="onPriceranges($event)"></app-menu-select-check>
+      </app-menu-general-select-check>
     </ion-content>
 
     <app-footer-selectcheck [recivedata]="selectcheckData"></app-footer-selectcheck>
