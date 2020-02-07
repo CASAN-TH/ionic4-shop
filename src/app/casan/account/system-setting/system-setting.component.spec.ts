@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { SettingComponent } from './setting.component';
+import { SystemSettingComponent } from './system-setting.component';
 
-describe('SettingComponent', () => {
-  let component: SettingComponent;
-  let fixture: ComponentFixture<SettingComponent>;
+describe('SystemSettingComponent', () => {
+  let component: SystemSettingComponent;
+  let fixture: ComponentFixture<SystemSettingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SettingComponent ],
+      declarations: [ SystemSettingComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(SettingComponent);
+    fixture = TestBed.createComponent(SystemSettingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
