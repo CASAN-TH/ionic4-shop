@@ -9,6 +9,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./currentamount.page.scss'],
 })
 export class CurrentamountPage implements OnInit {
+  
   currentamountDataList: any;
   accountData: any;
   currentamountData: any;

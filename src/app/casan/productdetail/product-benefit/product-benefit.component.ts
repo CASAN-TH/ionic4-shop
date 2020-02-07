@@ -12,61 +12,12 @@ import { ProductdetailService } from 'src/app/productdetail/productdetail.servic
 })
 export class ProductBenefitComponent implements OnInit {
 
-  vouchersData: any;
-  promotiongiftData: any;
-  tcoinData: any;
-
   constructor(
     private productdetailService: ProductdetailService,
     public modalController: ModalController
   ) { }
 
-  ngOnInit() { 
-    this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
-      this.vouchersData = productdetailDataList;
-    })
-    this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
-      this.promotiongiftData = productdetailDataList;
-      console.log(this.promotiongiftData);
-    })
+  ngOnInit() {
 
-    this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
-      this.tcoinData = productdetailDataList;
-    })
   }
-
-
-  async openVoucherModal() {
-    const modal = await this.modalController.create({
-      component: ProductVoucherModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        vouchersData: this.vouchersData
-      }
-    });
-    return await modal.present();
-  }
-
-  async openpromotionGiftModal() {
-    const modal = await this.modalController.create({
-      component: ProductGiftModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        promotiongiftData: this.promotiongiftData
-      }
-    });
-    return await modal.present();
-  }
-
-  async openTcoinModal() {
-    const modal = await this.modalController.create({
-      component: ProductTcoinModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        tcoinData: this.tcoinData
-      }
-    });
-    return await modal.present();
-  }
-
 }

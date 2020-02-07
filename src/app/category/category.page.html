@@ -3,7 +3,8 @@
     <ion-searchbar class="searchbar-padding" slot="start" placeholder="Enter item keyword"></ion-searchbar>
     <ion-buttons class="btn-icon-padding" slot="end">
       <ion-button>
-        <ion-icon color="medium" mode="ios" slot="icon-only" src="https://image.flaticon.com/icons/svg/126/126501.svg"></ion-icon>
+        <ion-icon color="medium" mode="ios" slot="icon-only" src="https://image.flaticon.com/icons/svg/126/126501.svg">
+        </ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -11,7 +12,22 @@
 
 <ion-content>
   <ion-row class="mnu-default">
+
     <ion-col size="2" class="ion-no-padding">
+      <app-catalog-slide-nav [recivedata]="data" (openMenu)="onMenuClick($event)"></app-catalog-slide-nav>
+    </ion-col>
+
+    <ion-col size="10" class="ion-no-padding">
+      <ion-content #content>
+        <app-categories [recivedata]="data" (openSlide)="onCoverImage($event)" (openBrand)="onBrandClick($event)"
+        (openPromotion)="onPromotionClick($event)"></app-categories>
+      </ion-content>
+      
+    </ion-col>
+    
+
+
+    <!-- <ion-col size="2" class="ion-no-padding">
       <div scrollY="true" class="menu-content">
         <ion-row *ngFor="let item of data" [class.mnu-selected]="item._id == tabSelected" id="mnu_{{item._id}}">
           <ion-col size="12" text-center (click)="onMenuClick(item._id)">
@@ -25,30 +41,35 @@
     <ion-col size="10" class="ion-no-padding">
       
       <ion-content #content>
+        
         <ion-row *ngFor="let cate of data; let i = index;" [id]="cate._id">
           <ion-col size="12">
             <ion-text>{{cate.name}}</ion-text>
+
             <ion-slides pager>
               <ion-slide *ngFor="let cover of cate.cover_image; let j = index;">
-                <img class="coverimage" [src]="cover.image" (click)="onCoverImageClick(i,j)">
+                <img class="coverimage" [src]="cover.image" (click)="onCoverImage(i,j)">
               </ion-slide>
             </ion-slides>
-            <!-- <app-catalog-slide-nav [recivedata]="cate.cover_image" (openSlide)="onCoverImageClick(i)"></app-catalog-slide-nav> -->
+             
             <ion-row>
               <ion-col size="4" *ngFor="let brand of cate.brands" (click)="onBrandClick(cate._id,brand._id)">
                 <img class="brand" [src]="brand.image">
               </ion-col>
             </ion-row>
+
             <ion-row>
               <ion-col text-center size="4" *ngFor="let item of cate.items" (click)="onPromotionClick(item._id)">
                 <img class="productimage" [src]="item.image">
                 <ion-text class="producttext">{{item.name}}</ion-text>
               </ion-col>
             </ion-row>
+
           </ion-col>
         </ion-row>
       </ion-content>
 
-    </ion-col>
+    </ion-col> -->
+
   </ion-row>
 </ion-content>

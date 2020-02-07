@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MycouponService } from './mycoupon.service';
 import { Location } from '@angular/common';
-import { ModalCouponCenterComponent } from './modal-coupon-center/modal-coupon-center.component';
 import { ModalController } from '@ionic/angular';
+import { CouponCenterComponent } from '../casan/account/benefit-summary/coupon-center/coupon-center.component';
 
 @Component({
   selector: 'app-mycoupon',
@@ -34,9 +34,8 @@ export class MycouponPage implements OnInit {
   }
 
   async ModalCouponCenter() {
-    const value = 0
     const modal = await this.modalController.create({
-      component: ModalCouponCenterComponent,
+      component: CouponCenterComponent,
       componentProps: {
         voucherdata: this.voucherdata,
       }

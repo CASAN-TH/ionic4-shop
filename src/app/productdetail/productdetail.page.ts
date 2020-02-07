@@ -12,6 +12,9 @@ import { ProductReviewsModalComponent } from '../casan/productdetail/product-rev
 import { ProductImformationSpecModalComponent } from '../casan/productdetail/product-imformation-spec/product-imformation-spec-modal/product-imformation-spec-modal.component';
 import { ProductServiceModalComponent } from '../casan/productdetail/product-service/product-service-modal/product-service-modal.component';
 import { ProductMenuModalComponent } from '../casan/productdetail/product-menu-modal/product-menu-modal.component';
+import { ProductVoucherModalComponent } from '../casan/productdetail/product-benefit/product-voucher/product-voucher-modal/product-voucher-modal.component';
+import { ProductGiftModalComponent } from '../casan/productdetail/product-benefit/product-gift/product-gift-modal/product-gift-modal.component';
+import { ProductTcoinModalComponent } from '../casan/productdetail/product-benefit/product-tcoin/product-tcoin-modal/product-tcoin-modal.component';
 
 @Component({
   selector: 'app-productdetail',
@@ -23,6 +26,9 @@ export class ProductdetailPage implements OnInit {
   productdetailData: any;
   productwarrantyData: any;
   paymentData: any
+  vouchersData: any;
+  promotiongiftData: any;
+  tcoinData: any;
   warrantyData: any
   specificationData: any
   reviewData: any
@@ -56,6 +62,18 @@ export class ProductdetailPage implements OnInit {
 
     this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
       this.paymentData = productdetailDataList;
+    })
+
+    this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
+      this.vouchersData = productdetailDataList;
+    })
+    this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
+      this.promotiongiftData = productdetailDataList;
+      console.log(this.promotiongiftData);
+    })
+
+    this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
+      this.tcoinData = productdetailDataList;
     })
 
     this.productdetailService.onWarrantyDataChanged.subscribe((productdetailDataList: any) => {
@@ -94,6 +112,39 @@ export class ProductdetailPage implements OnInit {
       cssClass: 'my-modal-css',
       componentProps: {
         paymentData: this.paymentData
+      }
+    });
+    return await modal.present();
+  }
+
+  async openVoucherModal() {
+    const modal = await this.modalController.create({
+      component: ProductVoucherModalComponent,
+      cssClass: 'my-modal-css',
+      componentProps: {
+        vouchersData: this.vouchersData
+      }
+    });
+    return await modal.present();
+  }
+
+  async openpromotionGiftModal() {
+    const modal = await this.modalController.create({
+      component: ProductGiftModalComponent,
+      cssClass: 'my-modal-css',
+      componentProps: {
+        promotiongiftData: this.promotiongiftData
+      }
+    });
+    return await modal.present();
+  }
+
+  async openTcoinModal() {
+    const modal = await this.modalController.create({
+      component: ProductTcoinModalComponent,
+      cssClass: 'my-modal-css',
+      componentProps: {
+        tcoinData: this.tcoinData
       }
     });
     return await modal.present();

@@ -40,7 +40,7 @@ export class MycouponService {
   getVoucherData(): Observable<any> | Promise<any> | any {
     return new Promise((resolve, reject) => {
       if (mockup) {
-        this.http.get('../../assets/json/productdetail/vouchers-modal.json').subscribe((res: any) => {
+        this.http.get('../../assets/json/productdetail/benefit-modal.json').subscribe((res: any) => {
           this.onVoucherDataListChanged.next(res.data);
         }, reject)
       } else {

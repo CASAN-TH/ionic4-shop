@@ -1,0 +1,25 @@
+<ion-row *ngFor="let cate of recivedata; let i = index;" [id]="cate._id">
+  <ion-col size="12">
+    <ion-text>{{cate.name}}</ion-text>
+
+    <ion-slides pager>
+      <ion-slide *ngFor="let cover of cate.cover_image; let j = index;">
+        <img class="coverimage" [src]="cover.image" (click)="onCoverImage(i,j)">
+      </ion-slide>
+    </ion-slides>
+     
+    <ion-row>
+      <ion-col size="4" *ngFor="let brand of cate.brands" (click)="onBrandClick(cate._id,brand._id)">
+        <img class="brand" [src]="brand.image">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center size="4" *ngFor="let item of cate.items" (click)="onPromotionClick(item._id)">
+        <img class="productimage" [src]="item.image">
+        <ion-text class="producttext">{{item.name}}</ion-text>
+      </ion-col>
+    </ion-row>
+    
+  </ion-col>
+</ion-row>

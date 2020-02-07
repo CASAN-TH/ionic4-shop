@@ -1,7 +1,8 @@
-<ion-slides pager="ios" #slider>
-  <ion-slide *ngFor="let item of recivedata">
-    <div [style.background-color]="item.background_color">
-      <img class="slide" [src]="item.image" />
-    </div>
-  </ion-slide>
-</ion-slides>
+<div scrollY="true" class="menu-content">
+  <ion-row *ngFor="let item of recivedata" [class.mnu-selected]="item._id == tabSelected" id="mnu_{{item._id}}">
+    <ion-col size="12" text-center (click)="onMenuClick(item._id)">
+      <ion-icon [src]="item.image" class="icon-menu"></ion-icon>
+      <p class="ion-text-nowrap menutext">{{item.name}}</p>
+    </ion-col>
+  </ion-row>
+</div>

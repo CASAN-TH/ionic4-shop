@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-promotion-slide',
@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PromotionSlideComponent implements OnInit {
 
-  constructor() { }
+  @Input() recivedata: any
 
-  ngOnInit() {}
+  constructor(
 
+  ) { }
+
+  ngOnInit() {
+
+  }
 }

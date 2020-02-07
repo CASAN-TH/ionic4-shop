@@ -2,8 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ModalCreditPointComponent } from 'src/app/credit/modal-credit-point/modal-credit-point.component';
 import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { MyCouponComponent } from './my-coupon/my-coupon.component';
-import { CashBackComponent } from './cash-back/cash-back.component';
 
 @Component({
   selector: 'app-benefit-summary',
@@ -32,22 +30,15 @@ export class BenefitSummaryComponent implements OnInit {
     return await modal.present();
   }
 
-  async MyCouponModal() {
-    const modal = await this.modalController.create({
-      component: MyCouponComponent,
-    });
-    return await modal.present();
+  onToMyCouponPage() {
+    this.router.navigate(["my-coupon"]);
   }
 
-  async CurrentAmountModal() {
-    const modal = await this.modalController.create({
-      component: CashBackComponent,
-      componentProps: {
-        accountData: this.accountData
-      }
-    });
-    return await modal.present();
+  CurrentAmountPage() {
+    this.router.navigate(["current-amount"]);
   }
+
+
   
 
 }

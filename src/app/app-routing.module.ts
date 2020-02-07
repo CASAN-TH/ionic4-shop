@@ -83,22 +83,6 @@ const routes: Routes = [
     path: 'credit',
     loadChildren: () => import('../app/credit/credit.module').then(m => m.CreditPageModule)
   },
-  // {
-  //   path: 'productlist',
-  //   loadChildren: () => import('./productlist/productlist.module').then( m => m.ProductlistPageModule)
-  // },
-  {
-    path: 'cate-product-list',
-    loadChildren: () => import('./cate-product-list/cate-product-list.module').then( m => m.CateProductListPageModule)
-  },
-  // {
-  //   path: 'product-card',
-  //   loadChildren: () => import('./product-card/product-card.module').then( m => m.ProductCardPageModule)
-  // },
-  // {
-  //   path: 'product-list-block',
-  //   loadChildren: () => import('./product-list-block/product-list-block.module').then( m => m.ProductListBlockPageModule)
-  // },
   {
     path: 'search-history',
     loadChildren: () => import('./search-history/search-history.module').then( m => m.SearchHistoryPageModule)

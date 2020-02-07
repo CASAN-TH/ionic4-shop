@@ -1,3 +1,4 @@
+import { ProductGeneralWarrantyComponent } from './product-general-warranty/product-general-warranty.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductSlideComponent } from './product-slide/product-slide.component';
@@ -24,6 +25,9 @@ import { ProductImformationSpecModalComponent } from './product-imformation-spec
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductWarrantyComponent } from './product-warranty/product-warranty.component';
 import { ProductMenuModalComponent } from './product-menu-modal/product-menu-modal.component';
+import { ProductGeneralInfoComponent } from './product-general-info/product-general-info.component';
+import { ProductGeneralComponent } from './product-general/product-general.component';
+import { ProductGeneralReviewComponent } from './product-general-review/product-general-review.component';
 
 
 
@@ -51,7 +55,11 @@ import { ProductMenuModalComponent } from './product-menu-modal/product-menu-mod
     ProductImformationSpecModalComponent,
     ProductDetailComponent,
     ProductWarrantyComponent,
-    ProductMenuModalComponent
+    ProductMenuModalComponent,
+    ProductGeneralInfoComponent,
+    ProductGeneralWarrantyComponent,
+    ProductGeneralComponent,
+    ProductGeneralReviewComponent
   ],
   imports: [
     CommonModule,
@@ -68,7 +76,15 @@ import { ProductMenuModalComponent } from './product-menu-modal/product-menu-mod
     ProductImformationSpecComponent,
     ProductDetailComponent,
     ProductWarrantyComponent,
-    ProductMenuModalComponent
+    ProductMenuModalComponent,
+    ProductGeneralInfoComponent,
+    ProductGeneralWarrantyComponent,
+    ProductVoucherComponent,
+    ProductGiftComponent,
+    ProductTcoinComponent,
+    ProductGeneralComponent,
+    ProductGeneralReviewComponent
+
   ],
   entryComponents: [
     ProductPaymentModalComponent,

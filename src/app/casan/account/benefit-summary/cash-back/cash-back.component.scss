@@ -1,28 +1,6 @@
-.content-header-style {
-    // background-image: url('../../assets/images/credit/creditHead.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    color: #ffffff;
-    // margin-top: -45px;
-    padding-top: 110px;
-    padding-bottom: 65px;
-    position: relative;
-    top: -56px;
-}
-
-.profile-pic{
-    position: absolute;
-    top: -78px;
-    left: 10px;
-}
-
-.list-shadow {
-    background-color: white;
-    box-shadow: 0px 2px 7px 1px rgb(209, 206, 209);
-    padding-bottom: 0px;
-    padding-top: 0px;
-    width: 385px;
+.p1-margin{
+    margin-top: 1px;
+    margin-left: 10px;
 }
 
 .amount-withdraw{
@@ -39,13 +17,12 @@
     right: 11px;
 }
 
-.row-margin{
-    margin-top: -40px;
-}
-
-.p1-margin{
-    margin-top: 1px;
-    margin-left: 10px;
+.list-shadow {
+    background-color: white;
+    box-shadow: 0px 2px 7px 1px rgb(209, 206, 209);
+    padding-bottom: 0px;
+    padding-top: 0px;
+    width: 385px;
 }
 
 .border-bottom{
@@ -58,13 +35,13 @@
     border-color: lightgray;
 }
 
+.p-margin-top{
+    margin-top: 1px;
+}
+
 .img-logo{
     width: 55px;
     height: 70px;
-}
-
-.p-margin-top{
-    margin-top: 1px;
 }
 
 .row-margin-top{

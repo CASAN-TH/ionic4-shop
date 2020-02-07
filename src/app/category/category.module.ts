@@ -7,7 +7,9 @@ import { IonicModule } from '@ionic/angular';
 import { CategoryPageRoutingModule } from './category-routing.module';
 
 import { CategoryPage } from './category.page';
+import { PromotionModule } from '../casan/promotion/promotion.module';
 import { CatalogModule } from '../casan/catalog/catalog.module';
+
 
 @NgModule({
   imports: [
@@ -15,6 +17,7 @@ import { CatalogModule } from '../casan/catalog/catalog.module';
     FormsModule,
     IonicModule,
     CategoryPageRoutingModule,
+    // PromotionModule
     CatalogModule
   ],
   declarations: [CategoryPage]

@@ -12,41 +12,23 @@
 </ion-header>
 
 <ion-content fullscreen="true" [scrollEvents]="true" (ionScroll)="onScroll($event)">
-  
-  <!-- <ion-slides pager="ios" #slider>
+
+  <ion-slides pager="ios" #slider>
     <ion-slide *ngFor="let item of homeDataList">
       <div [style.background-color]="item.background_color">
         <img class="slide" [src]="item.image" />
       </div>
     </ion-slide>
-  </ion-slides> -->
+  </ion-slides>
 
-  <app-catalog-slide-nav [recivedata]="homeDataList"></app-catalog-slide-nav>
+  <app-cata-product-list>
+    <app-product-list-block class="one" *ngFor="let blockitem of cateProductHomeData" [recivedata]="blockitem">
+    </app-product-list-block>
+  </app-cata-product-list>
 
-
-  <ion-row>
-    <ion-col size="12" class="ion-no-margin ion-no-padding" *ngFor="let blockitem of cateProductHomeData">
-      <app-product-list-block [recivedata]="blockitem"></app-product-list-block>
-    </ion-col>
-  </ion-row>
-
-
-  <ion-row>
-    <ion-col size="12">
-      <ion-row>
-        <ion-col size="4" text-end>
-          <img class="iconimg" src="https://image.flaticon.com/icons/png/512/2152/2152407.png">
-        </ion-col>
-        <ion-col size="4">
-          <h1 class="producttext" text-center>{{ "HOME.RECOMMEND" | translate}}</h1>
-        </ion-col>
-        <ion-col size="4" text-start>
-          <img class="iconimg" src="https://image.flaticon.com/icons/png/512/2152/2152407.png">
-        </ion-col>
-      </ion-row>
-    </ion-col>
-  </ion-row>
-
-  <app-product-list *ngFor="let reccomment of homeReccommentData" [recivedata]="reccomment.products" (onProductClick)="onProductClick($event)"></app-product-list>
+  <app-product-general-reccomment>
+    <app-product-list class="ten" *ngFor="let reccomment of homeReccommentData" [recivedata]="reccomment.products"
+      (onProductClick)="onProductClick($event)"></app-product-list>
+  </app-product-general-reccomment>
 
 </ion-content>

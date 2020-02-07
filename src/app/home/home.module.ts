@@ -10,7 +10,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
 import { MatTabsModule } from '@angular/material/tabs';
 
-import { CateProductListPageModule } from '../cate-product-list/cate-product-list.module';
+// import { CateProductListPageModule } from '../cate-product-list/cate-product-list.module';
 // import { ProductListBlockPageModule } from '../product-list-block/product-list-block.module';
 // import { ProductlistPageModule } from '../productlist/productlist.module';
 import { CatalogModule } from '../casan/catalog/catalog.module';
@@ -24,7 +24,7 @@ import { CatalogModule } from '../casan/catalog/catalog.module';
     HomePageRoutingModule,
     MatTabsModule,
     // ProductListBlockPageModule,
-    CateProductListPageModule,
+    // CateProductListPageModule,
     // ProductlistPageModule,
     CatalogModule
 

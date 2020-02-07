@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cash-back',
@@ -8,16 +7,10 @@ import { ModalController } from '@ionic/angular';
 })
 export class CashBackComponent implements OnInit {
 
-  @Input() accountData :any
+  @Input() currentamountData: any
 
-  constructor(
-    public modalController: ModalController
-  ) { }
+  constructor() { }
 
   ngOnInit() {}
-
-  ModalDismiss() {
-    this.modalController.dismiss();
-  }
 
 }

@@ -27,88 +27,42 @@
     </ion-col>
   </ion-row>
 
-  <ion-row>
-    <ion-col size="12">
-      <ion-grid>
+  <app-product-general-info [recivedata]="productdetailData">
+    <app-product-payment class="primary" [recivedata]="paymentData" (openPayment)="openPaymentModal()">
+    </app-product-payment>
+    <app-product-share class="secondary" (openShare)="openShareModal()"></app-product-share>
+  </app-product-general-info>
 
-        <ion-row>
-          <ion-col size="12">
-            <h1 class="pri">{{productdetailData.regular_price_text}}</h1>
-          </ion-col>
-        </ion-row>
+  <app-product-benefit>
+    <app-product-voucher class="one" [recivedata]="vouchersData" (openVoucher)="openVoucherModal()">
+    </app-product-voucher>
+    <app-product-gift class="two" [recivedata]="promotiongiftData" (openpromotionGift)="openpromotionGiftModal()">
+    </app-product-gift>
+    <app-product-tcoin class="three" [recivedata]="tcoinData" (openTcoin)="openTcoinModal()"></app-product-tcoin>
+  </app-product-benefit>
 
-        <ion-row>
-          <ion-col size="12">
-            <app-product-payment [recivedata]="paymentData" (openPayment)="openPaymentModal()"></app-product-payment>
-          </ion-col>
-        </ion-row>
+  <app-product-general>
+    <app-product-service class="four" [recivedata]="warrantyData" (openService)="openServiceModal()">
+    </app-product-service>
+    <app-product-spec class="five" [recivedata]="specificationData" (openSpec)="openSpecModal()"></app-product-spec>
+  </app-product-general>
 
-        <ion-row>
-          <ion-col size="12">
-            <h4 class="titlewar">{{productdetailData.name}}</h4>
-          </ion-col>
-        </ion-row>
+  <app-product-general-review>
+    <app-product-reviews class="six" [recivedata]="reviewData" (openReviews)="openReviewsModal()"></app-product-reviews>
+  </app-product-general-review>
 
-        <app-product-share (openShare)="openShareModal()"></app-product-share>
+  <app-product-general-warranty>
+    <app-product-imformation-spec class="seven" (openImformationSpec)="openImformationSpecModal()">
+    </app-product-imformation-spec>
+    <app-product-detail class="eight" [recivedata]="productdetailData"></app-product-detail>
+    <app-product-warranty class="nine" [recivedata]="productwarrantyData"></app-product-warranty>
+  </app-product-general-warranty>
 
-      </ion-grid>
-    </ion-col>
-  </ion-row>
-
-  <ion-row>
-    <ion-col size="12">
-      <app-product-benefit></app-product-benefit>
-    </ion-col>
-  </ion-row>
-
-  <ion-row>
-    <ion-col size="12">
-      <ion-grid>
-        <app-product-service [recivedata]="warrantyData" (openService)="openServiceModal()"></app-product-service>
-        <app-product-spec [recivedata]="specificationData" (openSpec)="openSpecModal()"></app-product-spec>
-      </ion-grid>
-    </ion-col>
-  </ion-row>
-
-  <ion-row>
-    <ion-col size="12">
-      <app-product-reviews [recivedata]="reviewData" (openReviews)="openReviewsModal()"></app-product-reviews>
-    </ion-col>
-  </ion-row>
-
-  <ion-row>
-    <ion-col size="12">
-      <app-product-imformation-spec (openImformationSpec)="openImformationSpecModal()"></app-product-imformation-spec>
-    </ion-col>
-  </ion-row>
-
-  <ion-row>
-    <ion-col size="12">
-      <app-product-detail [recivedata]="productdetailData"></app-product-detail>
-    </ion-col>
-  </ion-row>
-
-  <app-product-warranty [recivedata]="productwarrantyData"></app-product-warranty>
-
-  <ion-row>
-    <ion-col size="12">
-      <ion-row>
-        <ion-col size="4" text-end>
-          <img class="iconimg" src="https://image.flaticon.com/icons/png/512/2152/2152407.png">
-        </ion-col>
-        <ion-col size="4">
-          <h1 class="producttext" text-center>แนะนำ</h1>
-        </ion-col>
-        <ion-col size="4" text-start>
-          <img class="iconimg" src="https://image.flaticon.com/icons/png/512/2152/2152407.png">
-        </ion-col>
-      </ion-row>
-    </ion-col>
-  </ion-row>
-
-  <app-product-list *ngFor="let reccomment of reccommentData" [recivedata]="reccomment.products"
+  <app-product-general-reccomment>
+    <app-product-list class="ten" *ngFor="let reccomment of reccommentData" [recivedata]="reccomment.products"
     (onProductClick)="onProductClick($event)"></app-product-list>
-
+  </app-product-general-reccomment>
+ 
 </ion-content>
 
 <footer [recivedata]="productdetailData"></footer>

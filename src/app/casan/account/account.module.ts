@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FavoriteSummaryComponent } from './favorite-summary/favorite-summary.component';
@@ -11,17 +12,15 @@ import { LanguageComponent } from './setting/language/language.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { OrderHistoryComponent } from './order-summary/order-history/order-history.component';
 import { SearchHistoryComponent } from './order-summary/search-history/search-history.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { BenefitSummaryComponent } from './benefit-summary/benefit-summary.component';
-import { MyCouponComponent } from './benefit-summary/my-coupon/my-coupon.component';
+
+import { AddAddressComponent } from './add-address/add-address.component';
+import { AddressListComponent } from './address-list/address-list.component';
+import { FormsModule } from '@angular/forms';
+import { CouponComponent } from './benefit-summary/coupon/coupon.component';
 import { CouponCenterComponent } from './benefit-summary/coupon-center/coupon-center.component';
 import { CashBackComponent } from './benefit-summary/cash-back/cash-back.component';
-
-
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -36,23 +35,31 @@ import { CashBackComponent } from './benefit-summary/cash-back/cash-back.compone
     OrderHistoryComponent,
     SearchHistoryComponent,
     BenefitSummaryComponent,
-    MyCouponComponent,
+    CouponComponent,
     CouponCenterComponent,
-    CashBackComponent
+    CashBackComponent,
+
     
+    AddAddressComponent,
+    AddressListComponent
   ],
   imports: [
     CommonModule,
     IonicModule,
+    FormsModule,
     MatTabsModule
   ],
   exports: [
     FavoriteSummaryComponent,
     SettingComponent,
     OrderSummaryComponent,
-    BenefitSummaryComponent
+    BenefitSummaryComponent,
+    CouponComponent,
+    CouponCenterComponent,
+    CashBackComponent
+
   ],
-  entryComponents:[
+  entryComponents: [
     WishListComponent,
     FollowedShopComponent,
     BrowseHistoryComponent,
@@ -60,9 +67,15 @@ import { CashBackComponent } from './benefit-summary/cash-back/cash-back.compone
     LanguageComponent,
     OrderHistoryComponent,
     SearchHistoryComponent,
-    MyCouponComponent,
+    CouponComponent,
     CouponCenterComponent,
-    CashBackComponent
+
+
+
+    AddAddressComponent,
+    AddressListComponent
   ]
-})
-export class AccountModule { }
+}
+)
+
+export class AccountModule {}
