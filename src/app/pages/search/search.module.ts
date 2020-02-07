@@ -12,6 +12,7 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { SelectcheckPageModule } from 'src/app/selectcheck/selectcheck.module';
 import { FooterSelectcheckPageModule } from 'src/app/footer-selectcheck/footer-selectcheck.module';
 import { CatalogModule } from 'src/app/casan/catalog/catalog.module';
+import { SearchModule } from 'src/app/casan/search/search.module';
 
 
 
@@ -25,7 +26,8 @@ import { CatalogModule } from 'src/app/casan/catalog/catalog.module';
     MatTabsModule,
     SelectcheckPageModule,
     FooterSelectcheckPageModule,
-    CatalogModule
+    CatalogModule,
+    SearchModule
 
   ],
   declarations: [SearchPage]

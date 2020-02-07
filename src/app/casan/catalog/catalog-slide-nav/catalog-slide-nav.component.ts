@@ -8,9 +8,9 @@ import { CategoryService } from 'src/app/category/category.service';
 })
 export class CatalogSlideNavComponent implements OnInit {
   data: any;
-  
-  // @ViewChild('content', { static: false }) private content: any;
-  @Input() recivedata: any; tabSelected: any;
+  tabSelected: any;
+
+  @Input() recivedata: any;
   @Output() openMenu = new EventEmitter();
 
   constructor(
