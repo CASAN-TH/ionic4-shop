@@ -21,11 +21,10 @@ export class PromotionPage implements OnInit {
 
   ngOnInit() {
     this.promotionService.onPromotionDataListChanged.subscribe((promotionDataList: any) => {
-      console.log(promotionDataList);
       this.promotionData = promotionDataList;
 
       this.promotionData.link_promotion = this.dom.bypassSecurityTrustResourceUrl(this.promotionData.link_promotion);
-      console.log(this.promotionData.link_promotion);
+      // console.log(this.promotionData.link_promotion);
 
     })
 

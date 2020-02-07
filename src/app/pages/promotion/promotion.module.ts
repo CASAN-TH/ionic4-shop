@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PromotionPageRoutingModule } from './promotion-routing.module';
 
 import { PromotionPage } from './promotion.page';
+import { PromotionModule } from 'src/app/casan/promotion/promotion.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PromotionPageRoutingModule
+    PromotionPageRoutingModule,
+    PromotionModule
   ],
   declarations: [PromotionPage]
 })
