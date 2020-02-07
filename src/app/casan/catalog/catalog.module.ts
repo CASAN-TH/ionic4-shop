@@ -8,6 +8,8 @@ import { CatalogSlideNavComponent } from './catalog-slide-nav/catalog-slide-nav.
 import { CategoriesComponent } from './categories/categories.component';
 import { ProductGeneralReccommentComponent } from './product-general-reccomment/product-general-reccomment.component';
 import { CataProductListComponent } from './cata-product-list/cata-product-list.component';
+import { MenuGeneralSelectCheckComponent } from './menu-general-select-check/menu-general-select-check.component';
+import { MenuSelectCheckComponent } from './menu-select-check/menu-select-check.component';
 
 
 
@@ -19,7 +21,9 @@ import { CataProductListComponent } from './cata-product-list/cata-product-list.
     CatalogSlideNavComponent,
     CategoriesComponent,
     ProductGeneralReccommentComponent,
-    CataProductListComponent
+    CataProductListComponent,
+    MenuGeneralSelectCheckComponent,
+    MenuSelectCheckComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +35,9 @@ import { CataProductListComponent } from './cata-product-list/cata-product-list.
     CatalogSlideNavComponent,
     CategoriesComponent,
     ProductGeneralReccommentComponent,
-    CataProductListComponent
+    CataProductListComponent,
+    MenuGeneralSelectCheckComponent,
+    MenuSelectCheckComponent
   ]
 })
 export class CatalogModule { }

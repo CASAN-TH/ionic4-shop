@@ -10,7 +10,6 @@ import { OrderHistoryComponent } from './order-summary/order-history/order-histo
 import { SearchHistoryComponent } from './order-summary/search-history/search-history.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { BenefitSummaryComponent } from './benefit-summary/benefit-summary.component';
-
 import { AddAddressComponent } from './add-address/add-address.component';
 import { AddressListComponent } from './address-list/address-list.component';
 import { FormsModule } from '@angular/forms';
@@ -20,6 +19,11 @@ import { CashBackComponent } from './benefit-summary/cash-back/cash-back.compone
 import { SystemSettingComponent } from './system-setting/system-setting.component';
 import { AboutAppComponent } from './system-setting/about-app/about-app.component';
 import { LanguageComponent } from './system-setting/language/language.component';
+import { ProfileSettingComponent } from './profile-setting/profile-setting.component';
+import { ModalNicknameComponent } from './profile-setting/modal-nickname/modal-nickname.component';
+import { ModalPhoneComponent } from './profile-setting/modal-phone/modal-phone.component';
+import { ModalPasswordComponent } from './profile-setting/modal-password/modal-password.component';
+import { ModalSocialComponent } from './profile-setting/modal-social/modal-social.component';
 
 @NgModule({
   declarations: [
@@ -39,8 +43,13 @@ import { LanguageComponent } from './system-setting/language/language.component'
     LanguageComponent,
 
     
+    AddressListComponent,
     AddAddressComponent,
-    AddressListComponent
+    ProfileSettingComponent,
+    ModalNicknameComponent,
+    ModalPhoneComponent,
+    ModalPasswordComponent,
+    ModalSocialComponent
   ],
   imports: [
     CommonModule,
@@ -55,8 +64,11 @@ import { LanguageComponent } from './system-setting/language/language.component'
     CouponComponent,
     CouponCenterComponent,
     CashBackComponent,
-    SystemSettingComponent
+    SystemSettingComponent,
 
+    OrderSummaryComponent,
+    AddAddressComponent,
+    ProfileSettingComponent
   ],
   entryComponents: [
     WishListComponent,
@@ -72,7 +84,12 @@ import { LanguageComponent } from './system-setting/language/language.component'
 
 
     AddAddressComponent,
-    AddressListComponent
+    AddressListComponent,
+    AddressListComponent,
+    ModalNicknameComponent,
+    ModalPhoneComponent,
+    ModalPasswordComponent,
+    ModalSocialComponent
   ]
 }
 )

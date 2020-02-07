@@ -11,10 +11,14 @@ import { AddaddressService } from './addaddress.service';
 export class AddaddressPage implements OnInit {
   addaddressDataList: any;
 
-  constructor(private router: Router, private addaddressService : AddaddressService,private _location: Location) { }
+  constructor(
+    private router: Router,
+    private addaddressService: AddaddressService,
+    private _location: Location
+  ) { }
 
   ngOnInit() {
-    this.addaddressService.onAddaddressDataListChanged.subscribe((addaddressDataList:any)=>{
+    this.addaddressService.onAddaddressDataListChanged.subscribe((addaddressDataList: any) => {
       console.log(addaddressDataList);
       this.addaddressDataList = addaddressDataList;
     })
@@ -22,7 +26,7 @@ export class AddaddressPage implements OnInit {
   goBackClick() {
     this._location.back();
   }
-  onSaveAddress(){
+  onSaveAddress() {
     this._location.back();
   }
 }

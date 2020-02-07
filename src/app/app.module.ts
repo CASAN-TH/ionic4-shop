@@ -30,10 +30,6 @@ import { TcoingiftModalComponent } from './gifts/tcoingift-modal/tcoingift-modal
 import { WarrantygiftModalComponent } from './gifts/warrantygift-modal/warrantygift-modal.component';
 import { SpecificationgiftModalComponent } from './gifts/specificationgift-modal/specificationgift-modal.component';
 import { ImformationspecgiftModalComponent } from './gifts/imformationspecgift-modal/imformationspecgift-modal.component';
-import { ModalNicknameComponent } from './pages/me/modal-nickname/modal-nickname.component';
-import { ModalPhoneComponent } from './pages/me/modal-phone/modal-phone.component';
-import { ModalPasswordComponent } from './pages/me/modal-password/modal-password.component';
-import { ModalSocialComponent } from './pages/me/modal-social/modal-social.component';
 import { ModalCreditPointComponent } from './credit/modal-credit-point/modal-credit-point.component';
 import { ModalContactComponent } from './credit/modal-contact/modal-contact.component';
 import { ModalMarriageComponent } from './credit/modal-marriage/modal-marriage.component';
@@ -74,10 +70,6 @@ import { PopoverSelectComponent } from 'src/app/casan/account/order-summary/popo
 
     PaymentgiftModalComponent,
 
-    ModalNicknameComponent,
-    ModalPhoneComponent,
-    ModalPasswordComponent,
-    ModalSocialComponent,
     ModalFeedbackComponent,
     ModalAboutComponent,
     ModalMyorderComponent,
@@ -122,10 +114,6 @@ import { PopoverSelectComponent } from 'src/app/casan/account/order-summary/popo
     SelectdownModalComponent,
     AcceptModalComponent,
 
-    ModalNicknameComponent,
-    ModalPhoneComponent,
-    ModalPasswordComponent,
-    ModalSocialComponent,
     ModalFeedbackComponent,
     ModalAboutComponent,
     ModalMyorderComponent,

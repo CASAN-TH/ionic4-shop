@@ -9,9 +9,10 @@ import { SearchPageRoutingModule } from "./search-routing.module";
 import { SearchPage } from "./search.page";
 import { MatTabsModule } from "@angular/material/tabs";
 // import { ProductlistPageModule } from 'src/app/productlist/productlist.module';
-import { SelectcheckPageModule } from 'src/app/selectcheck/selectcheck.module';
+// import { SelectcheckPageModule } from 'src/app/selectcheck/selectcheck.module';
 import { FooterSelectcheckPageModule } from 'src/app/footer-selectcheck/footer-selectcheck.module';
 import { CatalogModule } from 'src/app/casan/catalog/catalog.module';
+import { SearchModule } from 'src/app/casan/search/search.module';
 
 
 
@@ -23,9 +24,10 @@ import { CatalogModule } from 'src/app/casan/catalog/catalog.module';
     SearchPageRoutingModule,
     // ProductlistPageModule,
     MatTabsModule,
-    SelectcheckPageModule,
+    // SelectcheckPageModule,
     FooterSelectcheckPageModule,
-    CatalogModule
+    CatalogModule,
+    SearchModule
 
   ],
   declarations: [SearchPage]

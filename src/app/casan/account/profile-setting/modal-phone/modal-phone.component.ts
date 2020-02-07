@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { MeService } from '../me.service';
+import { MeService } from '../../../../pages/me/me.service';
 
 @Component({
   selector: 'app-modal-phone',
