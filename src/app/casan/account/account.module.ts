@@ -15,6 +15,11 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { AddAddressComponent } from './add-address/add-address.component';
 import { AddressListComponent } from './address-list/address-list.component';
 import { FormsModule } from '@angular/forms';
+import { ProfileSettingComponent } from './profile-setting/profile-setting.component';
+import { ModalNicknameComponent } from './profile-setting/modal-nickname/modal-nickname.component';
+import { ModalPhoneComponent } from './profile-setting/modal-phone/modal-phone.component';
+import { ModalPasswordComponent } from './profile-setting/modal-password/modal-password.component';
+import { ModalSocialComponent } from './profile-setting/modal-social/modal-social.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,12 @@ import { FormsModule } from '@angular/forms';
     OrderHistoryComponent,
     SearchHistoryComponent,
     AddressListComponent,
-    AddAddressComponent
+    AddAddressComponent,
+    ProfileSettingComponent,
+    ModalNicknameComponent,
+    ModalPhoneComponent,
+    ModalPasswordComponent,
+    ModalSocialComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +51,8 @@ import { FormsModule } from '@angular/forms';
     FavoriteSummaryComponent,
     SettingComponent,
     OrderSummaryComponent,
-    AddAddressComponent
+    AddAddressComponent,
+    ProfileSettingComponent
   ],
   entryComponents: [
     WishListComponent,
@@ -51,7 +62,11 @@ import { FormsModule } from '@angular/forms';
     LanguageComponent,
     OrderHistoryComponent,
     SearchHistoryComponent,
-    AddressListComponent
+    AddressListComponent,
+    ModalNicknameComponent,
+    ModalPhoneComponent,
+    ModalPasswordComponent,
+    ModalSocialComponent
   ]
 })
 export class AccountModule { }

@@ -1,4 +1,4 @@
-import { MeService } from './../me.service';
+import { MeService } from '../../../../pages/me/me.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common'
 import { ModalController } from '@ionic/angular';
