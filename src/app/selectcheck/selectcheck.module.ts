@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { SelectcheckPageRoutingModule } from './selectcheck-routing.module';
 
 import { SelectcheckPage } from './selectcheck.page';
+// import { CatalogModule } from '../casan/catalog/catalog.module';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { SelectcheckPage } from './selectcheck.page';
     FormsModule,
     IonicModule,
     SelectcheckPageRoutingModule
+    // CatalogModule
   ],
   declarations: [SelectcheckPage],
   exports: [SelectcheckPage]

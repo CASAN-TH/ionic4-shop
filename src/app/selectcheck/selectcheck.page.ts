@@ -18,14 +18,14 @@ export class SelectcheckPage implements OnInit {
 
   }
 
-  onCategories(selectcheckId: any) {
-    console.log("onCategories" + selectcheckId);
-  }
-  onBrands(selectcheckId: any) {
-    console.log("onBrands" + selectcheckId);
-  }
-  onPriceranges(selectcheckId: any) {
-    console.log("onPriceranges" + selectcheckId);
-  }
+  // onCategories(selectcheckId: any) {
+  //   console.log("onCategories" + selectcheckId);
+  // }
+  // onBrands(selectcheckId: any) {
+  //   console.log("onBrands" + selectcheckId);
+  // }
+  // onPriceranges(selectcheckId: any) {
+  //   console.log("onPriceranges" + selectcheckId);
+  // }
 
 }
