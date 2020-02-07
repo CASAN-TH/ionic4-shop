@@ -3,6 +3,7 @@ import { ModalController } from '@ionic/angular';
 import { AboutAppComponent } from './about-app/about-app.component';
 import { LanguageComponent } from './language/language.component';
 import { Router } from '@angular/router';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @Component({
   selector: 'app-system-setting',
@@ -32,6 +33,13 @@ export class SystemSettingComponent implements OnInit {
   async languageModal() {
     const modal = await this.modalController.create({
       component: LanguageComponent,
+    });
+    return await modal.present();
+  }
+
+  async feedbackModal() {
+    const modal = await this.modalController.create({
+      component: FeedbackComponent,
     });
     return await modal.present();
   }

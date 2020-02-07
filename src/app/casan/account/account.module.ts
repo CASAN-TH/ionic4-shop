@@ -24,6 +24,7 @@ import { ModalNicknameComponent } from './profile-setting/modal-nickname/modal-n
 import { ModalPhoneComponent } from './profile-setting/modal-phone/modal-phone.component';
 import { ModalPasswordComponent } from './profile-setting/modal-password/modal-password.component';
 import { ModalSocialComponent } from './profile-setting/modal-social/modal-social.component';
+import { FeedbackComponent } from './system-setting/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ModalSocialComponent } from './profile-setting/modal-social/modal-socia
     SystemSettingComponent,
     AboutAppComponent,
     LanguageComponent,
+    FeedbackComponent,
 
     
     AddressListComponent,
@@ -80,6 +82,7 @@ import { ModalSocialComponent } from './profile-setting/modal-social/modal-socia
     CouponCenterComponent,
     AboutAppComponent,
     LanguageComponent,
+    FeedbackComponent,
 
 
 
