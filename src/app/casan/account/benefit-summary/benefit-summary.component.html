@@ -1,0 +1,49 @@
+<ion-card class="ion-text-center">
+    <ion-grid>
+      <ion-item class="ion-no-margin ion-no-padding">
+        <ion-col size="8">
+          <p class="title-font">สิทธิประโยชน์ของฉัน</p>
+        </ion-col>
+        <ion-col size="4">
+
+        </ion-col>
+      </ion-item>
+      <ion-row *ngIf="accountData">
+        <ion-col size="3" (click)="creditPointModal()">
+          <h5>{{creditData.credit.creditremain}}</h5>
+          <p class="font-13">วงเงินที่ใช้ได้</p>
+        </ion-col>
+        <ion-col size="3" (click)="MyCouponModal()">
+          <h5>{{scoreData.coupon}}</h5>
+          <p class="font-13">คูปอง</p>
+        </ion-col>
+        <ion-col size="3" (click)="onToTcoinPage()">
+          <h5>{{scoreData.tcoin}}</h5>
+          <p class="font-13">Tcoin</p>
+        </ion-col>
+        <ion-col size="3" (click)="CurrentAmountModal()">
+          <h5>{{scoreData.currentamount}}</h5>
+          <p class="font-13">รางวัลเงินสด</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="!accountData">
+        <ion-col size="3" (click)="onToCreditPage()">
+          <h5>--</h5>
+          <p class="font-13">วงเงินที่ใช้ได้</p>
+        </ion-col>
+        <ion-col size="3" (click)="onToMyCouponPage()">
+          <h5>--</h5>
+          <p class="font-13">คูปอง</p>
+        </ion-col>
+        <ion-col size="3" (click)="onToTcoinPage()">
+          <h5>--</h5>
+          <p class="font-13">Tcoin</p>
+        </ion-col>
+        <ion-col size="3" (click)="onToCurrentAmountPage()">
+          <h5>--</h5>
+          <p class="font-13">รางวัลเงินสด</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>

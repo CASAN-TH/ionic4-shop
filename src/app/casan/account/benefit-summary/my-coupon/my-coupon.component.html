@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons mode="ios" slot="start" (click)="ModalDismiss()">
+      <ion-button>
+        <ion-icon mode="ios" slot="icon-only" class="arrow-back" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>คูปองของฉัน</ion-title>
+    <ion-buttons mode="ios" slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" class="icon-header" color="medium"
+          src="https://image.flaticon.com/icons/svg/149/149150.svg">
+        </ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <mat-tab-group>
+    <mat-tab label="ใช้ได้">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-row>
+              <ion-col size="8" class="getcupon">
+                <ion-input type="text" placeholder="ใส่รหัสคูปอง" class="coupon-p"></ion-input>
+              </ion-col>
+              <ion-col size="4" class="buttonget">
+                <ion-item color="danger" disabled (click)="onAcceptCodeClick()" class="buttonget2">
+                  <ion-label text-center>
+                    รับ
+                  </ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <img class="img-box" src="https://image.flaticon.com/icons/svg/1169/1169905.svg" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <p class="ion-text-center">
+              ไม่มีข้อมูลคูปองที่เกี่ยวข้อง
+            </p>
+  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </mat-tab>
+
+
+    <mat-tab label="ใช้เเล้ว">
+      <ion-row>
+        <ion-col size="12">
+          <img class="img-box" src="https://image.flaticon.com/icons/svg/1169/1169905.svg" alt="">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <p class="ion-text-center">
+            ไม่มีข้อมูลคูปองที่เกี่ยวข้อง
+          </p>
+
+        </ion-col>
+      </ion-row>
+    </mat-tab>
+
+
+    <mat-tab label="หมดอายุ"> 
+      <ion-row>
+        <ion-col size="12">
+          <img class="img-box" src="https://image.flaticon.com/icons/svg/1169/1169905.svg" alt="">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <p class="ion-text-center">
+            ไม่มีข้อมูลคูปองที่เกี่ยวข้อง
+          </p>
+
+        </ion-col>
+      </ion-row>
+    </mat-tab>
+  
+  </mat-tab-group>
+
+</ion-content>
+
+<ion-footer>
+
+  <ion-row class="list-shadow" (click)="ModalCouponCenter()">
+    <ion-col>
+      <p class="ion-text-center">
+        รับคูปองเพิ่ม >
+      </p>
+    </ion-col>
+
+  </ion-row>
+
+</ion-footer>

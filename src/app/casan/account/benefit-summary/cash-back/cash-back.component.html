@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons mode="ios" slot="start" (click)="ModalDismiss()">
+      <ion-button>
+        <ion-icon mode="ios" slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>ยอดเงินปัจจุบัน</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row class="content-header-style">
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-avatar class="profile-pic">
+        <img [src]="accountData.profileImageURL">
+      </ion-avatar>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="row-margin">
+    <ion-col size="6">
+      <p class="p1-margin">
+        จำนวนเงินที่ถอน
+      </p>
+      <ion-text class="amount-withdraw">
+        {{currentamountData.withdrawamount}}
+      </ion-text>
+
+    </ion-col>
+    <ion-col size="6">
+      <ion-button expand="full" class="btn-morecash">เพิ่มรางวัลเงินสด</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid class="list-shadow">
+        <ion-row class="border-bottom">
+          <ion-col size="6" class="right-border">
+            <p>
+              ยอดเงินทั้งหมดที่เคยมี
+            </p>
+            <h3>
+              {{currentamountData.totalamount}}
+            </h3>
+          </ion-col>
+          <ion-col size="6">
+            <p>
+              การถอนเงิน
+            </p>
+            <h3>
+              {{currentamountData.withdrawmoney}}
+            </h3>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6" class="right-border">
+            <p>
+              เพื่อนที่ลงทะเบียนเเล้ว
+            </p>
+            <h3>
+              {{currentamountData.friendregistered}}
+            </h3>
+          </ion-col>
+          <ion-col size="6">
+            <p>
+              เพื่อนที่สมัครเครดิตเเล้ว
+            </p>
+            <h3>
+              {{currentamountData.friendcredit}}
+            </h3>
+          </ion-col>
+        </ion-row>
+
+
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-grid class="list-shadow ion-text-center">
+        <ion-row>
+          <ion-col size="4">
+            <img class="img-logo" src="https://image.flaticon.com/icons/svg/1177/1177577.svg" alt="">
+            <p class="p-margin-top">
+              ชวนเพื่อนเพิ่ม
+            </p>
+          </ion-col>
+          <ion-col size="4">
+            <img class="img-logo" src="https://image.flaticon.com/icons/svg/330/330709.svg" alt="">
+            <p class="p-margin-top">
+              การถอนเงิน
+            </p>
+          </ion-col>
+          <ion-col size="4">
+            <img class="img-logo" src="https://image.flaticon.com/icons/svg/1316/1316611.svg" alt="">
+            <p class="p-margin-top">
+              รายชื่อเพื่อน
+            </p>
+          </ion-col>
+        </ion-row>
+        <ion-row class="row-margin-top">
+          <ion-col size="4">
+            <p>
+              <img class="img-logo" src="https://image.flaticon.com/icons/svg/1055/1055644.svg" alt="">
+            </p>
+            <p class="p-margin-top">
+              รายละเอียดรางวัลเงินสด
+            </p>
+          </ion-col>
+          <ion-col size="4">
+            <p>
+              <img class="img-logo" src=" https://image.flaticon.com/icons/svg/721/721471.svg" alt="">
+            </p>
+            <p class="p-margin-top">
+              บันทึกเงินรางวัล
+            </p>
+          </ion-col>
+          <ion-col size="4">
+            <p>
+              <img class="img-logo" src="https://image.flaticon.com/icons/svg/1685/1685733.svg" alt="">
+            </p>
+            <p class="p-margin-top">
+              รายละเอียดการถอนเงิน
+            </p>
+          </ion-col>
+        </ion-row>
+
+
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+</ion-content>

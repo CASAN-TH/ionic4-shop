@@ -12,6 +12,10 @@ import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { OrderHistoryComponent } from './order-summary/order-history/order-history.component';
 import { SearchHistoryComponent } from './order-summary/search-history/search-history.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { BenefitSummaryComponent } from './benefit-summary/benefit-summary.component';
+import { MyCouponComponent } from './benefit-summary/my-coupon/my-coupon.component';
+import { CouponCenterComponent } from './benefit-summary/coupon-center/coupon-center.component';
+import { CashBackComponent } from './benefit-summary/cash-back/cash-back.component';
 
 
 
@@ -30,7 +34,11 @@ import {MatTabsModule} from '@angular/material/tabs';
     LanguageComponent,
     OrderSummaryComponent,
     OrderHistoryComponent,
-    SearchHistoryComponent
+    SearchHistoryComponent,
+    BenefitSummaryComponent,
+    MyCouponComponent,
+    CouponCenterComponent,
+    CashBackComponent
     
   ],
   imports: [
@@ -41,7 +49,8 @@ import {MatTabsModule} from '@angular/material/tabs';
   exports: [
     FavoriteSummaryComponent,
     SettingComponent,
-    OrderSummaryComponent
+    OrderSummaryComponent,
+    BenefitSummaryComponent
   ],
   entryComponents:[
     WishListComponent,
@@ -50,7 +59,10 @@ import {MatTabsModule} from '@angular/material/tabs';
     AboutComponent,
     LanguageComponent,
     OrderHistoryComponent,
-    SearchHistoryComponent
+    SearchHistoryComponent,
+    MyCouponComponent,
+    CouponCenterComponent,
+    CashBackComponent
   ]
 })
 export class AccountModule { }
