@@ -1,0 +1,9 @@
+<ion-card class="ion-no-margin-collection">
+  <ion-row>
+    <mat-tab-group mat-align-tabs="start">
+      <mat-tab *ngFor="let tabproduct of recivedata.productItems" [label]="tabproduct.tabname">
+        <app-product-list [recivedata]="tabproduct.products"></app-product-list>
+      </mat-tab>
+    </mat-tab-group>
+  </ion-row>
+</ion-card>

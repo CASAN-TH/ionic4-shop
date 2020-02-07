@@ -5,6 +5,9 @@ import { SearchBrandsComponent } from './search-brands/search-brands.component';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { SearchProductTypeComponent } from './search-product-type/search-product-type.component';
+import { SearchProductTabComponent } from './search-product-tab/search-product-tab.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { CatalogModule } from '../catalog/catalog.module';
 
 
 
@@ -12,17 +15,21 @@ import { SearchProductTypeComponent } from './search-product-type/search-product
   declarations: [
     SearchGeneralBrandsComponent,
     SearchBrandsComponent,
-    SearchProductTypeComponent
+    SearchProductTypeComponent,
+    SearchProductTabComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule
+    IonicModule,
+    MatTabsModule,
+    CatalogModule
   ],
   exports:[
     SearchGeneralBrandsComponent,
     SearchBrandsComponent,
-    SearchProductTypeComponent
+    SearchProductTypeComponent,
+    SearchProductTabComponent
   ]
 })
 export class SearchModule { }
