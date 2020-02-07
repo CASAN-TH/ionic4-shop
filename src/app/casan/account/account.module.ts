@@ -28,8 +28,8 @@ import { FormsModule } from '@angular/forms';
     OrderSummaryComponent,
     OrderHistoryComponent,
     SearchHistoryComponent,
-    AddAddressComponent,
-    AddressListComponent
+    AddressListComponent,
+    AddAddressComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +40,8 @@ import { FormsModule } from '@angular/forms';
   exports: [
     FavoriteSummaryComponent,
     SettingComponent,
-    OrderSummaryComponent
+    OrderSummaryComponent,
+    AddAddressComponent
   ],
   entryComponents: [
     WishListComponent,
@@ -50,7 +51,6 @@ import { FormsModule } from '@angular/forms';
     LanguageComponent,
     OrderHistoryComponent,
     SearchHistoryComponent,
-    AddAddressComponent,
     AddressListComponent
   ]
 })
