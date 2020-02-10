@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-product-payment',
@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductPaymentComponent implements OnInit {
 
+  @Input() recivedata: any;
+  @Output() openPayment = new EventEmitter();
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+  paymentModal() {
+    this.openPayment.emit();
+  }
 
 }

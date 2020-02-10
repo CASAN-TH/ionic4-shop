@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductSlideComponent } from './product-slide/product-slide.component';
 import { IonicModule } from '@ionic/angular';
-import { ProductPaymentComponent } from './product-payment/product-payment.component';
-import { ProductPaymentModalComponent } from './product-payment/product-payment-modal/product-payment-modal.component';
+// import { ProductPaymentComponent } from './product-payment/product-payment.component';
+// import { ProductPaymentModalComponent } from './product-payment/product-payment-modal/product-payment-modal.component';
 // import { ProductShareComponent } from './product-share/product-share.component';
 // import { ProductShareModalComponent } from './product-share/product-share-modal/product-share-modal.component';
 import { ProductBenefitComponent } from './product-benefit/product-benefit.component';
@@ -30,6 +30,8 @@ import { ProductGeneralComponent } from './product-general/product-general.compo
 import { ProductGeneralReviewComponent } from './product-general-review/product-general-review.component';
 import { ProductShareComponent } from './product-general-info/product-share/product-share.component';
 import { ProductShareModalComponent } from './product-general-info/product-share/product-share-modal/product-share-modal.component';
+import { ProductPaymentComponent } from './product-general-info/product-payment/product-payment.component';
+import { ProductPaymentModalComponent } from './product-general-info/product-payment/product-payment-modal/product-payment-modal.component';
 
 
 
@@ -38,6 +40,8 @@ import { ProductShareModalComponent } from './product-general-info/product-share
     ProductSlideComponent,
     ProductPaymentComponent,
     ProductPaymentModalComponent,
+    // ProductPaymentComponent,
+    // ProductPaymentModalComponent,
     ProductShareComponent,
     ProductShareModalComponent,
     // ProductShareComponent,
@@ -72,6 +76,7 @@ import { ProductShareModalComponent } from './product-general-info/product-share
   exports: [
     ProductSlideComponent,
     ProductPaymentComponent,
+    // ProductPaymentComponent,
     ProductShareComponent,
     // ProductShareComponent,
     ProductBenefitComponent,
@@ -93,6 +98,7 @@ import { ProductShareModalComponent } from './product-general-info/product-share
   ],
   entryComponents: [
     ProductPaymentModalComponent,
+    // ProductPaymentModalComponent,
     ProductShareModalComponent,
     // ProductShareModalComponent,
     ProductGiftModalComponent,

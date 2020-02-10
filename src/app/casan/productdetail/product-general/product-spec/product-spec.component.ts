@@ -20,5 +20,4 @@ export class ProductSpecComponent implements OnInit {
     this.openSpec.emit();
   }
 
-
 }
