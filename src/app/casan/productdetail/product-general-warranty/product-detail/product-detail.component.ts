@@ -13,5 +13,4 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit() {
     console.log(this.recivedata)
   }
-
 }

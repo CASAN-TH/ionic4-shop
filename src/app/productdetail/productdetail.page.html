@@ -47,16 +47,16 @@
     <app-product-spec class="five" [recivedata]="specificationData" (openSpec)="openSpecModal()"></app-product-spec>
   </app-product-general> -->
  
-  <app-product-general-review>
+  <!-- <app-product-general-review>
     <app-product-reviews class="six" [recivedata]="reviewData" (openReviews)="openReviewsModal()"></app-product-reviews>
-  </app-product-general-review>
+  </app-product-general-review> -->
 
-  <app-product-general-warranty>
+  <!-- <app-product-general-warranty>
     <app-product-imformation-spec class="seven" (openImformationSpec)="openImformationSpecModal()">
     </app-product-imformation-spec>
     <app-product-detail class="eight" [recivedata]="productdetailData"></app-product-detail>
     <app-product-warranty class="nine" [recivedata]="productwarrantyData"></app-product-warranty>
-  </app-product-general-warranty>
+  </app-product-general-warranty> -->
 
   <app-product-general-reccomment>
     <app-product-list class="ten" *ngFor="let reccomment of reccommentData" [recivedata]="reccomment.products"

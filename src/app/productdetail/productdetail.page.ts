@@ -7,16 +7,20 @@ import { Location } from '@angular/common';
 
 // import { ProductPaymentModalComponent } from '../casan/productdetail/product-payment/product-payment-modal/product-payment-modal.component';
 // import { ProductShareModalComponent } from '../casan/productdetail/product-share/product-share-modal/product-share-modal.component';
-import { ProductSpecModalComponent } from '../casan/productdetail/product-spec/product-spec-modal/product-spec-modal.component';
-import { ProductReviewsModalComponent } from '../casan/productdetail/product-reviews/product-reviews-modal/product-reviews-modal.component';
-import { ProductImformationSpecModalComponent } from '../casan/productdetail/product-imformation-spec/product-imformation-spec-modal/product-imformation-spec-modal.component';
-import { ProductServiceModalComponent } from '../casan/productdetail/product-service/product-service-modal/product-service-modal.component';
+// import { ProductSpecModalComponent } from '../casan/productdetail/product-spec/product-spec-modal/product-spec-modal.component';
+// import { ProductReviewsModalComponent } from '../casan/productdetail/product-reviews/product-reviews-modal/product-reviews-modal.component';
+// import { ProductImformationSpecModalComponent } from '../casan/productdetail/product-imformation-spec/product-imformation-spec-modal/product-imformation-spec-modal.component';
+// import { ProductServiceModalComponent } from '../casan/productdetail/product-service/product-service-modal/product-service-modal.component';
 import { ProductMenuModalComponent } from '../casan/productdetail/product-menu-modal/product-menu-modal.component';
 import { ProductVoucherModalComponent } from '../casan/productdetail/product-benefit/product-voucher/product-voucher-modal/product-voucher-modal.component';
 import { ProductGiftModalComponent } from '../casan/productdetail/product-benefit/product-gift/product-gift-modal/product-gift-modal.component';
 import { ProductTcoinModalComponent } from '../casan/productdetail/product-benefit/product-tcoin/product-tcoin-modal/product-tcoin-modal.component';
 import { ProductShareModalComponent } from '../casan/productdetail/product-general-info/product-share/product-share-modal/product-share-modal.component';
 import { ProductPaymentModalComponent } from '../casan/productdetail/product-general-info/product-payment/product-payment-modal/product-payment-modal.component';
+import { ProductSpecModalComponent } from '../casan/productdetail/product-general/product-spec/product-spec-modal/product-spec-modal.component';
+import { ProductServiceModalComponent } from '../casan/productdetail/product-general/product-service/product-service-modal/product-service-modal.component';
+import { ProductReviewsModalComponent } from '../casan/productdetail/product-general-review/product-reviews/product-reviews-modal/product-reviews-modal.component';
+import { ProductImformationSpecModalComponent } from '../casan/productdetail/product-general-warranty/product-imformation-spec/product-imformation-spec-modal/product-imformation-spec-modal.component';
 
 @Component({
   selector: 'app-productdetail',

@@ -17,5 +17,4 @@ export class ProductImformationSpecComponent implements OnInit {
   imformationSpecModal() {
     this.openImformationSpec.emit();
   }
-
 }

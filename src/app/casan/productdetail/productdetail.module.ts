@@ -14,16 +14,16 @@ import { ProductVoucherComponent } from './product-benefit/product-voucher/produ
 import { ProductGiftModalComponent } from './product-benefit/product-gift/product-gift-modal/product-gift-modal.component';
 import { ProductTcoinModalComponent } from './product-benefit/product-tcoin/product-tcoin-modal/product-tcoin-modal.component';
 import { ProductVoucherModalComponent } from './product-benefit/product-voucher/product-voucher-modal/product-voucher-modal.component';
-import { ProductServiceComponent } from './product-service/product-service.component';
-import { ProductServiceModalComponent } from './product-service/product-service-modal/product-service-modal.component';
-import { ProductSpecComponent } from './product-spec/product-spec.component';
-import { ProductSpecModalComponent } from './product-spec/product-spec-modal/product-spec-modal.component';
-import { ProductReviewsComponent } from './product-reviews/product-reviews.component';
-import { ProductReviewsModalComponent } from './product-reviews/product-reviews-modal/product-reviews-modal.component';
-import { ProductImformationSpecComponent } from './product-imformation-spec/product-imformation-spec.component';
-import { ProductImformationSpecModalComponent } from './product-imformation-spec/product-imformation-spec-modal/product-imformation-spec-modal.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { ProductWarrantyComponent } from './product-warranty/product-warranty.component';
+// import { ProductServiceComponent } from './product-service/product-service.component';
+// import { ProductServiceModalComponent } from './product-service/product-service-modal/product-service-modal.component';
+// import { ProductSpecComponent } from './product-spec/product-spec.component';
+// import { ProductSpecModalComponent } from './product-spec/product-spec-modal/product-spec-modal.component';
+// import { ProductReviewsComponent } from './product-reviews/product-reviews.component';
+// import { ProductReviewsModalComponent } from './product-reviews/product-reviews-modal/product-reviews-modal.component';
+// import { ProductImformationSpecComponent } from './product-imformation-spec/product-imformation-spec.component';
+// import { ProductImformationSpecModalComponent } from './product-imformation-spec/product-imformation-spec-modal/product-imformation-spec-modal.component';
+// import { ProductDetailComponent } from './product-detail/product-detail.component';
+// import { ProductWarrantyComponent } from './product-warranty/product-warranty.component';
 import { ProductMenuModalComponent } from './product-menu-modal/product-menu-modal.component';
 import { ProductGeneralInfoComponent } from './product-general-info/product-general-info.component';
 import { ProductGeneralComponent } from './product-general/product-general.component';
@@ -32,6 +32,16 @@ import { ProductShareComponent } from './product-general-info/product-share/prod
 import { ProductShareModalComponent } from './product-general-info/product-share/product-share-modal/product-share-modal.component';
 import { ProductPaymentComponent } from './product-general-info/product-payment/product-payment.component';
 import { ProductPaymentModalComponent } from './product-general-info/product-payment/product-payment-modal/product-payment-modal.component';
+import { ProductServiceComponent } from './product-general/product-service/product-service.component';
+import { ProductServiceModalComponent } from './product-general/product-service/product-service-modal/product-service-modal.component';
+import { ProductSpecComponent } from './product-general/product-spec/product-spec.component';
+import { ProductSpecModalComponent } from './product-general/product-spec/product-spec-modal/product-spec-modal.component';
+import { ProductReviewsComponent } from './product-general-review/product-reviews/product-reviews.component';
+import { ProductReviewsModalComponent } from './product-general-review/product-reviews/product-reviews-modal/product-reviews-modal.component';
+import { ProductDetailComponent } from './product-general-warranty/product-detail/product-detail.component';
+import { ProductImformationSpecComponent } from './product-general-warranty/product-imformation-spec/product-imformation-spec.component';
+import { ProductImformationSpecModalComponent } from './product-general-warranty/product-imformation-spec/product-imformation-spec-modal/product-imformation-spec-modal.component';
+import { ProductWarrantyComponent } from './product-general-warranty/product-warranty/product-warranty.component';
 
 
 
@@ -59,10 +69,20 @@ import { ProductPaymentModalComponent } from './product-general-info/product-pay
     ProductSpecModalComponent,
     ProductReviewsComponent,
     ProductReviewsModalComponent,
+    ProductDetailComponent,
     ProductImformationSpecComponent,
     ProductImformationSpecModalComponent,
-    ProductDetailComponent,
     ProductWarrantyComponent,
+    // ProductServiceComponent,
+    // ProductServiceModalComponent,
+    // ProductSpecComponent,
+    // ProductSpecModalComponent,
+    // ProductReviewsComponent,
+    // ProductReviewsModalComponent,
+    // ProductImformationSpecComponent,
+    // ProductImformationSpecModalComponent,
+    // ProductDetailComponent,
+    // ProductWarrantyComponent,
     ProductMenuModalComponent,
     ProductGeneralInfoComponent,
     ProductGeneralWarrantyComponent,
@@ -83,9 +103,15 @@ import { ProductPaymentModalComponent } from './product-general-info/product-pay
     ProductServiceComponent,
     ProductSpecComponent,
     ProductReviewsComponent,
-    ProductImformationSpecComponent,
     ProductDetailComponent,
+    ProductImformationSpecComponent,
     ProductWarrantyComponent,
+    // ProductServiceComponent,
+    // ProductSpecComponent,
+    // ProductReviewsComponent,
+    // ProductImformationSpecComponent,
+    // ProductDetailComponent,
+    // ProductWarrantyComponent,
     ProductMenuModalComponent,
     ProductGeneralInfoComponent,
     ProductGeneralWarrantyComponent,
@@ -108,6 +134,10 @@ import { ProductPaymentModalComponent } from './product-general-info/product-pay
     ProductSpecModalComponent,
     ProductReviewsModalComponent,
     ProductImformationSpecModalComponent,
+    // ProductServiceModalComponent,
+    // ProductSpecModalComponent,
+    // ProductReviewsModalComponent,
+    // ProductImformationSpecModalComponent,
     ProductMenuModalComponent
   ]
 })

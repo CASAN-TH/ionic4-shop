@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./product-reviews.component.scss'],
 })
 export class ProductReviewsComponent implements OnInit {
-
+  
   @Input() recivedata: any;
   @Output() openReviews = new EventEmitter();
 
