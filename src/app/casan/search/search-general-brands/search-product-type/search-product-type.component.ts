@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-search-product-type',
@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./search-product-type.component.scss'],
 })
 export class SearchProductTypeComponent implements OnInit {
-
+  
   cate2Selected: any;
   @Input() recivedata: any
   @Output() openProductType = new EventEmitter();

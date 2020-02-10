@@ -1,0 +1,37 @@
+ion-card {
+    box-shadow: none !important;
+    background-color: #ffffff;
+    border-radius: 0rem;
+  }
+  
+  .ion-col-border {
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+  }
+  
+  .brand {
+    background-color: #ededed;
+  }
+  
+  .ion-item-selected {
+    font-size: 2rem;
+    color: red;
+    margin-top: -0.65rem;
+    margin-left: 1rem;
+    position: absolute;
+  }
+  
+  .ion-no-margin-custom {
+    --margin-start: 0;
+    --margin-end: 0;
+    --margin-top: 0;
+    --margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+  }
+  

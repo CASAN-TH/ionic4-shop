@@ -14,6 +14,4 @@ export class SearchProductTabComponent implements OnInit {
   ngOnInit() {
 
   }
-
-
 }
