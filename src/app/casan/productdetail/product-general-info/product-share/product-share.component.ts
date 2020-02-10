@@ -17,5 +17,4 @@ export class ProductShareComponent implements OnInit {
     this.openShare.emit();
   }
 
-
 }

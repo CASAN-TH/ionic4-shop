@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ProductdetailService } from 'src/app/productdetail/productdetail.service';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-product-tcoin',
@@ -10,7 +12,10 @@ export class ProductTcoinComponent implements OnInit {
   @Input() recivedata: any;
   @Output() openTcoin = new EventEmitter();
 
-  constructor() { }
+  constructor(
+    private productdetailService: ProductdetailService,
+    public modalController: ModalController
+  ) { }
 
   ngOnInit() { }
 

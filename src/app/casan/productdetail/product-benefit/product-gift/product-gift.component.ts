@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ProductdetailService } from 'src/app/productdetail/productdetail.service';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-product-gift',
@@ -10,7 +12,10 @@ export class ProductGiftComponent implements OnInit {
   @Input() recivedata: any;
   @Output() openpromotionGift = new EventEmitter();
 
-  constructor() { }
+  constructor(
+    private productdetailService: ProductdetailService,
+    public modalController: ModalController
+  ) { }
 
   ngOnInit() {
     console.log(this.recivedata);

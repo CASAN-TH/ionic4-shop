@@ -9,8 +9,9 @@ import { SpecificationgiftModalComponent } from './specificationgift-modal/speci
 import { ImformationspecgiftModalComponent } from './imformationspecgift-modal/imformationspecgift-modal.component';
 
 import { Location } from '@angular/common'
-import { ProductShareModalComponent } from '../casan/productdetail/product-share/product-share-modal/product-share-modal.component';
+// import { ProductShareModalComponent } from '../casan/productdetail/product-share/product-share-modal/product-share-modal.component';
 import { ProductMenuModalComponent } from '../casan/productdetail/product-menu-modal/product-menu-modal.component';
+import { ProductShareModalComponent } from '../casan/productdetail/product-general-info/product-share/product-share-modal/product-share-modal.component';
 // import { SelectMenuComponent } from '../productdetail/select-menu/select-menu.component';
 // import { ShareModalComponent } from '../productdetail/share-modal/share-modal.component';
 

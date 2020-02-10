@@ -5,8 +5,8 @@ import { ProductSlideComponent } from './product-slide/product-slide.component';
 import { IonicModule } from '@ionic/angular';
 import { ProductPaymentComponent } from './product-payment/product-payment.component';
 import { ProductPaymentModalComponent } from './product-payment/product-payment-modal/product-payment-modal.component';
-import { ProductShareComponent } from './product-share/product-share.component';
-import { ProductShareModalComponent } from './product-share/product-share-modal/product-share-modal.component';
+// import { ProductShareComponent } from './product-share/product-share.component';
+// import { ProductShareModalComponent } from './product-share/product-share-modal/product-share-modal.component';
 import { ProductBenefitComponent } from './product-benefit/product-benefit.component';
 import { ProductGiftComponent } from './product-benefit/product-gift/product-gift.component';
 import { ProductTcoinComponent } from './product-benefit/product-tcoin/product-tcoin.component';
@@ -28,6 +28,8 @@ import { ProductMenuModalComponent } from './product-menu-modal/product-menu-mod
 import { ProductGeneralInfoComponent } from './product-general-info/product-general-info.component';
 import { ProductGeneralComponent } from './product-general/product-general.component';
 import { ProductGeneralReviewComponent } from './product-general-review/product-general-review.component';
+import { ProductShareComponent } from './product-general-info/product-share/product-share.component';
+import { ProductShareModalComponent } from './product-general-info/product-share/product-share-modal/product-share-modal.component';
 
 
 
@@ -38,6 +40,8 @@ import { ProductGeneralReviewComponent } from './product-general-review/product-
     ProductPaymentModalComponent,
     ProductShareComponent,
     ProductShareModalComponent,
+    // ProductShareComponent,
+    // ProductShareModalComponent,
     ProductBenefitComponent,
     ProductGiftComponent,
     ProductTcoinComponent,
@@ -69,6 +73,7 @@ import { ProductGeneralReviewComponent } from './product-general-review/product-
     ProductSlideComponent,
     ProductPaymentComponent,
     ProductShareComponent,
+    // ProductShareComponent,
     ProductBenefitComponent,
     ProductServiceComponent,
     ProductSpecComponent,
@@ -89,6 +94,7 @@ import { ProductGeneralReviewComponent } from './product-general-review/product-
   entryComponents: [
     ProductPaymentModalComponent,
     ProductShareModalComponent,
+    // ProductShareModalComponent,
     ProductGiftModalComponent,
     ProductTcoinModalComponent,
     ProductVoucherModalComponent,
