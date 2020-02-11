@@ -19,7 +19,13 @@ export class CartByShopComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    if (!this.cartData) {
+      this.cartData = {
+        "shop": {
+          "shop_name": "Name test"
+        }
+      }
+    }
   }
 
   onSelectShop(i, shopId: any) {
