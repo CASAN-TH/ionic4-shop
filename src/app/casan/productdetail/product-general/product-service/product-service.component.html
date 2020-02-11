@@ -1,7 +1,7 @@
-<ion-item no-padding class="item-border-right" (click)="serviceModal()">
+<ion-item no-padding class="item-border-right" (click)="openServiceModal()">
   <ion-text>บริการ</ion-text>
   <ion-label>
-    <ion-text class="text-padding" *ngFor="let item of recivedata">{{item.title}}</ion-text>
+    <ion-text class="text-padding" *ngFor="let item of warrantyData">{{item.title}}</ion-text>
   </ion-label>
   <ion-note text-end>
     <ion-buttons>

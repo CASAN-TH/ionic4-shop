@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ProductdetailService } from 'src/app/productdetail/productdetail.service';
 import { ModalController } from '@ionic/angular';
+import { ProductVoucherModalComponent } from './product-voucher-modal/product-voucher-modal.component';
 
 @Component({
   selector: 'app-product-voucher',
@@ -9,8 +10,9 @@ import { ModalController } from '@ionic/angular';
 })
 export class ProductVoucherComponent implements OnInit {
 
-  @Input() recivedata: any;
-  @Output() openVoucher = new EventEmitter();
+  vouchersData: any;
+  // @Input() recivedata: any;
+  // @Output() openVoucher = new EventEmitter();
 
   constructor(
     private productdetailService: ProductdetailService,
@@ -18,11 +20,25 @@ export class ProductVoucherComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.recivedata)
+    this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
+      this.vouchersData = productdetailDataList;
+    })
+    // console.log(this.recivedata)
   }
 
-  voucherModal() {
-    this.openVoucher.emit();
+  // voucherModal() {
+  //   this.openVoucher.emit();
+  // }
+  
+  async openVoucherModal() {
+    const modal = await this.modalController.create({
+      component: ProductVoucherModalComponent,
+      cssClass: 'my-modal-css',
+      componentProps: {
+        vouchersData: this.vouchersData
+      }
+    });
+    return await modal.present();
   }
 
 }

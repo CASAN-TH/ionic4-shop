@@ -41,22 +41,22 @@ export class CategoryPage implements OnInit {
     this.content.scrollToPoint(0, yOffset, 1000);
   }
 
-  onBrandClick(e: any) {
-    this.router.navigateByUrl('search/' + e.categoryId + '/' + e.brandId);
-  }
+  // onBrandClick(e: any) {
+  //   this.router.navigateByUrl('search/' + e.categoryId + '/' + e.brandId);
+  // }
 
-  onPromotionClick(cate2Id: any) {
-    this.router.navigateByUrl('search/' + cate2Id);
-  }
+  // onPromotionClick(cate2Id: any) {
+  //   this.router.navigateByUrl('search/' + cate2Id);
+  // }
 
-  onCoverImage(e: any) {
-    if (this.data[e.i].cover_image[e.j].type_promotion === 'page') {
-      //  console.log("a");
-      console.log(this.data[e.i].cover_image[e.j].type_promotion);
-      this.router.navigateByUrl(this.data[e.i].cover_image[e.j].link_promotion);
-    } else {
-      // console.log("b");
-      this.router.navigate(['/promotion']);
-    }
-  }
+  // onCoverImage(e: any) {
+  //   if (this.data[e.i].cover_image[e.j].type_promotion === 'page') {
+  //     //  console.log("a");
+  //     console.log(this.data[e.i].cover_image[e.j].type_promotion);
+  //     this.router.navigateByUrl(this.data[e.i].cover_image[e.j].link_promotion);
+  //   } else {
+  //     // console.log("b");
+  //     this.router.navigate(['/promotion']);
+  //   }
+  // }
 }

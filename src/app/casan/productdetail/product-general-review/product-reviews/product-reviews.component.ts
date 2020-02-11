@@ -1,4 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ProductdetailService } from 'src/app/productdetail/productdetail.service';
+import { ModalController } from '@ionic/angular';
+import { ProductReviewsModalComponent } from './product-reviews-modal/product-reviews-modal.component';
 
 @Component({
   selector: 'app-product-reviews',
@@ -7,15 +10,33 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ProductReviewsComponent implements OnInit {
   
-  @Input() recivedata: any;
-  @Output() openReviews = new EventEmitter();
+  reviewData: any
+  // @Input() recivedata: any;
+  // @Output() openReviews = new EventEmitter();
 
-  constructor() { }
+  constructor(
+    private productdetailService: ProductdetailService,
+    public modalController: ModalController
+  ) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.productdetailService.onReviewDataChanged.subscribe((productdetailDataList: any) => {
+      this.reviewData = productdetailDataList;
+    })
+  }
 
-  reviewsModal() {
-    this.openReviews.emit();
+  // reviewsModal() {
+  //   this.openReviews.emit();
+  // }
+
+  async openReviewsModal() {
+    const modal = await this.modalController.create({
+      component: ProductReviewsModalComponent,
+      componentProps: {
+        reviewData: this.reviewData
+      }
+    });
+    return await modal.present();
   }
 
 }

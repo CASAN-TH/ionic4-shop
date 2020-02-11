@@ -1,4 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ProductdetailService } from 'src/app/productdetail/productdetail.service';
+import { ModalController } from '@ionic/angular';
+import { ProductPaymentModalComponent } from './product-payment-modal/product-payment-modal.component';
 
 @Component({
   selector: 'app-product-payment',
@@ -7,15 +10,34 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ProductPaymentComponent implements OnInit {
 
-  @Input() recivedata: any;
-  @Output() openPayment = new EventEmitter();
+  paymentData: any
+  // @Input() recivedata: any;
+  // @Output() openPayment = new EventEmitter();
 
-  constructor() { }
+  constructor(
+    private productdetailService: ProductdetailService,
+    public modalController: ModalController
+  ) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
+      this.paymentData = productdetailDataList;
+    })
+  }
 
-  paymentModal() {
-    this.openPayment.emit();
+  // paymentModal() {
+  //   this.openPayment.emit();
+  // }
+
+  async openPaymentModal() {
+    const modal = await this.modalController.create({
+      component: ProductPaymentModalComponent,
+      cssClass: 'my-modal-css',
+      componentProps: {
+        paymentData: this.paymentData
+      }
+    });
+    return await modal.present();
   }
 
 }
