@@ -31,15 +31,15 @@ export class ProductdetailPage implements OnInit {
 
   productdetailData: any;
   productwarrantyData: any;
-  paymentData: any
-  vouchersData: any;
-  promotiongiftData: any;
-  tcoinData: any;
-  warrantyData: any
-  specificationData: any
-  reviewData: any
-  imformationSpecData: any
-  shareData: any
+  // paymentData: any
+  // vouchersData: any;
+  // promotiongiftData: any;
+  // tcoinData: any;
+  // warrantyData: any
+  // specificationData: any
+  // reviewData: any
+  // imformationSpecData: any
+  // shareData: any
   reccommentData: any
   userData: any
   amount: any
@@ -66,42 +66,41 @@ export class ProductdetailPage implements OnInit {
       this.reccommentData = productdetailDataList;
     })
 
-    this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
-      this.paymentData = productdetailDataList;
-    })
+    // this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
+    //   this.paymentData = productdetailDataList;
+    // })
 
-    this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
-      this.vouchersData = productdetailDataList;
-    })
-    this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
-      this.promotiongiftData = productdetailDataList;
-      console.log(this.promotiongiftData);
-    })
+    // this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
+    //   this.vouchersData = productdetailDataList;
+    // })
 
-    this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
-      this.tcoinData = productdetailDataList;
-    })
+    // this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
+    //   this.promotiongiftData = productdetailDataList;
+    // })
 
-    this.productdetailService.onWarrantyDataChanged.subscribe((productdetailDataList: any) => {
-      this.warrantyData = productdetailDataList;
-    })
+    // this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
+    //   this.tcoinData = productdetailDataList;
+    // })
 
-    this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
-      this.specificationData = productdetailDataList;
-    console.log(this.specificationData)
-    })
+    // this.productdetailService.onWarrantyDataChanged.subscribe((productdetailDataList: any) => {
+    //   this.warrantyData = productdetailDataList;
+    // })
 
-    this.productdetailService.onReviewDataChanged.subscribe((productdetailDataList: any) => {
-      this.reviewData = productdetailDataList;
-    })
+    // this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
+    //   this.specificationData = productdetailDataList;
+    // })
 
-    this.productdetailService.onImformationSpecDataChanged.subscribe((productdetailDataList: any) => {
-      this.imformationSpecData = productdetailDataList;
-    })
+    // this.productdetailService.onReviewDataChanged.subscribe((productdetailDataList: any) => {
+    //   this.reviewData = productdetailDataList;
+    // })
 
-    this.productdetailService.onShareDataChanged.subscribe((productdetailDataList: any) => {
-      this.shareData = productdetailDataList;
-    })
+    // this.productdetailService.onImformationSpecDataChanged.subscribe((productdetailDataList: any) => {
+    //   this.imformationSpecData = productdetailDataList;
+    // })
+
+    // this.productdetailService.onShareDataChanged.subscribe((productdetailDataList: any) => {
+    //   this.shareData = productdetailDataList;
+    // })
 
 
     this.getUser()  //get เอา id จาก User
@@ -112,89 +111,92 @@ export class ProductdetailPage implements OnInit {
     this.userData = res   //get เอา id จาก User
   }
 
-  async openPaymentModal() {
-    const modal = await this.modalController.create({
-      component: ProductPaymentModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        paymentData: this.paymentData
-      }
-    });
-    return await modal.present();
-  }
+  // async openPaymentModal() {
+  //   const modal = await this.modalController.create({
+  //     component: ProductPaymentModalComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       paymentData: this.paymentData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
 
-  async openVoucherModal() {
-    const modal = await this.modalController.create({
-      component: ProductVoucherModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        vouchersData: this.vouchersData
-      }
-    });
-    return await modal.present();
-  }
+  // async openVoucherModal() {
+  //   const modal = await this.modalController.create({
+  //     component: ProductVoucherModalComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       vouchersData: this.vouchersData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
 
-  async openpromotionGiftModal() {
-    const modal = await this.modalController.create({
-      component: ProductGiftModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        promotiongiftData: this.promotiongiftData
-      }
-    });
-    return await modal.present();
-  }
+  // async openpromotionGiftModal() {
+  //   const modal = await this.modalController.create({
+  //     component: ProductGiftModalComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       promotiongiftData: this.promotiongiftData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
 
-  async openTcoinModal() {
-    const modal = await this.modalController.create({
-      component: ProductTcoinModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        tcoinData: this.tcoinData
-      }
-    });
-    return await modal.present();
-  }
+  // async openTcoinModal() {
+  //   const modal = await this.modalController.create({
+  //     component: ProductTcoinModalComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       tcoinData: this.tcoinData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
  
-  async openServiceModal() {
-    const modal = await this.modalController.create({
-      component: ProductServiceModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        warrantyData: this.warrantyData
-      }
-    });
-    return await modal.present();
-  }
-  async openSpecModal() {
-    const modal = await this.modalController.create({
-      component: ProductSpecModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        specificationData: this.specificationData
-      }
-    });
-    return await modal.present();
-  }
-  async openReviewsModal() {
-    const modal = await this.modalController.create({
-      component: ProductReviewsModalComponent,
-      componentProps: {
-        reviewData: this.reviewData
-      }
-    });
-    return await modal.present();
-  }
-  async openImformationSpecModal() {
-    const modal = await this.modalController.create({
-      component: ProductImformationSpecModalComponent,
-      cssClass: 'my-modal-css',
-      componentProps: {
-        imformationSpecData: this.imformationSpecData
-      }
-    });
-    return await modal.present();
-  }
+  // async openServiceModal() {
+  //   const modal = await this.modalController.create({
+  //     component: ProductServiceModalComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       warrantyData: this.warrantyData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
+
+  // async openSpecModal() {
+  //   const modal = await this.modalController.create({
+  //     component: ProductSpecModalComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       specificationData: this.specificationData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
+
+  // async openReviewsModal() {
+  //   const modal = await this.modalController.create({
+  //     component: ProductReviewsModalComponent,
+  //     componentProps: {
+  //       reviewData: this.reviewData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
+
+  // async openImformationSpecModal() {
+  //   const modal = await this.modalController.create({
+  //     component: ProductImformationSpecModalComponent,
+  //     cssClass: 'my-modal-css',
+  //     componentProps: {
+  //       imformationSpecData: this.imformationSpecData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
 
   goBackClick() {
     this._location.back();
@@ -287,19 +289,19 @@ export class ProductdetailPage implements OnInit {
     return await popover.present();
   }
 
+  // async openShareModal() {
+  //   const modal = await this.modalController.create({
+  //     component: ProductShareModalComponent,
+  //     cssClass: 'share-modal-css',
+  //     componentProps: {
+  //       shareData: this.shareData
+  //     }
+  //   });
+  //   return await modal.present();
+  // }
 
-  async openShareModal() {
-    const modal = await this.modalController.create({
-      component: ProductShareModalComponent,
-      cssClass: 'share-modal-css',
-      componentProps: {
-        shareData: this.shareData
-      }
-    });
-    return await modal.present();
-  }
-  onProductClick(productId) {
-    this.router.navigateByUrl('/productdetail/' + productId)
-  }
+  // onProductClick(productId) {
+  //   this.router.navigateByUrl('/productdetail/' + productId)
+  // }
 
 }

@@ -1,5 +1,5 @@
 <ion-row>
   <ion-col size="6" *ngFor="let product of recivedata">
-    <app-product-card [recivedata]="product" (click)="onProductdetailClick(product._id)"></app-product-card>
+    <app-product-card [recivedata]="product" (click)="onProductClick(product._id)"></app-product-card>
   </ion-col>
 </ion-row>

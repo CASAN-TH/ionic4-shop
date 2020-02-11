@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, Output, EventEmitter } from '@angular/core';
 import { CategoryService } from 'src/app/category/category.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { CategoryService } from 'src/app/category/category.service';
   styleUrls: ['./catalog-slide-nav.component.scss'],
 })
 export class CatalogSlideNavComponent implements OnInit {
+
+  @ViewChild('content', { static: false }) private content: any;
   data: any;
   tabSelected: any;
 
@@ -24,13 +26,22 @@ export class CatalogSlideNavComponent implements OnInit {
       if (this.data.length > 0) {
         // console.log(this.data)
         this.tabSelected = this.data[0]._id;
+        console.log(this.data[0]._id);
       }
     })
   }
 
   onMenuClick(cate_id) {
     this.tabSelected = cate_id;
-    this.openMenu.emit(cate_id);
+    this.openMenu.emit(cate_id)
   }
+
+  // onMenuClick(cate_id) {
+  //     this.tabSelected = cate_id;
+  //     let yOffset = document.getElementById(cate_id).offsetTop;
+  //     let yHOffset = document.getElementById(cate_id).offsetHeight;
+  //     // console.log(yOffset + " : " + yHOffset);
+  //     this.content.scrollToPoint(0, yOffset, 1000);
+  //   }
 
 }

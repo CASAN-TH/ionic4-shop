@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ProductdetailService } from 'src/app/productdetail/productdetail.service';
 import { ModalController } from '@ionic/angular';
+import { ProductGiftModalComponent } from './product-gift-modal/product-gift-modal.component';
 
 @Component({
   selector: 'app-product-gift',
@@ -9,8 +10,9 @@ import { ModalController } from '@ionic/angular';
 })
 export class ProductGiftComponent implements OnInit {
 
-  @Input() recivedata: any;
-  @Output() openpromotionGift = new EventEmitter();
+  promotiongiftData: any;
+  // @Input() recivedata: any;
+  // @Output() openpromotionGift = new EventEmitter();
 
   constructor(
     private productdetailService: ProductdetailService,
@@ -18,11 +20,25 @@ export class ProductGiftComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.recivedata);
+    this.productdetailService.onVouchersDataChanged.subscribe((productdetailDataList: any) => {
+      this.promotiongiftData = productdetailDataList;
+    })
+    // console.log(this.recivedata);
    }
 
-  promotiongiftModal() {
-    this.openpromotionGift.emit();
+  // promotiongiftModal() {
+  //   this.openpromotionGift.emit();
+  // }
+
+  async openpromotionGiftModal() {
+    const modal = await this.modalController.create({
+      component: ProductGiftModalComponent,
+      cssClass: 'my-modal-css',
+      componentProps: {
+        promotiongiftData: this.promotiongiftData
+      }
+    });
+    return await modal.present();
   }
 
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ProductdetailService } from 'src/app/productdetail/productdetail.service';
+import { ModalController } from '@ionic/angular';
+import { ProductSpecModalComponent } from './product-spec-modal/product-spec-modal.component';
 
 @Component({
   selector: 'app-product-spec',
@@ -7,17 +10,35 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ProductSpecComponent implements OnInit {
 
-  @Input() recivedata: any;
-  @Output() openSpec = new EventEmitter();
+  specificationData: any
+  // @Input() recivedata: any;
+  // @Output() openSpec = new EventEmitter();
 
-  constructor() { }
+  constructor(
+    private productdetailService: ProductdetailService,
+    public modalController: ModalController
+  ) { }
 
   ngOnInit() {
-    console.log(this.recivedata)
+    this.productdetailService.onProductdetailDataChanged.subscribe((productdetailDataList: any) => {
+      this.specificationData = productdetailDataList;
+    })
+    // console.log(this.recivedata)
    }
 
-  specModal() {
-    this.openSpec.emit();
+  // specModal() {
+  //   this.openSpec.emit();
+  // }
+
+  async openSpecModal() {
+    const modal = await this.modalController.create({
+      component: ProductSpecModalComponent,
+      cssClass: 'my-modal-css',
+      componentProps: {
+        specificationData: this.specificationData
+      }
+    });
+    return await modal.present();
   }
 
 }

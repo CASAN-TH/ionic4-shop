@@ -13,8 +13,8 @@ export class SearchPage implements OnInit {
 
   searchData: any;
   selectcheckData: any;
-  cate2Selected: any;
-  brandSelected: any;
+  // cate2Selected: any;
+  // brandSelected: any;
 
   constructor(
     private router: Router, 
@@ -34,17 +34,17 @@ export class SearchPage implements OnInit {
     })
   }
 
-  onCetegoryClick(cate2Id: any) {
-    // this.router.navigateByUrl('search/' + cate2Id);
-    console.log(cate2Id);
-    this.cate2Selected = cate2Id;
-  }
+  // onCetegoryClick(cate2Id: any) {
+  //   // this.router.navigateByUrl('search/' + cate2Id);
+  //   console.log(cate2Id);
+  //   this.cate2Selected = cate2Id;
+  // }
 
-  onBrandClick(brandId: any) {
-    // this.router.navigateByUrl('search/' + cate2Id);
-    console.log(brandId);
-    this.brandSelected = brandId;
-  }
+  // onBrandClick(brandId: any) {
+  //   // this.router.navigateByUrl('search/' + cate2Id);
+  //   console.log(brandId);
+  //   this.brandSelected = brandId;
+  // }
 
   onProductdetailClick(productId: any) {
     this.router.navigateByUrl('productdetail/' + productId);
@@ -72,15 +72,15 @@ export class SearchPage implements OnInit {
 
 
 
-  onCategories(selectcheckId: any) {
-    console.log("onCategories" + selectcheckId);
-  }
-  onBrands(selectcheckId: any) {
-    console.log("onBrands" + selectcheckId);
-  }
-  onPriceranges(selectcheckId: any) {
-    console.log("onPriceranges" + selectcheckId);
-  }
+  // onCategories(selectcheckId: any) {
+  //   console.log("onCategories" + selectcheckId);
+  // }
+  // onBrands(selectcheckId: any) {
+  //   console.log("onBrands" + selectcheckId);
+  // }
+  // onPriceranges(selectcheckId: any) {
+  //   console.log("onPriceranges" + selectcheckId);
+  // }
 
 
 }

@@ -27,8 +27,8 @@
   </app-cata-product-list>
 
   <app-product-general-reccomment>
-    <app-product-list class="ten" *ngFor="let reccomment of homeReccommentData" [recivedata]="reccomment.products"
-      (onProductClick)="onProductClick($event)"></app-product-list>
+    <app-product-list class="ten" *ngFor="let reccomment of homeReccommentData" [recivedata]="reccomment.products">
+    </app-product-list>
   </app-product-general-reccomment>
 
 </ion-content>

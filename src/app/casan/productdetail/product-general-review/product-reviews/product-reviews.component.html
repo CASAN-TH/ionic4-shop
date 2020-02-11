@@ -10,7 +10,7 @@
     </ion-note>
   </ion-item>
 
-  <ion-row *ngFor="let item of recivedata.user">
+  <ion-row *ngFor="let item of reviewData.user">
     <ion-col size="12">
       <ion-item no-padding class="item-border-right" lines="none">
         <ion-avatar slot="start">
@@ -48,7 +48,7 @@
     </ion-col>
   </ion-row>
 </ion-grid> -->
-<ion-item no-padding class="item-border-right" (click)="reviewsModal()">
+<ion-item no-padding class="item-border-right" (click)="openReviewsModal()">
   <ion-label>รีวิว</ion-label>
   <ion-note text-end>
     <ion-buttons>
@@ -59,7 +59,7 @@
   </ion-note>
 </ion-item>
 
-<ion-row *ngFor="let item of recivedata.user">
+<ion-row *ngFor="let item of reviewData.user">
   <ion-col size="12">
     <ion-item no-padding class="item-border-right" lines="none">
       <ion-avatar slot="start">

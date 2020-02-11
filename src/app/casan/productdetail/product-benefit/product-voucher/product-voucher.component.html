@@ -1,7 +1,7 @@
-<ion-item no-padding class="item-border-right" (click)="voucherModal()">
+<ion-item no-padding class="item-border-right" (click)="openVoucherModal()">
   <ion-text>บัตรกำนัล</ion-text>
   <ion-label>
-    <ion-text class="text-padding" *ngFor="let item of recivedata.vouchers">
+    <ion-text class="text-padding" *ngFor="let item of vouchersData.vouchers">
       {{item.currency}} {{item.amount}}
     </ion-text>
   </ion-label>
