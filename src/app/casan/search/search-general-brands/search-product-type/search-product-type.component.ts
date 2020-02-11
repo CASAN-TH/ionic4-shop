@@ -9,13 +9,20 @@ export class SearchProductTypeComponent implements OnInit {
   
   cate2Selected: any;
   @Input() recivedata: any
-  @Output() openProductType = new EventEmitter();
+  // @Output() openProductType = new EventEmitter();
   constructor() { }
 
   ngOnInit() { }
 
+  // onCetegoryClick(cate2Id: any) {
+  //   this.cate2Selected = cate2Id;
+  //   this.openProductType.emit(cate2Id);
+  // }
+
   onCetegoryClick(cate2Id: any) {
+    // this.router.navigateByUrl('search/' + cate2Id);
+    console.log(cate2Id);
     this.cate2Selected = cate2Id;
-    this.openProductType.emit(cate2Id);
   }
+  
 }

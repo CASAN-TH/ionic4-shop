@@ -22,9 +22,9 @@
 <ion-content>
 
   <app-search-general-brands>
-    <app-search-product-type class="one" [recivedata]="searchData" (openProductType)="onCetegoryClick($event)">
+    <app-search-product-type class="one" [recivedata]="searchData">
     </app-search-product-type>
-    <app-search-brands class="two" [recivedata]="searchData" (openBrand)="onBrandClick($event)"></app-search-brands>
+    <app-search-brands class="two" [recivedata]="searchData"></app-search-brands>
     <app-search-product-tab class="three" [recivedata]="searchData"></app-search-product-tab>
   </app-search-general-brands>
 
@@ -39,8 +39,7 @@
 
     <ion-content>
       <app-menu-general-select-check>
-        <app-menu-select-check class="four" [recivedata]="selectcheckData" (openCategories)="onCategories($event)"
-        (openBrands)="onBrands($event)" (openPriceranges)="onPriceranges($event)"></app-menu-select-check>
+        <app-menu-select-check class="four" [recivedata]="selectcheckData"></app-menu-select-check>
       </app-menu-general-select-check>
     </ion-content>
 

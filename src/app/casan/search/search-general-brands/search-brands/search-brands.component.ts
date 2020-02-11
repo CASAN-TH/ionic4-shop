@@ -9,15 +9,20 @@ export class SearchBrandsComponent implements OnInit {
 
   brandSelected: any;
   @Input() recivedata: any
-  @Output() openBrand = new EventEmitter();
+  // @Output() openBrand = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() { }
 
+  // onBrandClick(brandId: any) {
+  //   this.brandSelected = brandId;
+  //   this.openBrand.emit(brandId);
+  // }
   onBrandClick(brandId: any) {
+    // this.router.navigateByUrl('search/' + cate2Id);
+    console.log(brandId);
     this.brandSelected = brandId;
-    this.openBrand.emit(brandId);
   }
 
 }
