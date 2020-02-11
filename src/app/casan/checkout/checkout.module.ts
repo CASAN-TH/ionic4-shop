@@ -8,6 +8,7 @@ import { CheckoutTotalComponent } from './checkout-total/checkout-total.componen
 import { CheckoutTypeComponent } from './checkout-type/checkout-type.component';
 import { NoAddressComponent } from './no-address/no-address.component';
 import { CheckoutSummaryComponent } from './checkout-summary/checkout-summary.component';
+import { AccountModule } from '../account/account.module';
 
 
 
@@ -24,6 +25,7 @@ import { CheckoutSummaryComponent } from './checkout-summary/checkout-summary.co
     CommonModule,
     FormsModule,
     IonicModule,
+    AccountModule
   ],
   exports: [
     AddressComponent,
