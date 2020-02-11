@@ -8,10 +8,10 @@ import { CategoryService } from 'src/app/category/category.service';
 })
 export class CatalogSlideNavComponent implements OnInit {
 
-  // @ViewChild('content', { static: false }) private content: any;
+  @ViewChild('content', { static: false }) private content: any;
   data: any;
   tabSelected: any;
-  
+
   @Input() recivedata: any;
   @Output() openMenu = new EventEmitter();
 
@@ -33,7 +33,7 @@ export class CatalogSlideNavComponent implements OnInit {
 
   onMenuClick(cate_id) {
     this.tabSelected = cate_id;
-    this.openMenu.emit(cate_id);
+    this.openMenu.emit(cate_id)
   }
 
   // onMenuClick(cate_id) {
